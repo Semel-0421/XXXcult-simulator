@@ -11,7 +11,12 @@ public class Choice
     public string Text { get; }
     public StatEffect[] Effects { get; }
 
+    public string[] GrantedGifted { get; private set; } = new string[0];
+
     public Choice(string text, params StatEffect[] effects) { Text = text; Effects = effects; }
+
+    // 이 선택지를 고르면 지급할 기프티드 id (예: "no.1")
+    public Choice Grants(params string[] giftedIds) { GrantedGifted = giftedIds; return this; }
 }
 
 public class Question

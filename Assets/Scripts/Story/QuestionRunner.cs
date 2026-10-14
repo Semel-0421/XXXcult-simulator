@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-// 질문을 띄우고, 고른 선택지의 효과를 개인 스탯에 반영한다.
+// 질문을 띄우고, 고른 선택지의 효과(기프티드 보정 포함)와 기프티드 지급을 반영한다.
 public class QuestionRunner : MonoBehaviour
 {
     [SerializeField] QuestionPanel panel;
@@ -18,7 +18,10 @@ public class QuestionRunner : MonoBehaviour
 
     void OnChosen(int number)
     {
-        foreach (var effect in current.Choices[number - 1].Effects)
-            GameSession.Personal[effect.Stat].Add(effect.Amount);
+        var choice = current.Choices[number - 1];
+        foreach (var effect in choice.Effects)
+            GiftedEffects.Apply(GameSession.Personal, effect.Stat, effect.Amount);
+        foreach (var id in choice.GrantedGifted)
+            GiftedGranter.Grant(GameSession.Personal.Talents, id);
     }
 }
