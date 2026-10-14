@@ -6,6 +6,10 @@ public class RemainderBank<TKey>
 {
     readonly Dictionary<TKey, float> carried = new();
 
+    public IEnumerable<KeyValuePair<TKey, float>> Entries => carried;
+
+    public void Set(TKey key, float amount) => carried[key] = amount;
+
     public int Take(TKey key, float amount)
     {
         carried.TryGetValue(key, out var previous);

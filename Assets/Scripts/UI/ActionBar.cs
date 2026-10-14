@@ -14,6 +14,7 @@ public class ActionBar : MonoBehaviour
     public event Action<CultAction> CultChosen;
 
     public Mode Current { get; private set; } = Mode.Hidden;
+    public bool CanAct => Current != Mode.Hidden && group.interactable; // 행동 선택을 기다리는 중 (저장 가능한 시점)
     LocalizedText[] labels;
     DoctrineTree tree;
 

@@ -12,9 +12,27 @@ public class LifeFlow : MonoBehaviour
 
     public void Begin()
     {
+        Subscribe();
+        questionRunner.Run(IntroQuestions.First);
+    }
+
+    // 불러오기: 저장은 행동 선택 시점에만 되므로 행동 안내부터 이어진다
+    public void Resume()
+    {
+        Subscribe();
+        ShowActionPrompt();
+    }
+
+    void Subscribe()
+    {
         questionRunner.Answered += OnEventAnswered;
         actionBar.LifeChosen += OnActionChosen;
-        questionRunner.Run(IntroQuestions.First);
+    }
+
+    void ShowActionPrompt()
+    {
+        questionPanel.Show(string.Format(Lang.Get("life_action_prompt"), GameSession.Age.Years));
+        actionBar.Show(ActionBar.Mode.Life);
     }
 
     void OnDestroy()
@@ -26,8 +44,7 @@ public class LifeFlow : MonoBehaviour
     void OnEventAnswered(Choice _)
     {
         if (TryFoundCult()) return;
-        questionPanel.Show(string.Format(Lang.Get("life_action_prompt"), GameSession.Age.Years));
-        actionBar.Show(ActionBar.Mode.Life);
+        ShowActionPrompt();
     }
 
     void OnActionChosen(LifeAction action)

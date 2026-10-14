@@ -22,6 +22,11 @@ public class DoctrineTree
     readonly Dictionary<string, int> levels = new();
     public event Action<DoctrineSkill> Changed;
 
+    public IEnumerable<KeyValuePair<string, int>> Levels => levels;
+
+    // 저장에서 불러올 때 쓴다 (변경 이벤트 없음)
+    public void Restore(string skillId, int level) => levels[skillId] = level;
+
     public int LevelOf(DoctrineSkill skill) => levels.TryGetValue(skill.Id, out var level) ? level : 0;
     public bool IsMax(DoctrineSkill skill) => LevelOf(skill) >= skill.MaxLevel;
 

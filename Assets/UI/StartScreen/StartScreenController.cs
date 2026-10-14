@@ -5,6 +5,7 @@ public class StartScreenController : MonoBehaviour
 {
     [SerializeField] CanvasGroup[] menuButtons;
     [SerializeField] GameObject settingsPanel;
+    [SerializeField] SaveSlotWindow saveWindow;
     [SerializeField] float fadeDuration = 0.3f;
 
     IEnumerator Start()
@@ -18,6 +19,7 @@ public class StartScreenController : MonoBehaviour
         }
     }
 
+    public void OpenSaves() => saveWindow.Open(false);
     public void OpenSettings() => settingsPanel.SetActive(true);
     public void CloseSettings() => settingsPanel.SetActive(false);
     public void SetEnglish() => Lang.Set(false);

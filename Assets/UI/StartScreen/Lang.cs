@@ -44,6 +44,14 @@ public static class Lang
         ["standing_label"] = ("Public view:", "사회적 시선:"), ["standing_Dissolved"] = ("Dissolved", "해체"), ["standing_Persecuted"] = ("Persecuted", "탄압"),
         ["standing_Watched"] = ("Watched", "경계"), ["standing_Neutral"] = ("Neutral", "중립"), ["standing_Respected"] = ("Respected", "존중"), ["standing_Recognized"] = ("Recognized", "공인"),
         ["ending_dissolved"] = ("By order of the state, '{0}' has been dissolved after {1} years. Your followers scatter, and your name fades from the world.", "국가의 명령으로 '{0}' 교단이 창설 {1}년 만에 해체되었습니다. 신도들은 흩어지고 당신의 이름은 세상에서 잊혀 갑니다."),
+        ["talent_effects"] = ("Effects", "효과"),
+        ["gcat_운명"] = ("Fate", "운명"), ["gcat_성격"] = ("Personality", "성격"), ["gcat_특기"] = ("Skill", "특기"), ["gcat_외모"] = ("Appearance", "외모"),
+        ["special_chance"] = ("{0} success rate {1}%p", "{0} 성공률 {1}%p"), ["special_failhalf"] = ("{0}: halves failure penalties", "{0} 실패 시 불이익 절반"),
+        ["special_year"] = ("Every year: {0} {1}", "해마다 {0} {1}"), ["action_all"] = ("All actions", "모든 행동"),
+        ["save_title"] = ("Save / Load", "저장 / 불러오기"), ["save_hint"] = ("Choose a slot. Overwriting or deleting asks for a second press.", "칸을 고르세요. 덮어쓰기와 삭제는 한 번 더 눌러야 합니다."),
+        ["save_hint_locked"] = ("Saving is only possible when choosing an action. Loading is always available.", "저장은 행동을 고르는 시점에만 할 수 있습니다. 불러오기는 언제든 가능합니다."),
+        ["save_btn"] = ("Save", "저장"), ["load_btn"] = ("Load", "불러오기"), ["delete_btn"] = ("Delete", "삭제"), ["save_confirm"] = ("Sure?", "확실?"),
+        ["save_empty"] = ("- Empty -", "- 비어 있음 -"), ["save_broken"] = ("- Unreadable file -", "- 읽을 수 없는 파일 -"), ["saves"] = ("Save / Load", "저장 / 불러오기"),
         ["intro_prompt"] = ("Your first memory was your parents calling your name. What is your name?", "당신의 첫 기억은 부모가 부르는 당신의 이름이었다. 당신의 이름은?"),
     };
 

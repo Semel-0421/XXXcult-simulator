@@ -10,6 +10,13 @@ public class GameClock
     public int Quarter => Turns % QuartersPerYear;
     public event Action Changed;
 
+    // 저장에서 불러올 때 쓴다
+    public void Restore(int turns)
+    {
+        Turns = Math.Max(0, turns);
+        Changed?.Invoke();
+    }
+
     public void Advance()
     {
         Turns++;

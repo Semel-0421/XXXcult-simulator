@@ -16,6 +16,7 @@ public class CultFlow : MonoBehaviour
         actionBar.CultChosen += OnActionChosen;
         tree = GameSession.Cult.Doctrines;
         tree.Changed += OnDoctrineChanged;
+        if (GameSession.CultFounded && tree.IsMax(DoctrineSkill.Declaration)) ShowPrompt(null); // 불러온 경우
     }
 
     void OnDestroy()
