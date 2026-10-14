@@ -18,6 +18,7 @@ public class DoctrineScreen : MonoBehaviour
         tutorial.End();
         window.SetActive(true);
         foreach (var node in nodes) node.Bind(Tree);
+        Tree.Changed -= OnChanged;
         Tree.Changed += OnChanged;
         RefreshClose();
     }
@@ -28,6 +29,8 @@ public class DoctrineScreen : MonoBehaviour
         Tree.Changed -= OnChanged;
         window.SetActive(false);
     }
+
+    void OnDestroy() => Tree.Changed -= OnChanged;
 
     void OnChanged(DoctrineSkill _) => RefreshClose();
 

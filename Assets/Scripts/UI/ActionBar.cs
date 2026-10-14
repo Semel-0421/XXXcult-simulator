@@ -45,7 +45,7 @@ public class ActionBar : MonoBehaviour
         var wasHidden = Current == Mode.Hidden;
         Current = mode;
         SetInteractable(mode != Mode.Hidden);
-        if (mode == Mode.Hidden) group.alpha = 0;
+        if (mode == Mode.Hidden) { StopAllCoroutines(); group.alpha = 0; }
         else if (wasHidden) StartCoroutine(CanvasFade.To(group, 1, 0.5f));
     }
 

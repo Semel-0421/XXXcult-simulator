@@ -17,6 +17,7 @@ public class ForcedHighlight : MonoBehaviour
 
     public void Begin(RectTransform button, string hint)
     {
+        if (target != null) return;
         target = button;
         raised = target.gameObject.AddComponent<Canvas>();
         raised.overrideSorting = true;
