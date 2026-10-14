@@ -1,0 +1,678 @@
+fileFormatVersion: 2
+guid: ec4778a3b3924dd45890662dd014aa98
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1327716641837148170
+    second: Socialize_ok_0
+  - first:
+      213: -125310100110609087
+    second: Socialize_ok_1
+  - first:
+      213: 4365398736405047060
+    second: Socialize_ok_2
+  - first:
+      213: 7425107415943562997
+    second: Socialize_ok_3
+  - first:
+      213: 6945902888525430405
+    second: Socialize_ok_4
+  - first:
+      213: 1552580349623738416
+    second: Socialize_ok_5
+  - first:
+      213: 6678948051753328437
+    second: Socialize_ok_6
+  - first:
+      213: -1117011783967601850
+    second: Socialize_ok_7
+  - first:
+      213: -586703236399254771
+    second: Socialize_ok_8
+  - first:
+      213: 5156425225672024761
+    second: Socialize_ok_9
+  - first:
+      213: 650994373175601051
+    second: Socialize_ok_10
+  - first:
+      213: 7381351561917581386
+    second: Socialize_ok_11
+  - first:
+      213: 8081045216587702301
+    second: Socialize_ok_12
+  - first:
+      213: -2884853984161411331
+    second: Socialize_ok_13
+  - first:
+      213: -8820434098689682709
+    second: Socialize_ok_14
+  - first:
+      213: -7219099137864706134
+    second: Socialize_ok_15
+  - first:
+      213: 2667388961758512343
+    second: Socialize_ok_16
+  - first:
+      213: -8278728765084547004
+    second: Socialize_ok_17
+  - first:
+      213: -6837988197613986413
+    second: Socialize_ok_18
+  - first:
+      213: -5248566243706845306
+    second: Socialize_ok_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Socialize_ok_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 14
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f71ce0bfb0039de0800000000000000
+      internalID: -1327716641837148170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 14
+        width: 52
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 145732cb02fc24ef0800000000000000
+      internalID: -125310100110609087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 14
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 417ac5a9503059c30800000000000000
+      internalID: 4365398736405047060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 14
+        width: 52
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f64f6adad74b0760800000000000000
+      internalID: 7425107415943562997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 14
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58efaea40edc46060800000000000000
+      internalID: 6945902888525430405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_5
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 94
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03023902a9fdb8510800000000000000
+      internalID: 1552580349623738416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_6
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 14
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53f5b02ddd360bc50800000000000000
+      internalID: 6678948051753328437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_7
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 14
+        width: 35
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b8fae53b39f70f0800000000000000
+      internalID: -1117011783967601850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_8
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 94
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03b9d5d38c9bd7f0800000000000000
+      internalID: -586703236399254771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_9
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 14
+        width: 35
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b26b0f3c6d4f8740800000000000000
+      internalID: 5156425225672024761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_10
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 14
+        width: 54
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97e8ebeeebc80900800000000000000
+      internalID: 650994373175601051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_11
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 14
+        width: 34
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a484f523324df6660800000000000000
+      internalID: 7381351561917581386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_12
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 14
+        width: 35
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d10649c2fc3a52070800000000000000
+      internalID: 8081045216587702301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_13
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 94
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe40350690f6f7d0800000000000000
+      internalID: -2884853984161411331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_14
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 14
+        width: 35
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2dbde7be5879580800000000000000
+      internalID: -8820434098689682709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_15
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 14
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7de31259b90db90800000000000000
+      internalID: -7219099137864706134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_16
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 94
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d40a67d028740520800000000000000
+      internalID: 2667388961758512343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_17
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 14
+        width: 36
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448c35dfc0c0c1d80800000000000000
+      internalID: -8278728765084547004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_18
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 14
+        width: 38
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d97e6a6f59a11a0800000000000000
+      internalID: -6837988197613986413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_ok_19
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 14
+        width: 52
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6874fb73fc85927b0800000000000000
+      internalID: -5248566243706845306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Socialize_ok_0: -1327716641837148170
+      Socialize_ok_1: -125310100110609087
+      Socialize_ok_10: 650994373175601051
+      Socialize_ok_11: 7381351561917581386
+      Socialize_ok_12: 8081045216587702301
+      Socialize_ok_13: -2884853984161411331
+      Socialize_ok_14: -8820434098689682709
+      Socialize_ok_15: -7219099137864706134
+      Socialize_ok_16: 2667388961758512343
+      Socialize_ok_17: -8278728765084547004
+      Socialize_ok_18: -6837988197613986413
+      Socialize_ok_19: -5248566243706845306
+      Socialize_ok_2: 4365398736405047060
+      Socialize_ok_3: 7425107415943562997
+      Socialize_ok_4: 6945902888525430405
+      Socialize_ok_5: 1552580349623738416
+      Socialize_ok_6: 6678948051753328437
+      Socialize_ok_7: -1117011783967601850
+      Socialize_ok_8: -586703236399254771
+      Socialize_ok_9: 5156425225672024761
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

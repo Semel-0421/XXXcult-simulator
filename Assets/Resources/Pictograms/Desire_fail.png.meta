@@ -1,0 +1,912 @@
+fileFormatVersion: 2
+guid: 47037de20b62fc54d9686be6c940ebc9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6695581682452042248
+    second: Desire_fail_0
+  - first:
+      213: 9108674111595972077
+    second: Desire_fail_1
+  - first:
+      213: 6410073397468362472
+    second: Desire_fail_2
+  - first:
+      213: -2186065882835259913
+    second: Desire_fail_3
+  - first:
+      213: -4284562917345043657
+    second: Desire_fail_4
+  - first:
+      213: 5561821125377881191
+    second: Desire_fail_5
+  - first:
+      213: 1736095763406460893
+    second: Desire_fail_6
+  - first:
+      213: -1933468263089787516
+    second: Desire_fail_7
+  - first:
+      213: -9214331518842161408
+    second: Desire_fail_8
+  - first:
+      213: -5549158640274001428
+    second: Desire_fail_9
+  - first:
+      213: -4535010697026983672
+    second: Desire_fail_10
+  - first:
+      213: -4624401669598909245
+    second: Desire_fail_11
+  - first:
+      213: -4576491704377724569
+    second: Desire_fail_12
+  - first:
+      213: -8208468356396485302
+    second: Desire_fail_13
+  - first:
+      213: -3823657848496818297
+    second: Desire_fail_14
+  - first:
+      213: -7017247733762085551
+    second: Desire_fail_15
+  - first:
+      213: -539935298995261376
+    second: Desire_fail_16
+  - first:
+      213: 3370765423618375745
+    second: Desire_fail_17
+  - first:
+      213: -3771077655225586269
+    second: Desire_fail_18
+  - first:
+      213: -2839796836295501123
+    second: Desire_fail_19
+  - first:
+      213: -3539905536769000211
+    second: Desire_fail_20
+  - first:
+      213: 5020148896122932379
+    second: Desire_fail_21
+  - first:
+      213: -7488121750552204927
+    second: Desire_fail_22
+  - first:
+      213: 1351739457622389807
+    second: Desire_fail_23
+  - first:
+      213: -808442784289625985
+    second: Desire_fail_24
+  - first:
+      213: -9191995728563985072
+    second: Desire_fail_25
+  - first:
+      213: 4175291187767943767
+    second: Desire_fail_26
+  - first:
+      213: -7192134996911321619
+    second: Desire_fail_27
+  - first:
+      213: -2330635098222946745
+    second: Desire_fail_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Desire_fail_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8029a23c01c7bec50800000000000000
+      internalID: 6695581682452042248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 21
+        width: 58
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5897c38d2886e70800000000000000
+      internalID: 9108674111595972077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_2
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e678400bc725f850800000000000000
+      internalID: 6410073397468362472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fde00e69a889a1e0800000000000000
+      internalID: -2186065882835259913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_4
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 21
+        width: 59
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b56dd2abc2a84c0800000000000000
+      internalID: -4284562917345043657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764796288de8f2d40800000000000000
+      internalID: 5561821125377881191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_6
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 19
+        width: 65
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd717e906e9d71810800000000000000
+      internalID: 1736095763406460893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_7
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48daa02dbd0fa25e0800000000000000
+      internalID: -1933468263089787516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_8
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0073ab0ad4e102080800000000000000
+      internalID: -9214331518842161408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_9
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 17
+        width: 71
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce1bd2c0e9d6df2b0800000000000000
+      internalID: -5549158640274001428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_10
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8092c1f6cc76011c0800000000000000
+      internalID: -4535010697026983672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_11
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc65d0ce23d2dfb0800000000000000
+      internalID: -4624401669598909245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_12
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 15
+        width: 79
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7613b0bca090d70c0800000000000000
+      internalID: -4576491704377724569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_13
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45f3fa2589a51e80800000000000000
+      internalID: -8208468356396485302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_14
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78776b50273afeac0800000000000000
+      internalID: -3823657848496818297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_15
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 13
+        width: 71
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d22387d5abd9e90800000000000000
+      internalID: -7017247733762085551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_16
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04071bdc4b3c188f0800000000000000
+      internalID: -539935298995261376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_17
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14041ff2b4d57ce20800000000000000
+      internalID: 3370765423618375745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_18
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3adadd34ad07aabc0800000000000000
+      internalID: -3771077655225586269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_19
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 11
+        width: 61
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba1452c2d30798d0800000000000000
+      internalID: -2839796836295501123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_20
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: decf1766baabfdec0800000000000000
+      internalID: -3539905536769000211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_21
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 9
+        width: 65
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c0af8b2d62ba540800000000000000
+      internalID: 5020148896122932379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_22
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189a57f01f8d41890800000000000000
+      internalID: -7488121750552204927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_23
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 95
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f243678ffd752c210800000000000000
+      internalID: 1351739457622389807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_24
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 13
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f78603d2295d7c4f0800000000000000
+      internalID: -808442784289625985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_25
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 23
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055290e06987f6080800000000000000
+      internalID: -9191995728563985072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_26
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 11
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7522ab0b63d91f930800000000000000
+      internalID: 4175291187767943767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_27
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 23
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ded027c6357603c90800000000000000
+      internalID: -7192134996911321619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desire_fail_28
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 9
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7461d55f9bbe7afd0800000000000000
+      internalID: -2330635098222946745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Desire_fail_0: 6695581682452042248
+      Desire_fail_1: 9108674111595972077
+      Desire_fail_10: -4535010697026983672
+      Desire_fail_11: -4624401669598909245
+      Desire_fail_12: -4576491704377724569
+      Desire_fail_13: -8208468356396485302
+      Desire_fail_14: -3823657848496818297
+      Desire_fail_15: -7017247733762085551
+      Desire_fail_16: -539935298995261376
+      Desire_fail_17: 3370765423618375745
+      Desire_fail_18: -3771077655225586269
+      Desire_fail_19: -2839796836295501123
+      Desire_fail_2: 6410073397468362472
+      Desire_fail_20: -3539905536769000211
+      Desire_fail_21: 5020148896122932379
+      Desire_fail_22: -7488121750552204927
+      Desire_fail_23: 1351739457622389807
+      Desire_fail_24: -808442784289625985
+      Desire_fail_25: -9191995728563985072
+      Desire_fail_26: 4175291187767943767
+      Desire_fail_27: -7192134996911321619
+      Desire_fail_28: -2330635098222946745
+      Desire_fail_3: -2186065882835259913
+      Desire_fail_4: -4284562917345043657
+      Desire_fail_5: 5561821125377881191
+      Desire_fail_6: 1736095763406460893
+      Desire_fail_7: -1933468263089787516
+      Desire_fail_8: -9214331518842161408
+      Desire_fail_9: -5549158640274001428
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

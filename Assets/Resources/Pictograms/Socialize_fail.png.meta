@@ -1,0 +1,782 @@
+fileFormatVersion: 2
+guid: 7150aa3ef852efc4e81eaa4c09926265
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1192343344983819963
+    second: Socialize_fail_0
+  - first:
+      213: -6720262266188408897
+    second: Socialize_fail_1
+  - first:
+      213: -7227564528091722203
+    second: Socialize_fail_2
+  - first:
+      213: -5679986934049112300
+    second: Socialize_fail_3
+  - first:
+      213: -3708057039703397938
+    second: Socialize_fail_4
+  - first:
+      213: 4753398144453737042
+    second: Socialize_fail_5
+  - first:
+      213: 2954920357660183369
+    second: Socialize_fail_6
+  - first:
+      213: -2864818593215553579
+    second: Socialize_fail_7
+  - first:
+      213: -1498681314727288664
+    second: Socialize_fail_8
+  - first:
+      213: 4287930157119084270
+    second: Socialize_fail_9
+  - first:
+      213: 7770748319254793447
+    second: Socialize_fail_10
+  - first:
+      213: -5341912268277346847
+    second: Socialize_fail_11
+  - first:
+      213: -8898750755902863464
+    second: Socialize_fail_12
+  - first:
+      213: 8886333572988064812
+    second: Socialize_fail_13
+  - first:
+      213: -9007656845108006375
+    second: Socialize_fail_14
+  - first:
+      213: -4347859126296518501
+    second: Socialize_fail_15
+  - first:
+      213: 9065201344996238055
+    second: Socialize_fail_16
+  - first:
+      213: -3179017634858552559
+    second: Socialize_fail_17
+  - first:
+      213: -7729349735995133971
+    second: Socialize_fail_18
+  - first:
+      213: 3505434660575061862
+    second: Socialize_fail_19
+  - first:
+      213: -6075412633825909612
+    second: Socialize_fail_20
+  - first:
+      213: 668384230929378111
+    second: Socialize_fail_21
+  - first:
+      213: 7074930217320098024
+    second: Socialize_fail_22
+  - first:
+      213: -6040921120121190886
+    second: Socialize_fail_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Socialize_fail_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 14
+        width: 42
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb6cf0874fd0c8010800000000000000
+      internalID: 1192343344983819963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 87
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7d06a0315dcb2a0800000000000000
+      internalID: -6720262266188408897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 16
+        width: 32
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52e01efda5882bb90800000000000000
+      internalID: -7227564528091722203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 14
+        width: 42
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41f74233af1ac21b0800000000000000
+      internalID: -5679986934049112300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_4
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 87
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec9a79db4c55a8cc0800000000000000
+      internalID: -3708057039703397938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_5
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 16
+        width: 32
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a7a248d6677f140800000000000000
+      internalID: 4753398144453737042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_6
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 14
+        width: 42
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94bc7e1d86cf10920800000000000000
+      internalID: 2954920357660183369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_7
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 87
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dfd37dfaae1e38d0800000000000000
+      internalID: -2864818593215553579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_8
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 16
+        width: 33
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a02a2cd84d933be0800000000000000
+      internalID: -1498681314727288664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_9
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 14
+        width: 42
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee694cc62c9c18b30800000000000000
+      internalID: 4287930157119084270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_10
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 87
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec4528dc6e37db60800000000000000
+      internalID: 7770748319254793447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_11
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 16
+        width: 32
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed070c3817bdd5b0800000000000000
+      internalID: -5341912268277346847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_12
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 14
+        width: 42
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897cba9c559418480800000000000000
+      internalID: -8898750755902863464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_13
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 87
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24d4958d49925b70800000000000000
+      internalID: 8886333572988064812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_14
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 16
+        width: 32
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912b8b0f2df5ef280800000000000000
+      internalID: -9007656845108006375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_15
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 14
+        width: 42
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b90e7ab192d49a3c0800000000000000
+      internalID: -4347859126296518501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_16
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 87
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2e4e108901ecd70800000000000000
+      internalID: 9065201344996238055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_17
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 16
+        width: 32
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 113bd83ed4cd1e3d0800000000000000
+      internalID: -3179017634858552559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_18
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 14
+        width: 42
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def2041fd55dbb490800000000000000
+      internalID: -7729349735995133971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_19
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 87
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6672bee404ec5a030800000000000000
+      internalID: 3505434660575061862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_20
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 16
+        width: 33
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 494e2e0066ccfaba0800000000000000
+      internalID: -6075412633825909612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_21
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 14
+        width: 42
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ba402bae3964900800000000000000
+      internalID: 668384230929378111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_22
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 87
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e8aa0e4c833f2260800000000000000
+      internalID: 7074930217320098024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Socialize_fail_23
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 16
+        width: 32
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1685075f365a2ca0800000000000000
+      internalID: -6040921120121190886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Socialize_fail_0: 1192343344983819963
+      Socialize_fail_1: -6720262266188408897
+      Socialize_fail_10: 7770748319254793447
+      Socialize_fail_11: -5341912268277346847
+      Socialize_fail_12: -8898750755902863464
+      Socialize_fail_13: 8886333572988064812
+      Socialize_fail_14: -9007656845108006375
+      Socialize_fail_15: -4347859126296518501
+      Socialize_fail_16: 9065201344996238055
+      Socialize_fail_17: -3179017634858552559
+      Socialize_fail_18: -7729349735995133971
+      Socialize_fail_19: 3505434660575061862
+      Socialize_fail_2: -7227564528091722203
+      Socialize_fail_20: -6075412633825909612
+      Socialize_fail_21: 668384230929378111
+      Socialize_fail_22: 7074930217320098024
+      Socialize_fail_23: -6040921120121190886
+      Socialize_fail_3: -5679986934049112300
+      Socialize_fail_4: -3708057039703397938
+      Socialize_fail_5: 4753398144453737042
+      Socialize_fail_6: 2954920357660183369
+      Socialize_fail_7: -2864818593215553579
+      Socialize_fail_8: -1498681314727288664
+      Socialize_fail_9: 4287930157119084270
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,201 @@
+﻿id,min_age,max_age,text,choice1,effects1,choice2,effects2,choice3,effects3,choice4,effects4
+a01,0,2,처음으로 뒤집기에 성공했습니다. 엄마가 손뼉을 칩니다.,다시 뒤집으려 버둥거린다,Health+4 Patience+2,엄마를 보며 방긋 웃는다,Repute+2 Charity+2,그대로 잠이 든다,Temperance+2,손뼉 소리에 놀라 운다,Mentality-1 Appetite+2
+a02,0,2,밤중에 배가 고파 눈을 떴습니다.,크게 울어 젖을 달라고 한다,Appetite+4 Ambition+2,손가락을 빨며 참는다,Patience+4 Temperance+2,옹알이로 부모를 부른다,Repute+2,어둠 속 무언가를 가만히 바라본다,Miracle+2 Piety+2
+a03,0,2,집에 낯선 손님이 찾아와 당신을 안아 듭니다.,활짝 웃어 보인다,Repute+4,자지러지게 운다,Mentality-1,손님의 반짝이는 반지를 움켜쥔다,Greed+4,가만히 손님의 눈을 응시한다,Mentality+2
+a04,0,2,돌잡이 상이 차려졌습니다. 무엇을 잡을까요?,지폐,Wealth+5 Greed+4,연필,Mentality+4 Ambition+2,실타래,Health+4 Patience+2,묵주,Piety+5 @no.9
+a05,0,2,첫 걸음마를 떼려 합니다.,넘어져도 다시 일어난다,Health+4 Patience+4,엄마 손을 꼭 잡고 걷는다,Charity+2,기어서 가는 게 편하다,Temperance+2 Appetite+2,넘어지자 울음을 터뜨린다,Mentality-1
+a06,0,2,아빠가 낡은 자장가를 불러 줍니다.,따라서 옹알거린다,Repute+2 Mentality+2,금세 잠든다,Health+2,노래가 끝날 때까지 눈을 뜨고 있다,Patience+2,노래 사이로 다른 목소리를 듣는다,Miracle+4
+a07,0,2,열이 펄펄 끓는 밤입니다.,밤새 앓다 아침에 털고 일어난다,Health+4 Patience+2,오래도록 낫지 않는다,Health-3 Mentality+2 @no.16,부모 품에서 안정을 찾는다,Charity+2,꿈속에서 빛나는 손이 이마를 짚는다,Miracle+2 Piety+4
+a08,0,2,형제가 당신의 장난감을 빼앗아 갔습니다.,울면서 되찾으려 든다,Ambition+4,다른 장난감을 찾는다,Temperance+2 Patience+2,상대를 깨물어 버린다,Ambition+2 Repute-1,그냥 웃어넘긴다,Charity+4
+a09,0,2,할머니가 당신의 작은 손을 펼쳐 손금을 들여다봅니다.,주먹을 꼭 쥔다,Ambition+2,손을 활짝 편다,Charity+2 @no.6,할머니 손가락을 잡는다,Charity+2 Repute+2,하품을 한다,Temperance+2
+a10,0,2,처음으로 말을 하려 입을 뗍니다.,엄마,Charity+2 Repute+2,아빠,Repute+2 Integrity+2,맘마,Appetite+4,알 수 없는 단어를 중얼거린다,Miracle+2 Mentality+2
+a11,0,2,이유식을 처음 먹어 봅니다.,그릇까지 핥아 먹는다,Appetite+5 Health+2,퉤 뱉어 버린다,Temperance+2,숟가락을 빼앗아 스스로 먹으려 한다,Ambition+4,조금 먹고 고개를 돌린다,Temperance+4 Appetite-1
+a12,0,2,부모가 다투는 소리에 잠이 깼습니다.,크게 울어 다툼을 멈춘다,Repute+2 Mentality-1,이불 속에서 숨죽인다,Patience+4 Mentality-1,다시 잠든다,Mentality+2,두 사람에게 기어간다,Charity+4
+a13,0,2,창밖에서 교회 종소리가 들려옵니다.,소리 나는 쪽을 바라본다,Piety+4,종소리를 따라 손뼉을 친다,Repute+2,무서워 운다,Mentality-1,종소리에 맞춰 잠든다,Piety+2 Temperance+2
+a14,0,2,셋방 집주인이 집세를 받으러 찾아왔습니다.,집주인에게 방긋 웃는다,Repute+2 Charity+2,엄마 치맛자락을 붙잡는다,Mentality-1,집주인의 지갑을 잡아당긴다,Greed+4,이불 속으로 숨는다,Patience+2
+a15,0,2,처음으로 물놀이를 합니다.,첨벙첨벙 신나게 논다,Health+4,물을 무서워한다,Mentality-1 Temperance+2,물을 꿀꺽 마신다,Appetite+2 Health-1,물 위에 비친 빛을 오래 바라본다,Mentality+2 Miracle+2
+a16,0,2,동네 아이가 사탕을 내밉니다.,받아서 먹는다,Appetite+4,반으로 나눠 준다,Charity+4,사탕을 더 달라고 조른다,Greed+4,고개를 젓는다,Temperance+4
+a17,0,2,길을 가던 노승이 당신을 보고 멈춰 섭니다.,노승을 보고 운다,Mentality-1,엄마 뒤로 숨는다,Patience+2,노승의 염주를 쥔다,Piety+4 Miracle+2 @no.12,노승에게 손을 흔든다,Charity+2
+a18,0,2,장난감 블록을 쌓고 있습니다.,높이 쌓아 올린다,Patience+4 Ambition+2,무너뜨리며 깔깔 웃는다,Health+2,형에게 쌓아 달라고 한다,Repute+2,블록을 입에 넣는다,Appetite+2
+a19,0,2,아버지가 복권을 사 와 당신에게 숫자를 골라 달라고 합니다.,아무 숫자나 가리킨다,Greed+2 @no.13,종이를 찢어 버린다,Temperance+2,아버지 얼굴을 쓰다듬는다,Charity+2,종이를 먹으려 한다,Appetite+2
+a20,0,2,엄마가 당신을 업고 장을 봅니다.,시장 음식 냄새에 침을 흘린다,Appetite+4,상인들에게 손을 흔든다,Repute+4,반짝이는 물건에 손을 뻗는다,Greed+4,엄마 등에서 잠든다,Patience+2 Health+2
+a21,0,2,먼 친척이 큰 선물 상자를 보내왔습니다.,상자 안 금붙이에 손을 뻗는다,Wealth+5 Greed+2 @no.1,상자 자체를 갖고 논다,Temperance+4,포장지를 찢으며 즐거워한다,Health+2,선물은 관심 없고 엄마를 찾는다,Charity+2
+a22,0,2,동생이 태어났습니다.,동생을 쓰다듬는다,Charity+5,엄마를 빼앗긴 것 같아 운다,Mentality-1 Ambition+2,동생 옆에서 함께 잔다,Patience+2,동생의 젖병을 빼앗는다,Appetite+2 Greed+2
+a23,0,2,처음으로 거울 속의 자신을 발견했습니다.,거울을 두드리며 웃는다,Repute+2,거울 속 아이에게 말을 건다,Mentality+2,거울을 핥는다,Appetite+2,한참 동안 자신을 바라본다,Lust+2 @no.5
+a24,0,2,큰 천둥이 치는 밤입니다.,울며 부모를 찾는다,Mentality-1,창밖 번개를 신기하게 바라본다,Miracle+2 Mentality+2,이불을 뒤집어쓴다,Patience+2,천둥소리를 흉내 낸다,Health+2 Repute+2
+a25,0,2,두 살 생일 케이크 앞입니다.,촛불을 후 분다,Health+2 Repute+2,케이크에 얼굴을 묻는다,Appetite+5,촛불을 오래 바라본다,Piety+2 Miracle+2,선물부터 뜯는다,Greed+4
+b01,3,6,유치원 첫날입니다.,먼저 다가가 친구를 사귄다,Repute+4 Charity+2,엄마와 떨어지기 싫어 운다,Mentality-1,구석에서 그림책을 읽는다,Mentality+2,장난감을 독차지한다,Greed+2 Ambition+2
+b02,3,6,친구가 넘어져 무릎이 까졌습니다.,선생님을 부른다,Integrity+2 Repute+2,손을 잡아 일으켜 준다,Charity+4,따라서 운다,Mentality-1,무릎에 손을 얹고 기도한다,Piety+2 Miracle+2 @no.12
+b03,3,6,산타 할아버지에게 편지를 씁니다.,갖고 싶은 장난감을 잔뜩 적는다,Greed+4,가족의 건강을 빈다,Charity+4 Piety+2,산타는 없다고 적는다,Mentality+2 Piety-1,산타를 직접 만나게 해 달라고 쓴다,Ambition+2
+b04,3,6,주일학교 선생님이 성경 이야기를 들려줍니다.,귀 기울여 듣는다,Piety+4,질문을 마구 던진다,Mentality+4 @no.18,졸면서 듣는다,Health+2,간식만 기다린다,Appetite+4
+b05,3,6,놀이터 미끄럼틀 앞에 아이들이 줄을 서 있습니다.,차례를 지킨다,Patience+4 Integrity+2,새치기를 한다,Ambition+4 Repute-1,동생에게 순서를 양보한다,Charity+4,거꾸로 기어 올라간다,Health+4
+b06,3,6,엄마가 시장에서 사탕 하나를 골라도 된다고 합니다.,제일 큰 것을 고른다,Greed+4,동생 것도 고른다,Charity+4,고르지 않는다,Temperance+4,몰래 하나를 더 챙긴다,Greed+4 Integrity-2
+b07,3,6,아빠와 함께 자전거 타기를 배웁니다.,넘어져도 계속 탄다,Health+4 Patience+2,보조 바퀴를 떼지 않겠다고 한다,Temperance+2,금방 혼자 탄다,Health+5 @no.5,무서워서 그만둔다,Mentality-1
+b08,3,6,유치원 학예회에서 역할을 맡게 되었습니다.,주인공을 하겠다고 우긴다,Ambition+4 Repute+2,나무 역할을 맡는다,Patience+2,대본을 모두 외운다,Mentality+4,무대 뒤에서 친구를 돕는다,Charity+2
+b09,3,6,친구네 집이 무척 커서 놀랐습니다.,부러워서 엄마에게 조른다,Greed+4,친구와 즐겁게 논다,Repute+2,우리 집이 더 좋다고 생각한다,Temperance+2 Integrity+2,친구 장난감을 몰래 가져온다,Greed+4 Integrity-2
+b10,3,6,길에서 동전 하나를 주웠습니다.,경찰 아저씨에게 가져다준다,Integrity+5,사탕을 사 먹는다,Appetite+4,저금통에 넣는다,Wealth+2 Temperance+2,동전을 던져 앞뒤를 맞혀 본다,Greed+2 @no.13
+b11,3,6,할아버지가 바둑을 가르쳐 줍니다.,끝까지 집중한다,Patience+4 Mentality+2,지자 바둑판을 엎는다,Ambition+2 Repute-1,할아버지 수를 따라 한다,Mentality+2,바둑돌로 공기놀이를 한다,Health+2
+b12,3,6,감기에 걸려 유치원을 쉬게 되었습니다.,푹 자고 일어난다,Health+4,아픈 척을 계속한다,Integrity-1 Temperance-1,엄마에게 동화책을 읽어 달라 한다,Mentality+2 Charity+2,창밖을 보며 혼자 이야기를 지어낸다,Mentality+4
+b13,3,6,동물원에 갔습니다.,사자 우리 앞을 떠나지 않는다,Ambition+4,토끼에게 먹이를 준다,Charity+4,솜사탕만 먹는다,Appetite+4,뱀 우리 앞에서 한참을 서 있다,Miracle+2 Piety+2
+b14,3,6,친구가 당신의 그림을 보고 비웃습니다.,다시 그린다,Patience+4,친구 그림을 찢는다,Ambition+2 Repute-2,선생님께 이른다,Integrity+2,같이 웃어 버린다,Mentality+2 Charity+2
+b15,3,6,성당에서 처음으로 미사에 참석했습니다.,신부님을 따라 성호를 긋는다,Piety+4,지루해서 의자 밑으로 기어간다,Health+2,성가대 노래에 넋을 잃는다,Piety+2 Mentality+2,헌금 바구니에 손을 넣는다,Greed+4 Integrity-1
+b16,3,6,부모님이 당신에게 용돈 기입장을 주었습니다.,꼬박꼬박 적는다,Temperance+4 Integrity+2,받자마자 다 쓴다,Appetite+2 Greed+2,동생 용돈까지 관리한다,Ambition+4,잃어버린다,Mentality-1
+b17,3,6,낯선 어른이 사탕을 줄 테니 따라오라고 합니다.,거절하고 도망친다,Mentality+4,큰 소리로 어른을 부른다,Repute+2 Integrity+2,사탕만 받고 달아난다,Greed+2 Health+2,왜 그러냐고 따져 묻는다,Mentality+2 @no.18
+b18,3,6,동네 형들이 축구에 끼워 줍니다.,열심히 공을 쫓는다,Health+5,골키퍼를 자처한다,Patience+4,공을 들고 도망간다,Repute-1 Greed+2,응원만 한다,Repute+2
+b19,3,6,밤에 혼자 화장실에 가야 합니다.,용기 내어 다녀온다,Mentality+4,엄마를 깨운다,Charity+2,참는다,Patience+4 Health-1,기도를 외우며 간다,Piety+4
+b20,3,6,엄마 화장대에서 립스틱을 발견했습니다.,얼굴에 그림을 그린다,Repute+2 Lust+2,엄마에게 가져다준다,Integrity+4,립스틱을 부러뜨린다,Health+2 Repute-1,거울 앞에서 꾸미기 놀이를 한다,Lust+2 Repute+2
+b21,3,6,이웃 할머니가 혼자 무거운 짐을 들고 갑니다.,같이 들어 드린다,Charity+4 Health+2,엄마를 불러온다,Charity+2,모른 척한다,Temperance+2 Charity-1,수고비를 달라고 한다,Greed+4
+b22,3,6,유치원 선생님이 장래 희망을 묻습니다.,대통령,Ambition+5,의사,Charity+2 Mentality+2,부자,Greed+4 Wealth+2,신부님이나 스님,Piety+5 @no.9
+b23,3,6,동생과 과자를 나눠 먹어야 합니다.,정확히 반으로 나눈다,Integrity+4,큰 쪽을 동생에게 준다,Charity+4,큰 쪽을 먹는다,Appetite+4 Greed+2,다 먹어 버린다,Appetite+5 Charity-1
+b24,3,6,유치원에서 도둑 누명을 썼습니다.,끝까지 아니라고 말한다,Integrity+4 Mentality+2,울어 버린다,Mentality-2,진짜 범인을 찾아낸다,Mentality+4 @no.18,그냥 잘못했다고 한다,Patience+2 Integrity-1
+b25,3,6,아빠가 일자리를 잃었습니다. 집안이 조용합니다.,아빠 무릎에 앉아 웃게 해 준다,Charity+4,갖고 싶은 것을 참는다,Temperance+4,돼지저금통을 아빠에게 준다,Charity+4 Wealth-1,무슨 일인지 계속 묻는다,Mentality+2
+b26,3,6,친척 결혼식에 갔습니다.,뷔페를 휩쓴다,Appetite+5,화동을 맡아 꽃을 뿌린다,Repute+4,축의금 봉투를 만지작거린다,Greed+4,성혼 선언문을 따라 외운다,Mentality+2 Piety+2
+b27,3,6,개울가에서 친구들과 물고기를 잡습니다.,맨손으로 잡아 본다,Health+4 Patience+2,잡은 물고기를 놓아준다,Charity+4,가장 많이 잡겠다고 경쟁한다,Ambition+4,물에 빠진다,Health-1 Mentality+2
+b28,3,6,동네 점쟁이 할머니가 당신을 불러 세웁니다.,할머니 말을 믿는다,Piety+2 Miracle+2,무섭다며 달아난다,Mentality-1,할머니 부채를 빼앗아 흉내 낸다,Repute+2,할머니 눈을 똑바로 본다,Miracle+4 @no.12
+b29,3,6,한글을 배우기 시작했습니다.,간판을 모두 읽고 다닌다,Mentality+4,받아쓰기를 백 번 연습한다,Patience+4,그림만 그린다,Mentality+2,글자를 거꾸로 쓰며 장난친다,Repute+2
+b30,3,6,생일 파티에 반 친구들을 초대합니다.,모두를 초대한다,Repute+4 Charity+2,친한 친구만 부른다,Integrity+2,선물을 많이 줄 친구만 부른다,Greed+4 Repute-1,파티를 하지 않는다,Temperance+4
+b31,3,6,텔레비전에서 큰 지진 소식이 나옵니다.,피해자들을 위해 기도한다,Piety+4 Charity+2,저금통을 털어 성금을 낸다,Charity+5 Wealth-1,무서워서 잠을 못 잔다,Mentality-2,채널을 돌린다,Temperance+2
+b32,3,6,엄마가 피아노 학원에 보내려 합니다.,열심히 다닌다,Patience+4 Mentality+2,싫다고 떼를 쓴다,Ambition+2,태권도를 보내 달라고 한다,Health+4,피아노 대신 노래를 부른다,Repute+2
+b33,3,6,처음으로 거짓말을 했습니다. 엄마가 눈치챈 것 같습니다.,솔직히 털어놓는다,Integrity+5,끝까지 우긴다,Integrity-2 Mentality+2,동생 탓을 한다,Integrity-2 Ambition+2,울어서 상황을 넘긴다,Repute-1
+b34,3,6,놀이공원에서 길을 잃었습니다.,직원에게 도움을 청한다,Mentality+2 Repute+2,제자리에서 기다린다,Patience+4,혼자 출구를 찾아 나선다,Mentality+4 Ambition+2,울면서 엄마를 부른다,Mentality-1
+b35,3,6,유치원 달리기 시합입니다.,전력으로 달린다,Health+5,넘어진 친구를 일으키고 함께 뛴다,Charity+4,지름길로 가로지른다,Integrity-2 Ambition+2,걸어서 들어온다,Temperance+2
+b36,3,6,집 앞에 버려진 강아지가 있습니다.,데려가자고 조른다,Charity+4,먹을 것을 나눠 준다,Charity+2 Appetite-1,무서워서 피한다,Mentality-1,강아지를 위해 기도한다,Piety+2 Miracle+2
+b37,3,6,할아버지 댁 다락방에서 낡은 상자를 발견했습니다.,상자를 열어 본다,Mentality+2,할아버지께 가져간다,Integrity+2,상자 속 금화를 꺼내 든다,Wealth+5 Greed+2 @no.1,상자를 보물로 숨긴다,Greed+2
+b38,3,6,친구가 당신에게 비밀을 털어놓았습니다.,끝까지 지킨다,Integrity+4,다른 친구에게 말해 버린다,Repute+2 Integrity-2,비밀을 이용해 친구를 부린다,Ambition+4 Integrity-1,같이 고민해 준다,Charity+4
+b39,3,6,엄마가 처음으로 심부름을 시켰습니다.,잔돈까지 정확히 가져온다,Integrity+4 Temperance+2,잔돈으로 과자를 사 먹는다,Appetite+4 Integrity-1,길을 잃는다,Mentality-1,가게 주인과 친해진다,Repute+4
+b40,3,6,초등학교 입학을 앞두고 있습니다.,가방을 미리 싸 놓는다,Temperance+2 Patience+2,학교 가기 싫다고 운다,Mentality-1,친구를 많이 사귈 생각에 설렌다,Repute+2,반장이 되겠다고 다짐한다,Ambition+4
+c01,7,12,초등학교 첫 시험을 봅니다.,열심히 준비한다,Mentality+4 Patience+2,짝꿍 답안지를 훔쳐본다,Integrity-2 Ambition+2,모르는 문제는 감으로 찍는다,Greed+2 @no.13,시험지에 그림을 그린다,Mentality+2 Repute-1
+c02,7,12,반장 선거가 열립니다.,출마하여 연설한다,Ambition+4 Repute+2,친구를 추천한다,Charity+2 Repute+2,사탕을 돌려 표를 모은다,Ambition+4 Integrity-2,관심 없다,Temperance+2
+c03,7,12,체육 시간 피구 경기입니다.,끝까지 살아남는다,Health+5,공을 피하지 않고 잡아 낸다,Health+4 Ambition+2,일부러 맞고 나간다,Temperance+2,친구를 방패로 삼는다,Ambition+2 Charity-1
+c04,7,12,학교 앞 문방구에서 뽑기를 합니다.,용돈을 모두 쏟아붓는다,Greed+4 Wealth-2,한 번만 뽑는다,Temperance+4,연달아 1등을 뽑는다,Wealth+4 Greed+2 @no.13,친구에게 뽑기를 양보한다,Charity+2
+c05,7,12,담임 선생님이 당신을 따로 부릅니다.,무슨 잘못을 했는지 떨며 간다,Mentality-1,당당하게 간다,Mentality+2,선생님 심부름을 기꺼이 한다,Repute+4,칭찬받을 일을 기대한다,Ambition+2
+c06,7,12,교회 여름 성경학교에 참가했습니다.,성경 암송 대회에서 1등을 한다,Piety+4 Mentality+2,밤새 기도회에 남는다,Piety+5,친구들과 몰래 빠져나와 논다,Health+2 Piety-1,목사님께 끝없이 질문한다,Mentality+4 @no.18
+c07,7,12,친구들이 당신을 따돌리려 합니다.,다른 친구들과 어울린다,Repute+2,정면으로 맞선다,Mentality+4 Ambition+2,혼자 지내는 것도 괜찮다,Temperance+2 Mentality+2,선생님께 도움을 청한다,Integrity+2
+c08,7,12,집에 컴퓨터가 생겼습니다.,게임에 빠진다,Health-1 Lust+2,타자를 배운다,Mentality+4,인터넷으로 세상을 탐험한다,Mentality+2 Ambition+2,허락된 시간만 쓴다,Temperance+4
+c09,7,12,할아버지가 돌아가셨습니다.,마지막 인사를 드린다,Charity+2 Piety+2,죽음에 대해 오래 생각한다,Mentality+4 Piety+2,장례식장 음식을 먹는다,Appetite+2,꿈에서 할아버지를 만난다,Miracle+4 Piety+2
+c10,7,12,친구들 사이에서 유행하는 카드를 모읍니다.,용돈을 모두 쓴다,Greed+4 Wealth-1,카드를 교환하며 이득을 본다,Wealth+4 Greed+2,동생에게 나눠 준다,Charity+4,유행을 따르지 않는다,Temperance+4
+c11,7,12,학교 대표로 글짓기 대회에 나갑니다.,진심을 담아 쓴다,Integrity+2 Mentality+2,어른스러운 표현을 흉내 낸다,Ambition+2 Repute+2,책에서 베낀다,Integrity-2,신에 대한 글을 쓴다,Piety+4
+c12,7,12,수영장에서 처음 깊은 물에 들어갑니다.,끝까지 헤엄친다,Health+5,튜브를 놓지 않는다,Temperance+2,물에 빠질 뻔하다 구조된다,Health-1 Mentality+2,다이빙대에서 뛰어내린다,Ambition+2 Health+2
+c13,7,12,엄마 지갑에서 지폐 한 장이 삐져나와 있습니다.,그냥 지나친다,Integrity+4,몰래 가져간다,Greed+4 Integrity-3,엄마에게 지갑이 열렸다고 알린다,Integrity+2 Repute+2,가져갔다가 다시 돌려놓는다,Integrity+2 Mentality+2
+c14,7,12,반에 전학생이 왔습니다.,먼저 말을 건다,Charity+4 Repute+2,전학생 소문을 퍼뜨린다,Repute+2 Integrity-1,조용히 지켜본다,Patience+2,전학생을 부하로 삼는다,Ambition+4
+c15,7,12,자연 관찰 숙제가 나왔습니다.,개미집을 한 달 동안 관찰한다,Patience+4 Mentality+2,인터넷에서 베낀다,Integrity-1,부모님이 대신 해 준다,Temperance-1,밤하늘 별자리를 그린다,Mentality+2 Miracle+2
+c16,7,12,동네 형이 담배를 권합니다.,단호히 거절한다,Temperance+4 Health+2,호기심에 한 모금 해 본다,Health-2 Lust+2,어른에게 알린다,Integrity+4 Repute-1,형을 설득한다,Charity+2 Mentality+2
+c17,7,12,친구 생일 선물을 사야 합니다.,용돈을 털어 좋은 선물을 산다,Charity+4 Wealth-1,직접 만든 선물을 준다,Charity+2 Patience+2,집에 있던 물건을 포장한다,Greed+2,선물 없이 축하만 한다,Temperance+2
+c18,7,12,운동회 계주 마지막 주자가 되었습니다.,역전승을 거둔다,Health+4 Repute+4,바통을 떨어뜨린다,Mentality-1 Repute-1,넘어졌지만 끝까지 달린다,Patience+4,일부러 천천히 달려 친구를 돋보이게 한다,Charity+2
+c19,7,12,꿈속에 하얀 옷을 입은 사람이 나타났습니다.,그 사람의 말을 받아 적는다,Piety+4 Miracle+2,무서워서 깨어난다,Mentality-1,그 사람에게 소원을 빈다,Greed+2 Miracle+2,그 사람의 손을 잡는다,Miracle+4 @no.12
+c20,7,12,아빠가 사업에 성공해 큰 집으로 이사했습니다.,넓은 방에 기뻐한다,Wealth+4,옛 친구들과 헤어져 슬프다,Charity+2 Mentality-1,새 친구들에게 자랑한다,Repute+2 Greed+2,아빠의 사업을 배우고 싶다고 한다,Ambition+4 Wealth+2 @no.1
+c21,7,12,수학 경시대회 문제를 풉니다.,끝까지 붙잡고 푼다,Patience+4 Mentality+4,쉬운 문제만 푼다,Temperance+2,출제 오류를 찾아 항의한다,Mentality+4 @no.18,포기하고 잔다,Health+2
+c22,7,12,친구 집에서 처음 자고 오게 되었습니다.,밤새 수다를 떤다,Repute+4,집이 그리워 운다,Mentality-1,친구 부모님께 예의 바르게 군다,Integrity+2 Repute+2,친구 집 냉장고를 턴다,Appetite+4
+c23,7,12,길거리에서 노숙인이 손을 내밉니다.,가진 돈을 모두 준다,Charity+5 Wealth-1,빵을 사다 준다,Charity+4,외면한다,Temperance+2 Charity-1,노숙인을 위해 기도한다,Piety+4
+c24,7,12,담임 선생님이 당신을 편애합니다. 친구들이 수군댑니다.,특혜를 거절한다,Integrity+4,마음껏 누린다,Ambition+2 Repute-1,친구들에게 혜택을 나눈다,Charity+2 Repute+2,선생님을 등에 업고 반을 휘어잡는다,Ambition+4 Integrity-1
+c25,7,12,처음으로 혼자 버스를 타고 먼 곳에 가 봅니다.,지도를 보며 정확히 찾아간다,Mentality+4,종점까지 가 버린다,Mentality+2 Patience+2,옆자리 할머니와 친해진다,Repute+2 Charity+2,몰래 무임승차를 한다,Integrity-2 Greed+2
+c26,7,12,학교 연극에서 악역을 맡았습니다.,실감 나게 연기한다,Repute+4 Ambition+2,대사를 잊는다,Mentality-1,악역에도 사연이 있다고 해석한다,Mentality+4 Charity+2,주인공 역을 빼앗으려 한다,Ambition+4 Integrity-1
+c27,7,12,키가 반에서 가장 작습니다.,우유를 매일 마신다,Health+4 Appetite+2,신경 쓰지 않는다,Temperance+2 Mentality+2,놀림받자 주먹을 휘두른다,Ambition+2 Repute-1,몸이 자주 아파 결석한다,Health-2 @no.16
+c28,7,12,친구가 시험지를 보여 달라고 합니다.,보여 준다,Charity+2 Integrity-2,거절한다,Integrity+4 Repute-1,시험 후에 따로 가르쳐 준다,Charity+4 Mentality+2,대가를 받고 보여 준다,Greed+4 Integrity-2
+c29,7,12,성당 복사단에 들어오라는 권유를 받았습니다.,기꺼이 들어간다,Piety+5,주말에 놀고 싶어 거절한다,Health+2,친구와 함께라면 하겠다고 한다,Repute+2 Piety+2,신부님의 일을 자세히 묻는다,Mentality+2 Piety+2 @no.9
+c30,7,12,반에서 돈이 없어지는 사건이 일어났습니다.,범인을 추리해 낸다,Mentality+4 @no.18,의심받는 친구를 감싼다,Charity+4,내 돈이 아니니 무관심하다,Temperance+2,범인이 누구든 용서하자고 한다,Charity+2 Piety+2
+c31,7,12,가족 여행으로 바닷가에 갔습니다.,하루 종일 수영한다,Health+5,조개껍데기를 모은다,Patience+2 Greed+2,해산물을 잔뜩 먹는다,Appetite+5,해 질 녘 바다를 보며 생각에 잠긴다,Mentality+2 Piety+2
+c32,7,12,학원을 하나 더 다니라는 말을 들었습니다.,묵묵히 다닌다,Patience+4 Mentality+2,땡땡이를 친다,Health+2 Integrity-1,성적으로 증명하겠다며 거절한다,Ambition+4,학원비로 다른 걸 사 달라고 한다,Greed+4
+c33,7,12,친구가 키우던 햄스터가 죽었습니다.,함께 묻어 준다,Charity+4,햄스터를 위해 기도한다,Piety+4,새 햄스터를 사라고 한다,Temperance-1,죽음이 무엇인지 묻는다,Mentality+4
+c34,7,12,동네 축구팀에서 입단 제의를 받았습니다.,바로 입단한다,Health+5 Ambition+2,공부가 먼저라며 거절한다,Mentality+2 Temperance+2,부모님과 상의한다,Integrity+2,입단 테스트에서 압도적인 실력을 보인다,Health+5 @no.5
+c35,7,12,부모님 결혼기념일입니다.,손편지를 쓴다,Charity+4,용돈으로 꽃을 산다,Charity+2 Wealth-1,깜빡 잊는다,Repute-1,동생과 깜짝 파티를 준비한다,Charity+2 Repute+2
+c36,7,12,오래된 절에서 스님이 차를 대접합니다.,조용히 차를 음미한다,Temperance+4 Piety+2,스님에게 깨달음을 묻는다,Mentality+2 Piety+2,다과만 먹는다,Appetite+4,차가 써서 얼굴을 찡그린다,Repute-1
+c37,7,12,처음으로 누군가를 좋아하게 되었습니다.,편지를 쓴다,Lust+2 Repute+2,몰래 지켜보기만 한다,Patience+4 Lust+2,친구에게 대신 고백해 달라고 한다,Repute-1,공부에 집중하기로 한다,Temperance+4
+c38,7,12,반 대표로 교내 토론 대회에 나갔습니다.,상대를 논리로 압도한다,Mentality+4 Ambition+2 @no.18,상대 의견을 존중한다,Charity+2 Integrity+2,말문이 막힌다,Mentality-1,감정에 호소한다,Repute+2
+c39,7,12,집에 도둑이 들었습니다.,경찰에 신고한다,Integrity+2 Mentality+2,무서워 숨는다,Mentality-2,도둑을 쫓아간다,Health+2 Ambition+2,잃어버린 물건을 위해 기도한다,Piety+2 Miracle+2
+c40,7,12,급식에 좋아하는 반찬이 나왔습니다.,두 번 받는다,Appetite+4,친구에게 양보한다,Charity+2 Temperance+2,친구 것까지 빼앗아 먹는다,Appetite+4 Greed+2 Repute-1,적당히 먹는다,Temperance+4
+c41,7,12,아빠가 주식 이야기를 해 줍니다.,귀 기울여 배운다,Mentality+2 Wealth+2,용돈으로 투자해 보고 싶다고 한다,Greed+4 @no.13,돈 얘기는 지루하다,Temperance+2,크게 될 아이라는 말을 듣는다,Ambition+4 @no.6
+c42,7,12,반 친구가 괴롭힘을 당하고 있습니다.,괴롭히는 아이에게 맞선다,Integrity+4 Ambition+2,선생님께 알린다,Integrity+4,괴롭힘당하는 친구와 함께 다닌다,Charity+4,못 본 척한다,Temperance+2 Integrity-1
+c43,7,12,동네 도서관에 처음 회원 가입을 했습니다.,매주 다섯 권씩 빌린다,Mentality+5,만화책만 본다,Repute+2,종교 서적 코너를 기웃거린다,Piety+2 Mentality+2,책을 반납하지 않는다,Integrity-1 Greed+2
+c44,7,12,독감이 유행합니다. 당신도 걸렸습니다.,금방 회복한다,Health+4,일주일 넘게 앓는다,Health-2 Patience+2,앓는 동안 이상한 꿈을 꾼다,Miracle+2,아픈 친구들을 위해 기도한다,Piety+2 Charity+2
+c45,7,12,학교에서 저축의 날 행사가 열렸습니다.,용돈을 모두 저금한다,Wealth+4 Temperance+2,저금 대신 군것질을 한다,Appetite+4,친구에게 돈을 빌려 저금한다,Greed+2 Integrity-1,저금왕 상을 받는다,Wealth+4 Repute+2
+c46,7,12,친한 친구가 이사를 갑니다.,연락처를 꼭 받아 둔다,Charity+2,울며 붙잡는다,Mentality-1 Charity+2,쿨하게 보낸다,Temperance+2,가장 아끼는 물건을 선물한다,Charity+5
+c47,7,12,부모님의 대화를 엿들었습니다. 집안 형편이 어렵다고 합니다.,갖고 싶은 것을 말하지 않기로 한다,Temperance+4,돈을 벌 방법을 궁리한다,Ambition+2 Wealth+2,부모님께 힘내라고 말한다,Charity+4,모른 척한다,Patience+2
+c48,7,12,미술 대회에서 상을 받았습니다.,더 연습해 다음 대회를 준비한다,Patience+4 Ambition+2,자랑하고 다닌다,Repute+2 Ambition+2,상장을 엄마에게 바친다,Charity+2,상금으로 맛있는 것을 산다,Appetite+4
+c49,7,12,처음으로 친구와 크게 싸웠습니다.,먼저 사과한다,Charity+4 Integrity+2,상대가 사과할 때까지 기다린다,Patience+2 Ambition+2,다른 친구들을 내 편으로 만든다,Ambition+4 Repute-1,다신 안 볼 거라 다짐한다,Mentality-1
+c50,7,12,할머니가 집안 대대로 내려오는 이야기를 들려줍니다.,조상의 업적을 자랑스러워한다,Ambition+2 Repute+2,이야기 속 신비한 힘을 믿는다,Miracle+2 Piety+2,미신이라고 말한다,Mentality+2 Piety-1,숨겨진 땅문서 이야기에 귀를 기울인다,Wealth+5 @no.1
+c51,7,12,학교에 마술사가 공연을 왔습니다.,무대에 자원해 올라간다,Repute+4,트릭을 간파해 낸다,Mentality+4 @no.18,마술을 따라 연습한다,Patience+2 Repute+2,진짜 마법이라 믿는다,Miracle+2
+c52,7,12,체력장 오래달리기를 합니다.,1등으로 들어온다,Health+5 Repute+2,꾀병을 부린다,Integrity-1 Health-1,완주만 목표로 한다,Patience+4,숨이 차 쓰러진다,Health-2 @no.16
+c53,7,12,처음으로 가족 몰래 새벽 기도에 가 봅니다.,새벽 공기 속에서 마음이 맑아진다,Piety+4 Mentality+2,졸다가 돌아온다,Health+2,기도 중 몸이 뜨거워진다,Piety+2 Miracle+4,그 후로 매주 나간다,Piety+4 Patience+2
+c54,7,12,초등학교 졸업식입니다.,상장을 받는다,Repute+4 Ambition+2,담임 선생님께 감사 편지를 드린다,Charity+4,친구들과 밀가루를 뿌리며 논다,Health+2 Repute+2,중학교가 걱정된다,Mentality-1 Patience+2
+c55,7,12,부모님이 이혼을 고민한다는 사실을 알게 되었습니다.,두 분을 화해시키려 애쓴다,Charity+4,매일 밤 가족을 위해 기도한다,Piety+4,아무렇지 않은 척한다,Patience+4 Mentality-1,집 밖으로 나도는 일이 많아진다,Health+2 Temperance-1
+d01,13,15,중학교 첫 등교입니다. 교복이 어색합니다.,당당하게 교실에 들어간다,Repute+2 Mentality+2,조용히 뒷자리에 앉는다,Patience+2,노는 아이들과 어울린다,Ambition+4 Integrity-1,첫날부터 공부 계획을 세운다,Mentality+4
+d02,13,15,사춘기가 찾아왔습니다. 모든 것이 짜증납니다.,운동으로 푼다,Health+4 Temperance+2,부모님께 반항한다,Ambition+2 Charity-1,일기를 쓴다,Mentality+4,방에 틀어박힌다,Mentality-1 Patience+2
+d03,13,15,거울 속 얼굴에 여드름이 났습니다.,꼼꼼히 관리한다,Temperance+2 Lust+2,신경 쓰지 않는다,Mentality+2,짜다가 덧난다,Repute-1,관리 끝에 피부가 몰라보게 좋아진다,Lust+2 Repute+2 @no.5
+d04,13,15,중간고사 기간입니다.,밤새워 공부한다,Mentality+4 Health-1,평소처럼 준비한다,Temperance+2 Mentality+2,커닝 페이퍼를 만든다,Integrity-2,시험 따위 무의미하다며 논다,Health+2 Ambition-1
+d05,13,15,같은 반 친구에게 고백을 받았습니다.,기쁘게 받아 준다,Lust+4 Repute+2,정중히 거절한다,Integrity+2 Temperance+2,친구들에게 소문낸다,Repute+2 Charity-1,마음 한편에 다른 얼굴이 떠오른다,Lust+2 Mentality+2 @no.20
+d06,13,15,학교 축제에서 밴드를 하자는 제안을 받았습니다.,보컬을 맡는다,Repute+4 Lust+2,드럼을 맡아 연습한다,Health+2 Patience+2,공연 기획을 맡는다,Ambition+4,거절하고 관객이 된다,Temperance+2
+d07,13,15,친구가 술을 몰래 가져왔습니다.,마셔 본다,Lust+2 Health-1 Temperance-1,거절한다,Temperance+4,선생님께 알린다,Integrity+4 Repute-1,위험하다고 친구를 말린다,Charity+2 Integrity+2
+d08,13,15,교회 청소년부 수련회에 갔습니다.,찬양 시간에 눈물을 흘린다,Piety+5,밤에 몰래 빠져나와 논다,Lust+2 Piety-1,조장을 맡아 아이들을 이끈다,Ambition+2 Repute+2,목사님의 설교를 반박해 본다,Mentality+4 @no.18
+d09,13,15,모은 용돈으로 무언가를 사려고 합니다.,최신 휴대폰을 산다,Greed+4 Repute+2,책을 잔뜩 산다,Mentality+4,부모님 선물을 산다,Charity+4,중고 물건을 사고팔아 돈을 불린다,Wealth+4 Ambition+2
+d10,13,15,학교 불량배가 당신에게 돈을 요구합니다.,순순히 준다,Wealth-2 Mentality-1,맞서 싸운다,Health+2 Ambition+2,말로 불량배를 설득한다,Mentality+4 Repute+2 @no.18,선생님께 알린다,Integrity+2
+d11,13,15,진로 상담 시간입니다.,의사가 되겠다고 한다,Charity+2 Ambition+2,사업가가 되겠다고 한다,Greed+2 Ambition+4,성직자가 되겠다고 한다,Piety+5,아직 모르겠다고 한다,Patience+2
+d12,13,15,반에 다이어트가 유행합니다.,굶어서 뺀다,Temperance+4 Health-2,운동으로 뺀다,Health+4 Temperance+2,신경 쓰지 않고 먹는다,Appetite+4,친구들의 다이어트를 비웃는다,Repute-1
+d13,13,15,같은 반 친구가 몹시 힘들어 보입니다.,조용히 다가가 이야기를 들어 준다,Charity+5,선생님께 알린다,Integrity+2 Charity+2,친구를 위해 기도한다,Piety+4,모른 척한다,Charity-2
+d14,13,15,학교 대표로 과학 경진대회에 나갑니다.,밤낮없이 연구한다,Mentality+4 Patience+2,남의 연구를 베낀다,Integrity-2 Ambition+2,독창적인 발명품으로 수상한다,Mentality+4 Repute+2,팀원들의 공을 가로챈다,Ambition+4 Integrity-2
+d15,13,15,체육 시간 철봉 시험입니다.,만점을 받는다,Health+5,매달려만 있다 떨어진다,Health-1 Mentality+2,몰래 하루 백 번씩 연습해 왔다,Health+4 Patience+4 @no.5,시험을 빼먹는다,Integrity-1
+d16,13,15,인터넷에서 수상한 종교 단체의 글을 보게 되었습니다.,흥미롭게 읽는다,Mentality+2 Piety+2,사이비라며 비웃는다,Mentality+2 Piety-1,그들의 조직 운영 방식을 분석한다,Ambition+4 Mentality+2,직접 찾아가 본다,Piety+2 Lust+2
+d17,13,15,반 친구들이 당신을 따라 행동하기 시작합니다.,그들을 이끈다,Ambition+4 Repute+2,부담스러워 거리를 둔다,Temperance+2,좋은 영향을 주려 노력한다,Charity+2 Integrity+2,친구들을 이용해 이득을 챙긴다,Greed+2 Ambition+2 Integrity-1
+d18,13,15,할머니가 위독하십니다.,병원에서 밤을 새운다,Charity+4 Health-1,기적을 바라며 기도한다,Piety+4 Miracle+2,유산 이야기에 귀를 기울인다,Greed+4,할머니와 마지막 대화를 나눈다,Charity+2 Mentality+2
+d19,13,15,아르바이트를 해 보고 싶습니다.,전단지를 돌린다,Health+2 Wealth+2,편의점에서 일한다,Patience+2 Wealth+4,친척 가게를 돕는다,Charity+2 Wealth+2,나이를 속이고 술집에서 일한다,Wealth+5 Integrity-2 Lust+2
+d20,13,15,수학여행을 떠났습니다.,친구들과 밤새 논다,Repute+4 Health-1,몰래 술을 마신다,Lust+2 Temperance-1,유적지에서 역사를 공부한다,Mentality+4,사찰에서 홀로 참배한다,Piety+4
+d21,13,15,짝사랑하던 사람에게 애인이 생겼습니다.,축하해 준다,Charity+4 Temperance+2,몰래 운다,Mentality-1 Lust+2,두 사람을 갈라놓으려 한다,Ambition+2 Integrity-2,운동에 몰두한다,Health+4
+d22,13,15,학생회 선거에 출마했습니다.,공약을 꼼꼼히 준비한다,Ambition+2 Integrity+2,상대 후보의 약점을 퍼뜨린다,Ambition+4 Integrity-2,압도적인 연설로 당선된다,Repute+4 Ambition+2 @no.6,출마를 포기한다,Temperance+2
+d23,13,15,부모님과 진학 문제로 다툽니다.,부모님 뜻을 따른다,Patience+4,내 뜻을 끝까지 관철한다,Ambition+4,논리적으로 부모님을 설득한다,Mentality+4 @no.18,대화를 피한다,Mentality-1
+d24,13,15,길에서 현금이 두둑한 지갑을 주웠습니다.,주인에게 돌려준다,Integrity+5 Repute+2,현금만 챙긴다,Greed+4 Wealth+4 Integrity-3,경찰서에 맡긴다,Integrity+4,주인을 찾아 사례금을 받는다,Wealth+2 Integrity+2
+d25,13,15,친구가 당신에게 돈을 빌려 달라고 합니다.,빌려준다,Charity+4 Wealth-1,이자를 받고 빌려준다,Greed+4 Wealth+2,거절한다,Temperance+2,왜 필요한지 꼬치꼬치 묻는다,Mentality+2
+d26,13,15,교회 성가대에서 독창 기회가 왔습니다.,최선을 다해 부른다,Piety+4 Repute+2,떨려서 망친다,Mentality-1,다른 친구에게 양보한다,Charity+4,사람들의 박수에 취한다,Repute+2 Ambition+2
+d27,13,15,늦은 밤 집에 돌아오다 이상한 빛을 보았습니다.,빛을 따라간다,Miracle+4 Mentality+2,무서워 달아난다,Mentality-1,휴대폰으로 찍어 올린다,Repute+2,빛 앞에서 무릎을 꿇는다,Piety+4 Miracle+2 @no.12
+d28,13,15,학교 폭력 사건의 목격자가 되었습니다.,사실대로 증언한다,Integrity+5,보복이 두려워 침묵한다,Mentality-1 Integrity-1,피해자를 찾아가 위로한다,Charity+4,가해자와 거래한다,Greed+2 Integrity-2
+d29,13,15,사진부에 들어갔습니다.,풍경 사진을 찍는다,Mentality+2 Patience+2,인물 사진을 찍으며 사람들과 친해진다,Repute+4,몰래 남을 찍는다,Lust+2 Integrity-2,사진전에서 입상한다,Repute+2 Ambition+2
+d30,13,15,친척 모임에서 사촌들과 비교를 당합니다.,더 노력하겠다고 다짐한다,Ambition+4 Patience+2,신경 쓰지 않는다,Temperance+2 Mentality+2,사촌들의 흠을 들춘다,Repute-1 Ambition+2,사촌들과 오히려 친해진다,Charity+2 Repute+2
+d31,13,15,SNS에 올린 당신의 글이 크게 화제가 되었습니다.,관심을 즐긴다,Repute+4 Ambition+2,계정을 닫는다,Temperance+4,팔로워를 이용해 돈을 번다,Wealth+4 Greed+2,악플에 시달린다,Mentality-2 Patience+2
+d32,13,15,몸이 자주 아파 병원을 찾습니다.,꾸준히 치료받는다,Health+2 Patience+2,병원이 무서워 미룬다,Health-1,약한 몸을 받아들인다,Health-2 Mentality+4 @no.16,기도로 이겨 내려 한다,Piety+4
+d33,13,15,친구들과 노래방에 갔습니다.,마이크를 놓지 않는다,Repute+2 Ambition+2,탬버린만 친다,Charity+2,의외의 노래 실력으로 주목받는다,Repute+4 Lust+2,계산을 몰래 떠넘긴다,Greed+2 Integrity-1
+d34,13,15,아빠가 회사 일로 큰 빚을 졌습니다.,아르바이트로 돕는다,Charity+4 Wealth+2,절대 가난하게 살지 않겠다고 다짐한다,Greed+4 Ambition+2,기도에 매달린다,Piety+4,집을 나갈까 고민한다,Mentality-1
+d35,13,15,학교 도서관 구석에서 금서로 분류된 책을 발견했습니다.,밤새 읽는다,Mentality+4 Piety-1,사서에게 반납한다,Integrity+2,친구들과 돌려 읽는다,Repute+2,책 속 의식을 따라 해 본다,Miracle+4 Lust+2
+d36,13,15,체육 대회 줄다리기에서 반이 졌습니다.,친구들을 다독인다,Charity+4,패배 원인을 분석한다,Mentality+2,상대 반에게 시비를 건다,Ambition+2 Repute-1,다음엔 이기자며 연습을 주도한다,Ambition+2 Patience+2
+d37,13,15,길거리 전도를 하는 사람들을 만났습니다.,진지하게 이야기를 듣는다,Piety+4,그들의 말하는 방식을 관찰한다,Mentality+2 Ambition+2,귀찮아서 피한다,Temperance+2,논쟁을 벌여 이긴다,Mentality+4 @no.18
+d38,13,15,첫 데이트를 하게 되었습니다.,계획을 꼼꼼히 세운다,Patience+2 Lust+2,즉흥적으로 즐긴다,Lust+4,비싼 곳에서 허세를 부린다,Greed+2 Wealth-2 Repute+2,상대의 이야기를 들어 준다,Charity+4 Lust+2
+d39,13,15,동네 오락실에서 누군가 내기를 걸어 옵니다.,응한다,Greed+4 Wealth-1,거절한다,Temperance+4,연전연승한다,Wealth+5 Greed+2 @no.13,지켜보며 패턴을 익힌다,Mentality+2 Patience+2
+d40,13,15,중학교 졸업을 앞두고 있습니다.,원하는 고등학교에 합격한다,Mentality+2 Ambition+2,친구들과 같은 학교를 택한다,Charity+2 Repute+2,기술을 배우러 실업계로 간다,Health+2 Wealth+2,신학교 진학을 고민한다,Piety+5
+e01,16,18,고등학교 입학식입니다.,전교 1등을 목표로 한다,Ambition+4 Mentality+2,연애를 목표로 한다,Lust+4,동아리 활동에 집중한다,Repute+4,조용히 지낸다,Temperance+2 Patience+2
+e02,16,18,야간 자율 학습 시간입니다.,끝까지 자리를 지킨다,Patience+4 Mentality+2,몰래 빠져나간다,Lust+2 Integrity-1,친구들 공부를 돕는다,Charity+2 Mentality+2,성경을 읽는다,Piety+4
+e03,16,18,처음으로 철학 수업을 들었습니다.,신은 존재하는가를 고민한다,Mentality+4 Piety+2,신은 죽었다는 말에 동의한다,Mentality+2 Piety-2,선생님과 끝장 토론을 벌인다,Mentality+4 @no.18,졸다가 끝난다,Health+2
+e04,16,18,연인이 생겼습니다.,서로에게 헌신한다,Charity+4 Lust+2,연애에 빠져 성적이 떨어진다,Lust+4 Mentality-1,연인의 집안 배경을 살핀다,Greed+2 Ambition+2,상대를 마음대로 휘두른다,Ambition+4 Charity-2
+e05,16,18,모의고사 성적표가 나왔습니다.,결과에 만족한다,Mentality+2,더 독하게 공부한다,Patience+4 Ambition+2,성적표를 위조한다,Integrity-3,성적이 인생의 전부는 아니라고 생각한다,Temperance+2 Mentality+2
+e06,16,18,동네 교회에서 청년부 리더를 제안받았습니다.,맡는다,Piety+4 Ambition+2,거절한다,Temperance+2,교회 내 정치에 눈을 뜬다,Ambition+4 Mentality+2,교회 재정을 들여다본다,Greed+2 Mentality+2
+e07,16,18,운동부 코치가 당신에게 선수 생활을 권합니다.,받아들인다,Health+5 Ambition+2,공부를 택한다,Mentality+4,몸을 다쳐 포기한다,Health-2 @no.16,타고난 몸이라는 극찬을 듣는다,Health+5 Lust+2 @no.5
+e08,16,18,친구가 함께 가출하자고 합니다.,따라나선다,Lust+2 Health-1 Mentality+2,설득해 돌려보낸다,Charity+4,부모님께 알린다,Integrity+2,혼자 남아 생각에 잠긴다,Mentality+2 Patience+2
+e09,16,18,첫 아르바이트 월급을 받았습니다.,부모님께 선물을 드린다,Charity+4 Wealth-1,모두 저축한다,Wealth+4 Temperance+2,친구들에게 한턱낸다,Repute+4 Wealth-1,명품을 산다,Greed+4 Lust+2 Wealth-2
+e10,16,18,교내에 당신에 대한 나쁜 소문이 돕니다.,해명하고 다닌다,Integrity+2 Repute+2,무시한다,Temperance+2 Patience+2,소문의 근원을 찾아 응징한다,Ambition+4 Repute-1,소문을 역이용한다,Mentality+2 Ambition+2
+e11,16,18,꿈에서 거대한 뱀이 당신을 휘감았습니다.,뱀에게 말을 건다,Miracle+4 Piety+2,비명을 지르며 깬다,Mentality-1,꿈 해몽을 찾아본다,Mentality+2,꿈속 뱀의 눈을 마주 본다,Miracle+4 Ambition+2 @no.12
+e12,16,18,수학여행 대신 봉사 활동을 갈 기회가 생겼습니다.,봉사 활동을 택한다,Charity+5,수학여행을 간다,Repute+4,둘 다 빠지고 공부한다,Mentality+4,봉사 활동 사진만 찍고 논다,Repute+2 Integrity-1
+e13,16,18,같은 성별의 친한 친구가 당신에게 사랑을 고백했습니다.,마음을 받아들인다,Lust+4 Charity+2 @no.20,우정을 지키고 싶다고 말한다,Integrity+2 Charity+2,당황해 거리를 둔다,Mentality-1,친구의 용기를 존중한다,Charity+4
+e14,16,18,학교 축제 무대에서 연설을 하게 되었습니다.,청중을 휘어잡는다,Repute+4 Ambition+2 @no.6,준비한 원고만 읽는다,Patience+2,즉흥적으로 농담을 던진다,Repute+2 Lust+2,신에 대한 이야기를 꺼낸다,Piety+4 Repute-1
+e15,16,18,처음으로 술자리에 참석했습니다.,적당히 마신다,Temperance+4,필름이 끊길 때까지 마신다,Lust+2 Health-2 Temperance-2,술은 마시지 않고 분위기만 즐긴다,Temperance+2 Repute+2,사람들의 속내를 듣는다,Mentality+2 Ambition+2
+e16,16,18,수능을 백일 앞두고 있습니다.,백일기도를 시작한다,Piety+5,하루 열다섯 시간씩 공부한다,Mentality+4 Health-1,이미 늦었다며 포기한다,Mentality-1,운동과 공부의 균형을 맞춘다,Health+2 Mentality+2
+e17,16,18,친구의 부모님이 사이비 종교에 빠졌다고 합니다.,친구를 위로한다,Charity+4,그 종교를 조사해 본다,Mentality+2 Piety+2,그 종교가 돈을 모으는 방식에 감탄한다,Greed+2 Ambition+4,친구와 함께 부모님을 설득한다,Charity+2 Integrity+2
+e18,16,18,길거리 카드 도박판을 지나갑니다.,한판 걸어 본다,Greed+4 Wealth-1,속임수를 꿰뚫어 본다,Mentality+4,판돈을 싹쓸이한다,Wealth+5 Greed+4 @no.13,지나친다,Temperance+4
+e19,16,18,신문에 당신의 선행이 실렸습니다.,겸손하게 넘긴다,Integrity+2 Temperance+2,유명세를 즐긴다,Repute+4 Ambition+2,이 기회로 후원을 받는다,Wealth+4 Greed+2,더 많은 선행을 다짐한다,Charity+4
+e20,16,18,대학 입시 면접장입니다.,진솔하게 답한다,Integrity+4,면접관을 말로 압도한다,Mentality+2 Ambition+2 @no.18,긴장해 말을 더듬는다,Mentality-1,면접관의 취향을 읽고 맞춰 답한다,Mentality+2 Integrity-1
+e21,16,18,부모님이 가업을 이으라고 하십니다.,받아들인다,Wealth+4 Patience+2,거절하고 내 길을 간다,Ambition+4,가업의 장부를 살펴본다,Mentality+2 Greed+2,막대한 상속 재산의 존재를 알게 된다,Wealth+5 Greed+2 @no.1
+e22,16,18,몸이 아파 입원하게 되었습니다.,병실에서 책을 읽는다,Mentality+4,같은 병실 환자들과 친해진다,Charity+2 Repute+2,죽음의 공포에 휩싸인다,Mentality-2 Piety+2,병원 기도실을 찾아간다,Piety+4
+e23,16,18,독립해서 혼자 살 기회가 생겼습니다.,바로 독립한다,Ambition+2 Health+2,집에 남는다,Patience+2 Wealth+2,친구와 함께 산다,Repute+2 Charity+2,혼자 사는 자유를 만끽한다,Lust+4 Temperance-1
+e24,16,18,자원봉사로 요양원을 찾았습니다.,어르신들의 이야기를 들어 드린다,Charity+4 Patience+2,노래로 위문 공연을 한다,Repute+4,요양원의 열악함에 분노한다,Integrity+2 Ambition+2,어르신의 손을 잡고 기도한다,Piety+4 Miracle+2
+e25,16,18,친구가 다단계 사업을 권합니다.,거절한다,Temperance+4,가입했다가 돈을 잃는다,Greed+2 Wealth-2,구조를 꿰뚫고 그 위로 올라선다,Ambition+4 Wealth+4 Integrity-1,친구를 빼내 온다,Charity+4
+e26,16,18,대학 합격 발표 날입니다.,원하는 대학에 합격한다,Repute+4 Mentality+2,낙방한다,Mentality-2 Patience+2,대학 대신 사회로 나간다,Wealth+2 Health+2,신학대학에 합격한다,Piety+5
+e27,16,18,큰 사고를 당할 뻔했지만 기적적으로 피했습니다.,신의 뜻이라 믿는다,Piety+5 Miracle+2,운이 좋았을 뿐이다,Mentality+2 @no.13,남은 삶을 의미 있게 살기로 한다,Charity+2 Ambition+2,그날 이후 이상한 예감이 자주 든다,Miracle+4 @no.12
+e28,16,18,아버지가 쓰러지셨습니다.,병원비를 위해 일한다,Wealth+2 Patience+2 Health-1,밤낮으로 간호한다,Charity+5,기도에 매달린다,Piety+4 Miracle+2,가장으로서 집안을 책임진다,Ambition+4 Repute+2
+e29,16,18,당신을 따르는 후배들이 생겼습니다.,좋은 선배가 되어 준다,Charity+4 Repute+2,후배들을 부린다,Ambition+4 Charity-1,후배들에게 신념을 전한다,Piety+2 Ambition+2,귀찮아서 피한다,Temperance+2
+e30,16,18,연인과 이별했습니다.,담담히 받아들인다,Temperance+4,술로 밤을 지새운다,Lust+2 Health-1,일에 몰두한다,Ambition+4,이별을 신의 시련이라 여긴다,Piety+4
+e31,16,18,친구들과 밤새 인생에 대해 이야기합니다.,세상을 바꾸고 싶다고 말한다,Ambition+4,행복하게만 살고 싶다고 말한다,Temperance+2 Charity+2,돈을 많이 벌고 싶다고 말한다,Greed+4,신을 만나고 싶다고 말한다,Piety+4 Miracle+2
+e32,16,18,우연히 오래된 종교 의식 서적을 손에 넣었습니다.,연구한다,Mentality+4 Miracle+2,불태운다,Piety+2 Temperance+2,비싸게 팔아넘긴다,Wealth+4 Greed+2,의식을 실제로 해 본다,Miracle+4 Lust+2
+e33,16,18,새로운 출발을 앞두고 있습니다.,체력을 단련한다,Health+5,신앙을 다진다,Piety+4,친구들과 마지막으로 논다,Repute+2 Lust+2,계획표를 세운다,Patience+2 Mentality+2
+e34,16,18,길에서 쓰러진 노인을 발견했습니다.,응급 처치를 한다,Charity+4 Health+2,구급차를 부른다,Charity+2 Integrity+2,노인의 지갑에 손을 댄다,Greed+4 Integrity-3,노인의 손을 잡고 기도한다,Piety+4 Miracle+2
+e35,16,18,한 노인이 당신이 큰 무리를 이끌 운명이라고 말합니다.,웃어넘긴다,Temperance+2,그 말을 가슴에 새긴다,Ambition+4 @no.6,노인에게 자세히 묻는다,Mentality+2 Miracle+2,무리를 이끄는 법을 공부한다,Ambition+2 Mentality+2
+e36,16,18,첫 직장에서 부당한 대우를 받았습니다.,참고 견딘다,Patience+4,당당히 항의한다,Integrity+2 Ambition+2,동료들을 모아 맞선다,Ambition+4 Repute+2,그만두고 나온다,Temperance+2
+e37,16,18,오랜만에 고향 교회를 찾았습니다.,옛 목사님과 이야기를 나눈다,Piety+4,텅 빈 예배당에서 홀로 기도한다,Piety+2 Miracle+2,교회가 쇠락한 이유를 분석한다,Mentality+2 Ambition+2,헌금함을 바라본다,Greed+2
+e38,16,18,사람들이 이상하게 당신의 말에 귀를 기울입니다.,그 힘을 선하게 쓴다,Charity+2 Repute+2,그 힘으로 사람을 움직여 본다,Ambition+4,두려워 말을 아낀다,Temperance+2 Patience+2,신이 주신 재능이라 믿는다,Piety+4 @no.9
+e39,16,18,열여덟 번째 생일입니다.,가족과 조촐히 보낸다,Charity+2 Temperance+2,성대한 파티를 연다,Repute+4 Wealth-1,홀로 산에 올라 기도한다,Piety+4 Miracle+2,앞으로의 계획을 세운다,Ambition+2 Mentality+2
+e40,16,18,세상에 대한 의문이 깊어집니다. 기존 종교로는 답을 찾을 수 없습니다.,스스로 답을 찾겠다고 다짐한다,Ambition+4 Piety+2,여러 경전을 탐독한다,Mentality+4 Piety+2,신비 체험을 갈구한다,Miracle+4,사람들의 고통에 귀를 기울인다,Charity+4

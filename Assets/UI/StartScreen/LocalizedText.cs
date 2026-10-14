@@ -11,4 +11,6 @@ public class LocalizedText : MonoBehaviour
     void OnEnable() { Lang.Changed += Refresh; Refresh(); }
     void OnDisable() => Lang.Changed -= Refresh;
     void Refresh() => label.text = Lang.Get(key);
+
+    public void SetKey(string newKey) { key = newKey; Refresh(); }
 }

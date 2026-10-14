@@ -5,21 +5,27 @@ public class StatBarUI : MonoBehaviour
 {
     [SerializeField] StatId statId;
     [SerializeField] TMP_Text nameLabel, valueLabel;
-    CultStatus status;
+    ClampedStat stat;
 
-    public void Bind(CultStatus s)
+    public void Bind(CultStatus status)
     {
-        status = s;
-        status[statId].Changed += _ => Refresh();
+        stat = status[statId];
+        stat.Changed += OnStatChanged;
+        Lang.Changed += Refresh;
         Refresh();
     }
+
+    void OnStatChanged(int _) => Refresh();
 
     void Refresh()
     {
         nameLabel.text = StatLabel.Of(statId);
-        var v = status[statId].Value;
-        valueLabel.text = statId == StatId.Doctrine ? DoctrineLevel.Label(v) : v.ToString("N0");
+        valueLabel.text = statId == StatId.Doctrine ? DoctrineLevel.Label(stat.Value) : stat.Value.ToString("N0");
     }
 
-    void OnEnable() { if (status != null) Refresh(); }
+    void OnDestroy()
+    {
+        Lang.Changed -= Refresh;
+        if (stat != null) stat.Changed -= OnStatChanged;
+    }
 }
