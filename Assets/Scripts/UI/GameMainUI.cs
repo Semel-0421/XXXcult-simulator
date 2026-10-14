@@ -5,12 +5,10 @@ public class GameMainUI : MonoBehaviour
     [SerializeField] StatBarUI[] statBars;
     [SerializeField] GameObject pausePanel;
 
-    CultStatus status;
-
     void Start()
     {
-        status = new CultStatus();
-        foreach (var bar in statBars) bar.Bind(status);
+        Time.timeScale = 1;
+        foreach (var bar in statBars) bar.Bind(GameSession.Cult);
         pausePanel.SetActive(false);
     }
 

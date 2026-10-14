@@ -13,12 +13,7 @@ public class StartScreenController : MonoBehaviour
         foreach (var button in menuButtons) { button.alpha = 0; button.interactable = false; }
         foreach (var button in menuButtons)
         {
-            for (float elapsed = 0; elapsed < fadeDuration; elapsed += Time.unscaledDeltaTime)
-            {
-                button.alpha = elapsed / fadeDuration;
-                yield return null;
-            }
-            button.alpha = 1;
+            yield return CanvasFade.To(button, 1, fadeDuration);
             button.interactable = true;
         }
     }
@@ -28,7 +23,11 @@ public class StartScreenController : MonoBehaviour
     public void SetEnglish() => Lang.Set(false);
     public void SetKorean() => Lang.Set(true);
 
-    public void NewGame() => UnityEngine.SceneManagement.SceneManager.LoadScene("GameMain");
+    public void NewGame()
+    {
+        GameSession.StartNew();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameMain");
+    }
 
     public void Quit()
     {
