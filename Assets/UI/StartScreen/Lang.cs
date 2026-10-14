@@ -27,6 +27,8 @@ public static class Lang
         ["doctrine_select"] = ("Doctrines", "교리 선택"), ["doctrine_title"] = ("Doctrines", "교리"), ["doctrine_declaration"] = ("Declaration of Doctrine", "교리 선포"),
         ["doctrine_learn"] = ("Click to learn", "클릭하여 습득"), ["doctrine_tutorial"] = ("Your cult needs a doctrine. Open Doctrines.", "교단에는 교리가 필요합니다. 교리 선택을 여십시오."),
         ["action_Proselytize"] = ("Proselytize", "포교"), ["action_Preach"] = ("Preach", "설교"), ["action_Serve"] = ("Serve", "봉사"), ["action_Desire"] = ("Desire", "욕구"), ["action_Pray"] = ("Pray", "기도"),
+        ["life_Exercise"] = ("Exercise", "운동"), ["life_Meditate"] = ("Meditate", "명상"), ["life_Study"] = ("Study", "공부"), ["life_Socialize"] = ("Socialize", "사교활동"), ["life_Pray"] = ("Pray", "기도"),
+        ["life_action_prompt"] = ("Age {0}. How will you spend this season?", "{0}세. 이번 분기는 무엇을 하며 보내시겠습니까?"), ["life_action_done"] = ("You devoted this season to {0}.", "지난 분기에는 {0}에 힘썼습니다."),
         ["intro_prompt"] = ("Your first memory was your parents calling your name. What is your name?", "당신의 첫 기억은 부모가 부르는 당신의 이름이었다. 당신의 이름은?"),
     };
 

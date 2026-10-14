@@ -3,15 +3,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// 검은 화면에서 이름 → 성별을 입력받고, 첫 질문 후 교단 이름을 정해 창설한다.
+// 검은 화면에서 이름 → 성별을 입력받은 뒤 패널을 띄우고 생애 진행(LifeFlow)을 시작한다.
 public class IntroSequence : MonoBehaviour
 {
     [SerializeField] CanvasGroup blackOverlay, promptGroup, inputGroup, panelGroup, questionGroup;
     [SerializeField] TMP_InputField nameInput;
     [SerializeField] Button confirmButton;
     [SerializeField] PersonalStatPanel statPanel;
-    [SerializeField] QuestionRunner questionRunner;
-    [SerializeField] QuestionPanel questionPanel;
+    [SerializeField] LifeFlow lifeFlow;
     [SerializeField] float blackHold = 0.5f, promptFade = 0.8f, panelFade = 0.5f;
 
     bool askingGender;
@@ -88,19 +87,7 @@ public class IntroSequence : MonoBehaviour
     IEnumerator RunFirstQuestion()
     {
         yield return new WaitForSecondsRealtime(panelFade);
-        questionRunner.Answered += OnIntroAnswered;
-        questionRunner.Run(IntroQuestions.First);
-    }
-
-    // 초기 캐릭터 설정이 끝나면 교단을 창설하고 이름을 정한다.
-    void OnIntroAnswered(Choice _)
-    {
-        questionRunner.Answered -= OnIntroAnswered;
-        questionPanel.AskText(Lang.Get("cult_name_prompt"), "cult_name_hint", cultName =>
-        {
-            GameSession.FoundCult(cultName);
-            questionPanel.Show(string.Format(Lang.Get("cult_founded"), cultName));
-        });
+        lifeFlow.Begin();
     }
 
     void SetInputActive(bool active)

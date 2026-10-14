@@ -14,14 +14,17 @@ public class CultTimeUI : MonoBehaviour
         clock = GameSession.CultTime;
         clock.Changed += Refresh;
         Lang.Changed += Refresh;
+        GameSession.Founded += Refresh;
         Refresh();
     }
 
-    void Refresh() => label.text = string.Format(Lang.Get("cult_time"), clock.Years, clock.Quarter);
+    // 교단 창설 전에는 비워 둔다
+    void Refresh() => label.text = GameSession.CultFounded ? string.Format(Lang.Get("cult_time"), clock.Years, clock.Quarter) : "";
 
     void OnDestroy()
     {
         Lang.Changed -= Refresh;
+        GameSession.Founded -= Refresh;
         if (clock != null) clock.Changed -= Refresh;
     }
 }

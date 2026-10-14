@@ -11,7 +11,7 @@ public class Choice
     public string Text { get; }
     public StatEffect[] Effects { get; }
 
-    public string[] GrantedGifted { get; private set; } = new string[0];
+    public string[] GrantedGifted { get; private set; } = System.Array.Empty<string>();
 
     public Choice(string text, params StatEffect[] effects) { Text = text; Effects = effects; }
 

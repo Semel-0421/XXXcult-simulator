@@ -12,10 +12,12 @@ public class QuestionRunner : MonoBehaviour
     void OnEnable() => panel.Chosen += OnChosen;
     void OnDisable() => panel.Chosen -= OnChosen;
 
-    public void Run(Question question)
+    // preface: 질문 앞에 흐리게 붙는 앞 상황 설명 (예: 직전 행동 결과)
+    public void Run(Question question, string preface = null)
     {
         current = question;
-        panel.Show(question.Text, question.Choices.Select(choice => choice.Text).ToArray());
+        var text = string.IsNullOrEmpty(preface) ? question.Text : $"<color=#9A8FB0>{preface}</color>\n\n{question.Text}";
+        panel.Show(text, question.Choices.Select(choice => choice.Text).ToArray());
     }
 
     void OnChosen(int number)

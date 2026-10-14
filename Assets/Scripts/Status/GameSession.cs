@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 // 한 판의 진행 상태 보관소. 씬이 바뀌어도 유지된다.
 public static class GameSession
@@ -10,6 +11,7 @@ public static class GameSession
     public static GameClock Age { get; private set; } = new();      // 플레이어 나이 (시작부터)
     public static GameClock CultTime { get; private set; } = new(); // 교단 창설 이후 시간
     public static bool CultFounded { get; private set; }
+    public static HashSet<string> UsedEvents { get; private set; } = new(); // 이미 나온 생애 이벤트 id
 
     public static event Action Founded;
 
@@ -35,5 +37,6 @@ public static class GameSession
         Age = new GameClock();
         CultTime = new GameClock();
         CultFounded = false;
+        UsedEvents = new HashSet<string>();
     }
 }

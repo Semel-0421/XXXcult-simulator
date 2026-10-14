@@ -78,5 +78,9 @@ public class QuestionPanel : MonoBehaviour
         answered(typed);
     }
 
-    void SetInputActive(bool active) => numberInput.interactable = confirmButton.interactable = active;
+    void SetInputActive(bool active)
+    {
+        numberInput.interactable = confirmButton.interactable = active;
+        if (!active) numberInput.DeactivateInputField(); // 비활성일 때 커서가 남지 않게
+    }
 }
