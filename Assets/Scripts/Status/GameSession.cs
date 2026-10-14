@@ -11,7 +11,7 @@ public static class GameSession
     public static GameClock Age { get; private set; } = new();      // 플레이어 나이 (시작부터)
     public static GameClock CultTime { get; private set; } = new(); // 교단 창설 이후 시간
     public static bool CultFounded { get; private set; }
-    public static HashSet<string> UsedEvents { get; private set; } = new(); // 이미 나온 생애 이벤트 id
+    public static HashSet<string> UsedEvents { get; private set; } = new(); // 이미 나온 이벤트 id (생애·교단 공용)
 
     public static event Action Founded;
 
@@ -26,6 +26,7 @@ public static class GameSession
     {
         Age.Advance();
         if (CultFounded) CultTime.Advance();
+        if (Age.Quarter == 0) GiftedSpecials.ApplyYearly(Personal, Cult, CultFounded); // 해가 바뀔 때
     }
 
     public static void StartNew(int? seed = null)

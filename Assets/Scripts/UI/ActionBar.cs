@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
 
-public enum CultAction { Proselytize, Preach, Serve, Desire, Pray }
-
 // 질문창 아래 행동 버튼 5개. 교단 창설 전에는 생활 행동, 교리 선포 후에는 교단 행동을 보여준다.
 public class ActionBar : MonoBehaviour
 {
@@ -56,6 +54,7 @@ public class ActionBar : MonoBehaviour
     // 버튼 OnClick에서 호출 (0~4)
     public void Perform(int index)
     {
+        if (!group.interactable) return; // 이벤트 진행 중 등 잠긴 상태에서는 무시
         if (Current == Mode.Life) LifeChosen?.Invoke((LifeAction)index);
         else if (Current == Mode.Cult) CultChosen?.Invoke((CultAction)index);
     }

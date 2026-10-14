@@ -2,20 +2,23 @@ using System;
 using System.Linq;
 using UnityEngine;
 
-// 질문을 띄우고, 고른 선택지의 효과(기프티드 보정 포함)와 기프티드 지급을 반영한 뒤 1턴을 진행한다.
+// 질문을 띄우고, 고른 선택지의 효과(기프티드 보정 포함)와 기프티드 지급을 반영한다. 생애 이벤트는 답하면 1턴이 지난다.
 public class QuestionRunner : MonoBehaviour
 {
     [SerializeField] QuestionPanel panel;
     Question current;
+    bool advancesTurn;
     public event Action<Choice> Answered;
 
     void OnEnable() => panel.Chosen += OnChosen;
     void OnDisable() => panel.Chosen -= OnChosen;
 
     // preface: 질문 앞에 흐리게 붙는 앞 상황 설명 (예: 직전 행동 결과)
-    public void Run(Question question, string preface = null)
+    // advancesTurn: 교단 창설 후 이벤트는 행동 턴 안에서 일어나므로 false
+    public void Run(Question question, string preface = null, bool advancesTurn = true)
     {
         current = question;
+        this.advancesTurn = advancesTurn;
         var text = string.IsNullOrEmpty(preface) ? question.Text : $"<color=#9A8FB0>{preface}</color>\n\n{question.Text}";
         panel.Show(text, question.Choices.Select(choice => choice.Text).ToArray());
     }
@@ -25,9 +28,11 @@ public class QuestionRunner : MonoBehaviour
         var choice = current.Choices[number - 1];
         foreach (var effect in choice.Effects)
             GiftedEffects.Apply(GameSession.Personal, effect.Stat, effect.Amount);
+        foreach (var effect in choice.CultEffects)
+            GiftedEffects.Apply(GameSession.Cult, GameSession.Personal.Talents, effect.Stat, effect.Amount);
         foreach (var id in choice.GrantedGifted)
             GiftedGranter.Grant(GameSession.Personal.Talents, id);
-        GameSession.AdvanceTurn(); // 질문에 답하면 1턴(1분기)이 지난다
+        if (advancesTurn) GameSession.AdvanceTurn();
         Answered?.Invoke(choice);
     }
 }

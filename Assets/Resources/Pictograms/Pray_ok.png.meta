@@ -1,0 +1,1198 @@
+fileFormatVersion: 2
+guid: 0dd3f418a7273c64c93e881db6326016
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4901299775327373361
+    second: Pray_ok_0
+  - first:
+      213: -5836798793914717298
+    second: Pray_ok_1
+  - first:
+      213: -1542989960914240921
+    second: Pray_ok_2
+  - first:
+      213: 2559707325334157294
+    second: Pray_ok_3
+  - first:
+      213: -8436888562215458609
+    second: Pray_ok_4
+  - first:
+      213: -1787289828307619577
+    second: Pray_ok_5
+  - first:
+      213: 7664907333205943523
+    second: Pray_ok_6
+  - first:
+      213: 171148796638709169
+    second: Pray_ok_7
+  - first:
+      213: 1924735959159009340
+    second: Pray_ok_8
+  - first:
+      213: -7356967763264564445
+    second: Pray_ok_9
+  - first:
+      213: 1653726650014780833
+    second: Pray_ok_10
+  - first:
+      213: -2634785758323204412
+    second: Pray_ok_11
+  - first:
+      213: -7380614392416689524
+    second: Pray_ok_12
+  - first:
+      213: -1177611194887074836
+    second: Pray_ok_13
+  - first:
+      213: -6209240999544610888
+    second: Pray_ok_14
+  - first:
+      213: 6739147170672994470
+    second: Pray_ok_15
+  - first:
+      213: 2299982021947563753
+    second: Pray_ok_16
+  - first:
+      213: -6986990647136582701
+    second: Pray_ok_17
+  - first:
+      213: -7803717453262822465
+    second: Pray_ok_18
+  - first:
+      213: -7810531425328710298
+    second: Pray_ok_19
+  - first:
+      213: -4691801853978247328
+    second: Pray_ok_20
+  - first:
+      213: 5160968618413261446
+    second: Pray_ok_21
+  - first:
+      213: 3495438062234346055
+    second: Pray_ok_22
+  - first:
+      213: -3932296358464596612
+    second: Pray_ok_23
+  - first:
+      213: -9032869475680135094
+    second: Pray_ok_24
+  - first:
+      213: -4183552405342620906
+    second: Pray_ok_25
+  - first:
+      213: -304612914868230379
+    second: Pray_ok_26
+  - first:
+      213: 617198986449742334
+    second: Pray_ok_27
+  - first:
+      213: 249360859225802466
+    second: Pray_ok_28
+  - first:
+      213: -2919529020198215761
+    second: Pray_ok_29
+  - first:
+      213: 8866616146445458276
+    second: Pray_ok_30
+  - first:
+      213: 4323581533645521074
+    second: Pray_ok_31
+  - first:
+      213: -6863317119063676051
+    second: Pray_ok_32
+  - first:
+      213: -3818299145217063515
+    second: Pray_ok_33
+  - first:
+      213: 1660190621175744317
+    second: Pray_ok_34
+  - first:
+      213: 7097468725165145272
+    second: Pray_ok_35
+  - first:
+      213: 8804260786503688228
+    second: Pray_ok_36
+  - first:
+      213: -2733222448160383294
+    second: Pray_ok_37
+  - first:
+      213: -6755661623622173705
+    second: Pray_ok_38
+  - first:
+      213: 698448238407282843
+    second: Pray_ok_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pray_ok_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 91
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7f8e192d51bfbb0800000000000000
+      internalID: -4901299775327373361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 91
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8be84feb668ffea0800000000000000
+      internalID: -5836798793914717298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 17
+        width: 38
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a76bf3ec2369ae0800000000000000
+      internalID: -1542989960914240921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_3
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 91
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee7f18f1048e58320800000000000000
+      internalID: 2559707325334157294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_4
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 95
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8679f9d862aea80800000000000000
+      internalID: -8436888562215458609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 91
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7013e01ee554237e0800000000000000
+      internalID: -1787289828307619577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 91
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4e600fb983f5a60800000000000000
+      internalID: 7664907333205943523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_7
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 17
+        width: 38
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5c26b7cea006200800000000000000
+      internalID: 171148796638709169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_8
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 91
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c30f71c382906ba10800000000000000
+      internalID: 1924735959159009340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_9
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 93
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3239d965cccc6e990800000000000000
+      internalID: -7356967763264564445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_10
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 91
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad4ab950a733f610800000000000000
+      internalID: 1653726650014780833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_11
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 91
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce13efff4c5f6bd0800000000000000
+      internalID: -2634785758323204412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_12
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 17
+        width: 38
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c822ed3705ac29990800000000000000
+      internalID: -7380614392416689524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_13
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 91
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb8b358bd848afe0800000000000000
+      internalID: -1177611194887074836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_14
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 97
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf1a59753854d9a0800000000000000
+      internalID: -6209240999544610888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_15
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 91
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a8ea0d65a2468d50800000000000000
+      internalID: 6739147170672994470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_16
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 91
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee18ff867d2bef10800000000000000
+      internalID: 2299982021947563753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_17
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 17
+        width: 38
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3827c6609390f90800000000000000
+      internalID: -6986990647136582701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_18
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 91
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3e0c67250a3b390800000000000000
+      internalID: -7803717453262822465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_19
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 99
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66db146fc0b6b9390800000000000000
+      internalID: -7810531425328710298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_20
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 90
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f7b11721f53eeb0800000000000000
+      internalID: -4691801853978247328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_21
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 91
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 682067d4d917f9740800000000000000
+      internalID: 5160968618413261446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_22
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 17
+        width: 38
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 742abd1e56a428030800000000000000
+      internalID: 3495438062234346055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_23
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 91
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75d722db4dad69c0800000000000000
+      internalID: -3932296358464596612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_24
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 91
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48dd9fe11dc4a280800000000000000
+      internalID: -9032869475680135094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_25
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 91
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6137254b04901f5c0800000000000000
+      internalID: -4183552405342620906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_26
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 17
+        width: 38
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5176847fa2cc5cbf0800000000000000
+      internalID: -304612914868230379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_27
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 91
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef96117453bb09800800000000000000
+      internalID: 617198986449742334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_28
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 99
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e64a0b5168e57300800000000000000
+      internalID: 249360859225802466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_29
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 93
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf14af03dfbb77d0800000000000000
+      internalID: -2919529020198215761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_30
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 91
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46bdf98686c8c0b70800000000000000
+      internalID: 8866616146445458276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_31
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 91
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b0416e5f72700c30800000000000000
+      internalID: 4323581533645521074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_32
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 17
+        width: 38
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b2a51917990c0a0800000000000000
+      internalID: -6863317119063676051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_33
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 91
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5c82b582da20bc0800000000000000
+      internalID: -3818299145217063515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_34
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 97
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d378d9ae29e2a0710800000000000000
+      internalID: 1660190621175744317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_35
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 95
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcb9e793364f7260800000000000000
+      internalID: 7097468725165145272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_36
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 91
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4202471d9840f2a70800000000000000
+      internalID: 8804260786503688228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_37
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 91
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ced6452aa4a11ad0800000000000000
+      internalID: -2733222448160383294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_38
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 17
+        width: 38
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbf24ddb811f32a0800000000000000
+      internalID: -6755661623622173705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_ok_39
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 91
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b907348e8f261b900800000000000000
+      internalID: 698448238407282843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Pray_ok_0: -4901299775327373361
+      Pray_ok_1: -5836798793914717298
+      Pray_ok_10: 1653726650014780833
+      Pray_ok_11: -2634785758323204412
+      Pray_ok_12: -7380614392416689524
+      Pray_ok_13: -1177611194887074836
+      Pray_ok_14: -6209240999544610888
+      Pray_ok_15: 6739147170672994470
+      Pray_ok_16: 2299982021947563753
+      Pray_ok_17: -6986990647136582701
+      Pray_ok_18: -7803717453262822465
+      Pray_ok_19: -7810531425328710298
+      Pray_ok_2: -1542989960914240921
+      Pray_ok_20: -4691801853978247328
+      Pray_ok_21: 5160968618413261446
+      Pray_ok_22: 3495438062234346055
+      Pray_ok_23: -3932296358464596612
+      Pray_ok_24: -9032869475680135094
+      Pray_ok_25: -4183552405342620906
+      Pray_ok_26: -304612914868230379
+      Pray_ok_27: 617198986449742334
+      Pray_ok_28: 249360859225802466
+      Pray_ok_29: -2919529020198215761
+      Pray_ok_3: 2559707325334157294
+      Pray_ok_30: 8866616146445458276
+      Pray_ok_31: 4323581533645521074
+      Pray_ok_32: -6863317119063676051
+      Pray_ok_33: -3818299145217063515
+      Pray_ok_34: 1660190621175744317
+      Pray_ok_35: 7097468725165145272
+      Pray_ok_36: 8804260786503688228
+      Pray_ok_37: -2733222448160383294
+      Pray_ok_38: -6755661623622173705
+      Pray_ok_39: 698448238407282843
+      Pray_ok_4: -8436888562215458609
+      Pray_ok_5: -1787289828307619577
+      Pray_ok_6: 7664907333205943523
+      Pray_ok_7: 171148796638709169
+      Pray_ok_8: 1924735959159009340
+      Pray_ok_9: -7356967763264564445
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

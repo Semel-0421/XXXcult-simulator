@@ -1,5 +1,4 @@
-// 기프티드: 행동에 발생하는 수치를 조정하거나 확률을 보정하는 스킬.
-// 목록은 GiftedCatalog에 있고, 수치 효과는 Modifiers(퍼센트)로 보관한다.
+// 기프티드: 스탯 퍼센트 보정(Modifiers)과 보유 특수효과(Specials)를 가진다. 목록은 GiftedCatalog.
 public class Talent
 {
     public string Id { get; }
@@ -8,10 +7,11 @@ public class Talent
     public string Description { get; }
     public string ExtraEffect { get; }
     public StatModifier[] Modifiers { get; }
+    public GiftedSpecial[] Specials { get; }
 
-    public Talent(string id, string name, string category, string description, string extraEffect, params StatModifier[] modifiers)
+    public Talent(string id, string name, string category, string description, string extraEffect, StatModifier[] modifiers, params GiftedSpecial[] specials)
     {
-        Id = id; Name = name; Category = category; Description = description; ExtraEffect = extraEffect; Modifiers = modifiers;
+        Id = id; Name = name; Category = category; Description = description; ExtraEffect = extraEffect; Modifiers = modifiers; Specials = specials;
     }
 }
 

@@ -8,6 +8,7 @@ public class LifeFlow : MonoBehaviour
     [SerializeField] QuestionRunner questionRunner;
     [SerializeField] QuestionPanel questionPanel;
     [SerializeField] ActionBar actionBar;
+    [SerializeField] ActionResultView resultView;
 
     public void Begin()
     {
@@ -32,13 +33,15 @@ public class LifeFlow : MonoBehaviour
     void OnActionChosen(LifeAction action)
     {
         actionBar.SetInteractable(false);
-        LifeActions.Apply(GameSession.Personal, action);
+        var success = LifeActions.Roll(GameSession.Personal, action, GameSession.Rng);
+        LifeActions.Apply(GameSession.Personal, action, success);
         GameSession.AdvanceTurn();
-        if (TryFoundCult()) return;
-
-        var next = LifeEvent.Pick(LifeEvents.All, GameSession.Age.Years, GameSession.UsedEvents, GameSession.Rng);
-        var summary = string.Format(Lang.Get("life_action_done"), Lang.Get($"life_{action}"));
-        questionRunner.Run(next.Question, summary);
+        resultView.Play(action.ToString(), success, () =>
+        {
+            if (TryFoundCult()) return;
+            var next = LifeEvent.Pick(LifeEvents.All, GameSession.Age.Years, GameSession.UsedEvents, GameSession.Rng);
+            questionRunner.Run(next.Question, Lang.Get($"life_{(success ? "ok" : "fail")}_{action}"));
+        });
     }
 
     bool TryFoundCult()

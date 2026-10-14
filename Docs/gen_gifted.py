@@ -1,33 +1,85 @@
-import csv, io, sys
-src, dst = sys.argv[1], sys.argv[2]
-raw = open(src, 'rb').read()
-try: text = raw.decode('utf-8-sig')
-except UnicodeDecodeError: text = raw.decode('cp949')
-rows = list(csv.reader(io.StringIO(text)))
-header = rows[1]
-cult = {'믿음':'LeaderFaith','신도의 믿음':'FollowerFaith','권위':'Authority','봉헌금':'Offerings','신도':'Followers','교리':'Doctrine','접신(히든)':'Communion','명망':'Reputation'}
-pers = {'체력':'Health','정신력':'Mentality','신앙심':'Piety','평판':'Repute','재산':'Wealth','기적(히든)':'Miracle','음욕':'Lust','재물욕':'Greed','식욕':'Appetite','권력욕':'Ambition','절제':'Temperance','자애':'Charity','인내':'Patience','청렴':'Integrity'}
-cols = {i:h for i,h in enumerate(header)}
-for h in header[4:-1]:
-    assert h in cult or h in pers, h
-BS = chr(92)
-def esc(s): return s.replace(BS, BS*2).replace('"', BS+'"').replace(chr(10), BS+'n')
-out, warn = [], []
-for r in rows[2:]:
-    if len(r) < 3 or not r[1].strip(): continue
-    mods = []
-    for i in range(4, len(header)-1):
-        v = r[i].strip() if i < len(r) else ''
-        if not v: continue
-        if not v.endswith('%'): warn.append(f'{r[0]} {header[i]} "{v}" -> {v}%로 처리')
-        n = float(v.rstrip('%'))
-        num = f'{n:g}f'
-        mods.append(f'Cult(StatId.{cult[header[i]]}, {num})' if header[i] in cult else f'Personal(PersonalStatId.{pers[header[i]]}, {num})')
-    extra = r[len(header)-1].strip() if len(r) >= len(header) else ''
-    body = ',\n            '.join(mods)
-    out.append(f'        new("{esc(r[0])}", "{esc(r[1])}", "{esc(r[2])}",\n            "{esc(r[3])}",\n            "{esc(extra)}",\n            {body}),')
-cs = f'''// 기프티드 목록. Docs/gifted.csv에서 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.
-// 효과 수치는 퍼센트(%) 단위. 기타 효과(ExtraEffect)는 아직 설명 텍스트만 보관한다.
+# Docs/gifted.csv -> Assets/Scripts/Talent/GiftedCatalog.cs
+# 사용: python Docs/gen_gifted.py Docs/gifted.csv Assets/Scripts/Talent/GiftedCatalog.cs
+# 스탯 열 값은 퍼센트 보정. '특수효과' 열 표기 (공백으로 여러 개):
+#   chance:Preach+10   해당 행동 성공률 +10%p (All = 모든 행동, 음수 가능)
+#   failhalf:Exercise  해당 행동 실패 시 불이익 절반 (All 가능)
+#   year:Health+2      해마다(4분기마다) 스탯 변화 (교단 스탯은 창설 후에만)
+# 행동 키: Exercise Meditate Study Socialize Pray Proselytize Preach Serve Desire CultPray All
+import csv, io, re, sys
+
+CULT = {'믿음': 'LeaderFaith', '신도의 믿음': 'FollowerFaith', '권위': 'Authority', '봉헌금': 'Offerings', '신도': 'Followers',
+        '교리': 'Doctrine', '접신(히든)': 'Communion', '명망': 'Reputation'}
+PERS = {'체력': 'Health', '정신력': 'Mentality', '신앙심': 'Piety', '평판': 'Repute', '재산': 'Wealth', '기적(히든)': 'Miracle',
+        '음욕': 'Lust', '재물욕': 'Greed', '식욕': 'Appetite', '권력욕': 'Ambition', '절제': 'Temperance', '자애': 'Charity',
+        '인내': 'Patience', '청렴': 'Integrity'}
+ACTIONS = {'Exercise', 'Meditate', 'Study', 'Socialize', 'Pray', 'Proselytize', 'Preach', 'Serve', 'Desire', 'CultPray', 'All'}
+CATEGORIES = {'운명', '성격', '특기', '외모'}
+
+
+def read_text(path):
+    raw = open(path, 'rb').read()
+    try:
+        return raw.decode('utf-8-sig')
+    except UnicodeDecodeError:
+        return raw.decode('cp949')
+
+
+def esc(s):
+    bs = chr(92)
+    return s.replace(bs, bs * 2).replace('"', bs + '"').replace(chr(10), bs + 'n')
+
+
+def special_code(cell, where):
+    out = []
+    for token in cell.split():
+        m = re.fullmatch(r'(chance|failhalf|year):([A-Za-z]+)([+-]\d+)?', token)
+        if not m:
+            sys.exit(f'{where}: 잘못된 특수효과 "{token}"')
+        kind, target, num = m.groups()
+        if kind == 'chance':
+            if target not in ACTIONS or num is None: sys.exit(f'{where}: "{token}"')
+            out.append(f'GiftedSpecial.Chance("{target}", {int(num)})')
+        elif kind == 'failhalf':
+            if target not in ACTIONS: sys.exit(f'{where}: "{token}"')
+            out.append(f'GiftedSpecial.FailHalf("{target}")')
+        else:
+            stat = {**{v: f'PersonalStatId.{v}' for v in PERS.values()}, **{v: f'StatId.{v}' for v in CULT.values()}}.get(target)
+            if stat is None or num is None: sys.exit(f'{where}: "{token}"')
+            out.append(f'GiftedSpecial.Yearly({stat}, {int(num)})')
+    return out
+
+
+def main(src, dst):
+    rows = list(csv.reader(io.StringIO(read_text(src))))
+    header = rows[1]
+    col = {h: i for i, h in enumerate(header)}
+    stat_cols = [(i, h) for i, h in enumerate(header) if h in CULT or h in PERS]
+    out, names, warn = [], set(), []
+    for r in rows[2:]:
+        r = (r + [''] * len(header))[:len(header)]
+        if not r[1].strip():
+            continue
+        gid, name, cat = r[0].strip(), r[1].strip(), r[2].strip()
+        if name in names: sys.exit(f'{gid}: 중복 이름 {name}')
+        if cat not in CATEGORIES: sys.exit(f'{gid}: 잘못된 분류 {cat}')
+        names.add(name)
+        mods = []
+        for i, h in stat_cols:
+            v = r[i].strip()
+            if not v:
+                continue
+            if not v.endswith('%'): warn.append(f'{gid} {h} "{v}" -> {v}%로 처리')
+            n = f'{float(v.rstrip("%")):g}f'
+            mods.append(f'Cult(StatId.{CULT[h]}, {n})' if h in CULT else f'Personal(PersonalStatId.{PERS[h]}, {n})')
+        specials = special_code(r[col['특수효과']], gid) if '특수효과' in col else []
+        extra = r[col['기타 효과']].strip()
+        mod_code = f'new StatModifier[] {{ {", ".join(mods)} }}' if mods else 'System.Array.Empty<StatModifier>()'
+        line = f'        new("{esc(gid)}", "{esc(name)}", "{cat}",\n            "{esc(r[3].strip())}",\n            "{esc(extra)}",\n            {mod_code}'
+        if specials:
+            line += f',\n            {", ".join(specials)}'
+        out.append(line + '),')
+    cs = f'''// 기프티드 목록. Docs/gifted.csv에서 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.
+// 스탯 보정은 퍼센트(%) 단위. 특수효과는 GiftedSpecial, 기타 효과(ExtraEffect)는 설명 텍스트.
 using System.Collections.Generic;
 using System.Linq;
 
@@ -44,5 +96,10 @@ public static class GiftedCatalog
     public static Talent Find(string id) => All.FirstOrDefault(gifted => gifted.Id == id);
 }}
 '''
-open(dst, 'w', encoding='utf-8-sig', newline='\n').write(cs)
-print(len(out), 'entries'); print('\n'.join(warn))
+    open(dst, 'w', encoding='utf-8-sig', newline='\n').write(cs)
+    print(len(out), 'entries')
+    print('\n'.join(warn))
+
+
+if __name__ == '__main__':
+    main(sys.argv[1], sys.argv[2])

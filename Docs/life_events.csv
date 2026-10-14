@@ -1,4 +1,4 @@
-id,min_age,max_age,text,choice1,effects1,choice2,effects2,choice3,effects3,choice4,effects4
+﻿id,min_age,max_age,text,choice1,effects1,choice2,effects2,choice3,effects3,choice4,effects4
 a01,0,2,처음으로 뒤집기에 성공했습니다. 엄마가 손뼉을 칩니다.,다시 뒤집으려 버둥거린다,Health+4 Patience+2,엄마를 보며 방긋 웃는다,Repute+2 Charity+2,그대로 잠이 든다,Temperance+2,손뼉 소리에 놀라 운다,Mentality-1 Appetite+2
 a02,0,2,밤중에 배가 고파 눈을 떴습니다.,크게 울어 젖을 달라고 한다,Appetite+4 Ambition+2,손가락을 빨며 참는다,Patience+4 Temperance+2,옹알이로 부모를 부른다,Repute+2,어둠 속 무언가를 가만히 바라본다,Miracle+2 Piety+2
 a03,0,2,집에 낯선 손님이 찾아와 당신을 안아 듭니다.,활짝 웃어 보인다,Repute+4,자지러지게 운다,Mentality-1,손님의 반짝이는 반지를 움켜쥔다,Greed+4,가만히 손님의 눈을 응시한다,Mentality+2
