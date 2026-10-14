@@ -4,13 +4,18 @@ public class GameMainUI : MonoBehaviour
 {
     [SerializeField] StatBarUI[] statBars;
     [SerializeField] GameObject pausePanel;
+    [SerializeField] Texture2D cursorTexture;
+    [SerializeField] Vector2 cursorHotspot = new(1, 1); // 검날 끝
 
     void Start()
     {
         Time.timeScale = 1;
         foreach (var bar in statBars) bar.Bind(GameSession.Cult);
         pausePanel.SetActive(false);
+        Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
     }
+
+    void OnDestroy() => Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
     public void Pause() { pausePanel.SetActive(true); Time.timeScale = 0; }
     public void Resume() { pausePanel.SetActive(false); Time.timeScale = 1; }

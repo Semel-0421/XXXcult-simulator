@@ -4,7 +4,7 @@ public static class IntroQuestions
     static StatEffect Wealth(int amount) => new(PersonalStatId.Wealth, amount);
 
     public static readonly Question First = new(
-        "당신은 눈을 뜨고 주변을 둘러봅니다.작은 아기 침대에 누운 채 눈에 들어오는 것은...",
+        "당신은 눈을 뜨고 주변을 둘러봅니다. 작은 아기 침대에 누운 채 눈에 들어오는 것은...",
         new Choice("헤진 벽지와 곰팡이가 슨 벽", Wealth(10)),
         new Choice("작은 유아용 모빌 장난감", Wealth(40)),
         new Choice("자신의 옷을 갈아입히는 유모", Wealth(90)),

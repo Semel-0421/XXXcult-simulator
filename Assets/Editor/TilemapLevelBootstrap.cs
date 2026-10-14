@@ -240,7 +240,6 @@ public static class TilemapLevelBootstrap
         composite.geometryType = CompositeCollider2D.GeometryType.Polygons;
         var groundCollider = ground.gameObject.AddComponent<TilemapCollider2D>();
         groundCollider.compositeOperation = Collider2D.CompositeOperation.Merge;
-        groundCollider.usedByComposite = true;
 
         var cameraObject = new GameObject("Main Camera", typeof(Camera), typeof(AudioListener));
         cameraObject.tag = "MainCamera";

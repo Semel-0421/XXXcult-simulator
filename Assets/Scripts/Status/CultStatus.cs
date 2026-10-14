@@ -22,6 +22,9 @@ public class CultStatus
         [StatId.Reputation] = new ClampedStat(StartingReputation),
     };
 
+    public string Name { get; set; } = "";
+    public DoctrineTree Doctrines { get; } = new();
+
     public ClampedStat this[StatId id] => stats[id];
 
     public static bool IsHidden(StatId id) => HiddenStats.Contains(id);
