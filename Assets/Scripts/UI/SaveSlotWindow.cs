@@ -31,7 +31,7 @@ public class SaveSlotWindow : MonoBehaviour
         if (root == null) Build();
         canSave = allowSave;
         pending = Pending.None;
-        if (!root.activeSelf) AudioManager.MenuOpened();
+        if (!root.activeSelf) Menus.Opened();
         root.SetActive(true);
         Refresh();
     }
@@ -39,7 +39,7 @@ public class SaveSlotWindow : MonoBehaviour
     public void Close()
     {
         if (root == null || !root.activeSelf) return;
-        AudioManager.MenuClosed();
+        Menus.Closed();
         root.SetActive(false);
     }
 
@@ -121,7 +121,7 @@ public class SaveSlotWindow : MonoBehaviour
     void Build()
     {
         var canvas = GetComponentInParent<Canvas>();
-        if (canvas == null) canvas = FindFirstObjectByType<Canvas>();
+        if (canvas == null) canvas = FindAnyObjectByType<Canvas>();
         var content = UiKit.BuildScrollWindow(canvas.rootCanvas.transform, font != null ? font : UiKit.FindFont(), "SaveSlotWindow",
             new Vector2(820, 640), out root, out titleLabel, out hintLabel, out var close);
         close.GetComponentInChildren<TMP_Text>().text = Lang.Get("close");

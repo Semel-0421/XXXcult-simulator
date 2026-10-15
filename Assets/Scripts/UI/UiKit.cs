@@ -14,7 +14,7 @@ public static class UiKit
     // 씬에 이미 있는 글자의 글꼴을 빌려 쓴다 (한글 글꼴을 따로 지정하지 않아도 되도록)
     public static TMP_FontAsset FindFont()
     {
-        foreach (var text in Object.FindObjectsByType<TMP_Text>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        foreach (var text in Object.FindObjectsByType<TMP_Text>(FindObjectsInactive.Include))
             if (text.font != null) return text.font;
         return TMP_Settings.defaultFontAsset;
     }

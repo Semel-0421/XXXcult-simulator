@@ -21,14 +21,14 @@ public class GameMainUI : MonoBehaviour
 
     public void Pause()
     {
-        if (!pausePanel.activeSelf) AudioManager.MenuOpened();
+        if (!pausePanel.activeSelf) Menus.Opened();
         pausePanel.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
-        if (pausePanel.activeSelf) AudioManager.MenuClosed();
+        if (pausePanel.activeSelf) Menus.Closed();
         pausePanel.SetActive(false);
         Time.timeScale = 1;
     }

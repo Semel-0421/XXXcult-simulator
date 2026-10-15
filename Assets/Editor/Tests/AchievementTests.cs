@@ -164,13 +164,13 @@ public class AudioTests
     [Test]
     public void MenuDepth_NeverGoesNegative_AndNests()
     {
-        AudioManager.MenuClosed();
-        Assert.IsFalse(AudioManager.MenuOpen);
-        AudioManager.MenuOpened();
-        AudioManager.MenuOpened();
-        AudioManager.MenuClosed();
-        Assert.IsTrue(AudioManager.MenuOpen);
-        AudioManager.MenuClosed();
-        Assert.IsFalse(AudioManager.MenuOpen);
+        Menus.Closed();
+        Assert.IsFalse(Menus.AnyOpen);
+        Menus.Opened();
+        Menus.Opened();
+        Menus.Closed();
+        Assert.IsTrue(Menus.AnyOpen);
+        Menus.Closed();
+        Assert.IsFalse(Menus.AnyOpen);
     }
 }

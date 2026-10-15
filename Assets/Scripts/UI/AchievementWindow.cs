@@ -20,14 +20,14 @@ public static class AchievementWindow
     {
         if (root == null) Build();
         Refresh();
-        if (!root.activeSelf) AudioManager.MenuOpened();
+        if (!root.activeSelf) Menus.Opened();
         root.SetActive(true);
     }
 
     public static void Close()
     {
         if (root == null || !root.activeSelf) return;
-        AudioManager.MenuClosed();
+        Menus.Closed();
         root.SetActive(false);
     }
 
