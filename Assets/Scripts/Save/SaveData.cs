@@ -36,6 +36,7 @@ public class SaveData
     public List<string> godCores = new();    // 완성한 핵 순서 (승천 엔딩 판정)
     public int godPointsEarned;
     public int godSecularStage;              // 포인트를 이미 받은 세속 규모 단계
+    public float godEnvy, godSuspicion;      // 압박 가산치 (신계 시기, 지상 의혹)
 
     public List<StatEntry> personal = new();
     public List<StatEntry> cult = new();

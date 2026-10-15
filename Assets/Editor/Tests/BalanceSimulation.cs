@@ -166,7 +166,7 @@ public static class BalanceSimulation
         return ending;
     }
 
-    static void Rest()
+    internal static void Rest()
     {
         for (int guard = 0; guard < 50; guard++)
         {

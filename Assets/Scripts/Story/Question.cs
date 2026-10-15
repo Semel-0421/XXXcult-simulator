@@ -70,7 +70,9 @@ public class Choice
         return Math.Clamp(Chance + bonus, MinChance, MaxChance);
     }
 
-    public bool Roll(Random rng, PersonalStatus personal = null) => Chance >= 1f || rng.NextDouble() < ChanceFor(personal);
+    // penalty: 외부 감점(준비된 신의 압박). 확률 1인 확정 선택지는 그대로 성공한다.
+    public bool Roll(Random rng, PersonalStatus personal = null, float penalty = 0) =>
+        Chance >= 1f || rng.NextDouble() < Math.Max(MinChance, ChanceFor(personal) - penalty);
 
     public Outcome Resolve(bool success) => success || Fail == null ? Success : Fail;
 }

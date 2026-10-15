@@ -27,6 +27,13 @@ public static class GameSession
 
     public static void SetGodMode(bool on) => GodMode = on;
 
+    // 신의 본성을 고르면 교리 선포를 대신해 교단 행동이 열린다
+    static void OnGodSkillLearned(GodSkill skill)
+    {
+        if (GodMode && God.Tree.IsNature(skill) && !Cult.Doctrines.IsMax(DoctrineSkill.Declaration))
+            Cult.Doctrines.LevelUp(DoctrineSkill.Declaration);
+    }
+
     public static string FirstExtremeId { get; private set; } // 가장 먼저 0/최대에 이른 교단 스탯의 엔딩 id (없으면 null)
 
     // 처음 한 번만 기록한다. 25년이 지나도 최종 스킬이 없을 때 이 스탯의 엔딩이 나온다.
@@ -82,8 +89,9 @@ public static class GameSession
     {
         Age.Advance();
         if (CultFounded) CultTime.Advance();
-        if (!Dead && Mortality.Dies(Age.Years, Personal.Gender, Rng)) Dead = true; // 분기마다 연령별 사망률
+        if (!Dead && !GodMode && Mortality.Dies(Age.Years, Personal.Gender, Rng)) Dead = true; // 분기마다 연령별 사망률 (신의 그릇은 늙지 않는다)
         if (Age.Quarter == 0) GiftedSpecials.ApplyYearly(Personal, Cult, CultFounded); // 해가 바뀔 때
+        if (GodMode && CultFounded) God.Quarter(Cult);
         if (Age.Quarter == 0 && GodMode && CultFounded) God.YearEnd(Cult, Personal);
         Achievements.Evaluate();
     }
@@ -112,6 +120,7 @@ public static class GameSession
         Run = 0;
         GodMode = false;
         God = new GodState();
+        God.Tree.Changed += OnGodSkillLearned;
         FirstExtremeId = null;
         RaisedMask = 0;
         PersonalRaisedMask = 0;
@@ -146,6 +155,8 @@ public static class GameSession
             godNature = God.Tree.NatureId,
             godPointsEarned = God.Points.Earned,
             godSecularStage = God.Points.SecularStageAwarded,
+            godEnvy = God.Pressure.Envy,
+            godSuspicion = God.Pressure.Suspicion,
         };
         data.godSkills.AddRange(God.Tree.Learned);
         data.godCores.AddRange(God.Tree.CoreOrder);
@@ -203,6 +214,7 @@ public static class GameSession
         GodMode = data.godMode;
         God.Tree.Restore(data.godSkills, data.godNature, data.godCores);
         God.Points.Restore(data.godPointsEarned, data.godSecularStage);
+        God.Pressure.Restore(data.godEnvy, data.godSuspicion);
         Progress.ApplyRun(data.run); // 회차가 없던 옛 저장(0)은 제한 없이 이어 간다
     }
 

@@ -73,6 +73,7 @@ public static class Progress
     // 곧바로 판이 끝나는 엔딩: 주인공 사망, 또는 명망이 바닥나 해체
     public static Endings.Ending ForcedEnding()
     {
+        if (GameSession.GodMode) return GodRules.ForcedEnding();
         if (GameSession.Dead) return Endings.Find(GameSession.CultFounded ? Endings.DeathLeader : Endings.DeathYoung);
         return GameSession.CultFounded && Turns.CultDissolved ? Endings.Find(Endings.Dissolved) : null;
     }
@@ -84,6 +85,7 @@ public static class Progress
     //  - 그 조건이 아직이면 25년이 지났을 때 가장 먼저 극단에 이른 교단 스탯의 엔딩.
     public static Endings.Ending DueEnding()
     {
+        if (GameSession.GodMode) return GodRules.DueEnding();
         Track();
         if (!GameSession.CultFounded || GameSession.CultTime.Turns < Endings.MinTurns) return null;
         var final = GameSession.Cult.Doctrines.Emblem;
@@ -111,6 +113,7 @@ public static class Progress
     {
         var cult = GameSession.Cult.Name;
         var years = GameSession.CultTime.Years;
+        if (GameSession.GodMode) return string.Format(Lang.Get(ending.TextKey), cult, years); // 회차·유산이 없다
         string text;
         if (ending.Id == Endings.Dissolved) text = string.Format(Lang.Get("ending_dissolved"), cult, years);
         else if (IsDeath(ending)) text = string.Format(Lang.Get(ending.TextKey), cult, years, GameSession.Age.Years);

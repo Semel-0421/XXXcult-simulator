@@ -18,6 +18,9 @@ public static class GodSkillInfo
                 GodEffect.Type.FaithPoints => string.Format(Lang.Get("god_eff_faith"), e.Amount),
                 _ => string.Format(Lang.Get("god_eff_year"), StatName(e), e.Amount > 0 ? $"+{e.Amount}" : e.Amount.ToString()),
             };
+        var depth = GodPressure.DepthBonus(skill);
+        if (depth > 0 && skill.Branch != GodBranch.None)
+            yield return string.Format(Lang.Get("god_eff_resist"), Lang.Get($"god_pressure_{GodPressure.Guards(skill)}"), depth);
     }
 
     static string StatName(GodEffect e) => e.CultStat is { } c ? Lang.Get($"stat_{c}") : Lang.Get($"pstat_{e.PersonalStat}");

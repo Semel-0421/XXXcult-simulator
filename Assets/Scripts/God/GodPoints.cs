@@ -35,7 +35,8 @@ public class GodPoints
         return gained;
     }
 
-    public void Defense(int amount = PerDefense) => Earned += Math.Max(0, amount);
+    public void Defense(int amount = PerDefense) => Add(amount);
+    public void Add(int amount) => Earned += Math.Max(0, amount);
 
     public int Available(GodTree tree) => Math.Max(0, Earned - tree.SpentPoints);
 
@@ -51,14 +52,22 @@ public class GodState
 {
     public GodTree Tree { get; } = new();
     public GodPoints Points { get; } = new();
+    public GodPressure Pressure { get; }
+
+    public GodState() => Pressure = new GodPressure(Tree);
     public bool IntroShown { get; set; } // 권능 트리 확대 연출을 이번 판에 이미 보였는가 (저장하지 않음)
 
     public int Available => Points.Available(Tree);
 
-    // 해가 바뀔 때: 포인트 적립과 해마다 효과
+    // 해가 바뀔 때: 포인트 적립(압박 단계 보너스·세속 단계 첫 도달 포함)과 해마다 효과
     public void YearEnd(CultStatus cult, PersonalStatus personal)
     {
         Points.YearEnd(cult[StatId.Followers].Value, cult[StatId.FollowerFaith].Value, Tree.Total(GodEffect.Type.FaithPoints));
+        Points.Add(Pressure.YearPoints(cult)); // 압박 단계 보너스
+        Points.SecularStageReached(Pressure.Stage(global::Pressure.Earth, cult));
         Tree.ApplyYearly(personal, cult);
     }
+
+    // 분기마다: 압박이 교단을 공격한다
+    public void Quarter(CultStatus cult) => Pressure.ApplyQuarter(cult);
 }

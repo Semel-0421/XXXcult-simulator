@@ -147,7 +147,8 @@ public class IntroSequence : MonoBehaviour
     IEnumerator RunFirstQuestion()
     {
         yield return new WaitForSecondsRealtime(panelFade);
-        lifeFlow.Begin();
+        if (GameSession.GodMode) lifeFlow.Resume(); // 유년기 없이 성인으로 시작: 곧바로 교단 이름 입력
+        else lifeFlow.Begin();
     }
 
     void SetInputActive(bool active)

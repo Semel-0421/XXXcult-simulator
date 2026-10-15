@@ -18,8 +18,9 @@ public static class Turns
     public static bool Cult(CultAction action)
     {
         var cult = GameSession.Cult;
-        var success = CultActions.Roll(cult, GameSession.Personal.Talents, action, GameSession.Rng);
+        var success = CultActions.Roll(cult, GameSession.Personal.Talents, action, GameSession.Rng, GodRules.ChanceBonus(action));
         CultActions.Apply(cult, GameSession.Personal, action, success);
+        GodRules.AfterAction(action, success);
         GameSession.Count($"act_{CultActions.Key(action)}");
         GameSession.Count("cult_acts");
         GameSession.Count(success ? "act_ok" : "act_fail");
@@ -42,7 +43,7 @@ public static class Turns
         var used = GameSession.UsedEvents;
         var rng = GameSession.Rng;
         var next = CultEvent.FindTriggered(CultEvents.All, cult, used)
-                   ?? CultEvent.RollNegative(CultEvents.All, cult, used, rng, GameSession.CultTime.Years + 1)
+                   ?? (GameSession.GodMode ? null : CultEvent.RollNegative(CultEvents.All, cult, used, rng, GameSession.CultTime.Years + 1)) // 신 모드엔 불운이 없다
                    ?? CultEvent.RollMood(CultEvents.All, GameSession.Personal, used, rng)
                    ?? CultEvent.RollRandom(CultEvents.All, cult, used, rng);
         if (next != null && next.IsNegative) GameSession.AddMisfortune();
@@ -52,7 +53,7 @@ public static class Turns
     // 고른 선택지의 성공/실패를 판정하고 결과의 효과(기프티드 보정 포함)와 기프티드 지급을 반영한다. 시간은 흐르지 않는다.
     public static Outcome Answer(Choice choice)
     {
-        var success = choice.Roll(GameSession.Rng, GameSession.Personal); // 교단 이벤트는 개인 스탯 보정이 붙는다
+        var success = choice.Roll(GameSession.Rng, GameSession.Personal, GodRules.EventPenalty); // 교단 이벤트는 개인 스탯 보정이 붙는다
         var outcome = choice.Resolve(success);
         GameSession.Count("events");
         GameSession.Count(success ? "choice_ok" : "choice_fail");
