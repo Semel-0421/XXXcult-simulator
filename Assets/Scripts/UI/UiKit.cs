@@ -14,9 +14,15 @@ public static class UiKit
     // 씬에 이미 있는 글자의 글꼴을 빌려 쓴다 (한글 글꼴을 따로 지정하지 않아도 되도록)
     public static TMP_FontAsset FindFont()
     {
+        // 한글이 들어 있는 글꼴을 우선한다 (기본 영문 글꼴을 빌리면 글자가 빈칸으로 보인다)
+        TMP_FontAsset fallback = null;
         foreach (var text in Object.FindObjectsByType<TMP_Text>(FindObjectsInactive.Include))
-            if (text.font != null) return text.font;
-        return TMP_Settings.defaultFontAsset;
+        {
+            if (text.font == null) continue;
+            if (text.font.HasCharacter('가')) return text.font;
+            fallback ??= text.font;
+        }
+        return fallback != null ? fallback : TMP_Settings.defaultFontAsset;
     }
 
     public static RectTransform Child(Transform parent, string name, params System.Type[] components)

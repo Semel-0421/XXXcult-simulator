@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
@@ -6,9 +6,9 @@ using NUnit.Framework;
 public class CultEventTests
 {
     [Test]
-    public void Catalog_Has150RandomAnd38ConditionalWith2To5Choices()
+    public void Catalog_Has300RandomAnd38ConditionalWith2To5Choices()
     {
-        Assert.AreEqual(150, CultEvents.All.Count(e => e.Kind == CultEvent.EventKind.Random));
+        Assert.AreEqual(300, CultEvents.All.Count(e => e.Kind == CultEvent.EventKind.Random)); // 기존 150 + 일반 150
         Assert.AreEqual(38, CultEvents.All.Count(e => e.IsConditional));
         Assert.AreEqual(16, CultEvents.All.Count(e => e.IsNegative));
         Assert.IsTrue(CultEvents.All.All(e => e.Question.Choices.Length is >= 2 and <= 5));
@@ -26,9 +26,9 @@ public class CultEventTests
     public void Ratio_UsesDoctrineLevelAndClamps()
     {
         var cult = new CultStatus();
-        cult[StatId.Doctrine].Set(350); // 4레벨
+        cult[StatId.Doctrine].Set(350); // 로그 곡선으로 6레벨
         cult[StatId.Followers].Set(5000);
-        Assert.AreEqual(0.4f, cult.Ratio(StatId.Doctrine), 1e-4);
+        Assert.AreEqual(0.6f, cult.Ratio(StatId.Doctrine), 1e-4);
         Assert.AreEqual(1f, cult.Ratio(StatId.Followers), 1e-4);
         Assert.AreEqual(0.5f, cult.Ratio(StatId.Reputation), 1e-4);
     }
@@ -73,6 +73,29 @@ public class CultEventTests
         var first = CultEvent.FindTriggered(CultEvents.All, cult, used);
         Assert.AreEqual("cd01", first.Id);
         Assert.IsNull(CultEvent.FindTriggered(CultEvents.All, cult, used));
+    }
+
+    [Test]
+    public void EveryRolledCultChoice_HasPersonalStatBonus()
+    {
+        foreach (var e in CultEvents.All)
+            foreach (var choice in e.Question.Choices)
+                if (choice.Chance < 1f) Assert.IsNotNull(choice.BonusStat, $"{e.Id}: {choice.Text}");
+    }
+
+    [Test]
+    public void StatBonus_ConvertsPersonalStatToPercent()
+    {
+        var choice = new Choice("t", 0.6f, new Outcome("s"), new Outcome("f")).With(PersonalStatId.Piety);
+        var p = new PersonalStatus();
+        Assert.AreEqual(0.6f, choice.ChanceFor(p), 1e-4);
+        p[PersonalStatId.Piety].Set(50);
+        Assert.AreEqual(0.6f + Choice.MaxStatBonus / 2, choice.ChanceFor(p), 1e-4);
+        p[PersonalStatId.Piety].Set(100);
+        Assert.AreEqual(0.6f + Choice.MaxStatBonus, choice.ChanceFor(p), 1e-4);
+        var sure = new Choice("t", 0.95f, new Outcome("s"), new Outcome("f")).With(PersonalStatId.Piety);
+        Assert.AreEqual(0.99f, sure.ChanceFor(p), 1e-4, "최대 99%");
+        Assert.AreEqual(1f, new Choice("t", new Outcome("s")).ChanceFor(p), "확정 선택지는 그대로");
     }
 
     [Test]

@@ -54,7 +54,7 @@ public static class GiftedSpecials
             {
                 if (s.Kind != GiftedSpecial.Type.Yearly) continue;
                 if (s.PersonalStat is { } p) personal[p].Add(s.Amount);
-                else if (cultFounded && s.CultStat is { } c) cult[c].Add(s.Amount);
+                else if (cultFounded && s.CultStat is { } c) cult.AddWithRemainder(c, s.Amount);
             }
     }
 }

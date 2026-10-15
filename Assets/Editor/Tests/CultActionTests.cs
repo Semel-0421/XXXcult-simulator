@@ -11,7 +11,7 @@ public class CultActionTests
         CultActions.Apply(cult, personal, CultAction.Preach);
 
         Assert.AreEqual(20, cult[StatId.FollowerFaith].Value);
-        Assert.AreEqual(10, cult[StatId.Doctrine].Value);
+        Assert.AreEqual(20, cult[StatId.Doctrine].Value, "교리 상승은 두 배");
         Assert.AreEqual(1, personal[PersonalStatId.Mentality].Value);
     }
 
@@ -31,11 +31,12 @@ public class CultActionTests
     {
         var cult = new CultStatus();
         var personal = new PersonalStatus();
-        GiftedGranter.Grant(personal.Talents, "no.1"); // 봉헌금 +2%
+        GiftedGranter.Grant(personal.Talents, "no.1"); // 봉헌금 +1%
 
-        CultActions.Apply(cult, personal, CultAction.Desire); // 봉헌금 +30 -> 30.6
+        CultActions.Apply(cult, personal, CultAction.Desire); // 봉헌금 +30 -> 30.3
+        CultActions.Apply(cult, personal, CultAction.Desire); // 30.3 + 남은 0.3 -> 31
 
-        Assert.AreEqual(31, cult[StatId.Offerings].Value);
+        Assert.AreEqual(61, cult[StatId.Offerings].Value);
     }
 
     [Test]

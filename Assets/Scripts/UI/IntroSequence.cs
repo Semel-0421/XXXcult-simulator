@@ -15,6 +15,15 @@ public class IntroSequence : MonoBehaviour
 
     bool askingGender;
 
+    bool genderReady;
+
+    void Update()
+    {
+        if (!genderReady || Menus.AnyOpen) return;
+        if (Keybinds.NumberPressed(1)) ChooseGender(Gender.Male);
+        else if (Keybinds.NumberPressed(2)) ChooseGender(Gender.Female);
+    }
+
     IEnumerator Start()
     {
         if (GameSession.ConsumeResume())
@@ -63,9 +72,41 @@ public class IntroSequence : MonoBehaviour
         SetInputActive(false);
         yield return CanvasFade.To(promptGroup, 0, promptFade / 2);
         SetKey(promptGroup, "gender_prompt");
-        SetKey(nameInput.placeholder, "choice_hint");
+        ShowGenderLinks();
+        // 성별은 입력칸 대신 글자를 눌러 고른다 (모바일에서 키보드가 화면을 가리지 않도록)
+        inputGroup.alpha = 0;
+        inputGroup.interactable = false;
         yield return CanvasFade.To(promptGroup, 1, promptFade / 2);
-        SetInputActive(true);
+        genderReady = true;
+    }
+
+    // 안내문의 "남성" "여성" 글자를 눌러 고를 수 있게 만든다
+    void ShowGenderLinks()
+    {
+        var label = promptGroup.GetComponentInChildren<TMP_Text>(true);
+        var male = Lang.IsKorean ? "남성" : "Male";
+        var female = Lang.IsKorean ? "여성" : "Female";
+        label.text = Lang.Get("gender_prompt")
+            .Replace(male, $"<link=\"g1\"><color=#F2D978><u>{male}</u></color></link>")
+            .Replace(female, $"<link=\"g2\"><color=#F2D978><u>{female}</u></color></link>");
+        label.raycastTarget = true;
+        promptGroup.blocksRaycasts = true;
+        promptGroup.interactable = true;
+        var click = label.GetComponent<TextLinkClick>();
+        if (click == null)
+        {
+            click = label.gameObject.AddComponent<TextLinkClick>();
+            click.Clicked += id => ChooseGender(id == "g2" ? Gender.Female : Gender.Male);
+        }
+    }
+
+    void ChooseGender(Gender gender)
+    {
+        if (!genderReady) return;
+        genderReady = false;
+        GameSession.Personal.Gender = gender;
+        SetInputActive(false);
+        RevealPanels();
     }
 
     static bool TryParseGender(string typed, out Gender gender)
@@ -93,6 +134,7 @@ public class IntroSequence : MonoBehaviour
 
     void RevealPanels()
     {
+        GameSession.MarkStarted();
         statPanel.Show(GameSession.Personal);
         blackOverlay.blocksRaycasts = false;
         StartCoroutine(CanvasFade.To(blackOverlay, 0, panelFade));
@@ -113,6 +155,7 @@ public class IntroSequence : MonoBehaviour
         inputGroup.alpha = 1;
         inputGroup.interactable = active;
         if (active) nameInput.ActivateInputField();
+        else nameInput.DeactivateInputField(); // 숨긴 입력칸이 포커스(모바일 키보드)를 쥐고 있지 않게
     }
 
     static void SetKey(Component root, string key)

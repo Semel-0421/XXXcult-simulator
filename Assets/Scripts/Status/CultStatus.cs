@@ -30,8 +30,16 @@ public class CultStatus
     public ClampedStat this[StatId id] => stats[id];
     public RemainderBank<StatId> Remainders => remainders;
 
-    // 퍼센트 보정으로 생긴 소수는 쌓아 두었다가 반올림되면 반영한다
-    public void AddWithRemainder(StatId id, float amount) => stats[id].Add(remainders.Take(id, amount));
+    // 퍼센트 보정으로 생긴 소수는 쌓아 두었다가 반올림되면 반영한다.
+    // 교리 규칙도 여기서 적용: 오르는 교리는 두 배, 깎이는 신도 믿음은 교리 레벨만큼 덜 깎인다.
+    public void AddWithRemainder(StatId id, float amount) => stats[id].Add(remainders.Take(id, WithDoctrineRules(id, amount)));
+
+    float WithDoctrineRules(StatId id, float amount)
+    {
+        if (id == StatId.Doctrine && amount > 0) return amount * DoctrineLevel.GainMultiplier;
+        if (id == StatId.FollowerFaith && amount < 0) return amount * (1f - DoctrineLevel.FaithGuard(stats[StatId.Doctrine].Value));
+        return amount;
+    }
 
     // 스탯을 0~1 비율로 환산 (이벤트 가중치·행동 성공률에 사용). 교리는 레벨/10, 신도는 1000명 기준.
     public float Ratio(StatId id)

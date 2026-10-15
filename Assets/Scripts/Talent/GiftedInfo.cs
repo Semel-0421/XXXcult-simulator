@@ -75,5 +75,5 @@ public static class GiftedInfo
         _ => Lang.Get($"action_{action}"),
     };
 
-    static string Signed(float value) => (value >= 0 ? "+" : "") + value.ToString("0.#", System.Globalization.CultureInfo.InvariantCulture);
+    static string Signed(float value) => (value >= 0 ? "+" : "") + value.ToString("0.##",System.Globalization.CultureInfo.InvariantCulture);
 }

@@ -8,6 +8,7 @@
 #   cult_events.csv: id, kind, theme, text
 #     kind: random(확률 이벤트, theme = 가중치 기준 교단 스탯) / condition(조건 이벤트, theme 자리에 조건)
 #           / negative(교단 3년차부터 확률이 오르는 부정적 이벤트, theme 자리에 '스탯이 0에 가까운' 조건)
+#           / mood(긍정 이벤트, theme = Desire 또는 Virtue. 욕망/미덕 평균이 높을 때만 나오며 감소 효과는 쓸 수 없음)
 #     조건 표기: "FollowerFaith>=300 Offerings<100 DoctrineLv>=3" (모두 만족해야 발동)
 #
 # [선택지 CSV] 선택지 1줄 = 선택지 1개 (같은 event_id를 2~5줄)
@@ -114,7 +115,22 @@ def outcome_code(text, cell, allow_cult, allowed_gifts, where):
     return f'new Outcome("{esc(text.strip())}"){"".join(calls)}'
 
 
-def choices_for(event_id, choice_rows, allow_cult, allowed_gifts, indent):
+# 교단 이벤트 선택지의 성공 확률 보정에 쓰는 개인 스탯 (이벤트 테마/조건의 교단 스탯 기준)
+BONUS_STAT = {
+    'LeaderFaith': 'Piety', 'FollowerFaith': 'Charity', 'Authority': 'Ambition', 'Offerings': 'Wealth',
+    'Followers': 'Repute', 'Doctrine': 'Mentality', 'Communion': 'Patience', 'Reputation': 'Integrity',
+    'DoctrineLv': 'Mentality', 'Desire': 'Greed', 'Virtue': 'Integrity',
+}
+
+
+def bonus_stat_for(kind, theme):
+    if kind in ('random', 'mood'):
+        return BONUS_STAT.get(theme)
+    m = re.match(r'([A-Za-z]+)', theme.strip())  # 조건·부정적 이벤트: 조건식의 첫 스탯
+    return BONUS_STAT.get(m.group(1)) if m else None
+
+
+def choices_for(event_id, choice_rows, allow_cult, allowed_gifts, indent, bonus=None):
     rows = sorted(choice_rows, key=lambda r: int(r['no']))
     if not 2 <= len(rows) <= 5:
         sys.exit(f'{event_id}: 선택지 {len(rows)}개 (2~5개 필요)')
@@ -134,7 +150,8 @@ def choices_for(event_id, choice_rows, allow_cult, allowed_gifts, indent):
             if not r['fail_text'].strip():
                 sys.exit(f'{where}: 실패 결과문이 필요함')
             fail = outcome_code(r['fail_text'], r['fail_effects'], allow_cult, allowed_gifts, where + ' 실패')
-            codes.append(f'new Choice("{esc(label)}", {chance / 100:.2f}f, {success},\n{indent}    {fail})')
+            with_bonus = f'.With(PersonalStatId.{bonus})' if bonus else ''
+            codes.append(f'new Choice("{esc(label)}", {chance / 100:.2f}f, {success},\n{indent}    {fail}){with_bonus}')
     return codes
 
 
@@ -183,9 +200,16 @@ def build_cult(gifts):
             head = f'CultEvent.Conditional("{eid}", {condition_code(theme, eid)}'
         elif kind == 'negative':
             head = f'CultEvent.Negative("{eid}", {condition_code(theme, eid)}'
+        elif kind == 'mood':
+            if theme not in ('Desire', 'Virtue'):
+                sys.exit(f'{eid}: mood 테마는 Desire 또는 Virtue')
+            head = f'CultEvent.Mood("{eid}", CultEvent.MoodTrait.{theme}'
+            for r in choices.get(eid, []):
+                if re.search(r'[A-Za-z]+-\d', r['success_effects'] + ' ' + r['fail_effects']):
+                    sys.exit(f'{eid} 선택지{r["no"]}: 긍정 이벤트에는 감소 효과를 쓸 수 없음')
         else:
-            sys.exit(f'{eid}: kind는 random, condition, negative 중 하나')
-        codes = choices_for(eid, choices.get(eid, []), True, allowed, '                ')
+            sys.exit(f'{eid}: kind는 random, condition, negative, mood 중 하나')
+        codes = choices_for(eid, choices.get(eid, []), True, allowed, '                ', bonus_stat_for(kind, theme))
         body = ',\n                '.join(codes)
         out.append(f'        {head}, new Question("{esc(e["text"].strip())}",\n                {body})),')
     unused = set(choices) - ids

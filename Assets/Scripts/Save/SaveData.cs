@@ -21,6 +21,13 @@ public class SaveData
     public string cultName;
     public int misfortune;
     public string doctrineEmblem;
+    public int personalRaised;     // 한 번이라도 0을 넘은 개인 스탯 비트마스크 (휴식 판정용)
+    public int statsRaised;        // 한 번이라도 0을 넘은 교단 스탯 비트마스크
+    public string firstExtreme;    // 가장 먼저 극단(0/최대)에 이른 교단 스탯의 엔딩 id
+    public string pendingEventId;  // 저장 시점에 화면에 떠 있던 이벤트 (없으면 비어 있음)
+    public bool pendingAdvances;
+    public int run;                // 이 판의 회차 (0이면 회차 제한 없음: 회차 기능 이전의 저장)
+    public bool dead;              // 주인공이 세상을 떠났음 (엔딩 직전에 저장된 경우)
 
     public List<StatEntry> personal = new();
     public List<StatEntry> cult = new();

@@ -33,15 +33,15 @@ public static class CultActions
     public static StatEffect[] PersonalEffectsOf(CultAction action, bool success = true) => (action, success) switch
     {
         (CultAction.Proselytize, true) => new[] { P(PersonalStatId.Repute, 1), P(PersonalStatId.Health, -1) },
-        (CultAction.Proselytize, false) => new[] { P(PersonalStatId.Repute, -1), P(PersonalStatId.Health, -1) },
+        (CultAction.Proselytize, false) => new[] { P(PersonalStatId.Repute, -1), P(PersonalStatId.Health, -1), P(PersonalStatId.Patience, 1), P(PersonalStatId.Mentality, 1) },
         (CultAction.Preach, true) => new[] { P(PersonalStatId.Mentality, 1), P(PersonalStatId.Ambition, 1) },
-        (CultAction.Preach, false) => new[] { P(PersonalStatId.Mentality, -1) },
-        (CultAction.Serve, true) => new[] { P(PersonalStatId.Charity, 2), P(PersonalStatId.Health, -1) },
-        (CultAction.Serve, false) => new[] { P(PersonalStatId.Health, -2) },
-        (CultAction.Desire, true) => new[] { P(PersonalStatId.Lust, 1), P(PersonalStatId.Greed, 1), P(PersonalStatId.Appetite, 1) },
-        (CultAction.Desire, false) => new[] { P(PersonalStatId.Lust, 1), P(PersonalStatId.Integrity, -1) },
+        (CultAction.Preach, false) => new[] { P(PersonalStatId.Mentality, -1), P(PersonalStatId.Temperance, 1), P(PersonalStatId.Piety, 1) },
+        (CultAction.Serve, true) => new[] { P(PersonalStatId.Charity, 2), P(PersonalStatId.Health, -1), P(PersonalStatId.Repute, 1) },
+        (CultAction.Serve, false) => new[] { P(PersonalStatId.Health, -2), P(PersonalStatId.Charity, 1), P(PersonalStatId.Repute, 1) },
+        (CultAction.Desire, true) => new[] { P(PersonalStatId.Lust, 1), P(PersonalStatId.Greed, 1), P(PersonalStatId.Appetite, 1), P(PersonalStatId.Wealth, 1) },
+        (CultAction.Desire, false) => new[] { P(PersonalStatId.Lust, 1), P(PersonalStatId.Integrity, -1), P(PersonalStatId.Wealth, 1) },
         (CultAction.Pray, true) => new[] { P(PersonalStatId.Piety, 2), P(PersonalStatId.Miracle, 1) },
-        _ => new[] { P(PersonalStatId.Piety, -1), P(PersonalStatId.Mentality, -1) },
+        _ => new[] { P(PersonalStatId.Piety, -1), P(PersonalStatId.Mentality, -1), P(PersonalStatId.Patience, 1), P(PersonalStatId.Health, 1) },
     };
 
     // 기프티드 특수효과·픽토그램에서 쓰는 행동 키 (생활 기도와 구분하려고 교단 기도는 CultPray)

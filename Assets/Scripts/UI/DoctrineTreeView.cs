@@ -251,6 +251,8 @@ public class DoctrineTreeView : MonoBehaviour
         learnButton.interactable = tree.CanLearn(selected, available);
         learnLabel.text = selected.IsFinal && level >= 1 ? Lang.Get(tree.IsMax(selected) ? "doctrine_final_done" : "doctrine_final_center")
             : tree.IsMax(selected) ? Lang.Get("doctrine_maxed")
+            : tree.IsFinalTaken(selected) ? Lang.Get("doctrine_final_taken")
+            : tree.IsFinalLocked(selected) ? string.Format(Lang.Get("doctrine_final_locked"), Progress.FinalSkillRun)
             : tree.IsPathBlocked(selected) ? Lang.Get("doctrine_path_blocked")
             : tree.IsOppositeLocked(selected) ? Lang.Get("doctrine_opposite_blocked")
             : !tree.PrerequisitesMet(selected) ? Lang.Get(tree.IsMax(DoctrineSkill.Declaration) ? "doctrine_need_prev" : "doctrine_need_declaration")
