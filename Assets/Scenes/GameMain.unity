@@ -5968,8 +5968,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1306019241}
         m_TargetAssemblyTypeName: GameMainUI, Assembly-CSharp
-        m_MethodName: Resume
-        m_Mode: 1
+        m_MethodName: OpenSaves
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: 

@@ -202,6 +202,7 @@ public static class Lang
         ["aspect_20_9"] = ("20:9", "20:9"), ["aspect_4_3"] = ("4:3", "4:3"),
         ["opt_keys"] = ("Action keys", "행동 단축키"), ["key_press"] = ("Press a key (Esc to cancel)", "바꿀 키를 누르세요 (Esc 취소)"),
         ["key_reset"] = ("Reset", "기본"),
+        ["opt_window"] = ("Window mode (F11)", "창모드 (F11)"), ["window_on"] = ("Windowed", "창모드"), ["window_off"] = ("Fullscreen", "전체화면"),
         ["ach_toast"] = ("Achievement unlocked", "업적 달성"), ["ach_done"] = ("Done", "달성"),
         ["gcat_운명"] = ("Fate", "운명"), ["gcat_성격"] = ("Personality", "성격"), ["gcat_특기"] = ("Skill", "특기"), ["gcat_외모"] = ("Appearance", "외모"),
         ["special_chance"] = ("{0} success rate {1}%p", "{0} 성공률 {1}%p"), ["special_failhalf"] = ("{0}: halves failure penalties", "{0} 실패 시 불이익 절반"),
