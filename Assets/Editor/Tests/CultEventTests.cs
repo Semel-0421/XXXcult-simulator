@@ -8,8 +8,9 @@ public class CultEventTests
     [Test]
     public void Catalog_Has150RandomAnd38ConditionalWith2To5Choices()
     {
-        Assert.AreEqual(150, CultEvents.All.Count(e => !e.IsConditional));
+        Assert.AreEqual(150, CultEvents.All.Count(e => e.Kind == CultEvent.EventKind.Random));
         Assert.AreEqual(38, CultEvents.All.Count(e => e.IsConditional));
+        Assert.AreEqual(16, CultEvents.All.Count(e => e.IsNegative));
         Assert.IsTrue(CultEvents.All.All(e => e.Question.Choices.Length is >= 2 and <= 5));
     }
 
@@ -17,7 +18,7 @@ public class CultEventTests
     public void HiddenGifts_ArePersonalityOrTalentOnly()
     {
         var categories = new HashSet<string> { "성격", "특기" };
-        foreach (var id in CultEvents.All.SelectMany(e => e.Question.Choices).SelectMany(c => c.GrantedGifted))
+        foreach (var id in CultEvents.All.SelectMany(e => e.Question.Choices).SelectMany(c => c.Success.Grants.Concat(c.Fail?.Grants ?? System.Array.Empty<string>())))
             Assert.IsTrue(categories.Contains(GiftedCatalog.Find(id).Category), id);
     }
 
@@ -72,5 +73,70 @@ public class CultEventTests
         var first = CultEvent.FindTriggered(CultEvents.All, cult, used);
         Assert.AreEqual("cd01", first.Id);
         Assert.IsNull(CultEvent.FindTriggered(CultEvents.All, cult, used));
+    }
+
+    [Test]
+    public void EveryRandomChoice_HasDistinctFailureText()
+    {
+        foreach (var choice in CultEvents.All.SelectMany(e => e.Question.Choices))
+        {
+            if (choice.Chance >= 1f) continue;
+            Assert.IsNotNull(choice.Fail, choice.Text);
+            Assert.IsFalse(string.IsNullOrEmpty(choice.Fail.Text), choice.Text);
+            Assert.AreNotEqual(choice.Success.Text, choice.Fail.Text, choice.Text);
+        }
+    }
+
+    [Test]
+    public void NegativeEvents_TwoPerStat_NearZero()
+    {
+        var negatives = CultEvents.All.Where(e => e.IsNegative).ToList();
+        Assert.AreEqual(16, negatives.Count);
+
+        var fresh = new CultStatus(); // 갓 만든 교단: 대부분의 스탯이 바닥
+        Assert.IsTrue(negatives.Count(e => e.Condition(fresh)) >= 14);
+
+        var strong = new CultStatus();
+        foreach (var id in new[] { StatId.LeaderFaith, StatId.FollowerFaith, StatId.Authority, StatId.Offerings, StatId.Followers, StatId.Communion, StatId.Reputation, StatId.Doctrine })
+            strong[id].Set(900);
+        Assert.AreEqual(0, negatives.Count(e => e.Condition(strong)));
+    }
+
+    [Test]
+    public void NegativeChance_StartsAtYear3_AndRisesEachYear()
+    {
+        Assert.AreEqual(0f, CultEvent.NegativeChanceAt(1));
+        Assert.AreEqual(0f, CultEvent.NegativeChanceAt(2));
+        Assert.AreEqual(CultEvent.NegativeBaseChance, CultEvent.NegativeChanceAt(3), 1e-5);
+        Assert.Greater(CultEvent.NegativeChanceAt(4), CultEvent.NegativeChanceAt(3));
+        Assert.Greater(CultEvent.NegativeChanceAt(10), CultEvent.NegativeChanceAt(5));
+        Assert.AreEqual(CultEvent.NegativeMaxChance, CultEvent.NegativeChanceAt(100), 1e-5);
+    }
+
+    [Test]
+    public void RollNegative_NeverBeforeYear3_AndMatchesChanceAfter()
+    {
+        var cult = new CultStatus();
+        var rng = new Random(11);
+        for (int i = 0; i < 200; i++)
+            Assert.IsNull(CultEvent.RollNegative(CultEvents.All, cult, new HashSet<string>(), rng, 2));
+
+        int hits = 0;
+        const int Trials = 4000;
+        for (int i = 0; i < Trials; i++)
+            if (CultEvent.RollNegative(CultEvents.All, cult, new HashSet<string>(), rng, 8) != null) hits++;
+        Assert.AreEqual(CultEvent.NegativeChanceAt(8), hits / (double)Trials, 0.03);
+    }
+
+    [Test]
+    public void RollRandom_NeverReturnsNegativeEvents()
+    {
+        var cult = new CultStatus();
+        var rng = new Random(5);
+        for (int i = 0; i < 2000; i++)
+        {
+            var e = CultEvent.RollRandom(CultEvents.All, cult, new HashSet<string>(), rng);
+            if (e != null) Assert.AreEqual(CultEvent.EventKind.Random, e.Kind);
+        }
     }
 }

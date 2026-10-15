@@ -18,6 +18,7 @@ public class CultTimeUI : MonoBehaviour
         reputation.Changed += OnReputationChanged;
         Lang.Changed += Refresh;
         GameSession.Founded += Refresh;
+        GameSession.MisfortuneChanged += Refresh;
         Refresh();
     }
 
@@ -35,13 +36,15 @@ public class CultTimeUI : MonoBehaviour
             Standing.Neutral => "#C8C0D8",
             _ => "#F2D978",
         };
-        label.text = $"{string.Format(Lang.Get("cult_time"), clock.Years, clock.Quarter)}   <color={color}>{Lang.Get("standing_label")} {Lang.Get($"standing_{standing}")}</color>";
+        var misfortune = GameSession.Misfortune > 0 ? $"   <color=#DC5050>{string.Format(Lang.Get("misfortune_label"), GameSession.Misfortune)}</color>" : "";
+        label.text = $"{string.Format(Lang.Get("cult_time"), clock.Years, clock.Quarter)}   <color={color}>{Lang.Get("standing_label")} {Lang.Get($"standing_{standing}")}</color>{misfortune}";
     }
 
     void OnDestroy()
     {
         Lang.Changed -= Refresh;
         GameSession.Founded -= Refresh;
+        GameSession.MisfortuneChanged -= Refresh;
         if (clock != null) clock.Changed -= Refresh;
         if (reputation != null) reputation.Changed -= OnReputationChanged;
     }

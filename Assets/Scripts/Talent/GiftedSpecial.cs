@@ -30,7 +30,7 @@ public static class GiftedSpecials
     public static float ChanceBonus(TalentList gifted, string action)
     {
         int total = 0;
-        foreach (var g in gifted.Owned)
+        foreach (var g in gifted.Effective)
             foreach (var s in g.Specials)
                 if (s.Kind == GiftedSpecial.Type.Chance && s.Covers(action)) total += s.Amount;
         return total / 100f;
@@ -38,7 +38,7 @@ public static class GiftedSpecials
 
     public static bool HalvesFailure(TalentList gifted, string action)
     {
-        foreach (var g in gifted.Owned)
+        foreach (var g in gifted.Effective)
             foreach (var s in g.Specials)
                 if (s.Kind == GiftedSpecial.Type.FailHalf && s.Covers(action)) return true;
         return false;
@@ -49,7 +49,7 @@ public static class GiftedSpecials
 
     public static void ApplyYearly(PersonalStatus personal, CultStatus cult, bool cultFounded)
     {
-        foreach (var g in personal.Talents.Owned)
+        foreach (var g in personal.Talents.Effective)
             foreach (var s in g.Specials)
             {
                 if (s.Kind != GiftedSpecial.Type.Yearly) continue;

@@ -8,7 +8,7 @@ public static class GiftedEffects
     public static float TotalPercent(TalentList gifted, PersonalStatId stat)
     {
         float total = 0;
-        foreach (var g in gifted.Owned)
+        foreach (var g in gifted.Effective)
             foreach (var m in g.Modifiers)
                 if (m.PersonalStat == stat) total += m.Percent;
         return total;
@@ -17,7 +17,7 @@ public static class GiftedEffects
     public static float TotalPercent(TalentList gifted, StatId stat)
     {
         float total = 0;
-        foreach (var g in gifted.Owned)
+        foreach (var g in gifted.Effective)
             foreach (var m in g.Modifiers)
                 if (m.CultStat == stat) total += m.Percent;
         return total;

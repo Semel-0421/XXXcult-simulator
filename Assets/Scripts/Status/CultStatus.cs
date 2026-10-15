@@ -28,6 +28,7 @@ public class CultStatus
     readonly RemainderBank<StatId> remainders = new();
 
     public ClampedStat this[StatId id] => stats[id];
+    public RemainderBank<StatId> Remainders => remainders;
 
     // 퍼센트 보정으로 생긴 소수는 쌓아 두었다가 반올림되면 반영한다
     public void AddWithRemainder(StatId id, float amount) => stats[id].Add(remainders.Take(id, amount));

@@ -1,0 +1,754 @@
+﻿event_id,no,label,chance,success_effects,success_text,fail_effects,fail_text
+lf01,1,의심을 끝까지 파고든다,70,LeaderFaith-10 Mentality+2 @no.7,의심을 파고들어 오히려 신앙의 근거를 다시 세웁니다.,LeaderFaith-10 Mentality-1,의심만 깊어져 밤새 잠을 설칩니다.
+lf01,2,더 깊이 기도한다,90,LeaderFaith+20 Piety+2,기도에 몰입하자 마음이 가라앉습니다.,LeaderFaith-5,기도해도 응답이 없어 허전합니다.
+lf01,3,측근에게 고민을 털어놓는다,100,LeaderFaith+5 Authority-5 Charity+1,측근이 위로하며 함께 기도해 줍니다.,-,-
+lf02,1,신도들에게 계시를 알린다,70,LeaderFaith+15 FollowerFaith+15 Authority+5,계시 이야기가 입소문을 타고 신도들이 몰려듭니다.,LeaderFaith-10 Reputation-5,허무맹랑하다는 소문이 퍼집니다.
+lf02,2,혼자 간직한다,100,LeaderFaith+20 Temperance+1,조용히 간직하며 마음을 다잡습니다.,-,-
+lf02,3,꿈일 뿐이라 여긴다,100,LeaderFaith-10 Mentality+1,꿈일 뿐이라며 마음을 정리합니다.,-,-
+lf02,4,계시를 교리로 정리한다,50,Doctrine+20 LeaderFaith+5 @no.7,꿈의 말씀을 교리 문장으로 다듬습니다.,Doctrine+5 LeaderFaith-5,말씀이 모호해 정리가 되지 않습니다.
+lf02,5,신도들에게 계시의 대가로 헌금을 요구한다,35,Offerings+20 Integrity-1,계시를 내세워 헌금을 걷습니다.,Reputation-15 Offerings-5,헌금 요구에 신도들이 반발합니다.
+lf03,1,사흘 금식한다,70,LeaderFaith+20 Health-2 Temperance+2,사흘 금식 끝에 마음이 맑아집니다.,LeaderFaith-10 Health-3,기운이 달려 쓰러집니다.
+lf03,2,하루만 한다,100,LeaderFaith+10 Temperance+1,하루 금식으로 마음을 가다듬습니다.,-,-
+lf03,3,신도들과 함께 금식한다,90,FollowerFaith+15 LeaderFaith+10 Health-1,함께 굶으며 신도들의 결속이 단단해집니다.,FollowerFaith-5,굶주림에 신도들이 불평합니다.
+lf03,4,몰래 음식을 먹는다,50,LeaderFaith-10 Appetite+2 @no.15,몰래 먹은 음식에 죄책감이 들지만 허기는 가십니다.,Reputation-10 LeaderFaith-5,신도에게 들켜 소문이 납니다.
+lf04,1,그를 공개적으로 비판한다,70,Reputation+5 LeaderFaith-5 Integrity+1,정의로운 목소리로 칭찬을 받습니다.,Reputation-5,동료를 헐뜯는다는 비난이 쏟아집니다.
+lf04,2,그를 감싼다,90,Reputation-10 Charity+2,그를 감싸자 신도들이 떠나갑니다.,Reputation-15,감싼 탓에 교단까지 의심을 받습니다.
+lf04,3,그의 몰락에서 교훈을 얻는다,100,LeaderFaith+10 Mentality+1,교훈을 되새기며 신앙을 다잡습니다.,-,-
+lf04,4,그의 신도들을 흡수한다,35,Followers+8 Integrity-2 @no.11,갈 곳 잃은 신도들을 받아들입니다.,Reputation-10,흡수 소식에 다른 교단들이 반발합니다.
+lf05,1,신의 징표라 믿는다,70,LeaderFaith+20 Miracle+1,징표라 믿자 자신감이 커집니다.,LeaderFaith-5 Mentality-1,징표가 사라져 불안합니다.
+lf05,2,기분 탓이라 넘긴다,100,Mentality+1,담담하게 넘깁니다.,-,-
+lf05,3,신도의 아픈 곳에 손을 얹어 본다,90,FollowerFaith+15 Communion+1,아픈 신도가 웃음을 되찾습니다.,FollowerFaith-5,아무 효과가 없어 신도가 실망합니다.
+lf06,1,밤새 연구한다,70,Doctrine+15 LeaderFaith+10 Mentality+1 @no.7,밤새 연구해 경전의 숨은 뜻을 찾아냅니다.,Health-2 Mentality-1,연구가 진척되지 않아 몸만 상합니다.
+lf06,2,설교에 바로 쓴다,90,FollowerFaith+15 Authority+5,설교에 쓰자 신도들이 감동합니다.,Authority-5,얕은 해석이라는 지적을 받습니다.
+lf06,3,당신만의 해석으로 숨겨 둔다,100,LeaderFaith+15,혼자만 아는 뜻으로 간직합니다.,-,-
+lf07,1,병상에서도 기도를 멈추지 않는다,70,LeaderFaith+20 Health-1 Patience+2 @no.2,병상의 기도가 신의 뜻으로 여겨져 신도들이 감동합니다.,Health-3 LeaderFaith-5,기도 중 쓰러져 다시 드러눕습니다.
+lf07,2,신도들의 간호를 받는다,100,FollowerFaith+10 Charity+1,신도들이 번갈아 간호합니다.,-,-
+lf07,3,신을 원망한다,90,LeaderFaith-15 Mentality-1,신을 원망하는 마음이 일어납니다.,LeaderFaith-10,원망이 신도들에게 새어 나갑니다.
+lf07,4,의사를 부른다,100,Health+2 Wealth-1,의사의 치료로 병이 빨리 낫습니다.,-,-
+lf08,1,한 달 동안 떠난다,70,LeaderFaith+20 Mentality+2,한 달간의 수행으로 마음이 단단해집니다.,Followers-10 LeaderFaith-5,교단이 흔들리고 신도가 줄어듭니다.
+lf08,2,거절하고 교단을 지킨다,100,Authority+5 Followers+3,교단 곁을 지키며 신도들의 신뢰를 얻습니다.,-,-
+lf09,1,신의 응답이라 선포한다,70,LeaderFaith+15 FollowerFaith+15 Reputation+5,신의 응답이라는 소문이 동네에 퍼집니다.,Reputation-10 LeaderFaith-5,우연이라는 반박이 쏟아집니다.
+lf09,2,조용히 감사한다,100,LeaderFaith+10,조용히 감사 기도를 올립니다.,-,-
+lf09,3,우연이라 생각한다,100,Mentality+2,우연이라 여기며 담담히 넘깁니다.,-,-
+lf10,1,정면으로 토론한다,50,LeaderFaith+15 Reputation+5 Mentality+1 @no.3,논리로 수행자를 꺾어 주변의 박수를 받습니다.,Reputation-10 LeaderFaith-10,토론에서 밀려 구경꾼들이 비웃습니다.
+lf10,2,정중히 거절한다,100,Reputation+2,정중한 거절로 품위를 지킵니다.,-,-
+lf10,3,그의 가르침을 배운다,70,LeaderFaith+5 Doctrine+10,그의 가르침에서 새 통찰을 얻습니다.,LeaderFaith-10,다른 교리에 혼란이 옵니다.
+lf10,4,신도들 앞에서 그를 조롱한다,90,FollowerFaith+10 Reputation-5,신도들이 웃음으로 맞장구칩니다.,Reputation-10,조롱이 역풍이 되어 평판이 깎입니다.
+lf11,1,초심으로 돌아가 기도한다,70,LeaderFaith+20 Health-1,초심으로 돌아가 기도하며 마음을 되찾습니다.,LeaderFaith-5 Health-2,기도해도 공허함이 가시지 않습니다.
+lf11,2,휴식을 취한다,100,Health+3 LeaderFaith+5,휴식으로 기운을 되찾습니다.,-,-
+lf11,3,쾌락으로 공허를 채운다,50,LeaderFaith-10 Lust+2 @no.8,쾌락에 빠져 잠시 공허를 잊습니다.,Reputation-10 LeaderFaith-10,쾌락이 들통나 신도들이 실망합니다.
+lf11,4,일에 더 몰두한다,90,Offerings+10 LeaderFaith-5,일에 몰두하며 교단 살림이 조금 나아집니다.,Health-2,과로로 몸이 상합니다.
+lf12,1,고향을 찾아간다,70,LeaderFaith+15 Mentality+2,고향 교회에서 마음의 뿌리를 되찾습니다.,LeaderFaith-5 Mentality-2,고향에는 아무도 남아 있지 않습니다.
+lf12,2,과거와 단절하기로 한다,100,Authority+5 LeaderFaith+5,과거를 정리하고 교단에 집중합니다.,-,-
+lf13,1,교단의 번영을 빈다,100,Followers+3 Offerings+5,교단의 번영을 빌며 마음을 다잡습니다.,-,-
+lf13,2,신도들의 안녕을 빈다,90,FollowerFaith+10 Charity+2,신도들을 위해 빌어 마음이 따뜻해집니다.,FollowerFaith-3,소원이 허공에 흩어집니다.
+lf13,3,신을 직접 만나게 해 달라고 빈다,35,LeaderFaith+20 Miracle+2,간절한 소원에 가슴이 뜨거워집니다.,LeaderFaith-10 Mentality-2,소원이 이뤄지지 않아 허탈합니다.
+lf13,4,아무것도 빌지 않는다,100,Temperance+2,아무것도 빌지 않고 별을 바라봅니다.,-,-
+lf14,1,측근을 불러 진심을 보여 준다,90,Authority+5 LeaderFaith+10 Charity+1,진심을 보이자 측근이 머리를 숙입니다.,Authority-5,말이 어색해 측근의 불신이 깊어집니다.
+lf14,2,측근을 내쫓는다,100,Authority-5 Reputation-5,측근을 내쫓자 교단 안이 술렁입니다.,Authority-10,내쫓긴 측근이 소문을 퍼뜨립니다.
+lf14,3,흔들리지 않는 척 연기한다,70,Authority+10 @no.4,태연한 연기에 측근들이 따릅니다.,Authority-10 Reputation-5,연기가 들통나 신뢰가 무너집니다.
+lf14,4,스스로를 돌아본다,100,LeaderFaith+10 Mentality+2,스스로를 돌아보며 다짐을 새깁니다.,-,-
+lf15,1,신의 분노라 해석하고 참회한다,70,LeaderFaith+15 FollowerFaith+10,참회 예배에 신도들이 눈물로 모입니다.,Reputation-10,분노 운운에 바깥 사람들이 두려워합니다.
+lf15,2,신의 축복이라 선포한다,50,FollowerFaith+15 Followers+5,축복이라는 말에 신도들이 환호합니다.,Reputation-15,재난을 축복이라 하냐는 비난이 쏟아집니다.
+lf15,3,피뢰침을 설치한다,100,Reputation+3 Offerings-10,합리적인 조치에 이웃들이 감탄합니다.,-,-
+lf16,1,전생을 교리에 담는다,70,Doctrine+20 Communion+1,전생 이야기가 교리의 한 장이 됩니다.,Doctrine-5,전생 이야기가 허황되다는 말이 돕니다.
+lf16,2,신도들에게 이야기한다,90,FollowerFaith+15 Reputation-3,신도들이 숨죽여 이야기를 듣습니다.,FollowerFaith-5,이야기가 과장되어 웃음거리가 됩니다.
+lf16,3,홀로 깊이 묵상한다,100,LeaderFaith+10 Mentality+2,홀로 묵상하며 마음을 가다듬습니다.,-,-
+lf17,1,행동으로 보이는 것이라 답한다,100,LeaderFaith+10 Charity+2 @no.10,행동하는 믿음을 강조해 노인이 고개를 끄덕입니다.,-,-
+lf17,2,의심하지 않는 것이라 답한다,90,LeaderFaith+10 Authority+3,노인이 조용히 고개를 숙입니다.,LeaderFaith-5,노인의 얼굴이 어두워집니다.
+lf17,3,모르겠다고 솔직히 답한다,100,Mentality+2 Repute+2,솔직한 답에 노인이 웃습니다.,-,-
+lf17,4,노인을 신도로 만든다,50,Followers+4 FollowerFaith+5,노인이 신도가 되어 함께 기도합니다.,Reputation-5,노인이 떠나며 쓴소리를 남깁니다.
+lf18,1,아름다운 운율로 짓는다,70,LeaderFaith+10 FollowerFaith+10 Mentality+1,운율이 아름다워 신도들이 따라 읊습니다.,Mentality-1,운율에 집착하다 뜻이 흐려집니다.
+lf18,2,짧고 강렬하게 짓는다,90,Followers+5 FollowerFaith+5,짧은 기도문이 입에서 입으로 퍼집니다.,FollowerFaith-3,너무 짧아 허전하다는 말이 나옵니다.
+lf18,3,신도들과 함께 짓는다,100,FollowerFaith+15 Followers+3,신도들이 의견을 모아 기도문을 완성합니다.,-,-
+lf19,1,새벽까지 기도한다,100,LeaderFaith+10 Health-1,새벽 기도로 불안을 달랩니다.,-,-
+lf19,2,악몽을 신의 시험이라 여긴다,70,LeaderFaith+15 Patience+2,시험이라 여기며 마음을 다잡습니다.,LeaderFaith-10,시험이라는 말이 무겁게 짓누릅니다.
+lf19,3,측근에게 해몽을 맡긴다,90,Authority+3 Reputation+2,측근의 해몽에 신도들이 안심합니다.,Authority-3,측근의 해몽이 엇갈려 혼란이 옵니다.
+lf19,4,술로 잊는다,50,Health-3 Lust+2 LeaderFaith-5,술로 악몽을 잊으려 합니다.,Health-4 Reputation-5,과음이 소문이 나 신뢰를 잃습니다.
+ff01,1,직접 가족을 설득한다,70,FollowerFaith+15 Reputation+3 Charity+2,가족을 설득해 신도가 교단에 남습니다.,Reputation-5 FollowerFaith-5,설득이 실패해 가족과 갈등이 커집니다.
+ff01,2,떠나도록 축복해 준다,90,FollowerFaith+15 Followers-1 @no.10,축복받고 떠난 신도가 교단에 호감을 갖습니다.,FollowerFaith-5,떠나는 신도의 뒷모습이 쓸쓸합니다.
+ff01,3,떠나면 저주받는다고 경고한다,50,FollowerFaith+10 Authority+5 Integrity-2,경고에 신도들이 움츠러듭니다.,Reputation-15 FollowerFaith-10,협박이 소문나 평판이 떨어집니다.
+ff01,4,교단 숙소를 제공한다,100,FollowerFaith+10 Offerings-5,숙소를 제공해 신도가 머뭅니다.,-,-
+ff02,1,함께 눈물을 흘린다,100,FollowerFaith+10 Charity+2,함께 울며 신도들과 마음을 나눕니다.,-,-
+ff02,2,감동적인 설교로 마무리한다,70,FollowerFaith+15 Authority+5 @no.3,설교에 신도들이 깊이 감동합니다.,FollowerFaith-5,설교가 겉돌아 분위기가 식습니다.
+ff02,3,헌금 바구니를 돌린다,90,Offerings+20 FollowerFaith-5,헌금 바구니가 가득 찹니다.,Reputation-5 Offerings+5,헌금 바구니에 실망한 신도들이 있습니다.
+ff03,1,양쪽 이야기를 모두 듣는다,100,FollowerFaith+10 Authority+3,양쪽 이야기를 듣고 화해를 이끕니다.,-,-
+ff03,2,한쪽 편을 든다,70,Authority+5 FollowerFaith-5,한쪽 편을 들자 다른 쪽이 떠납니다.,Followers-3,편든 쪽도 등을 돌립니다.
+ff03,3,둘 다 꾸짖는다,90,Authority+3 FollowerFaith-5,둘 다 꾸짖자 조용해집니다.,FollowerFaith-10,서운해진 신도들이 말수를 줄입니다.
+ff03,4,교리로 해답을 제시한다,50,Doctrine+5 FollowerFaith+10 @no.7,교리의 한 구절로 갈등이 누그러집니다.,FollowerFaith-5,교리를 오해해 갈등이 더 깊어집니다.
+ff04,1,기꺼이 받는다,70,Offerings+40 FollowerFaith+5 Reputation-5,큰 헌금이 교단의 살림을 넉넉하게 합니다.,Reputation-10,재산을 받은 소문이 나빠집니다.
+ff04,2,일부만 받는다,100,Offerings+15 FollowerFaith+5,일부만 받아 신도의 생계를 지킵니다.,-,-
+ff04,3,거절하고 돌려보낸다,90,FollowerFaith+10 Reputation+5,신도의 생계를 걱정해 돌려보냅니다.,FollowerFaith-5,돌려받은 신도가 실망합니다.
+ff04,4,받아서 가난한 신도들에게 나눈다,50,FollowerFaith+15 Charity+3 Offerings+5,나눔이 신도들의 마음을 얻습니다.,Offerings-5,나눔이 헤퍼 보인다는 말이 나옵니다.
+ff04,5,재산을 받아 교단 명의로 불린다,35,Offerings+30 Reputation-10 Greed+2,교단 명의 투자로 재산이 불어납니다.,Offerings-20 Reputation-15,투자가 실패해 신도들이 분노합니다.
+ff05,1,기쁘게 받아들인다,90,FollowerFaith+10 Repute+2,신도들의 정성에 마음이 따뜻해집니다.,-,-
+ff05,2,검소하게 하자고 한다,100,Reputation+3 Temperance+2,검소함에 신도들이 존경을 보입니다.,-,-
+ff05,3,생일 대신 봉사의 날로 바꾼다,70,FollowerFaith+10 Reputation+8,봉사의 날에 이웃들이 감사를 전합니다.,FollowerFaith-3,신도들이 아쉬워합니다.
+ff05,4,잔치를 크게 벌인다,50,FollowerFaith+10 Offerings-20 Appetite+2 @no.15,잔치가 신도들의 기쁨을 키웁니다.,Reputation-10 Offerings-10,잔치 비용이 과하다는 비난이 나옵니다.
+ff06,1,칭찬하고 격려한다,100,FollowerFaith+10 Charity+2,아이가 자랑스럽게 설교를 이어 갑니다.,-,-
+ff06,2,교주를 흉내 내지 말라 꾸짖는다,90,Authority+5 FollowerFaith-5,아이가 움츠러들며 조용해집니다.,FollowerFaith-10,아이가 울음을 터뜨려 어른들이 술렁입니다.
+ff07,1,손을 얹고 기도한다,70,FollowerFaith+15 Miracle+1 Communion+1,기도 끝에 신도의 숨이 조금 편안해집니다.,FollowerFaith-10,기도가 효과가 없어 신도가 실망합니다.
+ff07,2,병원에 가라고 권한다,100,Reputation+5 Health+1,병원에 가라는 조언에 가족이 감사합니다.,-,-
+ff07,3,기적을 약속한다,50,FollowerFaith+15 Authority+5,기적을 약속하자 신도가 희망을 붙듭니다.,Reputation-15 FollowerFaith-15,약속이 지켜지지 않아 소문이 납니다.
+ff07,4,치료비를 교단이 대 준다,90,FollowerFaith+15 Offerings-20,치료비를 대 주자 신도가 평생 감사합니다.,Offerings-10,치료비가 생각보다 많이 듭니다.
+ff08,1,간증을 집회에서 나누게 한다,70,FollowerFaith+15 Followers+3,간증을 들은 신도들이 감동합니다.,Reputation-5,과장된 간증이라는 말이 돕니다.
+ff08,2,과장이라며 자제시킨다,100,Reputation+3 Authority+2,차분한 태도가 신뢰를 줍니다.,-,-
+ff08,3,그 꿈을 교리에 넣는다,50,Doctrine+15 FollowerFaith+10 @no.10,꿈이 교리의 한 장면이 됩니다.,Doctrine-5,교리를 허황되게 만든다는 지적이 나옵니다.
+ff09,1,규율을 완화한다,100,FollowerFaith+10 Authority-5,규율을 풀자 신도들이 안도합니다.,-,-
+ff09,2,규율을 더 강화한다,70,Authority+10 FollowerFaith-10,규율이 강해져 신도들이 숨죽입니다.,Reputation-10,반발이 밖으로 새어 나갑니다.
+ff09,3,엄격함의 의미를 설교한다,90,FollowerFaith+10 Doctrine+5 @no.3,설교에 신도들이 수긍합니다.,FollowerFaith-5,설교가 잔소리로 들립니다.
+ff09,4,불평한 신도를 찾아낸다,35,Authority+10 FollowerFaith-15 @no.4,불평한 신도를 찾아내 본보기로 삼습니다.,Reputation-15 Followers-5,신도들이 한꺼번에 떠나려 합니다.
+ff10,1,성대한 장례를 치른다,70,FollowerFaith+15 Reputation+5 Offerings-15,장례식에 마을 사람들이 모여듭니다.,Offerings-10,비용이 많이 들어 재정이 흔들립니다.
+ff10,2,그의 삶을 교리 속 본보기로 남긴다,90,Doctrine+10 FollowerFaith+10,그의 삶이 교리의 본보기가 됩니다.,Doctrine-3,지나친 미화라는 말이 돕니다.
+ff10,3,유족을 평생 돌보겠다 약속한다,100,FollowerFaith+15 Charity+3 Offerings-10,유족에게 약속을 전하자 신도들이 감동합니다.,-,-
+ff10,4,유산을 교단에 귀속시킨다,50,Offerings+30 FollowerFaith-10,유산을 교단이 받습니다.,Reputation-15,유족과 법정 다툼이 벌어집니다.
+ff11,1,직접 작사한다,70,FollowerFaith+15 Doctrine+5,직접 지은 노래에 신도들이 따라 부릅니다.,FollowerFaith-5,노랫말이 어색해 웃음이 납니다.
+ff11,2,신도들에게 맡긴다,100,FollowerFaith+10 Followers+2,신도들이 자기 노래를 만들어 옵니다.,-,-
+ff11,3,기존 노래를 개사한다,90,FollowerFaith+5 Reputation+3,익숙한 곡이라 금세 퍼집니다.,Reputation-3,표절 시비가 붙습니다.
+ff11,4,노래 따위 필요 없다고 한다,100,Doctrine+3,노래 없이 기도만 합니다.,FollowerFaith-5,신도들이 허전해합니다.
+ff12,1,해명한다,90,Reputation+5 FollowerFaith+5,차분한 해명이 소문을 가라앉힙니다.,Reputation-5,해명이 변명처럼 들립니다.
+ff12,2,소문을 낸 신도를 용서한다,100,FollowerFaith+10 Charity+2,용서가 신도들의 마음을 얻습니다.,-,-
+ff12,3,소문을 낸 신도를 추방한다,70,Authority+10 FollowerFaith-10,추방으로 기강이 바로 섭니다.,Reputation-10,추방이 과하다는 말이 돕니다.
+ff12,4,소문을 신비감으로 이용한다,50,Followers+5 Reputation+5 Integrity-1 @no.4,소문이 오히려 신비감을 키웁니다.,Reputation-15,소문이 사실처럼 굳어집니다.
+ff13,1,허락한다,70,FollowerFaith+15 Followers+2,신도들의 결속이 강해집니다.,Reputation-10 FollowerFaith-5,교단 이미지가 나빠집니다.
+ff13,2,금지한다,90,Reputation+5 FollowerFaith-5,신중한 결정이 평판을 지켜 줍니다.,FollowerFaith-10,금지에 실망한 신도가 많습니다.
+ff13,3,팔찌로 대신하게 한다,100,FollowerFaith+8 Offerings+5,팔찌를 나눠 주며 신도들이 기뻐합니다.,-,-
+ff14,1,직접 신도들을 깨우러 다닌다,70,FollowerFaith+15 Health-1 @no.2,직접 찾아다닌 정성에 신도들이 돌아옵니다.,Health-3,무리한 일정에 몸이 상합니다.
+ff14,2,출석을 강제한다,100,Authority+10 FollowerFaith-10,출석이 늘었지만 불만이 쌓입니다.,-,-
+ff14,3,기도회 시간을 옮긴다,90,FollowerFaith+8 Followers+2,시간을 옮기자 다시 모입니다.,FollowerFaith-3,시간이 바뀌어 더 헷갈립니다.
+ff14,4,빠진 신도들의 사정을 듣는다,50,FollowerFaith+15 Charity+3,사정을 들어 준 덕분에 신도들이 마음을 엽니다.,FollowerFaith-5,신도들의 사정이 복잡해 해결이 어렵습니다.
+ff15,1,교단의 성인 이름을 준다,90,FollowerFaith+10 Doctrine+3,성인의 이름에 부부가 기뻐합니다.,-,-
+ff15,2,정성껏 의미를 담아 짓는다,100,FollowerFaith+15 Charity+2,의미를 담은 이름에 부부가 감동합니다.,-,-
+ff16,1,받아들인다,50,FollowerFaith+15 Followers+5 Reputation-10,신도들이 당신을 신처럼 따릅니다.,Reputation-20,신성모독이라는 비난이 쏟아집니다.
+ff16,2,단호히 부정한다,100,Reputation+5,단호한 부정으로 평판을 지킵니다.,-,-
+ff16,3,애매하게 넘긴다,70,FollowerFaith+15 Integrity-1 @no.4,애매한 태도에 신도들이 더 열광합니다.,Reputation-10,애매함이 의심을 낳습니다.
+ff16,4,신의 대리인일 뿐이라 정정한다,90,FollowerFaith+10 Authority+5 Charity+1,대리인이라는 말이 신도들을 안심시킵니다.,FollowerFaith-5,아쉬워하는 신도가 있습니다.
+ff17,1,정중히 거절한다,90,Reputation+5 Integrity+2,정중한 거절로 존경을 받습니다.,FollowerFaith-5,그녀가 상처를 받습니다.
+ff17,2,받아들인다,50,Lust+3 FollowerFaith-10,받아들여 관계가 시작됩니다.,Reputation-20,비밀이 새어 교단이 흔들립니다.
+ff17,3,신의 사랑으로 승화시키라 설교한다,70,FollowerFaith+10 Doctrine+5,설교로 마음을 다독입니다.,FollowerFaith-5,설교가 그녀를 더 아프게 합니다.
+ff17,4,신도들 모르게 관계를 이어 간다,35,Lust+3 Reputation-10 FollowerFaith-14 @no.14,몰래 이어 간 관계가 뜻밖에 들통나지 않습니다.,Reputation-25,관계가 들통나 교단이 발칵 뒤집힙니다.
+ff18,1,함께 떠난다,90,FollowerFaith+15 Followers+3 Health-1,함께한 순례가 신도들의 결속을 다집니다.,Health-2,길이 멀어 피곤합니다.
+ff18,2,대표단만 보낸다,100,Authority+5 FollowerFaith-5,대표단이 다녀와 보고합니다.,-,-
+ff18,3,순례 대신 집회를 연다,70,FollowerFaith+10 Offerings+5,집회에서 모두 함께 기도합니다.,FollowerFaith-5,순례를 기대한 신도들이 실망합니다.
+ff19,1,깊이 감사한다,100,FollowerFaith+10 Charity+2,신도들과 함께 감사를 나눕니다.,-,-
+ff19,2,보답으로 잔치를 연다,70,FollowerFaith+15 Offerings-10 Appetite+2,잔치에 신도들이 기뻐합니다.,Offerings-5,잔치 비용이 부담입니다.
+au01,1,공개적으로 굴복시킨다,70,Authority+15 FollowerFaith-5,본보기로 굴복시키자 측근들이 입을 다뭅니다.,Authority-10 Reputation-5,굴복시키려다 측근이 소문을 냅니다.
+au01,2,대화로 설득한다,90,Authority+5 FollowerFaith+10 @no.3,대화로 설득해 측근이 뜻을 굽힙니다.,Authority-5,대화가 평행선을 달립니다.
+au01,3,그의 의견을 일부 받아들인다,100,Authority+3 Followers+2,의견을 받아들이자 측근이 충성을 맹세합니다.,-,-
+au01,4,조용히 직책에서 밀어낸다,50,Authority+5 Integrity-2,조용히 직책을 거두어 분란을 덮습니다.,Authority-10 Reputation-10,밀려난 측근이 밖에서 소문을 퍼뜨립니다.
+au02,1,엄격한 계급제를 만든다,70,Authority+15 FollowerFaith-5,계급이 정해지자 질서가 잡힙니다.,FollowerFaith-10,계급에 밀린 신도들이 불만을 품습니다.
+au02,2,모두가 평등하다고 선언한다,90,FollowerFaith+15 Authority-5,평등 선언에 신도들이 환호합니다.,Authority-10,지휘 체계가 흐트러집니다.
+au02,3,공로에 따라 직분을 준다,100,Authority+8 FollowerFaith+5,공로에 따른 직분에 신도들이 납득합니다.,-,-
+au02,4,당신 외엔 아무 직분도 두지 않는다,50,Authority+10 Followers-5,모든 권한이 당신에게 집중됩니다.,Reputation-10 Followers-10,독단이라는 비난이 퍼집니다.
+au02,5,추첨으로 직분을 정한다,35,Followers+5 Reputation+5,추첨이 공정하다고 소문납니다.,Authority-10,추첨 결과에 불만이 나옵니다.
+au03,1,솔직히 인정한다,100,Reputation+5 Integrity+2,솔직한 인정에 신도들이 존경을 보냅니다.,-,-
+au03,2,깊은 뜻이 있었다고 둘러댄다,70,Authority+10 Integrity-2 @no.4,둘러댄 말이 그럴듯하게 들립니다.,Authority-5 Reputation-5,둘러댄 티가 나 웃음거리가 됩니다.
+au03,3,아무 일 없던 듯 넘어간다,90,Temperance+2,자연스럽게 넘어갑니다.,Reputation-5,말실수가 입소문을 탑니다.
+au03,4,실수를 지적한 신도를 꾸짖는다,50,Authority+8 FollowerFaith-10,꾸짖음에 신도들이 입을 다뭅니다.,Reputation-15,꾸짖은 일이 반발을 부릅니다.
+au04,1,화려한 금빛 예복,70,Authority+15 Offerings-15,금빛 예복이 위엄을 드러냅니다.,Reputation-10 Offerings-5,사치스럽다는 비난이 나옵니다.
+au04,2,소박한 흰 옷,100,Reputation+5 FollowerFaith+5,소박한 옷에 신도들이 편안해합니다.,-,-
+au04,3,검은 망토,90,Authority+8 Communion+1,검은 망토가 신비로운 분위기를 줍니다.,FollowerFaith-3,무겁다는 말이 나옵니다.
+au04,4,의복은 필요 없다,100,Doctrine+3,의복 없이 마음을 강조합니다.,-,-
+au05,1,공개적으로 벌한다,70,Authority+12 FollowerFaith-10,공개 벌에 신도들이 긴장합니다.,Reputation-10 FollowerFaith-10,벌이 가혹하다는 말이 퍼집니다.
+au05,2,사정을 들어 보고 용서한다,100,FollowerFaith+10 Charity+2,사정을 듣고 용서하자 신도가 감사를 전합니다.,-,-
+au05,3,조용히 따로 불러 경고한다,90,Authority+5,조용한 경고로 기강이 선다,FollowerFaith-2,경고가 서운하게 전해집니다.
+au05,4,교리에 벌칙 조항을 만든다,50,Doctrine+10 Authority+8,교리 조항이 명령에 힘을 싣습니다.,Authority-5 FollowerFaith-5,조항이 지나치다는 논란이 붙습니다.
+au06,1,크고 웅장한 곳으로 옮긴다,70,Followers+10 Offerings-20 Authority+5,웅장한 장소에 신도들이 몰려듭니다.,Offerings-10,임대료가 감당하기 어렵습니다.
+au06,2,지금 자리를 지킨다,100,FollowerFaith+5 Temperance+2,익숙한 자리에서 신도들이 안심합니다.,-,-
+au06,3,신도의 집을 돌아가며 모인다,90,FollowerFaith+15 Charity+2,집을 돌며 모이자 신도들이 친밀해집니다.,Followers-3,모이기가 번거롭다는 말이 나옵니다.
+au06,4,외딴 산속으로 옮긴다,35,Authority+10 Communion+2 Reputation-10,외딴 산속에서 교단은 더 신비로워집니다.,Followers-15 Reputation-10,외딴 곳이라 신도들이 발길을 끊습니다.
+au07,1,경쟁을 부추긴다,50,Authority+15 FollowerFaith-5 @no.11,경쟁이 측근들의 충성심을 끌어올립니다.,Authority-10 Reputation-5,경쟁이 과열되어 분열됩니다.
+au07,2,모두를 공평하게 대한다,100,Authority+3 Reputation+3,공평한 태도에 측근들이 존중합니다.,-,-
+au07,3,한 명을 오른팔로 지명한다,90,Authority+8 Followers+2,오른팔이 생기며 조직이 돌아갑니다.,Authority-5 FollowerFaith-5,다른 측근들이 질투합니다.
+au07,4,경쟁을 금지한다,70,Authority+5 FollowerFaith+5,경쟁이 사라져 조용해집니다.,Authority-5,금지 뒤 불만이 쌓입니다.
+au08,1,논리적으로 설명한다,50,Authority+10 Mentality+1 @no.7,논리 정연한 설명에 신도들이 수긍합니다.,Authority-5 Reputation-5,설명이 어렵다는 불만이 나옵니다.
+au08,2,신의 뜻이라고만 답한다,90,Authority+5 FollowerFaith+5,신의 뜻이라는 말에 신도들이 따릅니다.,Reputation-5,설명 없는 답에 반발이 커집니다.
+au08,3,결정을 철회한다,100,FollowerFaith+8 Authority-8,철회가 신도들의 신뢰를 되찾습니다.,-,-
+au08,4,투표에 부친다,70,FollowerFaith+10 Authority-5,투표에서 결정이 확인됩니다.,Authority-10,투표 결과 당신의 권위가 흔들립니다.
+au09,1,직접 꼼꼼히 쓴다,90,Authority+10 Doctrine+5,꼼꼼한 규칙집이 권위를 높입니다.,Authority-3,규칙이 너무 많아 혼란스럽습니다.
+au09,2,측근들에게 맡긴다,70,Authority+3 Followers+3,측근들이 규칙집을 만듭니다.,Authority-5,측근마다 규칙이 달라 혼란이 옵니다.
+au09,3,규칙은 내 말이 곧 법이다,50,Authority+15 FollowerFaith-10,당신의 말이 곧 법이 됩니다.,Reputation-15,독재라는 비난이 쏟아집니다.
+au09,4,신도들의 의견을 모아 만든다,100,FollowerFaith+15 Authority+3,의견을 모은 규칙에 신도들이 자부심을 느낍니다.,-,-
+au10,1,대등한 동맹을 맺는다,90,Authority+5 Reputation+5 Followers+5,대등한 동맹에 양쪽 신도들이 기뻐합니다.,Reputation-3,동맹 조건을 두고 다툼이 붙습니다.
+au10,2,흡수 합병을 요구한다,50,Authority+10 Followers+8,흡수 조건에 상대가 어쩔 수 없이 따릅니다.,Reputation-15 Authority-5,흡수 요구가 알려져 비난이 쏟아집니다.
+au10,3,거절한다,100,Authority+3,정중히 거절합니다.,-,-
+au10,4,동맹을 맺고 뒤통수를 칠 준비를 한다,35,Authority+10 Followers+10 Integrity-3 @no.11,동맹 뒤에서 상대의 신도들을 빼 옵니다.,Reputation-20 Authority-10,계략이 들통나 동맹이 깨집니다.
+au11,1,그대로 둔다,70,Authority+10 Reputation-5,무릎 꿇는 모습이 권위를 키웁니다.,Reputation-10,외부에 과잉 숭배라는 말이 나옵니다.
+au11,2,일으켜 세운다,100,FollowerFaith+10 Reputation+5,일으켜 세우자 신도들이 감동합니다.,-,-
+au11,3,신 앞에서만 꿇으라 가르친다,90,Doctrine+8 Authority+5 Communion+1,신 앞에서만 꿇으라는 가르침이 퍼집니다.,FollowerFaith-3,가르침이 헷갈린다는 말이 나옵니다.
+au11,4,무릎 꿇기를 의식으로 정한다,50,Authority+12 Doctrine+5 Reputation-5,의식이 되어 교단의 상징이 됩니다.,Reputation-10,지나친 의식이라 외부의 눈총을 받습니다.
+au12,1,뱀이 검을 감은 모양,70,Authority+10 Communion+2,강렬한 문장에 신도들이 열광합니다.,Reputation-5,섬뜩하다는 평이 나옵니다.
+au12,2,손을 맞잡은 모양,100,FollowerFaith+10 Reputation+5,따뜻한 문장이 평판을 높입니다.,-,-
+au12,3,눈 하나가 그려진 모양,90,Communion+2 Authority+5,신비로운 문장이 신도들을 사로잡습니다.,Reputation-5,눈 모양이 불길하다는 말이 돕니다.
+au12,4,신도들에게 공모한다,100,FollowerFaith+15 Followers+3,신도들의 공모작에서 문장이 채택됩니다.,-,-
+au13,1,엄벌한다,70,Authority+10 FollowerFaith-5,엄벌로 기강이 바로 섭니다.,Authority-10 Reputation-10,엄벌이 지나쳤다는 말이 나옵니다.
+au13,2,기회를 한 번 더 준다,100,FollowerFaith+8 Charity+2,기회를 주자 측근이 감격합니다.,-,-
+au13,3,조용히 덮는다,90,Authority+3 Integrity-3,조용히 덮어 분란을 막습니다.,Reputation-10,덮은 사실이 나중에 드러납니다.
+au13,4,공개 재판을 연다,50,Reputation+8 Authority+5,공개 재판으로 교단이 투명하다는 인상을 줍니다.,Reputation-15 FollowerFaith-10,재판이 교단 내부 갈등을 드러냅니다.
+au14,1,모두의 의견을 경청한다,100,Authority+5 FollowerFaith+5,경청하는 자세에 측근들이 존중을 보입니다.,-,-
+au14,2,결론을 미리 정해 두고 통보한다,70,Authority+10 Followers-3,결정이 빨라 조직이 움직입니다.,Authority-10,통보에 측근들이 반발합니다.
+au14,3,회의를 길게 끌어 반대파를 지치게 한다,90,Authority+10 Patience+2 @no.2,반대파가 지쳐 결정이 관철됩니다.,Authority-5 Reputation-3,회의가 길어져 불만이 커집니다.
+au14,4,회의를 생략한다,50,Authority+8 FollowerFaith-5,빠른 결정이 힘을 보입니다.,Authority-10 Reputation-5,측근들이 등을 돌립니다.
+au15,1,기꺼이 맡는다,100,FollowerFaith+10 Authority+5,주례를 맡자 신도들이 감동합니다.,-,-
+au15,2,교단만의 혼례 의식을 만든다,90,Doctrine+8 FollowerFaith+8,교단의 혼례가 신도들의 자랑이 됩니다.,FollowerFaith-3,의식이 낯설어 어색하다는 말이 나옵니다.
+au15,3,측근에게 맡긴다,70,Authority+3 Followers+2,측근의 주례에 신도들이 무난히 따릅니다.,Authority-3,측근의 주례가 서툴러 웃음거리가 됩니다.
+au15,4,결혼에도 교주의 허락이 필요하다고 선언한다,35,Authority+12 FollowerFaith-15,허락 제도가 자리를 잡습니다.,Reputation-15 Followers-10,신도들이 교단을 떠나기 시작합니다.
+au16,1,충성스러운 측근을 임명한다,70,Authority+10 Followers+2,충성스러운 감찰관이 기강을 세웁니다.,Authority-5 FollowerFaith-5,감찰관이 권력을 남용합니다.
+au16,2,감찰은 불필요하다,100,FollowerFaith+5 Temperance+1,감찰 없이 신뢰로 움직입니다.,-,-
+au17,1,허락하고 직접 감수한다,90,Doctrine+15 Authority+8,직접 감수한 책이 교리의 기준이 됩니다.,Doctrine-3,감수에 시간이 오래 걸립니다.
+au17,2,금지한다,100,Authority+5 FollowerFaith-5,금지로 원본이 통제됩니다.,-,-
+au17,3,측근이 마음대로 편집하게 둔다,50,Authority-5 Doctrine+5 Followers+3,편집본이 호응을 얻습니다.,Doctrine-10 Authority-10,편집본이 엉뚱한 해석을 담습니다.
+au17,4,책을 비싸게 판다,35,Offerings+25 Reputation-5 @no.17,책이 불티나게 팔립니다.,Reputation-15,비싼 책값에 비난이 쏟아집니다.
+au18,1,모임을 공식 기구로 인정한다,90,FollowerFaith+10 Followers+5 Authority-3,공식 인정에 젊은 신도들이 충성을 맹세합니다.,Authority-5,인정으로 권한이 나뉩니다.
+au18,2,해산시킨다,70,Authority+8 FollowerFaith-10,해산으로 질서가 다시 잡힙니다.,FollowerFaith-15 Reputation-5,해산에 청년들이 반발합니다.
+au18,3,몰래 감시한다,50,Authority+5 Integrity-3,감시로 모임의 움직임을 파악합니다.,Reputation-10 FollowerFaith-10,감시가 들통나 모임이 격렬해집니다.
+au18,4,모임에 직접 참석해 이끈다,100,Authority+5 FollowerFaith+10,직접 이끌며 청년들을 품습니다.,-,-
+au19,1,크게 걸게 한다,70,Authority+12 Reputation-5,초상화가 집회장을 압도합니다.,Reputation-10,과한 우상화라는 말이 나옵니다.
+au19,2,신의 상징 옆에 작게 건다,100,Authority+5 Reputation+3,겸손한 배치가 신도들의 호감을 얻습니다.,-,-
+of01,1,교단 재정에 넣는다,100,Offerings+30,재정에 넉넉히 보탭니다.,-,-
+of01,2,신도들에게 공개하고 감사 예배를 연다,90,FollowerFaith+10 Reputation+5 Offerings+10,감사 예배에 신도들이 기뻐합니다.,Offerings+5,공개가 기부자를 밝히지 않아 시끄럽습니다.
+of01,3,기부자를 찾아 감사를 전한다,70,Reputation+8 Offerings+10,기부자가 교단을 신뢰하게 됩니다.,Offerings-5,기부자를 찾지 못합니다.
+of01,4,몰래 개인 금고에 넣는다,35,Greed+4 Offerings+20 Integrity-3,금고에 넣은 돈은 아무도 모릅니다.,Reputation-15 Offerings-10,돈이 소문이 나 신뢰를 잃습니다.
+of01,5,절반은 신도들의 잔치에 쓴다,50,FollowerFaith+10 Offerings+15 Appetite+2,잔치에 신도들이 모여 웃습니다.,Offerings-5,잔치 뒤 재정이 빠듯합니다.
+of02,1,헌금으로 수리한다,100,Offerings-15 Reputation+2,헌금으로 지붕을 고칩니다.,-,-
+of02,2,신도들에게 특별 헌금을 걷는다,70,Offerings+20 FollowerFaith-10,특별 헌금이 모입니다.,FollowerFaith-15,헌금 요구에 신도들이 떠나갑니다.
+of02,3,신도들과 함께 직접 고친다,90,FollowerFaith+15 Offerings-5 Health-1,함께 고치며 결속이 깊어집니다.,Health-2,공사 중 다치는 신도가 있습니다.
+of02,4,그냥 둔다,100,Offerings-5,그냥 둡니다.,-,-
+of03,1,받아들인다,70,Offerings+25 Reputation-5,투자금이 들어와 재정이 숨을 틉니다.,Offerings-15 Reputation-10,투자가 실패해 빚이 남습니다.
+of03,2,거절한다,100,Reputation+3,깔끔히 거절합니다.,-,-
+of03,3,조건을 꼼꼼히 따져 본다,90,Offerings+10 Mentality+2,조건을 따져 손해를 줄입니다.,Offerings-5,조건이 복잡해 시간이 흐릅니다.
+of03,4,그의 돈을 받고 약속은 어긴다,35,Offerings+30 Integrity-5 @no.11,돈을 받고 약속을 깨 버립니다.,Reputation-20 Offerings-10,약속을 어긴 사실이 알려집니다.
+of04,1,도입한다,70,Offerings+20 FollowerFaith-10,헌금 좌석이 재정을 키웁니다.,Reputation-15 FollowerFaith-10,빈부 차별이라는 비난이 나옵니다.
+of04,2,단호히 거부한다,100,FollowerFaith+10 Reputation+5,거부가 신도들의 존경을 얻습니다.,-,-
+of04,3,특별석 하나만 만든다,90,Offerings+8 Followers+2,특별석에 헌금을 낸 신도가 기뻐합니다.,Offerings+3,특별석이 불만을 낳습니다.
+of05,1,대량으로 만들어 판다,70,Offerings+25 Reputation-5,기념품이 날개 돋친 듯 팔립니다.,Offerings-10 Reputation-10,재고가 쌓여 손해를 봅니다.
+of05,2,소량만 정성껏 만든다,100,Offerings+8 FollowerFaith+8,정성 어린 기념품이 신도들의 자랑이 됩니다.,-,-
+of05,3,신도들에게만 나눠 준다,90,FollowerFaith+12,신도들이 기뻐합니다.,Offerings-3,나눔만으로 재정이 줄어듭니다.
+of05,4,거절한다,100,Reputation+2,상업적 이미지를 피합니다.,-,-
+of06,1,철저히 조사한다,90,Integrity+3 Reputation+3 Mentality+2,조사 끝에 횡령 경로를 밝혀냅니다.,Reputation-3,조사가 흐지부지되어 의심이 남습니다.
+of06,2,덮고 넘어간다,70,Offerings+10 Integrity-3,덮은 구멍은 조용히 메워집니다.,Reputation-15,덮은 사실이 밖으로 새어 나갑니다.
+of06,3,회계 담당을 교체한다,100,Offerings-3 Integrity+2,새 담당이 장부를 정리합니다.,-,-
+of06,4,직접 장부를 관리한다,50,Offerings+10 Integrity-1 @no.7,직접 장부를 살펴 재정을 파악합니다.,Mentality-2 Offerings-5,장부가 복잡해 혼란이 옵니다.
+of07,1,헌금은 마음이라 위로한다,70,FollowerFaith+15 Offerings-5 @no.10,위로에 신도가 눈물을 글썽입니다.,FollowerFaith-5,위로가 공허하게 들립니다.
+of07,2,노동으로 대신하게 한다,100,FollowerFaith+8 Health-1,노동으로 헌금을 대신합니다.,-,-
+of07,3,교단이 생활비를 지원한다,90,FollowerFaith+15 Offerings-15,생활비 지원에 신도가 감사합니다.,Offerings-10,지원이 재정을 흔듭니다.
+of07,4,헌금을 독촉한다,35,Offerings+10 FollowerFaith-15,독촉으로 헌금이 조금 모입니다.,Reputation-15 FollowerFaith-10,독촉이 소문이 나 평판이 떨어집니다.
+of08,1,빵집을 연다,90,Offerings+12 Reputation+3,빵 냄새가 골목을 채우고 동네가 좋아합니다.,Offerings-5,빵이 팔리지 않습니다.
+of08,2,찻집을 연다,90,Offerings+10 Mentality+1,찻집에서 사람들이 모여 이야기를 나눕니다.,Offerings-5,찻집이 한산합니다.
+of08,3,신도들의 일자리로 운영한다,100,FollowerFaith+12 Charity+2,신도들이 일자리를 얻고 감사합니다.,Offerings-3,운영 미숙으로 손해가 납니다.
+of08,4,장사는 신앙과 맞지 않는다,100,Doctrine+5 Reputation+2,장사를 접고 신앙에 집중합니다.,-,-
+of09,1,흑자를 신도들과 나눈다,90,FollowerFaith+15 Offerings-15,흑자를 나누자 신도들이 감동합니다.,Offerings-5,나눔 뒤 적자가 됩니다.
+of09,2,내년을 위해 비축한다,100,Offerings+15,비축으로 재정이 든든해집니다.,-,-
+of09,3,교단 건물을 늘린다,70,Followers+8 Offerings-20,건물이 늘어 신도들을 받을 공간이 생깁니다.,Offerings-15 Reputation-5,건물 공사비로 재정이 흔들립니다.
+of09,4,당신의 보수를 올린다,35,Offerings-10 Greed+4,보수가 올라 생활이 편해집니다.,Reputation-15 FollowerFaith-10,보수 인상이 신도들의 원성을 삽니다.
+of10,1,구입한다,70,Offerings-25 Communion+2 Authority+5,성물이 교단의 위엄을 높입니다.,Offerings-30 Reputation-5,성물이 가짜로 밝혀집니다.
+of10,2,모조품을 산다,100,Offerings-5 Reputation+2,모조품이라도 충분히 쓸 만합니다.,-,-
+of10,3,그 돈으로 봉사한다,90,Reputation+8 FollowerFaith+8,봉사가 교단 이미지를 높입니다.,Reputation-2,봉사 효과가 크지 않습니다.
+of10,4,거절한다,100,Reputation+3,정중히 거절합니다.,-,-
+of11,1,받는다,90,Offerings+20 Reputation-5,헌금을 받아 재정에 보탭니다.,Reputation-10,도박 돈이라는 소문이 납니다.
+of11,2,도박을 끊으라며 거절한다,100,Reputation+5 FollowerFaith+5,거절이 신도를 바르게 이끕니다.,FollowerFaith-5,신도가 씁쓸히 돌아섭니다.
+of11,3,그 신도에게 도박 비법을 배운다,50,Greed+3 Wealth+2 @no.17,도박 비법으로 돈 버는 법을 익힙니다.,Reputation-15 Offerings-5,비법을 배운 일이 소문이 납니다.
+of11,4,받아서 그에게 다시 돌려준다,70,FollowerFaith+10 Charity+2,돈을 돌려주자 신도가 고마워합니다.,Offerings-5,돌려주는 과정이 번거롭습니다.
+of12,1,투명하게 공개한다,90,Reputation+8 Integrity+3,투명한 공개가 의심을 누그러뜨립니다.,Reputation-3,공개 과정에서 흠이 드러납니다.
+of12,2,장부를 정리해 일부만 보인다,70,Offerings+10 Integrity-3,일부만 보여 조사를 피합니다.,Reputation-15,일부 공개가 들통나 추궁을 받습니다.
+of12,3,종교 단체라며 버틴다,50,Authority+5 Reputation-10,종교 단체라는 이유로 버팁니다.,Reputation-20 Offerings-15,세금 추징으로 재정이 줄어듭니다.
+of12,4,측근에게 책임을 미룬다,90,Authority-5 Integrity-2,측근이 책임을 떠안습니다.,Authority-10,측근이 떠나 버립니다.
+of13,1,기쁘게 받는다,70,Offerings-20 Authority+5 Reputation-5,새 차가 권위를 높입니다.,Reputation-10,사치라는 비난이 나옵니다.
+of13,2,검소한 차를 고른다,100,Reputation+3 Offerings-8,검소한 차에 신도들이 감동합니다.,-,-
+of13,3,그 돈으로 신도용 버스를 산다,90,FollowerFaith+12 Followers+3 Offerings-15,신도용 버스가 모임을 돕습니다.,Offerings-10,버스 유지비가 부담입니다.
+of13,4,거절한다,100,Reputation+2,거절로 검소함을 보입니다.,-,-
+of14,1,범인을 추적한다,90,Integrity+3 Reputation+3,추적 끝에 범인을 찾아냅니다.,Reputation-3,추적이 흐지부지됩니다.
+of14,2,신도들의 양심에 호소한다,70,FollowerFaith+10 Offerings+10,양심에 호소하자 헌금이 다시 모입니다.,Offerings-5,호소에 아무도 반응하지 않습니다.
+of14,3,잃어버린 셈 친다,100,Temperance+2,잃어버린 셈 치고 넘깁니다.,-,-
+of14,4,헌금함에 자물쇠를 단다,90,Offerings+5 Integrity+1,자물쇠가 재정을 지킵니다.,-,-
+of15,1,팔아서 자금을 확보한다,90,Offerings+25 Reputation-3,땅을 팔아 자금이 넉넉해집니다.,Offerings-5,땅값이 떨어져 손해를 봅니다.
+of15,2,팔지 않는다,100,Authority+3,땅을 지킵니다.,-,-
+of15,3,땅에 기도원을 짓는다,70,Offerings-15 Communion+2 FollowerFaith+10,기도원이 신도들을 모읍니다.,Offerings-20,건축비가 불어납니다.
+of15,4,값을 크게 부풀린다,35,Offerings+30 Integrity-4 @no.11,비싼 값에 땅을 팝니다.,Reputation-20,부풀린 값이 소문납니다.
+of16,1,십일조를 도입한다,70,Offerings+25 FollowerFaith-10 Patience-1,십일조가 재정을 안정시킵니다.,FollowerFaith-15 Reputation-5,부담이 커졌다는 불만이 나옵니다.
+of16,2,헌금 대신 봉사 시간을 받는다,100,FollowerFaith+10 Reputation+5,봉사 시간을 받자 신도들이 마음을 엽니다.,-,-
+of17,1,성대한 연회를 연다,50,Offerings+30 Reputation+3 Appetite+2 @no.15,연회에 후원자들이 몰려듭니다.,Offerings-20 Reputation-10,연회 비용만 치솟습니다.
+of17,2,소박한 다과회로 연다,100,FollowerFaith+8 Offerings+5,다과회에 사람들이 편안히 모입니다.,-,-
+of17,3,거절한다,90,Reputation+3,거절로 절제를 보입니다.,-,-
+of17,4,연회 대신 자선 바자회를 연다,70,Reputation+10 Charity+3 Offerings+10,바자회가 지역에 좋은 인상을 남깁니다.,Offerings-5,바자회 준비가 번거롭습니다.
+of17,5,연회에서 춤판을 벌인다,35,Lust+2 Reputation-5 @no.14,연회가 춤판으로 번집니다.,Reputation-15 Offerings-10,춤판 소문이 교단을 흔듭니다.
+of18,1,원인을 조사한다,90,Mentality+2 Offerings+10,조사 끝에 원인을 찾아 해결합니다.,Offerings-3,원인이 불분명해 혼란이 남습니다.
+of18,2,헌금을 강조하는 설교를 한다,70,Offerings+20 FollowerFaith-10,설교에 헌금이 조금 늘어납니다.,FollowerFaith-15,설교가 신도들을 불편하게 합니다.
+of18,3,당신의 생활비를 줄인다,100,Offerings+5 Greed-2,생활비를 줄여 재정에 보탭니다.,-,-
+of18,4,기도로 해결을 구한다,90,Piety+2 LeaderFaith+5,기도로 마음을 다잡습니다.,Offerings-5,기도만으로는 재정이 나아지지 않습니다.
+of19,1,크게 환영한다,70,Offerings+20 Reputation+5 Followers+3,환영 속에 그가 큰 후원을 약속합니다.,Reputation-10,과한 환영이 특권 의식으로 비칩니다.
+of19,2,다른 신도와 똑같이 대한다,100,FollowerFaith+10 Reputation+5,평등한 대우가 신도들의 존경을 얻습니다.,-,-
+of19,3,그의 인맥을 활용한다,90,Reputation+8 Followers+5,인맥으로 교단의 인지도가 올라갑니다.,Reputation-5,인맥에 기댄다는 소문이 납니다.
+of19,4,그의 재산을 노린다,35,Offerings+30 Integrity-5,재산을 노리고 접근합니다.,Reputation-25 Offerings-10,계략이 드러나 그가 떠납니다.
+fo01,1,열정적으로 외친다,70,Followers+6 Reputation+3 @no.3,열정적인 외침에 사람들이 발길을 멈춥니다.,Reputation-5,과한 외침에 사람들이 등을 돌립니다.
+fo01,2,조용히 전단지만 나눈다,100,Followers+3,전단지를 받아 든 사람들이 조금 늘어납니다.,-,-
+fo01,3,노래와 함께 한다,90,Followers+5 FollowerFaith+5,노래에 사람들이 따라 부릅니다.,Reputation-2,노래가 요란하다는 민원이 들어옵니다.
+fo01,4,포기한다,100,Temperance+2,광장을 떠납니다.,-,-
+fo02,1,환영 만찬을 준비한다,90,Followers+6 Offerings-10 Appetite+1,만찬에 손님들이 감탄합니다.,Offerings-5,만찬 준비가 부실해 실망이 큽니다.
+fo02,2,평소대로 맞이한다,100,Followers+3,평범한 환영이 편안함을 줍니다.,-,-
+fo02,3,친구를 데려온 신도에게 직분을 준다,70,Followers+5 Authority+3,직분에 신도가 힘을 냅니다.,Authority-3,다른 신도들이 질투합니다.
+fo02,4,의심부터 한다,50,Integrity+2 Followers-3,의심에 손님이 주춤합니다.,Followers-8,의심에 신도가 상처받아 떠납니다.
+fo03,1,철학 토론회를 연다,70,Followers+6 Doctrine+5 @no.7,토론회에 학생들이 몰려듭니다.,Reputation-3,토론이 과열되어 소동이 납니다.
+fo03,2,무료 상담소를 연다,90,Followers+5 Reputation+5,상담소가 학생들의 고민을 들어 줍니다.,Offerings-5,운영 비용이 부담입니다.
+fo03,3,파티를 연다,70,Followers+5 Lust+2 Offerings-5,파티에 학생들이 몰립니다.,Reputation-10,파티 소문이 학교를 시끄럽게 합니다.
+fo03,4,포기한다,100,Temperance+2,캠퍼스를 떠납니다.,-,-
+fo03,5,캠퍼스 연극 동아리를 후원한다,90,Followers+5 Reputation+3 @no.4,후원 덕에 연극 동아리와 친해집니다.,Offerings-5,후원금이 부담이 됩니다.
+fo04,1,환영회를 연다,90,FollowerFaith+10 Followers+3,환영회에서 두 무리가 가까워집니다.,Offerings-5,환영회가 어색하게 끝납니다.
+fo04,2,멘토를 붙여 준다,100,FollowerFaith+8 Followers+2,멘토가 신도들을 잘 이끕니다.,-,-
+fo04,3,새 신도만의 모임을 만든다,70,Followers+5 FollowerFaith-5,새 신도 모임이 활기를 띱니다.,FollowerFaith-10,두 무리 사이가 더 벌어집니다.
+fo04,4,알아서 적응하라고 한다,50,Authority+3 Followers-5,자연스럽게 섞이는 신도들도 있습니다.,Followers-15,새 신도들이 떠나갑니다.
+fo05,1,함께 기도해 준다,90,Followers+6 FollowerFaith+5 Piety+1,함께한 기도가 가족들에게 위로를 줍니다.,Followers-2,기도에 가족들이 거리를 둡니다.
+fo05,2,기적을 약속한다,50,Followers+10 Reputation-5 Miracle+1,기적을 약속하자 가족들이 몰려듭니다.,Reputation-15 Followers-5,약속이 지켜지지 않아 원망이 쏟아집니다.
+fo05,3,간병을 도와준다,100,Followers+5 Reputation+5 Charity+2,간병을 돕자 가족들이 고마워합니다.,-,-
+fo05,4,그냥 돌아온다,100,Temperance+1,그냥 돌아옵니다.,-,-
+fo06,1,직접 만나 설득한다,70,Followers+8 Reputation+5 @no.3,직접 만난 설득이 그의 마음을 움직입니다.,Reputation-5,만남이 어색하게 끝납니다.
+fo06,2,신도들에게 만남을 맡긴다,100,FollowerFaith+5 Followers+3,신도들이 정성껏 응대합니다.,-,-
+fo06,3,그를 이용해 홍보한다,90,Followers+10 Reputation-3,그의 이름으로 교단이 알려집니다.,Reputation-10,홍보가 지나쳐 비난을 받습니다.
+fo06,4,무시한다,100,Authority+2,무시하고 지나갑니다.,-,-
+fo07,1,영상 설교를 올린다,70,Followers+8 Reputation+3,영상 설교가 화제가 됩니다.,Reputation-5,영상이 조롱거리가 됩니다.
+fo07,2,익명 게시판에 글을 퍼뜨린다,90,Followers+5 Integrity-2,글이 퍼져 사람들이 찾아옵니다.,Reputation-5,익명 글이 신뢰를 잃습니다.
+fo07,3,디지털은 신성하지 않다,100,Doctrine+3,전통적인 방식을 고수합니다.,-,-
+fo07,4,신도들이 운영하게 맡긴다,90,FollowerFaith+8 Followers+4,신도들이 운영하며 활기를 띱니다.,FollowerFaith-3,운영이 엉성합니다.
+fo08,1,마을 잔치를 열어 준다,90,Followers+8 Reputation+3 Offerings-5,마을 잔치가 주민들의 마음을 얻습니다.,Offerings-5,잔치 준비가 벅찹니다.
+fo08,2,농사일을 도우며 친해진다,100,Followers+5 Reputation+3 Health-1,농사일을 돕자 주민들이 고마워합니다.,-,-
+fo08,3,마을 이장을 설득한다,70,Followers+8 Authority+3,이장이 마을을 이끌어 줍니다.,Reputation-3,이장이 거절해 발길을 돌립니다.
+fo08,4,기적 쇼를 연다,35,Followers+12 Reputation-5 @no.4,기적 쇼에 마을이 떠들썩합니다.,Reputation-15,쇼가 사기로 드러납니다.
+fo09,1,받아들인다,90,Followers+5 FollowerFaith+8 Charity+2,설교가 수감자들의 마음을 움직입니다.,-,-
+fo09,2,거절한다,100,Reputation+2,거절로 조심스러움을 보입니다.,-,-
+fo09,3,출소 후 교단에서 돌보겠다 약속한다,70,Followers+10 Charity+3,약속에 수감자들이 희망을 얻습니다.,Reputation-10,약속이 지켜지지 않을까 걱정이 큽니다.
+fo09,4,그들의 힘을 교단에 쓴다,35,Followers+8 Authority+5 Integrity-4,수감자들의 힘을 교단이 씁니다.,Reputation-20,수감자 관계가 밖으로 알려집니다.
+fo10,1,부풀린다,70,Followers+20 Integrity-5,부풀린 숫자가 교단을 커 보이게 합니다.,Reputation-15,거짓이 드러나 신뢰를 잃습니다.
+fo10,2,정직하게 발표한다,100,Reputation+5 Integrity+2,정직한 발표가 신뢰를 얻습니다.,-,-
+fo10,3,아예 발표하지 않는다,90,Temperance+2,숫자를 감춥니다.,Reputation-3,숨긴다는 의심을 받습니다.
+fo11,1,통역을 구해 맞이한다,90,Followers+6 Reputation+4,통역 덕분에 대화가 통합니다.,Followers-2,통역이 서툴러 오해가 생깁니다.
+fo11,2,그들의 언어로 경전을 번역한다,70,Followers+8 Doctrine+5,번역본이 그들의 마음을 얻습니다.,Doctrine-3,번역이 어긋나 혼란이 옵니다.
+fo11,3,거리를 둔다,100,Temperance+2,거리를 둡니다.,-,-
+fo11,4,일자리를 소개해 준다,90,Followers+5 Charity+3 Offerings-5,일자리 소개에 그들이 고마워합니다.,Offerings-5,소개가 기대만큼 되지 않습니다.
+fo12,1,두 팔 벌려 환영한다,90,Followers+1 FollowerFaith+10 Charity+1 @no.10,환영에 신도가 눈물을 흘립니다.,FollowerFaith-3,환영이 너무 가볍게 느껴집니다.
+fo12,2,참회 의식을 거치게 한다,70,FollowerFaith+8 Authority+5,참회를 거쳐 돌아온 신도가 굳건해집니다.,FollowerFaith-8,의식이 가혹해 다시 떠납니다.
+fo12,3,받아 주지 않는다,100,Authority+3,받아 주지 않아 질서를 지킵니다.,-,-
+fo13,1,모두 받아들인다,70,Followers+10 Reputation-5,신도들이 한꺼번에 몰려옵니다.,Reputation-10 FollowerFaith-5,경쟁 교단과 충돌이 생깁니다.
+fo13,2,엄격한 심사를 한다,90,Followers+4 FollowerFaith+5 Authority+3,심사를 통과한 신도들이 굳건합니다.,Followers-3,심사가 까다롭다는 불만이 나옵니다.
+fo13,3,돌려보낸다,100,Reputation+3,정중히 돌려보냅니다.,-,-
+fo13,4,경쟁 교단의 비밀을 캐낸다,35,Followers+8 Integrity-4 @no.11,비밀을 캐내 신도들을 설득합니다.,Reputation-20 Followers-5,비밀 탐문이 들통납니다.
+fo14,1,점괘를 봐 준다,90,Followers+6 Communion+1,점괘에 사람들이 웃고 떠듭니다.,Reputation-3,점괘가 맞지 않는다는 말이 나옵니다.
+fo14,2,무료 음식을 나눈다,100,Followers+5 Reputation+3 Offerings-5,음식을 나누자 사람들이 고마워합니다.,-,-
+fo14,3,교단 음악을 공연한다,90,Followers+5 FollowerFaith+5,음악에 사람들이 따라 부릅니다.,-,-
+fo14,4,경품 추첨을 한다,70,Followers+8 Offerings-10 @no.17,경품 추첨에 사람들이 몰려듭니다.,Reputation-5 Offerings-5,경품이 부실하다는 불만이 나옵니다.
+fo15,1,가족 세례식을 연다,90,Followers+8 FollowerFaith+8,세례식에 가족이 감격합니다.,-,-
+fo15,2,조용히 받아들인다,100,Followers+4,조용히 받아들입니다.,-,-
+fo16,1,옛이야기를 들어 드린다,100,Followers+5 Charity+2,옛이야기에 노인들이 즐거워합니다.,-,-
+fo16,2,건강 체조를 함께 한다,90,Followers+5 Health+2,체조에 노인들이 활기를 찾습니다.,Health-1,체조가 무리였다는 말이 나옵니다.
+fo16,3,장례 의식을 약속한다,70,Followers+8 Offerings-5,장례 의식 약속에 노인들이 안심합니다.,Reputation-3,약속이 부담스럽다는 말이 나옵니다.
+fo16,4,효과가 없다며 그만둔다,100,Temperance+1,그만두고 다른 곳을 찾습니다.,-,-
+fo17,1,맞서 논쟁한다,70,Reputation+3 Mentality+2 @no.3,논쟁에서 이겨 구경꾼들이 박수를 칩니다.,Reputation-5,논쟁이 싸움으로 번집니다.
+fo17,2,조용히 자리를 피한다,100,Temperance+2,조용히 자리를 피합니다.,-,-
+fo17,3,상대를 위해 기도한다,90,Piety+3 Charity+2,기도하는 모습에 구경꾼이 감동합니다.,Reputation-2,기도가 빈정거림으로 들립니다.
+fo17,4,신도들을 불러 세를 과시한다,50,Followers+4 Authority+3,신도들의 기세에 상대가 물러섭니다.,Reputation-10,과시가 폭력 소문으로 번집니다.
+fo18,1,매주 발행한다,70,Followers+6 Reputation+3,매주 소식지를 받아 보는 사람이 늘어납니다.,Offerings-10,인쇄비가 부담입니다.
+fo18,2,계절마다 발행한다,100,Followers+3,계절 소식지가 꾸준히 읽힙니다.,-,-
+fo18,3,유료로 판다,90,Offerings+10 Reputation-3,소식지가 돈이 됩니다.,Followers-3,유료라 읽는 사람이 줄어듭니다.
+fo18,4,거절한다,100,Reputation+2,거절합니다.,-,-
+fo19,1,적극 지원한다,70,Followers+8 Reputation+8 @no.7,과외가 동네에 소문나 사람들이 찾아옵니다.,Offerings-10,지원금이 빠듯합니다.
+fo19,2,부모들에게도 포교한다,90,Followers+10 Reputation-3,부모들이 교단을 찾아옵니다.,Reputation-8,부모들이 포교를 경계합니다.
+fo19,3,교단 이름은 숨긴다,100,Reputation+4 FollowerFaith-3,이름을 숨기자 부모들이 편안해합니다.,-,-
+fo19,4,거절한다,100,Reputation+2,거절합니다.,-,-
+dc01,1,살생하지 말라,100,Doctrine+10 Reputation+3,살생하지 말라는 계율이 신도들의 마음을 얻습니다.,-,-
+dc01,2,교주에게 복종하라,70,Doctrine+10 Authority+8,복종의 계율이 교단의 질서를 세웁니다.,FollowerFaith-10,복종을 강요한다는 반발이 나옵니다.
+dc01,3,욕망을 부정하지 말라,90,Doctrine+15 Lust+2 @no.8,욕망을 인정하는 계율이 신도들을 편하게 합니다.,Doctrine-3,계율이 모호하다는 지적이 나옵니다.
+dc01,4,진실만을 말하라,100,Doctrine+10 Integrity+2,진실의 계율이 신뢰를 쌓습니다.,-,-
+dc02,1,매주 하루 금식,70,Doctrine+10 Health-1 Temperance+2,매주 금식이 교리의 뼈대가 됩니다.,FollowerFaith-8,금식이 힘들다는 불만이 나옵니다.
+dc02,2,한 달에 한 번,100,Doctrine+8 Temperance+1,한 달에 한 번의 금식이 무난하게 자리 잡습니다.,-,-
+dc02,3,금식 대신 잔치의 날을 만든다,90,Doctrine+10 FollowerFaith+10 Appetite+2 @no.15,잔치의 날이 신도들에게 즐거움을 줍니다.,Reputation-5,교리가 헤프다는 말이 나옵니다.
+dc02,4,넣지 않는다,100,Doctrine+3,금식 조항을 넣지 않습니다.,-,-
+dc03,1,모순을 인정하고 고친다,70,Doctrine+20 Integrity+2 @no.7,모순을 고치자 교리가 한층 단단해집니다.,Doctrine-5,고친 내용이 혼란을 줍니다.
+dc03,2,더 깊은 해석으로 설명한다,90,Doctrine+15 Mentality+1,깊은 해석이 신도들을 설득합니다.,Doctrine-5,설명이 억지처럼 들립니다.
+dc03,3,질문한 신도를 칭찬한다,100,FollowerFaith+10 Reputation+3,칭찬에 신도가 감동합니다.,-,-
+dc03,4,의심하지 말라 꾸짖는다,50,Authority+8 FollowerFaith-10,꾸짖음으로 질문이 사라집니다.,Reputation-10,꾸짖은 일이 소문납니다.
+dc04,1,천국과 지옥,100,Doctrine+10 FollowerFaith+5,천국과 지옥의 교리가 신도들에게 뚜렷합니다.,-,-
+dc04,2,윤회,90,Doctrine+10 Communion+2,윤회의 교리가 신비감을 줍니다.,Doctrine-3,윤회가 낯설다는 말이 나옵니다.
+dc04,3,사후 세계는 없다,70,Doctrine+5 Mentality+2,현세에 집중하는 교리가 됩니다.,FollowerFaith-10,신도들이 허전해합니다.
+dc04,4,교주를 따른 자만 구원받는다,50,Doctrine+15 Authority+8,구원 조건이 교단의 힘이 됩니다.,Reputation-10 FollowerFaith-8,배타적이라는 비난이 나옵니다.
+dc04,5,각자의 믿음대로 열린다,90,Doctrine+8 FollowerFaith+10 Reputation+3,열린 교리가 많은 사람을 받아들입니다.,-,-
+dc05,1,엄격히 금한다,90,Doctrine+10 Lust-2 Authority+3,엄격한 금기가 질서를 세웁니다.,FollowerFaith-8,금기가 가혹하다는 말이 나옵니다.
+dc05,2,결혼 안에서만 허락한다,100,Doctrine+10 Reputation+3,결혼 안의 허락이 무난합니다.,-,-
+dc05,3,신성한 의식으로 삼는다,70,Doctrine+15 Lust+3 Reputation-10 @no.14,의식이 신도들에게 신비로운 의미를 줍니다.,Reputation-15,의식이 외부에 추문으로 번집니다.
+dc05,4,자유에 맡긴다,100,FollowerFaith+8 Doctrine-3,자유가 신도들을 편하게 합니다.,-,-
+dc05,5,교주만이 축복할 수 있다,50,Authority+12 Doctrine+8,축복 권한이 교주에게 모입니다.,Reputation-15 FollowerFaith-10,특권 교리라는 비난이 쏟아집니다.
+dc06,1,가난이 곧 거룩함이다,90,Doctrine+10 FollowerFaith+8,가난의 교리가 신도들에게 위안을 줍니다.,Offerings-5,가난을 강요한다는 비판이 나옵니다.
+dc06,2,재물은 신의 축복이다,70,Doctrine+10 Offerings+15 Greed+2,축복의 교리가 헌금을 부릅니다.,Reputation-10,물질주의라는 비판이 나옵니다.
+dc06,3,가진 것을 나눠라,100,Doctrine+10 Charity+3,나눔의 교리가 신도들을 결속합니다.,-,-
+dc06,4,모든 재물은 교단에 바쳐라,50,Doctrine+8 Offerings+30 Integrity-3,재물이 교단으로 모입니다.,FollowerFaith-15 Reputation-10,신도들이 재산을 빼앗겼다고 느낍니다.
+dc06,5,재물은 놀이일 뿐이다,90,Doctrine+8 Greed+2 @no.17,재물을 가볍게 보는 교리가 신도들에게 편안합니다.,-,-
+dc07,1,직접 다듬어 출간한다,90,Doctrine+15 Reputation+5 Offerings+5,출간된 경전이 교단의 얼굴이 됩니다.,Offerings-10,출간 비용이 부담입니다.
+dc07,2,비밀 경전으로 둔다,100,Doctrine+10 Communion+1,비밀 경전이 신비감을 더합니다.,Reputation-3,비밀이 의심을 부릅니다.
+dc08,1,적극 차용한다,70,Doctrine+15 Followers+5,차용한 교리가 신도를 늘립니다.,Reputation-10,차용이 표절이라는 비난을 받습니다.
+dc08,2,차용하되 출처를 밝힌다,100,Doctrine+10 Reputation+5,출처를 밝히자 존중을 받습니다.,-,-
+dc08,3,독창성을 지킨다,90,Doctrine+8 Mentality+2,독창성이 교리의 개성을 살립니다.,Followers-3,개성이 강해 외면받기도 합니다.
+dc08,4,교묘하게 바꿔 우리 것으로 만든다,35,Doctrine+20 Integrity-3 @no.4,바꾼 교리가 우리 것처럼 자리 잡습니다.,Reputation-20,원작자가 항의해 소동이 납니다.
+dc09,1,하루 다섯 번,90,Doctrine+10 Piety+2,다섯 번의 기도가 신앙을 다잡습니다.,Health-1,기도 횟수가 버겁습니다.
+dc09,2,아침과 저녁,100,Doctrine+8 Patience+2,아침저녁 기도가 무난합니다.,-,-
+dc09,3,원할 때 언제든,100,FollowerFaith+8 Doctrine+3,자유로운 기도가 신도들을 편하게 합니다.,-,-
+dc09,4,교주의 명이 있을 때,50,Doctrine+5 Authority+10,교주의 명에 따른 기도가 권위를 세웁니다.,FollowerFaith-10 Reputation-5,명령 기도가 불만을 부릅니다.
+dc10,1,직접 가르친다,70,Doctrine+15 FollowerFaith+8 Health-1 @no.7,직접 가르침에 신도들이 감동합니다.,Health-2,강의가 길어져 몸이 지칩니다.
+dc10,2,제자들에게 맡긴다,90,Doctrine+8 Followers+4,제자들이 모임을 이끕니다.,Doctrine-3,제자마다 가르침이 달라집니다.
+dc10,3,교리는 외우기만 하면 된다,100,Doctrine+5 Authority+5,암기 중심의 공부가 질서를 세웁니다.,FollowerFaith-5,지루하다는 불만이 나옵니다.
+dc10,4,토론식으로 운영한다,90,Doctrine+10 FollowerFaith+8 Mentality+1,토론이 신도들의 이해를 깊게 합니다.,Doctrine-5,토론이 과열됩니다.
+dc11,1,가까운 종말을 예언한다,70,Doctrine+10 FollowerFaith+15 Followers+5,종말 예언이 신도들을 긴장시켜 모읍니다.,Reputation-15,예언이 빗나가 신뢰를 잃습니다.
+dc11,2,먼 미래의 일로 둔다,100,Doctrine+8,먼 미래의 일로 둡니다.,-,-
+dc11,3,종말은 없다,90,Doctrine+5 Mentality+2,종말 없는 교리가 안심을 줍니다.,FollowerFaith-5,신도들이 허탈해합니다.
+dc11,4,종말 날짜를 정한다,35,Doctrine+15 FollowerFaith+15 Reputation-10,날짜가 신도들을 뜨겁게 합니다.,Reputation-25 Followers-10,날짜가 지나 신도들이 떠납니다.
+dc12,1,고기를 금한다,90,Doctrine+10 Health-1 Temperance+2,고기 금기가 절제를 가르칩니다.,Health-2,영양 부족이 생깁니다.
+dc12,2,술을 금한다,100,Doctrine+10 Reputation+3,술 금기가 평판을 지킵니다.,-,-
+dc12,3,금기는 없다,100,FollowerFaith+8 Doctrine-2,금기 없는 교리가 편합니다.,-,-
+dc12,4,교주가 축복한 음식만 먹는다,50,Doctrine+8 Authority+10,축복받은 음식이 권위를 세웁니다.,Reputation-10 FollowerFaith-8,음식 통제라는 비난이 나옵니다.
+dc12,5,교주 앞에서만 마음껏 먹는다,35,Appetite+3 Authority+5 @no.15,교주 앞의 식사가 신도들의 복종을 키웁니다.,Reputation-10,식사 소문이 번집니다.
+dc13,1,뱀,70,Doctrine+10 Communion+2,뱀의 상징이 신비감을 줍니다.,Reputation-5,뱀이 불길하다는 말이 나옵니다.
+dc13,2,양,100,Doctrine+10 FollowerFaith+8,양의 상징이 온화함을 줍니다.,-,-
+dc13,3,까마귀,90,Doctrine+10 Mentality+2,까마귀의 상징이 지혜를 줍니다.,-,-
+dc13,4,사자,90,Doctrine+10 Authority+5,사자의 상징이 위엄을 줍니다.,-,-
+dc14,1,한쪽 손을 들어 준다,90,Authority+5 Doctrine+5,한쪽을 들어 주자 교리가 정리됩니다.,FollowerFaith-10,들어 주지 않은 쪽이 떠납니다.
+dc14,2,두 해석을 모두 인정한다,100,FollowerFaith+10 Doctrine+3,두 해석을 인정하자 화해가 이뤄집니다.,-,-
+dc14,3,새로운 제3의 해석을 내놓는다,70,Doctrine+20 Mentality+1 @no.7,제3의 해석이 두 파를 아우릅니다.,Doctrine-5 Reputation-5,제3의 해석이 어렵다는 말이 나옵니다.
+dc14,4,양쪽 모두 입을 다물게 한다,50,Authority+8 Doctrine-5,입을 다물게 하자 분란이 가라앉습니다.,Reputation-10 FollowerFaith-10,억압이라는 말이 나옵니다.
+dc15,1,엄격한 고행을 넣는다,70,Doctrine+15 Health-3 Patience+3 @no.2,고행이 신도들의 인내를 키웁니다.,Health-5,고행으로 쓰러지는 신도가 나옵니다.
+dc15,2,가벼운 절제로 대신한다,100,Doctrine+8 Temperance+2,가벼운 절제가 무난합니다.,-,-
+dc15,3,고행은 필요 없다,90,Doctrine+3 FollowerFaith+5,고행 없는 교리가 편합니다.,-,-
+dc15,4,교주만 고행한다,50,Doctrine+8 Authority+10 Health-2,교주의 고행이 존경을 얻습니다.,Reputation-10,교주만 고행한다는 말이 돕니다.
+dc16,1,교단 창설일,100,Doctrine+8 FollowerFaith+8,창설일이 교단의 자긍심이 됩니다.,-,-
+dc16,2,교주의 탄생일,70,Doctrine+8 Authority+10,탄생일이 교주의 위엄을 세웁니다.,Reputation-8,자기 생일을 명절로 삼는다는 비판이 나옵니다.
+dc16,3,첫 계시의 날,90,Doctrine+12 Communion+2,첫 계시의 날이 신비감을 줍니다.,-,-
+dc16,4,추수 감사의 날,100,Doctrine+8 Charity+3,추수 감사의 날이 신도들을 기쁘게 합니다.,-,-
+dc17,1,동화로 만든다,90,Doctrine+10 FollowerFaith+10 Followers+3,동화가 아이들의 마음을 얻습니다.,-,-
+dc17,2,그림책으로 만든다,90,Doctrine+8 Followers+4,그림책이 집집마다 퍼집니다.,Offerings-5,그림책 인쇄비가 부담입니다.
+dc17,3,교리는 쉬워서는 안 된다,70,Doctrine+15 Mentality+2,어려운 교리가 권위를 높입니다.,Followers-5,아이들이 떠나갑니다.
+dc17,4,노래로 만든다,100,Doctrine+8 FollowerFaith+8,노래로 교리가 쉽게 퍼집니다.,-,-
+dc18,1,참회하면 모두 용서받는다,100,Doctrine+8 FollowerFaith+10,참회의 교리가 신도들을 위로합니다.,-,-
+dc18,2,죄에 따라 헌금으로 속죄한다,70,Doctrine+8 Offerings+20 FollowerFaith-5,속죄 헌금이 재정을 키웁니다.,Reputation-10,죄값 흥정이라는 비난이 나옵니다.
+dc18,3,엄격한 처벌을 정한다,90,Doctrine+10 Authority+8 FollowerFaith-8,처벌 조항이 질서를 세웁니다.,Reputation-5,처벌이 가혹하다는 말이 나옵니다.
+dc18,4,교주가 직접 심판한다,50,Doctrine+5 Authority+15,교주의 심판이 권위를 높입니다.,Reputation-15 FollowerFaith-10,심판이 공정치 않다는 말이 나옵니다.
+dc19,1,과감히 수정한다,70,Doctrine+15 Reputation+5,과감한 수정이 시대에 맞춰 교리를 살립니다.,Reputation-5 Doctrine-5,수정이 혼란을 낳습니다.
+dc19,2,원형을 지킨다,90,Doctrine+10 Reputation-3,원형을 지키는 신념이 신도들을 다잡습니다.,Reputation-5,시대착오라는 비판이 나옵니다.
+dc19,3,수정하되 새 계시라 포장한다,50,Doctrine+15 Communion+2 @no.4,새 계시가 교리를 지킵니다.,Reputation-10 Doctrine-5,계시 조작이 드러납니다.
+dc19,4,신도들의 투표로 정한다,100,FollowerFaith+12 Doctrine+5,투표로 정한 교리가 신도들의 자부심이 됩니다.,-,-
+cm01,1,귀를 기울인다,70,Communion+2 Mentality-1,속삭임에 귀를 기울입니다.,Mentality-3,속삭임이 점점 커집니다.
+cm01,2,속삭임을 받아 적는다,90,Communion+2 Doctrine+3,받아 적은 말이 교리에 쓰입니다.,Doctrine-2,받아 적은 말이 뒤죽박죽입니다.
+cm01,3,기도를 멈춘다,100,Mentality+2,기도를 멈추고 숨을 고릅니다.,-,-
+cm01,4,측근을 불러 확인한다,90,Authority+3 Reputation+1,측근은 아무것도 듣지 못했다고 합니다.,Reputation-3,측근이 당신을 이상하게 봅니다.
+cm02,1,제단에 제물을 바친다,70,Communion+3 Offerings-10 Piety+2,제물을 바치자 제단이 따뜻해집니다.,Offerings-15,제물이 허공에 사라집니다.
+cm02,2,제단을 봉인한다,100,Communion-1 Reputation+2,제단을 봉인해 안전을 지킵니다.,-,-
+cm02,3,신도들에게 공개한다,90,FollowerFaith+10 Communion+2,공개된 제단에 신도들이 경외심을 느낍니다.,Reputation-5,제단이 흉흉하다는 소문이 납니다.
+cm02,4,제단에서 밤새 명상한다,50,Communion+4 Piety+3,밤새 명상이 깊은 접신으로 이어집니다.,Health-3 Mentality-2,명상 뒤 정신이 혼미합니다.
+cm03,1,더 깊이 빠져든다,70,Communion+3 Miracle+2,더 깊은 명상에서 신비로운 기운을 얻습니다.,Health-3,명상에 빠져 몸이 상합니다.
+cm03,2,두려워 멈춘다,100,Mentality+2,두려움을 이기고 멈춥니다.,-,-
+cm03,3,신도들 앞에서 재현해 본다,50,FollowerFaith+20 Communion+2 @no.4,재현 명상에 신도들이 황홀해합니다.,Reputation-15,재현에 실패해 사기라는 말이 돕니다.
+cm03,4,기록으로 남긴다,90,Doctrine+5 Communion+1,기록이 교리의 근거가 됩니다.,Doctrine-2,기록이 흐릿해 쓸모가 없습니다.
+cm04,1,신의 증표라 받아들인다,70,Communion+3 FollowerFaith+15,증표라는 말에 신도들이 뜨거워집니다.,Reputation-10,증언이 과장이라는 말이 나옵니다.
+cm04,2,빛의 의미를 설교한다,90,Communion+2 Doctrine+5 FollowerFaith+10,설교가 신도들의 이해를 깊게 합니다.,FollowerFaith-5,설교가 모호합니다.
+cm04,3,그를 조용히 돌려보낸다,100,Reputation+2,그를 조용히 돌려보냅니다.,-,-
+cm05,1,배운다,70,Communion+5 Reputation-5 @no.3,비법을 배워 신비로운 힘을 얻습니다.,Reputation-15,무당과 엮여 평판이 떨어집니다.
+cm05,2,정중히 거절한다,100,Reputation+3,정중히 거절합니다.,-,-
+cm05,3,비법만 듣고 쫓아낸다,90,Communion+2 Integrity-2,비법만 얻고 무당을 떠나보냅니다.,Reputation-5,무당이 소문을 퍼뜨립니다.
+cm05,4,무당을 교단에 영입한다,50,Communion+5 Followers+8 Authority-3,무당이 교단의 새 얼굴이 됩니다.,Reputation-15 Followers-5,교단이 무속에 기댄다는 비판이 나옵니다.
+cm06,1,신의 메시지라 여긴다,70,Communion+3 FollowerFaith+10,메시지라 여기자 신도들이 술렁입니다.,FollowerFaith-5,미신이라는 반발이 나옵니다.
+cm06,2,바람 탓이라 여긴다,100,Mentality+1,담담히 넘깁니다.,-,-
+cm06,3,다시 켜고 기도를 이어 간다,90,Piety+3 Communion+1,기도가 이어집니다.,-,-
+cm06,4,불길한 징조라 경고한다,50,Authority+8 FollowerFaith-8,징조를 경고하자 신도들이 긴장합니다.,Reputation-10,경고가 공포를 부른다는 말이 나옵니다.
+cm07,1,북소리에 맞춰 춤춘다,70,Communion+3 Health-2 FollowerFaith+10,북소리가 신도들을 황홀하게 합니다.,Health-3,춤이 과해 쓰러집니다.
+cm07,2,침묵 속에서 명상한다,100,Communion+2 Mentality+2,침묵이 깊은 명상을 가져옵니다.,-,-
+cm07,3,약초 향을 피운다,90,Communion+2 Health-2 Reputation-10 @no.8,향이 짙어 몽롱해집니다.,Health-3,향이 너무 짙어 기침이 납니다.
+cm07,4,의식을 취소한다,100,Reputation+3,의식을 취소합니다.,-,-
+cm07,5,신도들과 밤새 연회를 벌인다,35,FollowerFaith+10 Lust+2 @no.19,연회가 밤새 이어집니다.,Reputation-15,연회가 추문으로 번집니다.
+cm08,1,예언으로 기록한다,70,Doctrine+10 Communion+2,기록된 예언이 교리가 됩니다.,Reputation-10,예언이 맞지 않아 웃음거리가 됩니다.
+cm08,2,신도들에게 해석을 맡긴다,90,FollowerFaith+10 Followers+3,신도들이 제각각 해석합니다.,FollowerFaith-5,해석이 엇갈려 혼란이 옵니다.
+cm08,3,못 들은 척한다,100,Temperance+2,못 들은 척합니다.,-,-
+cm08,4,예언이 맞도록 몰래 일을 꾸민다,35,FollowerFaith+20 Integrity-5 @no.11,예언이 맞는 것처럼 일이 벌어집니다.,Reputation-20,계략이 들통나 신뢰를 잃습니다.
+cm09,1,밤새 기도한다,70,Communion+4 Piety+3,밤새 기도가 깊은 접신을 부릅니다.,Health-3,추위에 몸이 상합니다.
+cm09,2,두려워 나온다,100,Mentality+1,두려움을 이기지 못하고 나옵니다.,-,-
+cm10,1,신과 자연의 뜻이라 여긴다,70,Communion+3 FollowerFaith+10,자연의 뜻이라는 말이 신도들을 감동시킵니다.,-,-
+cm10,2,동물들을 돌본다,90,Charity+3 Communion+2 Reputation+3,동물을 돌보는 모습이 좋은 인상을 줍니다.,Offerings-5,먹이 비용이 듭니다.
+cm10,3,사진을 찍어 홍보한다,70,Reputation+8 Communion-1,사진이 신문에 실립니다.,Reputation-10,사진 조작 소문이 납니다.
+cm10,4,우연이라 생각한다,100,Mentality+2,우연이라 넘깁니다.,-,-
+cm11,1,당신의 이름을 답한다,70,Communion+3 Mentality-1,이름을 답하자 뱀이 사라집니다.,Mentality-3,꿈이 불길하게 이어집니다.
+cm11,2,교단의 이름을 답한다,90,Communion+2 Doctrine+3,교단 이름이 꿈의 계시가 됩니다.,Doctrine-2,꿈이 흐릿하게 지워집니다.
+cm11,3,뱀의 이름을 되묻는다,50,Communion+5 Miracle+2,뱀이 낯선 이름을 속삭입니다.,Mentality-3,뱀의 대답이 공포를 부릅니다.
+cm11,4,깨어난다,100,Mentality+1,꿈에서 깨어납니다.,-,-
+cm12,1,성물 앞에서 기도한다,70,Communion+3 Piety+3,기도 끝에 떨림이 가라앉습니다.,Mentality-2,떨림이 멈추지 않습니다.
+cm12,2,신도들에게 보여 준다,90,FollowerFaith+12 Communion+2,신도들이 떨림에 경외합니다.,Reputation-5,떨림이 속임수라는 말이 나옵니다.
+cm12,3,조사해 본다,100,Mentality+2 Doctrine+2,조사로 원인을 찾습니다.,-,-
+cm12,4,성물을 숨긴다,90,Communion-1 Reputation+2,성물을 숨겨 소란을 막습니다.,Reputation-3,숨긴 사실이 알려집니다.
+cm13,1,기적이라 선포한다,70,Miracle+2 FollowerFaith+15 Reputation-5,기적 소문이 퍼져 신도가 늘어납니다.,Reputation-15,진단서가 공개되어 기적이 의심받습니다.
+cm13,2,의사의 공이라 말한다,100,Reputation+5 Integrity+2,솔직한 말이 신뢰를 얻습니다.,-,-
+cm13,3,조용히 감사 기도를 드린다,90,Piety+3 FollowerFaith+5,감사 기도가 신도들의 마음을 얻습니다.,-,-
+cm14,1,대가를 치른다,70,Communion+3 Offerings-15,대가를 치르자 목소리가 잠잠해집니다.,Offerings-20,대가가 과해 재정이 흔들립니다.
+cm14,2,거절한다,100,Mentality+2,거절하고 의식을 지킵니다.,-,-
+cm14,3,협상한다,50,Communion+3 Mentality+2 @no.3,협상으로 대가를 줄입니다.,Mentality-3,협상이 결렬되어 불안이 남습니다.
+cm14,4,의식을 끊는다,90,Mentality+1,의식을 끊고 빠져나옵니다.,-,-
+cm15,1,성수로 지정한다,70,Communion+3 FollowerFaith+10,성수가 신도들의 자랑이 됩니다.,Reputation-10,우물물이 오염되었다는 말이 나옵니다.
+cm15,2,성수를 판다,90,Offerings+15 Reputation-5,성수가 잘 팔립니다.,Reputation-10,성수 장사가 비난을 받습니다.
+cm15,3,우물을 막는다,100,Reputation+2,안전을 위해 우물을 막습니다.,-,-
+cm15,4,우물가에서 명상한다,90,Communion+3 Mentality+2,우물가 명상이 깊어집니다.,Health-1,밤공기에 감기가 듭니다.
+cm16,1,인정하고 예언자로 세운다,70,Communion+3 Followers+5 FollowerFaith+8,예언자가 신도들을 이끕니다.,Reputation-10,예언자가 자만해 분란이 생깁니다.
+cm16,2,거짓이라 몰아세운다,90,Authority+5 FollowerFaith-8,몰아세움으로 질서가 잡힙니다.,Reputation-8,몰아세움이 가혹하다는 말이 나옵니다.
+cm16,3,체험 내용을 함께 검증한다,100,Reputation+4 Communion+1,검증 과정이 신뢰를 얻습니다.,-,-
+cm16,4,그의 체험을 당신 것으로 만든다,35,Communion+5 Integrity-4 @no.4,그의 체험이 당신의 체험으로 전해집니다.,Reputation-20,표절이 드러나 신뢰를 잃습니다.
+cm17,1,대규모 의식을 연다,70,Communion+5 FollowerFaith+10 Offerings-10,대규모 의식에 신도들이 모여듭니다.,Offerings-15,의식 비용이 과합니다.
+cm17,2,홀로 산에 올라 기도한다,90,Communion+3 Piety+3,산 위에서 기도합니다.,Health-2,산행이 힘듭니다.
+cm17,3,과학 현상이라 설명한다,100,Reputation+5 Mentality+2,과학으로 설명하자 신뢰를 얻습니다.,Communion-2,신비감이 줄어듭니다.
+cm18,1,영혼들과 대화를 시도한다,50,Communion+8 Miracle+2,영혼과의 대화가 신비로운 계시를 줍니다.,Mentality-4 Reputation-10,대화가 무서워 소문이 납니다.
+cm18,2,서둘러 떠난다,100,Mentality+2,서둘러 떠납니다.,-,-
+rp01,1,적극 협조한다,90,Reputation+8 Followers+3 @no.3,적극적인 협조에 기사가 호의적으로 실립니다.,Reputation-3,협조가 엇나가 기사가 애매해집니다.
+rp01,2,조건을 걸고 허락한다,70,Reputation+4 Integrity+2,조건부 취재가 신뢰를 지킵니다.,Reputation-5,조건이 까다롭다는 말이 나옵니다.
+rp01,3,거절한다,100,Reputation+2,거절로 조심스러움을 보입니다.,-,-
+rp01,4,기자를 매수한다,35,Reputation+10 Offerings-20 Integrity-5,매수한 기사가 교단을 띄웁니다.,Reputation-25 Offerings-10,매수가 드러나 신문 전체가 등을 돌립니다.
+rp01,5,신도들을 인터뷰하게 한다,90,Reputation+5 FollowerFaith+8,신도들의 진솔한 인터뷰가 공감을 얻습니다.,Reputation-5,인터뷰가 어수선해 웃음거리가 됩니다.
+rp02,1,공식 해명문을 낸다,90,Reputation+8 Integrity+2,공식 해명문이 루머를 가라앉힙니다.,Reputation-3,해명문이 변명처럼 읽힙니다.
+rp02,2,무시한다,70,Reputation-5 Temperance+2,무시하자 루머가 잦아듭니다.,Reputation-15,무시가 루머를 키웁니다.
+rp02,3,봉사 활동으로 이미지를 바꾼다,100,Reputation+10 Charity+2 Offerings-10,봉사 활동이 교단의 이미지를 바꿉니다.,Offerings-5,봉사 효과가 더디게 나타납니다.
+rp02,4,루머를 퍼뜨린 자를 찾아낸다,50,Reputation+3 Authority+5,루머 주범을 찾아내 본보기로 삼습니다.,Reputation-15,추적이 과해 비난을 받습니다.
+rp03,1,대대적으로 돕는다,90,Reputation+13 Offerings-25 Charity+2 @no.10,대대적인 구호가 전국에 알려집니다.,Offerings-15 Reputation-5,구호품이 부족하다는 비난이 나옵니다.
+rp03,2,조용히 돕는다,100,Reputation+5 Charity+3,조용한 구호가 이재민들에게 고마움을 얻습니다.,-,-
+rp03,3,홍보용 사진만 찍는다,70,Reputation+3 Offerings-5,사진이 신문에 실립니다.,Reputation-15,위선이라는 비난이 쏟아집니다.
+rp03,4,거절한다,100,Reputation-8,거절이 냉담하다는 말을 듣습니다.,-,-
+rp04,1,집회 시간을 줄인다,100,Reputation+5 FollowerFaith-3,시간을 줄이자 주민들이 안심합니다.,-,-
+rp04,2,방음 공사를 한다,90,Reputation+5 Offerings-15,방음 공사가 소음 문제를 해결합니다.,Offerings-10,공사비가 부담입니다.
+rp04,3,주민들을 초대해 대접한다,70,Reputation+8 Offerings-10 Charity+2,대접에 주민들이 마음을 누그러뜨립니다.,Offerings-5,대접만으로 불만이 가시지 않습니다.
+rp04,4,무시한다,50,FollowerFaith+5 Reputation-10,신도들은 흡족해하지만 주민들은 등을 돌립니다.,Reputation-15,민원이 신문에 실립니다.
+rp05,1,공개 지지한다,70,Reputation+5 Followers+8 Authority+5,공개 지지로 교단의 정치적 영향력이 커집니다.,Reputation-15,정치 개입이라는 비난이 나옵니다.
+rp05,2,중립을 지킨다,100,Reputation+5 Integrity+2,중립이 신뢰를 얻습니다.,-,-
+rp05,3,뒤에서 거래한다,50,Offerings+25 Integrity-4 Reputation-5 @no.11,뒤거래로 교단에 이득이 옵니다.,Reputation-20,거래가 드러나 소동이 납니다.
+rp05,4,후보를 신도로 만든다,90,FollowerFaith+8 Followers+5 Authority+3,후보가 신도가 되어 교단의 얼굴이 됩니다.,Reputation-5,신도가 된 후보를 두고 말이 많습니다.
+rp05,5,후보에게 교단의 요구를 내건다,35,Authority+10 Offerings+15 Integrity-3,요구가 관철되어 교단에 이득이 옵니다.,Reputation-20 Authority-5,요구가 공개되어 정치 스캔들이 됩니다.
+rp06,1,공개 사과한다,90,Reputation+5 Integrity+3,진심 어린 사과가 여론을 누그러뜨립니다.,Reputation-5,사과가 늦었다는 비판이 나옵니다.
+rp06,2,그 신도를 파문한다,70,Reputation+8 Authority+3 FollowerFaith-8,파문으로 교단이 선을 긋습니다.,Reputation-5 FollowerFaith-10,파문이 신도들을 흔듭니다.
+rp06,3,무관하다고 선을 긋는다,50,Reputation-5 Integrity-2,무관하다는 선언이 반발을 부릅니다.,Reputation-20,무관하다는 말이 거짓으로 드러납니다.
+rp06,4,그를 변호한다,100,FollowerFaith+8 Reputation-10,변호가 신도들을 감동시킵니다.,-,-
+rp07,1,연다,90,Reputation+10 Charity+3 Offerings-15,급식소가 동네의 신뢰를 얻습니다.,Offerings-10,급식 비용이 부담입니다.
+rp07,2,주말에만 연다,100,Reputation+5 Charity+2 Offerings-5,주말 급식이 무난히 이어집니다.,-,-
+rp07,3,급식소에서 포교도 한다,70,Followers+8 Reputation-3 Offerings-10,급식소에서 신도가 늘어납니다.,Reputation-12,포교 목적이 드러나 비난을 받습니다.
+rp07,4,거절한다,100,Reputation-3,거절합니다.,-,-
+rp08,1,반박 책을 낸다,70,Reputation+8 Doctrine+8 Offerings-15 @no.7,반박 책이 교리의 논리를 세웁니다.,Reputation-10 Offerings-10,반박이 궁색하다는 평이 나옵니다.
+rp08,2,저자를 만나 대화한다,90,Reputation+5 Mentality+3,대화가 서로의 이해를 넓힙니다.,Reputation-3,대화가 평행선을 달립니다.
+rp08,3,소송을 건다,50,Authority+5 Reputation-10 Offerings-20,소송이 교단의 입지를 지킵니다.,Reputation-20 Offerings-20,소송에서 패해 재정이 흔들립니다.
+rp08,4,신도들에게 읽지 말라 한다,90,FollowerFaith+5 Authority+5 Reputation-5,신도들이 책을 멀리합니다.,Reputation-10,금서라는 말에 오히려 책이 더 팔립니다.
+rp09,1,크게 후원한다,70,Reputation+12 Offerings-25,크게 후원해 축제의 이름을 얻습니다.,Reputation-5 Offerings-15,후원 대비 효과가 적습니다.
+rp09,2,소소하게 후원한다,100,Reputation+5 Offerings-8,소소한 후원이 무난합니다.,-,-
+rp09,3,축제에서 교단을 홍보한다,90,Reputation+6 Followers+5,축제에서 교단이 알려집니다.,Reputation-3,홍보가 튄다는 말이 나옵니다.
+rp09,4,거절한다,100,Reputation-2,거절합니다.,-,-
+rp10,1,진심으로 반성한다,90,Reputation+5 Integrity+3,반성의 뜻이 여론을 누그러뜨립니다.,Reputation-5,반성이 형식적이라는 말이 나옵니다.
+rp10,2,공개 반박한다,70,Reputation+3 Authority+5,반박이 교단의 목소리를 전합니다.,Reputation-10,반박이 싸움처럼 보입니다.
+rp10,3,그를 위해 기도한다고 발표한다,50,Reputation+5 FollowerFaith+10 @no.4,기도 발표가 교단의 여유를 보여 줍니다.,Reputation-10,기도 발표가 조롱거리가 됩니다.
+rp10,4,그의 과거를 폭로한다,35,Reputation-5 Followers+8 Integrity-5,폭로로 주목을 받습니다.,Reputation-25,폭로가 역풍을 맞습니다.
+rp11,1,인터뷰에 응해 해명한다,70,Reputation+8 Integrity+2 @no.3,해명 인터뷰가 시청자들의 마음을 누그러뜨립니다.,Reputation-10,해명이 편집되어 왜곡됩니다.
+rp11,2,촬영을 막는다,90,Reputation-10 Authority+3,촬영을 막자 의혹이 커집니다.,Reputation-15,막은 장면이 방송되어 더 나빠집니다.
+rp11,3,신도들의 평범한 일상을 보여 준다,100,Reputation+8 FollowerFaith+5,평범한 일상이 편견을 깹니다.,-,-
+rp11,4,잠적한다,90,Reputation-8 Followers-3,잠적으로 교단이 흔들립니다.,Reputation-15,잠적이 죄를 인정한 것처럼 보입니다.
+rp11,5,방송을 거꾸로 포교에 이용한다,35,Followers+10 Reputation+5 Integrity-3 @no.4,방송이 교단을 알리는 무대가 됩니다.,Reputation-20,방송이 교단을 사기꾼으로 그려 버립니다.
+rp12,1,교단 조끼를 입고 참여한다,100,Reputation+6 Followers+3,교단 조끼가 봉사의 상징이 됩니다.,-,-
+rp12,2,당신이 직접 앞장선다,70,Reputation+10 Health-2,직접 앞장서는 모습이 칭찬을 받습니다.,Health-3 Reputation-3,무리하다 몸이 상합니다.
+rp13,1,참석해 교단을 소개한다,90,Reputation+8 Authority+5 @no.3,소개가 여러 종교 지도자에게 인상을 남깁니다.,Reputation-3,소개가 자랑으로 들립니다.
+rp13,2,참석해 듣기만 한다,100,Reputation+3 Mentality+2,경청으로 배움을 얻습니다.,-,-
+rp13,3,거절한다,100,Reputation+1,거절합니다.,-,-
+rp13,4,모임을 주도하려 한다,50,Authority+10 Reputation-5,모임의 중심이 됩니다.,Reputation-15,주도권 다툼이 생깁니다.
+rp14,1,기부금을 투명하게 공개한다,90,Reputation+8 Integrity+3,투명한 공개가 신뢰를 높입니다.,Reputation-3,공개가 번거롭다는 말이 나옵니다.
+rp14,2,일부를 교단 운영비로 쓴다,70,Offerings+15 Integrity-3,운영비로 재정이 숨을 틉니다.,Reputation-10,운영비 사용이 들통납니다.
+rp14,3,쉼터를 확장한다,100,Reputation+5 Followers+3 Offerings-15,쉼터가 넓어져 많은 사람을 돕습니다.,-,-
+rp14,4,기부자 명단을 홍보에 쓴다,50,Reputation+5 Offerings+10 Integrity-2,명단 홍보가 교단을 유명하게 합니다.,Reputation-15,명단이 사생활 침해라는 비판을 받습니다.
+rp15,1,학교를 찾아가 대화한다,90,Reputation+5 FollowerFaith+8,대화로 따돌림이 줄어듭니다.,Reputation-3,학교가 적극적이지 않습니다.
+rp15,2,학생에게 신앙을 숨기라 한다,100,Reputation+2 FollowerFaith-8,학생이 신앙을 숨기며 상처를 입습니다.,-,-
+rp15,3,강경하게 항의한다,70,FollowerFaith+10 Authority+3,항의가 신도들에게 힘을 줍니다.,Reputation-12,항의가 학교와의 갈등을 키웁니다.
+rp15,4,교단 학교를 세우겠다고 한다,50,Followers+8 Offerings-20 Reputation-5,교단 학교 계획이 신도를 모읍니다.,Reputation-10 Offerings-10,학교 설립이 부담스럽다는 말이 나옵니다.
+rp16,1,적극 협조한다,90,Reputation+8 Doctrine+5 @no.7,연구 협조가 교리를 학술적으로 빛나게 합니다.,Reputation-3,자료가 공개되며 약점이 드러납니다.
+rp16,2,조건부로 허락한다,70,Reputation+4 Integrity+2,조건부 허락이 신뢰를 얻습니다.,Reputation-3,조건이 까다로워 연구가 멈춥니다.
+rp16,3,거절한다,100,Reputation+1,거절합니다.,-,-
+rp16,4,학자를 신도로 만든다,35,Followers+8 FollowerFaith+10 Reputation-5,학자가 신도가 되어 교단의 권위를 높입니다.,Reputation-20,학자가 떠나며 교단을 비판합니다.
+rp17,1,교단 장학금을 만든다,90,Reputation+10 Charity+3 Offerings-15,장학금이 학생들에게 희망을 줍니다.,Offerings-10,장학금 재원이 부족합니다.
+rp17,2,거절한다,100,Reputation+1,거절합니다.,-,-
+rp18,1,기꺼이 손을 잡는다,90,Reputation+8 Charity+2 @no.10,화해가 교단의 평판을 높입니다.,Reputation-3,화해가 형식으로 끝납니다.
+rp18,2,경계하며 받아들인다,70,Reputation+4 Authority+2,경계 속 화해가 무난합니다.,Reputation-5,경계심이 드러나 서먹해집니다.
+rp18,3,거절한다,100,Reputation-3,거절합니다.,-,-
+rp18,4,그 교회 신도들을 노린다,35,Followers+8 Reputation-10 Integrity-3,그 교회 신도들이 교단으로 옮겨 옵니다.,Reputation-20,계략이 들통나 교계에서 고립됩니다.
+cd01,1,조촐한 축하 예배를 연다,100,FollowerFaith+10 Followers+3,축하 예배에 신도들이 기뻐합니다.,-,-
+cd01,2,더 큰 목표를 선포한다,70,Authority+8 Followers+5,큰 목표가 신도들의 의욕을 키웁니다.,Authority-5,목표가 허황되다는 말이 나옵니다.
+cd02,1,더 넓은 곳을 빌린다,70,Followers+8 Offerings-20 @no.7,넓은 집회소가 신도를 더 받습니다.,Offerings-15,임대료가 부담입니다.
+cd02,2,두 번에 나눠 모인다,100,FollowerFaith+3 Followers+2,두 번에 나눠 모여 불편이 줄어듭니다.,-,-
+cd02,3,소모임 체제로 바꾼다,90,FollowerFaith+15 Authority-7 @no.7,소모임이 신도들의 결속을 다집니다.,Authority-10,소모임이 자율화되어 통제가 흐려집니다.
+cd03,1,기자 회견을 연다,70,Reputation+10 Followers+3 @no.3,회견이 교단을 세상에 알립니다.,Reputation-10,회견 내용이 왜곡됩니다.
+cd03,2,조용히 내실을 다진다,100,FollowerFaith+8 Doctrine+3,내실을 다지며 신도들이 안정됩니다.,-,-
+cd03,3,교단 본부를 세운다,90,Authority+10 Offerings-20,본부가 교단의 위엄을 세웁니다.,Offerings-15,본부 건설비가 큽니다.
+cd03,4,경계를 강화한다,50,Authority+8 FollowerFaith-8,경계가 질서를 세웁니다.,Reputation-10,경계가 외부의 반감을 키웁니다.
+cd04,1,지부를 세운다,70,Followers+15 Offerings-25,지부가 교단을 넓힙니다.,Offerings-15,지부 운영비가 큽니다.
+cd04,2,본부 중심 체제를 유지한다,100,Authority+8,본부 중심으로 질서를 지킵니다.,-,-
+cd04,3,측근들에게 지부를 나눠 준다,90,Followers+10 Authority-5 @no.11,측근들이 지부를 맡아 교단이 넓어집니다.,Authority-10,지부장들이 세력을 키웁니다.
+cd05,1,간증 집회를 연다,90,FollowerFaith+10 Followers+5,간증 집회에 신도들이 모여듭니다.,-,-
+cd05,2,간증을 책으로 엮는다,70,Doctrine+10 FollowerFaith+5,간증집이 교리의 살을 붙입니다.,Doctrine-3,간증이 과장되어 책이 흠을 잡힙니다.
+cd05,3,간증을 헌금으로 연결한다,50,Offerings+20 FollowerFaith-5,간증이 헌금으로 이어집니다.,Reputation-10,헌금 연결이 비난을 받습니다.
+cd06,1,맹세를 받아들인다,70,Authority+15 FollowerFaith+5,맹세가 교단의 힘이 됩니다.,Reputation-10,지나친 맹세가 외부의 우려를 부릅니다.
+cd06,2,그 맹세를 신에게 돌린다,100,FollowerFaith+8 Doctrine+5,맹세가 신앙으로 승화됩니다.,-,-
+cd06,3,맹세를 거두라 한다,90,Reputation+5 FollowerFaith-8,맹세를 거두자 신뢰가 회복됩니다.,-,-
+cd06,4,맹세를 시험해 본다,50,Authority+10 FollowerFaith-10 Integrity-2,시험으로 맹세의 크기를 확인합니다.,Reputation-15,시험이 가혹하다는 소문이 납니다.
+cd06,5,맹세를 계약서로 남긴다,35,Authority+12 Offerings+10 Integrity-3,계약서가 신도들을 묶습니다.,Reputation-20,계약서가 문제가 되어 파장이 생깁니다.
+cd07,1,믿음을 절제하라 설교한다,100,Reputation+8 FollowerFaith-5,절제 설교가 외부의 시선을 누그러뜨립니다.,-,-
+cd07,2,더욱 불을 지핀다,70,FollowerFaith+15 Authority+5,신도들의 열기가 더 뜨거워집니다.,Reputation-15,열기가 외부에 위협으로 비칩니다.
+cd07,3,외부와의 접촉을 끊는다,50,Authority+10 FollowerFaith+8 Reputation-15,교단이 고립되어 결속이 강해집니다.,Reputation-25 Followers-10,고립이 의혹을 키웁니다.
+cd07,4,광신을 교단의 힘으로 쓴다,35,Authority+15 Followers+10 Integrity-4,광신이 교단의 힘이 됩니다.,Reputation-30,광신이 사회 문제가 됩니다.
+cd08,1,신도 복지에 쓴다,100,FollowerFaith+12 Offerings-30 Charity+2,복지가 신도들의 생활을 돕습니다.,-,-
+cd08,2,교단 건물을 짓는다,90,Followers+8 Offerings-30,새 건물이 교단을 넓힙니다.,Offerings-15,건축비가 많이 듭니다.
+cd08,3,비상금으로 둔다,100,Offerings+5,비상금으로 안정을 얻습니다.,-,-
+cd08,4,당신의 생활을 윤택하게 한다,50,Wealth+4 Greed+2 Offerings-30 @no.19,생활이 윤택해집니다.,Reputation-15,사치가 소문납니다.
+cd09,1,경호원을 고용한다,90,Offerings-20 Authority+3,경호원이 금고를 지킵니다.,Offerings-15,경호 비용이 부담입니다.
+cd09,2,재산을 분산한다,70,Offerings-10 Reputation+5 @no.7,재산을 나눠 위험을 줄입니다.,Offerings-10,분산 관리가 번거롭습니다.
+cd09,3,모두 사회에 환원한다,100,Reputation+12 Offerings-50 Charity+3,사회 환원이 교단의 이미지를 높입니다.,-,-
+cd09,4,투자로 불린다,35,Offerings+50 Greed+2 Reputation-10 @no.17,투자로 재산이 불어납니다.,Reputation-30 Offerings-30,투자가 실패해 재산이 줄어듭니다.
+cd10,1,당신의 재산을 내놓는다,90,Offerings+20 Wealth-5 FollowerFaith+10 @no.7,재산을 내놓자 신도들이 감동합니다.,Offerings+5,재산이 충분치 않습니다.
+cd10,2,긴급 헌금을 호소한다,70,Offerings+20 FollowerFaith-10,긴급 헌금이 조금 모입니다.,FollowerFaith-15,호소가 외면받습니다.
+cd10,3,기도로 버틴다,100,LeaderFaith+5 FollowerFaith+5 @no.2,기도로 신도들이 버팁니다.,-,-
+cd10,4,빚을 낸다,50,Offerings+30 Reputation-10 Patience-1,빚으로 급한 불을 끕니다.,Reputation-20 Offerings-10,빚 독촉이 들어옵니다.
+cd11,1,일부러 반대 의견을 청한다,100,Authority+5 Reputation+5,반대 의견을 청하자 측근들이 믿음을 줍니다.,-,-
+cd11,2,이 침묵을 즐긴다,70,Authority+8 Reputation-5,침묵이 권위를 굳힙니다.,Reputation-10,침묵이 독재라는 말을 낳습니다.
+cd11,3,더 큰 권한을 요구한다,90,Authority+12 FollowerFaith-5,권한이 커집니다.,Authority-8,권한 요구가 측근들을 자극합니다.
+cd11,4,측근들을 시험한다,35,Authority+10 Integrity-3 @no.11,시험 끝에 충성스러운 측근이 드러납니다.,Authority-15,시험이 측근들의 신뢰를 깹니다.
+cd12,1,그 힘을 자비롭게 쓴다,90,FollowerFaith+15 Charity+3 @no.10,자비로운 명령이 신도들을 감싸 안습니다.,-,-
+cd12,2,그 힘으로 반대파를 정리한다,70,Authority+10 Followers-8,반대파가 정리되어 조용해집니다.,Reputation-15,정리 과정이 외부에 알려집니다.
+cd12,3,권한을 측근들에게 나눈다,100,Authority-10 FollowerFaith+8,권한 분산이 신도들의 신뢰를 얻습니다.,-,-
+cd12,4,신이 되기를 꿈꾼다,35,Authority+20 Communion+3 Reputation-20,신성한 야망이 교단을 흔듭니다.,Reputation-35,야망이 세상의 조롱거리가 됩니다.
+cd13,1,침묵 수행에 들어간다,90,LeaderFaith+15 Health-2 Temperance+2,침묵 속에서 신앙이 익어 갑니다.,Health-3,수행이 과해 몸이 상합니다.
+cd13,2,교리를 다시 쓴다,70,Doctrine+20 LeaderFaith+5,새로 쓴 교리가 깊이를 더합니다.,Doctrine-5,교리 수정이 혼란을 부릅니다.
+cd14,1,무릎 꿇고 경배한다,100,LeaderFaith+15 Communion+2,경배 끝에 마음이 평온해집니다.,-,-
+cd14,2,신도들에게 증언한다,70,FollowerFaith+20 Reputation-5,증언이 신도들을 뜨겁게 합니다.,Reputation-15,증언이 과장이라는 비난을 받습니다.
+cd14,3,신에게 질문을 던진다,90,Doctrine+15 Mentality+3 @no.7,질문 끝에 떠오른 답이 교리가 됩니다.,Mentality-3,질문에 답이 없습니다.
+cd14,4,환각이라 의심한다,100,Reputation+3 LeaderFaith-10,환각이라고 의심해 신중함을 보입니다.,-,-
+cd15,1,더 깊이 들어간다,70,Communion+5 Health-3,더 깊은 접신이 찾아옵니다.,Health-5,접신 중 쓰러집니다.
+cd15,2,잠시 멈추고 휴식한다,100,Health+4 Mentality+2,휴식이 몸과 마음을 회복시킵니다.,-,-
+cd15,3,신도들과 경험을 나눈다,90,FollowerFaith+12 Communion+2,경험 나눔이 신도들을 결속합니다.,FollowerFaith-5,경험이 신도들을 혼란스럽게 합니다.
+cd16,1,병자를 치유해 본다,70,Miracle+4 FollowerFaith+15 Communion+1,치유가 소문을 타고 신도들을 부릅니다.,Reputation-15,치유가 실패해 사기라는 말이 돕니다.
+cd16,2,힘을 숨긴다,100,Mentality+2 Reputation+3,힘을 숨기며 평온을 지킵니다.,-,-
+cd16,3,힘으로 신도를 복종시킨다,50,Authority+12 FollowerFaith-10 Integrity-3,복종이 질서를 세웁니다.,Reputation-15 Authority-5,복종 강요가 반발을 부릅니다.
+cd16,4,힘의 근원을 탐구한다,90,Doctrine+10 Communion+2 @no.7,탐구가 교리를 넓힙니다.,Mentality-2,탐구가 막막합니다.
+cd17,1,신의 뜻을 세상에 전한다,90,Reputation-5 FollowerFaith+15 Followers+8,신의 뜻이 세상에 퍼집니다.,Reputation-15,세상이 신의 뜻을 의심합니다.
+cd17,2,그 힘을 혼자 간직한다,100,Communion+2 Patience+2,힘을 간직하며 고요를 얻습니다.,-,-
+cd17,3,신과 하나가 되기를 택한다,35,Miracle+10 Health-10 Communion+5,신과 하나가 된 듯한 체험이 찾아옵니다.,Health-15,몸이 무너지기 시작합니다.
+cd18,1,교리 학교를 연다,70,Doctrine+15 Followers+8 Offerings-15,교리 학교가 신도를 키웁니다.,Offerings-10,학교 운영비가 부담입니다.
+cd18,2,교리를 외부에 공개한다,100,Reputation+8 Doctrine+5,교리 공개가 신뢰를 얻습니다.,-,-
+cd19,1,이단을 파문한다,70,Authority+10 FollowerFaith-8,파문으로 기강이 섭니다.,Reputation-10,파문이 가혹하다는 평이 납니다.
+cd19,2,토론회를 연다,90,Doctrine+10 Reputation+5 @no.3,토론회가 교리를 다듬습니다.,Reputation-5,토론회가 소란스럽습니다.
+cd19,3,이단의 주장을 흡수한다,50,Doctrine+15 Followers+5 Integrity-2,이단의 주장이 교리에 흡수됩니다.,Doctrine-10,흡수가 교리를 흐립니다.
+cd19,4,무시한다,100,Reputation-3,무시합니다.,-,-
+cd20,1,학자들과 교류한다,90,Reputation+10 Doctrine+8,학자들과의 교류가 교리를 빛냅니다.,Reputation-5,교류가 비판을 부릅니다.
+cd20,2,교리를 비밀로 닫는다,100,Doctrine+5 Communion+2,비밀이 교리의 신비를 더합니다.,Reputation-5,비밀이 의혹을 부릅니다.
+cd21,1,대규모 봉사로 만회한다,70,Reputation+15 Offerings-25,봉사가 평판을 되돌립니다.,Reputation-5 Offerings-15,봉사가 효과를 내지 못합니다.
+cd21,2,신도들에게 인내를 설교한다,90,FollowerFaith+10 Patience+2,인내의 설교가 신도들을 다잡습니다.,FollowerFaith-5,설교가 공허하게 들립니다.
+cd21,3,언론에 맞선다,50,Reputation-10 Authority+8,맞섬이 교단의 기개를 보입니다.,Reputation-20,맞섬이 역풍을 맞습니다.
+cd21,4,잠시 활동을 멈춘다,100,Reputation+5 Followers-5,활동을 멈춰 시선을 피합니다.,-,-
+cd22,1,조사에 성실히 협조한다,90,Reputation+10 Integrity+3,협조가 신뢰를 되찾습니다.,Reputation-5,조사 결과가 불리합니다.
+cd22,2,증거를 없앤다,35,Integrity-5 Reputation-5,증거가 사라집니다.,Reputation-25,증거 인멸이 드러납니다.
+cd22,3,해외로 거점을 옮긴다,70,Followers-15 Offerings-20 Reputation+5,거점을 옮겨 조사를 피합니다.,Offerings-20 Followers-10,거점 이전이 신도들을 흩어 놓습니다.
+cd22,4,희생양을 내세운다,50,Reputation+5 Authority+3 Integrity-4 @no.11,희생양이 조사의 방향을 바꿉니다.,Reputation-20,희생양이 드러나 역풍이 붑니다.
+cd23,1,감사 행사를 연다,100,Reputation+5 FollowerFaith+8,감사 행사가 지역 주민들과 가까워지게 합니다.,-,-
+cd23,2,정치에 진출한다,70,Authority+15 Reputation-8,정치 진출이 권력을 넓힙니다.,Reputation-15,정치 진출이 비난을 부릅니다.
+cd23,3,겸손을 잃지 않는다,90,Reputation+3 Temperance+3,겸손이 명성을 지킵니다.,-,-
+cd23,4,명성을 이용해 포교한다,50,Followers+15 Reputation-5,명성이 신도를 불러 모읍니다.,Reputation-15,포교가 이용처럼 보입니다.
+cd24,1,신앙 수련회를 연다,90,FollowerFaith+15 Health-2 @no.2,수련회로 신앙이 깊어집니다.,Health-3,수련회가 고되어 불만이 나옵니다.
+cd24,2,얕은 신도를 정리한다,70,Followers-15 FollowerFaith+8,정리 뒤 남은 신도들이 단단해집니다.,Reputation-10,정리가 가혹하다는 말이 나옵니다.
+cd24,3,믿음보다 숫자가 중요하다,50,Followers+10 FollowerFaith-10,숫자가 교단을 키웁니다.,Reputation-10,겉치레라는 말이 나옵니다.
+cd24,4,당신이 직접 신도들을 만난다,100,FollowerFaith+15 Health-2,직접 만남이 신도들의 마음을 붙잡습니다.,-,-
+cd25,1,헌금을 사회에 환원한다,90,Reputation+15 Offerings-40,환원이 평판을 크게 되돌립니다.,Reputation-5,환원이 늦었다는 말이 나옵니다.
+cd25,2,평판 따위 신경 쓰지 않는다,100,Offerings+5 Temperance-2,신경 쓰지 않고 재정에 집중합니다.,-,-
+cd25,3,홍보에 돈을 쓴다,70,Reputation+10 Offerings-25,홍보가 평판을 조금 높입니다.,Reputation-10 Offerings-10,홍보가 과장이라 비웃음을 삽니다.
+cd25,4,돈의 흐름을 공개한다,90,Reputation+10 Integrity+3,투명한 공개가 의혹을 씻습니다.,Reputation-3,공개 자료에 의문이 붙습니다.
+cd26,1,권위를 내려놓고 다가간다,100,FollowerFaith+15 Authority-10,다가감이 신도들의 마음을 되돌립니다.,-,-
+cd26,2,공포로 다스린다,50,Authority+10 FollowerFaith-15 Reputation-5,공포가 당분간 질서를 세웁니다.,Reputation-20 FollowerFaith-10,공포가 신도들을 떠나게 합니다.
+cd26,3,측근을 통해 민심을 살핀다,90,Authority+3 FollowerFaith+8,측근이 민심을 전합니다.,Authority-3,측근의 보고가 엇갈립니다.
+cd26,4,기적을 연출한다,70,FollowerFaith+15 Miracle+2 Reputation-5,연출된 기적이 신도들의 마음을 잠시 붙잡습니다.,Reputation-15,연출이 들통납니다.
+cd27,1,모든 것을 내려놓고 기도한다,100,LeaderFaith+15 Health-2,기도로 다시 신앙을 찾습니다.,-,-
+cd27,2,신앙 없이 교단을 운영한다,70,Authority+8 Offerings+10 LeaderFaith-5,운영은 굴러가지만 신앙은 흐려집니다.,Reputation-10,운영의 공허함이 드러납니다.
+cd27,3,측근에게 고백한다,90,Authority-5 Charity+3,고백이 측근들과 가깝게 합니다.,Authority-8,측근들이 불안해합니다.
+cd27,4,쾌락에 빠진다,35,Lust+4 LeaderFaith-10 @no.19,쾌락이 공허를 채웁니다.,Reputation-20 LeaderFaith-10,쾌락이 소문이 납니다.
+cd28,1,연합을 제안한다,90,Reputation+8 Followers+5 Authority+3,연합이 교단의 위상을 높입니다.,Reputation-3,연합 제안이 거절됩니다.
+cd28,2,정면으로 맞선다,70,Authority+10 Followers-5,맞섬이 교단의 기개를 보입니다.,Followers-15 Reputation-10,맞섬이 분란을 키웁니다.
+cd28,3,몸을 낮춘다,100,Reputation+5 Authority-5,몸을 낮추자 견제가 누그러집니다.,-,-
+cd28,4,경쟁 교단을 매수한다,50,Followers+10 Offerings-25 Integrity-4 @no.11,매수로 경쟁 교단이 흡수됩니다.,Reputation-15 Offerings-15,매수가 드러납니다.
+cd28,5,경쟁 교단에 몰래 사람을 심는다,35,Followers+8 Authority+5 Integrity-4 @no.17,심은 사람이 내부를 흔듭니다.,Reputation-20,침투가 발각됩니다.
+cd29,1,새 경전을 쓴다,90,Doctrine+20 Communion+2 @no.7,새 경전이 교리를 한층 높입니다.,Doctrine-5,경전이 논란을 부릅니다.
+cd29,2,계시를 의심한다,100,Mentality+3 Doctrine+3,의심 끝에 계시를 바르게 해석합니다.,-,-
+cd30,1,대축제를 연다,90,FollowerFaith+15 Followers+10 Offerings-20,대축제가 신도들의 자긍심을 높입니다.,Offerings-15,축제 비용이 큽니다.
+cd30,2,이 순간을 교리에 새긴다,100,Doctrine+15 LeaderFaith+5,이 순간이 교리의 정점이 됩니다.,-,-
+cd30,3,더 높은 곳을 바라본다,70,Authority+10 Communion+3,높은 곳을 바라보며 야망을 키웁니다.,Reputation-10,과욕이 소문이 됩니다.
+cd30,4,함께 조용히 기도한다,90,LeaderFaith+10 FollowerFaith+10,조용한 기도가 모두를 감쌉니다.,-,-
+cd31,1,주민들과 대화의 자리를 만든다,90,Reputation+10 Integrity+2,대화가 시위를 가라앉힙니다.,Reputation-3,대화가 소득 없이 끝납니다.
+cd31,2,시위를 무시한다,70,Reputation-8 Followers-3,시위가 잦아들지만 악감정이 남습니다.,Reputation-15,무시가 시위를 키웁니다.
+cd31,3,신도들을 동원해 맞불 집회를 연다,50,FollowerFaith+10 Followers+5 Reputation-10,맞불이 신도들을 뭉치게 합니다.,Reputation-20 Followers-10,맞불이 충돌로 번집니다.
+cd31,4,당분간 집회를 멈춘다,100,Reputation+5 Offerings-5,집회를 멈추고 조용히 기다립니다.,-,-
+cd32,1,공개 토론을 제안한다,70,Reputation+10 Doctrine+8 @no.3,토론 제안이 교단의 논리를 보여 줍니다.,Reputation-10,토론이 열리지 않아 오히려 불리해집니다.
+cd32,2,교리를 순화한다,90,Reputation+8 Doctrine-5,순화된 교리가 외부의 우려를 줄입니다.,FollowerFaith-10,신도들이 순화에 반발합니다.
+cd32,3,그들을 맞비난한다,50,Authority+5 Reputation-15,맞비난이 싸움을 키웁니다.,Reputation-20,비난이 되돌아옵니다.
+cd32,4,침묵한다,100,Reputation-5 Temperance+2,침묵으로 시간을 번다.,-,-
+cd33,1,모든 자료를 제출한다,90,Reputation+8 Integrity+3,자료 제출이 신뢰를 되찾습니다.,Reputation-5,자료 중 일부가 문제가 됩니다.
+cd33,2,변호사를 고용해 맞선다,70,Offerings-25 Reputation+3,변호사가 교단을 방어합니다.,Offerings-25 Reputation-5,변호 비용이 재정을 흔듭니다.
+cd33,3,핵심 자료를 숨긴다,35,Integrity-5 Offerings+10,자료를 숨겨 조사를 피합니다.,Reputation-25,숨긴 자료가 발견됩니다.
+cd33,4,신도들에게 증언을 시킨다,50,FollowerFaith+15 Reputation-10,신도들의 증언이 교단을 지킵니다.,Reputation-20,증언이 조작이라는 의혹을 받습니다.
+cd34,1,교단 운영을 전면 쇄신한다,90,Reputation+15 Authority-10,쇄신이 교단의 명맥을 잇습니다.,Reputation-5,쇄신이 늦었다는 평이 납니다.
+cd34,2,사회 공헌을 약속하고 거액을 기부한다,70,Reputation+15 Offerings-40,거액 기부가 여론을 돌립니다.,Reputation-5 Offerings-20,기부가 부족하다는 말이 나옵니다.
+cd34,3,지하로 숨어든다,50,Followers-20 Reputation-5,지하에서 신도들을 지킵니다.,Followers-30,신도들이 뿔뿔이 흩어집니다.
+cd34,4,끝까지 맞선다,35,Authority+10 FollowerFaith+15 Reputation-20,끝까지 맞서며 신도들이 뭉칩니다.,Reputation-30,맞섬이 해체의 빌미가 됩니다.
+cd35,1,기꺼이 함께한다,100,Reputation+10 Followers+5 Offerings+5,공동 사업이 교단의 평판을 키웁니다.,-,-
+cd35,2,교단 이름을 앞세운다,70,Reputation+3 Authority+8,교단 이름이 사업의 중심이 됩니다.,Reputation-10,이름을 앞세운 것이 반발을 부릅니다.
+cd35,3,정중히 거절한다,90,Reputation+3 Integrity+2,정중한 거절이 품위를 지킵니다.,-,-
+cd36,1,절차를 밟는다,100,Reputation+10 Offerings-15 Authority+5,정식 법인이 교단의 위상을 높입니다.,-,-
+cd36,2,국가의 간섭을 거부한다,70,Authority+10 Reputation-5,간섭 거부가 교단의 독립을 지킵니다.,Reputation-15,거부가 국가와의 갈등을 낳습니다.
+cd36,3,세제 혜택만 챙긴다,50,Offerings+20 Integrity-3,세제 혜택이 재정을 불립니다.,Reputation-15,혜택만 챙긴다는 비판이 나옵니다.
+cd37,1,진솔하게 인터뷰한다,90,Reputation+10 FollowerFaith+8,진솔한 인터뷰가 존경을 얻습니다.,Reputation-3,인터뷰가 말실수로 얼룩집니다.
+cd37,2,교단의 비전을 크게 선포한다,70,Followers+10 Authority+8,비전 선포가 신도들의 기대를 키웁니다.,Reputation-10,선포가 과장이라는 말이 나옵니다.
+cd37,3,언론을 피한다,100,Reputation+2 Temperance+2,언론을 피해 평온을 지킵니다.,-,-
+cd38,1,가족들을 직접 만나 설득한다,90,Reputation+8 Charity+3 FollowerFaith+5,직접 만남이 가족들의 분노를 누그러뜨립니다.,Reputation-3,설득이 가족들의 원성을 키웁니다.
+cd38,2,신도들에게 가족과 연을 끊으라 한다,50,FollowerFaith+10 Followers-10 Reputation-15,연을 끊은 신도들이 교단에 충성합니다.,Reputation-25,가족의 고소가 강화됩니다.
+cd38,3,합의금을 준비한다,70,Reputation+8 Offerings-25,합의금으로 사태가 가라앉습니다.,Offerings-15,합의금이 부족합니다.
+cd38,4,신도들의 귀가를 허락한다,100,Reputation+5 Followers-8,귀가를 허락하자 가족들이 물러섭니다.,-,-
+ln01,1,금식하며 매달린다,50,LeaderFaith+5 Health-3,금식 끝에 겨우 마음의 평정을 되찾지만 몸이 상합니다.,Health-5 LeaderFaith-10 Authority-5,쓰러져 앓아누우니 교단이 술렁입니다.
+ln01,2,아무렇지 않은 척 설교를 이어 간다,60,LeaderFaith-5 Integrity-1,공허한 설교였지만 아무도 눈치채지 못합니다.,FollowerFaith-10 LeaderFaith-8 Authority-5,말이 겉돌아 신도들이 고개를 갸웃합니다.
+ln01,3,기도를 접고 일에만 매달린다,70,LeaderFaith-10 Offerings+5,교단 일은 굴러가지만 신앙은 더 메말라 갑니다.,LeaderFaith-15 Offerings-10,일마저 꼬여 모든 것이 허사가 됩니다.
+ln02,1,솔직히 흔들린다고 고백한다,50,Authority-8 FollowerFaith+3,솔직한 고백에 몇몇 신도가 눈시울을 붉히지만 교단의 위엄은 흔들립니다.,Authority-15 FollowerFaith-10,고백이 약함으로 받아들여져 신도들이 수군댑니다.
+ln02,2,찬송가를 불러 시간을 번다,70,LeaderFaith-5,찬송으로 넘겼지만 식은땀이 멎지 않습니다.,Authority-10 Reputation-5,찬송마저 음정이 흔들려 웃음이 새어 나옵니다.
+ln02,3,집회를 파한다,60,Reputation-5 Authority-5,집회를 서둘러 마쳤지만 소문은 막지 못합니다.,Reputation-10 FollowerFaith-10,황급한 해산이 도망으로 비칩니다.
+fn01,1,신도들을 일일이 찾아가 이야기를 듣는다,55,FollowerFaith+3 Health-2,속마음을 들어 주자 한숨 섞인 불만이 쏟아집니다.,FollowerFaith-10 Health-2,대화가 푸념으로 끝나 사기만 더 떨어집니다.
+fn01,2,더 강한 어조로 설교한다,60,FollowerFaith-3 Authority+3,목청을 높이자 잠시 긴장하지만 마음은 얻지 못합니다.,FollowerFaith-12 Followers-3,고함이 반발을 사 몇몇이 자리를 뜹니다.
+fn01,3,집회를 쉰다,70,FollowerFaith-5,쉬는 동안 신도들이 한숨을 돌리지만 열기는 식어 갑니다.,FollowerFaith-12 Followers-2,쉰다는 말이 포기로 들립니다.
+fn02,1,조용히 보내 준다,70,Followers-2 FollowerFaith-5,축복해 보낸 뒤 가까운 신도 몇이 같이 떠날 기색입니다.,Followers-3 Reputation-8,보내 준 뒤 그가 밖에서 교단 험담을 하고 다닙니다.
+fn02,2,공개적으로 설득한다,40,FollowerFaith-3,설득에 신도가 머뭇거리며 자리에 앉습니다.,Followers-3 Reputation-8 Authority-5,설득이 말싸움으로 번져 그가 문을 박차고 나갑니다.
+fn02,3,배신자라 꾸짖는다,60,Authority+3 FollowerFaith-8 Reputation-5,꾸짖음에 나머지 신도들이 입을 다뭅니다.,FollowerFaith-15 Followers-4,꾸짖음이 반감을 사 다른 신도들도 등을 돌립니다.
+an01,1,그 모임에 직접 찾아가 따진다,50,Authority-3 FollowerFaith-3,그가 마지못해 물러서지만 앙금이 남습니다.,Authority-15 FollowerFaith-8,신도들 앞에서 말싸움이 벌어져 권위가 땅에 떨어집니다.
+an01,2,모른 척 두고 본다,60,Authority-5,모임은 커지지 않고 흐지부지됩니다.,Authority-12 Followers-5,모임이 불어나 교단이 둘로 갈라집니다.
+an01,3,측근을 파문한다,40,Authority+2 Followers-4 FollowerFaith-5,파문으로 일단 정리되었지만 그를 따르던 이들이 떠납니다.,Authority-10 Followers-8 Reputation-8,파문이 도리어 반발을 불러 교단이 어수선해집니다.
+an02,1,자리를 내놓겠다고 맞받아친다,40,Authority-3 LeaderFaith-3,배짱에 그가 기세를 잃고 주저앉습니다.,Authority-15 LeaderFaith-10,그가 정말 자리를 차지하려 해 교단이 술렁입니다.
+an02,2,경호를 불러 끌어낸다,60,Reputation-6 Authority+2,소란은 가라앉았지만 거친 인상이 남습니다.,Reputation-12 Authority-8,끌려 나가며 그가 소리쳐 더 큰 구설이 됩니다.
+an02,3,조용히 타이른다,65,Authority-5,그가 얼굴을 붉히며 물러납니다.,Authority-12 FollowerFaith-5,타이름이 약해 보여 박수가 더 커집니다.
+on01,1,신도들에게 호소해 월세를 마련한다,55,Offerings+10 FollowerFaith-5,푼돈을 모아 간신히 막았지만 신도들의 표정이 어둡습니다.,FollowerFaith-8 Reputation-5 Offerings-5,모인 돈이 모자라 주인이 얼굴을 찌푸립니다.
+on01,2,개인 물건을 팔아 낸다,65,Wealth-5 Offerings+5,시계와 외투를 팔아 한 달을 넘깁니다.,Wealth-8 Reputation-3,헐값에 팔고도 돈이 모자랍니다.
+on01,3,빌려서 막는다,50,Offerings+15 Reputation-5,이자가 붙은 빚으로 당장은 넘깁니다.,Offerings-10 Reputation-12,빚쟁이가 집회소까지 찾아와 소동이 납니다.
+on02,1,신도들의 집에서 연탄을 얻어 온다,55,Offerings+5 FollowerFaith+2,신도들의 정성으로 몇 장을 얻어 불을 지핍니다.,FollowerFaith-8,그들의 사정도 어려워 눈치만 봅니다.
+on02,2,집회를 따뜻한 신도 집에서 연다,60,FollowerFaith-3,좁은 방에서 서로 체온으로 버팁니다.,FollowerFaith-8 Health-2,좁은 방에서 몸이 상한 신도가 생깁니다.
+on02,3,예배를 취소한다,70,FollowerFaith-8,추위 속 모임은 접었지만 마음은 더 식습니다.,FollowerFaith-12 Followers-3,취소가 길어져 신도들의 발길이 끊깁니다.
+n_fo01,1,홀로 예배를 올린다,70,LeaderFaith+3 FollowerFaith-3,홀로 올린 예배가 쓸쓸하지만 마음은 다잡습니다.,LeaderFaith-8 Mentality-2,텅 빈 울림에 가슴이 먹먹해집니다.
+n_fo01,2,신도들의 집을 찾아 나선다,55,Followers+1 Health-2,찾아간 집에서 문전박대를 당해도 몇이 마음을 돌립니다.,Health-3 Reputation-3,닫힌 문 앞에서 한참을 서성이다 돌아옵니다.
+n_fo01,3,오늘은 집회를 접는다,80,LeaderFaith-5,접은 집회에 마음이 무겁습니다.,Reputation-8 Followers-1,접은 일이 소문이 나 교단이 문 닫았다는 말이 돕니다.
+n_fo02,1,웃으며 보내 준다,70,Followers-1 LeaderFaith-3,웃는 얼굴로 보냈지만 돌아선 뒷모습이 쓸쓸합니다.,Followers-1 LeaderFaith-6,웃음이 어색해 그가 더 미안해합니다.
+n_fo02,2,함께 가자고 붙잡는다,40,FollowerFaith-2,그가 흔들리며 한 달만 더 있겠다고 합니다.,Followers-1 LeaderFaith-8 Authority-3,붙잡는 손을 뿌리치고 그가 떠납니다.
+n_fo02,3,새 신도를 소개해 달라 부탁한다,50,Followers+1 Reputation-2,소개받은 이웃이 한번 들러 보겠다고 합니다.,Reputation-5 Followers-1,민망한 부탁에 그가 얼굴을 붉히며 서둘러 자리를 뜹니다.
+n_dc01,1,즉석에서 그럴듯하게 둘러댄다,55,Integrity-1 Reputation-2,둘러댄 말이 그럴듯해 청년이 고개를 끄덕입니다.,Reputation-8 Authority-5,앞뒤가 맞지 않아 청년이 코웃음을 칩니다.
+n_dc01,2,정직하게 아직 준비 중이라 답한다,65,Reputation-3 Doctrine+3,솔직함은 인정받지만 교단의 얄팍함이 드러납니다.,Reputation-8 FollowerFaith-5,준비 중이라는 말이 비웃음을 삽니다.
+n_dc01,3,화를 내며 질문을 막는다,50,Authority+2 Reputation-5 FollowerFaith-5,다그침에 청년이 입을 다물지만 분위기는 싸늘합니다.,Reputation-12 Followers-3,청년이 소문을 퍼뜨려 교단이 사이비라는 말이 돕니다.
+n_dc02,1,기억을 더듬어 다시 쓴다,50,Doctrine+3 Health-2 Mentality-1,기억을 쥐어짜 일부를 복원합니다.,Doctrine-5 Mentality-2,잘못된 구절이 뒤섞여 교리가 어긋납니다.
+n_dc02,2,남은 부분만 정리한다,70,Doctrine+1,남은 문장만 추려 짧은 교리로 만듭니다.,Doctrine-3 FollowerFaith-3,추린 문장이 앞뒤가 안 맞아 흩어집니다.
+n_dc02,3,신도들의 기억을 모은다,55,Doctrine+3 FollowerFaith+1,신도들이 외운 구절을 모아 겨우 복원합니다.,FollowerFaith-6 Authority-3,신도들의 기억이 제각각이라 말다툼이 일어납니다.
+n_cm01,1,의식을 다시 시도한다,45,Communion+1 Health-2,두 번째 시도 끝에 희미한 기척을 느낍니다.,Health-3 Mentality-2 LeaderFaith-5,거듭된 실패에 머리가 어지럽습니다.
+n_cm01,2,접신이 이루어진 척한다,55,FollowerFaith+3 Integrity-2 LeaderFaith-5,그럴듯한 연기에 신도들이 속아 넘어갑니다.,FollowerFaith-10 Authority-8,어색한 연기를 신도가 눈치채고 수군댑니다.
+n_cm01,3,의식을 멈추고 솔직히 말한다,60,FollowerFaith-3 Authority-3,솔직한 고백에 신도들이 말을 잃습니다.,FollowerFaith-8 Followers-2,고백이 무력하게 들려 몇몇이 믿음을 거둡니다.
+n_cm02,1,불안을 누르고 의식을 끝낸다,50,LeaderFaith-3 Mentality-2,떨리는 손으로 의식을 마칩니다.,LeaderFaith-8 Health-3 Mentality-3,의식을 이어 가다 비명을 지르며 쓰러집니다.
+n_cm02,2,신도들을 불러 곁에 앉힌다,65,FollowerFaith-2 Authority-3,신도들 곁에서 불안이 조금 잦아듭니다.,Authority-10 FollowerFaith-5,당황한 모습을 신도들이 보고 말았습니다.
+n_cm02,3,밤새 불을 켜 두고 잠을 설친다,75,Health-2 LeaderFaith-3,불빛 아래서 날을 샙니다.,Health-5 LeaderFaith-5,잠을 못 자 며칠을 앓습니다.
+n_rp01,1,직접 지운다,70,Reputation-2 Health-1,직접 지우는 모습에 이웃 몇이 안쓰럽게 쳐다봅니다.,Reputation-6 Health-2,지워도 다음 날 다시 쓰여 헛수고가 됩니다.
+n_rp01,2,범인을 찾겠다고 나선다,40,Reputation-3 Authority+2,범인을 찾아 사과를 받지만 이웃의 불신은 가시지 않습니다.,Reputation-12 Followers-2,엉뚱한 이웃을 의심해 불신이 커집니다.
+n_rp01,3,무시하고 지나간다,60,Reputation-5,무시하자 낙서가 더 번지진 않습니다.,Reputation-12,낙서가 번져 교단 이름이 동네 골목마다 적힙니다.
+n_rp02,1,성실히 조사에 응한다,60,Reputation-3,경찰이 아무 문제가 없음을 확인하고 돌아갑니다.,Reputation-8 FollowerFaith-8,조사가 길어져 신도들이 불안해합니다.
+n_rp02,2,신도들을 불러 항의한다,40,Reputation-8 FollowerFaith+3,신도들의 기세에 경찰이 물러서지만 인상은 나빠집니다.,Reputation-15 Followers-3,대치가 소란으로 번져 신문에 오르내립니다.
+n_rp02,3,변호사를 선임한다,55,Offerings-10 Reputation-2,변호사 덕에 조사는 끝나지만 비용이 듭니다.,Offerings-15 Reputation-8,비용만 들고 조사가 계속됩니다.

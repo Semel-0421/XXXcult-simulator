@@ -4,6 +4,8 @@ public class GameMainUI : MonoBehaviour
 {
     [SerializeField] StatBarUI[] statBars;
     [SerializeField] GameObject pausePanel;
+    [SerializeField] SaveSlotWindow saveWindow;
+    [SerializeField] ActionBar actionBar;
     [SerializeField] Texture2D cursorTexture;
     [SerializeField] Vector2 cursorHotspot = new(1, 1); // 검날 끝
 
@@ -17,10 +19,24 @@ public class GameMainUI : MonoBehaviour
 
     void OnDestroy() => Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
-    public void Pause() { pausePanel.SetActive(true); Time.timeScale = 0; }
-    public void Resume() { pausePanel.SetActive(false); Time.timeScale = 1; }
-    public void OpenSettings() { /* 추후 설정 화면 연결 */ }
-    public void OpenAchievements() { /* 추후 업적 화면 연결 */ }
+    public void Pause()
+    {
+        if (!pausePanel.activeSelf) AudioManager.MenuOpened();
+        pausePanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        if (pausePanel.activeSelf) AudioManager.MenuClosed();
+        pausePanel.SetActive(false);
+        Time.timeScale = 1;
+    }
+    // 행동을 고르는 시점에만 저장할 수 있다 (질문·결과 연출 중에는 불러오기만)
+    public void OpenSaves() => saveWindow.Open(actionBar != null && actionBar.CanAct);
+
+    public void OpenSettings() => OptionsWindow.Open();
+    public void OpenAchievements() => AchievementWindow.Open();
 
     public void ExitToTitle()
     {

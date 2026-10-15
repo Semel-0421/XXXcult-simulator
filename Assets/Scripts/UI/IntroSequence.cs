@@ -17,6 +17,12 @@ public class IntroSequence : MonoBehaviour
 
     IEnumerator Start()
     {
+        if (GameSession.ConsumeResume())
+        {
+            ShowResumed();
+            yield break;
+        }
+
         blackOverlay.alpha = 1;
         blackOverlay.blocksRaycasts = true;
         promptGroup.alpha = inputGroup.alpha = panelGroup.alpha = questionGroup.alpha = 0;
@@ -71,6 +77,18 @@ public class IntroSequence : MonoBehaviour
             case "2": case "여": case "여성": case "female": gender = Gender.Female; return true;
             default: return false;
         }
+    }
+
+    // 불러온 판: 이름·성별 입력과 첫 질문을 건너뛰고 저장 시점으로 이어간다
+    void ShowResumed()
+    {
+        blackOverlay.alpha = 0;
+        blackOverlay.blocksRaycasts = false;
+        promptGroup.alpha = inputGroup.alpha = 0;
+        inputGroup.interactable = false;
+        panelGroup.alpha = questionGroup.alpha = 1;
+        statPanel.Show(GameSession.Personal);
+        if (!GameSession.CultFounded) lifeFlow.Resume();
     }
 
     void RevealPanels()

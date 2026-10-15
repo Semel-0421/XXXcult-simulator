@@ -5,6 +5,7 @@ public class StartScreenController : MonoBehaviour
 {
     [SerializeField] CanvasGroup[] menuButtons;
     [SerializeField] GameObject settingsPanel;
+    [SerializeField] SaveSlotWindow saveWindow;
     [SerializeField] float fadeDuration = 0.3f;
 
     IEnumerator Start()
@@ -18,14 +19,24 @@ public class StartScreenController : MonoBehaviour
         }
     }
 
-    public void OpenSettings() => settingsPanel.SetActive(true);
-    public void CloseSettings() => settingsPanel.SetActive(false);
+    public void OpenSaves() => saveWindow.Open(false);
+    public void OpenAchievements() => AchievementWindow.Open();
+    // 옵션은 타이틀과 게임 중이 같은 창(언어·음량)을 쓴다
+    public void OpenSettings() => OptionsWindow.Open();
+
+    public void CloseSettings()
+    {
+        if (settingsPanel.activeSelf) AudioManager.MenuClosed();
+        settingsPanel.SetActive(false);
+    }
     public void SetEnglish() => Lang.Set(false);
     public void SetKorean() => Lang.Set(true);
 
     public void NewGame()
     {
         GameSession.StartNew();
+        Profile.Count("runs");
+        Achievements.ApplyStartRewards(GameSession.Personal);
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameMain");
     }
 
