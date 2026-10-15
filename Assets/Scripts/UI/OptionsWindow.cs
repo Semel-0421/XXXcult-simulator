@@ -12,7 +12,8 @@ public static class OptionsWindow
     static TMP_Text titleLabel, closeLabel, musicLabel, sfxLabel, languageLabel, musicValue, sfxValue;
     static TMP_Text keyLabel, resetKeysLabel, aspectLabel, aspectValue;
     static readonly TMP_Text[] keyButtonLabels = new TMP_Text[Keybinds.ActionCount];
-    static Button korean, english, aspect, resetKeysButton;
+    static TMP_Text windowLabel, windowValue;
+    static Button korean, english, aspect, window, resetKeysButton;
 
     public static void Open()
     {
@@ -74,6 +75,13 @@ public static class OptionsWindow
             AspectFit.ApplyAll();
             Refresh();
         });
+
+        // 창모드 / 전체화면 (F11과 같은 동작)
+        var windowRow = Row(content, font, out windowLabel);
+        window = RightButton(windowRow, font, "WindowMode", 0, 200, out windowValue);
+        window.onClick.AddListener(WindowMode.Toggle);
+        WindowMode.Changed -= Refresh;
+        WindowMode.Changed += Refresh;
 
         // 배경음악
         var musicRow = Row(content, font, out musicLabel);
@@ -147,6 +155,9 @@ public static class OptionsWindow
         resetKeysLabel.text = Lang.Get("key_reset");
         aspectLabel.text = Lang.Get("opt_aspect");
         aspectValue.text = Lang.Get("aspect_" + AspectFit.Mode.Replace(":", "_"));
+        windowLabel.text = Lang.Get("opt_window");
+        windowValue.text = Lang.Get(WindowMode.Windowed ? "window_on" : "window_off");
+        window.interactable = WindowMode.Supported;
         musicValue.text = Percent(AudioManager.MusicVolume);
         sfxValue.text = Percent(AudioManager.SfxVolume);
     }
