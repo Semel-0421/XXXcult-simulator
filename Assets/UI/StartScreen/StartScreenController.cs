@@ -26,7 +26,7 @@ public class StartScreenController : MonoBehaviour
 
     public void CloseSettings()
     {
-        if (settingsPanel.activeSelf) AudioManager.MenuClosed();
+        if (settingsPanel.activeSelf) Menus.Closed();
         settingsPanel.SetActive(false);
     }
     public void SetEnglish() => Lang.Set(false);

@@ -2,10 +2,12 @@ using System;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// 질문 표시창 + 번호 입력창. 선택지는 1, 2, 3... 번호가 붙어 표시되고 엔터/확인 버튼으로 고른다.
-public class QuestionPanel : MonoBehaviour
+// 질문 표시창 + 번호 입력창. 선택지는 1, 2, 3... 번호가 붙어 표시되고 고르는 방법은 네 가지다:
+// 숫자 키(윗줄·키패드), 번호 입력 후 엔터/확인, 선택지 글자 클릭. 키보드·마우스만으로 고를 수 있다.
+public class QuestionPanel : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] TMP_Text displayText;
     [SerializeField] TMP_InputField numberInput;
@@ -15,9 +17,18 @@ public class QuestionPanel : MonoBehaviour
     Action<string> textAnswer;
     public event Action<int> Chosen; // 1부터 시작하는 선택 번호
 
+    public const string MutedColor = "#9A8FB0";
+
+    // 본문 앞에 직전 상황(행동 결과 등)을 흐린 글씨로 붙인다
+    public static string WithPreface(string preface, string body) =>
+        string.IsNullOrEmpty(preface) ? body : $"<color={MutedColor}>{preface}</color>\n\n{body}";
+
+    bool AcceptsChoice => choiceCount > 0 && textAnswer == null && numberInput.interactable;
+
     void Awake()
     {
         numberInput.onSubmit.AddListener(Submit);
+        displayText.raycastTarget = true; // 선택지 글자 클릭을 받기 위해
         confirmButton.onClick.AddListener(() => Submit(numberInput.text));
         SetInputActive(false);
     }
@@ -27,7 +38,7 @@ public class QuestionPanel : MonoBehaviour
         textAnswer = null;
         SetInputMode(TMP_InputField.ContentType.IntegerNumber, 3, "choice_hint");
         choiceCount = choices.Length;
-        var numbered = choices.Select((choice, i) => $"{i + 1}. {choice}");
+        var numbered = choices.Select((choice, i) => $"{i + 1}. <link=\"{i + 1}\">{choice}</link>");
         displayText.text = choiceCount == 0 ? question : $"{question}\n\n{string.Join("\n", numbered)}";
         numberInput.text = "";
         SetInputActive(choiceCount > 0);
@@ -63,10 +74,38 @@ public class QuestionPanel : MonoBehaviour
             numberInput.ActivateInputField();
             return;
         }
+        Choose(number);
+    }
+
+    void Choose(int number)
+    {
         numberInput.text = "";
         SetInputActive(false);
         AudioManager.PlaySfx("click");
         Chosen?.Invoke(number);
+    }
+
+    // 숫자 키로 바로 고른다
+    void Update()
+    {
+        if (!AcceptsChoice || !Keybinds.Listening) return;
+        for (int n = 1; n <= choiceCount && n <= 9; n++)
+        {
+            if (!Keybinds.NumberPressed(n)) continue;
+            Keybinds.Consume();
+            Choose(n);
+            return;
+        }
+    }
+
+    // 선택지 글자를 클릭하면 그 선택지를 고른다
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (!AcceptsChoice) return;
+        var index = TMP_TextUtilities.FindIntersectingLink(displayText, eventData.position, eventData.pressEventCamera);
+        if (index < 0) return;
+        var info = displayText.textInfo.linkInfo[index];
+        if (int.TryParse(info.GetLinkID(), out var number) && number >= 1 && number <= choiceCount) Choose(number);
     }
 
     void SubmitText(string typed)

@@ -18,7 +18,7 @@ public class DoctrineScreen : MonoBehaviour
     public void Open()
     {
         tutorial.End();
-        if (!window.activeSelf) AudioManager.MenuOpened();
+        if (!window.activeSelf) Menus.Opened();
         window.SetActive(true);
         foreach (var node in nodes) node.Bind(Tree);
         if (treeView == null)
@@ -37,7 +37,7 @@ public class DoctrineScreen : MonoBehaviour
     {
         if (!closeButton.interactable) return;
         Tree.Changed -= OnChanged;
-        if (window.activeSelf) AudioManager.MenuClosed();
+        if (window.activeSelf) Menus.Closed();
         window.SetActive(false);
     }
 

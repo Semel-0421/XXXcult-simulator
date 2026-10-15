@@ -13,8 +13,7 @@ public class LifeFlow : MonoBehaviour
     public void Begin()
     {
         Subscribe();
-        var first = LifeEvent.Pick(LifeEvents.All, GameSession.Age.Years, GameSession.UsedEvents, GameSession.Rng);
-        questionRunner.Run(first.Question);
+        questionRunner.Run(Turns.NextLifeEvent().Question);
     }
 
     // 불러오기: 저장은 행동 선택 시점에만 되므로 행동 안내부터 이어진다
@@ -30,17 +29,19 @@ public class LifeFlow : MonoBehaviour
         actionBar.LifeChosen += OnActionChosen;
     }
 
-    void ShowActionPrompt(string preface = null)
-    {
-        var prompt = string.Format(Lang.Get("life_action_prompt"), GameSession.Age.Years);
-        questionPanel.Show(string.IsNullOrEmpty(preface) ? prompt : $"<color=#9A8FB0>{preface}</color>\n\n{prompt}");
-        actionBar.Show(ActionBar.Mode.Life);
-    }
-
-    void OnDestroy()
+    void Unsubscribe()
     {
         questionRunner.Answered -= OnEventAnswered;
         actionBar.LifeChosen -= OnActionChosen;
+    }
+
+    void OnDestroy() => Unsubscribe();
+
+    void ShowActionPrompt(string preface = null)
+    {
+        var prompt = $"{string.Format(Lang.Get("life_action_prompt"), GameSession.Age.Years)}\n{ActionBar.Legend(ActionBar.Mode.Life)}";
+        questionPanel.Show(QuestionPanel.WithPreface(preface, prompt));
+        actionBar.Show(ActionBar.Mode.Life);
     }
 
     void OnEventAnswered(string resultText)
@@ -52,25 +53,18 @@ public class LifeFlow : MonoBehaviour
     void OnActionChosen(LifeAction action)
     {
         actionBar.SetInteractable(false);
-        var success = LifeActions.Roll(GameSession.Personal, action, GameSession.Rng);
-        LifeActions.Apply(GameSession.Personal, action, success);
-        GameSession.Count($"act_{action}");
-        GameSession.Count("life_acts");
-        GameSession.Count(success ? "act_ok" : "act_fail");
-        GameSession.AdvanceTurn();
+        var success = Turns.Life(action);
         resultView.Play(action.ToString(), success, () =>
         {
             if (TryFoundCult()) return;
-            var next = LifeEvent.Pick(LifeEvents.All, GameSession.Age.Years, GameSession.UsedEvents, GameSession.Rng);
-            questionRunner.Run(next.Question, Lang.Get($"life_{(success ? "ok" : "fail")}_{action}"));
+            questionRunner.Run(Turns.NextLifeEvent().Question, Lang.Get($"life_{(success ? "ok" : "fail")}_{action}"));
         });
     }
 
     bool TryFoundCult()
     {
         if (GameSession.Age.Turns < FoundingTurn) return false;
-        questionRunner.Answered -= OnEventAnswered;
-        actionBar.LifeChosen -= OnActionChosen;
+        Unsubscribe();
         actionBar.Show(ActionBar.Mode.Hidden);
         questionPanel.AskText(Lang.Get("cult_name_prompt"), "cult_name_hint", cultName =>
         {

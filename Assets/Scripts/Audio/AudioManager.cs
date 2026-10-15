@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 // 배경음악과 효과음을 맡는다. 게임 시작 시 스스로 만들어져 장면이 바뀌어도 남는다.
 //  - 메인 화면: menu 음악 / 게임 중: 명망(사회적 시선) 단계에 맞는 음악, 단계가 바뀌면 크로스페이드
-//  - 옵션·저장·업적·일시정지 같은 메뉴가 열려 있는 동안은 음악을 작게 낮춘다
+//  - 메뉴가 열려 있는 동안(Menus)은 음악을 작게 낮춘다
 //  - 파일이 없으면 조용히 건너뛴다 (파일 규칙은 MusicKeys 참고)
 public class AudioManager : MonoBehaviour
 {
@@ -16,7 +16,6 @@ public class AudioManager : MonoBehaviour
     const string MusicPref = "volume_music", SfxPref = "volume_sfx";
 
     static AudioManager instance;
-    static int menuDepth;
     static readonly Dictionary<string, AudioClip> Cache = new();
 
     public static float MusicVolume
@@ -33,12 +32,6 @@ public class AudioManager : MonoBehaviour
 
     // 슬라이더를 끌 때마다 쓰지 않도록, 옵션 창을 닫을 때 한 번 저장한다
     public static void SaveVolumes() => PlayerPrefs.Save();
-
-    public static bool MenuOpen => menuDepth > 0;
-
-    // 메뉴 화면이 열리고 닫힐 때 짝으로 부른다. 여러 메뉴가 겹쳐도 모두 닫혀야 원래 크기로 돌아온다.
-    public static void MenuOpened() => menuDepth++;
-    public static void MenuClosed() => menuDepth = Mathf.Max(0, menuDepth - 1);
 
     public static void PlaySfx(string key)
     {
@@ -78,19 +71,14 @@ public class AudioManager : MonoBehaviour
         sfx.playOnAwake = false;
     }
 
-    void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
-    void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
     void OnDestroy() { if (instance == this) instance = null; }
-
-    // 장면이 바뀌면 열려 있던 메뉴는 모두 사라진 것이다
-    static void OnSceneLoaded(Scene scene, LoadSceneMode mode) => menuDepth = 0;
 
     void Update()
     {
         var dt = Time.unscaledDeltaTime;
         UpdateWantedTrack(dt);
 
-        duck = Mathf.MoveTowards(duck, MenuOpen ? MenuDuckFactor : 1f, dt * (1f - MenuDuckFactor) / 0.5f);
+        duck = Mathf.MoveTowards(duck, Menus.AnyOpen ? MenuDuckFactor : 1f, dt * (1f - MenuDuckFactor) / 0.5f);
         for (int i = 0; i < music.Length; i++)
         {
             var target = i == active ? 1f : 0f;

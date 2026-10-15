@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // 교단 창설 후 진행: 교단 행동을 고르면 효과 반영 후 1턴(1분기)이 지나고,
-// 조건 이벤트가 있으면 먼저, 없으면 60% 확률로 이벤트가 이어진다. 이벤트는 턴을 쓰지 않는다.
+// 조건 이벤트가 있으면 먼저, 없으면 부정적·확률 이벤트가 이어질 수 있다. 이벤트는 턴을 쓰지 않는다.
 public class CultFlow : MonoBehaviour
 {
     [SerializeField] QuestionRunner questionRunner;
@@ -36,31 +36,18 @@ public class CultFlow : MonoBehaviour
     void OnActionChosen(CultAction action)
     {
         actionBar.SetInteractable(false);
-        var cult = GameSession.Cult;
-        var success = CultActions.Roll(cult, GameSession.Personal.Talents, action, GameSession.Rng);
-        CultActions.Apply(cult, GameSession.Personal, action, success);
-        GameSession.Count($"act_{CultActions.Key(action)}");
-        GameSession.Count("cult_acts");
-        GameSession.Count(success ? "act_ok" : "act_fail");
-        SocialStanding.ApplyTurn(cult); // 사회적 시선에 따른 견제/지원
-        Misfortune.ApplyTurn(cult, GameSession.Misfortune, Misfortune.TotalResistance(cult)); // 쌓인 불운만큼 쇠퇴
-        GameSession.AdvanceTurn();
+        var success = Turns.Cult(action);
         var summary = Lang.Get($"cult_{(success ? "done" : "fail")}_{action}");
 
         resultView.Play(CultActions.Key(action), success, () =>
         {
             if (TryDissolve()) return;
-            var next = CultEvent.FindTriggered(CultEvents.All, cult, GameSession.UsedEvents)
-                       ?? CultEvent.RollNegative(CultEvents.All, cult, GameSession.UsedEvents, GameSession.Rng, GameSession.CultTime.Years + 1)
-                       ?? CultEvent.RollRandom(CultEvents.All, cult, GameSession.UsedEvents, GameSession.Rng);
+            var next = Turns.NextCultEvent();
             if (next == null) { actionBar.SetInteractable(true); ShowPrompt(summary); return; }
 
-            var preface = summary;
-            if (next.IsNegative)
-            {
-                GameSession.AddMisfortune();
-                preface = $"{summary}\n<color=#DC5050>{string.Format(Lang.Get("misfortune_struck"), GameSession.Misfortune)}</color>";
-            }
+            var preface = next.IsNegative
+                ? $"{summary}\n<color=#DC5050>{string.Format(Lang.Get("misfortune_struck"), GameSession.Misfortune)}</color>"
+                : summary;
             questionRunner.Answered += OnEventAnswered;
             questionRunner.Run(next.Question, preface, advancesTurn: false);
         });
@@ -77,7 +64,7 @@ public class CultFlow : MonoBehaviour
     // 명망이 바닥나면 국가의 명령으로 교단이 해체되며 게임이 끝난다
     bool TryDissolve()
     {
-        if (SocialStanding.Of(GameSession.Cult) != Standing.Dissolved) return false;
+        if (!Turns.CultDissolved) return false;
         actionBar.CultChosen -= OnActionChosen;
         actionBar.Show(ActionBar.Mode.Hidden);
         Profile.Count("dissolved");
@@ -90,7 +77,7 @@ public class CultFlow : MonoBehaviour
     void ShowPrompt(string preface)
     {
         var clock = GameSession.CultTime;
-        var prompt = string.Format(Lang.Get("cult_action_prompt"), clock.Years, clock.Quarter);
-        questionPanel.Show(string.IsNullOrEmpty(preface) ? prompt : $"<color=#9A8FB0>{preface}</color>\n\n{prompt}");
+        var prompt = $"{string.Format(Lang.Get("cult_action_prompt"), clock.Years, clock.Quarter)}\n{ActionBar.Legend(ActionBar.Mode.Cult)}";
+        questionPanel.Show(QuestionPanel.WithPreface(preface, prompt));
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 
 // 질문창 아래 행동 버튼 5개. 교단 창설 전에는 생활 행동, 교리 선포 후에는 교단 행동을 보여준다.
@@ -39,9 +40,15 @@ public class ActionBar : MonoBehaviour
         if (Current != Mode.Cult && tree.IsMax(DoctrineSkill.Declaration)) Show(Mode.Cult);
     }
 
+    static string[] KeysOf(Mode mode) => mode == Mode.Cult ? CultKeys : LifeKeys;
+
+    // 행동 안내 아래 붙는 단축키 안내 (예: "[1] 운동   [2] 명상 ...")
+    public static string Legend(Mode mode) =>
+        $"<size=75%><color={QuestionPanel.MutedColor}>{Keybinds.Legend(KeysOf(mode).Select(Lang.Get).ToList())}</color></size>";
+
     public void Show(Mode mode)
     {
-        var keys = mode == Mode.Cult ? CultKeys : LifeKeys;
+        var keys = KeysOf(mode);
         for (int i = 0; i < labels.Length; i++) labels[i].SetKey(keys[i]);
         var wasHidden = Current == Mode.Hidden;
         Current = mode;
@@ -51,6 +58,19 @@ public class ActionBar : MonoBehaviour
     }
 
     public void SetInteractable(bool active) => group.interactable = group.blocksRaycasts = active && Current != Mode.Hidden;
+
+    // 단축키(기본 1~5)로 행동을 고른다. 행동을 고를 수 있고 메뉴가 닫혀 있을 때만 반응한다.
+    void Update()
+    {
+        if (!CanAct || !Keybinds.Listening) return;
+        for (int i = 0; i < Keybinds.ActionCount; i++)
+        {
+            if (!Keybinds.WasPressed(Keybinds.Get(i))) continue;
+            Keybinds.Consume();
+            Perform(i);
+            return;
+        }
+    }
 
     // 버튼 OnClick에서 호출 (0~4)
     public void Perform(int index)
