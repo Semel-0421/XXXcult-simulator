@@ -114,7 +114,7 @@ public class GiftedInfoTests
     {
         var orator = GiftedCatalog.All.First(g => g.Name == "웅변가");
         var lines = string.Join("\n", GiftedInfo.EffectLines(orator));
-        StringAssert.Contains("+3%", lines);
+        StringAssert.Contains("+1.5%", lines);
         StringAssert.Contains("+10%p", lines);
     }
 

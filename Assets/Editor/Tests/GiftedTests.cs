@@ -15,11 +15,11 @@ public class GiftedTests
     public void Apply_SumsOwnedGiftedPercent()
     {
         var personal = new PersonalStatus();
-        GiftedGranter.Grant(personal.Talents, "no.1"); // 재산 +5%
+        GiftedGranter.Grant(personal.Talents, "no.1"); // 재산 +2.5%
 
         GiftedEffects.Apply(personal, PersonalStatId.Wealth, 40);
 
-        Assert.AreEqual(42, personal[PersonalStatId.Wealth].Value);
+        Assert.AreEqual(41,personal[PersonalStatId.Wealth].Value);
     }
 
     [Test]

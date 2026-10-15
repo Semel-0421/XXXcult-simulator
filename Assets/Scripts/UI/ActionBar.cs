@@ -15,7 +15,7 @@ public class ActionBar : MonoBehaviour
     public event Action<CultAction> CultChosen;
 
     public Mode Current { get; private set; } = Mode.Hidden;
-    public bool CanAct => Current != Mode.Hidden && group.interactable; // 행동 선택을 기다리는 중 (저장 가능한 시점)
+    public bool CanAct => Current != Mode.Hidden && group.interactable && string.IsNullOrEmpty(GameSession.PendingEventId); // 행동 선택을 기다리는 중
     LocalizedText[] labels;
     DoctrineTree tree;
 
@@ -44,7 +44,7 @@ public class ActionBar : MonoBehaviour
 
     // 행동 안내 아래 붙는 단축키 안내 (예: "[1] 운동   [2] 명상 ...")
     public static string Legend(Mode mode) =>
-        $"<size=75%><color={QuestionPanel.MutedColor}>{Keybinds.Legend(KeysOf(mode).Select(Lang.Get).ToList())}</color></size>";
+        Keybinds.Legend(KeysOf(mode).Select(Lang.Get).ToList()); // 눌러서 고를 수 있는 글자라 작게 줄이지 않는다
 
     public void Show(Mode mode)
     {
@@ -75,7 +75,7 @@ public class ActionBar : MonoBehaviour
     // 버튼 OnClick에서 호출 (0~4)
     public void Perform(int index)
     {
-        if (!group.interactable) return; // 이벤트 진행 중 등 잠긴 상태에서는 무시
+        if (!CanAct) return; // 이벤트 진행 중 등 잠긴 상태에서는 무시
         AudioManager.PlaySfx("click");
         if (Current == Mode.Life) LifeChosen?.Invoke((LifeAction)index);
         else if (Current == Mode.Cult) CultChosen?.Invoke((CultAction)index);

@@ -25,7 +25,7 @@ public class SaveSlotWindow : MonoBehaviour
     int pendingSlot;
     Pending pending;
 
-    // canSave: 저장은 행동을 고르는 시점에만 허용 (타이틀에서는 불러오기만)
+    // canSave: 게임을 시작한 뒤 엔딩 전에만 허용 (타이틀에서는 불러오기만)
     public void Open(bool allowSave)
     {
         if (root == null) Build();

@@ -127,11 +127,17 @@ public class DoctrineTree
         return other != null && LevelOf(other) > 0;
     }
 
+    // 회차가 낮아 최종 스킬(10단계)을 아직 배울 수 없음 (Progress.ApplyRun이 정한다)
+    public bool FinalLocked { get; set; }
+
+    public bool IsFinalLocked(DoctrineSkill skill) => skill.IsFinal && FinalLocked;
+
     // 스킬트리 노드에서 배우기. 최종 스킬은 1레벨까지만 (2레벨은 중앙 최종 업그레이드)
     public bool CanLearn(DoctrineSkill skill, int availablePoints)
     {
         var level = LevelOf(skill);
         if (skill.IsFinal ? level >= 1 : IsMax(skill)) return false;
+        if (IsFinalTaken(skill) || IsFinalLocked(skill)) return false;
         return PrerequisitesMet(skill) && availablePoints >= skill.CostForLevel(level + 1);
     }
 
@@ -158,9 +164,12 @@ public class DoctrineTree
         }
     }
 
+    // 최종 스킬은 한 판에 하나만 고를 수 있다: 이미 다른 최종 스킬을 골랐는가
+    public bool IsFinalTaken(DoctrineSkill skill) => skill.IsFinal && EmblemId != null && EmblemId != skill.Id;
+
     public bool LevelUp(DoctrineSkill skill)
     {
-        if (IsMax(skill)) return false;
+        if (IsMax(skill) || IsFinalTaken(skill)) return false;
         levels[skill.Id] = LevelOf(skill) + 1;
         if (skill.IsFinal && levels[skill.Id] == 1) EmblemId = skill.Id; // 새 최종 스킬이 중앙 문양을 대체
         effectCache = null;
@@ -213,13 +222,13 @@ public class DoctrineTree
     };
 }
 
-// 교리 포인트: 교단 운영 1년마다 1, 달성한 업적마다 1, 교리 레벨마다 2. 교리를 배우면 단계에 따라 소모된다.
+// 교리 포인트: 교단 운영 1년마다 1, 달성한 업적 2개마다 1, 교리 레벨마다 2. 교리를 배우면 단계에 따라 소모된다.
 public static class DoctrinePoints
 {
-    public const int PerCultYear = 1, PerAchievement = 1, PerDoctrineLevel = 2;
+    public const int PerCultYear = 1, AchievementsPerPoint = 2, PerDoctrineLevel = 2;
 
     public static int Earned(int cultYears, int achievements, int doctrineLevel) =>
-        cultYears * PerCultYear + achievements * PerAchievement + doctrineLevel * PerDoctrineLevel;
+        cultYears * PerCultYear + achievements / AchievementsPerPoint + doctrineLevel * PerDoctrineLevel;
 
     public static int Earned(CultStatus cult, GameClock cultTime, int achievements) =>
         Earned(cultTime.Years, achievements, DoctrineLevel.Of(cult[StatId.Doctrine].Value));

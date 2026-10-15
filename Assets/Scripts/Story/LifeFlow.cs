@@ -13,14 +13,33 @@ public class LifeFlow : MonoBehaviour
     public void Begin()
     {
         Subscribe();
-        questionRunner.Run(Turns.NextLifeEvent().Question);
+        var first = Turns.NextLifeEvent();
+        questionRunner.Run(first.Question, null, true, first.Id);
     }
 
-    // 불러오기: 저장은 행동 선택 시점에만 되므로 행동 안내부터 이어진다
+    // 불러오기: 저장한 시점에 이벤트가 떠 있었다면 그 이벤트부터, 아니면 행동 안내부터 이어진다
     public void Resume()
     {
         Subscribe();
+        if (TryDie() || TryFoundCult()) return; // 창설 시점에서 저장한 경우 교단 이름 입력부터
+        if (ResumePending()) return;
         ShowActionPrompt();
+    }
+
+    bool ResumePending()
+    {
+        var id = GameSession.PendingEventId;
+        if (string.IsNullOrEmpty(id)) return false;
+        foreach (var e in LifeEvents.All)
+        {
+            if (e.Id != id) continue;
+            actionBar.Show(ActionBar.Mode.Life);
+            actionBar.SetInteractable(false);
+            questionRunner.Run(e.Question, null, GameSession.PendingAdvancesTurn, id);
+            return true;
+        }
+        GameSession.ClearPending();
+        return false;
     }
 
     void Subscribe()
@@ -46,7 +65,7 @@ public class LifeFlow : MonoBehaviour
 
     void OnEventAnswered(string resultText)
     {
-        if (TryFoundCult()) return;
+        if (TryDie() || TryFoundCult()) return;
         ShowActionPrompt(resultText);
     }
 
@@ -56,9 +75,23 @@ public class LifeFlow : MonoBehaviour
         var success = Turns.Life(action);
         resultView.Play(action.ToString(), success, () =>
         {
-            if (TryFoundCult()) return;
-            questionRunner.Run(Turns.NextLifeEvent().Question, Lang.Get($"life_{(success ? "ok" : "fail")}_{action}"));
+            if (TryDie() || TryFoundCult()) return;
+            var next = Turns.NextLifeEvent();
+            questionRunner.Run(next.Question, Lang.Get($"life_{(success ? "ok" : "fail")}_{action}"), true, next.Id);
         });
+    }
+
+    // 연령별 사망률로 교단을 세우기 전에 세상을 떠나면 요절 엔딩
+    bool TryDie()
+    {
+        var forced = Progress.ForcedEnding();
+        if (forced == null) return false;
+        Unsubscribe();
+        actionBar.Show(ActionBar.Mode.Hidden);
+        questionRunner.Cancel();
+        Progress.Reach(forced);
+        EndingScreen.Show(questionPanel, Progress.TextOf(forced));
+        return true;
     }
 
     bool TryFoundCult()

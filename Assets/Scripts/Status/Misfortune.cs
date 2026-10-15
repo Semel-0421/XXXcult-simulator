@@ -43,20 +43,20 @@ public static class Misfortune
     }
 }
 
-// 계승: 게임 오버(교단 해체)와 업적이 쌓일수록 다음 판들이 강해진다. 지금은 불운 저항으로 나타난다.
-//  - 교단 해체 1번 = 1단계, 업적 10개 = 1단계
+// 계승: 마친 판(어떤 엔딩이든)과 업적이 쌓일수록 다음 판들이 강해진다. 지금은 불운 저항으로 나타난다.
+//  - 엔딩 1번 = 1단계, 업적 20개 = 1단계
 //  - 단계당 불운 저항 8% (최대 80%)
 public static class Legacy
 {
-    public const int AchievementsPerLevel = 10;
+    public const int AchievementsPerLevel = 20;
     public const float ResistancePerLevel = 0.08f;
     public const float MaxResistance = 0.8f;
 
-    public static int LevelFor(int dissolutions, int achievements) => dissolutions + achievements / AchievementsPerLevel;
+    public static int LevelFor(int endings, int achievements) => endings + achievements / AchievementsPerLevel;
 
     public static float ResistanceFor(int level) => Math.Min(MaxResistance, level * ResistancePerLevel);
 
-    public static int Level => LevelFor(Profile.CountOf("dissolved"), Profile.UnlockedCount);
+    public static int Level => LevelFor(Endings.ReachedCount, Profile.UnlockedCount);
     public static float Resistance => ResistanceFor(Level);
 
     public static string Describe() => string.Format(Lang.Get("legacy_info"), Level, (int)Math.Round(Resistance * 100));

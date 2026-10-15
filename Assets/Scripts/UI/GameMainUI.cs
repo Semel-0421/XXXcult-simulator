@@ -32,8 +32,8 @@ public class GameMainUI : MonoBehaviour
         pausePanel.SetActive(false);
         Time.timeScale = 1;
     }
-    // 행동을 고르는 시점에만 저장할 수 있다 (질문·결과 연출 중에는 불러오기만)
-    public void OpenSaves() => saveWindow.Open(actionBar != null && actionBar.CanAct);
+    // 인트로가 끝난 뒤 엔딩 전까지 언제든 저장할 수 있다 (이벤트가 떠 있는 상태도 그대로 저장된다)
+    public void OpenSaves() => saveWindow.Open(GameSession.Started && !GameSession.Ended);
 
     public void OpenSettings() => OptionsWindow.Open();
     public void OpenAchievements() => AchievementWindow.Open();

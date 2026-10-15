@@ -12,6 +12,41 @@ public static class GameSession
     public static GameClock CultTime { get; private set; } // 교단 창설 이후 시간
     public static bool CultFounded { get; private set; }
     public static bool Resuming { get; private set; } // 불러온 직후: 씬이 인트로를 건너뛰고 이어서 진행한다
+    public static bool Started { get; private set; }   // 인트로가 끝나 본 진행이 시작됨 (저장 가능)
+    public static bool Ended { get; private set; }     // 엔딩을 봄 (더 저장할 수 없음)
+    public static string PendingEventId { get; private set; }   // 지금 화면에 떠 있는 이벤트 id (없으면 null)
+    public static bool PendingAdvancesTurn { get; private set; } // 그 이벤트에 답하면 1턴이 지나는가
+
+    public static bool Dead { get; private set; }   // 주인공이 세상을 떠남 (연령별 사망률, Mortality)
+    public static int Run { get; private set; }     // 이번 판의 회차 (Progress.BeginRun이 정함). 0이면 회차 제한 없음
+
+    public static void SetRun(int run) => Run = run;
+
+    public static string FirstExtremeId { get; private set; } // 가장 먼저 0/최대에 이른 교단 스탯의 엔딩 id (없으면 null)
+
+    // 처음 한 번만 기록한다. 25년이 지나도 최종 스킬이 없을 때 이 스탯의 엔딩이 나온다.
+    public static void RecordExtreme(string endingId)
+    {
+        if (FirstExtremeId == null) FirstExtremeId = endingId;
+    }
+
+    public static int RaisedMask { get; private set; } // 한 번이라도 0을 넘은 적이 있는 교단 스탯 (StatId 비트). 시작값 0은 바닥이 아니다.
+
+    public static void MarkRaised(StatId id) => RaisedMask |= 1 << (int)id;
+
+    public static int PersonalRaisedMask { get; private set; } // 한 번이라도 0을 넘은 개인 스탯 (PersonalStatId 비트). 휴식 판정용
+    public static void MergePersonalRaised(int mask) => PersonalRaisedMask |= mask;
+
+    public static void MarkStarted() => Started = true;
+    public static void MarkEnded() => Ended = true;
+
+    public static void SetPending(string eventId, bool advancesTurn)
+    {
+        PendingEventId = eventId;
+        PendingAdvancesTurn = advancesTurn;
+    }
+
+    public static void ClearPending() => PendingEventId = null;
     public static HashSet<string> UsedEvents { get; private set; } // 이미 나온 이벤트 id (생애·교단 공용)
     static Dictionary<string, int> counters;                       // 이번 판의 진행 카운터 (업적 조건용)
 
@@ -42,6 +77,7 @@ public static class GameSession
     {
         Age.Advance();
         if (CultFounded) CultTime.Advance();
+        if (!Dead && Mortality.Dies(Age.Years, Personal.Gender, Rng)) Dead = true; // 분기마다 연령별 사망률
         if (Age.Quarter == 0) GiftedSpecials.ApplyYearly(Personal, Cult, CultFounded); // 해가 바뀔 때
         Achievements.Evaluate();
     }
@@ -64,6 +100,15 @@ public static class GameSession
         counters = new Dictionary<string, int>();
         Misfortune = 0;
         Resuming = false;
+        Started = false;
+        Ended = false;
+        Dead = false;
+        Run = 0;
+        FirstExtremeId = null;
+        RaisedMask = 0;
+        PersonalRaisedMask = 0;
+        PendingEventId = null;
+        PendingAdvancesTurn = false;
     }
 
     // 행동 선택 시점의 진행 상태를 저장 데이터로 만든다
@@ -82,6 +127,13 @@ public static class GameSession
             cultName = Cult.Name,
             misfortune = Misfortune,
             doctrineEmblem = Cult.Doctrines.EmblemId,
+            firstExtreme = FirstExtremeId,
+            statsRaised = RaisedMask,
+            personalRaised = PersonalRaisedMask,
+            pendingEventId = PendingEventId,
+            pendingAdvances = PendingAdvancesTurn,
+            run = Run,
+            dead = Dead,
         };
         foreach (PersonalStatId id in Enum.GetValues(typeof(PersonalStatId)))
             data.personal.Add(new StatEntry(id.ToString(), Personal[id].Value));
@@ -127,6 +179,14 @@ public static class GameSession
         foreach (var e in data.counters) counters[e.key] = e.value;
         Misfortune = Math.Clamp(data.misfortune, 0, global::Misfortune.MaxStacks);
         Resuming = true;
+        Started = true;
+        FirstExtremeId = string.IsNullOrEmpty(data.firstExtreme) ? null : data.firstExtreme;
+        RaisedMask = data.statsRaised;
+        PersonalRaisedMask = data.personalRaised;
+        PendingEventId = string.IsNullOrEmpty(data.pendingEventId) ? null : data.pendingEventId;
+        PendingAdvancesTurn = data.pendingAdvances;
+        Dead = data.dead;
+        Progress.ApplyRun(data.run); // 회차가 없던 옛 저장(0)은 제한 없이 이어 간다
     }
 
     // 인트로가 한 번만 건너뛰도록 플래그를 소비한다

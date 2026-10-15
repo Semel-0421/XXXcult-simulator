@@ -35,7 +35,7 @@ public static class Turns
     public static LifeEvent NextLifeEvent() =>
         LifeEvent.Pick(LifeEvents.All, GameSession.Age.Years, GameSession.UsedEvents, GameSession.Rng);
 
-    // 교단 행동 뒤 이어질 이벤트: 조건 → 부정적 → 확률 순. 없으면 null. 부정적 이벤트면 불운이 한 겹 쌓인다.
+    // 교단 행동 뒤 이어질 이벤트: 조건 → 부정적 → 긍정(무드) → 확률 순. 없으면 null. 부정적 이벤트면 불운이 한 겹 쌓인다.
     public static CultEvent NextCultEvent()
     {
         var cult = GameSession.Cult;
@@ -43,6 +43,7 @@ public static class Turns
         var rng = GameSession.Rng;
         var next = CultEvent.FindTriggered(CultEvents.All, cult, used)
                    ?? CultEvent.RollNegative(CultEvents.All, cult, used, rng, GameSession.CultTime.Years + 1)
+                   ?? CultEvent.RollMood(CultEvents.All, GameSession.Personal, used, rng)
                    ?? CultEvent.RollRandom(CultEvents.All, cult, used, rng);
         if (next != null && next.IsNegative) GameSession.AddMisfortune();
         return next;
@@ -51,7 +52,7 @@ public static class Turns
     // 고른 선택지의 성공/실패를 판정하고 결과의 효과(기프티드 보정 포함)와 기프티드 지급을 반영한다. 시간은 흐르지 않는다.
     public static Outcome Answer(Choice choice)
     {
-        var success = choice.Roll(GameSession.Rng);
+        var success = choice.Roll(GameSession.Rng, GameSession.Personal); // 교단 이벤트는 개인 스탯 보정이 붙는다
         var outcome = choice.Resolve(success);
         GameSession.Count("events");
         GameSession.Count(success ? "choice_ok" : "choice_fail");

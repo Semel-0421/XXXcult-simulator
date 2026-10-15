@@ -57,10 +57,13 @@ public class DoctrineTests
         Assert.AreEqual(2, tree.LevelOf(final));
         Assert.IsFalse(tree.CanUpgradeFinal(99));
 
-        // 다른 가지의 최종 스킬을 배우면 중앙 문양이 그것으로 바뀐다
+        // 최종 스킬은 한 판에 하나만: 다른 가지의 최종 스킬은 배울 수 없고 중앙 문양도 그대로다
         for (int t = 1; t <= 5; t++) tree.LevelUp(DoctrineCatalog.At(DoctrineBranch.Patience, t));
-        for (int t = 6; t <= 10; t++) tree.LevelUp(DoctrineCatalog.At(DoctrineBranch.Patience, t, "B"));
-        Assert.AreEqual(DoctrineCatalog.At(DoctrineBranch.Patience, 10, "B"), tree.Emblem);
+        for (int t = 6; t <= 9; t++) tree.LevelUp(DoctrineCatalog.At(DoctrineBranch.Patience, t, "B"));
+        var other = DoctrineCatalog.At(DoctrineBranch.Patience, 10, "B");
+        Assert.IsFalse(tree.CanLearn(other, 99));
+        Assert.IsFalse(tree.LevelUp(other));
+        Assert.AreEqual(final, tree.Emblem);
     }
 
     [Test]
@@ -88,7 +91,7 @@ public class DoctrineTests
     public void Points_YearsAchievementsAndDoctrineLevel()
     {
         Assert.AreEqual(0, DoctrinePoints.Earned(0, 0, 0));
-        Assert.AreEqual(3 + 5 + 2 * 4, DoctrinePoints.Earned(3, 5, 4));
+        Assert.AreEqual(3 + 5 / 2 + 2 * 4, DoctrinePoints.Earned(3, 5, 4)); // 업적은 2개당 1점
     }
 
     [Test]

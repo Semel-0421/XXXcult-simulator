@@ -35,6 +35,7 @@ public class StartScreenController : MonoBehaviour
     public void NewGame()
     {
         GameSession.StartNew();
+        Progress.BeginRun(Progress.NextRun); // 회차 잠금·시작 보너스
         Profile.Count("runs");
         Achievements.ApplyStartRewards(GameSession.Personal);
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameMain");
