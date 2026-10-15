@@ -18,7 +18,7 @@ public static class AchievementWindow
     const float BaseRowHeight = 76, BaseNameSize = 24, BaseTextSize = 20;
 
     static GameObject root;
-    static TMP_Text titleLabel, hintLabel, closeLabel, rewardsLabel;
+    static TMP_Text titleLabel, hintLabel, closeLabel, rewardsLabel, galleryLabel;
     static Button zoomInButton, zoomOutButton;
     static Row[] rows;
 
@@ -80,6 +80,12 @@ public static class AchievementWindow
             Refresh();
         });
 
+        // 엔딩 도감 열기 (보상 버튼 오른쪽)
+        var gallery = UiKit.MakeButton(panel, font, "EndingGalleryButton", "", 190, 44, out galleryLabel);
+        gallery.image.color = UiSkin.Crimson;
+        UiKit.Anchor((RectTransform)gallery.transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(340, -34), new Vector2(190, 44));
+        gallery.onClick.AddListener(EndingGallery.Open);
+
         // 글씨 확대/축소 (제목 오른쪽 위, 닫기 버튼 왼쪽)
         zoomInButton = UiKit.MakeButton(panel, font, "ZoomIn", "A+", 110, 44, out _);
         UiKit.Anchor((RectTransform)zoomInButton.transform, new Vector2(1, 1), new Vector2(1, 1), new Vector2(-210, -34), new Vector2(110, 44));
@@ -138,6 +144,7 @@ public static class AchievementWindow
         var progress = $"{string.Format(Lang.Get("ach_progress"), Profile.UnlockedCount, AchievementCatalog.All.Count)}   <color=#F2D978>{Legacy.Describe()}</color>";
         hintLabel.text = Profile.RewardsEnabled ? progress : $"{progress}   <color=#E0A050>{Lang.Get("ach_rewards_off_hint")}</color>";
         rewardsLabel.text = Lang.Get(Profile.RewardsEnabled ? "ach_rewards_on" : "ach_rewards_off");
+        galleryLabel.text = Lang.Get("gallery_open");
 
         for (int i = 0; i < rows.Length; i++)
         {
