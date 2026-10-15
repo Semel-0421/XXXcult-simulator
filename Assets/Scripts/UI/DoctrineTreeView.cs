@@ -6,7 +6,7 @@ using UnityEngine.UI;
 // 교리 스킬트리 화면(120개). 가운데 교리 선포에서 여덟 가지가 뻗어 나가고, 덕목은 위쪽·욕망은 아래쪽에 놓인다.
 // 각 가지는 5단계까지 한 줄, 6단계부터 A/B 두 갈래로 나뉘어 10단계 최종 스킬(16개)에 이른다.
 // 서로 반대되는 가지(절제↔음욕, 자애↔재물욕, 인내↔식욕, 청렴↔권력욕)는 마주 보게 배치한다.
-// 노드를 누르면 오른쪽 정보창에 효과·비용이 뜨고, 배우기 버튼으로 포인트를 써서 익힌다.
+// 노드를 누르면 오른쪽 정보창에 효과·비용이 뜨고, 배우기 버튼이나 노드 더블 클릭으로 포인트를 써서 익힌다.
 public class DoctrineTreeView : MonoBehaviour
 {
     const float FirstRadius = 120f, RadiusStep = 33f, NodeSize = 30f, FinalSize = 40f, LabelRadius = 462f;
@@ -107,6 +107,7 @@ public class DoctrineTreeView : MonoBehaviour
         var button = rect.GetComponent<Button>();
         button.targetGraphic = ring;
         button.onClick.AddListener(() => Select(skill));
+        rect.gameObject.AddComponent<DoubleClick>().DoubleClicked += () => { selected = skill; Learn(); };
 
         var fill = UiKit.Child(rect, "Fill", typeof(Image)).GetComponent<Image>();
         UiKit.Anchor((RectTransform)fill.transform, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(size - 8, size - 8));

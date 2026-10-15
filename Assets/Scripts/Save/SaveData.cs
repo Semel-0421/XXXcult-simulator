@@ -29,6 +29,14 @@ public class SaveData
     public int run;                // 이 판의 회차 (0이면 회차 제한 없음: 회차 기능 이전의 저장)
     public bool dead;              // 주인공이 세상을 떠났음 (엔딩 직전에 저장된 경우)
 
+    // 준비된 신 모드
+    public bool godMode;
+    public List<string> godSkills = new();   // 익힌 권능 노드
+    public string godNature;                 // 신의 본성 (무료로 고른 바깥 노드)
+    public List<string> godCores = new();    // 완성한 핵 순서 (승천 엔딩 판정)
+    public int godPointsEarned;
+    public int godSecularStage;              // 포인트를 이미 받은 세속 규모 단계
+
     public List<StatEntry> personal = new();
     public List<StatEntry> cult = new();
     public List<StatEntry> doctrines = new();

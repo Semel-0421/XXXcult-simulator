@@ -22,6 +22,11 @@ public static class GameSession
 
     public static void SetRun(int run) => Run = run;
 
+    public static bool GodMode { get; private set; }     // 준비된 신 모드로 진행 중인 판
+    public static GodState God { get; private set; }     // 그 모드의 권능 트리·포인트
+
+    public static void SetGodMode(bool on) => GodMode = on;
+
     public static string FirstExtremeId { get; private set; } // 가장 먼저 0/최대에 이른 교단 스탯의 엔딩 id (없으면 null)
 
     // 처음 한 번만 기록한다. 25년이 지나도 최종 스킬이 없을 때 이 스탯의 엔딩이 나온다.
@@ -79,6 +84,7 @@ public static class GameSession
         if (CultFounded) CultTime.Advance();
         if (!Dead && Mortality.Dies(Age.Years, Personal.Gender, Rng)) Dead = true; // 분기마다 연령별 사망률
         if (Age.Quarter == 0) GiftedSpecials.ApplyYearly(Personal, Cult, CultFounded); // 해가 바뀔 때
+        if (Age.Quarter == 0 && GodMode && CultFounded) God.YearEnd(Cult, Personal);
         Achievements.Evaluate();
     }
 
@@ -104,6 +110,8 @@ public static class GameSession
         Ended = false;
         Dead = false;
         Run = 0;
+        GodMode = false;
+        God = new GodState();
         FirstExtremeId = null;
         RaisedMask = 0;
         PersonalRaisedMask = 0;
@@ -134,7 +142,13 @@ public static class GameSession
             pendingAdvances = PendingAdvancesTurn,
             run = Run,
             dead = Dead,
+            godMode = GodMode,
+            godNature = God.Tree.NatureId,
+            godPointsEarned = God.Points.Earned,
+            godSecularStage = God.Points.SecularStageAwarded,
         };
+        data.godSkills.AddRange(God.Tree.Learned);
+        data.godCores.AddRange(God.Tree.CoreOrder);
         foreach (PersonalStatId id in Enum.GetValues(typeof(PersonalStatId)))
             data.personal.Add(new StatEntry(id.ToString(), Personal[id].Value));
         foreach (StatId id in Enum.GetValues(typeof(StatId)))
@@ -186,6 +200,9 @@ public static class GameSession
         PendingEventId = string.IsNullOrEmpty(data.pendingEventId) ? null : data.pendingEventId;
         PendingAdvancesTurn = data.pendingAdvances;
         Dead = data.dead;
+        GodMode = data.godMode;
+        God.Tree.Restore(data.godSkills, data.godNature, data.godCores);
+        God.Points.Restore(data.godPointsEarned, data.godSecularStage);
         Progress.ApplyRun(data.run); // 회차가 없던 옛 저장(0)은 제한 없이 이어 간다
     }
 
