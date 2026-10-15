@@ -5,15 +5,16 @@ using NUnit.Framework;
 public class GiftedSpecialTests
 {
     [Test]
-    public void Catalog_Has120UniqueGiftedByCategory()
+    public void Catalog_Has140UniqueGiftedByCategory()
     {
-        Assert.AreEqual(120, GiftedCatalog.All.Count);
-        Assert.AreEqual(120, GiftedCatalog.All.Select(g => g.Name).Distinct().Count());
+        Assert.AreEqual(140, GiftedCatalog.All.Count);
+        Assert.AreEqual(140, GiftedCatalog.All.Select(g => g.Name).Distinct().Count());
         var counts = GiftedCatalog.All.GroupBy(g => g.Category).ToDictionary(g => g.Key, g => g.Count());
         Assert.AreEqual(20, counts["운명"]);
         Assert.AreEqual(30, counts["성격"]);
         Assert.AreEqual(50, counts["특기"]);
         Assert.AreEqual(20, counts["외모"]);
+        Assert.AreEqual(20, counts["업적"]);
         Assert.Greater(GiftedCatalog.All.Count(g => g.Specials.Length > 0), 20);
     }
 

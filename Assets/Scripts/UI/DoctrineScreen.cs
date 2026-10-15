@@ -9,6 +9,8 @@ public class DoctrineScreen : MonoBehaviour
     [SerializeField] DoctrineNodeUI[] nodes;
     [SerializeField] ForcedHighlight tutorial;
 
+    DoctrineTreeView treeView;
+
     DoctrineTree Tree => GameSession.Cult.Doctrines;
 
     void Start() => window.SetActive(false);
@@ -16,8 +18,16 @@ public class DoctrineScreen : MonoBehaviour
     public void Open()
     {
         tutorial.End();
+        if (!window.activeSelf) AudioManager.MenuOpened();
         window.SetActive(true);
         foreach (var node in nodes) node.Bind(Tree);
+        if (treeView == null)
+        {
+            var oldWeb = window.transform.Find("Web"); // 예전 자리표시용 거미줄은 스킬트리로 대체
+            if (oldWeb != null) oldWeb.gameObject.SetActive(false);
+            treeView = DoctrineTreeView.Build(window.transform);
+        }
+        treeView.Bind(Tree);
         Tree.Changed -= OnChanged;
         Tree.Changed += OnChanged;
         RefreshClose();
@@ -27,6 +37,7 @@ public class DoctrineScreen : MonoBehaviour
     {
         if (!closeButton.interactable) return;
         Tree.Changed -= OnChanged;
+        if (window.activeSelf) AudioManager.MenuClosed();
         window.SetActive(false);
     }
 

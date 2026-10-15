@@ -1,189 +1,205 @@
-﻿id,kind,theme,text,choice1,effects1,choice2,effects2,choice3,effects3,choice4,effects4,choice5,effects5
-lf01,random,LeaderFaith,한밤중 홀로 기도하던 중 확신이 흔들립니다. 정말 신은 당신을 택했을까요?,의심을 끝까지 파고든다,LeaderFaith-10 Mentality+2 @no.7,더 깊이 기도한다,LeaderFaith+20 Piety+2,측근에게 고민을 털어놓는다,LeaderFaith+5 Authority-5 Charity+1
-lf02,random,LeaderFaith,꿈에서 신의 목소리를 들었다고 확신합니다.,신도들에게 계시를 알린다,LeaderFaith+15 FollowerFaith+15 Authority+5,혼자 간직한다,LeaderFaith+20 Temperance+1,꿈일 뿐이라 여긴다,LeaderFaith-10 Mentality+1,계시를 교리로 정리한다,Doctrine+20 LeaderFaith+5,신도들에게 계시의 대가로 헌금을 요구한다,Offerings+20 Integrity-1
-lf03,random,LeaderFaith,금식 기도를 결심했습니다.,사흘 금식한다,LeaderFaith+20 Health-2 Temperance+2,하루만 한다,LeaderFaith+10 Temperance+1,신도들과 함께 금식한다,FollowerFaith+15 LeaderFaith+10 Health-1,몰래 음식을 먹는다,LeaderFaith-10 Appetite+2 @no.15
-lf04,random,LeaderFaith,당신이 존경하던 성직자가 추문에 휘말렸습니다.,그를 공개적으로 비판한다,Reputation+5 LeaderFaith-5 Integrity+1,그를 감싼다,Reputation-10 Charity+2,그의 몰락에서 교훈을 얻는다,LeaderFaith+10 Mentality+1,그의 신도들을 흡수한다,Followers+8 Integrity-2 @no.11
-lf05,random,LeaderFaith,기도 중 손끝이 따뜻해지는 것을 느낍니다.,신의 징표라 믿는다,LeaderFaith+20 Miracle+1,기분 탓이라 넘긴다,Mentality+1,신도의 아픈 곳에 손을 얹어 본다,FollowerFaith+15 Communion+1 Charity+1
-lf06,random,LeaderFaith,오래된 경전을 다시 읽다 새로운 의미를 발견했습니다.,밤새 연구한다,Doctrine+15 LeaderFaith+10 Mentality+1 @no.7,설교에 바로 쓴다,FollowerFaith+15 Authority+5,당신만의 해석으로 숨겨 둔다,LeaderFaith+15
-lf07,random,LeaderFaith,갑작스러운 병으로 며칠간 앓아누웠습니다.,병상에서도 기도를 멈추지 않는다,LeaderFaith+20 Health-1 Patience+2 @no.2,신도들의 간호를 받는다,FollowerFaith+10 Charity+1,신을 원망한다,LeaderFaith-15 Mentality-1,의사를 부른다,Health+2 Offerings-10
-lf08,random,LeaderFaith,산속 수도원에서 은둔 수행을 권유받았습니다.,한 달 동안 떠난다,LeaderFaith+30 Authority-10 Temperance+2,거절하고 교단을 지킨다,Authority+10 LeaderFaith-5
-lf09,random,LeaderFaith,당신의 기도가 이루어진 듯한 일이 일어났습니다.,신의 응답이라 선포한다,FollowerFaith+20 LeaderFaith+15 Reputation+3,조용히 감사한다,LeaderFaith+20 Piety+1,우연이라 생각한다,Mentality+1 LeaderFaith-5
-lf10,random,LeaderFaith,다른 종교의 수행자가 당신에게 논쟁을 청합니다.,정면으로 토론한다,LeaderFaith+15 Reputation+5 @no.3,정중히 거절한다,Temperance+1,그의 가르침을 배운다,Doctrine+15 LeaderFaith-5 Mentality+2,신도들 앞에서 그를 조롱한다,Authority+10 Reputation-10
-lf11,random,LeaderFaith,교단 운영에 지쳐 신앙이 메말라 갑니다.,초심으로 돌아가 기도한다,LeaderFaith+20 Piety+2,휴식을 취한다,Health+2 LeaderFaith+5,쾌락으로 공허를 채운다,LeaderFaith-10 Lust+2 @no.8,일에 더 몰두한다,Authority+10 LeaderFaith-10 Ambition+1
-lf12,random,LeaderFaith,어린 시절 다니던 교회의 종소리가 문득 그리워집니다.,고향을 찾아간다,LeaderFaith+15 Charity+1,과거와 단절하기로 한다,LeaderFaith+10 Authority+5 Charity-1
-lf13,random,LeaderFaith,밤하늘의 별똥별을 보며 소원을 빕니다.,교단의 번영을 빈다,LeaderFaith+10 Ambition+1,신도들의 안녕을 빈다,FollowerFaith+10 Charity+1,신을 직접 만나게 해 달라고 빈다,LeaderFaith+15 Communion+1,아무것도 빌지 않는다,Temperance+2
-lf14,random,LeaderFaith,측근이 당신의 신앙을 의심하는 말을 엿들었습니다.,측근을 불러 진심을 보여 준다,LeaderFaith+10 FollowerFaith+10 Integrity+1,측근을 내쫓는다,Authority+15 Followers-2,흔들리지 않는 척 연기한다,Authority+10 @no.4,스스로를 돌아본다,LeaderFaith+15 Mentality+1
-lf15,random,LeaderFaith,폭풍우 치는 밤 교단 건물에 벼락이 떨어졌습니다.,신의 분노라 해석하고 참회한다,LeaderFaith+15 FollowerFaith+10 Piety+1,신의 축복이라 선포한다,FollowerFaith+15 Authority+5,피뢰침을 설치한다,Offerings-15 Mentality+1
-lf16,random,LeaderFaith,묵상 중 당신의 전생을 본 것 같습니다.,전생을 교리에 담는다,Doctrine+20 Communion+1,신도들에게 이야기한다,FollowerFaith+15 Reputation-5,홀로 깊이 묵상한다,LeaderFaith+20 Miracle+1
-lf17,random,LeaderFaith,한 노인이 당신에게 진짜 믿음이 무엇인지 묻습니다.,행동으로 보이는 것이라 답한다,LeaderFaith+10 Charity+2 @no.10,의심하지 않는 것이라 답한다,LeaderFaith+15 Authority+5,모르겠다고 솔직히 답한다,LeaderFaith+5 Integrity+2,노인을 신도로 만든다,Followers+3
-lf18,random,LeaderFaith,기도문을 새로 지어 보기로 했습니다.,아름다운 운율로 짓는다,FollowerFaith+15 Doctrine+10,짧고 강렬하게 짓는다,Authority+10 FollowerFaith+10,신도들과 함께 짓는다,FollowerFaith+20 Authority-5
-lf19,random,LeaderFaith,당신이 신을 잃는 악몽을 꾸었습니다.,새벽까지 기도한다,LeaderFaith+15 Health-1,악몽을 신의 시험이라 여긴다,LeaderFaith+20 Patience+1,측근에게 해몽을 맡긴다,Authority-5 FollowerFaith+5,술로 잊는다,LeaderFaith-10 Health-1 Lust+1
-ff01,random,FollowerFaith,한 신도가 가족의 반대로 교단을 떠나려 합니다.,직접 가족을 설득한다,FollowerFaith+10 Reputation+3 Charity+1,떠나도록 축복해 준다,FollowerFaith+15 Followers-1 @no.10,떠나면 저주받는다고 경고한다,Authority+10 Reputation-10,교단 숙소를 제공한다,Followers+1 Offerings-15
-ff02,random,FollowerFaith,신도들이 집회에서 눈물을 흘리며 찬양합니다.,함께 눈물을 흘린다,FollowerFaith+20 LeaderFaith+5,감동적인 설교로 마무리한다,FollowerFaith+15 Authority+5 @no.3,헌금 바구니를 돌린다,Offerings+25 FollowerFaith-5
-ff03,random,FollowerFaith,신도들 사이에 의견 충돌이 생겼습니다.,양쪽 이야기를 모두 듣는다,FollowerFaith+15 Patience+2,한쪽 편을 든다,Authority+10 FollowerFaith-10,둘 다 꾸짖는다,Authority+15 FollowerFaith-5,교리로 해답을 제시한다,Doctrine+10 FollowerFaith+10
-ff04,random,FollowerFaith,한 신도가 당신에게 평생 모은 재산을 바치겠다고 합니다.,기꺼이 받는다,Offerings+40 Greed+2 Integrity-1,일부만 받는다,Offerings+20 FollowerFaith+10,거절하고 돌려보낸다,FollowerFaith+15 Reputation+5 Integrity+2,받아서 가난한 신도들에게 나눈다,FollowerFaith+20 Charity+2,재산을 받아 교단 명의로 불린다,Offerings+30 Greed+1
-ff05,random,FollowerFaith,신도들이 당신의 생일을 성대하게 축하하려 합니다.,기쁘게 받아들인다,FollowerFaith+15 Authority+5,검소하게 하자고 한다,FollowerFaith+10 Temperance+2,생일 대신 봉사의 날로 바꾼다,Reputation+8 FollowerFaith+10 Charity+1,잔치를 크게 벌인다,FollowerFaith+10 Offerings-20 Appetite+2 @no.15
-ff06,random,FollowerFaith,어린 신도가 당신을 따라 하며 설교 흉내를 냅니다.,칭찬하고 격려한다,FollowerFaith+15 Charity+1,교주를 흉내 내지 말라 꾸짖는다,Authority+10 FollowerFaith-5
-ff07,random,FollowerFaith,병든 신도가 기적을 바라며 당신을 찾아왔습니다.,손을 얹고 기도한다,FollowerFaith+20 Communion+1 Miracle+1,병원에 가라고 권한다,Reputation+5 FollowerFaith-5 Integrity+1,기적을 약속한다,FollowerFaith+25 Integrity-2,치료비를 교단이 대 준다,FollowerFaith+15 Offerings-20 Charity+2
-ff08,random,FollowerFaith,한 신도가 꿈에서 당신을 보았다고 간증합니다.,간증을 집회에서 나누게 한다,FollowerFaith+20 Authority+5,과장이라며 자제시킨다,Integrity+1 FollowerFaith-5,그 꿈을 교리에 넣는다,Doctrine+15 FollowerFaith+10
-ff09,random,FollowerFaith,신도들이 교단 생활이 너무 엄격하다고 불평합니다.,규율을 완화한다,FollowerFaith+15 Authority-10,규율을 더 강화한다,Authority+15 FollowerFaith-10,엄격함의 의미를 설교한다,FollowerFaith+10 Doctrine+5 @no.3,불평한 신도를 찾아낸다,Authority+10 FollowerFaith-15
-ff10,random,FollowerFaith,오래된 신도 한 명이 세상을 떠났습니다.,성대한 장례를 치른다,FollowerFaith+20 Offerings-15,그의 삶을 교리 속 본보기로 남긴다,Doctrine+10 FollowerFaith+15,유족을 평생 돌보겠다 약속한다,FollowerFaith+15 Charity+2,유산을 교단에 귀속시킨다,Offerings+30 FollowerFaith-10 Greed+1
-ff11,random,FollowerFaith,신도들이 함께 노래할 찬송가를 원합니다.,직접 작사한다,FollowerFaith+15 Doctrine+5,신도들에게 맡긴다,FollowerFaith+10 Followers+1,기존 노래를 개사한다,FollowerFaith+10,노래 따위 필요 없다고 한다,Authority+5 FollowerFaith-10
-ff12,random,FollowerFaith,신도 하나가 당신의 사생활에 대한 소문을 퍼뜨렸습니다.,해명한다,FollowerFaith+5 Reputation+3 Integrity+1,소문을 낸 신도를 용서한다,FollowerFaith+15 Charity+2,소문을 낸 신도를 추방한다,Authority+15 Followers-1,소문을 신비감으로 이용한다,FollowerFaith+10 Integrity-1 @no.4
-ff13,random,FollowerFaith,신도들이 교단의 상징을 몸에 새기고 싶어 합니다.,허락한다,FollowerFaith+20 Reputation-10,금지한다,Reputation+3 FollowerFaith-5,팔찌로 대신하게 한다,FollowerFaith+15 Offerings+10
-ff14,random,FollowerFaith,새벽 기도회에 나오는 신도가 줄었습니다.,직접 신도들을 깨우러 다닌다,FollowerFaith+15 Health-1 @no.2,출석을 강제한다,Authority+10 FollowerFaith-10,기도회 시간을 옮긴다,FollowerFaith+10,빠진 신도들의 사정을 듣는다,FollowerFaith+10 Charity+1
-ff15,random,FollowerFaith,신도 부부가 당신에게 아이의 이름을 지어 달라고 합니다.,교단의 성인 이름을 준다,FollowerFaith+15 Doctrine+5,정성껏 의미를 담아 짓는다,FollowerFaith+15 Charity+1
-ff16,random,FollowerFaith,신도들 사이에서 당신을 신으로 섬기자는 말이 나옵니다.,받아들인다,FollowerFaith+25 Authority+15 Reputation-20,단호히 부정한다,LeaderFaith+15 Integrity+2,애매하게 넘긴다,FollowerFaith+15 Integrity-1 @no.4,신의 대리인일 뿐이라 정정한다,FollowerFaith+10 Doctrine+10
-ff17,random,FollowerFaith,한 신도가 당신에게 연모의 마음을 고백했습니다.,정중히 거절한다,FollowerFaith+5 Integrity+2,받아들인다,FollowerFaith-10 Lust+3 @no.14,신의 사랑으로 승화시키라 설교한다,FollowerFaith+15 Doctrine+5,신도들 모르게 관계를 이어 간다,Lust+2 Integrity-2 Reputation-10
-ff18,random,FollowerFaith,신도들이 단체로 순례를 떠나자고 합니다.,함께 떠난다,FollowerFaith+20 Offerings-20 Health+1,대표단만 보낸다,FollowerFaith+10 Offerings-10,순례 대신 집회를 연다,FollowerFaith+10 Authority+5
-ff19,random,FollowerFaith,신도들이 당신을 위해 밤새 기도해 주었습니다.,깊이 감사한다,FollowerFaith+15 LeaderFaith+10,보답으로 잔치를 연다,FollowerFaith+15 Offerings-15 Appetite+1
-au01,random,Authority,측근 하나가 교단의 운영 방식에 반기를 들었습니다.,공개적으로 굴복시킨다,Authority+20 FollowerFaith-5 Ambition+1,대화로 설득한다,Authority+5 FollowerFaith+10 @no.3,그의 의견을 일부 받아들인다,FollowerFaith+10 Authority-5,조용히 직책에서 밀어낸다,Authority+15 Integrity-1
-au02,random,Authority,교단의 위계를 정해야 할 때가 왔습니다.,엄격한 계급제를 만든다,Authority+25 FollowerFaith-10,모두가 평등하다고 선언한다,FollowerFaith+15 Authority-10 Charity+1,공로에 따라 직분을 준다,Authority+15 FollowerFaith+5,당신 외엔 아무 직분도 두지 않는다,Authority+20 Ambition+2,추첨으로 직분을 정한다,FollowerFaith+10 Authority-5
-au03,random,Authority,신도들 앞에서 말실수를 했습니다.,솔직히 인정한다,Integrity+2 Authority-5 FollowerFaith+5,깊은 뜻이 있었다고 둘러댄다,Authority+10 Integrity-1 @no.4,아무 일 없던 듯 넘어간다,Authority-5,실수를 지적한 신도를 꾸짖는다,Authority+10 FollowerFaith-10
-au04,random,Authority,교단을 상징할 의복을 정합니다.,화려한 금빛 예복,Authority+20 Offerings-20,소박한 흰 옷,FollowerFaith+10 Reputation+3 Temperance+1,검은 망토,Authority+15 Reputation-5,의복은 필요 없다,Reputation+3 Authority-5
-au05,random,Authority,신도 하나가 당신의 명령을 어겼습니다.,공개적으로 벌한다,Authority+20 FollowerFaith-10,사정을 들어 보고 용서한다,FollowerFaith+15 Charity+1,조용히 따로 불러 경고한다,Authority+10 Patience+1,교리에 벌칙 조항을 만든다,Doctrine+10 Authority+10
-au06,random,Authority,교단 집회 장소를 옮길지 고민합니다.,크고 웅장한 곳으로 옮긴다,Authority+20 Offerings-30 Ambition+1,지금 자리를 지킨다,FollowerFaith+10,신도의 집을 돌아가며 모인다,FollowerFaith+15 Authority-5,외딴 산속으로 옮긴다,Authority+15 Followers-2 Communion+1
-au07,random,Authority,측근들이 서로 당신의 신임을 얻으려 경쟁합니다.,경쟁을 부추긴다,Authority+15 FollowerFaith-5 @no.11,모두를 공평하게 대한다,FollowerFaith+10 Integrity+1,한 명을 오른팔로 지명한다,Authority+10 FollowerFaith+5,경쟁을 금지한다,Authority+5 Temperance+1
-au08,random,Authority,당신의 결정에 신도들이 의문을 제기합니다.,논리적으로 설명한다,Authority+10 Mentality+1 @no.7,신의 뜻이라고만 답한다,Authority+15 FollowerFaith-5,결정을 철회한다,FollowerFaith+10 Authority-15,투표에 부친다,FollowerFaith+15 Authority-10
-au09,random,Authority,교단 규칙집을 만들자는 제안이 나왔습니다.,직접 꼼꼼히 쓴다,Doctrine+15 Authority+10 Patience+1,측근들에게 맡긴다,Authority-5 Doctrine+10,규칙은 내 말이 곧 법이다,Authority+20 Doctrine-5,신도들의 의견을 모아 만든다,FollowerFaith+15 Doctrine+10
-au10,random,Authority,다른 교단의 지도자가 동맹을 제안합니다.,대등한 동맹을 맺는다,Reputation+5 Followers+3,흡수 합병을 요구한다,Authority+20 Followers+5 Ambition+2,거절한다,Authority+5,동맹을 맺고 뒤통수를 칠 준비를 한다,Authority+10 Integrity-2 @no.11
-au11,random,Authority,신도들이 당신 앞에 무릎을 꿇기 시작했습니다.,그대로 둔다,Authority+20 Reputation-5,일으켜 세운다,FollowerFaith+10 Charity+1,신 앞에서만 꿇으라 가르친다,Doctrine+10 LeaderFaith+5,무릎 꿇기를 의식으로 정한다,Authority+25 FollowerFaith-5
-au12,random,Authority,교단의 문장을 디자인합니다.,뱀이 검을 감은 모양,Authority+15 Communion+1,손을 맞잡은 모양,FollowerFaith+10 Charity+1,눈 하나가 그려진 모양,Authority+15 Reputation-5,신도들에게 공모한다,FollowerFaith+15 Followers+1
-au13,random,Authority,측근 하나가 교단 자금을 빼돌린 정황이 드러났습니다.,엄벌한다,Authority+20 Offerings+10,기회를 한 번 더 준다,FollowerFaith+10 Charity+1 Offerings-10,조용히 덮는다,Integrity-2 Offerings-15,공개 재판을 연다,Authority+15 Reputation+3
-au14,random,Authority,중요한 결정을 앞두고 측근 회의가 열렸습니다.,모두의 의견을 경청한다,FollowerFaith+10 Patience+1,결론을 미리 정해 두고 통보한다,Authority+15,회의를 길게 끌어 반대파를 지치게 한다,Authority+10 Patience+2 @no.2,회의를 생략한다,Authority+10 FollowerFaith-5
-au15,random,Authority,신도들이 당신에게 직접 결혼 주례를 부탁합니다.,기꺼이 맡는다,FollowerFaith+15 Authority+5,교단만의 혼례 의식을 만든다,Doctrine+15 Authority+10,측근에게 맡긴다,Authority-5,결혼에도 교주의 허락이 필요하다고 선언한다,Authority+20 Reputation-10
-au16,random,Authority,교단에 감찰관 직책을 두자는 의견이 나옵니다.,충성스러운 측근을 임명한다,Authority+20 FollowerFaith-5,감찰은 불필요하다,FollowerFaith+10 Authority-5
-au17,random,Authority,신도들이 당신의 말을 받아 적어 책으로 엮자고 합니다.,허락하고 직접 감수한다,Doctrine+20 Authority+10,금지한다,Authority+5,측근이 마음대로 편집하게 둔다,Doctrine+10 Authority-5,책을 비싸게 판다,Offerings+25 Reputation-5 Greed+1
-au18,random,Authority,교단 내 젊은 신도들이 독자적인 모임을 만들었습니다.,모임을 공식 기구로 인정한다,FollowerFaith+15 Followers+2,해산시킨다,Authority+15 FollowerFaith-10,몰래 감시한다,Authority+10 Integrity-1,모임에 직접 참석해 이끈다,Authority+10 FollowerFaith+10
-au19,random,Authority,당신의 초상화를 집회장에 걸자는 제안이 나왔습니다.,크게 걸게 한다,Authority+20 Reputation-5,신의 상징 옆에 작게 건다,Authority+10 FollowerFaith+5
-of01,random,Offerings,헌금함에 익명의 거액이 들어 있었습니다.,교단 재정에 넣는다,Offerings+40,신도들에게 공개하고 감사 예배를 연다,Offerings+30 FollowerFaith+10,기부자를 찾아 감사를 전한다,Offerings+20 Reputation+5,몰래 개인 금고에 넣는다,Wealth+3 Greed+2 Integrity-2,절반은 신도들의 잔치에 쓴다,FollowerFaith+15 Offerings+15 Appetite+1
-of02,random,Offerings,교단 건물 지붕이 새기 시작했습니다.,헌금으로 수리한다,Offerings-25 FollowerFaith+5,신도들에게 특별 헌금을 걷는다,Offerings+10 FollowerFaith-10,신도들과 함께 직접 고친다,FollowerFaith+15 Health-1,그냥 둔다,Reputation-5 FollowerFaith-5
-of03,random,Offerings,한 사업가가 교단에 투자를 제안합니다.,받아들인다,Offerings+35 Reputation-5 Greed+1,거절한다,Integrity+1,조건을 꼼꼼히 따져 본다,Offerings+20 Mentality+1,그의 돈을 받고 약속은 어긴다,Offerings+40 Integrity-2 Reputation-10 @no.11
-of04,random,Offerings,헌금 액수에 따라 자리를 정하자는 의견이 나왔습니다.,도입한다,Offerings+30 FollowerFaith-15 Greed+1,단호히 거부한다,FollowerFaith+15 Integrity+1,특별석 하나만 만든다,Offerings+15 FollowerFaith-5
-of05,random,Offerings,교단의 상징을 새긴 기념품을 팔아 보자는 제안이 나왔습니다.,대량으로 만들어 판다,Offerings+30 Reputation-5,소량만 정성껏 만든다,Offerings+15 FollowerFaith+5,신도들에게만 나눠 준다,FollowerFaith+15 Offerings-10,거절한다,Temperance+1
-of06,random,Offerings,교단 회계를 맡던 신도가 장부에 구멍이 있다고 보고합니다.,철저히 조사한다,Offerings+15 Authority+10 Mentality+1,덮고 넘어간다,Offerings-20 Integrity-1,회계 담당을 교체한다,Authority+5 Offerings+5,직접 장부를 관리한다,Offerings+10 Health-1 @no.7
-of07,random,Offerings,가난한 신도가 헌금을 못 내 미안해합니다.,헌금은 마음이라 위로한다,FollowerFaith+15 Charity+2 @no.10,노동으로 대신하게 한다,Offerings+10 FollowerFaith-5,교단이 생활비를 지원한다,FollowerFaith+20 Offerings-20,헌금을 독촉한다,Offerings+10 FollowerFaith-15 Greed+1
-of08,random,Offerings,교단 이름으로 작은 가게를 열자는 의견이 나왔습니다.,빵집을 연다,Offerings+20 Reputation+3 Appetite+1,찻집을 연다,Offerings+15 FollowerFaith+5,신도들의 일자리로 운영한다,Offerings+15 Followers+2 Charity+1,장사는 신앙과 맞지 않는다,Temperance+1
-of09,random,Offerings,연말이 되어 교단 재정을 결산합니다.,흑자를 신도들과 나눈다,FollowerFaith+15 Offerings-15,내년을 위해 비축한다,Offerings+20 Temperance+1,교단 건물을 늘린다,Authority+15 Offerings-25,당신의 보수를 올린다,Wealth+3 Greed+2 FollowerFaith-10
-of10,random,Offerings,값비싼 성물을 사자는 제안이 들어왔습니다.,구입한다,Authority+15 Offerings-30 Communion+1,모조품을 산다,Offerings-5 Integrity-1,그 돈으로 봉사한다,Reputation+8 Offerings-20,거절한다,Temperance+1
-of11,random,Offerings,신도가 도박으로 번 돈을 헌금하려 합니다.,받는다,Offerings+30 Integrity-1,도박을 끊으라며 거절한다,Integrity+2 FollowerFaith+5,그 신도에게 도박 비법을 배운다,Wealth+2 Greed+2 @no.17,받아서 그에게 다시 돌려준다,FollowerFaith+10 Charity+1
-of12,random,Offerings,세무 당국이 교단 재정을 문의해 왔습니다.,투명하게 공개한다,Reputation+8 Offerings-10 Integrity+2,장부를 정리해 일부만 보인다,Offerings+5 Integrity-1,종교 단체라며 버틴다,Authority+10 Reputation-10,측근에게 책임을 미룬다,Authority-5 Integrity-2
-of13,random,Offerings,신도들이 당신을 위해 새 차를 마련하자고 합니다.,기쁘게 받는다,Wealth+3 Offerings-25 Reputation-10,검소한 차를 고른다,Offerings-10 Temperance+1,그 돈으로 신도용 버스를 산다,FollowerFaith+15 Offerings-20 Charity+1,거절한다,FollowerFaith+10 Integrity+1
-of14,random,Offerings,헌금 바구니가 하나 사라졌습니다.,범인을 추적한다,Authority+10 Mentality+1,신도들의 양심에 호소한다,FollowerFaith+10 Offerings+5,잃어버린 셈 친다,Offerings-15 Temperance+1,헌금함에 자물쇠를 단다,Offerings+5
-of15,random,Offerings,교단 소유의 땅을 팔라는 제안이 들어왔습니다.,팔아서 자금을 확보한다,Offerings+40 Authority-5,팔지 않는다,Authority+5,땅에 기도원을 짓는다,Communion+1 Offerings-20 LeaderFaith+10,값을 크게 부풀린다,Offerings+30 Greed+2 @no.11
-of16,random,Offerings,신도들이 매달 정기 헌금 제도를 원합니다.,십일조를 도입한다,Offerings+35 FollowerFaith-5,헌금 대신 봉사 시간을 받는다,Reputation+5 FollowerFaith+5
-of17,random,Offerings,값비싼 연회를 열어 후원자를 모으자는 제안이 나왔습니다.,성대한 연회를 연다,Offerings+30 Reputation+3 Appetite+2 @no.15,소박한 다과회로 연다,Offerings+15 Temperance+1,거절한다,Integrity+1,연회 대신 자선 바자회를 연다,Offerings+20 Reputation+5 Charity+1,연회에서 춤판을 벌인다,Lust+2 Reputation-5 @no.14
-of18,random,Offerings,헌금이 갑자기 크게 줄었습니다.,원인을 조사한다,Mentality+1 Offerings+10,헌금을 강조하는 설교를 한다,Offerings+20 FollowerFaith-10,당신의 생활비를 줄인다,Temperance+2 FollowerFaith+10,기도로 해결을 구한다,LeaderFaith+10 Offerings+5
-of19,random,Offerings,한 재벌가 후손이 신도가 되겠다며 찾아왔습니다.,크게 환영한다,Offerings+40 Followers+1 FollowerFaith-5,다른 신도와 똑같이 대한다,FollowerFaith+15 Integrity+1,그의 인맥을 활용한다,Reputation+8 Ambition+1,그의 재산을 노린다,Offerings+35 Integrity-2 Greed+2
-fo01,random,Followers,광장에서 즉석 설교를 해 볼 기회가 생겼습니다.,열정적으로 외친다,Followers+6 Reputation+3 @no.3,조용히 전단지만 나눈다,Followers+3,노래와 함께 한다,Followers+5 FollowerFaith+5,포기한다,Temperance+1
-fo02,random,Followers,한 신도가 친구들을 데려오겠다고 합니다.,환영 만찬을 준비한다,Followers+5 Offerings-10,평소대로 맞이한다,Followers+3,친구를 데려온 신도에게 직분을 준다,Followers+4 Authority+5,의심부터 한다,Authority+5 Followers+1
-fo03,random,Followers,대학가에서 포교를 시도합니다.,철학 토론회를 연다,Followers+6 Doctrine+5 @no.7,무료 상담소를 연다,Followers+5 Reputation+3 Charity+1,파티를 연다,Followers+7 Reputation-5 Lust+1,포기한다,Temperance+1,캠퍼스 연극 동아리를 후원한다,Followers+5 @no.4
-fo04,random,Followers,새 신도들이 기존 신도들과 어울리지 못합니다.,환영회를 연다,Followers+2 FollowerFaith+10 Offerings-10,멘토를 붙여 준다,FollowerFaith+10 Patience+1,새 신도만의 모임을 만든다,Followers+3 FollowerFaith-5,알아서 적응하라고 한다,Followers-2
-fo05,random,Followers,병원 앞에서 환자 가족들에게 다가갑니다.,함께 기도해 준다,Followers+5 Charity+1,기적을 약속한다,Followers+8 Integrity-2,간병을 도와준다,Followers+4 Reputation+5 Health-1,그냥 돌아온다,Temperance+1
-fo06,random,Followers,유명 인사가 교단에 관심을 보입니다.,직접 만나 설득한다,Followers+8 Reputation+5 @no.3,신도들에게 만남을 맡긴다,Followers+4,그를 이용해 홍보한다,Followers+10 Reputation-5 Integrity-1,무시한다,Authority+5
-fo07,random,Followers,인터넷으로 포교를 해 보자는 의견이 나왔습니다.,영상 설교를 올린다,Followers+7 Reputation+3,익명 게시판에 글을 퍼뜨린다,Followers+5 Reputation-5,디지털은 신성하지 않다,Authority+5,신도들이 운영하게 맡긴다,Followers+4 FollowerFaith+5
-fo08,random,Followers,시골 마을을 순회하며 포교합니다.,마을 잔치를 열어 준다,Followers+6 Offerings-15 Appetite+1,농사일을 도우며 친해진다,Followers+5 Health+1 Charity+1,마을 이장을 설득한다,Followers+7 Authority+5,기적 쇼를 연다,Followers+8 Integrity-2 @no.4
-fo09,random,Followers,교도소 수감자들에게 설교할 기회가 생겼습니다.,받아들인다,Followers+4 Reputation+5 Charity+1,거절한다,Reputation-5,출소 후 교단에서 돌보겠다 약속한다,Followers+6 Offerings-10,그들의 힘을 교단에 쓴다,Followers+5 Authority+10 Integrity-1
-fo10,random,Followers,신도 수를 부풀려 발표하자는 의견이 나왔습니다.,부풀린다,Reputation+5 Integrity-2,정직하게 발표한다,Integrity+2 Reputation+3,아예 발표하지 않는다,Authority+5
-fo11,random,Followers,외국인 노동자들이 교단에 관심을 보입니다.,통역을 구해 맞이한다,Followers+6 Offerings-10 Charity+1,그들의 언어로 경전을 번역한다,Followers+8 Doctrine+10,거리를 둔다,Followers-1,일자리를 소개해 준다,Followers+5 Reputation+5
-fo12,random,Followers,교단을 떠났던 신도가 돌아오고 싶어 합니다.,두 팔 벌려 환영한다,Followers+1 FollowerFaith+10 Charity+1 @no.10,참회 의식을 거치게 한다,Followers+1 Authority+10,받아 주지 않는다,Authority+5 FollowerFaith-5
-fo13,random,Followers,경쟁 교단의 신도들이 우리 쪽으로 넘어오려 합니다.,모두 받아들인다,Followers+10 FollowerFaith-10,엄격한 심사를 한다,Followers+5 Authority+5,돌려보낸다,Reputation+5 Integrity+1,경쟁 교단의 비밀을 캐낸다,Followers+6 Integrity-2 @no.11
-fo14,random,Followers,축제에서 교단 부스를 운영합니다.,점괘를 봐 준다,Followers+6 Communion+1,무료 음식을 나눈다,Followers+5 Offerings-15,교단 음악을 공연한다,Followers+7 Reputation+3,경품 추첨을 한다,Followers+6 Offerings-10 @no.17
-fo15,random,Followers,한 가족 전체가 입교를 원합니다.,가족 세례식을 연다,Followers+5 FollowerFaith+10,조용히 받아들인다,Followers+4
-fo16,random,Followers,노인정에서 포교를 시작합니다.,옛이야기를 들어 드린다,Followers+5 Patience+2 Charity+1,건강 체조를 함께 한다,Followers+4 Health+1,장례 의식을 약속한다,Followers+6 Offerings+10,효과가 없다며 그만둔다,Temperance+1
-fo17,random,Followers,포교 중 길에서 시비가 붙었습니다.,맞서 논쟁한다,Reputation+3 Followers+2 @no.3,조용히 자리를 피한다,Patience+2,상대를 위해 기도한다,Followers+3 Charity+1,신도들을 불러 세를 과시한다,Authority+10 Reputation-10
-fo18,random,Followers,교단 소식지를 만들자는 제안이 나왔습니다.,매주 발행한다,Followers+6 Offerings-10 Patience+1,계절마다 발행한다,Followers+4,유료로 판다,Offerings+15 Followers+2,거절한다,Temperance+1
-fo19,random,Followers,청년 신도들이 동네 아이들에게 무료 과외를 하자고 합니다.,적극 지원한다,Followers+6 Reputation+5 @no.7,부모들에게도 포교한다,Followers+8 Reputation-5,교단 이름은 숨긴다,Reputation+5 Followers+2,거절한다,Authority+5
-dc01,random,Doctrine,교리의 첫 번째 계율을 정합니다.,살생하지 말라,Doctrine+20 Charity+2,교주에게 복종하라,Doctrine+15 Authority+15,욕망을 부정하지 말라,Doctrine+15 Lust+2 @no.8,진실만을 말하라,Doctrine+15 Integrity+2
-dc02,random,Doctrine,교리에 금식일을 넣을지 고민합니다.,매주 하루 금식,Doctrine+15 Temperance+2 Health-1,한 달에 한 번,Doctrine+10 Temperance+1,금식 대신 잔치의 날을 만든다,Doctrine+10 FollowerFaith+10 Appetite+2 @no.15,넣지 않는다,FollowerFaith+5
-dc03,random,Doctrine,신도 하나가 교리의 모순을 지적했습니다.,모순을 인정하고 고친다,Doctrine+20 Integrity+2 @no.7,더 깊은 해석으로 설명한다,Doctrine+15 Mentality+1,질문한 신도를 칭찬한다,FollowerFaith+10 Doctrine+5,의심하지 말라 꾸짖는다,Authority+10 Doctrine-5
-dc04,random,Doctrine,사후 세계에 대한 교리를 정리합니다.,천국과 지옥,Doctrine+15 FollowerFaith+10,윤회,Doctrine+15 Communion+1,사후 세계는 없다,Doctrine+10 Mentality+1,교주를 따른 자만 구원받는다,Doctrine+15 Authority+15 Reputation-5,각자의 믿음대로 열린다,Doctrine+15 FollowerFaith+10
-dc05,random,Doctrine,성관계에 대한 교리를 정해야 합니다.,엄격히 금한다,Doctrine+15 Temperance+2 Lust-2,결혼 안에서만 허락한다,Doctrine+15 FollowerFaith+5,신성한 의식으로 삼는다,Doctrine+15 Lust+3 Reputation-10 @no.14,자유에 맡긴다,FollowerFaith+10 Lust+1,교주만이 축복할 수 있다,Authority+15 Lust+2 Reputation-15
-dc06,random,Doctrine,재물에 대한 교리를 정합니다.,가난이 곧 거룩함이다,Doctrine+15 Temperance+2 Offerings-10,재물은 신의 축복이다,Doctrine+15 Offerings+20 Greed+1,가진 것을 나눠라,Doctrine+15 Charity+2 Reputation+5,모든 재물은 교단에 바쳐라,Offerings+30 FollowerFaith-10 Greed+2,재물은 놀이일 뿐이다,Doctrine+10 Greed+1 @no.17
-dc07,random,Doctrine,교리를 정리한 경전 초안이 완성되었습니다.,직접 다듬어 출간한다,Doctrine+25 Patience+1,비밀 경전으로 둔다,Doctrine+15 Authority+10 Communion+1
-dc08,random,Doctrine,다른 종교의 교리를 일부 차용할지 고민합니다.,적극 차용한다,Doctrine+15 Followers+3 Integrity-1,차용하되 출처를 밝힌다,Doctrine+15 Integrity+1,독창성을 지킨다,Doctrine+10 LeaderFaith+10,교묘하게 바꿔 우리 것으로 만든다,Doctrine+20 @no.4
-dc09,random,Doctrine,교리에 매일의 기도 횟수를 정합니다.,하루 다섯 번,Doctrine+15 FollowerFaith+10 Piety+1,아침과 저녁,Doctrine+10 FollowerFaith+5,원할 때 언제든,FollowerFaith+10,교주의 명이 있을 때,Authority+15 Doctrine+5
-dc10,random,Doctrine,신도들이 교리 공부 모임을 원합니다.,직접 가르친다,Doctrine+15 Authority+5 @no.7,제자들에게 맡긴다,Doctrine+10 FollowerFaith+5,교리는 외우기만 하면 된다,Authority+10 Doctrine+5,토론식으로 운영한다,Doctrine+15 FollowerFaith+10 Mentality+1
-dc11,random,Doctrine,종말에 대한 교리를 넣자는 의견이 나왔습니다.,가까운 종말을 예언한다,FollowerFaith+20 Reputation-15 Doctrine+10,먼 미래의 일로 둔다,Doctrine+15,종말은 없다,Doctrine+10 Reputation+3,종말 날짜를 정한다,FollowerFaith+25 Reputation-20 Integrity-1
-dc12,random,Doctrine,교리에 음식 금기를 정합니다.,고기를 금한다,Doctrine+15 Temperance+1 Appetite-1,술을 금한다,Doctrine+15 Temperance+2,금기는 없다,FollowerFaith+10 Appetite+1,교주가 축복한 음식만 먹는다,Authority+15 Doctrine+10,교주 앞에서만 마음껏 먹는다,Appetite+2 Authority+5 @no.15
-dc13,random,Doctrine,교리의 상징 동물을 정합니다.,뱀,Doctrine+15 Communion+1,양,Doctrine+10 FollowerFaith+10 Charity+1,까마귀,Doctrine+10 Mentality+1,사자,Doctrine+10 Authority+10
-dc14,random,Doctrine,교리 해석을 두고 측근들이 두 파로 갈렸습니다.,한쪽 손을 들어 준다,Doctrine+15 Authority+5 FollowerFaith-10,두 해석을 모두 인정한다,Doctrine+10 FollowerFaith+10,새로운 제3의 해석을 내놓는다,Doctrine+20 Mentality+1 @no.7,양쪽 모두 입을 다물게 한다,Authority+15 Doctrine-5
-dc15,random,Doctrine,교리에 고행 의식을 넣을지 고민합니다.,엄격한 고행을 넣는다,Doctrine+15 FollowerFaith+10 Health-1 @no.2,가벼운 절제로 대신한다,Doctrine+10 Temperance+1,고행은 필요 없다,FollowerFaith+5,교주만 고행한다,LeaderFaith+15 Health-2
-dc16,random,Doctrine,교리에 명절을 만듭니다.,교단 창설일,Doctrine+10 FollowerFaith+15,교주의 탄생일,Authority+15 Doctrine+10,첫 계시의 날,Doctrine+15 Communion+1,추수 감사의 날,Doctrine+10 Offerings+15
-dc17,random,Doctrine,교리를 아이들도 이해할 수 있게 쉽게 쓰자는 의견이 나옵니다.,동화로 만든다,Doctrine+10 Followers+4,그림책으로 만든다,Doctrine+10 FollowerFaith+10,교리는 쉬워서는 안 된다,Doctrine+10 Authority+5,노래로 만든다,Doctrine+10 FollowerFaith+10 Followers+2
-dc18,random,Doctrine,교리 속 죄와 벌을 정합니다.,참회하면 모두 용서받는다,Doctrine+15 FollowerFaith+10 Charity+1,죄에 따라 헌금으로 속죄한다,Offerings+25 Doctrine+10 Greed+1,엄격한 처벌을 정한다,Authority+15 Doctrine+10,교주가 직접 심판한다,Authority+20 Reputation-10
-dc19,random,Doctrine,오래된 교리 하나가 시대에 맞지 않는다는 지적이 나왔습니다.,과감히 수정한다,Doctrine+15 Followers+3,원형을 지킨다,Doctrine+10 FollowerFaith+10,수정하되 새 계시라 포장한다,Doctrine+20 Integrity-1 @no.4,신도들의 투표로 정한다,FollowerFaith+15 Doctrine+5
-cm01,random,Communion,기도 중 누군가 귓가에 속삭이는 소리가 들립니다.,귀를 기울인다,Communion+1 Miracle+1 Mentality-1,속삭임을 받아 적는다,Doctrine+15 Communion+1,기도를 멈춘다,Mentality+1,측근을 불러 확인한다,Authority-5 Mentality+1
-cm02,random,Communion,교단 건물 지하에서 오래된 제단을 발견했습니다.,제단에 제물을 바친다,Communion+1 Offerings-15 Miracle+1,제단을 봉인한다,Temperance+1,신도들에게 공개한다,FollowerFaith+15 Reputation-5,제단에서 밤새 명상한다,Communion+1 LeaderFaith+10 Health-1
-cm03,random,Communion,명상 중 몸이 공중에 뜨는 듯한 감각을 느꼈습니다.,더 깊이 빠져든다,Communion+1 Miracle+1 Health-1,두려워 멈춘다,Mentality-1,신도들 앞에서 재현해 본다,FollowerFaith+20 Integrity-1 @no.4,기록으로 남긴다,Doctrine+10 Mentality+1
-cm04,random,Communion,한 신도가 당신에게서 빛이 났다고 증언합니다.,신의 증표라 받아들인다,FollowerFaith+15 Communion+1,빛의 의미를 설교한다,FollowerFaith+10 Doctrine+10
-cm05,random,Communion,오래된 무당이 당신을 찾아와 접신의 비법을 알려 주겠다고 합니다.,배운다,Communion+2 Reputation-10 Miracle+1,정중히 거절한다,Integrity+1,비법만 듣고 쫓아낸다,Communion+1 Integrity-1,무당을 교단에 영입한다,Followers+1 Communion+1 Reputation-5
-cm06,random,Communion,깊은 밤 촛불이 저절로 꺼졌습니다.,신의 메시지라 여긴다,Communion+1 LeaderFaith+5,바람 탓이라 여긴다,Mentality+1,다시 켜고 기도를 이어 간다,LeaderFaith+10 Patience+1,불길한 징조라 경고한다,FollowerFaith+10 Reputation-5
-cm07,random,Communion,신도들과 함께 황홀경에 빠지는 의식을 엽니다.,북소리에 맞춰 춤춘다,Communion+1 FollowerFaith+15 Health-1,침묵 속에서 명상한다,Communion+1 Temperance+1,약초 향을 피운다,Communion+2 Health-2 Reputation-10 @no.8,의식을 취소한다,FollowerFaith-5,신도들과 밤새 연회를 벌인다,FollowerFaith+10 Lust+2 @no.19
-cm08,random,Communion,예언처럼 들리는 말이 당신 입에서 흘러나왔습니다.,예언으로 기록한다,Communion+1 Doctrine+10,신도들에게 해석을 맡긴다,FollowerFaith+10,못 들은 척한다,Temperance+1,예언이 맞도록 몰래 일을 꾸민다,FollowerFaith+20 Integrity-2 @no.11
-cm09,random,Communion,오래 비어 있던 성소에 들어가 하룻밤을 보냅니다.,밤새 기도한다,Communion+1 LeaderFaith+10 Health-1,두려워 나온다,Mentality-1
-cm10,random,Communion,동물들이 당신 주위에 모여드는 일이 잦아졌습니다.,신과 자연의 뜻이라 여긴다,Communion+1 Charity+1,동물들을 돌본다,Reputation+5 Charity+2,사진을 찍어 홍보한다,Followers+5 Integrity-1,우연이라 생각한다,Mentality+1
-cm11,random,Communion,꿈속에서 거대한 뱀이 당신에게 이름을 묻습니다.,당신의 이름을 답한다,Communion+1 Miracle+1,교단의 이름을 답한다,Communion+1 FollowerFaith+10,뱀의 이름을 되묻는다,Communion+2 Mentality-1,깨어난다,Temperance+1
-cm12,random,Communion,교단의 성물이 미세하게 떨리는 것을 발견했습니다.,성물 앞에서 기도한다,Communion+1 LeaderFaith+10,신도들에게 보여 준다,FollowerFaith+15 Reputation-5,조사해 본다,Mentality+1,성물을 숨긴다,Authority+5
-cm13,random,Communion,오랫동안 아팠던 신도가 당신의 기도 후 회복했습니다.,기적이라 선포한다,FollowerFaith+20 Communion+1 Reputation+3,의사의 공이라 말한다,Integrity+2 Reputation+3,조용히 감사 기도를 드린다,LeaderFaith+15 Communion+1
-cm14,random,Communion,접신 중 낯선 존재가 대가를 요구합니다.,대가를 치른다,Communion+2 Health-2 Miracle+1,거절한다,LeaderFaith+10 Communion-1,협상한다,Communion+1 Mentality+1 @no.3,의식을 끊는다,Mentality-1
-cm15,random,Communion,교단 근처 우물에서 이상한 빛이 올라옵니다.,성수로 지정한다,Communion+1 FollowerFaith+15,성수를 판다,Offerings+25 Reputation-10 Greed+1,우물을 막는다,Temperance+1,우물가에서 명상한다,Communion+1 Miracle+1
-cm16,random,Communion,신도 하나가 접신 체험을 했다고 주장합니다.,인정하고 예언자로 세운다,FollowerFaith+15 Authority-10 Communion+1,거짓이라 몰아세운다,Authority+15 FollowerFaith-10,체험 내용을 함께 검증한다,Doctrine+10 Mentality+1,그의 체험을 당신 것으로 만든다,Communion+1 Authority+10 Integrity-2
-cm17,random,Communion,일식이 일어나는 날입니다.,대규모 의식을 연다,Communion+1 FollowerFaith+15 Offerings-10,홀로 산에 올라 기도한다,Communion+2 LeaderFaith+10,과학 현상이라 설명한다,Reputation+5 Mentality+1
-cm18,random,Communion,오래된 무덤가에서 기도하자 바람이 멎었습니다.,영혼들과 대화를 시도한다,Communion+2 Mentality-1,서둘러 떠난다,Mentality-1
-rp01,random,Reputation,지역 신문이 교단을 취재하고 싶어 합니다.,적극 협조한다,Reputation+8 Followers+3 @no.3,조건을 걸고 허락한다,Reputation+5,거절한다,Reputation-5 Authority+5,기자를 매수한다,Reputation+10 Offerings-20 Integrity-2,신도들을 인터뷰하게 한다,Reputation+5 FollowerFaith+5
-rp02,random,Reputation,교단에 대한 악성 루머가 퍼지고 있습니다.,공식 해명문을 낸다,Reputation+5 Integrity+1,무시한다,Reputation-10,봉사 활동으로 이미지를 바꾼다,Reputation+8 Offerings-10 Charity+1,루머를 퍼뜨린 자를 찾아낸다,Authority+10 Reputation-5
-rp03,random,Reputation,재해 이재민을 돕자는 요청이 들어왔습니다.,대대적으로 돕는다,Reputation+13 Offerings-25 Charity+2 @no.10,조용히 돕는다,Reputation+5 Charity+2,홍보용 사진만 찍는다,Reputation+5 Integrity-2,거절한다,Reputation-15
-rp04,random,Reputation,동네 주민들이 교단의 소음에 항의합니다.,집회 시간을 줄인다,Reputation+5 FollowerFaith-5,방음 공사를 한다,Reputation+5 Offerings-20,주민들을 초대해 대접한다,Reputation+8 Followers+2 Offerings-10,무시한다,Reputation-15 Authority+5
-rp05,random,Reputation,시장 선거 후보가 교단의 지지를 원합니다.,공개 지지한다,Reputation+8 Offerings+15 Ambition+1,중립을 지킨다,Integrity+1,뒤에서 거래한다,Offerings+25 Integrity-2 @no.11,후보를 신도로 만든다,Followers+1 Authority+10,후보에게 교단의 요구를 내건다,Authority+10 Ambition+2
-rp06,random,Reputation,교단 신도가 범죄를 저질러 뉴스에 나왔습니다.,공개 사과한다,Reputation+3 Integrity+2,그 신도를 파문한다,Reputation+5 Followers-1 Authority+5,무관하다고 선을 긋는다,Reputation-5,그를 변호한다,FollowerFaith+10 Reputation-15
-rp07,random,Reputation,무료 급식소를 열자는 제안이 나왔습니다.,연다,Reputation+10 Offerings-20 Charity+2,주말에만 연다,Reputation+5 Offerings-10,급식소에서 포교도 한다,Followers+5 Reputation+3,거절한다,Temperance+1
-rp08,random,Reputation,교단을 비판하는 책이 출간되었습니다.,반박 책을 낸다,Reputation+5 Doctrine+10 @no.7,저자를 만나 대화한다,Reputation+8 Integrity+1,소송을 건다,Authority+10 Reputation-10 Offerings-15,신도들에게 읽지 말라 한다,Authority+10 FollowerFaith+5
-rp09,random,Reputation,지역 축제의 후원을 요청받았습니다.,크게 후원한다,Reputation+10 Offerings-20,소소하게 후원한다,Reputation+5 Offerings-5,축제에서 교단을 홍보한다,Followers+5 Reputation+3,거절한다,Reputation-5
-rp10,random,Reputation,교단 출신 유명인이 교단을 비난했습니다.,진심으로 반성한다,Reputation+5 Integrity+2,공개 반박한다,Authority+10 Reputation-5,그를 위해 기도한다고 발표한다,Reputation+5 FollowerFaith+10 @no.4,그의 과거를 폭로한다,Reputation-15 Integrity-2
-rp11,random,Reputation,방송국에서 사이비 종교 특집에 교단을 다루려 합니다.,인터뷰에 응해 해명한다,Reputation+8 @no.3,촬영을 막는다,Authority+10 Reputation-15,신도들의 평범한 일상을 보여 준다,Reputation+10 FollowerFaith-5,잠적한다,Reputation-10,방송을 거꾸로 포교에 이용한다,Followers+8 Reputation-5 @no.4
-rp12,random,Reputation,동네 청소 봉사에 교단이 참여합니다.,교단 조끼를 입고 참여한다,Reputation+8 Followers+2,당신이 직접 앞장선다,Reputation+8 Health-1 Charity+1
-rp13,random,Reputation,종교 지도자 모임에 초대받았습니다.,참석해 교단을 소개한다,Reputation+8 Authority+5 @no.3,참석해 듣기만 한다,Reputation+3 Mentality+1,거절한다,Authority+5,모임을 주도하려 한다,Authority+15 Reputation-5 Ambition+1
-rp14,random,Reputation,교단이 운영하는 쉼터에 기부가 쏟아집니다.,기부금을 투명하게 공개한다,Reputation+8 Integrity+1,일부를 교단 운영비로 쓴다,Offerings+20 Integrity-1,쉼터를 확장한다,Reputation+8 Charity+2,기부자 명단을 홍보에 쓴다,Reputation+5 Followers+3
-rp15,random,Reputation,인근 학교에서 교단 신도 학생이 따돌림을 당한다고 합니다.,학교를 찾아가 대화한다,Reputation+5 FollowerFaith+10,학생에게 신앙을 숨기라 한다,FollowerFaith-10 Reputation+3,강경하게 항의한다,Authority+10 Reputation-10,교단 학교를 세우겠다고 한다,Authority+10 Offerings-20 Ambition+1
-rp16,random,Reputation,명망 있는 학자가 교단을 연구하겠다고 합니다.,적극 협조한다,Reputation+8 Doctrine+5 @no.7,조건부로 허락한다,Reputation+5,거절한다,Authority+5 Reputation-5,학자를 신도로 만든다,Followers+1 Reputation+5
-rp17,random,Reputation,교단 이름으로 장학금을 주자는 제안이 나왔습니다.,교단 장학금을 만든다,Reputation+10 Offerings-20 Charity+1,거절한다,Temperance+1
-rp18,random,Reputation,이웃 교회 목사가 교단에 화해의 손길을 내밉니다.,기꺼이 손을 잡는다,Reputation+8 Charity+1 @no.10,경계하며 받아들인다,Reputation+3,거절한다,Authority+5 Reputation-5,그 교회 신도들을 노린다,Followers+5 Integrity-2
-cd01,condition,Followers>=20,신도가 스무 명을 넘었습니다. 교단이 제법 모양을 갖춥니다.,조촐한 축하 예배를 연다,FollowerFaith+15,더 큰 목표를 선포한다,Ambition+2 Followers+3
-cd02,condition,Followers>=50,신도가 쉰 명을 넘었습니다. 집회 장소가 비좁아졌습니다.,더 넓은 곳을 빌린다,Offerings-25 Followers+5,두 번에 나눠 모인다,FollowerFaith+10 Health-1,소모임 체제로 바꾼다,FollowerFaith+15 Authority-5 @no.7
-cd03,condition,Followers>=100,신도가 백 명을 넘었습니다. 언론이 교단을 주목하기 시작합니다.,기자 회견을 연다,Reputation+10 @no.3,조용히 내실을 다진다,FollowerFaith+15,교단 본부를 세운다,Authority+20 Offerings-40,경계를 강화한다,Authority+10 Reputation-5
-cd04,condition,Followers>=200,신도가 이백 명을 넘었습니다. 지부를 세우자는 목소리가 높습니다.,지부를 세운다,Followers+15 Authority-10 Offerings-30,본부 중심 체제를 유지한다,Authority+15,측근들에게 지부를 나눠 준다,Followers+10 Authority-5 @no.11
-cd05,condition,FollowerFaith>=200,신도들의 믿음이 깊어져 자발적인 간증이 이어집니다.,간증 집회를 연다,FollowerFaith+15 Followers+3,간증을 책으로 엮는다,Doctrine+15 Reputation+3,간증을 헌금으로 연결한다,Offerings+30 FollowerFaith-10
-cd06,condition,FollowerFaith>=500,신도들이 당신을 위해서라면 무엇이든 하겠다고 맹세합니다.,맹세를 받아들인다,Authority+20 Reputation-10,그 맹세를 신에게 돌린다,LeaderFaith+15 Doctrine+10,맹세를 거두라 한다,Integrity+2 FollowerFaith+5,맹세를 시험해 본다,Authority+15 FollowerFaith-10 Ambition+2,맹세를 계약서로 남긴다,Authority+15 Mentality+1
-cd07,condition,FollowerFaith>=800,신도들의 믿음이 광신에 가까워졌습니다. 외부의 시선이 따갑습니다.,믿음을 절제하라 설교한다,FollowerFaith-20 Reputation+10 Temperance+2,더욱 불을 지핀다,FollowerFaith+20 Reputation-30,외부와의 접촉을 끊는다,Authority+20 Followers-10 Reputation-15,광신을 교단의 힘으로 쓴다,Authority+25 Integrity-2 Ambition+2
-cd08,condition,Offerings>=300,교단 금고가 넉넉해졌습니다.,신도 복지에 쓴다,FollowerFaith+20 Offerings-30 Charity+1,교단 건물을 짓는다,Authority+20 Offerings-50,비상금으로 둔다,Temperance+2,당신의 생활을 윤택하게 한다,Wealth+4 Greed+2 Offerings-30 @no.19
-cd09,condition,Offerings>=700,막대한 헌금이 쌓이자 이를 노리는 자들이 나타났습니다.,경호원을 고용한다,Offerings-30 Authority+10,재산을 분산한다,Offerings-10 Mentality+1 @no.7,모두 사회에 환원한다,Offerings-100 Reputation+20 Charity+3,투자로 불린다,Offerings+50 Greed+2 Reputation-10 @no.17
-cd10,condition,Offerings<=0 Followers>=10,교단 금고가 바닥났습니다. 신도들이 불안해합니다.,당신의 재산을 내놓는다,Offerings+30 Wealth-4 FollowerFaith+15,긴급 헌금을 호소한다,Offerings+25 FollowerFaith-10,기도로 버틴다,LeaderFaith+15 Patience+2 @no.2,빚을 낸다,Offerings+40 Reputation-10
-cd11,condition,Authority>=300,측근들이 당신의 눈치를 보며 아무도 반대하지 않습니다.,일부러 반대 의견을 청한다,FollowerFaith+10 Integrity+1 Mentality+1,이 침묵을 즐긴다,Authority+15 Ambition+2,더 큰 권한을 요구한다,Authority+20 FollowerFaith-10,측근들을 시험한다,Authority+10 Mentality+1
-cd12,condition,Authority>=700,당신의 한마디가 곧 법이 되었습니다.,그 힘을 자비롭게 쓴다,FollowerFaith+20 Charity+2 @no.10,그 힘으로 반대파를 정리한다,Authority+20 Reputation-20,권한을 측근들에게 나눈다,FollowerFaith+15 Authority-20 Integrity+1,신이 되기를 꿈꾼다,Authority+25 Ambition+3 LeaderFaith-10
-cd13,condition,LeaderFaith>=300,당신의 신앙이 한층 깊어졌습니다. 기도가 더 이상 말이 아닌 대화처럼 느껴집니다.,침묵 수행에 들어간다,LeaderFaith+20 Communion+1,교리를 다시 쓴다,Doctrine+25
-cd14,condition,LeaderFaith>=700,신이 당신에게 직접 모습을 드러낸 것 같습니다.,무릎 꿇고 경배한다,LeaderFaith+30 Communion+2,신도들에게 증언한다,FollowerFaith+30 Reputation-10,신에게 질문을 던진다,Doctrine+30 Mentality+2 @no.7,환각이라 의심한다,LeaderFaith-20 Mentality+2
-cd15,condition,Communion>=3,접신이 깊어지며 꿈과 현실의 경계가 흐려집니다.,더 깊이 들어간다,Communion+1 Mentality-2 Miracle+1,잠시 멈추고 휴식한다,Health+2 Communion-1,신도들과 경험을 나눈다,FollowerFaith+15
-cd16,condition,Communion>=6,당신의 말에 이상한 힘이 깃들기 시작했습니다.,병자를 치유해 본다,FollowerFaith+25 Followers+5 Miracle+1,힘을 숨긴다,Temperance+2 LeaderFaith+10,힘으로 신도를 복종시킨다,Authority+25 Integrity-2,힘의 근원을 탐구한다,Doctrine+20 Communion+1 @no.7
-cd17,condition,Communion>=10,완전한 접신에 이르렀습니다. 당신은 신의 목소리 그 자체가 되었습니다.,신의 뜻을 세상에 전한다,FollowerFaith+40 Reputation+10 Doctrine+20,그 힘을 혼자 간직한다,LeaderFaith+40 Miracle+2,신과 하나가 되기를 택한다,LeaderFaith+30 Health-3
-cd18,condition,DoctrineLv>=2,교리가 체계를 갖추기 시작했습니다.,교리 학교를 연다,Doctrine+15 Followers+3 @no.7,교리를 외부에 공개한다,Reputation+8
-cd19,condition,DoctrineLv>=4,교리를 둘러싼 이단 논쟁이 일어났습니다.,이단을 파문한다,Authority+20 Followers-5,토론회를 연다,Doctrine+20 Reputation+3 @no.3,이단의 주장을 흡수한다,Doctrine+15 Followers+5,무시한다,Authority-5
-cd20,condition,DoctrineLv>=6,교리가 완성에 가까워지자 교단 밖에서도 연구 대상이 되었습니다.,학자들과 교류한다,Reputation+10 Doctrine+10,교리를 비밀로 닫는다,Authority+15 Communion+1
-cd21,condition,Reputation<=350,교단의 평판이 크게 떨어졌습니다. 거리에서 신도들이 손가락질을 받습니다.,대규모 봉사로 만회한다,Reputation+15 Offerings-30 Charity+2,신도들에게 인내를 설교한다,FollowerFaith+15 Patience+2 @no.2,언론에 맞선다,Authority+10 Reputation-10,잠시 활동을 멈춘다,Reputation+8 Followers-3
-cd22,condition,Reputation<=300,교단이 사회적 지탄의 대상이 되었습니다. 당국의 조사가 시작됩니다.,조사에 성실히 협조한다,Reputation+10 Integrity+2,증거를 없앤다,Integrity-3 Authority+10,해외로 거점을 옮긴다,Followers-15 Offerings-40,희생양을 내세운다,Reputation+8 FollowerFaith-20 @no.11
-cd23,condition,Reputation>=900,교단이 지역 사회에서 존경받는 단체가 되었습니다.,감사 행사를 연다,Reputation+5 FollowerFaith+15,정치에 진출한다,Authority+20 Ambition+2,겸손을 잃지 않는다,Temperance+2 Integrity+1,명성을 이용해 포교한다,Followers+15
-cd24,condition,Followers>=50 FollowerFaith<=100,신도는 많지만 믿음이 얕습니다. 교단이 흔들립니다.,신앙 수련회를 연다,FollowerFaith+25 Offerings-15,얕은 신도를 정리한다,Followers-10 FollowerFaith+20 Authority+10,믿음보다 숫자가 중요하다,Followers+5 FollowerFaith-10,당신이 직접 신도들을 만난다,FollowerFaith+20 Health-2 @no.2
-cd25,condition,Offerings>=400 Reputation<=600,돈은 넘치지만 평판은 바닥입니다. 사람들은 교단을 돈벌이 집단이라 부릅니다.,헌금을 사회에 환원한다,Offerings-60 Reputation+15,평판 따위 신경 쓰지 않는다,Offerings+20 Greed+2,홍보에 돈을 쓴다,Offerings-30 Reputation+8,돈의 흐름을 공개한다,Reputation+10 Integrity+2
-cd26,condition,Authority>=400 FollowerFaith<=150,권위는 높지만 신도들의 마음이 떠나고 있습니다.,권위를 내려놓고 다가간다,FollowerFaith+25 Authority-15 Charity+1,공포로 다스린다,Authority+15 FollowerFaith-10 Followers-5,측근을 통해 민심을 살핀다,FollowerFaith+10 Mentality+1,기적을 연출한다,FollowerFaith+25 Integrity-2 @no.4
-cd27,condition,LeaderFaith<=50 Followers>=30,신도는 늘었지만 정작 당신의 신앙은 바닥입니다.,모든 것을 내려놓고 기도한다,LeaderFaith+30 Authority-10,신앙 없이 교단을 운영한다,Authority+10 LeaderFaith-10 Integrity-2,측근에게 고백한다,LeaderFaith+15 FollowerFaith-10,쾌락에 빠진다,Lust+3 LeaderFaith-10 @no.19
-cd28,condition,Followers>=100 Offerings>=500,교단이 세력을 이루자 다른 교단들이 견제하기 시작했습니다.,연합을 제안한다,Reputation+8 Followers+10,정면으로 맞선다,Authority+20 Reputation-10,몸을 낮춘다,Reputation+5 Authority-5,경쟁 교단을 매수한다,Followers+15 Offerings-50 Integrity-2 @no.11,경쟁 교단에 몰래 사람을 심는다,Authority+10 Integrity-1 @no.17
-cd29,condition,Communion>=5 DoctrineLv>=3,접신 체험이 교리와 맞물리며 새로운 계시가 내려옵니다.,새 경전을 쓴다,Doctrine+30 Communion+1,계시를 의심한다,Mentality+2 LeaderFaith-10
-cd30,condition,FollowerFaith>=400 LeaderFaith>=400,교주와 신도의 믿음이 하나로 맞물렸습니다. 교단에 성스러운 기운이 감돕니다.,대축제를 연다,FollowerFaith+20 Reputation+8 Offerings-30,이 순간을 교리에 새긴다,Doctrine+25,더 높은 곳을 바라본다,Ambition+2 Authority+15,함께 조용히 기도한다,LeaderFaith+15 FollowerFaith+15 Communion+1
-cd31,condition,Reputation<=250,동네 주민들이 교단 건물 앞에서 반대 시위를 벌입니다.,주민들과 대화의 자리를 만든다,Reputation+15 Patience+1,시위를 무시한다,Reputation-10 Authority+5,신도들을 동원해 맞불 집회를 연다,Authority+10 Reputation-20 FollowerFaith+10,당분간 집회를 멈춘다,Reputation+10 FollowerFaith-10
-cd32,condition,Reputation<=200,지역의 여러 종교 단체가 연합해 교단을 이단으로 규정했습니다.,공개 토론을 제안한다,Reputation+15 Doctrine+10 @no.3,교리를 순화한다,Reputation+20 Doctrine-15,그들을 맞비난한다,FollowerFaith+15 Reputation-15,침묵한다,Reputation-5 Patience+2
-cd33,condition,Reputation<=150,국가 기관이 교단에 대한 공식 조사에 착수했습니다.,모든 자료를 제출한다,Reputation+20 Offerings-20 Integrity+2,변호사를 고용해 맞선다,Offerings-40 Reputation+5,핵심 자료를 숨긴다,Reputation-15 Integrity-3,신도들에게 증언을 시킨다,FollowerFaith-10 Reputation+10
-cd34,condition,Reputation<=80,정부가 교단 해체 명령을 검토하고 있다는 소식입니다. 시간이 많지 않습니다.,교단 운영을 전면 쇄신한다,Reputation+40 Authority-30 Offerings-50,사회 공헌을 약속하고 거액을 기부한다,Reputation+30 Offerings-80,지하로 숨어든다,Followers-20 Reputation+10 Authority+10,끝까지 맞선다,FollowerFaith+20 Reputation-30
-cd35,condition,Reputation>=700,지역 단체들이 교단에 공동 사업을 제안해 왔습니다.,기꺼이 함께한다,Reputation+10 Followers+5 Offerings-10,교단 이름을 앞세운다,Followers+8 Reputation+3,정중히 거절한다,Authority+5
-cd36,condition,Reputation>=800,정부에서 교단을 정식 종교 법인으로 인정하는 절차를 안내해 왔습니다.,절차를 밟는다,Reputation+15 Offerings-20 Authority+10,국가의 간섭을 거부한다,Authority+15 Reputation-15,세제 혜택만 챙긴다,Offerings+30 Integrity-1
-cd37,condition,Reputation>=850 Followers>=100,교단이 지역 사회의 상징이 되었습니다. 언론이 교주의 인터뷰를 요청합니다.,진솔하게 인터뷰한다,Reputation+10 Followers+10 Integrity+1,교단의 비전을 크게 선포한다,Followers+15 Authority+10 Reputation-5,언론을 피한다,Authority+5
-cd38,condition,Reputation<=300 Followers>=30,신도들의 가족이 교단을 고소하겠다며 모였습니다.,가족들을 직접 만나 설득한다,Reputation+15 FollowerFaith-5 Charity+1,신도들에게 가족과 연을 끊으라 한다,FollowerFaith+15 Reputation-25 Followers-3,합의금을 준비한다,Offerings-40 Reputation+20,신도들의 귀가를 허락한다,Followers-8 Reputation+25
+﻿id,kind,theme,text
+lf01,random,LeaderFaith,"1971년 겨울, 기도실 촛불 아래서 확신이 흔들립니다. 정말 신은 당신을 택했을까요?"
+lf02,random,LeaderFaith,꿈에서 신의 목소리를 들었다고 확신합니다. 아침 라디오가 잡음 속에서 노래를 흘립니다.
+lf03,random,LeaderFaith,금식 기도를 결심했습니다. 부엌에서는 밥 짓는 냄새가 솔솔 올라옵니다.
+lf04,random,LeaderFaith,당신이 존경하던 성직자가 추문에 휘말렸습니다. 신문 가판대에 그의 사진이 실렸습니다.
+lf05,random,LeaderFaith,기도 중 손끝이 따뜻해지는 것을 느낍니다. 전기 스탠드가 깜빡입니다.
+lf06,random,LeaderFaith,오래된 경전을 다시 읽다 새로운 의미를 발견했습니다. 책갈피 사이에 낡은 메모가 끼어 있습니다.
+lf07,random,LeaderFaith,갑작스러운 병으로 며칠간 앓아누웠습니다. 방 안에는 약탕기 냄새가 가득합니다.
+lf08,random,LeaderFaith,산속 수도원에서 은둔 수행을 권유받았습니다. 산길에는 안개가 자욱합니다.
+lf09,random,LeaderFaith,당신의 기도가 이루어진 듯한 일이 일어났습니다. 오래 앓던 이웃집 아이가 열이 내렸습니다.
+lf10,random,LeaderFaith,다른 종교의 수행자가 당신에게 논쟁을 청합니다. 그는 시장 한복판에서 확성기를 들고 있습니다.
+lf11,random,LeaderFaith,교단 운영에 지쳐 신앙이 메말라 갑니다. 새벽 기도회에 빈자리가 눈에 띕니다.
+lf12,random,LeaderFaith,어린 시절 다니던 교회의 종소리가 문득 그리워집니다. 옛 동네 골목은 이제 아파트 단지가 되었습니다.
+lf13,random,LeaderFaith,밤하늘의 별똥별을 보며 소원을 빕니다. 옥상 위 빨래가 바람에 펄럭입니다.
+lf14,random,LeaderFaith,측근이 당신의 신앙을 의심하는 말을 엿들었습니다. 복도 끝 문틈으로 목소리가 새어 나옵니다.
+lf15,random,LeaderFaith,폭풍우 치는 밤 교단 건물에 벼락이 떨어졌습니다. 지붕 한쪽이 불에 그을렸습니다.
+lf16,random,LeaderFaith,묵상 중 당신의 전생을 본 것 같습니다. 눈을 뜨자 흰 연기가 천장으로 흩어집니다.
+lf17,random,LeaderFaith,한 노인이 당신에게 진짜 믿음이 무엇인지 묻습니다. 노인의 손에는 낡은 성경이 들려 있습니다.
+lf18,random,LeaderFaith,기도문을 새로 지어 보기로 했습니다. 타자기 앞에는 종이가 수북이 쌓여 있습니다.
+lf19,random,LeaderFaith,당신이 신을 잃는 악몽을 꾸었습니다. 깨어 보니 식은땀에 베개가 젖어 있습니다.
+ff01,random,FollowerFaith,한 신도가 가족의 반대로 교단을 떠나려 합니다. 대문 앞에서 가족이 목소리를 높이고 있습니다.
+ff02,random,FollowerFaith,신도들이 집회에서 눈물을 흘리며 찬양합니다. 강당 천장 선풍기가 느리게 돕니다.
+ff03,random,FollowerFaith,신도들 사이에 의견 충돌이 생겼습니다. 집회 뒷자리에서 언성이 높아집니다.
+ff04,random,FollowerFaith,한 신도가 당신에게 평생 모은 재산을 바치겠다고 합니다. 그의 손에는 낡은 통장이 들려 있습니다.
+ff05,random,FollowerFaith,신도들이 당신의 생일을 성대하게 축하하려 합니다. 집회소 벽에 색종이가 붙어 있습니다.
+ff06,random,FollowerFaith,어린 신도가 당신을 따라 하며 설교 흉내를 냅니다. 집회소 마룻바닥에서 아이들이 웃음을 터뜨립니다.
+ff07,random,FollowerFaith,병든 신도가 기적을 바라며 당신을 찾아왔습니다. 그의 얼굴은 창백하고 숨이 가쁩니다.
+ff08,random,FollowerFaith,한 신도가 꿈에서 당신을 보았다고 간증합니다. 그는 흥분해 목소리가 떨립니다.
+ff09,random,FollowerFaith,신도들이 교단 생활이 너무 엄격하다고 불평합니다. 식당에서 수군거리는 소리가 들립니다.
+ff10,random,FollowerFaith,오래된 신도 한 명이 세상을 떠났습니다. 그의 방에는 낡은 성경과 안경이 놓여 있습니다.
+ff11,random,FollowerFaith,신도들이 함께 노래할 찬송가를 원합니다. 피아노 뚜껑 위에 악보가 흩어져 있습니다.
+ff12,random,FollowerFaith,신도 하나가 당신의 사생활에 대한 소문을 퍼뜨렸습니다. 소문은 이미 동네 다방까지 퍼졌습니다.
+ff13,random,FollowerFaith,신도들이 교단의 상징을 몸에 새기고 싶어 합니다. 문신 가게 간판이 골목에 걸려 있습니다.
+ff14,random,FollowerFaith,새벽 기도회에 나오는 신도가 줄었습니다. 텅 빈 의자들이 어둠 속에 놓여 있습니다.
+ff15,random,FollowerFaith,신도 부부가 당신에게 아이의 이름을 지어 달라고 합니다. 아기는 포대기 속에서 잠들어 있습니다.
+ff16,random,FollowerFaith,신도들 사이에서 당신을 신으로 섬기자는 말이 나옵니다. 집회 중 누군가 큰 소리로 외칩니다.
+ff17,random,FollowerFaith,한 신도가 당신에게 연모의 마음을 고백했습니다. 그녀의 목소리가 떨립니다.
+ff18,random,FollowerFaith,신도들이 단체로 순례를 떠나자고 합니다. 버스 정류장에 신도들이 가득 모여 있습니다.
+ff19,random,FollowerFaith,신도들이 당신을 위해 밤새 기도해 주었습니다. 아침 햇살이 집회소 창으로 들어옵니다.
+au01,random,Authority,교단 측근 하나가 운영 방식에 반기를 들었습니다. 회의실 탁자 위에 서류가 흩어져 있습니다.
+au02,random,Authority,교단의 위계를 정해야 할 때가 왔습니다. 칠판에는 직분 이름이 빼곡히 적혀 있습니다.
+au03,random,Authority,신도들 앞에서 말실수를 했습니다. 강당 안이 잠시 술렁입니다.
+au04,random,Authority,교단을 상징할 의복을 정합니다. 양복점 진열창에 옷감 견본이 가득합니다.
+au05,random,Authority,신도 하나가 당신의 명령을 어겼습니다. 집회장 뒷문으로 그가 몰래 빠져나갑니다.
+au06,random,Authority,교단 집회 장소를 옮길지 고민합니다. 지도 위에 여러 후보지가 표시되어 있습니다.
+au07,random,Authority,측근들이 서로 당신의 신임을 얻으려 경쟁합니다. 회식 자리에서도 눈치 싸움이 벌어집니다.
+au08,random,Authority,당신의 결정에 신도들이 의문을 제기합니다. 집회 중 손을 든 신도가 줄을 잇습니다.
+au09,random,Authority,교단 규칙집을 만들자는 제안이 나왔습니다. 책상에는 낡은 규약집이 펼쳐져 있습니다.
+au10,random,Authority,다른 교단의 지도자가 동맹을 제안합니다. 찻집 창가 자리에서 그가 웃으며 손을 내밉니다.
+au11,random,Authority,신도들이 당신 앞에 무릎을 꿇기 시작했습니다. 집회장 바닥이 무릎 자국으로 가득합니다.
+au12,random,Authority,교단의 문장을 디자인합니다. 인쇄소 책상에는 시안이 여러 장 펼쳐져 있습니다.
+au13,random,Authority,측근 하나가 교단 자금을 빼돌린 정황이 드러났습니다. 금고 장부의 숫자가 맞지 않습니다.
+au14,random,Authority,중요한 결정을 앞두고 측근 회의가 열렸습니다. 회의실에는 담배 연기가 자욱합니다.
+au15,random,Authority,신도들이 당신에게 직접 결혼 주례를 부탁합니다. 예식장 대신 집회소를 쓰기로 했습니다.
+au16,random,Authority,교단에 감찰관 직책을 두자는 의견이 나옵니다. 측근들은 서로의 눈치를 살핍니다.
+au17,random,Authority,신도들이 당신의 말을 받아 적어 책으로 엮자고 합니다. 등사기 소리가 뒷방에서 들려옵니다.
+au18,random,Authority,교단 내 젊은 신도들이 독자적인 모임을 만들었습니다. 모임 안내 전단이 집회소 게시판에 붙어 있습니다.
+au19,random,Authority,당신의 초상화를 집회장에 걸자는 제안이 나왔습니다. 화가가 캔버스 앞에서 붓을 고르고 있습니다.
+of01,random,Offerings,헌금함에 익명의 거액이 들어 있었습니다. 봉투에는 이름 대신 빈 칸만 적혀 있습니다.
+of02,random,Offerings,교단 건물 지붕이 새기 시작했습니다. 천장에 누런 얼룩이 번지고 있습니다.
+of03,random,Offerings,한 사업가가 교단에 투자를 제안합니다. 회의실 탁자 위에 계약서가 놓여 있습니다.
+of04,random,Offerings,헌금 액수에 따라 자리를 정하자는 의견이 나왔습니다. 집회소 맨 앞줄 의자가 비어 있습니다.
+of05,random,Offerings,교단의 상징을 새긴 기념품을 팔아 보자는 제안이 나왔습니다. 상가 가게에 견본이 진열되어 있습니다.
+of06,random,Offerings,교단 회계를 맡던 신도가 장부에 구멍이 있다고 보고합니다. 장부 귀퉁이에 연필 자국이 보입니다.
+of07,random,Offerings,가난한 신도가 헌금을 못 내 미안해합니다. 그의 손에는 낡은 장갑이 끼워져 있습니다.
+of08,random,Offerings,교단 이름으로 작은 가게를 열자는 의견이 나왔습니다. 골목에 빈 점포 하나가 나와 있습니다.
+of09,random,Offerings,연말이 되어 교단 재정을 결산합니다. 장부에는 숫자가 빽빽하게 적혀 있습니다.
+of10,random,Offerings,값비싼 성물을 사자는 제안이 들어왔습니다. 골동품 상인이 상자를 열어 보여 줍니다.
+of11,random,Offerings,신도가 도박으로 번 돈을 헌금하려 합니다. 그는 주머니에서 구겨진 지폐 뭉치를 꺼냅니다.
+of12,random,Offerings,세무 당국이 교단 재정을 문의해 왔습니다. 세무서 직원이 서류 목록을 펼쳐 듭니다.
+of13,random,Offerings,신도들이 당신을 위해 새 차를 마련하자고 합니다. 주차장에는 낡은 승합차만 서 있습니다.
+of14,random,Offerings,헌금 바구니가 하나 사라졌습니다. 집회소 뒷문이 열려 있고 바닥에 발자국이 남아 있습니다.
+of15,random,Offerings,교단 소유의 땅을 팔라는 제안이 들어왔습니다. 땅은 읍내 외곽의 풀밭입니다.
+of16,random,Offerings,신도들이 매달 정기 헌금 제도를 원합니다. 명부 위에 날짜가 가득 적혀 있습니다.
+of17,random,Offerings,값비싼 연회를 열어 후원자를 모으자는 제안이 나왔습니다. 호텔 연회장에 샹들리에가 빛납니다.
+of18,random,Offerings,헌금이 갑자기 크게 줄었습니다. 헌금함을 열어 보니 지난달보다 절반도 안 찹니다.
+of19,random,Offerings,한 재벌가 후손이 신도가 되겠다며 찾아왔습니다. 그의 차는 집회소 앞을 가득 메웁니다.
+fo01,random,Followers,광장에서 즉석 설교를 해 볼 기회가 생겼습니다. 광장 한쪽에서 확성기 소리가 울립니다.
+fo02,random,Followers,한 신도가 친구들을 데려오겠다고 합니다. 그는 주말 계획을 적은 수첩을 보여 줍니다.
+fo03,random,Followers,대학가에서 포교를 시도합니다. 캠퍼스 게시판에는 시위 벽보가 빼곡합니다.
+fo04,random,Followers,새 신도들이 기존 신도들과 어울리지 못합니다. 식당 한쪽에 두 무리가 따로 앉아 있습니다.
+fo05,random,Followers,병원 앞에서 환자 가족들에게 다가갑니다. 대기실 의자마다 지친 얼굴이 앉아 있습니다.
+fo06,random,Followers,유명 인사가 교단에 관심을 보입니다. 그의 이름이 신문 연예면에 자주 오르내립니다.
+fo07,random,Followers,인터넷으로 포교를 해 보자는 의견이 나왔습니다. 젊은 신도가 전화 모뎀을 연결하고 있습니다.
+fo08,random,Followers,시골 마을을 순회하며 포교합니다. 흙먼지 날리는 신작로를 버스가 덜컹거리며 지납니다.
+fo09,random,Followers,교도소 수감자들에게 설교할 기회가 생겼습니다. 면회실 철문이 차갑게 닫힙니다.
+fo10,random,Followers,신도 수를 부풀려 발표하자는 의견이 나왔습니다. 발표 자료 초안에 숫자가 크게 적혀 있습니다.
+fo11,random,Followers,외국인 노동자들이 교단에 관심을 보입니다. 공장 기숙사 앞에 사람들이 모여 있습니다.
+fo12,random,Followers,교단을 떠났던 신도가 돌아오고 싶어 합니다. 그는 머뭇거리며 집회소 문 앞에 서 있습니다.
+fo13,random,Followers,경쟁 교단의 신도들이 우리 쪽으로 넘어오려 합니다. 골목 모퉁이에서 두 교단의 신도가 서로 눈치를 봅니다.
+fo14,random,Followers,축제에서 교단 부스를 운영합니다. 부스 앞에 줄이 길게 늘어서 있습니다.
+fo15,random,Followers,한 가족 전체가 입교를 원합니다. 가족은 나란히 서서 당신의 답을 기다립니다.
+fo16,random,Followers,노인정에서 포교를 시작합니다. 장기판 소리가 방 안을 가득 채웁니다.
+fo17,random,Followers,포교 중 길에서 시비가 붙었습니다. 상대는 큰 소리로 교단을 욕합니다.
+fo18,random,Followers,교단 소식지를 만들자는 제안이 나왔습니다. 등사기 앞에 종이 다발이 쌓여 있습니다.
+fo19,random,Followers,청년 신도들이 동네 아이들에게 무료 과외를 하자고 합니다. 교회 마당에 아이들이 모여듭니다.
+dc01,random,Doctrine,교리의 첫 번째 계율을 정합니다. 낡은 공책에 계율 후보들이 적혀 있습니다.
+dc02,random,Doctrine,교리에 금식일을 넣을지 고민합니다. 달력 위에 빈 칸이 가득합니다.
+dc03,random,Doctrine,신도 하나가 교리의 모순을 지적했습니다. 그는 교리 공책을 펼쳐 들고 있습니다.
+dc04,random,Doctrine,사후 세계에 대한 교리를 정리합니다. 빛바랜 불경 책이 책상에 놓여 있습니다.
+dc05,random,Doctrine,성관계에 대한 교리를 정해야 합니다. 회의실 문틈으로 긴 토론 소리가 새어 나옵니다.
+dc06,random,Doctrine,재물에 대한 교리를 정합니다. 시장 노점에서 흥정하는 소리가 들려옵니다.
+dc07,random,Doctrine,교리를 정리한 경전 초안이 완성되었습니다. 원고지 묶음이 책상 위에 쌓여 있습니다.
+dc08,random,Doctrine,다른 종교의 교리를 일부 차용할지 고민합니다. 서가에는 여러 종교 서적이 나란히 꽂혀 있습니다.
+dc09,random,Doctrine,교리에 매일의 기도 횟수를 정합니다. 벽시계가 똑딱거리고 있습니다.
+dc10,random,Doctrine,신도들이 교리 공부 모임을 원합니다. 교회 지하 강의실에 의자가 줄지어 놓여 있습니다.
+dc11,random,Doctrine,종말에 대한 교리를 넣자는 의견이 나왔습니다. 신문에는 세기말 뉴스가 가득합니다.
+dc12,random,Doctrine,교리에 음식 금기를 정합니다. 식당 메뉴판이 교리 공책 옆에 펼쳐져 있습니다.
+dc13,random,Doctrine,교리의 상징 동물을 정합니다. 동물도감이 펼쳐져 있습니다.
+dc14,random,Doctrine,교리 해석을 두고 측근들이 두 파로 갈렸습니다. 회의실 문 앞에 두 무리가 서 있습니다.
+dc15,random,Doctrine,교리에 고행 의식을 넣을지 고민합니다. 산 속 기도원의 바위길이 떠오릅니다.
+dc16,random,Doctrine,교리에 명절을 만듭니다. 달력에 붉은 표시를 할 날짜를 고릅니다.
+dc17,random,Doctrine,교리를 아이들도 이해할 수 있게 쉽게 쓰자는 의견이 나옵니다. 교육관 벽에 그림이 걸려 있습니다.
+dc18,random,Doctrine,교리 속 죄와 벌을 정합니다. 교무실 칠판에 죄목이 적혀 있습니다.
+dc19,random,Doctrine,오래된 교리 하나가 시대에 맞지 않는다는 지적이 나왔습니다. 텔레비전 뉴스가 교리 조항을 비판합니다.
+cm01,random,Communion,기도 중 누군가 귓가에 속삭이는 소리가 들립니다. 방 안에는 당신뿐입니다.
+cm02,random,Communion,교단 건물 지하에서 오래된 제단을 발견했습니다. 제단에는 그을린 촛농이 굳어 있습니다.
+cm03,random,Communion,명상 중 몸이 공중에 뜨는 듯한 감각을 느꼈습니다. 깨어 보니 방석 위에 앉아 있습니다.
+cm04,random,Communion,한 신도가 당신에게서 빛이 났다고 증언합니다. 그는 떨리는 목소리로 말합니다.
+cm05,random,Communion,오래된 무당이 당신을 찾아와 접신의 비법을 알려 주겠다고 합니다. 그녀의 옷자락에서 향 냄새가 납니다.
+cm06,random,Communion,깊은 밤 촛불이 저절로 꺼졌습니다. 창문은 닫혀 있고 바람도 없습니다.
+cm07,random,Communion,신도들과 함께 황홀경에 빠지는 의식을 엽니다. 다락방에 북과 향로가 놓여 있습니다.
+cm08,random,Communion,예언처럼 들리는 말이 당신 입에서 흘러나왔습니다. 본인도 무슨 뜻인지 모릅니다.
+cm09,random,Communion,오래 비어 있던 성소에 들어가 하룻밤을 보냅니다. 먼지가 쌓인 제대 위에 촛대가 하나 있습니다.
+cm10,random,Communion,동물들이 당신 주위에 모여드는 일이 잦아졌습니다. 마당의 참새와 고양이가 가까이 옵니다.
+cm11,random,Communion,꿈속에서 거대한 뱀이 당신에게 이름을 묻습니다. 뱀의 눈은 금빛입니다.
+cm12,random,Communion,교단의 성물이 미세하게 떨리는 것을 발견했습니다. 제단 위 향로 뚜껑이 덜컹거립니다.
+cm13,random,Communion,오랫동안 아팠던 신도가 당신의 기도 후 회복했습니다. 그는 병원 진단서를 들고 찾아왔습니다.
+cm14,random,Communion,접신 중 낯선 존재가 대가를 요구합니다. 목소리는 차갑고 또렷합니다.
+cm15,random,Communion,교단 근처 우물에서 이상한 빛이 올라옵니다. 우물가 돌에 이끼가 가득합니다.
+cm16,random,Communion,신도 하나가 접신 체험을 했다고 주장합니다. 그는 흥분해서 손을 떨고 있습니다.
+cm17,random,Communion,일식이 일어나는 날입니다. 하늘이 어두워지고 새들이 울음을 그칩니다.
+cm18,random,Communion,오래된 무덤가에서 기도하자 바람이 멎었습니다. 풀숲에서 벌레 소리가 뚝 끊깁니다.
+rp01,random,Reputation,지역 신문이 교단을 취재하고 싶어 합니다. 편집국 기자가 명함을 내밉니다.
+rp02,random,Reputation,교단에 대한 악성 루머가 퍼지고 있습니다. 동네 다방마다 그 얘기가 오갑니다.
+rp03,random,Reputation,재해 이재민을 돕자는 요청이 들어왔습니다. 텔레비전에서 물에 잠긴 마을이 나옵니다.
+rp04,random,Reputation,동네 주민들이 교단의 소음에 항의합니다. 야심한 시간까지 이어지는 기도 소리가 문제입니다.
+rp05,random,Reputation,시장 선거 후보가 교단의 지지를 원합니다. 후보의 선거 차량이 교단 앞을 지나갑니다.
+rp06,random,Reputation,교단 신도가 범죄를 저질러 뉴스에 나왔습니다. 텔레비전 뉴스 화면에 교단 건물이 잠깐 비칩니다.
+rp07,random,Reputation,무료 급식소를 열자는 제안이 나왔습니다. 빈 공터에 취사 도구가 쌓여 있습니다.
+rp08,random,Reputation,교단을 비판하는 책이 출간되었습니다. 서점 진열대 맨 앞에 그 책이 놓여 있습니다.
+rp09,random,Reputation,지역 축제의 후원을 요청받았습니다. 축제 현수막이 마을 입구에 걸려 있습니다.
+rp10,random,Reputation,교단 출신 유명인이 교단을 비난했습니다. 그의 인터뷰가 라디오에서 흘러나옵니다.
+rp11,random,Reputation,방송국에서 사이비 종교 특집에 교단을 다루려 합니다. 방송국 카메라가 교단 앞마당에 세워져 있습니다.
+rp12,random,Reputation,동네 청소 봉사에 교단이 참여합니다. 골목마다 쓰레기봉투가 쌓여 있습니다.
+rp13,random,Reputation,종교 지도자 모임에 초대받았습니다. 회관 로비에서 명패가 나란히 놓여 있습니다.
+rp14,random,Reputation,교단이 운영하는 쉼터에 기부가 쏟아집니다. 쉼터 게시판에 기부자 이름이 빼곡히 적혀 있습니다.
+rp15,random,Reputation,인근 학교에서 교단 신도 학생이 따돌림을 당한다고 합니다. 교문 앞에서 학부모들이 웅성댑니다.
+rp16,random,Reputation,명망 있는 학자가 교단을 연구하겠다고 합니다. 그는 노트를 펼쳐 놓고 질문 목록을 적고 있습니다.
+rp17,random,Reputation,교단 이름으로 장학금을 주자는 제안이 나왔습니다. 장학금 신청서 양식이 책상 위에 놓여 있습니다.
+rp18,random,Reputation,이웃 교회 목사가 교단에 화해의 손길을 내밉니다. 그는 찻잔을 든 채 기다리고 있습니다.
+cd01,condition,Followers>=20,신도가 스무 명을 넘었습니다. 교단이 제법 모양을 갖춥니다.
+cd02,condition,Followers>=50,신도가 쉰 명을 넘었습니다. 집회 장소가 비좁아졌습니다.
+cd03,condition,Followers>=100,신도가 백 명을 넘었습니다. 언론이 교단을 주목하기 시작합니다.
+cd04,condition,Followers>=200,신도가 이백 명을 넘었습니다. 지부를 세우자는 목소리가 높습니다.
+cd05,condition,FollowerFaith>=200,신도들의 믿음이 깊어져 자발적인 간증이 이어집니다.
+cd06,condition,FollowerFaith>=500,신도들이 당신을 위해서라면 무엇이든 하겠다고 맹세합니다. 집회소 안이 뜨거운 열기로 가득합니다.
+cd07,condition,FollowerFaith>=800,신도들의 믿음이 광신에 가까워졌습니다. 외부의 시선이 따갑습니다.
+cd08,condition,Offerings>=300,교단 금고가 넉넉해졌습니다.
+cd09,condition,Offerings>=700,막대한 헌금이 쌓이자 이를 노리는 자들이 나타났습니다. 금고 주변에서 낯선 사내들이 서성입니다.
+cd10,condition,Offerings<=0 Followers>=10,교단 금고가 바닥났습니다. 신도들이 불안해합니다.
+cd11,condition,Authority>=300,측근들이 당신의 눈치를 보며 아무도 반대하지 않습니다.
+cd12,condition,Authority>=700,당신의 한마디가 곧 법이 되었습니다.
+cd13,condition,LeaderFaith>=300,당신의 신앙이 한층 깊어졌습니다. 기도가 더 이상 말이 아닌 대화처럼 느껴집니다.
+cd14,condition,LeaderFaith>=700,신이 당신에게 직접 모습을 드러낸 것 같습니다. 빛이 방 안을 가득 채우다 사라집니다.
+cd15,condition,Communion>=3,접신이 깊어지며 꿈과 현실의 경계가 흐려집니다.
+cd16,condition,Communion>=6,당신의 말에 이상한 힘이 깃들기 시작했습니다.
+cd17,condition,Communion>=10,완전한 접신에 이르렀습니다. 당신은 신의 목소리 그 자체가 되었습니다.
+cd18,condition,DoctrineLv>=2,교리가 체계를 갖추기 시작했습니다.
+cd19,condition,DoctrineLv>=4,교리를 둘러싼 이단 논쟁이 일어났습니다. 신학 잡지에 공방이 실립니다.
+cd20,condition,DoctrineLv>=6,교리가 완성에 가까워지자 교단 밖에서도 연구 대상이 되었습니다. 대학 연구실에서 교리 번역본을 펼쳐 봅니다.
+cd21,condition,Reputation<=350,교단의 평판이 크게 떨어졌습니다. 거리에서 신도들이 손가락질을 받습니다.
+cd22,condition,Reputation<=300,교단이 사회적 지탄의 대상이 되었습니다. 당국의 조사가 시작됩니다.
+cd23,condition,Reputation>=900,교단이 지역 사회에서 존경받는 단체가 되었습니다.
+cd24,condition,Followers>=50 FollowerFaith<=100,신도는 많지만 믿음이 얕습니다. 교단이 흔들립니다.
+cd25,condition,Offerings>=400 Reputation<=600,돈은 넘치지만 평판은 바닥입니다. 사람들은 교단을 돈벌이 집단이라 부릅니다.
+cd26,condition,Authority>=400 FollowerFaith<=150,권위는 높지만 신도들의 마음이 떠나고 있습니다.
+cd27,condition,LeaderFaith<=50 Followers>=30,신도는 늘었지만 정작 당신의 신앙은 바닥입니다.
+cd28,condition,Followers>=100 Offerings>=500,교단이 세력을 이루자 다른 교단들이 견제하기 시작했습니다.
+cd29,condition,Communion>=5 DoctrineLv>=3,접신 체험이 교리와 맞물리며 새로운 계시가 내려옵니다.
+cd30,condition,FollowerFaith>=400 LeaderFaith>=400,교주와 신도의 믿음이 하나로 맞물렸습니다. 교단에 성스러운 기운이 감돕니다.
+cd31,condition,Reputation<=250,동네 주민들이 교단 건물 앞에서 반대 시위를 벌입니다. 피켓이 담벼락에 줄지어 서 있습니다.
+cd32,condition,Reputation<=200,지역의 여러 종교 단체가 연합해 교단을 이단으로 규정했습니다.
+cd33,condition,Reputation<=150,국가 기관이 교단에 대한 공식 조사에 착수했습니다. 관공서 직원들이 서류 상자를 옮기고 있습니다.
+cd34,condition,Reputation<=80,정부가 교단 해체 명령을 검토하고 있다는 소식입니다. 시간이 많지 않습니다.
+cd35,condition,Reputation>=700,지역 단체들이 교단에 공동 사업을 제안해 왔습니다.
+cd36,condition,Reputation>=800,정부에서 교단을 정식 종교 법인으로 인정하는 절차를 안내해 왔습니다.
+cd37,condition,Reputation>=850 Followers>=100,교단이 지역 사회의 상징이 되었습니다. 언론이 교주의 인터뷰를 요청합니다.
+cd38,condition,Reputation<=300 Followers>=30,신도들의 가족이 교단을 고소하겠다며 모였습니다. 교단 앞에서 가족들이 피켓을 들고 있습니다.
+ln01,negative,LeaderFaith<=80,"기도를 올려도 아무 응답이 없습니다. 몇 달째 신의 목소리는 끊겼고, 새벽마다 빈 방에 홀로 앉아 있습니다."
+ln02,negative,LeaderFaith<=80,"설교 도중 갑자기 말문이 막혔습니다. 수십 개의 눈이 당신을 향해 있고, 어디까지 말했는지 떠오르지 않습니다."
+fn01,negative,FollowerFaith<=80,집회에서 신도들이 기계적으로 입만 움직입니다. 눈빛에는 믿음이 없고 시계만 힐끔거립니다.
+fn02,negative,FollowerFaith<=80,고참 신도 하나가 집회에서 공개적으로 교단을 떠나겠다고 선언했습니다. 그의 목소리가 강당에 울립니다.
+an01,negative,Authority<=80,측근 하나가 당신의 명령을 대놓고 무시하고 자기 모임을 꾸렸습니다. 그 모임에 신도들이 하나둘 드나듭니다.
+an02,negative,Authority<=80,한 신도가 집회에서 일어나 교주 자리가 자신의 몫이라고 외칩니다. 몇몇은 박수를 보냅니다.
+on01,negative,Offerings<=60,집회소 주인이 밀린 월세를 받으러 문을 두드립니다. 이번 달 안에 못 내면 건물을 비우라고 합니다.
+on02,negative,Offerings<=60,한겨울 난방비가 끊겨 집회소에 연탄도 못 땝니다. 신도들이 외투를 껴입고 떨고 있습니다.
+n_fo01,negative,Followers<=8,"새벽 집회 시간, 문을 열었지만 아무도 오지 않았습니다. 빈 의자가 어둠 속에 늘어서 있습니다."
+n_fo02,negative,Followers<=8,마지막까지 남아 있던 신도가 이사를 가게 되었다며 작별 인사를 건넵니다. 그는 미안한 얼굴로 서 있습니다.
+n_dc01,negative,DoctrineLv<=0,한 청년이 교리가 무엇이냐고 따져 묻는데 마땅히 대답할 말이 없습니다. 정리된 교리 문장 하나 없는 것이 드러났습니다.
+n_dc02,negative,DoctrineLv<=0,낡은 필사본 교리 노트가 비에 젖어 번졌습니다. 오랜 밤 적어 둔 문장 절반이 알아볼 수 없게 되었습니다.
+n_cm01,negative,Communion<=1,접신 의식 중 아무것도 느껴지지 않습니다. 향이 다 타도록 눈을 감고 있었지만 어둠뿐입니다.
+n_cm02,negative,Communion<=1,"접신을 시도하던 밤, 어둠 속에서 알 수 없는 공허한 울림이 들렸습니다. 눈을 뜨니 촛불이 모두 꺼져 있습니다."
+n_rp01,negative,Reputation<=150,교단 건물 담벼락에 사이비라는 낙서가 붙었습니다. 지나가는 사람들이 혀를 차며 수군거립니다.
+n_rp02,negative,Reputation<=150,이웃 주민이 교단이 수상하다며 파출소에 신고했습니다. 경찰이 찾아와 신분증 제시를 요구합니다.

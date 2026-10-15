@@ -17,6 +17,7 @@ public static class GiftedIcon
         ["성격"] = new Color(0.66f, 0.52f, 0.95f),
         ["특기"] = new Color(0.36f, 0.78f, 0.82f),
         ["외모"] = new Color(0.94f, 0.50f, 0.62f),
+        ["업적"] = new Color(0.55f, 0.88f, 0.52f),
     };
 
     public static Sprite Of(Talent talent)

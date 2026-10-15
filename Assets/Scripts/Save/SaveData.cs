@@ -19,6 +19,8 @@ public class SaveData
     public int cultTurns;
     public bool founded;
     public string cultName;
+    public int misfortune;
+    public string doctrineEmblem;
 
     public List<StatEntry> personal = new();
     public List<StatEntry> cult = new();
@@ -27,6 +29,7 @@ public class SaveData
     public List<RemainderEntry> cultRemainders = new();
     public List<string> talents = new();
     public List<string> usedEvents = new();
+    public List<StatEntry> counters = new();
 }
 
 [Serializable]

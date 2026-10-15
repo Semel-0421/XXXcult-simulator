@@ -24,6 +24,7 @@ public class ActionResultView : MonoBehaviour
         label.text = Lang.Get(success ? "action_success" : "action_fail");
         label.color = success ? new Color(0.95f, 0.85f, 0.55f) : new Color(0.86f, 0.35f, 0.35f);
         group.alpha = 1;
+        AudioManager.PlaySfx(success ? "success" : "fail");
         for (float elapsed = 0; elapsed < duration; elapsed += Time.unscaledDeltaTime)
         {
             int frame = (int)(elapsed * fps) % Frames;

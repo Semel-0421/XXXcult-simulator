@@ -13,7 +13,7 @@ PERS = {'체력': 'Health', '정신력': 'Mentality', '신앙심': 'Piety', '평
         '음욕': 'Lust', '재물욕': 'Greed', '식욕': 'Appetite', '권력욕': 'Ambition', '절제': 'Temperance', '자애': 'Charity',
         '인내': 'Patience', '청렴': 'Integrity'}
 ACTIONS = {'Exercise', 'Meditate', 'Study', 'Socialize', 'Pray', 'Proselytize', 'Preach', 'Serve', 'Desire', 'CultPray', 'All'}
-CATEGORIES = {'운명', '성격', '특기', '외모'}
+CATEGORIES = {'운명', '성격', '특기', '외모', '업적'}
 
 
 def read_text(path):

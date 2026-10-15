@@ -65,6 +65,7 @@ public class QuestionPanel : MonoBehaviour
         }
         numberInput.text = "";
         SetInputActive(false);
+        AudioManager.PlaySfx("click");
         Chosen?.Invoke(number);
     }
 

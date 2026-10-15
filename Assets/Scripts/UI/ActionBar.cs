@@ -56,6 +56,7 @@ public class ActionBar : MonoBehaviour
     public void Perform(int index)
     {
         if (!group.interactable) return; // 이벤트 진행 중 등 잠긴 상태에서는 무시
+        AudioManager.PlaySfx("click");
         if (Current == Mode.Life) LifeChosen?.Invoke((LifeAction)index);
         else if (Current == Mode.Cult) CultChosen?.Invoke((CultAction)index);
     }

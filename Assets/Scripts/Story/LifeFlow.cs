@@ -13,7 +13,8 @@ public class LifeFlow : MonoBehaviour
     public void Begin()
     {
         Subscribe();
-        questionRunner.Run(IntroQuestions.First);
+        var first = LifeEvent.Pick(LifeEvents.All, GameSession.Age.Years, GameSession.UsedEvents, GameSession.Rng);
+        questionRunner.Run(first.Question);
     }
 
     // 불러오기: 저장은 행동 선택 시점에만 되므로 행동 안내부터 이어진다
@@ -29,9 +30,10 @@ public class LifeFlow : MonoBehaviour
         actionBar.LifeChosen += OnActionChosen;
     }
 
-    void ShowActionPrompt()
+    void ShowActionPrompt(string preface = null)
     {
-        questionPanel.Show(string.Format(Lang.Get("life_action_prompt"), GameSession.Age.Years));
+        var prompt = string.Format(Lang.Get("life_action_prompt"), GameSession.Age.Years);
+        questionPanel.Show(string.IsNullOrEmpty(preface) ? prompt : $"<color=#9A8FB0>{preface}</color>\n\n{prompt}");
         actionBar.Show(ActionBar.Mode.Life);
     }
 
@@ -41,10 +43,10 @@ public class LifeFlow : MonoBehaviour
         actionBar.LifeChosen -= OnActionChosen;
     }
 
-    void OnEventAnswered(Choice _)
+    void OnEventAnswered(string resultText)
     {
         if (TryFoundCult()) return;
-        ShowActionPrompt();
+        ShowActionPrompt(resultText);
     }
 
     void OnActionChosen(LifeAction action)
@@ -52,6 +54,9 @@ public class LifeFlow : MonoBehaviour
         actionBar.SetInteractable(false);
         var success = LifeActions.Roll(GameSession.Personal, action, GameSession.Rng);
         LifeActions.Apply(GameSession.Personal, action, success);
+        GameSession.Count($"act_{action}");
+        GameSession.Count("life_acts");
+        GameSession.Count(success ? "act_ok" : "act_fail");
         GameSession.AdvanceTurn();
         resultView.Play(action.ToString(), success, () =>
         {

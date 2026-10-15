@@ -19115,6 +19115,7 @@ GameObject:
   - component: {fileID: 1935502984}
   - component: {fileID: 1935502986}
   - component: {fileID: 1935502985}
+  - component: {fileID: 1935502987}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -19179,6 +19180,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935502983}
   m_CullTransparentMesh: 1
+--- !u!114 &1935502987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935502983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4152e0cce77d77441b9d7070bdc8124c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReligiousBackdrop
 --- !u!1 &1948524100
 GameObject:
   m_ObjectHideFlags: 0
