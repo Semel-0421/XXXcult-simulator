@@ -115,10 +115,10 @@ public class GodTreeTests
         var tree = new GodTree();
         tree.ChooseNature(S("l_miracle_atk1"));  // gain:Followers+5
         tree.Learn(S("l_patience_def1"), 99);    // guard:Followers+5
-        Assert.AreEqual(5, tree.Gain(StatId.Followers));
-        Assert.AreEqual(5, tree.Guard(StatId.Followers));
-        Assert.AreEqual(10.5f, tree.Adjust(StatId.Followers, 10), 0.001f);
-        Assert.AreEqual(-9.5f, tree.Adjust(StatId.Followers, -10), 0.001f);
+        Assert.AreEqual(6, tree.Gain(StatId.Followers), "바깥 고리 5% × 1.2");
+        Assert.AreEqual(6, tree.Guard(StatId.Followers));
+        Assert.AreEqual(10.6f, tree.Adjust(StatId.Followers, 10), 0.001f);
+        Assert.AreEqual(-9.4f, tree.Adjust(StatId.Followers, -10), 0.001f);
         Assert.AreEqual(-1f, GodEffects.Adjust(-10, 0, 200), 0.001f, "방어는 90%까지만");
         Assert.AreEqual(5f, GodEffects.Resisted(10, 50), 0.001f);
         Assert.AreEqual(-10f, GodEffects.Resisted(-10, 50), 0.001f, "내려가는 압박은 그대로");
@@ -131,12 +131,27 @@ public class GodTreeTests
         tree.ChooseNature(S("l_miracle_atk2")); // chance:Wonder+5
         tree.Learn(S("l_temperance_def1"), 99); // resist:Heaven+5
         tree.Learn(S("l_wealth_def1"), 99);     // seize+5
-        Assert.AreEqual(5, tree.Chance(GodAction.Wonder));
+        Assert.AreEqual(6, tree.Chance(GodAction.Wonder));
         Assert.AreEqual(0, tree.Chance(GodAction.Feast));
-        Assert.AreEqual(5, tree.Resist(Pressure.Heaven));
+        Assert.AreEqual(6, tree.Resist(Pressure.Heaven));
         Assert.AreEqual(0, tree.Resist(Pressure.Earth));
-        Assert.AreEqual(5, tree.Total(GodEffect.Type.SeizeGuard));
+        Assert.AreEqual(6, tree.Total(GodEffect.Type.SeizeGuard));
         Assert.IsTrue(GodSkillInfo.EffectLines(S("c_miracle")).All(line => !line.Contains("{")), "효과 문구 서식이 채워져야 함");
+    }
+
+    [Test]
+    public void BroadRing_WhenAllFourBranchesHalfLearned_GivesStabilityAndPoints()
+    {
+        var tree = new GodTree();
+        tree.ChooseNature(S("l_health_atk1"));
+        foreach (var branch in new[] { GodBranch.Miracle, GodBranch.Prophecy, GodBranch.Mercy })
+            foreach (var leaf in GodSkillCatalog.All.Where(s => s.Branch == branch && s.Ring == 1).Take(8)) tree.Learn(leaf, 99);
+        Assert.AreEqual(0, tree.BroadRings, "욕망 가지가 비어 있으면 없음");
+        var resist = tree.Resist(Pressure.Earth);
+        foreach (var leaf in GodSkillCatalog.All.Where(s => s.Branch == GodBranch.Desire && s.Ring == 1).Take(8)) tree.Learn(leaf, 99);
+        Assert.AreEqual(1, tree.BroadRings);
+        Assert.GreaterOrEqual(tree.Resist(Pressure.Earth) - resist, GodTree.BroadResist);
+        Assert.AreEqual(0, tree.BroadYearPoints, "단계 2개마다 1포인트");
     }
 
     [Test]
@@ -185,11 +200,11 @@ public class GodTreeTests
         god.Points.Defense(5);
         god.Tree.Learn(S("l_lust_atk2"), god.Available);
         god.Points.SecularStageReached(1);
-        GameSession.Cult[StatId.Followers].Set(100);
+        GameSession.Cult[StatId.Followers].Set(50); // 신앙 규모 25: 신계 압박 0단계라 분기마다 깎이지 않는다
         GameSession.Cult[StatId.FollowerFaith].Set(500);
         var before = god.Points.Earned;
         for (int i = 0; i < 4; i++) GameSession.AdvanceTurn();
-        Assert.AreEqual(before + 4, god.Points.Earned, "해가 바뀌면 기본 2 + 신앙 비례 2");
+        Assert.AreEqual(before + 3, god.Points.Earned, "해가 바뀌면 기본 2 + 신앙 비례 1");
 
         var data = GameSession.Capture();
         GameSession.StartNew(1);

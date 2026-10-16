@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 // 저장 파일 한 칸의 내용. JsonUtility로 직렬화하므로 딕셔너리 대신 리스트를 쓴다.
@@ -37,6 +37,8 @@ public class SaveData
     public int godPointsEarned;
     public int godSecularStage;              // 포인트를 이미 받은 세속 규모 단계
     public float godEnvy, godSuspicion;      // 압박 가산치 (신계 시기, 지상 의혹)
+    public List<int> godBuildings = new();   // 축성한 건물 레벨 (GodBuildingType 순서)
+    public bool godDissolution;              // 해산 명령이 내려짐 (엔딩 직전에 저장된 경우)
 
     public List<StatEntry> personal = new();
     public List<StatEntry> cult = new();

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -76,6 +76,13 @@ public class GodSkill
 
     // 노드 하나를 익히는 비용: 일반 노드 1, 핵 2, 승천 3
     public int Cost => IsCenter ? 3 : IsCore ? 2 : 1;
+
+    // 티어별 보상: 바깥 고리일수록 효과를 키우고 압박은 덜 부른다. 넓게 찍는 분산형도 얻는 것이 있도록.
+    public float TierScale => Ring switch { 1 => 1.2f, 2 => 1.1f, _ => 1f };
+    public float PressureWeight => Ring == 1 ? 0.75f : 1f;
+
+    // 이 노드에서 실제로 적용되는 효과 크기 (티어 보정 포함)
+    public int AmountOf(GodEffect effect) => (int)Math.Round(effect.Amount * TierScale, MidpointRounding.AwayFromZero);
 }
 
 public static partial class GodSkillCatalog

@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using NUnit.Framework;
 
 // 준비된 신 모드 규칙: 시작 상태, 패배·승천 판정, 압박 두 축과 히든 규칙
@@ -54,7 +54,7 @@ public class GodRulesTests
                 tree.Learn(skill, 999);
         Assert.Greater(god.Pressure.Stage(Pressure.Earth, cult), before, "익힌 노드가 지상 압박을 키워야 함");
         Assert.AreEqual(0.9f, god.Pressure.Resistance(Pressure.Heaven), 0.001f, "신격 둘이면 신계는 상한까지 막음");
-        Assert.Less(god.Pressure.Resistance(Pressure.Earth), 0.3f, "신격 둘이면 지상은 거의 비어 있음");
+        Assert.Less(god.Pressure.Resistance(Pressure.Earth), 0.35f, "신격 둘이면 지상은 신계보다 훨씬 덜 막음");
 
         Assert.Greater(god.Pressure.Stage(Pressure.Earth, cult), 0, "신격 깊이가 지상 압박을 키워야 함");
         Assert.Greater(GodRules.EventPenalty, 0f, "압박이 있으면 이벤트 성공률이 깎여야 함");

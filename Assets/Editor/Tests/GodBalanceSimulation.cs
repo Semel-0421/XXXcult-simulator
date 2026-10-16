@@ -10,7 +10,8 @@ using NUnit.Framework;
 public static class GodSimulation
 {
     // Rush: 목표 두 가지를 바깥부터 핵까지 차례로 올린다 / Spread: 고리마다 모든 가지를 넓게 찍어 스킬 총량으로 버틴다
-    public enum Strategy { Rush, Spread }
+    // Balanced: 목표 두 가지는 핵까지, 나머지 두 가지는 바깥 두 고리까지만 넓혀 둔다 (핵 루트와 분산의 중간)
+    public enum Strategy { Rush, Spread, Balanced }
 
     public const int MaxCultYears = 60; // 이만큼 지나도 엔딩이 없으면 그 판을 접은 것으로 본다
 
@@ -26,7 +27,7 @@ public static class GodSimulation
             var sb = new StringBuilder();
             var runs = Results.Count;
             var asc = Results.Where(r => r.Ascended).ToList();
-            sb.AppendLine($"[준비된 신 · {(Strategy == Strategy.Rush ? "핵 루트 봇" : "분산 봇")}] 봇 {Bots}명 × {RunsPerBot}판 = {runs}판");
+            sb.AppendLine($"[준비된 신 · {Strategy switch { Strategy.Rush => "핵 루트 봇", Strategy.Spread => "분산 봇", _ => "절충 봇" }}] 봇 {Bots}명 × {RunsPerBot}판 = {runs}판");
             sb.AppendLine($"  승천률 {Pct(asc.Count, runs)} (목표한 조합 그대로 {Pct(Results.Count(r => r.HitGoal), runs)}), 패배율 {Pct(Results.Count(r => r.Defeated), runs)}");
             foreach (var group in new[] { false, true })
             {
@@ -113,9 +114,13 @@ public static class GodSimulation
 
         var tree = GameSession.God.Tree;
         // 분산 봇은 고리 순서로 네 가지를 번갈아 찍는다. 핵 두 개가 먼저 완성되는 쪽이 승천 조합이 된다.
-        var plan = (strategy == Strategy.Rush
-            ? Plan(first).Concat(Plan(second))
-            : GodSkillCatalog.All.Where(s => !s.IsCenter).OrderBy(s => s.Ring).ThenBy(s => s.Branch == first ? 0 : s.Branch == second ? 1 : 2))
+        var plan = (strategy switch
+            {
+                Strategy.Rush => Plan(first).Concat(Plan(second)),
+                Strategy.Spread => GodSkillCatalog.All.Where(s => !s.IsCenter).OrderBy(s => s.Ring).ThenBy(s => s.Branch == first ? 0 : s.Branch == second ? 1 : 2),
+                _ => GodSkillCatalog.All.Where(s => !s.IsCenter && (s.Branch == first || s.Branch == second || s.Ring <= 2))
+                    .OrderBy(s => s.Ring).ThenBy(s => s.Branch == first ? 0 : s.Branch == second ? 1 : 2),
+            })
             .Append(GodSkillCatalog.Ascension).ToList();
         tree.ChooseNature(plan.First(s => s.IsOuter)); // 첫 목표 가지의 바깥 노드 하나를 본성으로
 
@@ -131,7 +136,7 @@ public static class GodSimulation
             if ((ending = Progress.ForcedEnding()) != null) break;
             Learn(plan);
             if ((ending = Progress.DueEnding()) != null) break;
-            Turns.Cult(ChooseAction());
+            if (!Consecrate()) Turns.Cult(ChooseAction());
             if ((ending = Progress.ForcedEnding()) != null) break;
             var next = Turns.NextCultEvent();
             if (next != null) Turns.Answer(Best(next.Question));
@@ -192,6 +197,24 @@ public static class GodSimulation
     }
 
     // 그릇이 위태로우면 향연, 접신이 모자라면 교감, 명망·믿음이 낮으면 지키고, 아니면 이적으로 신도를 늘린다
+    // 지을 수 있는 건물이 있고 봉헌금이 유지비까지 넉넉하면 축성한다. 구호소(명망 하한)가 해산을 막는 첫 방벽이다.
+    static readonly GodBuildingType[] BuildOrder =
+        { GodBuildingType.Shelter, GodBuildingType.Temple, GodBuildingType.Village, GodBuildingType.Library, GodBuildingType.Statue };
+
+    static bool Consecrate()
+    {
+        var god = GameSession.God;
+        var cult = GameSession.Cult;
+        foreach (var type in BuildOrder)
+        {
+            if (god.Buildings.Blocker(type, god.Tree, cult) != null) continue;
+            var next = god.Buildings.LevelOf(type) + 1;
+            if (cult[StatId.Offerings].Value < GodBuildings.CostOf(next) + GodBuildings.UpkeepOf(next) * 2) continue;
+            return Turns.Consecrate(type);
+        }
+        return false;
+    }
+
     static CultAction ChooseAction()
     {
         var personal = GameSession.Personal;
@@ -252,11 +275,12 @@ public class GodSimulationTests
 {
     // 일반 테스트 실행에는 끼지 않는다. 직접 실행하면 결과를 임시 폴더의 xxxcult_god_report.txt에 남긴다.
     // 같은 실행에서 본편 시뮬레이션도 같은 규모(봇 100명 × 10회차)로 돌려 함께 적는다.
-    [Test, Explicit]
+    [Test, Explicit, Timeout(3600000)]
     public void Simulate()
     {
         var bots = int.TryParse(Environment.GetEnvironmentVariable("XXXCULT_SIM_CAREERS"), out var n) ? n : 100;
-        var god = GodSimulation.Run(bots, 10, 20261016).Format() + "\n" + GodSimulation.Run(bots, 10, 20261016, GodSimulation.Strategy.Spread).Format();
+        var god = GodSimulation.Run(bots, 10, 20261016).Format() + "\n" + GodSimulation.Run(bots, 10, 20261016, GodSimulation.Strategy.Spread).Format()
+            + "\n" + GodSimulation.Run(bots, 10, 20261016, GodSimulation.Strategy.Balanced).Format();
         var main = BalanceSimulation.Run(bots, 10, 20261016).Format("본편 (같은 규모)");
         var text = god + "\n" + main;
         File.WriteAllText(Path.Combine(Path.GetTempPath(), "xxxcult_god_report.txt"), text);

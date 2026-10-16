@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 // 교단 창설 후 이벤트.
@@ -100,9 +100,12 @@ public class CultEvent
         : Math.Min(NegativeMaxChance, NegativeBaseChance + NegativePerYear * (cultYear - NegativeFirstYear));
 
     // 조건에 맞는(스탯이 바닥에 가까운) 아직 안 나온 부정적 이벤트 중 하나를 확률적으로 뽑는다. 없으면 null.
-    public static CultEvent RollNegative(IReadOnlyList<CultEvent> pool, CultStatus cult, ISet<string> used, Random rng, int cultYear)
+    public static CultEvent RollNegative(IReadOnlyList<CultEvent> pool, CultStatus cult, ISet<string> used, Random rng, int cultYear) =>
+        RollNegative(pool, cult, used, rng, NegativeChanceAt(cultYear));
+
+    // 준비된 신 모드는 연차 대신 압박 단계로 확률을 정한다
+    public static CultEvent RollNegative(IReadOnlyList<CultEvent> pool, CultStatus cult, ISet<string> used, Random rng, float chance)
     {
-        var chance = NegativeChanceAt(cultYear);
         if (chance <= 0f || rng.NextDouble() >= chance) return null;
 
         var candidates = new List<CultEvent>();

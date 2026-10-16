@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -131,6 +131,22 @@ public static class Lang
         ["god_act_Wonder"] = ("Wonder", "이적"), ["god_act_Revelation"] = ("Revelation", "계시"), ["god_act_Healing"] = ("Healing", "치유"),
         ["god_act_Feast"] = ("Feast", "향연"), ["god_act_Commune"] = ("Commune", "교감"), ["god_act_Consecrate"] = ("Consecrate", "축성"),
         ["god_act_All"] = ("All actions", "모든 행동"),
+        // 준비된 신: 축성(봉헌 건축)·성인 확인
+        ["god_building_Statue"] = ("Statue", "조각상"), ["god_building_Temple"] = ("Temple", "신전"), ["god_building_Library"] = ("Scripture Hall", "경전관"),
+        ["god_building_Village"] = ("Commune", "공동체 마을"), ["god_building_Shelter"] = ("Relief House", "구호소"),
+        ["god_consecrate_title"] = ("Consecration", "축성"),
+        ["god_build_hint"] = ("Raise a building by miracle. It uses this turn's action.", "기적으로 건물을 세웁니다. 이번 분기의 행동을 씁니다."),
+        ["god_build_wait"] = ("You can consecrate only on an action turn.", "행동을 고를 차례에만 축성할 수 있습니다."),
+        ["god_build_info"] = ("Keeps {0} at least {1} · upkeep {2}/year", "{0} 최소 {1} 유지 · 유지비 해마다 {2}"),
+        ["god_build_next"] = ("Consecrate ({0} offerings, {1} communion)", "축성 (봉헌금 {0}, 접신 {1})"),
+        ["god_build_stage"] = ("Reach the {0} stage", "'{0}' 단계 필요"), ["god_build_offerings"] = ("Need {0} offerings", "봉헌금 {0} 필요"),
+        ["god_build_communion"] = ("Not enough communion", "접신 부족"), ["god_build_max"] = ("Fully raised", "최고 단계"),
+        ["god_build_locked"] = ("Unlock in the Wealth area of the Divine Tree", "권능 트리 재력 구역에서 해금"),
+        ["god_consecrated"] = ("You consecrated the {0}. (Lv.{1})", "{0}을(를) 축성했습니다. (Lv.{1})"),
+        ["god_eff_build"] = ("Unlocks building: {0}", "건물 해금: {0}"),
+        ["god_broad"] = ("Breadth ×{0}", "단계 보너스 ×{0}"),
+        ["god_adult_confirm"] = ("This mode contains sensual and decadent scenes.\nAre you an adult?", "이 모드에는 관능적이고 퇴폐적인 묘사가 있습니다.\n성인입니까?"),
+        ["god_adult_ok"] = ("I am an adult", "성인입니다"),
         ["quiz_dissolved"] = ("When your standing sinks to nothing, the state takes the cult away.", "명망이 바닥나면 나라가 교단을 거둔다."),
         ["quiz_death_young"] = ("Before a cult is founded, the years may close the book.", "교단을 세우기도 전에, 나이가 먼저 판을 닫는다."),
         ["quiz_death_leader"] = ("While the cult still stands, the leader's years may end the story.", "교단이 서 있는 동안, 교주의 나이가 판을 닫는다."),

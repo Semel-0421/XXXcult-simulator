@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -69,6 +69,23 @@ public class GodTree
 
     public string AscensionEndingId => FirstCores is { } pair ? GodEndings.IdFor(pair.first, pair.second) : null;
 
+    // ---- 단계 보너스 (넓게 찍은 보상) ----
+
+    // 네 가지 모두가 그 고리 노드의 절반 이상을 익힌 고리 수. 고리마다 안정성(저항·손실 방어)을 크게, 승천 속도(포인트)를 조금 준다.
+    public const int BroadResist = 10, BroadGuard = 8, BroadRingsPerPoint = 2;
+
+    public int BroadRings => Enumerable.Range(1, 5).Count(ring =>
+        GodSkillCatalog.Cores.All(core => IsBroad(core.Branch, ring)));
+
+    bool IsBroad(GodBranch branch, int ring)
+    {
+        var nodes = GodSkillCatalog.All.Where(s => s.Branch == branch && s.Ring == ring).ToList();
+        return nodes.Count(IsLearned) * 2 >= nodes.Count;
+    }
+
+    // 해마다 더 받는 권능 포인트
+    public int BroadYearPoints => BroadRings / BroadRingsPerPoint;
+
     // ---- 효과 합계 ----
 
     public int Total(GodEffect.Type type, string key = "") => Totals().TryGetValue((type, key), out var sum) ? sum : 0;
@@ -87,12 +104,12 @@ public class GodTree
     // 해가 바뀔 때 해마다 효과를 적용한다
     public void ApplyYearly(PersonalStatus personal, CultStatus cult)
     {
-        foreach (var id in learned)
-            foreach (var effect in GodSkillCatalog.Find(id)?.Effects ?? Array.Empty<GodEffect>())
+        foreach (var skill in learned.Select(GodSkillCatalog.Find).Where(s => s != null))
+            foreach (var effect in skill.Effects)
             {
                 if (effect.Kind != GodEffect.Type.Yearly) continue;
-                if (effect.PersonalStat is { } p) personal[p].Add(effect.Amount);
-                else if (effect.CultStat is { } c) cult.AddWithRemainder(c, effect.Amount);
+                if (effect.PersonalStat is { } p) personal[p].Add(skill.AmountOf(effect));
+                else if (effect.CultStat is { } c) cult.AddWithRemainder(c, skill.AmountOf(effect));
             }
     }
 
@@ -100,12 +117,19 @@ public class GodTree
     {
         if (totals != null) return totals;
         totals = new Dictionary<(GodEffect.Type, string), int>();
-        foreach (var id in learned)
-            foreach (var effect in GodSkillCatalog.Find(id)?.Effects ?? Array.Empty<GodEffect>())
+        foreach (var skill in learned.Select(GodSkillCatalog.Find).Where(s => s != null))
+            foreach (var effect in skill.Effects)
             {
                 var key = (effect.Kind, KeyOf(effect));
-                totals[key] = (totals.TryGetValue(key, out var sum) ? sum : 0) + effect.Amount;
+                totals[key] = (totals.TryGetValue(key, out var sum) ? sum : 0) + skill.AmountOf(effect);
             }
+        var broad = BroadRings;
+        if (broad > 0)
+        {
+            void Add(GodEffect.Type type, string key, int amount) => totals[(type, key)] = (totals.TryGetValue((type, key), out var sum) ? sum : 0) + amount;
+            foreach (var pressure in new[] { "Heaven", "Earth" }) Add(GodEffect.Type.Resist, pressure, BroadResist * broad);
+            foreach (var stat in new[] { StatId.Followers, StatId.FollowerFaith, StatId.Reputation }) Add(GodEffect.Type.Guard, $"c:{stat}", BroadGuard * broad);
+        }
         return totals;
     }
 

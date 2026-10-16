@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -114,7 +114,8 @@ public static class GodTreeWindow
         titleLabel.text = Lang.Get("god_tree_title");
         hintLabel.text = Lang.Get(tree.HasNature ? "god_tree_hint" : "god_nature_hint");
         pointsLabel.text = string.Format(Lang.Get("god_points"), state.Available);
-        stageLabel.text = string.Format(Lang.Get("god_stage_now"), GodSkillInfo.StageName(tree.ReachedStage));
+        stageLabel.text = string.Format(Lang.Get("god_stage_now"), GodSkillInfo.StageName(tree.ReachedStage))
+            + (tree.BroadRings > 0 ? $"  <color=#9BE08A>{string.Format(Lang.Get("god_broad"), tree.BroadRings)}</color>" : "");
         closeLabel.text = Lang.Get("close");
 
         var skill = view.Selected;

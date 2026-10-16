@@ -1,3 +1,5 @@
+﻿using System.Collections.Generic;
+
 // 한 턴의 규칙(판정·효과·카운트·시간 경과)을 화면 연출과 분리해 둔다.
 // 흐름(LifeFlow/CultFlow/QuestionRunner)과 시뮬레이션 테스트가 같은 순서로 쓰도록 한곳에 모은다.
 public static class Turns
@@ -36,14 +38,21 @@ public static class Turns
     public static LifeEvent NextLifeEvent() =>
         LifeEvent.Pick(LifeEvents.All, GameSession.Age.Years, GameSession.UsedEvents, GameSession.Rng);
 
+    // 이번 판의 교단 이벤트 목록 (준비된 신 모드는 전용 이벤트)
+    public static IReadOnlyList<CultEvent> CultPool => GameSession.GodMode ? GodEvents.All : CultEvents.All;
+
     // 교단 행동 뒤 이어질 이벤트: 조건 → 부정적 → 긍정(무드) → 확률 순. 없으면 null. 부정적 이벤트면 불운이 한 겹 쌓인다.
+    // 준비된 신 모드: 압박 이벤트(신계·지상, 압박 단계에 비례한 확률) → 확률 순. 불운은 없다.
     public static CultEvent NextCultEvent()
     {
         var cult = GameSession.Cult;
         var used = GameSession.UsedEvents;
         var rng = GameSession.Rng;
+        if (GameSession.GodMode)
+            return CultEvent.RollNegative(GodEvents.All, cult, used, rng, GameSession.God.Pressure.EventChance(cult))
+                   ?? CultEvent.RollRandom(GodEvents.All, cult, used, rng);
         var next = CultEvent.FindTriggered(CultEvents.All, cult, used)
-                   ?? (GameSession.GodMode ? null : CultEvent.RollNegative(CultEvents.All, cult, used, rng, GameSession.CultTime.Years + 1)) // 신 모드엔 불운이 없다
+                   ?? CultEvent.RollNegative(CultEvents.All, cult, used, rng, GameSession.CultTime.Years + 1)
                    ?? CultEvent.RollMood(CultEvents.All, GameSession.Personal, used, rng)
                    ?? CultEvent.RollRandom(CultEvents.All, cult, used, rng);
         if (next != null && next.IsNegative) GameSession.AddMisfortune();
@@ -63,6 +72,22 @@ public static class Turns
             GiftedEffects.Apply(GameSession.Cult, GameSession.Personal.Talents, effect.Stat, effect.Amount);
         foreach (var id in outcome.Grants)
             GiftedGranter.Grant(GameSession.Personal.Talents, id);
+        GodRules.AfterEvent(outcome);
         return outcome;
+    }
+
+    // 준비된 신 모드의 축성 1턴: 기적으로 건물을 세우거나 올린다. 지을 수 없으면 턴을 쓰지 않고 false.
+    public static bool Consecrate(GodBuildingType type)
+    {
+        var cult = GameSession.Cult;
+        var god = GameSession.God;
+        if (!god.Buildings.Build(type, god.Tree, cult)) return false;
+        god.Pressure.AddHeat(GodRules.ConsecrateEnvy, GodRules.ConsecrateSuspicion);
+        GameSession.Count("act_Consecrate");
+        GameSession.Count("cult_acts");
+        GameSession.Count("act_ok");
+        SocialStanding.ApplyTurn(cult);
+        GameSession.AdvanceTurn();
+        return true;
     }
 }

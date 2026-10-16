@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 // 한 판의 진행 상태 보관소. 씬이 바뀌어도 유지된다.
@@ -157,7 +157,9 @@ public static class GameSession
             godSecularStage = God.Points.SecularStageAwarded,
             godEnvy = God.Pressure.Envy,
             godSuspicion = God.Pressure.Suspicion,
+            godDissolution = God.Buildings.DissolutionOrdered,
         };
+        data.godBuildings.AddRange(God.Buildings.Levels);
         data.godSkills.AddRange(God.Tree.Learned);
         data.godCores.AddRange(God.Tree.CoreOrder);
         foreach (PersonalStatId id in Enum.GetValues(typeof(PersonalStatId)))
@@ -215,6 +217,7 @@ public static class GameSession
         God.Tree.Restore(data.godSkills, data.godNature, data.godCores);
         God.Points.Restore(data.godPointsEarned, data.godSecularStage);
         God.Pressure.Restore(data.godEnvy, data.godSuspicion);
+        God.Buildings.Restore(data.godBuildings, data.godDissolution);
         Progress.ApplyRun(data.run); // 회차가 없던 옛 저장(0)은 제한 없이 이어 간다
     }
 
