@@ -9,6 +9,7 @@ public class ActionBar : MonoBehaviour
 
     static readonly string[] LifeKeys = { "life_Exercise", "life_Meditate", "life_Study", "life_Socialize", "life_Pray" };
     static readonly string[] CultKeys = { "action_Proselytize", "action_Preach", "action_Serve", "action_Desire", "action_Pray" };
+    static readonly string[] GodKeys = { "god_act_Wonder", "god_act_Revelation", "god_act_Healing", "god_act_Feast", "god_act_Commune" }; // 준비된 신: 이적·계시·치유·향연·교감
 
     [SerializeField] CanvasGroup group;
     public event Action<LifeAction> LifeChosen;
@@ -40,7 +41,7 @@ public class ActionBar : MonoBehaviour
         if (Current != Mode.Cult && tree.IsMax(DoctrineSkill.Declaration)) Show(Mode.Cult);
     }
 
-    static string[] KeysOf(Mode mode) => mode == Mode.Cult ? CultKeys : LifeKeys;
+    static string[] KeysOf(Mode mode) => mode != Mode.Cult ? LifeKeys : GameSession.GodMode ? GodKeys : CultKeys;
 
     // 행동 안내 아래 붙는 단축키 안내 (예: "[1] 운동   [2] 명상 ...")
     public static string Legend(Mode mode) =>

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 
 // 엔딩 도감: 가능한 모든 엔딩을 타일로 보여 준다. 본 엔딩은 삽화와 이름을, 못 본 엔딩은 검게 가리고 ?로 둔다.
 // 타일에 마우스를 올리면 엔딩 조건을 수수께끼 문장으로 보여 주고, 본 엔딩을 누르면 크게 보는 창(EndingDetail)이 열린다.
+// 위쪽 탭으로 본편 엔딩과 준비된 신 엔딩(GodRules.AllEndings)을 나눠 본다.
 public static class EndingGallery
 {
     sealed class Tile
@@ -21,6 +23,10 @@ public static class EndingGallery
     static TMP_Text tooltipText;
     static TMP_FontAsset font;
     static readonly List<Tile> tiles = new();
+    static readonly List<Tile> godTiles = new();
+    static Button[] tabs;
+    static TMP_Text[] tabLabels;
+    static bool godTab;
 
     public static void Open()
     {
@@ -41,6 +47,8 @@ public static class EndingGallery
 
     static void Build()
     {
+        tiles.Clear(); // 플레이를 다시 시작하면 이전 타일은 사라졌다
+        godTiles.Clear();
         font = UiKit.FindFont();
         var canvas = UiKit.CreateOverlayCanvas("EndingGalleryCanvas", 310);
         canvasRect = (RectTransform)canvas;
@@ -53,8 +61,8 @@ public static class EndingGallery
         UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "EndingGalleryBook", new Color(0.4f, 0.1f, 0.26f), new Color(0.2f, 0.06f, 0.34f));
         panel.Find("Close").GetComponent<Image>().color = UiSkin.Crimson;
 
-        // 세로 목록 대신 격자로 배치한다
-        Object.Destroy(content.GetComponent<VerticalLayoutGroup>());
+        // 세로 목록 대신 격자로 배치한다 (레이아웃 그룹은 하나만 붙으므로 바로 지운다)
+        Object.DestroyImmediate(content.GetComponent<VerticalLayoutGroup>());
         var grid = content.gameObject.AddComponent<GridLayoutGroup>();
         grid.cellSize = new Vector2(160, 200);
         grid.spacing = new Vector2(12, 12);
@@ -63,6 +71,8 @@ public static class EndingGallery
         grid.constraintCount = 6;
 
         for (int i = 0; i < Endings.All.Count; i++) tiles.Add(BuildTile(Endings.All[i], i));
+        for (int i = 0; i < GodRules.AllEndings.Count; i++) godTiles.Add(BuildTile(GodRules.AllEndings[i], tiles.Count + i));
+        tabs = BuildTabs(panel, font, out tabLabels, god => { godTab = god; Refresh(); });
         BuildTooltip();
         EndingDetail.Build(canvas, font);
     }
@@ -101,6 +111,30 @@ public static class EndingGallery
             if (Endings.Seen(ending.Id)) EndingDetail.Open(ending);
         });
         return tile;
+    }
+
+    // 본편 / 준비된 신 탭 두 개를 창 왼쪽 위(닫기 버튼과 같은 줄)에 놓는다. EndingWindow도 쓴다.
+    internal static Button[] BuildTabs(RectTransform panel, TMP_FontAsset font, out TMP_Text[] labels, System.Action<bool> select)
+    {
+        var buttons = new Button[2];
+        labels = new TMP_Text[2];
+        for (int i = 0; i < 2; i++)
+        {
+            var god = i == 1;
+            buttons[i] = UiKit.MakeButton(panel, font, god ? "GodTab" : "MainTab", "", 120, 44, out labels[i]);
+            UiKit.Anchor((RectTransform)buttons[i].transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(80 + i * 130, -34), new Vector2(120, 44));
+            buttons[i].onClick.AddListener(() => select(god));
+        }
+        return buttons;
+    }
+
+    // 고른 탭은 진홍, 나머지는 어둡게
+    internal static void RefreshTabs(Button[] buttons, TMP_Text[] labels, bool god)
+    {
+        labels[0].text = Lang.Get("gallery_tab_main");
+        labels[1].text = Lang.Get("god_mode");
+        for (int i = 0; i < 2; i++)
+            buttons[i].image.color = (i == 1) == god ? UiSkin.Crimson : new Color(0.16f, 0.07f, 0.24f, 0.95f);
     }
 
     static void AddTrigger(EventTrigger trigger, EventTriggerType type, UnityEngine.Events.UnityAction<BaseEventData> action)
@@ -154,8 +188,12 @@ public static class EndingGallery
     {
         titleLabel.text = Lang.Get("gallery_title");
         closeLabel.text = Lang.Get("close");
-        hintLabel.text = string.Format(Lang.Get("ending_progress"), Endings.SeenCount, Endings.All.Count);
-        foreach (var tile in tiles)
+        RefreshTabs(tabs, tabLabels, godTab);
+        var shown = godTab ? GodRules.AllEndings : Endings.All;
+        hintLabel.text = string.Format(Lang.Get("ending_progress"), shown.Count(e => Endings.Seen(e.Id)), shown.Count);
+        foreach (var tile in tiles) tile.frame.gameObject.SetActive(!godTab);
+        foreach (var tile in godTiles) tile.frame.gameObject.SetActive(godTab);
+        foreach (var tile in godTab ? godTiles : tiles)
         {
             var seen = Endings.Seen(tile.ending.Id);
             tile.cover.gameObject.SetActive(!seen);

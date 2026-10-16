@@ -30,6 +30,11 @@ public static class EndingIllustrations
         if (id == Endings.Dissolved) return Broken;
         if (id == Endings.DeathYoung) return Hourglass;
         if (id == Endings.DeathLeader) return Grave;
+        // 준비된 신: 승천은 빛살, 그릇의 붕괴는 모래시계, 잊힌 신은 틈 난 고리, 해산은 깨진 고리 (색·문양은 같아도 텍스처는 엔딩마다 따로)
+        if (id == GodRules.Vessel.Id) return Hourglass;
+        if (id == GodRules.Forgotten.Id) return BrokenRing;
+        if (id == GodRules.Disbanded.Id) return Broken;
+        if (id.StartsWith("god_")) return Sunburst;
         return id.EndsWith("_max") ? Sunburst : BrokenRing;
     }
 

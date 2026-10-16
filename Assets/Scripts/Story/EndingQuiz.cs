@@ -6,6 +6,7 @@ public static class EndingQuiz
         if (ending.Id == Endings.Dissolved) return Lang.Get("quiz_dissolved");
         if (ending.Id == Endings.DeathYoung) return Lang.Get("quiz_death_young");
         if (ending.Id == Endings.DeathLeader) return Lang.Get("quiz_death_leader");
+        if (GodRules.Find(ending.Id) != null) return Lang.Get($"quiz_{ending.Id}"); // 준비된 신 엔딩은 하나씩 적는다
         if (ending.Final != null)
         {
             var branch = ending.Final.Branch;

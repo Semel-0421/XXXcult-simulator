@@ -1,23 +1,30 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 // 엔딩 목록 창: 지금까지 본 엔딩은 이름과 설명을, 아직 못 본 엔딩은 ???로 보여 준다. 아래 "뒤로 돌아가기"로 닫는다.
+// 본편 / 준비된 신 탭으로 나눈다. 열 때는 방금 끝난 판의 모드 탭을 보여 준다.
 public static class EndingWindow
 {
     sealed class Row
     {
         public TMP_Text name, description;
         public Image background;
+        public Endings.Ending ending;
     }
 
     static GameObject root;
     static TMP_Text titleLabel, hintLabel, backLabel;
     static Row[] rows;
+    static Button[] tabs;
+    static TMP_Text[] tabLabels;
+    static bool godTab;
 
     public static void Open()
     {
         if (root == null) Build();
+        godTab = GameSession.GodMode;
         Refresh();
         if (!root.activeSelf) Menus.Opened();
         root.SetActive(true);
@@ -47,15 +54,17 @@ public static class EndingWindow
         var panel = (RectTransform)root.transform.Find("Panel");
         UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "EndingBook", new Color(0.4f, 0.1f, 0.26f), new Color(0.2f, 0.06f, 0.34f));
 
-        rows = new Row[Endings.All.Count];
-        for (int i = 0; i < rows.Length; i++) rows[i] = BuildRow(content, font, i);
+        var endings = Endings.All.Concat(GodRules.AllEndings).ToArray();
+        rows = new Row[endings.Length];
+        for (int i = 0; i < rows.Length; i++) rows[i] = BuildRow(content, font, i, endings[i]);
+        tabs = EndingGallery.BuildTabs(panel, font, out tabLabels, god => { godTab = god; Refresh(); });
     }
 
-    static Row BuildRow(RectTransform parent, TMP_FontAsset font, int index)
+    static Row BuildRow(RectTransform parent, TMP_FontAsset font, int index, Endings.Ending ending)
     {
         var rect = UiKit.Child(parent, $"Ending{index + 1:00}", typeof(Image), typeof(LayoutElement));
         rect.GetComponent<LayoutElement>().preferredHeight = 128; // 설명 아래 판정 조건 한 줄이 더 들어갈 수 있게
-        var row = new Row { background = rect.GetComponent<Image>() };
+        var row = new Row { background = rect.GetComponent<Image>(), ending = ending };
 
         row.name = UiKit.Label(rect, font, "Name", 28, TextAlignmentOptions.TopLeft, UiSkin.GoldLight);
         UiKit.Anchor(row.name.rectTransform, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
@@ -80,13 +89,17 @@ public static class EndingWindow
     {
         titleLabel.text = Lang.Get("ending_list_title");
         backLabel.text = Lang.Get("ending_back");
-        hintLabel.text = string.Format(Lang.Get("ending_progress"), Endings.SeenCount, Endings.All.Count);
+        EndingGallery.RefreshTabs(tabs, tabLabels, godTab);
+        var shown = godTab ? GodRules.AllEndings : Endings.All;
+        hintLabel.text = string.Format(Lang.Get("ending_progress"), shown.Count(e => Endings.Seen(e.Id)), shown.Count);
 
-        for (int i = 0; i < rows.Length; i++)
+        foreach (var row in rows)
         {
-            var ending = Endings.All[i];
+            var ending = row.ending;
+            var inTab = shown.Contains(ending);
+            row.background.gameObject.SetActive(inTab);
+            if (!inTab) continue;
             var seen = Endings.Seen(ending.Id);
-            var row = rows[i];
             row.background.color = seen ? new Color(0.42f, 0.12f, 0.24f, 0.96f) : new Color(0.16f, 0.07f, 0.24f, 0.9f);
             row.name.text = seen ? $"{Endings.DisplayName(ending)}{Tag(ending.Kind)}" : Lang.Get("ending_unseen");
             row.name.color = seen ? UiSkin.GoldLight : new Color(0.55f, 0.5f, 0.6f);

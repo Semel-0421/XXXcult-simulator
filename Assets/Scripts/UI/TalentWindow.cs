@@ -18,6 +18,7 @@ public class TalentWindow : MonoBehaviour
         BuildGrid();
         tooltip = GiftedTooltip.Create((RectTransform)window.transform, fontSource != null ? fontSource.font : null);
         window.SetActive(false);
+        if (GameSession.GodMode) GameObject.Find("TalentButton")?.SetActive(false); // 신 모드엔 기프티드가 없다
     }
 
     // 세로 목록이던 내용 영역을 격자로 바꾼다
