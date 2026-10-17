@@ -43,7 +43,7 @@ public class AdultArtTests
     public void EveryAdultEventAndCultActionHasArt()
     {
         var keys = ArtKeys();
-        foreach (var e in AdultEvents.All) Assert.Contains(e.Id, keys, $"{e.Id} 삽화 없음");
+        foreach (var e in AdultEvents.Shared) Assert.Contains(e.Id, keys, $"{e.Id} 삽화 없음"); // 모드별 추가 이벤트(xn·xg)는 삽화 없이 글만 나온다
         foreach (var action in new[] { "CultPray", "Preach", "Proselytize", "Serve", "Desire" })
             foreach (var result in new[] { "ok", "fail" })
                 Assert.Contains($"{action}_{result}", keys);

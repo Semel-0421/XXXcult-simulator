@@ -25,7 +25,8 @@
 #           / heaven·earth(theme = HeavenStage>=N / EarthStage>=N, 그 압박 단계 이상에서 압박 비례 확률로 끼어든다)
 #     효과에 Envy±n(신계 시기) Suspicion±n(지상 의혹) Seize+n(건물 압류) Points+n(권능 포인트)를 더 쓸 수 있다.
 #
-# [성인 이벤트] adult_events.csv: id, theme(교단 스탯, 뽑힐 가중치), text. 선택지 보정 스탯은 Lust.
+# [성인 이벤트] adult_events.csv: id, mode, theme(교단 스탯, 뽑힐 가중치), text. 선택지 보정 스탯은 Lust.
+#     mode: all(두 모드 공통) / normal(일반 모드만) / god(준비된 신 모드만, 신 전용 효과 사용 가능). 모두 반복 등장하는 확률 이벤트.
 #
 # CSV는 UTF-8 BOM으로 저장(엑셀 호환). 읽기는 UTF-8, 실패 시 CP949로 한다.
 import csv, io, os, re, sys
@@ -273,21 +274,50 @@ def build_god():
 def build_adult():
     events = rows_of('adult_events.csv')
     choices = group_choices(rows_of('adult_choices.csv'))
-    out, ids = [], set()
+    pools, ids = {'all': [], 'normal': [], 'god': []}, set()
     for e in events:
-        eid, theme = e['id'].strip(), e['theme'].strip()
+        eid, theme, mode = e['id'].strip(), e['theme'].strip(), (e.get('mode') or 'all').strip()
         if eid in ids:
             sys.exit(f'{eid}: 중복 id')
         ids.add(eid)
         if theme not in CULT:
             sys.exit(f'{eid}: 잘못된 테마 "{theme}"')
-        codes = choices_for(eid, choices.get(eid, []), True, {}, '                ', 'Lust')
+        if mode not in pools:
+            sys.exit(f'{eid}: 잘못된 모드 "{mode}" (all/normal/god)')
+        codes = choices_for(eid, choices.get(eid, []), True, {}, '                ', 'Lust', allow_god=mode == 'god')
         body = ',\n                '.join(codes)
-        out.append(f'        CultEvent.Random("{eid}", StatId.{theme}, new Question("{esc(e["text"].strip())}",\n                {body})),')
+        pools[mode].append(f'        CultEvent.Random("{eid}", StatId.{theme}, new Question("{esc(e["text"].strip())}",\n                {body})),')
     unused = set(choices) - ids
     if unused:
         sys.exit(f'선택지만 있고 이벤트가 없는 id: {sorted(unused)}')
-    return out
+    return pools
+
+
+def write_adult(pools):
+    def arr(name, items, note):
+        return f'''    // {note}
+    public static readonly CultEvent[] {name} =
+    {{
+{chr(10).join(items)}
+    }};
+'''
+    text = f'''// 성인 전용 이벤트 목록 (AdultGate.Active일 때만 나온다). Docs/gen_events.py로 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.
+using System.Linq;
+
+public static class AdultEvents
+{{
+{arr('Shared', pools['all'], '두 모드 공통 (mode=all)')}
+{arr('NormalOnly', pools['normal'], '일반 모드 전용 (mode=normal)')}
+{arr('GodOnly', pools['god'], '준비된 신 모드 전용 (mode=god, 신계 시기·지상 의혹·권능 효과를 쓸 수 있다)')}
+    // 이 모드에서 뽑을 수 있는 성인 이벤트 (반복 등장하는 확률 이벤트)
+    public static readonly CultEvent[] Normal = Shared.Concat(NormalOnly).ToArray();
+    public static readonly CultEvent[] God = Shared.Concat(GodOnly).ToArray();
+    public static readonly CultEvent[] All = Shared.Concat(NormalOnly).Concat(GodOnly).ToArray();
+
+    public static CultEvent[] Pool(bool godMode) => godMode ? God : Normal;
+}}
+'''
+    open(OUT_ADULT, 'w', encoding='utf-8-sig', newline='\n').write(text)
 
 
 def write(path, header, cls, items):
@@ -313,8 +343,9 @@ def main():
     god = build_god()
     write(OUT_GOD, '// 준비된 신 모드 전용 이벤트 목록. Docs/gen_events.py로 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.', 'GodEvents', god)
     adult = build_adult()
-    write(OUT_ADULT, '// 성인 전용 이벤트 목록 (AdultGate.Active일 때만 나온다). Docs/gen_events.py로 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.', 'AdultEvents', adult)
-    print(len(life), 'life events,', len(cult), 'cult events,', len(god), 'god events,', len(adult), 'adult events')
+    write_adult(adult)
+    print(len(life), 'life events,', len(cult), 'cult events,', len(god), 'god events,',
+          f'adult events {len(adult["all"])} shared + {len(adult["normal"])} normal + {len(adult["god"])} god')
 
 
 if __name__ == '__main__':
