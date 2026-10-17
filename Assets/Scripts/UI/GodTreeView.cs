@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -239,7 +239,7 @@ public class GodTreeView : MonoBehaviour
         if (state == null || selected == null) return false;
         var tree = state.Tree;
         var done = tree.HasNature ? tree.Learn(selected, state.Available) : tree.ChooseNature(selected);
-        if (done) AudioManager.PlaySfx("success");
+        if (done) AudioManager.PlaySfx("doctrine_learn");
         SelectionChanged?.Invoke(selected);
         return done;
     }

@@ -30,6 +30,15 @@ public class CultEvent
 
     public const float Chance = 0.6f;       // 행동 후 확률 이벤트 발생 확률
     const float BaseWeight = 0.2f;          // 스탯이 0이어도 나올 수 있게 깔아 두는 가중치
+    // 명망이 이 선 아래로 내려가면 100 단위마다 명망 테마 이벤트(명망을 올리는 선택지가 많다) 가중치를 더한다: 399~300 1단계 … 99~0 4단계
+    public const int ReputationBoostLine = 400, ReputationBoostStep = 100;
+    public const float ReputationBoostPerStep = 2f;
+
+    public static int ReputationBoostSteps(int reputation) =>
+        reputation >= ReputationBoostLine ? 0 : (ReputationBoostLine - System.Math.Max(0, reputation) + ReputationBoostStep - 1) / ReputationBoostStep;
+
+    static float Weight(CultEvent e, CultStatus cult) => BaseWeight + cult.Ratio(e.Theme)
+        + (e.Theme == StatId.Reputation ? ReputationBoostPerStep * ReputationBoostSteps(cult[StatId.Reputation].Value) : 0f);
 
     public string Id { get; }
     public StatId Theme { get; }
@@ -141,7 +150,7 @@ public class CultEvent
 
         float total = 0;
         foreach (var e in pool)
-            if (Eligible(e)) total += BaseWeight + cult.Ratio(e.Theme);
+            if (Eligible(e)) total += Weight(e, cult);
         if (total <= 0) return null;
 
         var roll = (float)rng.NextDouble() * total;
@@ -150,7 +159,7 @@ public class CultEvent
         {
             if (!Eligible(e)) continue;
             last = e;
-            roll -= BaseWeight + cult.Ratio(e.Theme);
+            roll -= Weight(e, cult);
             if (roll <= 0) return e;
         }
         return last;

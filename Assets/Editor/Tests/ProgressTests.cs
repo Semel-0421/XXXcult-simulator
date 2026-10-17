@@ -1,4 +1,4 @@
-using System.IO;
+﻿using System.IO;
 using NUnit.Framework;
 
 public class ProgressTests
@@ -84,8 +84,8 @@ public class ProgressTests
     [Test]
     public void Threshold_StepsDownToSeventyFive_ByRunFive()
     {
-        Assert.AreEqual(95, Progress.BranchThreshold(3));
-        Assert.AreEqual(90, Progress.BranchThreshold(4));
+        Assert.AreEqual(90, Progress.BranchThreshold(3));
+        Assert.AreEqual(85, Progress.BranchThreshold(4));
         Assert.AreEqual(75, Progress.BranchThreshold(5));
         Assert.AreEqual(75, Progress.BranchThreshold(9));
         Assert.AreEqual(Endings.BranchStatAbove, Progress.BranchThreshold(0), "회차가 없으면 기본 문턱");

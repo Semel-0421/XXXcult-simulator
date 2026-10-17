@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -181,7 +181,7 @@ public class DoctrineTreeView : MonoBehaviour
     {
         if (selected == null || !tree.CanLearn(selected, DoctrinePoints.Available())) return;
         tree.LevelUp(selected);
-        AudioManager.PlaySfx("success");
+        AudioManager.PlaySfx("doctrine_learn");
     }
 
     public void Refresh()

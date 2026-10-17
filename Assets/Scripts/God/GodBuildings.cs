@@ -13,6 +13,9 @@ public class GodBuildings
 {
     public const int MaxLevel = 5, CommunionCost = 2, AuthorityPerLevel = 5;
     public const float DissolutionChancePerQuarter = 0.12f; // 지상 5단계에서 압류할 건물이 없을 때 해산 명령이 내려질 확률 (평균 2년 유예)
+    public const float BroadDissolutionCut = 0.15f;          // 단계 보너스 고리 하나마다 해산 확률을 이만큼(비율) 줄인다: 넓게 찍은 교단이 가장 버틴다
+
+    public static float DissolutionChance(int broadRings) => DissolutionChancePerQuarter * System.Math.Max(0f, 1f - BroadDissolutionCut * broadRings);
     static readonly int[] Cost = { 50, 100, 200, 350, 500 };
     static readonly int[] FloorPercent = { 5, 10, 15, 22, 30 }; // 최대치 대비 하한 (최대 30%)
     static readonly int[] Upkeep = { 5, 10, 20, 35, 50 };

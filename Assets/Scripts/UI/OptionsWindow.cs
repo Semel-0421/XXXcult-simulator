@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -12,7 +12,8 @@ public static class OptionsWindow
     static TMP_Text titleLabel, closeLabel, musicLabel, sfxLabel, languageLabel, musicValue, sfxValue;
     static TMP_Text keyLabel, resetKeysLabel, aspectLabel, aspectValue;
     static readonly TMP_Text[] keyButtonLabels = new TMP_Text[Keybinds.ActionCount];
-    static TMP_Text windowLabel, windowValue;
+    static TMP_Text windowLabel, windowValue, resultAutoLabel, resultAutoValue;
+    static TMP_Text masterLabel, masterValue, musicMuteLabel, musicMuteValue, sfxMuteLabel, sfxMuteValue, duckLabel, duckValue;
     static Button korean, english, aspect, window, resetKeysButton;
     static TMP_Text adultLabel, adultValue;
     static TMP_InputField[] birthInputs; // 연·월·일
@@ -86,6 +87,11 @@ public static class OptionsWindow
         WindowMode.Changed -= Refresh;
         WindowMode.Changed += Refresh;
 
+        // 선택 결과 창 자동 넘김 (켜면 잠시 뒤 저절로 닫힌다)
+        var resultRow = Row(content, font, out resultAutoLabel);
+        var resultAuto = RightButton(resultRow, font, "ResultAuto", 0, 200, out resultAutoValue);
+        resultAuto.onClick.AddListener(() => { ResultWindow.AutoAdvance = !ResultWindow.AutoAdvance; Refresh(); });
+
         // 성인 인증: 생년월일을 넣고 인증하면 입력칸이 사라지고 성인 콘텐츠 켜기/끄기만 남는다
         var adultRow = Row(content, font, out adultLabel);
         adultRow.GetComponent<LayoutElement>().preferredHeight = 96;
@@ -98,6 +104,11 @@ public static class OptionsWindow
             BirthInput(adultRow, font, "BirthMonth", 120 + KeyGap * 2 + 64 + KeyGap, 64, 2, "MM"),
             BirthInput(adultRow, font, "BirthDay", 120 + KeyGap * 2, 64, 2, "DD"),
         };
+
+        // 전체 음량
+        var masterRow = Row(content, font, out masterLabel);
+        var master = AddSlider(masterRow, font, AudioManager.MasterVolume, out masterValue);
+        master.onValueChanged.AddListener(value => { AudioManager.MasterVolume = value; masterValue.text = Percent(value); });
 
         // 배경음악
         var musicRow = Row(content, font, out musicLabel);
@@ -113,7 +124,19 @@ public static class OptionsWindow
         release.callback.AddListener(_ => AudioManager.PlaySfx("click"));
         trigger.triggers.Add(release);
 
+        // 소리 켜기/끄기와 메뉴 덕킹
+        ToggleRow(content, font, "MusicMute", out musicMuteLabel, out musicMuteValue, () => AudioManager.MusicMuted = !AudioManager.MusicMuted);
+        ToggleRow(content, font, "SfxMute", out sfxMuteLabel, out sfxMuteValue, () => AudioManager.SfxMuted = !AudioManager.SfxMuted);
+        ToggleRow(content, font, "DuckOnMenu", out duckLabel, out duckValue, () => AudioManager.DuckOnMenu = !AudioManager.DuckOnMenu);
+
         root.SetActive(false);
+    }
+
+    static void ToggleRow(RectTransform content, TMP_FontAsset font, string name, out TMP_Text label, out TMP_Text value, System.Action toggle)
+    {
+        var row = Row(content, font, out label);
+        var button = RightButton(row, font, name, 0, 200, out value);
+        button.onClick.AddListener(() => { toggle(); AudioManager.SaveVolumes(); Refresh(); });
     }
 
     // 행 오른쪽 끝에서 right만큼 떨어진 곳에 버튼을 놓는다 (가장자리 여백 포함)
@@ -223,11 +246,21 @@ public static class OptionsWindow
         windowLabel.text = Lang.Get("opt_window");
         windowValue.text = Lang.Get(WindowMode.Windowed ? "window_on" : "window_off");
         window.interactable = WindowMode.Supported;
+        resultAutoLabel.text = Lang.Get("opt_result_auto");
+        resultAutoValue.text = Lang.Get(ResultWindow.AutoAdvance ? "adult_on" : "adult_off");
         var verified = AdultGate.Verified;
         adultLabel.text = Lang.Get(verified ? "opt_adult_content" : "opt_adult_verify")
             + (!verified && adultMessage != "" ? $"\n<size=70%><color=#F2D978>{adultMessage}</color></size>" : "");
         adultValue.text = verified ? Lang.Get(AdultGate.ContentEnabled ? "adult_on" : "adult_off") : Lang.Get("adult_check");
         foreach (var input in birthInputs) input.gameObject.SetActive(!verified);
+        masterLabel.text = Lang.Get("opt_master");
+        masterValue.text = Percent(AudioManager.MasterVolume);
+        musicMuteLabel.text = Lang.Get("opt_music_mute");
+        musicMuteValue.text = Lang.Get(AudioManager.MusicMuted ? "adult_off" : "adult_on");
+        sfxMuteLabel.text = Lang.Get("opt_sfx_mute");
+        sfxMuteValue.text = Lang.Get(AudioManager.SfxMuted ? "adult_off" : "adult_on");
+        duckLabel.text = Lang.Get("opt_duck");
+        duckValue.text = Lang.Get(AudioManager.DuckOnMenu ? "adult_on" : "adult_off");
         musicValue.text = Percent(AudioManager.MusicVolume);
         sfxValue.text = Percent(AudioManager.SfxVolume);
     }

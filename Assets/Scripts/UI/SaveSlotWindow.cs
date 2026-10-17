@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -89,6 +89,7 @@ public class SaveSlotWindow : MonoBehaviour
             return;
         }
         SaveSlots.Write(slot, GameSession.Capture());
+        AudioManager.PlaySfx("save");
         pending = Pending.None;
         Refresh();
     }

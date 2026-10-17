@@ -1,4 +1,4 @@
-using System.IO;
+﻿using System.IO;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -91,14 +91,14 @@ public class EndingTests
     }
 
     [Test]
-    public void Decide_VirtueBranch_GoodWhenDesireAverageAtMost50()
+    public void Decide_VirtueBranch_GoodWhenDesireAverageAtMost45()
     {
         var p = new PersonalStatus();
         p[PersonalStatId.Charity].Set(90);
-        SetGroup(p, Desires, 50);
-        Assert.AreEqual(EndingKind.Good, Endings.Decide(p, DoctrineBranch.Charity), "욕망 평균 50은 이하");
-        SetGroup(p, Desires, 51);
-        Assert.AreEqual(EndingKind.Bad, Endings.Decide(p, DoctrineBranch.Charity), "욕망 평균 51은 초과");
+        SetGroup(p, Desires, 45);
+        Assert.AreEqual(EndingKind.Good, Endings.Decide(p, DoctrineBranch.Charity), "욕망 평균 45는 이하");
+        SetGroup(p, Desires, 46);
+        Assert.AreEqual(EndingKind.Bad, Endings.Decide(p, DoctrineBranch.Charity), "욕망 평균 46은 초과");
     }
 
     [Test]
@@ -202,5 +202,14 @@ public class EndingTests
         Assert.IsFalse(GameSession.PendingAdvancesTurn);
         Assert.IsTrue(GameSession.Started);
         Assert.IsFalse(GameSession.Ended);
+    }
+
+    [Test]
+    public void FindExtreme_BottomNeedsSustainedZero()
+    {
+        var cult = new CultStatus();
+        cult[StatId.Offerings].Set(0);
+        Assert.IsNull(Endings.FindExtreme(cult, ~0, _ => false), "잠깐 닿은 0은 바닥이 아니다");
+        Assert.AreEqual((StatId.Offerings, false), Endings.FindExtreme(cult, ~0, id => id == StatId.Offerings));
     }
 }

@@ -77,7 +77,7 @@ public class GodState
         rng ??= GameSession.Rng;
         Pressure.ApplyQuarter(cult);
         if (Pressure.Stage(global::Pressure.Earth, cult) >= GodPressure.MaxStage && !Buildings.Seize(rng, Tree.Total(GodEffect.Type.SeizeGuard))
-            && rng.NextDouble() < GodBuildings.DissolutionChancePerQuarter)
+            && rng.NextDouble() < GodBuildings.DissolutionChance(Tree.BroadRings))
             Buildings.OrderDissolution();
         Buildings.EnforceFloors(cult);
     }

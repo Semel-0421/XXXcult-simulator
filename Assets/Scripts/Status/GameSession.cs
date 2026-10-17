@@ -27,6 +27,10 @@ public static class GameSession
 
     public static void SetGodMode(bool on) => GodMode = on;
 
+    // 이번 판이 도달한 엔딩 (음악이 결말 곡으로 바뀐다). 새 판에서 지운다
+    public static Endings.Ending Ending { get; private set; }
+    public static void SetEnding(Endings.Ending ending) => Ending = ending;
+
     // 신의 본성을 고르면 교리 선포를 대신해 교단 행동이 열린다
     static void OnGodSkillLearned(GodSkill skill)
     {
@@ -42,6 +46,7 @@ public static class GameSession
         if (FirstExtremeId == null) FirstExtremeId = endingId;
     }
 
+    public static readonly System.Collections.Generic.Dictionary<StatId, int> ZeroSince = new(); // 스탯이 0이 된 교단 턴 (저장하지 않음, 불러오면 다시 센다)
     public static int RaisedMask { get; private set; } // 한 번이라도 0을 넘은 적이 있는 교단 스탯 (StatId 비트). 시작값 0은 바닥이 아니다.
 
     public static void MarkRaised(StatId id) => RaisedMask |= 1 << (int)id;
@@ -116,6 +121,7 @@ public static class GameSession
         Resuming = false;
         Started = false;
         Ended = false;
+        Ending = null;
         Dead = false;
         Run = 0;
         GodMode = false;
@@ -123,6 +129,7 @@ public static class GameSession
         God.Tree.Changed += OnGodSkillLearned;
         FirstExtremeId = null;
         RaisedMask = 0;
+        ZeroSince.Clear();
         PersonalRaisedMask = 0;
         PendingEventId = null;
         PendingAdvancesTurn = false;
@@ -209,6 +216,7 @@ public static class GameSession
         Started = true;
         FirstExtremeId = string.IsNullOrEmpty(data.firstExtreme) ? null : data.firstExtreme;
         RaisedMask = data.statsRaised;
+        ZeroSince.Clear();
         PersonalRaisedMask = data.personalRaised;
         PendingEventId = string.IsNullOrEmpty(data.pendingEventId) ? null : data.pendingEventId;
         PendingAdvancesTurn = data.pendingAdvances;

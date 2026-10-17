@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -204,7 +204,7 @@ public static class BalanceSimulation
     static float OppositeAverage(Goal goal) =>
         CultEvent.TraitAverage(GameSession.Personal, Endings.IsDesireBranch(goal.Branch) ? CultEvent.MoodTrait.Virtue : CultEvent.MoodTrait.Desire);
 
-    static bool OppositeReady(Goal goal) => goal.WantOppositeHigh ? OppositeAverage(goal) > 55 : OppositeAverage(goal) <= 45;
+    static bool OppositeReady(Goal goal) => goal.WantOppositeHigh ? OppositeAverage(goal) > Endings.OppositeAverageFor(goal.Branch) + 5 : OppositeAverage(goal) <= Endings.OppositeAverageFor(goal.Branch) - 5;
 
     // ---- 선택 점수: 목표에 맞는 개인 스탯은 올리고, 교단은 해체되지 않게 지킨다
 

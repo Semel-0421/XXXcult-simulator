@@ -1,7 +1,7 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-// 성인 콘텐츠 전용 삽화. Resources/AdultArt/{이벤트 id 또는 행동키_ok|fail}.png가 있을 때만,
+// 성인 콘텐츠 전용 삽화. Resources/AdultArt/{이벤트 id 또는 행동키_ok|fail}[_m|_f].png가 있을 때만,
 // AdultGate.Active일 때만 쓴다. 없으면 아무것도 띄우지 않고 기존 픽토그램을 그대로 쓴다.
 // 그릴 그림 목록과 프롬프트는 Docs/adult_art_prompts.csv.
 public static class AdultArt
@@ -10,8 +10,13 @@ public static class AdultArt
     static RawImage image;
     static AspectRatioFitter fitter;
 
-    public static Texture2D Load(string key) =>
-        AdultGate.Active && !string.IsNullOrEmpty(key) ? Resources.Load<Texture2D>($"AdultArt/{key}") : null;
+    // 플레이어 성별에 따라 상대가 달라지는 장면은 {키}_m / {키}_f 파일을 먼저 찾고, 없으면 기본 파일을 쓴다
+    public static Texture2D Load(string key)
+    {
+        if (!AdultGate.Active || string.IsNullOrEmpty(key)) return null;
+        var gendered = GameSession.Personal == null ? null : $"{key}_{(GameSession.Personal.Gender == Gender.Male ? "m" : "f")}";
+        return (gendered == null ? null : Resources.Load<Texture2D>($"AdultArt/{gendered}")) ?? Resources.Load<Texture2D>($"AdultArt/{key}");
+    }
 
     // 이벤트가 떠 있는 동안 삽화를 띄운다 (삽화가 없으면 닫는다)
     public static void Show(string eventId)

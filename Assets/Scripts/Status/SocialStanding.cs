@@ -1,4 +1,4 @@
-// 명망 = 교단을 바라보는 사회적 시선. 낮으면 지역 사회·타 종교·국가의 견제를 받다 해체되고, 높으면 공인된 종교로 대우받는다.
+﻿// 명망 = 교단을 바라보는 사회적 시선. 낮으면 지역 사회·타 종교·국가의 견제를 받다 해체되고, 높으면 공인된 종교로 대우받는다.
 public enum Standing { Dissolved, Persecuted, Watched, Neutral, Respected, Recognized }
 
 public static class SocialStanding
@@ -20,8 +20,8 @@ public static class SocialStanding
     // 교단 턴마다 붙는 효과. 높은 명망은 주목받는 만큼 조금씩 깎인다.
     public static CultEffect[] TurnEffects(Standing standing) => standing switch
     {
-        Standing.Persecuted => new[] { new CultEffect(StatId.Followers, -3), new CultEffect(StatId.FollowerFaith, -10), new CultEffect(StatId.Offerings, -10) },
-        Standing.Watched => new[] { new CultEffect(StatId.Followers, -1), new CultEffect(StatId.Offerings, -5) },
+        Standing.Persecuted => new[] { new CultEffect(StatId.Followers, -3), new CultEffect(StatId.FollowerFaith, -6), new CultEffect(StatId.Offerings, -6) },
+        Standing.Watched => new[] { new CultEffect(StatId.Followers, -1), new CultEffect(StatId.Offerings, -3) },
         Standing.Respected => new[] { new CultEffect(StatId.Followers, 1), new CultEffect(StatId.Offerings, 5), new CultEffect(StatId.Reputation, -1) },
         Standing.Recognized => new[] { new CultEffect(StatId.Followers, 2), new CultEffect(StatId.Offerings, 10), new CultEffect(StatId.Reputation, -3) },
         _ => System.Array.Empty<CultEffect>(),

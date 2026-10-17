@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,7 +28,7 @@ public class DoctrineNodeUI : MonoBehaviour
         if (tree == null) return;
         if (tree.Emblem != null)
         {
-            if (tree.UpgradeFinal(DoctrinePoints.Available())) AudioManager.PlaySfx("success");
+            if (tree.UpgradeFinal(DoctrinePoints.Available())) AudioManager.PlaySfx("doctrine_learn");
         }
         else tree.LevelUp(DoctrineSkill.Declaration);
     }

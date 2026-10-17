@@ -157,7 +157,7 @@ public class AudioTests
     {
         Assert.AreEqual("tier_Persecuted", MusicKeys.ForStanding(Standing.Persecuted));
         Assert.AreEqual("tier_Recognized", MusicKeys.ForStanding(Standing.Recognized));
-        Assert.AreEqual(new[] { "tier_Dissolved", "tier_Persecuted" }, MusicKeys.Candidates("tier_Dissolved"));
+        Assert.AreEqual(new[] { "tier_Dissolved", "ending_ruin", "tier_Persecuted" }, MusicKeys.Candidates("tier_Dissolved"));
         Assert.AreEqual(new[] { "menu" }, MusicKeys.Candidates(MusicKeys.Menu));
     }
 

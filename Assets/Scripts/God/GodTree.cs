@@ -74,8 +74,12 @@ public class GodTree
     // 네 가지 모두가 그 고리 노드의 절반 이상을 익힌 고리 수. 고리마다 안정성(저항·손실 방어)을 크게, 승천 속도(포인트)를 조금 준다.
     public const int BroadResist = 10, BroadGuard = 8, BroadRingsPerPoint = 2;
 
-    public int BroadRings => Enumerable.Range(1, 5).Count(ring =>
-        GodSkillCatalog.Cores.All(core => IsBroad(core.Branch, ring)));
+    public const int BroadDeepRing = 3; public const float BroadDeepScale = 1.5f; // 안쪽 고리(3~5)는 넓게 찍기 어려워 보너스를 1.5배로
+
+    IEnumerable<int> BroadRingList => Enumerable.Range(1, 5).Where(ring => GodSkillCatalog.Cores.All(core => IsBroad(core.Branch, ring)));
+    public int BroadRings => BroadRingList.Count();
+    // 저항·손실 방어에 곱하는 고리 수 (안쪽 고리는 BroadDeepScale로 친다)
+    public float BroadWeight => BroadRingList.Sum(ring => ring >= BroadDeepRing ? BroadDeepScale : 1f);
 
     bool IsBroad(GodBranch branch, int ring)
     {
@@ -123,12 +127,12 @@ public class GodTree
                 var key = (effect.Kind, KeyOf(effect));
                 totals[key] = (totals.TryGetValue(key, out var sum) ? sum : 0) + skill.AmountOf(effect);
             }
-        var broad = BroadRings;
+        var broad = BroadWeight;
         if (broad > 0)
         {
             void Add(GodEffect.Type type, string key, int amount) => totals[(type, key)] = (totals.TryGetValue((type, key), out var sum) ? sum : 0) + amount;
-            foreach (var pressure in new[] { "Heaven", "Earth" }) Add(GodEffect.Type.Resist, pressure, BroadResist * broad);
-            foreach (var stat in new[] { StatId.Followers, StatId.FollowerFaith, StatId.Reputation }) Add(GodEffect.Type.Guard, $"c:{stat}", BroadGuard * broad);
+            foreach (var pressure in new[] { "Heaven", "Earth" }) Add(GodEffect.Type.Resist, pressure, (int)System.Math.Round(BroadResist * broad));
+            foreach (var stat in new[] { StatId.Followers, StatId.FollowerFaith, StatId.Reputation }) Add(GodEffect.Type.Guard, $"c:{stat}", (int)System.Math.Round(BroadGuard * broad));
         }
         return totals;
     }

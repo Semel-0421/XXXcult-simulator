@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using NUnit.Framework;
 
 // 준비된 신 모드: 봉헌 건축(축성), 전용 이벤트, 잠금 제목
@@ -153,5 +153,13 @@ public class GodBuildingsTests
         Assert.AreEqual(4, GodRules.LockedTitle("준비된 신", 4).Split("#F2D978").Length - 1);
         StringAssert.Contains("<s>", GodRules.LockedTitle("준비된 신", 4));
         StringAssert.Contains("(4/5)", GodRules.LockedTitle("준비된 신", 4));
+    }
+
+    [Test]
+    public void BroadRings_LowerDissolutionChance()
+    {
+        Assert.AreEqual(GodBuildings.DissolutionChancePerQuarter, GodBuildings.DissolutionChance(0), 1e-6);
+        Assert.Less(GodBuildings.DissolutionChance(5), GodBuildings.DissolutionChance(2));
+        Assert.GreaterOrEqual(GodBuildings.DissolutionChance(10), 0f);
     }
 }
