@@ -1,0 +1,150 @@
+900|Your swift decision shows strength.
+901|Your inner circle turns its back on you.
+902|Gladly officiate
+903|Your followers are moved when you officiate.
+904|Create a wedding rite unique to the cult
+905|The cult's wedding rite becomes your followers' pride.
+906|Some say the unfamiliar rite feels awkward.
+907|Leave it to your inner circle
+908|Your followers accept the confidant's officiating without fuss.
+909|The confidant fumbles the ceremony and becomes a laughingstock.
+910|Declare that marriage requires the cult leader's permission
+911|The permission system takes hold.
+912|Followers begin leaving the cult.
+913|Appoint a loyal confidant
+914|A loyal inspector enforces discipline.
+915|The inspector abuses his power.
+916|Inspection is unnecessary
+917|Without inspection, the cult runs on trust.
+918|Allow it and edit it yourself
+919|The book you edited becomes the Doctrine's standard.
+920|Editing takes a long time.
+921|The ban keeps the original under control.
+922|Let your inner circle edit freely
+923|The edited version is well received.
+924|The edited version contains bizarre interpretations.
+925|Sell the book at a high price
+926|The book sells like hotcakes.
+927|Criticism pours in over the steep price.
+928|Recognize the group officially
+929|Officially recognized, the young followers swear loyalty.
+930|Recognition splits authority.
+931|Disband it
+932|Disbanding the group restores order.
+933|The young people push back against the disbanding.
+934|Watch them in secret
+935|Surveillance lets you track the group's moves.
+936|Your surveillance is exposed, and the group grows militant.
+937|Join and lead the group yourself
+938|Leading it yourself, you embrace the young.
+939|Hang it large
+940|The portrait dominates the hall.
+941|Some call it excessive idolization.
+942|Hang it small beside God's symbol
+943|The humble placement wins your followers' favor.
+944|Put it into the cult's funds
+945|It gives the finances a healthy boost.
+946|Disclose it and hold a thanksgiving service
+947|Your followers rejoice at the thanksgiving service.
+948|The disclosure doesn't name the donor, stirring a fuss.
+949|Find the donor and thank them
+950|The donor comes to trust the cult.
+951|You can't find the donor.
+952|Slip it into your personal safe
+953|No one knows about the money in your safe.
+954|Word of the money gets out, and you lose trust.
+955|Spend half on a feast for followers
+956|Your followers gather and laugh at the feast.
+957|After the feast, money is tight.
+958|Repair it with offerings
+959|You fix the roof with offerings.
+960|Collect a special offering
+961|The special offering comes in.
+962|Followers leave over the demand for money.
+963|Repair it yourself with your followers
+964|Working together deepens your bond.
+965|A follower is injured during the work.
+966|Leave it
+967|You leave it as it is.
+968|The investment comes in, and the finances can breathe.
+969|The investment fails and leaves debt behind.
+970|You turn it down cleanly.
+971|Scrutinize the terms carefully
+972|Scrutinizing the terms limits your losses.
+973|The terms are complex, and time slips by.
+974|Take his money and break your promise
+975|You take the money and break your word.
+976|Word gets out that you broke your promise.
+977|Adopt it
+978|Seats for offerings swell the finances.
+979|Critics call it discrimination between rich and poor.
+980|Flatly refuse
+981|Your refusal earns your followers' respect.
+982|Create just one special seat
+983|The follower who paid for the special seat is delighted.
+984|The special seat breeds resentment.
+985|Mass-produce and sell them
+986|The souvenirs fly off the shelves.
+987|Unsold stock piles up at a loss.
+988|Make a small batch with care
+989|The lovingly made souvenirs become your followers' pride.
+990|Give them only to followers
+991|Your followers are delighted.
+992|Giving them away drains the finances.
+993|You avoid a commercial image.
+994|Investigate thoroughly
+995|The investigation uncovers how the money was embezzled.
+996|The investigation fizzles out, leaving suspicion.
+997|Cover it up and move on
+998|The hole you covered is quietly filled.
+999|The cover-up leaks out.
+1000|Replace the treasurer
+1001|The new treasurer straightens out the books.
+1002|Manage the books yourself
+1003|Going over the books yourself, you get a grip on the finances.
+1004|The books are so complex they confuse you.
+1005|Comfort him: offerings come from the heart
+1006|Comforted, the follower's eyes well up.
+1007|Your comfort rings hollow.
+1008|Let him give labor instead
+1009|He gives labor in place of offerings.
+1010|Have the cult support his living costs
+1011|The follower is grateful for the support.
+1012|The support strains the finances.
+1013|Press him for offerings
+1014|Pressing yields a few offerings.
+1015|Word of the pressure spreads, and your Repute falls.
+1016|Open a bakery
+1017|The smell of bread fills the alley, and the neighborhood loves it.
+1018|The bread doesn't sell.
+1019|Open a teahouse
+1020|People gather at the teahouse to talk.
+1021|The teahouse is empty.
+1022|Run it to employ followers
+1023|Your followers are grateful for the jobs.
+1024|Inexperience leads to losses.
+1025|Commerce doesn't fit with faith
+1026|You give up the business and focus on faith.
+1027|Share the surplus with your followers
+1028|Your followers are moved when you share the surplus.
+1029|After sharing, you fall into the red.
+1030|Save it for next year
+1031|Saving leaves the finances on solid ground.
+1032|Expand the cult's buildings
+1033|More buildings mean room to take in followers.
+1034|Construction costs shake the finances.
+1035|Raise your own salary
+1036|With a raise, life gets comfortable.
+1037|The raise draws your followers' resentment.
+1038|Buy it
+1039|The relic elevates the cult's majesty.
+1040|The relic turns out to be fake.
+1041|Buy a replica
+1042|Replica or not, it serves well enough.
+1043|Use the money for service
+1044|Service improves the cult's image.
+1045|The service has little effect.
+1046|Accept it
+1047|You accept the offering and add it to the funds.
+1048|Rumor spreads that it's gambling money.
+1049|Refuse and tell him to quit gambling

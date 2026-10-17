@@ -1,0 +1,150 @@
+1909|You can't focus on your reading.
+1910|Wonder whether God exists
+1911|You ponder deeply whether God exists.
+1912|The question never ends, and your head aches.
+1913|Agree that God is dead
+1914|You find yourself agreeing that God is dead.
+1915|Your friends look at you strangely.
+1916|Debate the teacher to the bitter end
+1917|You get into a heated debate with the teacher.
+1918|You lose the debate, and your pride stings.
+1919|Doze through it
+1920|You doze until class ends.
+1921|Devote yourselves to each other
+1922|You cherish and devote yourselves to each other.
+1923|Let love tank your grades
+1924|Lost in romance, your grades drop.
+1925|Your report card worries your family deeply.
+1926|Look into your partner's family background
+1927|You look into your partner's family circumstances.
+1928|Their family finds out and is offended.
+1929|Control your partner
+1930|You push your partner around as you please.
+1931|Your partner leaves you.
+1932|Be satisfied with the results
+1933|You smile, satisfied with the results.
+1934|Study even harder
+1935|You throw yourself into studying even more fiercely.
+1936|Overstudying damages your health.
+1937|Forge your report card
+1938|You alter your report card and show your family.
+1939|The forgery is exposed, and you're scolded harshly.
+1940|Decide grades aren't everything
+1941|You consider other meanings in life.
+1942|The anxiety won't go away.
+1943|Take it on
+1944|You lead the youth group and earn the church's trust.
+1945|The responsibility is heavy, and you wear out.
+1946|You decline politely.
+1947|Wake up to church politics
+1948|You grasp the power structure within the church.
+1949|You get caught up in factional fights.
+1950|Look into the church finances
+1951|You examine the church's offering ledger.
+1952|Financial problems come to light and cause an uproar.
+1953|Accept
+1954|You begin life as an athlete, sweating hard.
+1955|You push too hard in training and get hurt.
+1956|Choose your studies
+1957|Give up after an injury
+1958|An injury ends your athletic career.
+1959|The injury is serious, and you're hospitalized.
+1960|Be praised as a natural
+1961|Praise pours in that you're a born athlete.
+1962|The praise weighs on you, and you tense up.
+1963|Go with them
+1964|You leave with your friend and see a new world.
+1965|You go hungry on the streets.
+1966|Talk them into going home
+1967|You persuade your friend to go back home.
+1968|Your persuasion fails, and your friend leaves.
+1969|Tell their parents
+1970|You tell their parents, and they find your friend.
+1971|Feeling betrayed, your friend shuts you out.
+1972|Stay behind, lost in thought
+1973|Left alone, you sink into thought.
+1974|Give your parents a gift
+1975|You give your parents a gift.
+1976|Save it all
+1977|You save your entire paycheck.
+1978|Your savings grow slower than expected.
+1979|Treat your friends
+1980|You buy your friends tteokbokki.
+1981|Your money runs out fast.
+1982|Buy luxury goods
+1983|You buy a luxury watch.
+1984|It's a fake, and your money is wasted.
+1985|Go around explaining yourself
+1986|You go around trying to correct the rumor.
+1987|Explaining only feeds the rumor.
+1988|Ignore it
+1989|You ignore it and carry on.
+1990|Find the source and punish them
+1991|You track down the kid who spread the rumor and punish them.
+1992|The rumor only grows.
+1993|Turn the rumor to your advantage
+1994|You exploit the rumor to draw attention.
+1995|The rumor spreads in an even worse form.
+1996|Speak to the snake
+1997|The snake seems to answer.
+1998|The snake's cry keeps you from sleeping.
+1999|Wake up screaming
+2000|You wake with a scream.
+2001|Look up dream interpretations
+2002|You thumb through a dream dictionary.
+2003|The interpretation only unsettles you more.
+2004|Meet the snake's gaze in the dream
+2005|You meet the snake's eyes, and it bows its head.
+2006|The snake's eyes terrify you, and you break into a cold sweat.
+2007|Choose volunteer work
+2008|You help many people through volunteering.
+2009|Go on the school trip
+2010|You enjoy the trip with your friends.
+2011|Things are awkward with your friends.
+2012|Skip both and study
+2013|You focus on studying alone.
+2014|Your friends resent you.
+2015|Snap volunteer photos and goof off
+2016|You just take photos and slack off.
+2017|The photos give you away, and rumors spread.
+2018|Accept their feelings
+2019|You accept their feelings and start dating.
+2020|The stares around you sting.
+2021|Say you want to stay friends
+2022|You say you'd like to keep the friendship.
+2023|Pull away in confusion
+2024|Flustered, you keep your distance.
+2025|Your friend is hurt.
+2026|Respect your friend's courage
+2027|You talk it through, respecting their courage.
+2028|The conversation ends awkwardly.
+2029|Captivate the audience
+2030|You grip the audience and earn thunderous applause.
+2031|The audience grows restless.
+2032|Read only your script
+2033|You read your script calmly.
+2034|Crack an impromptu joke
+2035|Your joke makes the audience laugh.
+2036|The joke falls flat, and the mood sinks.
+2037|Bring up God
+2038|You move the audience with talk of God.
+2039|The religious talk makes the audience uncomfortable.
+2040|Drink in moderation
+2041|You drink moderately and chat with people.
+2042|You overdo it and wake up with a headache.
+2043|Drink until you black out
+2044|You drink until you black out.
+2045|You never make it home and collapse in the street.
+2046|Skip the drinks, enjoy the vibe
+2047|You enjoy the atmosphere and head home.
+2048|Hear what people really think
+2049|You quietly listen to people's true feelings.
+2050|You hear only gossip and come away sour.
+2051|Begin a hundred-day prayer
+2052|You begin a hundred days of prayer.
+2053|You waver before the prayer is done.
+2054|Study fifteen hours a day
+2055|You study fifteen hours a day.
+2056|Overwork leaves you sick and aching.
+2057|Give up, it's too late
+2058|You give up, telling yourself it's too late.

@@ -1,0 +1,150 @@
+910|Few people show up to the reading.
+911|Reprint the book and hand it out free
+912|For every book they burn, more hit the streets.
+913|The print shop refuses to do business with you.
+914|Absorb the cult of a forgotten god
+915|The forgotten god's last followers offer you an ancient secret.
+916|Accusations that the heretics have banded together grow louder.
+917|Form an alliance as equals
+918|Those persecuted together find solidarity.
+919|The alliance only makes you a bigger target.
+920|Refuse
+921|You stay out of the other gods' sight.
+922|Take the question head-on
+923|Your followers nod at your answer: if you are happy while called heretics, that is salvation.
+924|Your answer fails to steady wavering hearts.
+925|Summon the questioning follower to your chamber
+926|By morning, he has no more questions.
+927|He tells the other followers what happened that night.
+928|Forbid questions
+929|Their mouths stay shut, but their eyes waver.
+930|Followers who resent the ban leave.
+931|Climb onto the temple roof and reveal your divine form
+932|As you blaze with light, the flocks scatter and the city holds its breath.
+933|The light flickers and the vessel screams.
+934|Gather the followers and hold out with an all-night feast
+935|Hot breath fills the temple and drives back the red sky.
+936|The birds peck at the roof.
+937|Shut the temple doors and hide
+938|It takes a long time for the sky to return to its usual color.
+939|Grab the blade in the mirror with your bare hand
+940|When the blood from your palm touches the mirror, the red line vanishes.
+941|The phantom blade leaves a real wound on the vessel.
+942|Raise the vessel's energy through pleasure
+943|Your heated body throws off the red vision.
+944|The vision drains the heat from your body.
+945|Smash every mirror
+946|The visions are gone, but you cannot sleep.
+947|Perform the forbidden rite that rebinds vessel and god
+948|After a night where flesh and divinity entwine, the bond is stronger than before.
+949|The rite is broken off and the bond grows thinner.
+950|Keep praying for Communion
+951|Your cold fingertips slowly warm.
+952|The more you pray, the colder your body grows.
+953|Accept the weakening bond
+954|Your miraculous power wanes for a while.
+955|Fill your followers' granaries with Offerings
+956|The rice you send piles up in the empty granaries.
+957|It is not enough to go around.
+958|Bring a miracle of abundance to the withered fields
+959|The next morning, golden fruit ripens on the withered stalks.
+960|The god of abundance blocks your miracle.
+961|Tell the followers to endure
+962|Resentment builds among your hungry followers.
+963|Whisper into your followers' ears and overwrite the truth
+964|Wherever your breath touches an ear, the false voices are wiped away.
+965|The voices and your whispers tangle together, and confusion spreads.
+966|Reinterpret the voices as a new Revelation
+967|What was called a lie becomes part of a deeper truth.
+968|Your interpretation only confuses your followers more.
+969|Let the followers rest
+970|The voices slowly fade, but they leave scars.
+971|Prepare a miracle to face all four cults at once
+972|Banners on all four sides fall at once, and the city chants your name.
+973|The miracle collapses and the vessel falls.
+974|Win over the cults one at a time with feasts
+975|The weakest cult quietly lowers its banner.
+976|Your attempt to win them over is exposed.
+977|Hold out with your followers
+978|Even under siege, your followers stay at your side.
+979|The siege drags on and your followers tire.
+980|Join hands with the golden-eyed messenger
+981|With another god on your side, the siege loosens.
+982|The messenger was a traitor and makes off with your weakness.
+983|Seduce the messenger and learn who they are
+984|In your chamber, the messenger spills every plan for the gods' council.
+985|The messenger scoffs at your touch and vanishes.
+986|Send the messenger away
+987|The golden eyes fade into the dark.
+988|Stand tall before the tribunal
+989|When your defense ends, a few empty chairs rock as if nodding.
+990|The gods' verdict crushes you.
+991|Lay a feast on the tribunal and get the gods drunk
+992|The gods at the round table raise their cups and toast in your name.
+993|The gods take it as an insult and rage.
+994|Refuse the judgment
+995|Your refusal only intensifies the gods' pressure.
+996|Perform a public healing for the community
+997|A video of an old man cured of his illness buries the post.
+998|Nerves get the better of you and the healing fails.
+999|Have followers post rebuttal comments
+1000|After a comment war, the post sinks out of sight.
+1001|People start calling it an organized comment campaign.
+1002|The post is forgotten in a few days.
+1003|Explain that the sounds were hymns
+1004|The ladies at the hair salon nod along.
+1005|Your explanation only fuels their imagination.
+1006|Invite the ladies to a feast
+1007|After one plate, the ladies are now on your side.
+1008|The invitation becomes fresh gossip.
+1009|Cut back on the night rites for a while
+1010|The nights are quiet, but your followers miss them.
+1011|Have that follower visibly cured of a real illness
+1012|When the old ailment vanishes, the rumor turns to awe.
+1013|The illness does not heal, and the rumor hardens.
+1014|Say the follower's faith conquered the illness
+1015|Vague words muddy the rumor.
+1016|It sounds like a lame excuse.
+1017|Send the follower to the provinces
+1018|The person is gone, but the rumor remains.
+1019|Politely invite him into the temple
+1020|The humble worship caught on camera actually wins goodwill.
+1021|The edited footage looks suspicious.
+1022|Perform a small miracle in front of his camera
+1023|A video with millions of views draws in followers.
+1024|Demands to explain the "doctored video" pour in.
+1025|Have followers drive him out
+1026|As he is thrown out, he shouts that he was threatened.
+1027|The scuffle is caught on camera.
+1028|Soundproof the walls and send a gift
+1029|The tenant withdraws the complaint.
+1030|The gift is mistaken for a bribe.
+1031|Bless the tenant and win him over
+1032|After a late-night talk, he says he will come to the next rite.
+1033|Your persuasion is taken as a threat.
+1034|Just take the complaint
+1035|A warning letter arrives from the district office.
+1036|Hire a lawyer and sue
+1037|The person who spread it posts an apology.
+1038|The investigation stalls.
+1039|Release proof the photos were faked
+1040|Signs of tampering come to light, and the rumor loses steam.
+1041|The evidence is not enough.
+1042|Laugh it off; you have no past
+1043|Your followers cheer at the idea that a god has no past.
+1044|People call you arrogant.
+1045|Hand out free drinks to taxi drivers
+1046|The drivers' faces soften a little.
+1047|They take the drinks and still click their tongues.
+1048|Stop that driver's taxi with a miracle
+1049|In the stalled taxi, the driver crosses himself.
+1050|The driver laughs it off as a coincidence and drives on.
+1051|The spit dries in front of the temple.
+1052|Hire the follower at a cult business
+1053|The follower starts a new life within the cult.
+1054|The cult business is not a good fit.
+1055|Have them invite coworkers to a feast
+1056|After a few drinks, the coworkers see the follower differently.
+1057|The coworkers spread stories of the feast around the office.
+1058|Bless them to endure
+1059|The follower grits their teeth and goes to work.

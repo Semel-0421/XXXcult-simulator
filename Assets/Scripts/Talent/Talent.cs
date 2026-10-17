@@ -1,17 +1,18 @@
-// 기프티드: 스탯 퍼센트 보정(Modifiers)과 보유 특수효과(Specials)를 가진다. 목록은 GiftedCatalog.
+﻿// 기프티드: 스탯 퍼센트 보정(Modifiers)과 보유 특수효과(Specials)를 가진다. 목록은 GiftedCatalog.
 public class Talent
 {
     public string Id { get; }
-    public string Name { get; }
+    readonly string name, description, extraEffect;
+    public string Name => Lang.Pick(name);
     public string Category { get; }
-    public string Description { get; }
-    public string ExtraEffect { get; }
+    public string Description => Lang.Pick(description);
+    public string ExtraEffect => Lang.Pick(extraEffect);
     public StatModifier[] Modifiers { get; }
     public GiftedSpecial[] Specials { get; }
 
     public Talent(string id, string name, string category, string description, string extraEffect, StatModifier[] modifiers, params GiftedSpecial[] specials)
     {
-        Id = id; Name = name; Category = category; Description = description; ExtraEffect = extraEffect; Modifiers = modifiers; Specials = specials;
+        Id = id; this.name = name; Category = category; this.description = description; this.extraEffect = extraEffect; Modifiers = modifiers; Specials = specials;
     }
 }
 

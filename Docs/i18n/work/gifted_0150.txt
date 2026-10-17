@@ -1,0 +1,134 @@
+150|Negotiation
+151|You always come away with one thing more than the other side.
+152|Legal Knowledge
+153|You know every loophole and every fence in the law.
+154|Polyglot
+155|You can speak of God in many languages.
+156|Writing
+157|Your writing moves the hearts of those who read it.
+158|Speechwriting
+159|You write every sentence to draw applause.
+160|Mnemonics
+161|You never forget anything you've seen once.
+162|Speed Reading
+163|You can finish even a thick scripture in a single night.
+164|Martial Arts
+165|Your body is your weapon.
+166|Swordsmanship
+167|Your blade never wavers.
+168|Marksmanship
+169|You never miss, even at distant targets.
+170|Swimming
+171|You're freer in the water than anyone.
+172|Mountaineering
+173|You know the feeling of drawing closer to God on a mountaintop.
+174|Hunting
+175|You know how to read animal tracks.
+176|Fishing
+177|Patience is the greatest skill of all.
+178|Gardening
+179|No potted plant that passes through your hands ever wilts.
+180|Woodworking
+181|You carve wood into chairs and altars alike.
+182|Architecture
+183|You can design the cult's temple yourself.
+184|Sewing
+185|You can mend even ragged clothes good as new.
+186|Photography
+187|A single photo of yours can capture people's hearts.
+188|Computers
+189|You connect easily even with people on the other side of the screen.
+190|Hacking
+191|You can peek at the secrets behind locked doors.
+192|Driving
+193|You can take your followers anywhere.
+194|Animal Training
+195|Animals seem to understand what you say.
+196|Rumormongering
+197|Your whispers spread through the whole neighborhood in a day.
+198|Lying
+199|You lie without batting an eye.
+200|Pickpocketing
+201|Your hands are quicker than the eye. No one even notices their pockets getting lighter.
+202|Forgery
+203|Documents or relics, you make them look genuine.
+204|Meditation
+205|You can empty your mind in an instant, anywhere.
+206|Prayer Recitation
+207|You can recite hundreds of prayers without a stumble.
+208|Striking Beauty
+209|People turn to look at you twice.
+210|Giant
+211|You have to duck every time you pass through a door. People step aside without being asked.
+212|Small Stature
+213|Your body is small, but you're more stubborn than anyone.
+214|Scarred
+215|The scar on your face tells countless stories for you.
+216|Mysterious Eyes
+217|Gaze into your eyes too long and people feel bewitched.
+218|Early Gray
+219|Your hair turned white while you were still young. People see the wisdom of years in you.
+220|Baby Face
+221|You look a good ten years younger than you are.
+222|Old Before Your Time
+223|You look a good ten years older than you are. It lends you gravitas.
+224|Captivating Voice
+225|When you speak, everyone listens.
+226|Sharp Features
+227|People meeting you for the first time find you intimidating.
+228|Gentle Smile
+229|Your smile puts people's guard down.
+230|Tattoos
+231|Tattoos covering your body tell of your past.
+232|Unusual Hair Color
+233|You can be spotted at a glance anywhere.
+234|Tall
+235|Your head is visible even in a crowd.
+236|Muscular
+237|A trained body is persuasive in itself.
+238|Pale Skin
+239|Even in sunlight you look bloodless. People say you don't seem to be of this world.
+240|Heterochromia
+241|Your eyes are two different colors. They say one sees this world, and the other sees what lies beyond.
+242|Graceful Bearing
+243|Even your walk exudes elegance.
+244|Venerable Elder
+245|The years you've lived are a lesson in themselves.
+246|Late Scholar
+247|Saying learning never ends, you keep the lamp burning late into the night.
+248|Seasoned Veteran
+249|You've been through it all so many times that ordinary failures don't make you blink.
+250|Bounce Back
+251|Every time you fall, you get back up stronger.
+252|Father of the Cult
+253|Your followers look up to you like a father.
+254|Revivalist
+255|A single word from you turns the tent gathering into a sea of tears.
+256|Treasury Keeper
+257|You fill the storehouse to the brim without a penny going missing.
+258|Overwhelming Charisma
+259|Even standing in silence, you make the whole room hold its breath.
+260|Saint
+261|Children and elders alike feel at ease beside you.
+262|Legendary Speaker
+263|Your sermons ride the radio waves and pass from mouth to mouth.
+264|Respected Elder
+265|Officials and neighbors alike bow their heads before you.
+266|Guardian of Doctrine
+267|You defend to the end a Doctrine in which not a single letter was written carelessly.
+268|Talent Collector
+269|You've dabbled in so many things that there's nothing you can't do.
+270|Indomitable Leader
+271|Even when the cult fell, your conviction never did.
+272|The Returned
+273|No matter how many times you fall, you return to this place again.
+274|Master of Prayer
+275|There's a peace known only to those who have prayed until their knees wore thin.
+276|Belle of Society
+277|Wherever you go, people gather around you.
+278|Ascetic's Body
+279|A hardened body and a clear mind in one place.
+280|Athlete
+281|Your habit of running every morning has built a sturdy body.
+282|Master of Achievements
+283|You carry the ease of someone who has done it all.

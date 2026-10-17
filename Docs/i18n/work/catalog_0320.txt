@@ -1,0 +1,150 @@
+320|Simple Meals
+321|Eat little and pray much.
+322|Vow of Silence
+323|In silence, you hear the voice of God.
+324|Vow of Abstinence
+325|A vow to renounce desire clears the prayers.
+326|Pure Body
+327|Misfortune struggles to cling to a pure body.
+328|Deep Meditation
+329|The deeper the meditation, the firmer the Piety.
+330|Silent Sanctuary
+331|Each year, the silent sanctuary steadies the heart.
+332|Meditation Classes
+333|Anyone can come and learn to meditate.
+334|Overcoming Desire
+335|Even when desire stirs, it does not easily grow.
+336|Fasting Retreat
+337|The emptier the body, the deeper the prayer.
+338|Monastery
+339|The monastery walls keep the world's misfortune out.
+340|The Book of Stillness
+341|You bind the teachings of meditation into a book.
+342|Non-Possession
+343|You let go of everything you own.
+344|Retreat Center
+345|Each year at the retreat center, followers steady their hearts.
+346|Liberation
+347|No misfortune can shake the cult leader's mind.
+348|Lamp of Enlightenment
+349|Your enlightenment lights the way for your followers like a lamp.
+350|Love Thy Neighbor
+351|Word spreads of a cult that helps its neighbors.
+352|Free Meals
+353|You share food with the hungry.
+354|Caring for the Sick
+355|You stay by the side of the sick.
+356|Relief Fund
+357|Each year, the relief fund helps your neighbors.
+358|Giving Hand
+359|The more you give, the brighter the cult's name shines.
+360|Orphanage
+361|The cult takes in children with nowhere to go.
+362|Free Clinic
+363|Anyone can be treated, even without money.
+364|Charity Bazaar
+365|Every cent of the bazaar's proceeds goes to the neighbors.
+366|Night School
+367|Every night, you teach those who thirst for learning.
+368|Hand of Reconciliation
+369|You join hands even with other religions.
+370|Cult Hospital
+371|Each year, the cult hospital builds your neighbors' trust.
+372|House for All
+373|Anyone may knock on the cult's door.
+374|Founding a School
+375|Children grow up in the cult's school.
+376|Cult of Saints
+377|The world calls your cult a community of saints.
+378|Temple of Healing
+379|The sick line up in long queues outside the temple.
+380|Enduring Heart
+381|Followers who learn to endure are not easily shaken.
+382|Path of Penance
+383|Even failed prayers become part of the discipline.
+384|Long Prayers
+385|All-night prayer tempers body and mind.
+386|Tempered Followers
+387|Followers hardened by grueling discipline do not easily break.
+388|Pillar of Support
+389|The more trials you face, the stronger the cult becomes.
+390|Reading the Trials
+391|Even failed sermons and outreach are accepted as trials.
+392|Vow of Nonviolence
+393|You swear never to raise a hand, whatever the persecution.
+394|Solid Rock
+395|Each year, your body and your cult grow stronger.
+396|Silent March
+397|A wordless procession moves people's hearts.
+398|Those Who Overcame Persecution
+399|Tales of enduring persecution set your followers on fire.
+400|Letters from Prison
+401|Letters from the imprisoned cult leader rally the followers.
+402|Endless Patience
+403|Every failure hurts only half as much.
+404|Record of Persecution
+405|The record of persecution awakens the world's conscience.
+406|Cult of Martyrs
+407|Even when misfortune strikes, the cult does not fall.
+408|Unbreakable Procession
+409|The world parts before a procession that will not bend.
+410|Honest Ledger
+411|You hide nothing in the books.
+412|Transparent Offerings
+413|Everyone knows where the Offerings go.
+414|Sermon of Truth
+415|Unadorned sermons reach the heart.
+416|Doctrine Study
+417|You refine the Doctrine again and again.
+418|Clean Name
+419|The more honesty builds up, the cleaner your name becomes.
+420|Public Accounts
+421|Each year, you publish your accounts and earn trust.
+422|School of Law
+423|You open a school that teaches Doctrine like law.
+424|Compiling the Scripture
+425|You publish a scripture that sets the Doctrine in order.
+426|Cult Tribunal
+427|The cult tribunal settles disputes within the cult.
+428|Righteous Verdict
+429|Fair verdicts protect the cult.
+430|Written Law
+431|You carve the law into writing so all must keep it.
+432|Rooting Out Corruption
+433|You tear out corruption within the cult by the roots.
+434|Fair Judge
+435|Each year, fair trials refine the Doctrine.
+436|Cult of Light
+437|Your cult has nothing left to hide in the light.
+438|Guardian of the Law
+439|The cult stands on an unshakable law.
+440|Ascension
+441|When the two cores become one, the god sheds the vessel and rises to the heavens.
+442|Source of Miracles
+443|The divinity within the vessel finally awakens in full.
+444|Source of the Word
+445|The god's word becomes the law of the world.
+446|Source of Charity
+447|Endless mercy becomes a rampart around the cult.
+448|Source of Pleasure
+449|You reach a state where pleasure and divinity are one.
+450|Healing Hand
+451|Miracles that soothe sick bodies and minds.
+452|Power of Wonders
+453|Miracles that overturn the laws of the world.
+454|Gate of Revelation
+455|The path of putting the god's will into words.
+456|Eye of Foresight
+457|An eye that sees what is coming before it comes.
+458|Self-Discipline
+459|The virtue of mastering yourself.
+460|Virtue Toward Others
+461|Virtue that opens itself to others.
+462|Desires of the Flesh
+463|The path that embraces what the body craves.
+464|Worldly Desires
+465|The path that covets wealth and power.
+466|Sturdy Vessel
+467|The host's body grows hard enough to bear the god's power.
+468|Blessing of Life
+469|You set your followers ablaze with the joy of being alive.

@@ -1,0 +1,150 @@
+300|Followers who wanted an answer are disappointed.
+301|Scold them for empty dreams
+302|Talk of the dreams fades, and the temple grows quiet.
+303|Offer your foot for him to kiss
+304|The moment his lips touch it, the air in the temple changes.
+305|Someone films the scene and passes it around.
+306|Raise him up and embrace him
+307|He sobs in your arms like a child.
+308|He panics and runs away.
+309|Allow him only the back of your hand
+310|At your restrained permission, he bows deeply.
+311|Soak in the open-air bath with your followers
+312|Under the starlight, the water laps at bare shoulders and the weary vessel melts.
+313|A hiker sees the pilgrims, finds them suspicious, and reports them.
+314|Stay at the hot spring alone
+315|Soaking alone, you feel the host's fatigue melt away.
+316|Cancel the pilgrimage
+317|A few grumble in disappointment.
+318|Bring in the golden bathtub
+319|When you sink into the golden tub filled with milk, your followers call it proof of blessing.
+320|Photos of the luxury tub run in the news.
+321|Settle for a gold-plated tub
+322|The gleaming tub is majestic enough.
+323|The plating quickly peels off.
+324|Spend the money on relief
+325|News of the relief work softens the neighbors' view of you.
+326|Buy the crown and wear it
+327|When you put on the red crown, your followers fall to their knees on their own.
+328|The price of the crown is made public.
+329|Borrow it only for rituals
+330|Even a borrowed crown shines like the real thing during a ritual.
+331|You argue with the jeweler over the return date.
+332|Send him away; you have no need of it
+333|The jeweler clicks his tongue and leaves.
+334|Accept the villa as the god's residence
+335|Gazing at the sea through the glass walls, the host's heart grows easy.
+336|A reporter comes asking about the villa's ownership.
+337|Use the villa as a retreat center
+338|Your followers bond as they pray before the sea.
+339|You clash with city hall over the retreat center's permit.
+340|Decline the villa
+341|The businessman is all the more impressed by your integrity.
+342|Have the gold-thread vestment made and wear it
+343|The gold thread catches the candlelight and makes you look like light itself.
+344|Talk spreads that the heavy, ornate robe is an extravagance.
+345|Add gold thread only at the hems
+346|Gold flows softly through the modest vestment.
+347|The tailoring is off and it must be remade.
+348|Insist on your old robes
+349|Your followers praise your simplicity, yet seem somehow disappointed.
+350|Lie down on the bills before the vault
+351|Amid the smell of money, the host's body feels a deep satisfaction.
+352|A follower who was cleaning sees you and is shocked.
+353|Distribute the Offerings to your followers
+354|Your followers weep as they lay the money they received back before you.
+355|Bring in a bigger vault
+356|A roomier vault invites more offerings.
+357|Someone witnesses the vault being moved in.
+358|Offer the luxury car as the god's chariot
+359|When the black car passes, followers in the street bow their heads.
+360|An article runs about the cult leader's luxury car.
+361|Settle for a used luxury car
+362|The gleaming body alone commands respect.
+363|The car breaks down often.
+364|Go on foot
+365|The sight of a god on foot earns praise for its humility.
+366|Accept the heirloom and place it on the altar
+367|The cool jade glows softly on the altar.
+368|The follower's family comes demanding the heirloom back.
+369|Wear the heirloom on your person
+370|As the jade touches your skin, the host's heart grows calm.
+371|Word spreads that the object carries another god's curse.
+372|Return the heirloom
+373|Moved, the follower bows even more deeply.
+374|Gild every pillar
+375|In the sunlight, the temple blazes gold even from afar.
+376|A controversy erupts over the extravagant temple.
+377|Gild only the altar pillars
+378|The altar is wrapped in a soft golden glow.
+379|The rain lifts the gold leaf and it flakes off.
+380|Paint them white instead of gilding
+381|The clean temple looks neat and pure.
+382|Admit you chose the numbers
+383|The next morning, people holding lottery tickets line up outside the temple.
+384|Accusations of a lottery scam arise.
+385|Say only that it was the god's will
+386|Half the winnings quietly flow into the vault.
+387|The follower changes his mind and offers only part.
+388|Decline the winnings
+389|The follower is moved by your lack of greed.
+390|Bet all your Offerings and win the bid
+391|As you grasp the grail, an ancient divinity kneels to your name.
+392|At the last moment, another cult outbids you.
+393|Bid within reason
+394|It was a forgery, but your followers believe it genuine.
+395|You are pushed out of the bidding early.
+396|Pay the auction no mind
+397|You hear another cult took the grail.
+398|Approve the limited edition
+399|Lines form outside the stores overnight, and the god's emblem floods the streets.
+400|Accusations of selling faith pour in.
+401|Lend your name for a cut of the profits
+402|Quiet royalties fill the vault.
+403|Sales fall short of expectations.
+404|Do not sell the god's name
+405|Your followers take pride in the refusal.
+406|Accept all the coins and invest them
+407|As the numbers soar, your followers believe the god moves even the markets.
+408|At news of a crash, the host's hands tremble.
+409|Cash them out immediately
+410|The safely converted money piles up in the vault.
+411|The fees are bigger than expected.
+412|Accept only physical offerings
+413|Your followers once again bring bills and gold.
+414|Turn the museum into a hall of the god
+415|You strolling among the masterpieces becomes a sacred painting in itself.
+416|The chaebol family threatens to sue.
+417|Hang only a few paintings in the temple
+418|The temple walls suddenly look refined.
+419|Questions arise over the paintings' authenticity.
+420|Return the key
+421|The daughter follows you all the more devotedly.
+422|Build the steel-doored treasury
+423|The basement full of gold throbs like the god's heart.
+424|A noise complaint brings a district official to the site.
+425|Scale it down to an ordinary vault room
+426|The sturdy vault room puts your mind at ease.
+427|The design changes and the costs grow.
+428|Build a prayer room instead of a treasury
+429|Communion deepens in the underground prayer room.
+430|Buy the yacht and set out on a sea pilgrimage
+431|Between champagne bubbles and the horizon, the host's body comes back to life.
+432|Photos of the yacht party spread online.
+433|Rent it for a day
+434|The short voyage washes away the vessel's fatigue.
+435|You spend the day sick with seasickness.
+436|Turn down the offer
+437|The yacht company's president leaves only his business card.
+438|Taste every dish and feast all night
+439|Each time the god clears a plate, the followers' cheers grow louder.
+440|You spend the whole day lying down from overeating.
+441|Share the meal with your followers
+442|The faces of followers at the same table light up.
+443|Take one spoonful and push it away
+444|Your followers look sadly at the leftover dishes.
+445|Drain the bottle to the last drop
+446|In your drunkenness, the god's voice sounds even clearer.
+447|You lose an entire day to the hangover.
+448|Pour a glass for each follower
+449|Followers who receive a glass weep, calling it the god's wine.

@@ -1,0 +1,200 @@
+120|Deep Prayer
+121|Prayed for the cult 20 times.
+122|Priest of Desire
+123|Indulged desire 20 times.
+124|The Five Duties
+125|Performed each of the five cult actions 10 times.
+126|Fifty Duties
+127|Took 50 cult actions.
+128|A Hundred Duties
+129|Took 100 cult actions.
+130|Two Hundred Duties
+131|Took 200 cult actions.
+132|Ten Followers
+133|Reached 10 followers.
+134|Fifty Followers
+135|Reached 50 followers.
+136|A Hundred Followers
+137|Reached 100 followers.
+138|Three Hundred Followers
+139|Reached 300 followers.
+140|Five Hundred Followers
+141|Reached 500 followers.
+142|A Thousand Followers
+143|Reached 1,000 followers.
+144|Deepening Faith
+145|Followers' Faith reached 300.
+146|Fervent Gathering
+147|Followers' Faith reached 700.
+148|Unshakable Faith
+149|The leader's Faith reached 300.
+150|Conversing with God
+151|The leader's Faith reached 700.
+152|The Leader's Authority
+153|Authority reached 300.
+154|Your Word Is Law
+155|Authority reached 700.
+156|A Full Coffer
+157|Offerings reached 300.
+158|Vast Offerings
+159|Offerings reached 700.
+160|The Coffers Overflow
+161|Offerings reached 1,000.
+162|A Structured Doctrine
+163|Doctrine reached level 3.
+164|Doctrine Perfected
+165|Doctrine reached level 6.
+166|The Pinnacle of Doctrine
+167|Doctrine reached level 10.
+168|A Respected Order
+169|Reputation reached 700.
+170|Local Landmark
+171|Reputation reached 900.
+172|A Respected Cult
+173|Public view rose to Respected or higher.
+174|A Recognized Religion
+175|Public view became Recognized.
+176|Watchful Eyes
+177|Public view fell to Watched or lower.
+178|An Age of Persecution
+179|Public view fell to Persecuted or lower.
+180|Budding Talent
+181|Held 3 Gifted traits.
+182|Talented
+183|Held 6 Gifted traits.
+184|Versatile
+185|Held 10 Gifted traits.
+186|Talent Collector
+187|Held 15 Gifted traits.
+188|Starting Over
+189|Started a new game 2 times.
+190|The Returner
+191|Started a new game 5 times.
+192|The Cult's End
+193|Saw your cult dissolved for the first time.
+194|The Indomitable Leader
+195|Saw your cult dissolved 3 times.
+196|Third Time's the Charm
+197|Founded a cult 3 times.
+198|Master of Achievements
+199|Unlocked every other achievement.
+200|Captivating Smile
+201|One smile from the leader stops people in their tracks.
+202|Night Gatherings
+203|Secret night gatherings keep the followers close.
+204|Seductive Tongue
+205|Sweet words seep into every sermon.
+206|Blessing of Pleasure
+207|You teach that desire is a blessing, not a sin.
+208|Ecstasy
+209|With every ritual, the followers sink deeper.
+210|Vow of Love
+211|A vow to the leader binds the followers.
+212|Dancers' Festival
+213|The festival stage draws in the crowds.
+214|Temple of the Flesh
+215|Every year, followers flock to the temple of pleasure.
+216|The Singing Choir
+217|Every year, the choir's song calls new followers.
+218|Enthralled Powers
+219|Even the powerful kneel before the leader's charm.
+220|Love Letters
+221|A single letter from the leader captures a follower's heart.
+222|Forbidden Rites
+223|Rites the world forbids set faith ablaze.
+224|Cinematic Sermons
+225|Your sermons hold people like a feature film.
+226|Lord of Pleasure
+227|The leader has become pleasure itself.
+228|Cult of the Muse
+229|Artists pour out works in praise of the cult.
+230|The Offering Basket
+231|Every time the basket goes round, the clink of coins grows louder.
+232|Tithe
+233|Every year, followers give a tenth of their income.
+234|The Price of Blessing
+235|You teach that even blessings have a price.
+236|Cult Enterprises
+237|You open shops and factories in the cult's name.
+238|The Golden Altar
+239|The altar's gold ornaments grow every year.
+240|Talisman Sales
+241|Talismans blessed by the leader sell like hotcakes.
+242|The Honest Trading House
+243|The cult's trading house earns a name for honest business.
+244|Big Patrons
+245|The wealthy back the cult from the shadows.
+246|The Cult Bank
+247|Every year, the followers' savings swell the cult's fortune.
+248|The Cult Foundation
+249|You set up a foundation so money makes more money.
+250|Trade Guild
+251|The cult's merchants take their trade to distant lands.
+252|The Price of Absolution
+253|You proclaim that offerings can wash away sin.
+254|Scholarship Fund
+255|When your earnings help students, respect follows.
+256|The Golden Cult
+257|The cult's storehouses never run dry.
+258|Temple of Prosperity
+259|Honest wealth makes the temple shine.
+260|Breaking Bread Together
+261|Sharing meals from one pot brings the followers closer.
+262|Feast Day
+263|A great feast every year lifts the faith.
+264|Prayer for Plenty
+265|Prayers to eat one's fill gain power.
+266|The Communal Kitchen
+267|You invite hungry neighbors in and feed them.
+268|An Overflowing Table
+269|The fuller the table, the fuller the heart.
+270|Well-Fed Followers
+271|Well-fed followers work with vigor.
+272|The Cult Farm
+273|The cult farm's harvest fills the storehouse.
+274|Harvest Thanksgiving
+275|Every autumn, new faces come to the feast.
+276|Communal Farming
+277|Followers who sweat together become one.
+278|The Sacred Supper
+279|The supper itself becomes worship.
+280|Open Granaries
+281|In lean years, you open the granaries to feed your neighbors.
+282|Festival of Gluttony
+283|Endless festivals draw the crowds.
+284|Seasonal Rites
+285|Rites held each season deepen the faith.
+286|Kingdom of Plenty
+287|No one in the cult goes hungry.
+288|Mother Earth
+289|The cult has become a mother to the hungry.
+290|The First Ranks
+291|The cult establishes its first offices.
+292|Strict Discipline
+293|The stricter the rules, the better orders are followed.
+294|The Leader's Command
+295|A single word from the leader weighs more than a sermon.
+296|Watchful Eyes
+297|Your inner circle keeps an eye on the followers.
+298|Absolute Authority
+299|The leader's authority reaches the heavens.
+300|Political Connections
+301|You plant the cult's people in government offices.
+302|The Cult Newspaper
+303|The cult's newspaper is handed out on every street.
+304|Oath of Loyalty
+305|The followers swear loyalty to the leader.
+306|Local Notables
+307|The region's notables side with the cult.
+308|The Cult Guard
+309|A guard is formed to protect the leader.
+310|Entering Parliament
+311|A member of the cult takes a seat in parliament.
+312|God's Proxy
+313|You proclaim that the leader's will is God's will.
+314|Dream of a State Religion
+315|You dream of making the cult the nation's religion.
+316|An Earthly Throne
+317|The cult is now a kingdom.
+318|Theocracy
+319|The cult's law has become the law of the land.

@@ -1,0 +1,150 @@
+1600|The recorded prophecy becomes Doctrine.
+1601|The prophecy doesn't come true, and you become a laughingstock.
+1602|Let the followers interpret it
+1603|Each follower interprets it differently.
+1604|The conflicting interpretations cause confusion.
+1605|Pretend you didn't hear
+1606|You pretend you didn't hear.
+1607|Secretly rig events so the prophecy comes true
+1608|Events unfold as though the prophecy were coming true.
+1609|Your scheme is exposed, and you lose trust.
+1610|Pray all night
+1611|The all-night prayer brings deep Communion.
+1612|The cold takes a toll on your body.
+1613|Come out in fear
+1614|Unable to overcome your fear, you come out.
+1615|Take it as the will of god and nature
+1616|Calling it nature's will moves the followers.
+1617|Care for the animals
+1618|The sight of you caring for the animals makes a good impression.
+1619|The feed costs money.
+1620|Take photos for publicity
+1621|The photos run in the newspaper.
+1622|Rumors spread that the photos were doctored.
+1623|You shrug it off as coincidence.
+1624|Answer with your name
+1625|As you answer with your name, the serpent vanishes.
+1626|The dream continues, ominous.
+1627|Answer with the cult's name
+1628|The cult's name becomes the dream's Revelation.
+1629|The dream fades into a blur.
+1630|Ask the serpent its name
+1631|The serpent whispers an unfamiliar name.
+1632|The serpent's answer fills you with dread.
+1633|Wake up
+1634|You wake from the dream.
+1635|Pray before the relic
+1636|At the end of your prayer, the trembling subsides.
+1637|The trembling won't stop.
+1638|Show it to the followers
+1639|The followers stand in awe of the trembling.
+1640|Some say the trembling is a trick.
+1641|Investigate
+1642|Your investigation finds the cause.
+1643|Hide the relic
+1644|You hide the relic to prevent an uproar.
+1645|Word gets out that you hid it.
+1646|Proclaim it a miracle
+1647|Rumors of the miracle spread, and followers multiply.
+1648|The medical records are made public, and the miracle is called into question.
+1649|Credit the doctor
+1650|Your honesty earns trust.
+1651|Quietly offer a prayer of thanks
+1652|The prayer of thanks wins the followers' hearts.
+1653|Pay the price
+1654|Once you pay the price, the voice falls quiet.
+1655|The price is too steep, and your finances totter.
+1656|You refuse and keep up the ritual.
+1657|Negotiate
+1658|Through negotiation, you lower the price.
+1659|The negotiation breaks down, leaving you uneasy.
+1660|Break off the ritual
+1661|You break off the ritual and pull yourself out.
+1662|Designate it holy water
+1663|The holy water becomes the followers' pride.
+1664|Word gets around that the well water is contaminated.
+1665|Sell the holy water
+1666|The holy water sells well.
+1667|The holy water trade draws criticism.
+1668|Seal the well
+1669|You seal the well for safety.
+1670|Meditate by the well
+1671|Your meditation by the well deepens.
+1672|You catch a cold in the night air.
+1673|Acknowledge him and make him a prophet
+1674|The prophet leads the followers.
+1675|The prophet grows arrogant, and strife follows.
+1676|Denounce it as a lie
+1677|Denouncing him restores order.
+1678|Some say the denunciation was harsh.
+1679|Verify his experience together
+1680|The verification process earns trust.
+1681|Claim his experience as your own
+1682|His experience is passed on as yours.
+1683|The plagiarism is exposed, and you lose trust.
+1684|Hold a grand ritual
+1685|Followers gather for the grand ritual.
+1686|The ritual costs too much.
+1687|Climb the mountain alone and pray
+1688|You pray atop the mountain.
+1689|The climb is grueling.
+1690|Explain it as a scientific phenomenon
+1691|Explaining it with science earns trust.
+1692|The sense of mystery fades.
+1693|Try to speak with the spirits
+1694|Speaking with the spirits brings a mystical Revelation.
+1695|The conversation is frightening, and rumors spread.
+1696|Leave in a hurry
+1697|You leave in a hurry.
+1698|Cooperate fully
+1699|Your full cooperation earns a favorable article.
+1700|The cooperation goes awry, and the article comes out ambiguous.
+1701|Allow it with conditions
+1702|Conditional access preserves trust.
+1703|Some say the conditions are too strict.
+1704|Bribe the reporter
+1705|The bought article puts the cult in a glowing light.
+1706|The bribe is exposed, and the whole paper turns on you.
+1707|Let the followers be interviewed
+1708|The followers' candid interviews win sympathy.
+1709|The interviews are a mess, and you become a laughingstock.
+1710|Issue an official statement
+1711|The official statement quiets the rumors.
+1712|The statement reads like an excuse.
+1713|You ignore them, and the rumors die down.
+1714|Ignoring them only feeds the rumors.
+1715|Change your image through volunteer work
+1716|The volunteer work changes the cult's image.
+1717|The volunteer work is slow to pay off.
+1718|Track down whoever spread the rumors
+1719|You find the ringleader and make an example of them.
+1720|The hunt goes too far and draws criticism.
+1721|Help on a grand scale
+1722|Your large-scale relief effort becomes known nationwide.
+1723|Critics complain the relief supplies fall short.
+1724|Help quietly
+1725|Your quiet relief earns the victims' gratitude.
+1726|Just take photos for publicity
+1727|A flood of criticism calls it hypocrisy.
+1728|Your refusal is called cold.
+1729|Shorten the gatherings
+1730|With shorter gatherings, the residents are relieved.
+1731|Soundproof the building
+1732|Soundproofing solves the noise problem.
+1733|The construction costs weigh on you.
+1734|Invite the residents and treat them
+1735|Your hospitality softens the residents.
+1736|Hospitality alone doesn't dispel the complaints.
+1737|The followers are satisfied, but the residents turn against you.
+1738|The complaint runs in the newspaper.
+1739|Endorse publicly
+1740|The public endorsement grows the cult's political influence.
+1741|It is condemned as political meddling.
+1742|Stay neutral
+1743|Your neutrality earns trust.
+1744|Deal behind the scenes
+1745|The backroom deal benefits the cult.
+1746|The deal is exposed, and a commotion follows.
+1747|Make the candidate a follower
+1748|The candidate becomes a follower and the face of the cult.
+1749|There is much talk about the candidate turned follower.

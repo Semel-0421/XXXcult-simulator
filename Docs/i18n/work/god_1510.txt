@@ -1,0 +1,155 @@
+1510|Compile the ancient tongue into a new scripture
+1511|A scripture no one can read is revered as all the more sacred.
+1512|What you transcribed is a jumble.
+1513|Bless your followers in the ancient tongue
+1514|Your followers shiver at blessings they cannot understand.
+1515|Your followers are terrified.
+1516|Stop the Communion
+1517|The strange words fall silent.
+1518|Speak to the host in the shadow
+1519|The shadow slowly lifts its head and looks at you.
+1520|The shadow turns its back.
+1521|Stay only under bright light
+1522|The shadow shrinks and hides beneath your feet.
+1523|Bring the shadow into the rite
+1524|Followers testify they saw a god with two forms.
+1525|The shadow ruins the rite.
+1526|Seek stronger pleasures
+1527|After a night that crosses the bounds of taboo, the vessel glows again.
+1528|Word of that night of excess leaks outside.
+1529|Abstain from pleasure for a while to revive your senses
+1530|Starved senses awaken at the slightest touch.
+1531|Withdrawal torments the vessel.
+1532|Mix miracles into pleasure
+1533|Pleasure laced with divinity seeps deep into the vessel.
+1534|It only drains your Miracle.
+1535|Let a drop of blood fall into a silver cup
+1536|When the sick man rises, followers fall prostrate, calling it divine blood.
+1537|The sick man does not recover, leaving only rumors.
+1538|Lay on hands and pray instead
+1539|At your touch, the sick man breathes easier.
+1540|The sick man is disappointed.
+1541|Send him to the hospital
+1542|You pay the hospital bill for him.
+1543|Take on all your followers' wounds
+1544|Free of their bruises and wounds, followers embrace your body and weep.
+1545|The wounds you bear break the vessel.
+1546|Take on the pain of only the worst afflicted
+1547|One person's pain passes to you.
+1548|Only the pain passes to you; he does not heal.
+1549|Seal away the power
+1550|Each must bear their own wounds.
+1551|Give the host a day
+1552|For one day, the host lives as a human, laughing and crying, then returns.
+1553|The host visits an old friend and babbles incoherently.
+1554|Hold a birthday feast with your followers
+1555|The host's birthday is celebrated as the god's nativity.
+1556|The host's soul never smiles.
+1557|Refuse the request
+1558|Sobbing echoes inside the body for a long time.
+1559|Share the excess heat with your followers
+1560|Followers touched by your burning hands fall into rapture.
+1561|Some followers are burned by the heat.
+1562|Immerse the body in a cold spring
+1563|The heat cools and the vessel stabilizes.
+1564|The spring begins to boil.
+1565|Turn the heat into a miracle of consecration
+1566|A stone tower raised with burning hands glows all night.
+1567|The stone tower collapses.
+1568|Read the diary before your followers
+1569|The tale of a human who longed for a god and became one turns into cult legend.
+1570|Some followers balk at hearing such private writing.
+1571|Return the diary to the host
+1572|The host's soul quietly closes the last page.
+1573|The host sees the diary and weeps for a long time.
+1574|Burn the diary
+1575|The host's past goes up in smoke.
+1576|Make the nickname the cult's official title
+1577|Every time followers address one another, they think of you.
+1578|People say the title is awkward.
+1579|Spend the night with those who use the nickname
+1580|The tender name turns to whispers in your chamber.
+1581|Word of what happens at night leaks outside.
+1582|Ban it as frivolous
+1583|The hallways fall silent.
+1584|Perform a miracle at the first service
+1585|The new followers weep and swear to stay forever.
+1586|Disappointed by the weak miracle, some leave.
+1587|Open the first service with a feast
+1588|Amid wine and music, the new followers get a taste of the god.
+1589|Some just enjoy the feast and leave.
+1590|Start with an ordinary service
+1591|The new followers quietly settle in.
+1592|Fill it with precepts of pleasure
+1593|Followers' faces light up at precepts that bless pleasure.
+1594|The precepts leak out and draw criticism.
+1595|Fill it with prophecies of ascension
+1596|The words of prophecy feed your followers' dreams.
+1597|The prophecy remains vague.
+1598|Leave the page blank
+1599|The blank page adds to the mystery.
+1600|Make them both kneel and decide yourself
+1601|The quarrel ends and everyone follows your decision.
+1602|The loser holds a grudge.
+1603|Choose the more loyal one in your chamber
+1604|The one who endures the night rises to the higher post.
+1605|Rumors spread of a strange selection method.
+1606|Give them both the same post
+1607|An uneasy peace settles in.
+1608|Keep the keys on your person
+1609|Every key jingles at your hip.
+1610|Entrust them to your favorite follower
+1611|The follower is moved to tears at receiving the keys.
+1612|The follower dips into the money.
+1613|Place a seal of consecration on the safe
+1614|No one can open a safe sealed by a miracle.
+1615|The seal breaks.
+1616|Regain your conviction through your followers' worship
+1617|As hundreds of voices call you god, the wavering stops.
+1618|The worship rings hollow.
+1619|Lose yourself in pleasure to erase your thoughts
+1620|A heated night burns away the doubt.
+1621|When morning comes, the doubt returns.
+1622|Dig into the doubt to the very bottom
+1623|At the bottom of doubt, the god finds its name again.
+1624|The doubt deepens.
+1625|Join hands with your followers and commune
+1626|Seated in a circle, the followers tremble as one and see the same vision.
+1627|The Communion does not reach your followers.
+1628|Let followers touch your body during Communion
+1629|Followers who touch god-filled flesh collapse in rapture.
+1630|The rite ends in chaos.
+1631|Keep the Communion secret
+1632|Secrecy preserves the mystery.
+1633|Sign on as the main sponsor
+1634|The cult's name hangs large over the festival stage.
+1635|Some residents are uneasy about the sponsorship.
+1636|Open a feast booth at the festival
+1637|Festival guests line up in front of the booth.
+1638|Complaints come in that it's proselytizing.
+1639|Politely decline
+1640|The committee leaves disappointed.
+1641|Whisper a name into each one's ear
+1642|Given new names, followers blush and step back.
+1643|Some don't like their names.
+1644|Grant ranks named for the stages of ascension
+1645|Followers now called Vessel, Afterimage, and Avatar appear.
+1646|Some followers resent their rank.
+1647|Tell them to name themselves
+1648|Followers fold their papers with disappointed faces.
+1649|Welcome him with a feast and miracles
+1650|One video of his turns the temple front into a tourist spot.
+1651|A video goes up titled "My Cult Experience."
+1652|Show him only an ordinary service
+1653|The quiet video is surprisingly well received.
+1654|The video gets buried.
+1655|Decline the visit
+1656|All that's left is talk of a "mysterious cult."
+1657|Make the song the cult's anthem
+1658|Every time followers sing it, the words seep into their bodies.
+1659|People say the lyrics are awkward.
+1660|Gift him a new guitar and keep him close
+1661|He sings outside your chamber every night.
+1662|He takes the gift and leaves.
+1663|Revise the lyrics for him
+1664|Under your hand, the song grows deeper.

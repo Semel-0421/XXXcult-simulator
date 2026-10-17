@@ -1,0 +1,150 @@
+300|A publisher asks you, as the cult's founder, to write an autobiography.
+301|The Thanksgiving offering comes in at three times the usual amount.
+302|A follower says he will sell his house and give the money as an offering.
+303|Counterfeit bills turn up in the offering box.
+304|Someone proposes opening a small bookstore in the cult's name.
+305|A builder offers to put up a large chapel on the cult's land.
+306|Someone suggests using offering envelopes instead of baskets.
+307|Someone proposes a cult bazaar to raise funds.
+308|Your followers wonder where their offerings go.
+309|A bank offers high interest if the cult deposits its funds there.
+310|The cult farm's harvest is bountiful this year.
+311|A wealthy follower wants an elder's seat in exchange for a large offering.
+312|A scrap dealer comes by, saying the church bell would fetch a fortune melted down.
+313|A report comes in that the cult's printing costs are far too high.
+314|The deacon in charge of offerings is caught borrowing from them.
+315|Someone suggests creating a scholarship from cult funds.
+316|A struggling neighboring church offers to sell you its building cheap.
+317|The Christmas offering falls short of expectations.
+318|Someone suggests turning the empty lot in front of the cult into a paid parking lot.
+319|A longtime follower has left the cult land in his will.
+320|Someone proposes evangelizing in the middle of the market.
+321|Someone suggests starting a cult club in the college district.
+322|A follower boasts he will bring ten friends.
+323|Followers hurt by other churches arrive in a group.
+324|Someone proposes advertising the cult in the newspaper.
+325|Factory workers say they have nowhere to gather after work.
+326|Your followers want to hold an introductory meeting in the next village.
+327|Someone has the idea of handing out free tea outside the church.
+328|Someone suggests inviting a revival speaker.
+329|You hear that a family that just moved in is looking for a church.
+330|Teenagers want to play soccer in the churchyard.
+331|Migrant workers show interest in the cult's services.
+332|A head count shows fewer followers than last year.
+333|Someone suggests changing the cult's name because it's hard to say.
+334|You are invited to set up a cult booth at the local festival.
+335|Many followers register with the cult but never show up.
+336|Someone suggests putting up a cult sign at the bus stop.
+337|Someone proposes a family-invitation Sunday for followers.
+338|Someone suggests pitching a prayer tent for patients' families outside the hospital.
+339|Someone suggests writing a Doctrine catechism.
+340|A seminary student poses sharp questions about your Doctrine.
+341|Someone proposes summing up the Doctrine in a single sentence.
+342|You consider learning the Bible's original languages.
+343|Two followers quarrel bitterly over the Doctrine.
+344|Someone suggests translating the Church Fathers for your followers to read.
+345|Someone proposes a Doctrine picture book for children.
+346|It's time to overhaul the cult's order of worship.
+347|Someone suggests a Bible study course to educate followers.
+348|Some followers keep folk customs at odds with the Doctrine.
+349|A seminary professor visits, wanting to study your Doctrine.
+350|Someone suggests recording your sermons and distributing them on CD.
+351|Someone proposes that ranks be granted only after passing a Doctrine exam.
+352|The prayers used for years are full of archaic phrasing.
+353|Someone suggests translating the Doctrine into English to spread it abroad.
+354|Someone proposes having followers keep Doctrine meditation journals.
+355|You are advised to clarify the Doctrine to avoid charges of heresy.
+356|Someone suggests getting an assistant to help prepare sermons.
+357|Someone proposes a cult library.
+358|Your followers want to make kimchi together.
+359|Someone suggests a tradition of eating together after service.
+360|Your followers want a group that prays in each other's homes in turn.
+361|A follower has lost his home in a fire.
+362|Clearing out the church storeroom, you find an old photo album.
+363|Your followers want to go hiking together.
+364|Two cell groups have fallen out over something trivial.
+365|Your followers want to form a cult choir.
+366|Many followers can't go home for the holidays.
+367|You hear that gossip is circulating among your followers.
+368|Your followers want time to share their prayer requests.
+369|For the first time since the cult's founding, two followers are marrying each other.
+370|Your followers want to start a shared vegetable garden.
+371|A longtime follower lent money to another and was never repaid.
+372|Someone points out that the young and old never talk to each other.
+373|Someone suggests setting a day for cleaning the whole church.
+374|In the cold of winter, some follower households are short on coal.
+375|It comes up that your followers don't know each other's names.
+376|A local reporter wants to cover the cult.
+377|Someone suggests the cult join a neighborhood litter pickup.
+378|A neighbor complains the worship is too loud.
+379|The district office wants to award the cult a model-organization citation.
+380|Flyers slandering the cult have been scattered around the neighborhood.
+381|A local school asks you to give a character-education lecture.
+382|A great flood has struck the next village.
+383|Rumor has it a follower is hooked on gambling.
+384|The district head wants to visit the cult during election season.
+385|Children from the cult's study room have won an award.
+386|Drivers complain that a cult event is blocking the road.
+387|A broadcaster contacts you about featuring the cult.
+388|A nursing home asks the cult for regular visits.
+389|People say the cult building's shabby exterior has become a neighborhood eyesore.
+390|A follower found a wallet on the street and returned it to its owner.
+391|The local merchants' association asks the cult to sponsor a festival.
+392|You hear a neighboring pastor preached that your cult is heretical.
+393|Your followers want to hold a blood drive.
+394|Dig into the doubt to the end
+395|Digging into your doubt, you rebuild the very foundation of your faith.
+396|Your doubt only deepens, and you toss and turn all night.
+397|Pray more deeply
+398|As you lose yourself in prayer, your heart settles.
+399|You pray, but no answer comes. You feel hollow.
+400|Confide in your inner circle
+401|Your confidant comforts you and prays with you.
+402|Announce the Revelation to your followers
+403|Word of the Revelation spreads, and followers flock to you.
+404|Rumors spread that it's preposterous.
+405|Keep it to yourself
+406|You keep it quietly and steady your heart.
+407|Dismiss it as a dream
+408|Telling yourself it was only a dream, you set it aside.
+409|Codify the Revelation as Doctrine
+410|You refine the words of the dream into Doctrine.
+411|The words are too vague to set down.
+412|Demand offerings for the Revelation
+413|You collect offerings in the name of the Revelation.
+414|Your followers push back against the demand.
+415|Fast for three days
+416|After three days of fasting, your mind is clear.
+417|Your strength gives out and you collapse.
+418|Fast for just one day
+419|A single day of fasting steadies your mind.
+420|Fast with your followers
+421|Going hungry together binds your followers tighter.
+422|Your followers grumble with hunger.
+423|Eat in secret
+424|You feel guilty about the food you sneaked, but your hunger fades.
+425|A follower catches you, and word gets around.
+426|Denounce him publicly
+427|You are praised as a voice of justice.
+428|You are slammed for tearing down a fellow clergyman.
+429|Defend him
+430|When you defend him, followers leave.
+431|Because you defended him, the cult falls under suspicion too.
+432|Learn from his downfall
+433|Taking the lesson to heart, you steady your faith.
+434|Absorb his followers
+435|You take in the followers who have nowhere to go.
+436|Other cults protest the takeover.
+437|Believe it is a sign from God
+438|Believing it a sign, your confidence grows.
+439|The sign fades, and you grow uneasy.
+440|Shrug it off as imagination
+441|You let it pass calmly.
+442|Lay your hands on a follower's ailment
+443|The ailing follower smiles again.
+444|Nothing happens, and the follower is disappointed.
+445|Study all night
+446|Studying through the night, you uncover the scripture's hidden meaning.
+447|The study goes nowhere, and you only wear yourself down.
+448|Use it in a sermon right away
+449|You use it in a sermon, and your followers are moved.

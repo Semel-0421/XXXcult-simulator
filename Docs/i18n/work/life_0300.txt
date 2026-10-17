@@ -1,0 +1,150 @@
+300|Your father is glued to the television and doesn't answer.
+301|Num-num
+302|At your plea for food, the whole family bursts out laughing.
+303|Your meal comes a little late.
+304|Mumble an unknown word
+305|You mumble something unintelligible, and your family leans in, fascinated.
+306|No one understands you, and you sulk.
+307|Lick the bowl clean
+308|You scrape the bowl clean, and your mother smiles with satisfaction.
+309|Spit it out
+310|Gruel dribbles down your bib.
+311|The spat-out gruel splatters your face, and chaos ensues.
+312|Grab the spoon and feed yourself
+313|Your spoon work is clumsy, but your determination to eat alone is impressive.
+314|The spoon flips, and gruel lands on your mother's face.
+315|Eat a little and turn away
+316|You eat just enough and look content.
+317|Cry loudly to stop the fight
+318|At your crying, your quarreling parents pause.
+319|Your crying grows louder, and your parents fight even louder.
+320|Hold your breath under the blanket
+321|You lie still, and the fight quietly dies down.
+322|You lie trembling, holding your breath, for a long time.
+323|Go back to sleep
+324|As you drift back to sleep, the quarrel fades away like a dream.
+325|Crawl toward them
+326|You crawl over and lie down between them, and your parents smile sheepishly.
+327|You trip them up and both of them scold you.
+328|Look toward the sound
+329|You gaze wide-eyed toward the ringing bells.
+330|Clap along to the bells
+331|You clap and hum along with the bells.
+332|Cry in fear
+333|The bells are so loud you burst into tears.
+334|Your crying won't stop, and someone has to hold and soothe you for ages.
+335|Fall asleep to the bells
+336|The gentle bells lull you to sleep.
+337|Smile at the landlord
+338|Softened by your smile, the landlord lets the rent slide a little.
+339|The landlord leaves without a smile.
+340|Cling to Mom's skirt
+341|Your mother sighs and picks you up.
+342|Tug the landlord's wallet
+343|You grab the wallet strap, and the startled landlord drops it.
+344|The landlord flies into a rage and tells you to vacate the room.
+345|Hide under the blanket
+346|Under the blanket, you wait for the landlord's voice to fade.
+347|Splash around happily
+348|You kick and splash with glee.
+349|Be afraid of the water
+350|You sit a little way back from the water's edge.
+351|Frightened of the water, you cry for a long time.
+352|Gulp down water
+353|You swallow a mouthful of water and cough and sputter.
+354|Your stomach aches, and you lie down for a long time.
+355|Gaze long at the light on the water
+356|The glittering water clears your mind.
+357|The dazzling water makes you burst into tears.
+358|Take it and eat it
+359|Your face lights up at the sweet taste.
+360|Share half
+361|You share the candy, and the kid is pleased.
+362|The kid pouts that their half is smaller.
+363|Beg for more candy
+364|Seeing you beg, the kid gives you another one.
+365|You throw a tantrum for more and get scolded by the kid.
+366|Shake your head
+367|You refuse the candy, and the kid turns away awkwardly.
+368|Cry at the monk
+369|The unfamiliar face makes you burst into tears.
+370|The monk soothes your crying with a sigh.
+371|Hide behind Mom
+372|You peek out from behind Mom's skirt.
+373|Grab the monk's prayer beads
+374|You grab the beads, and the monk stares at you for a long time, as if startled.
+375|The string snaps, and the beads scatter.
+376|Wave at the monk
+377|The monk smiles gently and waves back.
+378|Stack them high
+379|The blocks rise almost to the ceiling.
+380|Knock them down and giggle
+381|The tower crashes down, and you are delighted.
+382|A falling block hits your foot, and you burst into tears.
+383|Ask your brother to stack them
+384|Your brother stacks the blocks and laughs along with you.
+385|Your brother is busy and ignores you.
+386|Put a block in your mouth
+387|You put a block in your mouth, and your mother takes it away.
+388|Point at any ticket
+389|Your father babbles that the ticket you picked feels like a winner.
+390|The ticket you picked is a dud.
+391|Tear up a ticket
+392|You tear the ticket, and your father laughs hollowly.
+393|Stroke your father's face
+394|Your father smiles and hugs you.
+395|Try to eat a ticket
+396|You put a ticket in your mouth and your mother scolds you.
+397|You swallow a scrap of paper and get a tummy ache.
+398|Drool at the market food smells
+399|The smell of tteokbokki makes you smack your lips.
+400|Wave at the vendors
+401|The vendors find you adorable and each hand you a piece of fruit.
+402|Reach for something shiny
+403|You reach for a shiny watch and your mother scolds you.
+404|The vendor frowns and moves the goods away.
+405|Fall asleep on Mom's back
+406|You fall into a deep sleep on your mother's back.
+407|Reach for the gold in the box
+408|Gold trinkets glitter in the box. Your mother's eyes go wide.
+409|The gold turns out to be fake.
+410|Play with the box itself
+411|You become absorbed in hiding inside the empty box.
+412|Tear the wrapping paper with glee
+413|The sound of ripping paper is thrilling.
+414|You cut your hand on the wrapping paper and burst into tears.
+415|Ignore the gift and look for Mom
+416|You nestle into Mom's arms, and she strokes you with a smile.
+417|Pet your sibling
+418|You gently pet your sibling, and your mother praises you.
+419|Cry because Mom feels taken away
+420|Your crying throws the house into an uproar.
+421|You keep crying, and your sibling starts crying too.
+422|Sleep beside your sibling
+423|You lie down beside your sibling and fall asleep.
+424|You toss and turn and wake your sibling.
+425|Steal your sibling's bottle
+426|You steal the bottle and suck on it yourself until you are caught.
+427|You grab the bottle, your sibling wails, and you get a serious scolding.
+428|Tap the mirror and laugh
+429|The child in the mirror laughs back, and you are thrilled.
+430|Talk to the child in the mirror
+431|You babble at the mirror.
+432|Lick the mirror
+433|You leave drool on the mirror, and your mother wipes it off.
+434|Stare at yourself for a long time
+435|Everyone marvels at how lovely the face in the mirror is.
+436|The face in the mirror looks strange, and you burst into tears.
+437|Cry for your parents
+438|Your parents rush over at your cries and hold you close.
+439|Watch the lightning in wonder
+440|Your eyes go round at the flashing lightning.
+441|The lightning frightens you, and you tremble for a long time.
+442|Pull the blanket over your head
+443|You hide from the thunder under the blanket.
+444|Imitate the thunder
+445|Your thunder impression has the whole house in stitches.
+446|Mid-impression, the thunder seems to roar louder, and you are startled.
+447|Blow out the candles
+448|You blow out the candles, and your family applauds.
+449|Bury your face in the cake

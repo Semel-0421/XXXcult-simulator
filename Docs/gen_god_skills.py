@@ -40,7 +40,16 @@ def read_text(path):
 
 def esc(s):
     bs = chr(92)
-    return s.replace(bs, bs * 2).replace('"', bs + '"')
+    return s.replace(bs, bs * 2).replace('"', bs + '"').replace(SEP, bs + 'u001F')
+
+SEP = chr(0x1F)  # 한국어와 영어 사이 구분자 (게임에서 Lang.Pick이 현재 언어 쪽을 고른다)
+
+
+def bi(row, col):
+    """한국어 열과 같은 이름 + _en 열이 있으면 한국어+SEP+영어로 묶는다."""
+    ko, en = (row.get(col) or '').strip(), (row.get(col + '_en') or '').strip()
+    return f'{ko}{SEP}{en}' if ko and en else ko
+
 
 
 def stat_code(name, where):
@@ -104,7 +113,7 @@ def main():
         effects = parse(r['effects'], sid)
         eff_code = f'new[] {{ {", ".join(effects)} }}' if effects else 'System.Array.Empty<GodEffect>()'
         out.append(f'        new("{sid}", {int(r["ring"])}, "{r["parent"].strip()}", GodSkillKind.{KINDS[r["kind"].strip()]}, '
-                   f'"{esc(r["name"].strip())}", "{esc(r["description"].strip())}", {eff_code}),')
+                   f'"{esc(bi(r, "name"))}", "{esc(bi(r, "description"))}", {eff_code}),')
     cs = f'''// 권능 트리 노드 목록. Docs/god_skills.csv에서 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.
 public static partial class GodSkillCatalog
 {{

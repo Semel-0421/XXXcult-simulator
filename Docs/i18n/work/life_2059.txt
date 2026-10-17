@@ -1,0 +1,150 @@
+2059|Balance sports and study
+2060|You keep sports and study in balance.
+2061|Your plans keep falling apart.
+2062|Comfort your friend
+2063|You take your friend's hand and comfort them.
+2064|Investigate that religion
+2065|You dig into what the religion really is.
+2066|Your investigation hits a wall, and it frustrates you.
+2067|Admire how that religion raises money
+2068|You find yourself wanting to learn their fundraising methods.
+2069|Your friend grows suspicious of you.
+2070|Persuade the parents together with your friend
+2071|You and your friend try to win over the parents.
+2072|The persuasion fails, and the household erupts.
+2073|Try a round
+2074|You bet a round and win money.
+2075|You lose and end up broke.
+2076|See through the trick
+2077|You see right through the scam.
+2078|You miss the trick and lose your money.
+2079|Sweep the pot
+2080|You sweep the entire pot.
+2081|The game turns, and your money is taken.
+2082|Walk past
+2083|You simply walk past.
+2084|Shrug it off modestly
+2085|You brush it off with modesty.
+2086|Enjoy the fame
+2087|You accept interviews and enjoy your fame.
+2088|The attention starts to weigh on you.
+2089|Use the chance to get sponsorship
+2090|The article brings in donations.
+2091|Your request for sponsorship is turned down.
+2092|Vow to do more good deeds
+2093|You vow to do even more good.
+2094|The vow begins to feel like a burden.
+2095|Answer honestly
+2096|Your honest answers win the interviewer's favor.
+2097|Your honesty comes across as weak.
+2098|Overwhelm the interviewer with words
+2099|You overpower the interviewer with your words.
+2100|You go too far, and the interviewer is put off.
+2101|Stammer from nerves
+2102|Nerves make you stammer.
+2103|Read the interviewer and tailor your answers
+2104|You tailor your answers to the interviewer's tastes.
+2105|You misread the interviewer.
+2106|You decide to take over the family business.
+2107|The family business weighs on you.
+2108|Refuse and go your own way
+2109|You say you'll follow your own path.
+2110|Your parents are disappointed.
+2111|Examine the family business ledgers
+2112|You go through the ledgers carefully.
+2113|Discover a vast inheritance
+2114|Deep in the ledgers, you find records of an inheritance.
+2115|The records are old and worthless.
+2116|Read in your hospital room
+2117|You pass the time reading.
+2118|Befriend your roommates in the ward
+2119|You chat with the other patients.
+2120|The patients' stories weigh heavily on you.
+2121|Be gripped by fear of death
+2122|Fear of death keeps you awake.
+2123|The fear grows, and your health worsens.
+2124|Visit the hospital chapel
+2125|You pray quietly in the hospital chapel.
+2126|The chapel's silence deepens your loneliness.
+2127|Move out right away
+2128|You pack your bags and move out at once.
+2129|You're clumsy at running a household and struggle.
+2130|Stay at home
+2131|You stay with your family.
+2132|Live with a friend
+2133|You share a home with a friend.
+2134|You and your friend fight over living expenses.
+2135|Savor the freedom of living alone
+2136|You enjoy the freedom of living alone to the fullest.
+2137|Loneliness creeps in.
+2138|Listen to the elders' stories
+2139|You listen to the elders' old stories.
+2140|Sing for them
+2141|You delight the elders with your singing.
+2142|Your singing is awkward, and people laugh.
+2143|Rage at the nursing home's conditions
+2144|Outraged by the poor conditions, you demand improvements.
+2145|Your anger makes those around you uncomfortable.
+2146|Hold an elder's hand and pray
+2147|You hold an elder's hand and pray together.
+2148|The prayer feels heavy.
+2149|Join and lose money
+2150|You join and lose money.
+2151|You lose money and fall into debt.
+2152|See through the scheme and rise to the top
+2153|You figure out the structure and climb above it.
+2154|You get caught in the scheme and are left with only debt.
+2155|Pull your friend out
+2156|You talk your friend into getting out.
+2157|Your friend won't listen.
+2158|Get into the university you want
+2159|You're accepted to the university you wanted.
+2160|Your name isn't on the list.
+2161|Fail the exam
+2162|Go into the workforce instead of college
+2163|You enter the workforce instead of going to college.
+2164|Get into theological college
+2165|You're accepted to a theological college.
+2166|Your path turns out differently than expected.
+2167|Believe it's God's will
+2168|You believe it's God's will.
+2169|Your faith wavers.
+2170|It was just luck
+2171|You tell yourself you were lucky.
+2172|You think about when luck runs out.
+2173|Resolve to live the rest of your life meaningfully
+2174|You resolve to make the rest of your life count.
+2175|Strange premonitions come often after that day
+2176|Strange premonitions keep you watching your surroundings.
+2177|The premonitions feed your anxiety.
+2178|Work to pay the hospital bills
+2179|You work to pay the hospital bills.
+2180|Overwork takes a toll on your body.
+2181|Nurse him day and night
+2182|You nurse your father day and night.
+2183|You cling to prayer to hold yourself together.
+2184|Prayer brings no comfort.
+2185|Take charge as head of the household
+2186|You take on the role of breadwinner.
+2187|The responsibility crushes you.
+2188|Be a good senior
+2189|You look after your juniors with care.
+2190|Boss your juniors around
+2191|You make your juniors do your bidding.
+2192|Your juniors turn their backs on you.
+2193|Share your convictions with your juniors
+2194|You pass on your convictions.
+2195|Your convictions are so intense they overwhelm your juniors.
+2196|You avoid your juniors.
+2197|Accept it calmly
+2198|You accept it calmly.
+2199|Drink through the night
+2200|You drink the night away.
+2201|Bury yourself in work
+2202|You throw yourself into work.
+2203|You can't concentrate on work.
+2204|See the breakup as a trial from God
+2205|You accept the breakup as a divine trial.
+2206|Thinking of it as a trial only hurts more.
+2207|Say you want to change the world
+2208|You declare your will to change the world.

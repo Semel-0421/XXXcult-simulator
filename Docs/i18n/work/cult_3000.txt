@@ -1,0 +1,215 @@
+3000|Quietly hold only a Bible study
+3001|A few earnest students come regularly.
+3002|No one comes.
+3003|Prepare a welcome feast
+3004|New faces are moved by the warm hospitality.
+3005|In the end, no one shows up.
+3006|Wait without expectations
+3007|Three people come and sign up.
+3008|Even that follower is too embarrassed to show up.
+3009|Welcome them with open arms
+3010|They find stability in their new home.
+3011|Conflict arises with existing followers.
+3012|Help them adjust slowly
+3013|One by one, they become part of the cult's family.
+3014|Some grow tired of waiting and leave.
+3015|Run a big advertisement
+3016|People who saw the ad send inquiries.
+3017|There's no response at all.
+3018|Post only a small notice
+3019|A few people quietly come by.
+3020|The notice gets buried.
+3021|Hold evening services
+3022|Weary workers find comfort.
+3023|You collapse from overwork.
+3024|Open the church as a shelter
+3025|Workers stop in to rest and stay for the service.
+3026|Upkeep costs quite a bit.
+3027|Go and preach yourself
+3028|The first gathering forms in the neighboring village.
+3029|The villagers coldly turn away.
+3030|Send the followers on their own
+3031|Followers gain confidence in proselytizing.
+3032|They come back empty-handed.
+3033|Serve tea every morning
+3034|Over cups of tea, conversations flow and visitors keep coming.
+3035|Most just drink the free tea and leave.
+3036|Serve it only on Sundays
+3037|A few regulars appear.
+3038|No one stops by.
+3039|Invite a famous speaker
+3040|Crowds pour into the revival.
+3041|The speaker teaches the Doctrine all wrong.
+3042|Lead the revival yourself
+3043|Your passion brings in new followers.
+3044|You overdo it and come down with aches and fever.
+3045|Visit with rice cakes
+3046|The family starts coming to the cult next Sunday.
+3047|They say they've already joined another church.
+3048|Send a letter introducing the church
+3049|The family comes by, letter in hand.
+3050|The letter goes unanswered.
+3051|Open the yard and play with them
+3052|Even the children's parents come to the church.
+3053|A window gets smashed.
+3054|Allow it only after services
+3055|The children kick a ball around after the service.
+3056|The children go somewhere else.
+3057|Find an interpreter and worship together
+3058|People from a foreign land find family in the cult.
+3059|Cultural differences cause misunderstandings.
+3060|Just share meals together
+3061|Shared meals become a bridge.
+3062|The food doesn't suit them, and they leave it uneaten.
+3063|Proclaim an outreach week
+3064|The whole cult goes out proselytizing, and followers increase.
+3065|Forced outreach wears the followers out.
+3066|Visit those who left
+3067|Those who return greet you in tears.
+3068|Doors are slammed in your face.
+3069|Add an easier name
+3070|People remember the cult more easily.
+3071|People say its identity has been diluted.
+3072|Keep the original name
+3073|Followers grow more attached to the name.
+3074|Some are put off by the unfamiliar name.
+3075|Set up a booth and perform
+3076|The cult's name spreads at the festival.
+3077|The performance is a mess and becomes a laughingstock.
+3078|Just hand out flyers
+3079|A few people show interest.
+3080|The flyers blow away in the wind.
+3081|Form a visitation team
+3082|Forgotten followers return.
+3083|Many find the visits a nuisance.
+3084|Clean up the membership roll
+3085|The true count of followers becomes clear.
+3086|Those removed from the roll feel hurt.
+3087|Put up a big sign
+3088|More people find their way by the sign.
+3089|The district office orders it torn down.
+3090|Put up only a small marker
+3091|Those in the know find their way.
+3092|No one notices it.
+3093|Prepare lavishly
+3094|Invited families sign up one by one.
+3095|The families say they're busy and don't come after all.
+3096|Hold the service as usual
+3097|People say the natural atmosphere is actually better.
+3098|The families are bored.
+3099|Pitch a tent
+3100|Weary families find comfort in the tent.
+3101|The hospital complains you're obstructing business.
+3102|Partner with the hospital chaplaincy
+3103|The official partnership earns trust.
+3104|The procedures are complicated, and nothing comes of it.
+3105|Write it yourself
+3106|The catechism becomes the basic text for training followers.
+3107|Contradictions are pointed out, and it must be rewritten.
+3108|Write it with your followers
+3109|Everyone is attached to the catechism they made together.
+3110|Opinions split, and nothing gets done.
+3111|Answer sincerely
+3112|Your clear answer convinces the seminary student to join the cult.
+3113|You can't answer and lose face.
+3114|Say you'll answer next time
+3115|After days of study, you find the answer.
+3116|Word spreads that you dodged the question.
+3117|Decide it yourself
+3118|That sentence becomes the cult's motto.
+3119|People say it's too difficult.
+3120|Hold a contest
+3121|Followers proudly recite the motto.
+3122|The winning entry contradicts the Doctrine.
+3123|Start studying the original language
+3124|The depth of the original text seeps into your sermons.
+3125|You make no progress and give up.
+3126|Compare several translations
+3127|You discover new meaning in the differences between translations.
+3128|It only confuses you more.
+3129|Hold an open Doctrine lecture
+3130|The lecture clears up misunderstandings.
+3131|The lecture turns into a battleground of debate.
+3132|Teach the two separately
+3133|Both of them change their minds.
+3134|You're accused of favoritism.
+3135|Form a translation group
+3136|The wisdom of the Church Fathers seeps into the cult.
+3137|The translation is a mess and becomes a laughingstock.
+3138|Make only a summary
+3139|The short text gets read by followers.
+3140|The summary distorts the original meaning.
+3141|Publish a picture book
+3142|The children learn the Doctrine through the picture book.
+3143|The pictures are so scary the children burst into tears.
+3144|Use it only as Sunday school material
+3145|The children enjoy learning.
+3146|Teachers say it's hard to use.
+3147|Revive the traditional rites
+3148|The solemn service makes followers reverent.
+3149|People complain it's too stiff.
+3150|Switch to a free-form style
+3151|Young followers enjoy the services.
+3152|Critics call it frivolous.
+3153|Launch a 12-week course
+3154|Graduates become the core of the cult.
+3155|Dropouts pile up.
+3156|Hold only short lectures
+3157|Many attend the casual lectures.
+3158|People say they lack depth.
+3159|Ban the custom
+3160|The Doctrine is set straight.
+3161|Followers who object leave.
+3162|Give the custom a new meaning
+3163|The old custom becomes part of the cult's culture.
+3164|Critics say the Doctrine has been muddied.
+3165|Release all the materials
+3166|The paper introduces the cult to academia.
+3167|The paper comes out with criticism in it.
+3168|The cult's inner workings stay quietly protected.
+3169|It gives an impression of secrecy.
+3170|Distribute CDs
+3171|Followers strengthen their faith listening to sermons at home.
+3172|The poor sound quality draws complaints.
+3173|Say sermons should be heard in the chapel
+3174|Service attendance rises.
+3175|Followers who live far away feel let down.
+3176|Create an examination system
+3177|The quality of office holders rises.
+3178|Those who fail the exam are hurt.
+3179|Use a recommendation system
+3180|Office holders appointed on trust are devoted.
+3181|Disputes arise over qualifications.
+3182|Revise it into modern language
+3183|Young followers understand the prayers.
+3184|The elders miss the old prayers.
+3185|Keep it as it is
+3186|The weight of tradition safeguards the faith.
+3187|More people stop praying, saying it's too hard.
+3188|Begin translating
+3189|Overseas Koreans take an interest in the cult.
+3190|The clumsy translation fails to convey the meaning.
+3191|Put it off as premature
+3192|You focus on refining Doctrine at home.
+3193|Encourage every follower
+3194|Followers who keep journals deepen their faith.
+3195|They complain that it feels like homework.
+3196|Write one yourself first as an example
+3197|Seeing your journal, followers start writing their own.
+3198|Writing every day is a burden.
+3199|Issue a Doctrinal declaration
+3200|A clear declaration dispels suspicion.
+3201|The declaration's wording stirs up controversy instead.
+3202|Open dialogue with established churches
+3203|Dialogue clears up misunderstandings.
+3204|You only confirm your differences.
+3205|Take on a bright young man as your assistant
+3206|With the assistant's help, your sermons grow richer.
+3207|Rumors spread that the assistant writes your sermons.
+3208|Prepare on your own
+3209|Grueling preparation yields a heartfelt sermon.
+3210|You wear yourself out from overwork.
+3211|Collect books and open a library
+3212|The library becomes a place of learning for followers.
+3213|Books pile up, but no one visits.
+3214|Open your personal study to followers

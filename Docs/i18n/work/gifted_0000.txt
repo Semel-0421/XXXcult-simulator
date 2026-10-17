@@ -1,0 +1,150 @@
+0|Affluence
+1|You were born destined for a life of wealth. Congratulations, you're one of the lucky top 5%!
+2|Tenacity
+3|Tenacity that never gives up. Then again, shouldn't you learn when to let go?
+4|Orator
+5|Had you been born in Austria, you could have started a war.
+6|Actor
+7|Angry, you say? Smile, and no one will ever know.
+8|Perfect Physique
+9|A healthy, flawless body is something people admire for its own sake. Congratulations. Suitors are going to line up.
+10|Big Shot
+11|You were a big shot from birth. A big what, exactly, is unclear, but bigger is better, right?
+12|Scholar
+13|Religion, after all, is a field of study too. You have a natural gift for research.
+14|Epicurean
+15|The essence of hedonism is not the pursuit of pleasure.
+16|Born Believer
+17|You've lived your whole life inside religion and can't fathom a life without it. Religion is your life.
+18|Good Shepherd
+19|Surprising. You run a cult, yet you're a good person.
+20|Opportunist
+21|Seizing an opportunity is a skill too. Unclaimed riches belong to whoever holds them.
+22|Mage
+23|You possess a strange and mysterious power. A gift from God, perhaps? It's faint, but what you make of it is up to you.
+24|Gambler
+25|You are very, very lucky. Does that need any more explanation?
+26|Kama Sutra
+27|The ancient Indian manual of sexual practice. You understand it remarkably well. Nobody does it that way anymore, but so what? Your religion is no ordinary one.
+28|If your Doctrine includes one that encourages sexual relations, Faith/Followers' Faith/Authority/Offerings/Reputation gain an extra 3% in the final calculation, and Communion/Miracle gain an extra 1%. This lasts for 5 turns.
+29|Lavish Feast
+30|The table must be laden with every delicacy. You eat like a king to show your dignity. Careful, or you'll eat yourself to death.
+31|Each turn, there is a 2% chance of an event that decides the quality of your meal. If you choose the finest meal in that event, Wealth decreases by 50, and all other Health-group stats increase by 3% for 3 turns.
+32|Frail Body
+33|A frail appearance doesn't mean a frail mind. After all, you lead a whole religion.
+34|Card Sharp
+35|You've learned that the hand can sometimes be quicker than the eye. Now that's real magic. Just don't get caught.
+36|Master of Logic
+37|You were born with a talent for exploiting loopholes better than anyone. Fair warning to your opponents: never argue with you unprepared.
+38|Frustrated Desire
+39|You're always in need of having your basic desires met. But once they are, you might just be the most perfect person in the world.
+40|If Desire has risen within the last 10 turns, all stats except Desire/Virtue gain a 10% bonus. The bonus is shown in parentheses and included in the final calculation. Each increase in Desire refreshes it to last 10 turns, and the effect decreases by 1% each turn.
+41|Homosexuality
+42|You prefer only partners of the same sex. Of course, unless you change the Doctrine, you might be the first one cast out, so either keep it secret or rewrite the Doctrine.
+43|Having sex with a partner of the same sex adds 10% to Mentality in the final calculation for 5 turns. The added amount is shown in parentheses by default. If your Doctrine permits homosexuality, Faith/Followers' Faith/Authority/Reputation gain an extra 3%, and Communion/Miracle gain 0.5%.
+44|Noble Lineage
+45|You were born into a family renowned for generations. Your name alone opens doors, but the expectations are heavy.
+46|Orphan
+47|You grew up never knowing your parents' faces. You know better than anyone how to endure alone.
+48|Twin
+49|There's one other person in the world who looks just like you. Loneliness is a stranger to you.
+50|Prophesied Child
+51|Someone was calling your name before you were even born.
+52|Cursed Bloodline
+53|Your elders go quiet when your bloodline comes up. That silence is answer enough.
+54|Country Born
+55|You grew up with the smell of earth. Simple, but sturdy.
+56|Child of Immigrants
+57|You grew up between two languages and two sets of customs. You understand the hearts of those who live on the border.
+58|Lucky Star
+59|Things just work out for you, strangely. You can't explain it, but you can't deny it either.
+60|Ill-Starred
+61|Whenever it rained, you'd always left your umbrella at home. Still, you got back up every time.
+62|Long-Lived Line
+63|Every elder in your family lived past a hundred. Looks like you will too.
+64|Fated to Die Young
+65|Every fortune-teller says your life will be short. So you're in more of a hurry.
+66|Stigmata
+67|Since birth, your palm has borne a mark that won't fade.
+68|Medium
+69|Since childhood, you've seen what others can't. Now it sees you.
+70|Optimist
+71|You see the glass as half full. On most days, that's enough.
+72|Pessimist
+73|Expect the worst and you'll never be disappointed.
+74|Perfectionist
+75|If even one thing is off, you start over from scratch. Exhausting, but the results are certain.
+76|Slacker
+77|You never do today what you can put off until tomorrow.
+78|Curious Soul
+79|You can't stop asking why.
+80|Coward
+81|You never volunteer for anything dangerous. That's why you're still alive.
+82|Prudence
+83|You test every bridge before you cross it.
+84|Hot-Blooded
+85|When you're angry, you can't hold it in. Sometimes people follow that fire.
+86|Chatterbox
+87|The hardest thing for you is keeping your mouth shut.
+88|Introvert
+89|You draw strength from time alone.
+90|Altruist
+91|You feel others' pain as if it were your own.
+92|Jealousy
+93|What others have always looks better.
+94|Vanity
+95|You believe appearances are everything.
+96|Cold-Hearted
+97|Calculation comes before emotion.
+98|Sensitivity
+99|A single sunset can bring you to tears.
+100|Devout
+101|If you skip your prayers even one day, you can't sleep.
+102|Skeptic
+103|You believe nothing until you've checked it yourself.
+104|Charisma
+105|When you walk into a room, the air changes.
+106|Innocence
+107|The world hasn't sullied you yet. Who knows for how long.
+108|Ambitious
+109|If it isn't the top, it's meaningless.
+110|Humility
+111|Praise leaves you flustered. That's why people trust you.
+112|Vengeful
+113|You always pay back what you receive. Good or bad.
+114|Wanderlust
+115|You can't stay in one place for long. Wherever your feet take you, you meet people.
+116|Cooking
+117|One bowl of your soup and anyone will open up.
+118|Singing
+119|People stop in their tracks at the sound of your voice.
+120|Dance
+121|When the music plays, your body moves before you think.
+122|Painting
+123|You can paint what can't be seen.
+124|Calligraphy
+125|You pour your heart into the tip of a brush.
+126|Composition
+127|Your followers hum the songs you write.
+128|Instrumentalist
+129|You pick up any instrument in no time.
+130|Stage Magic
+131|When a dove flies from your fingertips, people believe in miracles.
+132|Hypnosis
+133|Following your voice, people's eyelids grow heavy.
+134|Divination
+135|With a few coins, you read another's future.
+136|Tarot
+137|With a single card, you see straight through a person's troubles.
+138|Face Reading
+139|You can judge a person's character just by looking at their face.
+140|Herbalism
+141|You make medicine from the herbs of mountains and fields.
+142|First Aid
+143|You don't panic when someone collapses in front of you.
+144|Medicine
+145|You formally studied medicine. More reliable than miracles.
+146|Salesmanship
+147|You could sell a rock.
+148|Accounting
+149|Numbers don't lie. Neither do you.

@@ -1,0 +1,150 @@
+1150|The guests marvel at the dinner.
+1151|The dinner is poorly prepared, and disappointment runs deep.
+1152|Greet them as usual
+1153|The ordinary welcome puts them at ease.
+1154|Give a post to the follower who brought a friend
+1155|The new post spurs the follower on.
+1156|The other followers grow jealous.
+1157|Start with suspicion
+1158|Your suspicion makes the guest hesitate.
+1159|Hurt by your suspicion, the follower leaves.
+1160|Hold a philosophy debate
+1161|Students flock to the debate.
+1162|The debate overheats and turns into a commotion.
+1163|Open a free counseling center
+1164|The counseling center listens to the students' worries.
+1165|The running costs weigh on you.
+1166|Throw a party
+1167|Students crowd into the party.
+1168|Rumors of the party set the campus buzzing.
+1169|You leave the campus.
+1170|Sponsor the campus drama club
+1171|Your sponsorship brings you close to the drama club.
+1172|The sponsorship money becomes a burden.
+1173|Hold a welcome party
+1174|At the welcome party, the two groups grow closer.
+1175|The welcome party ends awkwardly.
+1176|Assign them mentors
+1177|The mentors guide the followers well.
+1178|Form a group just for new followers
+1179|The new followers' group comes alive.
+1180|The rift between the two groups widens.
+1181|Tell them to adapt on their own
+1182|Some followers blend in naturally.
+1183|The new followers drift away.
+1184|Pray with them
+1185|Praying together comforts the families.
+1186|The families keep their distance from your prayers.
+1187|You promise a miracle, and the families flock to you.
+1188|The promise goes unkept, and resentment pours in.
+1189|Help with the caregiving
+1190|You help with the caregiving, and the families are grateful.
+1191|Just go back
+1192|You simply go back.
+1193|Meet him in person and persuade him
+1194|Your persuasion in person moves his heart.
+1195|The meeting ends awkwardly.
+1196|Leave the meeting to your followers
+1197|Your followers receive him with care.
+1198|Use him for publicity
+1199|His name spreads word of the cult.
+1200|The publicity goes too far and draws criticism.
+1201|Ignore it
+1202|You ignore it and move on.
+1203|Post a video sermon
+1204|The video sermon becomes the talk of the town.
+1205|The video becomes a laughingstock.
+1206|Spread posts on anonymous boards
+1207|The posts spread, and people come looking.
+1208|The anonymous posts lose credibility.
+1209|The digital is not sacred
+1210|You stick to the traditional ways.
+1211|Let the followers run it
+1212|Run by the followers, it comes alive.
+1213|It is run sloppily.
+1214|Throw a village feast
+1215|The village feast wins the residents' hearts.
+1216|Preparing the feast is overwhelming.
+1217|Help with the farmwork and get to know them
+1218|You help with the farmwork, and the residents are grateful.
+1219|Persuade the village head
+1220|The village head brings the village along.
+1221|The village head refuses, and you turn back.
+1222|Stage a miracle show
+1223|The miracle show sets the village abuzz.
+1224|The show is exposed as a fraud.
+1225|Your sermon moves the prisoners' hearts.
+1226|Your refusal shows caution.
+1227|Promise the cult will care for them after release
+1228|The promise gives the prisoners hope.
+1229|There is deep worry the promise won't be kept.
+1230|Put their strength to work for the cult
+1231|The cult puts the prisoners' strength to use.
+1232|Your ties to the prisoners leak out.
+1233|Inflate them
+1234|The inflated numbers make the cult look bigger.
+1235|The lie is exposed, and you lose trust.
+1236|Announce them honestly
+1237|The honest announcement earns trust.
+1238|Don't announce anything at all
+1239|You hide the numbers.
+1240|You are suspected of hiding something.
+1241|Find an interpreter and welcome them
+1242|Thanks to the interpreter, you understand each other.
+1243|The interpreter is clumsy, and misunderstandings arise.
+1244|Translate the scripture into their language
+1245|The translation wins their hearts.
+1246|The translation goes wrong, and confusion follows.
+1247|Keep your distance
+1248|You keep your distance.
+1249|Find them jobs
+1250|They are grateful for the job referrals.
+1251|The referrals don't pan out as hoped.
+1252|Welcome them with open arms
+1253|The welcome brings the follower to tears.
+1254|The welcome feels too light.
+1255|Make them undergo a rite of repentance
+1256|Having returned through repentance, the follower stands firm.
+1257|The rite is harsh, and they leave again.
+1258|Refuse them
+1259|By refusing them, you keep order.
+1260|Accept them all
+1261|Followers pour in all at once.
+1262|A clash with the rival cult breaks out.
+1263|Screen them strictly
+1264|The followers who pass the screening stand firm.
+1265|Complaints arise that the screening is too strict.
+1266|Send them back
+1267|You politely send them back.
+1268|Dig up the rival cult's secrets
+1269|You unearth secrets and use them to persuade the followers.
+1270|Your snooping is found out.
+1271|Tell fortunes
+1272|People laugh and chatter over the fortunes.
+1273|Word gets around that the fortunes are wrong.
+1274|Hand out free food
+1275|You share food, and people are grateful.
+1276|Perform the cult's music
+1277|People sing along to the music.
+1278|Hold a raffle
+1279|People crowd around the raffle.
+1280|Complaints arise that the prizes are shoddy.
+1281|Hold a family baptism
+1282|The family is moved by the baptism.
+1283|Accept it quietly
+1284|You accept it quietly.
+1285|Listen to their old stories
+1286|The elderly delight in sharing their old stories.
+1287|Do health exercises together
+1288|The exercises put new life into the elderly.
+1289|Word gets around that the exercises were too much.
+1290|Promise them funeral rites
+1291|The promise of funeral rites puts the elderly at ease.
+1292|Some say the promise is a heavy burden.
+1293|Quit, saying it doesn't work
+1294|They quit and look elsewhere.
+1295|Argue back
+1296|You win the argument, and the onlookers applaud.
+1297|The argument turns into a fight.
+1298|Quietly slip away
+1299|You quietly slip away.

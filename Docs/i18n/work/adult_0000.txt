@@ -1,0 +1,150 @@
+0|The cult's biggest patron, a businesswoman in her forties, comes to your office late at night. Instead of paperwork, she sets down two glasses of wine and undoes her blouse one button at a time. "This isn't a deal tonight. I came because I want to."
+1|A masquerade at the village festival. A man in his thirties in a black mask asks you to dance, and when the music ends he whispers in your ear, "I've booked a room at the inn in the back alley. If you don't want to, say so now."
+2|You sit alone across from the female leader of a rival cult to negotiate. Halfway through trading terms, she suddenly comes around the table and sits on your lap. "Let's finish talking about the merger in bed."
+3|In an old text you find a ritual for reaching God through the union of flesh. Your longtime lover reads it, lights the candles, and undresses. "Let's try it together. Let's see if your god is really there."
+4|A reporter in his thirties who came to cover the cult doesn't leave after the interview. He switches off the recorder, loosens his tie, and asks, "This won't go in the article. I just want to find out for myself what kind of person you are."
+5|A tantric couple you met on pilgrimage invites you into their practice. In a room thick with incense, they undress each other and hold out their hands. "It's a practice where three become one. Join only if you want to."
+6|At a hotel bar on a business trip, you run into the lover you parted from ten years ago. After a few drinks, he slides his room key across the bar. "What we never got to say back then, we could say with our bodies."
+7|A mixed bath at a mountain hot-spring retreat. A painter in her forties who paints nudes approaches through the steam. "Will you be my model? Once the painting is done... what comes next is up to you."
+8|A new follower in his twenties asks for counseling. He gazes up at you with trembling eyes, saying he'll do anything you tell him. Alone with him in the room, you know you could make his faith allow anything.
+9|A devoted female follower clings to the cult over her divorce. Your inner circle whispers, "Call it 'special purification' and she won't be able to refuse."
+10|A follower couple drowning in debt can't pay their Offerings. If you mention 'another form of offering,' they'll bow their heads for fear of being cast out of the cult.
+11|Your inner circle proposes a Doctrine: 'Union with the leader is a blessing.' The moment it's written, followers will see refusal as a sin.
+12|After taping an interview, a local TV anchor in her thirties locks the dressing room door. "It was torture holding back in front of the camera. This time, will you answer my questions with your body?"
+13|A collector in his forties bidding against you for a relic at auction offers to concede, handing you the key to a hotel suite. "Pay me tonight. Only if you want to, of course."
+14|The male yoga instructor in his thirties from the dawn class doesn't roll up his mat after the session. "Your breathing still isn't loose enough. There's an advanced course, just the two of us."
+15|On a rainy night, the owner of a secondhand bookshop, a woman in her forties, shows you a forbidden book: an ancient cult's sex rituals, written out with illustrations. "Too good a book to read alone. Want to try it together?"
+16|After the city council dinner, an opposition councilwoman in her thirties suggests sharing a taxi. "I went after you during the day... but there's no need to at night, is there?"
+17|A dancer in his thirties you meet at the full-moon festival holds out his hand to dance with you by the fire. As the dance ends, he whispers, "There's no one down by the river."
+18|At the funeral of an old mentor, you meet the classmate you secretly loved in college. You're both past forty now. "Why didn't you ever say anything back then? Tonight... I don't want to be alone."
+19|A business couple in their fifties with their own yacht invites you on a weekend cruise. Far out at sea, the two of them untie their swimsuits and laugh. "We've always liked it as a threesome. If you'd rather not, you can just swim."
+20|After you give a guest lecture at a university festival, a graduate teaching assistant (28) returns your lecture notes with a slip of paper tucked inside: 'I'll leave the lab light on tonight. I'm more curious about you than your lecture.'
+21|A famous photographer, a woman in her thirties, asks you to model for a piece on 'the sacred and the sensual.' The studio holds nothing but a single sheet of red cloth.
+22|You've just finished a televised debate with the male spokesman of a rival cult, a man in his thirties. In the green room, he loosens his tie. "Once the cameras are off, we've got no reason to fight, do we?"
+23|At a mountain monastery, you cross paths every day at the same hour by the well with a female pilgrim in her thirties who has taken a vow of silence. On the last night, she knocks on your door without a word.
+24|In a casino's VIP lounge, an heiress in her forties who has just lost a fortune sits down beside you. "My luck is atrocious tonight. Will you stay by my side like a lucky charm? In my room."
+25|A perfumer in his thirties you meet at the spice market offers to make a scent just for you. "A fragrance is completed on the skin. I'll have to test it on every inch of you."
+26|Snowed in at a mountain lodge, the rescue worker in his thirties sharing it with you spreads a blanket in front of the stove. "Sharing body heat is fastest. It's in the rescue manual. Really."
+27|At the city marathon finish line, a female runner in her thirties catches you as you nearly collapse. Outside the showers, she says, "If we shower together, we save water."
+28|At the publisher's year-end party, the editor of your autobiography, a man in his forties, calls you to his hotel room on the pretext of revising the manuscript. "This chapter needs to be more candid to sell. You have to experience it to write it."
+29|A couple in their thirties you meet at a beach sunset meditation invites you back to their cabin. "They say if three people listen to the waves together, you can go even deeper."
+30|At the police chief's inauguration reception, the new chief, a woman in her forties, calls you out to the terrace. "Your cult's file is on my desk. Tonight, I'd rather see you than the paperwork."
+31|Twin brothers in their thirties who run a winery invite you to their harvest festival. In the grape-stomping vat, they both reach out their hands at once.
+32|At an after-party for a philosophy conference, a professor in her forties who studies hedonism tears your Doctrine apart. Then she abruptly sets down her glass. "Words won't settle this. Let's prove it empirically."
+33|In front of the cathedral at the end of the pilgrim's road, a male pilgrim in his thirties who walked the same route says, "We walked together for a month and I never once held your hand. And it's the last night."
+34|A jazz singer in her thirties tosses you a rose mid-performance. After the show, in her dressing room, she asks you to unzip her dress.
+35|At a charity auction, 'one night's date with you' goes on the block. The winning bidder is a single surgeon in her forties. "If you don't want to, we can just have dinner. But I am hoping for more."
+36|In an open-air hot spring in a spa village, a male traveler in his thirties offers you a drink under the moonlight. A few drinks later, he pulls you close by the waist under the water.
+37|The secretary of the trade association's president, a woman in her thirties, hints at a price for arranging a meeting with her boss. "The president only listens to me. Will you listen to me tonight?"
+38|At a luxury spa, a male masseur in his thirties warms the oil and asks, "There's the regular course and the secret course. The secret one isn't on the price list."
+39|A calligrapher in her forties wants to brush your Doctrine onto your back. "Human skin takes ink far better than rice paper."
+40|Your friend of twenty years, divorced and in their forties, makes a drunken confession. "Honestly, it's been you for a long time. Just for tonight, be something other than my friend."
+41|At the masked club 'Midnight Garden,' a mysterious couple in their thirties sits down at your table. There's only one rule: the masks stay on.
+42|At a banquet in heaven, the goddess of love pours mead into your cup. "So the new god chose such a sturdy vessel. Mind if I test what this vessel is good for?"
+43|On a stormy night, a ship's captain in her thirties who serves the god of the sea takes refuge in your temple. Peeling off her wet clothes, she says, "My god has abandoned me. Will you be my god tonight?"
+44|A spirit of the night visits your vessel's dreams. A body woven from moonlight slips under the covers. "The vessel and the god haven't fully blended yet. Let me help."
+45|The god of war proposes settling who's stronger some way other than a duel. "Whoever breaks first. The loser gives up one line of Doctrine."
+46|A band of satyrs and nymphs living in the forest near your temple holds a festival. Amid the piping, they draw you into their circle.
+47|A mortal empress in her thirties summons you to her palace, wanting to test the god's vessel. "If you're a god, prove it in my bed. Satisfy me and the empire will serve you."
+48|The god of gold sneers at your temple's empty treasury. "I could fill that vault in a single night. The price is your vessel. Just for one night."
+49|On the banks of the river of oblivion, the ferryman of the underworld (in the form of a man in his forties) stops rowing. "First time I've carried a living god. Before we cross... I'd like to feel something warm, just once."
+50|A famous mortal sculptor, a woman in her thirties, asks you to model for her statue of 'the living god.' In her studio she says, "I have to learn the form with my own hands. All of it."
+51|The angel sent down to watch you has instead lost his heart to the warmth of your vessel. Folding his wings, he confesses, "I don't care if I fall. I just want to feel you once."
+52|You're invited to a fertility festival in a neighboring village. The villagers believe that if a god dances the festival's first dance, the harvest will be bountiful. The festival's beauty, a widow in her thirties, places a garland on your head.
+53|The goddess of wisdom poses a riddle. "Find the three truths hidden on my body and I'll add them to your Doctrine. You may search only with your hands and lips."
+54|A male priest in his thirties guarding a desert oasis temple (he serves another god) offers you a ladle of water. "Our god commands us to show guests every hospitality. As far as it goes."
+55|The god of the stars invites you to an observatory at the edge of the sky. "I want to draw a new constellation. Let's shape it with our two bodies."
+56|A powerful mortal guildmaster of mages, a woman in her forties, wants to measure a god's power with her body. "Mana is measured most accurately by contact. As deep as possible."
+57|The succubus who has pined for you for ages finally courts you properly. "This time I'm not here to drain your essence. I just... like you."
+58|A bard in his thirties on pilgrimage says he's stuck on the song he's writing for you. "To sing of a god's love, shouldn't I be loved by a god first?"
+59|The god of mirrors appears in a form identical to your vessel. "Few gods have ever held themselves. Aren't you curious?"
+60|A great mortal merchant in his thirties offers half his fortune for one night to 'worship' the god's vessel. "As for what worship means... that's for you to decide."
+61|At the border between seasons, the goddess of spring and the god of winter quarrel over you. "Decide for yourself whose embrace is better."
+62|A prioress in her thirties (of another order) who guards an ancient erotic scripture says its final chapter may be read only by a god. "To read it means to practice it."
+63|The god of another cult (a male god) visits your temple to propose an alliance. "Why swear on paper like humans? Gods swear with their bodies."
+64|A dream that belonged to your vessel's original owner has come back to life. The lover from that dream (a man in his thirties) recognizes you and approaches. "This body remembers me. You can feel it too."
+65|Three knights of a female order, all in their thirties, lost in a storm, ask to stay the night at your temple. Taking off their armor by the fire, they exchange glances. "Our order has its own way of thanking a god."
+66|The greatest dancer in the mortal world, a woman in her thirties, offers to perform 'the Dance of the Seven Veils' before the god. With every veil that falls, she takes one step closer.
+67|The merman prince of an undersea kingdom appears on the beach with a chest of pearls. "I've always wondered what a god of the land tastes like. Will you come just as far as the waves reach?"
+68|The king of fire spirits (in the form of a man) awaits you at a volcano temple. "If your vessel can endure my fire, I'll share the divine power of flame with you."
+69|A scholar in his forties who studies human pleasure is writing a paper titled 'Do Gods Feel Pleasure?' "I'll just observe. No, to be accurate, I'd better participate."
+70|The queen of the underworld, on an outing to the mortal world, stops by your temple. "They say the god of the living is warm. Could you melt my chill for one night?"
+71|On your first anniversary as a god, an old lover from heaven (only you know which god) visits in secret. "I thought you'd forgotten me once you went down to the mortal world. Remember me again with that body."
+72|Pull her onto the desk
+73|Papers scatter across the floor. You tear each other's clothes off, and her damp skin clings to yours. She bites your shoulder and arches her hips, swallowing her moans each time the desk creaks, until she comes apart again and again. Near dawn, drenched in sweat, she whispers that she'll double her donation.
+74|Just as your bodies are tangled up, the night guard opens the door. What he saw, the two of you half-naked, spreads as rumor before morning.
+75|Just share the wine and politely send her home
+76|She smiles and buttons up again. She looks less rejected than respected.
+77|Take his hand and go to the inn
+78|Before you can even remove your masks, he pins you to the wall and kisses the nape of your neck. Strong hands dig under your clothes, and while the bed rocks like it might break, the festival drums outside the window keep time for you both. Spent and sweaty, he laughs. "I'll come find your cult tomorrow."
+79|Fueled by drink, you go at it so hard that you throw out your back. The pleasure was brief; the pain lingers.
+80|Dance with your masks on, then part ways
+81|You dance until the last song. He kisses the back of your hand with a wistful look and disappears.
+82|Carry her to the bed
+83|She's as relentless as she is at the negotiating table. Straddling you and slowly rolling her hips, she lays out her terms one by one, and each time you flip her over and drive deep, she concedes one. Still trembling from her climax, she catches her breath and signs. As of today, the two cults are one.
+84|It was an ecstatic night, but in the morning she leaves only a note instead of a contract: 'That was wonderful. Still no merger.' Some of your followers defect to her side.
+85|Help her up and hand her the contract
+86|She bites her lip, then laughs. "You're no fun. That's what makes you trustworthy."
+87|Perform the ritual with your lover by candlelight
+88|Your lover's oiled body gleams in the candlelight. Following the text's order, you kiss every part of each other, then move slowly as one, breathing together. As your climaxes meet, your vision burns white, and in that light you come to believe you truly saw God.
+89|Your bodies burned hot, but the light never came. In your lover's arms, you doubt God for the first time.
+90|Close the book and just hold your lover as you sleep
+91|You choose warm sleep over ritual. Your lover's heartbeat is more soothing than any prayer.
+92|Make sure the recorder is off and kiss him
+93|He's clumsier than you expected, and hotter than you expected. You start on the sofa, move to the floor, then to the bed. When you push him all the way, he cries your name again and again as he comes undone. The article that runs a week later is remarkably favorable.
+94|The recorder you thought was off was running on his phone. The article never ran, but the file is still out there somewhere.
+95|Smile and point to the door
+96|"Let's see it in print." He gives a sheepish laugh and leaves. The article is fair.
+97|Slip in between them
+98|The couple lays you between them and takes turns kissing you. While the wife rides you, the husband's hands and tongue explore your body, and you trade places again and again until all three of your breaths become one. At dawn, slick with sweat and oil, the first sentence of a new Doctrine comes to you.
+99|Your body went along, but your heart couldn't follow. The emptiness afterward lingers for days.
+100|Join the meditation but decline the practice
+101|You meditate fully clothed amid the incense. The couple bows, saying that too is a practice.
+102|Pick up the key
+103|The moment the door closes, ten years collapse. He hasn't forgotten a single place your body remembers. Against the wall, in the bathroom, in the bed, you devour each other all night, and as dawn breaks he says, "No more regrets. Take care of yourself." Strangely, your heart feels light.
+104|Your bodies fit together again, but so did the old wound reopen. The empty bed he leaves behind in the morning stays with you a long time.
+105|Slide the key back
+106|"Let's keep it a good memory." He nods and empties his glass.
+107|Model for her, and accept what comes next
+108|In the steamy studio, she traces the lines of your body with her fingers instead of a brush. When the painting is done, she lays you down with her wet body and takes you in, slow and hot as the spring water. After a climax that seems to melt you, you feel oddly closer to God.
+109|You've soaked too long, and dizziness hits you mid-painting. She helps you lie down with a regretful smile.
+110|Just model for her
+111|You hold perfectly still to the end. In the finished painting, you are serene as a saint.
+112|Use your authority to keep him there
+113|He couldn't refuse. The light is gone from his face as he walks out the door, and after that night he never meets your eyes. All that remains is the feeling of something rotting inside you.
+114|At the last moment he bolts from the room and tells everyone. Rumors spread through the cult, and several families leave with their children.
+115|Counsel him and send him home
+116|You hold the line. He leaves looking comforted.
+117|Order the 'special purification'
+118|She did as she was told. After the ritual she wept for a long time, and the other followers called it 'tears of purification.' Those words weigh on you all the more.
+119|Her husband goes to the police. Investigators knock on the cult's door, and your name ends up in the papers.
+120|Rebuke your inner circle and send her to a counselor
+121|Your inner circle looks sheepish, and she gets real help.
+122|Demand 'another form of offering'
+123|The couple said nothing. They still come to services, but they no longer pray. The debt in the ledger is erased, but something has appeared that can't be.
+124|That night the couple leaves the cult and goes to a civic group. An ex-member network makes your name public.
+125|Forgive their debt
+126|The couple takes your hand, weeping with gratitude. The story spreads, and the followers' faith deepens.
+127|Approve it as Doctrine
+128|The Doctrine is put in writing, and the followers memorize it. Now no one refuses. Whether that's faith or fear, you decide not to ask.
+129|The draft leaks. A broadcaster airs interviews with ex-members, and the cult starts being called 'a sex-exploitation cult.'
+130|Cast out the inner circle who proposed it
+131|You tear up that Doctrine. A few of your inner circle leave, but the cult is cleaner for it.
+132|Take her in front of the dressing room mirror
+133|Your bodies overlap in the mirror. Braced against the vanity, she takes you in, calling your name again and again. On next week's broadcast, she introduces your cult with unusual warmth.
+134|A staffer rattles the doorknob in the hallway. Someone's phone catches you scrambling for your clothes.
+135|Smile and promise another interview
+136|"Then next time, let's do it live." She opens the door, looking a little disappointed.
+137|Go up to the suite
+138|He undresses you slowly, as if handling a piece in his collection, admires you at length, and at last takes you roughly. At dawn, a thick envelope of Offerings lies on the bed alongside the auction papers.
+139|It was an ecstatic night, but he changes his mind in the morning. The relic goes into his vault.
+140|Bid for the relic fair and square
+141|You pay a premium and take the relic home. He whistles and applauds.
+142|Take the advanced course
+143|His supple body folds and unfolds you every which way. Matching breaths, slick with sweat, the lesson somehow turns into something else. Next week, he brings his students to the cult's gathering.
+144|Holding an impossible pose, you get a cramp in your thigh. He laughs, gives you a massage, and that's the end of it.
+145|Just finish the breathing class
+146|You roll up the mat and hand it back. Your body feels light.
+147|Turn the pages and follow along with her
+148|To the sound of rain, the two of you turn the pages one by one, putting each illustrated position into practice. By the last page, a verse of a new Doctrine comes to you.
+149|The book's positions are harder than they look. You both burst out laughing, the ritual falls apart, and your Doctrine notebook holds nothing but doodles.

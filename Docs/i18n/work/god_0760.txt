@@ -1,0 +1,150 @@
+760|The rebuttal does not sell.
+761|Preach that contradiction is the true mystery
+762|Your followers embrace the contradictions as the god's depth.
+763|People call it sophistry.
+764|Forbid your followers from reading the book
+765|The banned book, oddly, loses its mystique.
+766|The more you forbid it, the more followers read it in secret.
+767|Hold a feast outside the lecture hall
+768|One by one, people at the abstinence lecture follow the scent of the feast outside.
+769|Police arrive amid accusations of provocation.
+770|Counter with a sermon that pleasure is grace
+771|Your followers rejoice that they can now laugh without guilt.
+772|The sermon sounds like an excuse.
+773|Hold back on indulgence for a while
+774|You feel the vessel drying out.
+775|Settle the interpretation yourself
+776|Before the god's interpretation, the dispute ends.
+777|Followers on the losing side are hurt.
+778|Declare both interpretations correct
+779|The two sides embrace.
+780|The Church of Righteous Light sneers that your Doctrine has gone muddy.
+781|Let the dispute run its course
+782|Followers worn out by the quarrel leave for the Church of Righteous Light.
+783|Accept the duel and answer with a miracle
+784|The warrior monk's sword melts before you.
+785|The blade grazes the vessel's shoulder, and blood flows.
+786|Send a champion in your place
+787|Your followers' representative holds firm, and the warrior monk withdraws.
+788|Your champion falls, and your followers are shaken.
+789|Ignore the letter
+790|Rumors spread of a coward god.
+791|Publish a commentary answering the Q&A booklet
+792|Followers who read the commentary grow firmer in their faith.
+793|The commentary is judged too difficult.
+794|Scold the follower whose bag it was found in
+795|Your followers grow more vigilant.
+796|The suspected follower is hurt and leaves.
+797|Tell them to read the book and come back with questions
+798|The more questions you answer, the firmer your Doctrine grows.
+799|Unanswered questions pile up.
+800|Promise more rice and jobs
+801|Followers who were packing unpack their bags.
+802|You lack the money to keep your promise.
+803|Hold a feast for those about to leave
+804|At what was meant to be a farewell feast, they swear never to leave.
+805|When the feast ends, they leave.
+806|Tell those who would go to go
+807|The eyes of those who remain grow harder.
+808|Post blessing charms on every follower's home
+809|Missionaries turn back at doors bearing charms.
+810|The missionaries tear down the charms.
+811|Invite the missionaries to the temple
+812|A few missionaries, intoxicated by the feast, never go back.
+813|The missionaries film the inside of the temple and leave.
+814|Tell your followers not to open their doors
+815|Flyers pile up behind the tightly shut doors.
+816|Go to him and spend one last night together
+817|At dawn, he tears up his baptismal certificate and prostrates himself at your feet.
+818|He pushes you away and tells the Church of Righteous Light everything.
+819|Publicly curse his betrayal
+820|Your followers see plainly the price of betrayal.
+821|Your followers are terrified, calling it cruel.
+822|Bless his choice
+823|You are remembered as a generous god.
+824|Break the returnees' silence with indulgence
+825|After a heated night, your name flows from their lips once more.
+826|They never open their mouths.
+827|Reclaim their dreams through Communion
+828|Your voice shatters the silence in their dreams.
+829|The cold silence swallows the miracle.
+830|Forbid attending the retreat
+831|A few who resent the ban leave for good.
+832|Hold a more fun youth gathering at the temple
+833|The young people gather in the temple courtyard instead of the dojo.
+834|The young people quickly grow bored.
+835|Gather the parents and reassure them with a blessing
+836|Relief returns to the parents' faces.
+837|The anxiety does not easily subside.
+838|Threaten the dojo with a miracle
+839|The dojo's sign splits in the middle of the night.
+840|Police investigate the property damage.
+841|Raise a tower taller than the building next door
+842|Your tower's shadow falls over the grain sign.
+843|A building permit problem arises.
+844|Invite the neighbor's followers to a feast
+845|Beneath the grain sign, people whisper news of your feast.
+846|The invitation is ignored.
+847|A few followers drift over, following the neighbor's sacks of rice.
+848|Declare that there is no sin in indulgence
+849|Freed of guilt, your followers serve you all the more deeply.
+850|Anxious followers still waver.
+851|Create a purification rite of your own
+852|A rite of washing in milk and honey binds your followers once more.
+853|The rite looks clumsy.
+854|Leave the wavering followers be
+855|A few head for the Church of Righteous Light's baptismal font.
+856|Let the follower choose
+857|The follower tells their family they choose you.
+858|The follower leaves in tears with their family.
+859|Seat the clergy and family at a feast
+860|As the wine goes around, even the family asks for your blessing.
+861|The family tips off the press, calling it brainwashing.
+862|Lock the doors
+863|The follower stays, but suspicions of confinement arise.
+864|The police are called in.
+865|Proclaim the verdict a badge of honor
+866|The story of a persecuted god sets your followers ablaze.
+867|Frightened followers waver.
+868|Answer the Council with a great miracle
+869|Every newspaper carrying the verdict bursts into flame at the same moment.
+870|The miracle fails, leaving only ridicule.
+871|Quietly lie low
+872|For a while, the other gods' gaze softens.
+873|Embrace and comfort the follower who was mocked
+874|In your arms, the follower's tears turn to laughter.
+875|The wound does not heal easily.
+876|Hand out golden insignia to your followers
+877|Wearing the golden insignia, your followers walk the streets with heads held high.
+878|The insignia become targets.
+879|Tell them to stay indoors
+880|Your followers' world shrinks to within the temple walls.
+881|Bring the former follower back into the fold
+882|At the next rally, he retracts all his testimony.
+883|Even your attempt to win him over is exposed.
+884|Hold a counter-rally declaring indulgence a blessing
+885|Followers at the counter-rally testify with happy faces.
+886|The rallies escalate into a clash.
+887|Stay silent
+888|Only the testimony remains, and it spreads.
+889|Secretly invite the seminarians
+890|A few seminarians who studied you as a cautionary tale are captivated by your true face.
+891|Word of the invitation reaches the seminary.
+892|Adopt the upside-down emblem as a new symbol
+893|The inverted emblem becomes a symbol of resistance.
+894|The meaning does not come across well.
+895|Your Doctrine's reputation erodes little by little.
+896|Sleep in one room with your followers and share their dreams
+897|Warmth returns to the dreams of followers sleeping skin to skin.
+898|The dreams do not return, only rumors.
+899|Lift the curse through powerful Communion
+900|The cold veil tears, and your followers dream again.
+901|The curse's backlash strikes the vessel.
+902|Change the bedtime prayer
+903|The new prayer has some effect.
+904|Nothing changes.
+905|Show the miracle of not burning amid the flames
+906|Amid the flames, a single book of scripture rises unscathed.
+907|Every book turns to ash.
+908|Hold a scripture reading on the same day
+909|Unlike the burning plaza, the temple resounds with the word.

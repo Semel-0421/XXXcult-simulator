@@ -1,0 +1,150 @@
+1900|Centering on headquarters keeps order.
+1901|Hand out branches to your inner circle
+1902|Your inner circle takes charge of the branches, and the cult expands.
+1903|The branch heads build up their own power.
+1904|Hold a testimony gathering
+1905|Followers flock to the testimony gathering.
+1906|Compile the testimonies into a book
+1907|The book of testimonies puts flesh on the Doctrine.
+1908|The testimonies are exaggerated, and the book draws criticism.
+1909|Tie the testimonies to Offerings
+1910|The testimonies turn into Offerings.
+1911|Linking them to Offerings draws criticism.
+1912|Accept the vow
+1913|The vow becomes the cult's strength.
+1914|The excessive vow raises concern outside.
+1915|Redirect the vow to god
+1916|The vow is sublimated into faith.
+1917|Tell them to withdraw the vow
+1918|Once the vow is withdrawn, trust is restored.
+1919|Test the vow
+1920|The test reveals how deep the vow runs.
+1921|Rumors spread that the test was cruel.
+1922|Put the vow in a written contract
+1923|The contract binds the followers.
+1924|The contract becomes a problem and sends out ripples.
+1925|Preach moderation in faith
+1926|The sermon on moderation softens the public view.
+1927|Fan the flames further
+1928|The followers' fervor burns hotter.
+1929|The fervor looks like a threat from outside.
+1930|Cut off contact with the outside
+1931|Isolated, the cult grows more tightly bound.
+1932|The isolation feeds suspicion.
+1933|Harness the fanaticism as the cult's strength
+1934|Fanaticism becomes the cult's strength.
+1935|The fanaticism becomes a social problem.
+1936|Spend it on the followers' welfare
+1937|The welfare eases the followers' lives.
+1938|Build cult buildings
+1939|The new building expands the cult.
+1940|Construction costs a lot.
+1941|Keep it as an emergency fund
+1942|The emergency fund brings stability.
+1943|Live in comfort
+1944|Your life grows comfortable.
+1945|Word of your luxury gets around.
+1946|Hire bodyguards
+1947|The bodyguards protect the vault.
+1948|The security costs weigh on you.
+1949|Diversify the assets
+1950|Spreading out the assets reduces risk.
+1951|Managing it all separately is a hassle.
+1952|Give it all back to society
+1953|Giving back to society improves the cult's image.
+1954|Grow it through investment
+1955|Investment grows your Wealth.
+1956|The investment fails, and your Wealth shrinks.
+1957|Give up your own fortune
+1958|You give up your fortune, and the followers are moved.
+1959|Your fortune isn't enough.
+1960|Appeal for emergency Offerings
+1961|A few emergency Offerings trickle in.
+1962|Your appeal falls on deaf ears.
+1963|Endure through prayer
+1964|The followers endure through prayer.
+1965|Borrow money
+1966|The loan puts out the immediate fire.
+1967|Debt collectors come calling.
+1968|Deliberately invite dissent
+1969|Inviting dissent wins your inner circle's trust.
+1970|Enjoy the silence
+1971|The silence cements your Authority.
+1972|The silence gives rise to talk of dictatorship.
+1973|Demand greater authority
+1974|Your authority grows.
+1975|Your demand for authority provokes your inner circle.
+1976|Test your inner circle
+1977|The test reveals who in your inner circle is loyal.
+1978|The test shatters your inner circle's trust.
+1979|Use that power mercifully
+1980|Your merciful commands embrace the followers.
+1981|Use that power to purge the opposition
+1982|The opposition is purged, and all falls quiet.
+1983|The purge becomes known outside.
+1984|Share authority with your inner circle
+1985|Sharing authority wins the followers' trust.
+1986|Dream of becoming a god
+1987|Your divine ambition shakes the cult.
+1988|Your ambition becomes the world's laughingstock.
+1989|Begin a vow of silence
+1990|In silence, your faith ripens.
+1991|The practice goes too far and harms your body.
+1992|Rewrite the Doctrine
+1993|The rewritten Doctrine gains depth.
+1994|The revision of Doctrine causes confusion.
+1995|Kneel and worship
+1996|After worship, your heart grows calm.
+1997|Testify to the followers
+1998|Your testimony sets the followers ablaze.
+1999|Your testimony is criticized as exaggerated.
+2000|Pose a question to god
+2001|The answer that comes to you after asking becomes Doctrine.
+2002|There is no answer to your question.
+2003|Suspect a hallucination
+2004|Suspecting a hallucination, you show prudence.
+2005|Go deeper
+2006|A deeper Communion comes upon you.
+2007|You collapse during Communion.
+2008|Pause and rest
+2009|Rest restores body and mind.
+2010|Share the experience with the followers
+2011|Sharing the experience binds the followers together.
+2012|The experience confuses the followers.
+2013|Try healing the sick
+2014|Word of the Healing spreads and draws followers.
+2015|The Healing fails, and talk of fraud goes around.
+2016|Hide the power
+2017|Hiding the power, you keep your peace.
+2018|Use the power to make followers obey
+2019|Obedience establishes order.
+2020|Forced obedience provokes backlash.
+2021|Explore the source of the power
+2022|Your exploration broadens the Doctrine.
+2023|The exploration leads nowhere.
+2024|Spread god's will to the world
+2025|God's will spreads across the world.
+2026|The world doubts god's will.
+2027|Keep the power to yourself
+2028|Keeping the power, you find stillness.
+2029|Choose to become one with god
+2030|You feel as if you have become one with god.
+2031|Your body begins to break down.
+2032|Open a Doctrine school
+2033|The Doctrine school raises up followers.
+2034|The school's running costs weigh on you.
+2035|Make the Doctrine public
+2036|Making the Doctrine public earns trust.
+2037|Excommunicate the heretics
+2038|The excommunication restores discipline.
+2039|The excommunication is called harsh.
+2040|Hold a debate
+2041|The debate refines the Doctrine.
+2042|The debate gets rowdy.
+2043|Absorb the heretics' claims
+2044|The heretics' claims are absorbed into the Doctrine.
+2045|The absorption muddies the Doctrine.
+2046|You ignore it.
+2047|Engage with scholars
+2048|Engaging with scholars makes the Doctrine shine.
+2049|The engagement invites criticism.

@@ -1,0 +1,110 @@
+1050|Empty your allowance for a nice gift
+1051|Your friend is touched by the nice gift.
+1052|Your friend's face falls a little.
+1053|Give a handmade gift
+1054|Your friend is touched by the care you put into it.
+1055|Wrap something from home
+1056|You wrap up something lying around the house.
+1057|Your friend catches on and is disappointed.
+1058|Just say happy birthday
+1059|You offer only your congratulations.
+1060|Pull off a come-from-behind win
+1061|You sprint with everything at the end and snatch the win.
+1062|You fail to close the gap, and regret fills you.
+1063|Drop the baton
+1064|You drop the baton, and the cheers turn to groans.
+1065|You trip trying to pick up the baton.
+1066|Fall but run to the end
+1067|You fall, get back up, and run to the finish.
+1068|You scrape your knee and can't get up for a long time.
+1069|Run slowly on purpose so a friend can shine
+1070|Your friend pulls ahead to cheers.
+1071|Write down their words
+1072|You jot the words from your dream in a notebook.
+1073|Wake up in fear
+1074|You wake in a cold sweat.
+1075|You tremble with fear for a while.
+1076|Make a wish to them
+1077|You make a wish, and your heart feels at ease.
+1078|You worry your wish won't come true.
+1079|Take their hand
+1080|You take their hand, and a warm light spreads.
+1081|Their hand is ice cold, and you wake with a start.
+1082|Delight in your big room
+1083|You run around your big new room in glee.
+1084|Be sad to leave your old friends
+1085|You are sad to part with your old neighborhood friends.
+1086|Your old friends drift away, and you feel lonely.
+1087|Show off to your new friends
+1088|Your new friends are envious.
+1089|You brag too much and earn their resentment.
+1090|Say you want to learn Dad's business
+1091|Dad smiles with satisfaction and tells you about his business.
+1092|Dad cuts you off, saying it's too early.
+1093|Stick with it to the end
+1094|You stick with it and find the answer.
+1095|Time runs out.
+1096|Solve only the easy problems
+1097|You breeze through the easy problems.
+1098|Find an error in the questions and protest
+1099|You spot an error in the questions and astonish the judges.
+1100|You are warned for a pointless protest.
+1101|Give up and sleep
+1102|You close the test booklet and fall asleep.
+1103|Chat all night
+1104|You talk the night away.
+1105|Cry from homesickness
+1106|Thinking of home, you burst into tears.
+1107|You embarrass yourself in front of your friend's parents.
+1108|Be polite to your friend's parents
+1109|Your friend's parents praise your good manners.
+1110|Raid your friend's fridge
+1111|You sneak into the fridge and help yourself to snacks.
+1112|You are caught, and your friend's parents scold you severely.
+1113|Give him all your money
+1114|You hand over every coin you have.
+1115|You feel ashamed of yourself for hesitating to hand it over.
+1116|Buy him some bread
+1117|You buy some bread and hand it to him.
+1118|Look away
+1119|You look away and walk past.
+1120|Guilt at looking away washes over you.
+1121|Pray for the homeless man
+1122|You quietly pray for the homeless man.
+1123|Your heart grows heavy as you pray.
+1124|Refuse the special treatment
+1125|You refuse the special treatment, and your classmates see you in a new light.
+1126|Enjoy it to the fullest
+1127|You coast comfortably with the teacher behind you.
+1128|Your classmates' resentment grows.
+1129|Share the perks with your friends
+1130|You share the perks, and the class mood improves.
+1131|You share the perks, but some resentment lingers.
+1132|Rule the class with the teacher behind you
+1133|You order your classmates around and throw your weight around.
+1134|Your classmates push back, and the class is in uproar.
+1135|Follow the map precisely
+1136|You follow the map straight to your destination.
+1137|Ride to the last stop
+1138|You zone out and ride all the way to the last stop.
+1139|You get lost and are on the verge of tears.
+1140|Befriend the old lady in the next seat
+1141|The old lady shares her snacks and keeps you company.
+1142|Sneak a free ride
+1143|You dodge the driver's eye and skip handing over your token.
+1144|The driver catches you and scolds you severely.
+1145|Act it convincingly
+1146|Your convincing performance leaves the audience breathless.
+1147|Your stiff acting draws laughter.
+1148|Forget your lines
+1149|You forget your lines, and the play grinds to a halt.
+1150|A friend picks up your lines for you.
+1151|Play the villain as someone with a story
+1152|Your nuanced performance earns praise.
+1153|You overthink it, and it clashes with the direction.
+1154|Try to steal the lead role
+1155|Eyeing the lead, you pick a fight with your friend.
+1156|Your friends turn their backs on you.
+1157|Drink milk every day
+1158|You drink your milk faithfully.
+1159|Don't worry about it

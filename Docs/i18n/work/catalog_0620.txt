@@ -1,0 +1,67 @@
+620|Word spreads of a clean cult.
+621|Transparent Ledger
+622|The more you open the books, the higher your Reputation.
+623|Honest Sermon
+624|Plain words move your followers.
+625|Nothing to Find
+626|Even when investigators come, you have little to lose.
+627|Neutralizing Investigations
+628|You find ways to avoid seizure.
+629|Proof of Innocence
+630|The world's suspicion builds up more slowly.
+631|Burning Lust
+632|The heat of the flesh warms the vessel.
+633|Beckoning Temptation
+634|Temptation binds your followers deeply.
+635|Night of the Chosen
+636|The memory of being chosen for a night becomes Piety.
+637|Enchanting Scent
+638|Your Feasts go more smoothly.
+639|Restorative Pleasure
+640|Pleasure restores the vessel more deeply.
+641|Warmth of Skin
+642|Nights spent skin to skin revive the body.
+643|Sweet Oblivion
+644|Pleasure covers the wounds of the mind.
+645|Endless Appetite
+646|The more you eat, the fuller the vessel grows.
+647|Invitation to the Banquet
+648|The feast table draws people in.
+649|Overflowing Feast
+650|Those with full bellies become followers.
+651|Wine of the God
+652|A single cup of wine strengthens Faith.
+653|Sated Vessel
+654|The vessel recovers as much as you eat and drink.
+655|Nourishing Table
+656|Rich food revives the body.
+657|Full Granary
+658|Well-fed followers never leave for someone else's rice sacks.
+659|Lust for Gold
+660|Your craving for riches becomes power.
+661|Coveted Offerings
+662|Bigger Offerings summon bigger blessings.
+663|Golden Offering Contest
+664|Followers compete over how much they offer.
+665|Display of Luxury
+666|Luxury becomes majesty.
+667|Peace Bought with Money
+668|Money quiets the world's suspicion.
+669|Secret Lobbying
+670|The edge of the investigation is dulled.
+671|Siphoned Assets
+672|You move your Wealth before it can be seized.
+673|Ambition to Reign
+674|Your ambition to stand above all things grows.
+675|Banner of Conquest
+676|Your power swells unchecked.
+677|Hostile Takeover
+678|You swallow the followers of other cults.
+679|Majesty of the Throne
+680|Majesty flows down from on high.
+681|Arrogance Before the Gods
+682|You refuse to bow your head even before other gods.
+683|The God Who Never Kneels
+684|Pressure from the heavens builds up more slowly.
+685|Iron Order
+686|Your majesty does not easily crumble.

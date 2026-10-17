@@ -1,0 +1,150 @@
+600|Rumors that you took his fortune turn ugly.
+601|Accept only part of it
+602|You accept only part, preserving the follower's livelihood.
+603|Refuse and send him back
+604|Worried for his livelihood, you send him away.
+605|The follower is disappointed to have it returned.
+606|Accept it and share it with poor followers
+607|Your generosity wins your followers' hearts.
+608|Some say you give it away too freely.
+609|Accept it and grow it in the cult's name
+610|Investing in the cult's name grows the fortune.
+611|The investment fails, and your followers are furious.
+612|Accept it joyfully
+613|Your followers' devotion warms your heart.
+614|Ask them to keep it modest
+615|Your followers respect your modesty.
+616|Turn your birthday into a day of service
+617|On the day of service, neighbors express their thanks.
+618|Your followers are disappointed.
+619|Throw a grand feast
+620|The feast heightens your followers' joy.
+621|Critics say the feast cost too much.
+622|Praise and encourage them
+623|The child proudly carries on with the sermon.
+624|Scold them for imitating the cult leader
+625|The child shrinks back and falls silent.
+626|The child bursts into tears, and the adults stir.
+627|Lay hands on him and pray
+628|After the prayer, the follower breathes a little easier.
+629|The prayer has no effect, and the follower is disappointed.
+630|Urge him to see a doctor
+631|His family thanks you for the advice to seek treatment.
+632|Promise a miracle
+633|Promised a miracle, the follower clings to hope.
+634|The promise goes unkept, and word gets around.
+635|Have the cult pay for treatment
+636|The follower is grateful for life that you paid his bills.
+637|The treatment costs more than expected.
+638|Have him share his testimony at the gathering
+639|Hearing the testimony, your followers are moved.
+640|Word goes around that the testimony is exaggerated.
+641|Rein him in as exaggerating
+642|Your calm demeanor inspires trust.
+643|Write the dream into the Doctrine
+644|The dream becomes a scene in the Doctrine.
+645|Critics say it makes the Doctrine fanciful.
+646|Relax the rules
+647|Your followers are relieved when the rules are loosened.
+648|Tighten the rules further
+649|Under stricter rules, your followers hold their breath.
+650|The backlash leaks outside.
+651|Preach on the meaning of strictness
+652|Your followers accept the sermon.
+653|The sermon sounds like nagging.
+654|Find the complainers
+655|You find the complainers and make an example of them.
+656|Followers threaten to leave en masse.
+657|Hold a grand funeral
+658|Villagers gather for the funeral.
+659|The heavy cost shakes the finances.
+660|Enshrine his life as an example in the Doctrine
+661|His life becomes an example in the Doctrine.
+662|Some say it's excessive glorification.
+663|Promise to care for his family for life
+664|Your followers are moved when you make the promise to the bereaved.
+665|Claim his estate for the cult
+666|The cult receives the estate.
+667|A legal battle breaks out with the bereaved family.
+668|Write the lyrics yourself
+669|Your followers sing along to the song you wrote.
+670|The lyrics are so awkward people laugh.
+671|Leave it to your followers
+672|Your followers come up with songs of their own.
+673|Rewrite the words of an existing song
+674|The familiar tune spreads quickly.
+675|Plagiarism accusations arise.
+676|Say you don't need songs
+677|You pray without singing.
+678|Your followers feel something is missing.
+679|Explain yourself
+680|Your calm explanation quiets the rumors.
+681|Your explanation sounds like an excuse.
+682|Forgive the follower who spread it
+683|Your forgiveness wins your followers' hearts.
+684|Expel the follower who spread it
+685|The expulsion restores discipline.
+686|Word goes around that expulsion was too harsh.
+687|Use the rumor to build mystique
+688|The rumor only deepens your mystique.
+689|The rumor hardens into accepted fact.
+690|Allow it
+691|Your followers grow more united.
+692|The cult's image suffers.
+693|Forbid it
+694|Your prudent decision protects your Repute.
+695|Many followers are disappointed by the ban.
+696|Offer bracelets instead
+697|Your followers are delighted as you hand out bracelets.
+698|Go wake your followers yourself
+699|Moved that you came for them in person, followers return.
+700|The punishing schedule takes its toll on your body.
+701|Make attendance mandatory
+702|Attendance rises, but resentment builds.
+703|Move the prayer meeting time
+704|After the time change, they gather again.
+705|The new time only causes more confusion.
+706|Hear out the absent followers
+707|Because you listened, your followers open up.
+708|Their circumstances are tangled and hard to resolve.
+709|Give the name of a cult saint
+710|The couple is delighted with the saint's name.
+711|Choose a name full of meaning
+712|The couple is moved by the meaningful name.
+713|Accept it
+714|Your followers revere you like a god.
+715|Accusations of blasphemy pour in.
+716|Firmly deny it
+717|Your firm denial protects your Repute.
+718|Stay vague
+719|Your ambiguity only makes your followers more fervent.
+720|Your ambiguity breeds suspicion.
+721|Correct them: you are only God's agent
+722|Being called God's agent reassures your followers.
+723|Some followers are disappointed.
+724|Your polite refusal earns respect.
+725|She is hurt.
+726|You accept, and a relationship begins.
+727|The secret leaks, and the cult is shaken.
+728|Preach that she sublimate it into divine love
+729|Your sermon soothes her heart.
+730|The sermon only hurts her more.
+731|Continue the affair behind your followers' backs
+732|Against the odds, your secret affair stays hidden.
+733|The affair comes out, and the cult is thrown into uproar.
+734|Go together
+735|The shared pilgrimage strengthens your followers' bond.
+736|The long road is exhausting.
+737|Send only a delegation
+738|The delegation returns and reports.
+739|Hold a gathering instead
+740|Everyone prays together at the gathering.
+741|Followers who looked forward to the pilgrimage are disappointed.
+742|Thank them deeply
+743|You share your gratitude with your followers.
+744|Throw a feast in return
+745|Your followers delight in the feast.
+746|The cost of the feast is a burden.
+747|Force him to submit publicly
+748|Made an example of, he submits, and your inner circle falls silent.
+749|Your attempt to break him fails, and he spreads rumors.

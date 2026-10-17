@@ -36,7 +36,16 @@ def read_text(path):
 
 def esc(s):
     bs = chr(92)
-    return s.replace(bs, bs * 2).replace('"', bs + '"')
+    return s.replace(bs, bs * 2).replace('"', bs + '"').replace(SEP, bs + 'u001F')
+
+SEP = chr(0x1F)  # 한국어와 영어 사이 구분자 (게임에서 Lang.Pick이 현재 언어 쪽을 고른다)
+
+
+def bi(row, col):
+    """한국어 열과 같은 이름 + _en 열이 있으면 한국어+SEP+영어로 묶는다."""
+    ko, en = (row.get(col) or '').strip(), (row.get(col + '_en') or '').strip()
+    return f'{ko}{SEP}{en}' if ko and en else ko
+
 
 
 def stat_code(name, where):
@@ -90,8 +99,8 @@ def main():
         cell = re.sub(r'resist:(\d+)', r'resist:+\1', r['effects'])
         mods, specials, resist = parse(cell, sid)
         mod_code = f'new StatModifier[] {{ {", ".join(mods)} }}' if mods else 'System.Array.Empty<StatModifier>()'
-        line = (f'        new("{sid}", DoctrineBranch.{branch}, {tier}, "{path}", "{esc(r["name"].strip())}", '
-                f'"{esc(r["description"].strip())}", {max_level}, {resist}, {mod_code}')
+        line = (f'        new("{sid}", DoctrineBranch.{branch}, {tier}, "{path}", "{esc(bi(r, "name"))}", '
+                f'"{esc(bi(r, "description"))}", {max_level}, {resist}, {mod_code}')
         if specials: line += ', ' + ', '.join(specials)
         out.append(line + '),')
     for b in BRANCHES:

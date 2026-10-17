@@ -1,0 +1,150 @@
+1450|Blessed food builds Authority.
+1451|It is condemned as controlling what people eat.
+1452|Eat freely only in the cult leader's presence
+1453|Dining before the cult leader deepens the followers' obedience.
+1454|Rumors of the meals spread.
+1455|The serpent
+1456|The serpent symbol lends an air of mystery.
+1457|Some say the serpent is ominous.
+1458|The lamb
+1459|The lamb symbol conveys gentleness.
+1460|The raven
+1461|The raven symbol conveys wisdom.
+1462|The lion
+1463|The lion symbol conveys majesty.
+1464|Side with one of them
+1465|Siding with one settles the Doctrine.
+1466|The side you didn't back leaves.
+1467|Accept both interpretations
+1468|Accepting both interpretations brings reconciliation.
+1469|Offer a new third interpretation
+1470|The third interpretation unites both factions.
+1471|Some say the third interpretation is hard to follow.
+1472|Silence both sides
+1473|Silencing them quiets the strife.
+1474|Some call it oppression.
+1475|Add strict ascetic practices
+1476|The ascetic practices build the followers' Patience.
+1477|Some followers collapse from the austerities.
+1478|Substitute light self-restraint
+1479|Light self-restraint goes over fine.
+1480|No ascetic practices needed
+1481|A Doctrine without austerities is easygoing.
+1482|Only the cult leader practices austerity
+1483|Your austerity earns respect.
+1484|Talk goes around that only the cult leader suffers.
+1485|The cult's founding day
+1486|Founding day becomes the cult's pride.
+1487|The cult leader's birthday
+1488|The birthday upholds the cult leader's majesty.
+1489|Critics say you made your own birthday a holiday.
+1490|The day of the first Revelation
+1491|The day of the first Revelation lends an air of mystery.
+1492|Harvest thanksgiving day
+1493|Harvest thanksgiving day delights the followers.
+1494|Make it a fairy tale
+1495|The fairy tale wins the children's hearts.
+1496|Make it a picture book
+1497|The picture book spreads from house to house.
+1498|The picture book's printing costs weigh on you.
+1499|Doctrine must not be easy
+1500|A difficult Doctrine raises your Authority.
+1501|The children drift away.
+1502|Make it a song
+1503|In song, the Doctrine spreads easily.
+1504|All who repent are forgiven
+1505|The doctrine of repentance comforts the followers.
+1506|Atone with Offerings according to the sin
+1507|Atonement Offerings swell the coffers.
+1508|It is condemned as haggling over the price of sin.
+1509|Set strict punishments
+1510|The punishment clauses establish order.
+1511|Some say the punishments are cruel.
+1512|The cult leader judges personally
+1513|Your judgment raises your Authority.
+1514|Some say the judgments are unfair.
+1515|Revise it boldly
+1516|Bold revision brings the Doctrine in step with the times.
+1517|The revision breeds confusion.
+1518|Keep the original
+1519|Conviction in the original steadies the followers.
+1520|It is criticized as anachronistic.
+1521|Revise it, but package it as a new Revelation
+1522|The new Revelation preserves the Doctrine.
+1523|The fabricated Revelation is exposed.
+1524|Let the followers vote
+1525|A Doctrine decided by vote becomes the followers' pride.
+1526|Listen closely
+1527|You strain your ears toward the whisper.
+1528|The whisper grows louder and louder.
+1529|Write down the whispers
+1530|The words you transcribe find their way into the Doctrine.
+1531|What you wrote down is a jumble.
+1532|Stop praying
+1533|You stop praying and catch your breath.
+1534|Call your inner circle to check
+1535|Your inner circle says they heard nothing.
+1536|Your inner circle looks at you strangely.
+1537|Make an offering at the altar
+1538|As you make the offering, the altar grows warm.
+1539|The offering vanishes into thin air.
+1540|Seal the altar
+1541|You seal the altar to keep everyone safe.
+1542|Reveal it to the followers
+1543|The followers feel awe before the revealed altar.
+1544|Rumors spread that the altar is sinister.
+1545|Meditate at the altar all night
+1546|The all-night meditation leads to deep Communion.
+1547|After meditating, your mind is foggy.
+1548|Sink in deeper
+1549|In deeper meditation, you draw a mystical energy.
+1550|Lost in meditation, your body suffers.
+1551|Stop out of fear
+1552|You overcome your fear and stop.
+1553|Reenact it before the followers
+1554|The reenacted meditation enraptures the followers.
+1555|The reenactment fails, and talk of fraud goes around.
+1556|Record it
+1557|The record becomes a basis for the Doctrine.
+1558|The record is too hazy to be of use.
+1559|Accept it as a sign from god
+1560|Hearing it called a sign, the followers grow fervent.
+1561|Some say the testimony is exaggerated.
+1562|Preach on the meaning of the light
+1563|The sermon deepens the followers' understanding.
+1564|The sermon is vague.
+1565|Quietly send him back
+1566|You quietly send him back.
+1567|Learn
+1568|You learn the secret arts and gain a mystical power.
+1569|Getting mixed up with a shaman hurts your Repute.
+1570|Hear the secret arts, then throw her out
+1571|You take the secret arts and send the shaman away.
+1572|The shaman spreads rumors.
+1573|Recruit the shaman into the cult
+1574|The shaman becomes the cult's new face.
+1575|Critics say the cult leans on shamanism.
+1576|Take it as a message from god
+1577|Taking it as a message stirs the followers.
+1578|Backlash arises calling it superstition.
+1579|Blame the wind
+1580|You calmly let it pass.
+1581|Relight it and continue praying
+1582|The prayer continues.
+1583|Warn that it is an ill omen
+1584|Your warning of an omen puts the followers on edge.
+1585|Some say the warning breeds fear.
+1586|Dance to the drumbeat
+1587|The drumbeat enraptures the followers.
+1588|The dancing goes too far, and someone collapses.
+1589|Meditate in silence
+1590|The silence brings deep meditation.
+1591|Burn herbal incense
+1592|The heavy incense makes everyone hazy.
+1593|The incense is so thick it makes people cough.
+1594|Cancel the ritual
+1595|You cancel the ritual.
+1596|Feast all night with the followers
+1597|The feast goes on all night.
+1598|The feast spreads as a scandal.
+1599|Record it as a prophecy

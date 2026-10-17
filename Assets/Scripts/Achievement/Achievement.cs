@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 public enum RewardKind { None, Gifted, Stat }
 
@@ -23,15 +23,16 @@ public readonly struct AchievementReward
 public class Achievement
 {
     public string Id { get; }
-    public string Name { get; }
-    public string Description { get; }
+    readonly string name, description;
+    public string Name => Lang.Pick(name);
+    public string Description => Lang.Pick(description);
     public string ConditionText { get; }
     public AchievementReward Reward { get; }
     public AchievementCondition Condition { get; }
 
     public Achievement(string id, string name, string description, string condition, AchievementReward reward)
     {
-        Id = id; Name = name; Description = description; ConditionText = condition; Reward = reward;
+        Id = id; this.name = name; this.description = description; ConditionText = condition; Reward = reward;
         Condition = AchievementCondition.Parse(condition);
     }
 

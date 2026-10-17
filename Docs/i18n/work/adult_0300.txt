@@ -1,0 +1,132 @@
+300|Face him only in a duel
+301|A fair, honorable duel, blade against blade. He sees you in a new light.
+302|Step into the festival circle
+303|Wine and pipes, bare skin on bare skin. Among bodies you can't tell apart, you dance and make love all night. The forest spirits swear to guard your temple.
+304|Drawn by the noise, villagers peer into the forest. Strange rumors circulate around your temple.
+305|Listen to the pipes, then turn back
+306|The nymphs toss flowers, a little disappointed. The forest is friendly toward your temple.
+307|Go to the empress's bed
+308|Behind silk curtains, the empress commands, and you answer in a god's way. At dawn, catching her breath, she writes a decree. Your temple is placed under the empire's protection.
+309|The empress was not satisfied. Talk of a 'false god' spreads through the court.
+310|Show her a Miracle and decline the bed
+311|At a wave of your hand, flowers bloom in the palace garden. The empress bows her head in awe.
+312|Lend him your vessel for one night
+313|Gold dust glitters wherever his hands touch. After a lavish, greedy night, gold coins overflow from the vault.
+314|Instead of filling the vault, he simply gorged himself on your vessel's energy and left. You become a laughingstock in heaven.
+315|Say you'll fill the vault yourself
+316|He scoffs but sees you in a new light. Your followers slowly increase their Offerings.
+317|Hold him on the boat
+318|His cold body thaws bit by bit against your warmth. On the boat rocking on the river, he moans for the first time in thousands of years. He tells you one of the underworld's secrets.
+319|The chill of the underworld has seeped into your vessel. Your hands and feet are ice-cold for days.
+320|Just hold his hand
+321|He grips your hand for a long time before letting go. The far shore looks a little brighter.
+322|Put yourself in her hands
+323|Her hands sweep over every curve of your body as if sculpting. The work is interrupted again and again, and each time the two of you roll in the marble dust. The finished statue is erected in the city square.
+324|The statue is far too lifelike. People start digging into who the model was.
+325|Pose with your clothes on
+326|A statue detailed down to the folds of its robe is completed. It's widely praised as reverent.
+327|Take the angel's wings into your arms
+328|Pure white feathers scatter across the bed. At pleasure felt for the first time, the angel weeps and laughs, and you guide him all the way. He sends a false report to heaven.
+329|Heaven discovers the angel's fall. He is dragged away, and heaven's gaze turns to you.
+330|Send the angel back to heaven
+331|He flies off in tears. His report is written in your favor.
+332|Dance the first dance with her and spend the night
+333|On a haystack in the fields, the two of you make love like an ancient harvest rite. That year the neighboring village's grain ripens unusually well, and villagers start visiting your temple.
+334|After the festival, she disappears. The villagers whisper that the god took her.
+335|Just dance and give your blessing
+336|As you dance and bless them, a wind sweeps across the fields. The villagers cheer.
+337|Start solving the riddle
+338|One at the nape of her neck, one below her waist, and the last in the sigh she let slip as she trembled at her peak. As promised, she inscribes three lines of truth into your Doctrine.
+339|You found only two. She laughs and says, 'Next time.' Your Doctrine notes are a mess.
+340|Ask for a riddle in words instead
+341|She grumbles that it's boring but gives you a real riddle. You solve it.
+342|Accept his hospitality to the full
+343|The oasis's cool water and his hot body take turns drenching you. Under the stars, the hospitality lasts all night, and he offers you part of his temple's treasure.
+344|The god he serves finds out and is enraged. A complaint is lodged in heaven.
+345|Just drink the water and answer with a blessing
+346|At your blessing, the oasis swells with water. Moved, he sends you gifts.
+347|Join your bodies under the starlight
+348|In the weightless observatory, two bodies connect like a constellation. At the moment of climax, a new constellation rises in the night sky, and your followers in the mortal world call it your sign.
+349|The new constellation has a rather explicit shape. The gods of heaven mock you with envy.
+350|Just help draw the constellation
+351|Disappointed, he connects the stars alone. Still, the constellation is named after you.
+352|Agree to the measurement
+353|Her magic circle glows on the bed. The measurement gradually becomes an experiment, and the experiment becomes indulgence. Overwhelmed by the results, she brings her whole guild over to your side.
+354|The measurement records leak to the guild. Your identity as 'a god in the flesh' is at risk of being exposed to the mortal world.
+355|Lend her a mana-measuring device
+356|The device's readings alone astonish her. The guild treats you with wariness, but also respect.
+357|Accept her courtship
+358|The succubus's sincerity is gentler than you expected. Knowing how to share essence rather than steal it, her body wraps around you all night. In the morning, she smiles shyly.
+359|She said she'd be gentle, but a succubus is a succubus. Your vessel's energy is drained to the dregs.
+360|Suggest you stay friends
+361|She pouts but accepts it meekly. The nightmares stop coming after that.
+362|Inspire the poet
+363|He sets down his lute and writes poetry on your body. Breaths become meter and moans become the refrain. The finished song is sung in taverns across the continent.
+364|The song is far too explicit. It's banned in several towns.
+365|Tell him stories all night
+366|From the myths you tell him, he composes a grand epic.
+367|Embrace your other self
+368|A night with a partner who knows every sensitive spot on your own body is beyond imagining. Inside and outside the mirror blur together, and you discover new limits to your vessel.
+369|You start to lose track of which one is the real you. For days, you can't stand to look in a mirror.
+370|Cover the mirror
+371|The god of mirrors cackles and vanishes. You grow a little fonder of your own vessel.
+372|Allow him to worship you
+373|He kneels and worships you with his lips from your toes to the crown of your head. It doesn't take long for worship to become something else. As promised, a carriage full of treasure arrives at the temple.
+374|His family rises up, claiming he 'gave his fortune to a fake god.' You have to return part of the treasure.
+375|Accept only spoken prayers
+376|Moved, he devoutly offers part of his fortune.
+377|Take both gods into your arms
+378|One is hot, the other cold. Between the two gods, you spend a night like the turning of the seasons, and that year spring arrives unusually gently.
+379|The two gods fight out of jealousy, and the seasons are thrown out of joint. Unseasonable snow falls on the mortal world.
+380|Reconcile the two gods and step back
+381|Through your mediation, the two gods shake hands with smiles. Your standing in heaven rises.
+382|Practice the final chapter with her
+383|By candlelight, your bodies join just as the scripture describes. When she comes apart at the final verse, a new chapter opens in your Doctrine.
+384|Her order declares the act heresy.
+385|Just copy the scripture by hand
+386|The words alone are scorching. Your Doctrine gains depth.
+387|Swear with your bodies
+388|The temple's pillars ring with the oath of two gods. At the end of an oath that lasts all night, he orders his followers to respect your temple.
+389|After the oath, he interprets the alliance in his own favor. Some of your followers lean toward his side.
+390|Just take a vow before the sacred fire
+391|The alliance is sealed with a formal vow. Heaven recognizes it as well.
+392|Surrender to the vessel's memory
+393|Your body remembers him first. It's your first time as a god, yet the vessel melts at a familiar touch. When you wake from the dream, the line between the vessel and you has blurred even further.
+394|The vessel's memories are too strong. For days, its original owner's emotions shake you.
+395|Bid farewell to the dream lover
+396|He smiles sadly and vanishes. At last, the vessel is wholly yours.
+397|Accept the knights' thanks
+398|Three trained bodies seek you out in turns, and sometimes all at once. The ritual of thanks continues until the fire dies down, and their order swears to guard your temple.
+399|The knights' stamina outclasses even a god's vessel. You can't get up in the morning.
+400|Serve them warm soup
+401|Moved, they offer their swords and swear an oath. "We will repay this kindness."
+402|Remove the last veil yourself
+403|When the last veil falls from your hand, the dance continues in bed. Her hips never rest, just as when she dances. Rumor spreads across the continent that she danced for a god.
+404|A noble was secretly watching the performance. An anonymous letter goes out calling the temple a den of debauchery.
+405|Stop the dance at the sixth veil
+406|She smiles and wraps the veils around herself again. Word spreads that it was a sacred dance.
+407|Go into the waves
+408|Scales and skin entwine, slipping over each other. Through several turns of the tide, the two of you can't be parted in the waves. The chest of pearls is placed on the temple altar.
+409|You went in too deep. You swallow a lot of seawater and wash up on the beach.
+410|Just accept the pearls on the beach
+411|He's disappointed but leaves a few pearls. "I'll come back at the next full moon."
+412|Surrender to the embrace of flame
+413|A blazing body engulfs your vessel. Amid unbearably hot pleasure, you hold on to the end. At dawn, a small flame flickers at your fingertips.
+414|Your vessel couldn't withstand the fire. Burned all over, you're laid up for days.
+415|Just meditate beside the flames
+416|The spirit king snorts but acknowledges your Patience.
+417|Participate in the research
+418|He puts down his pen and moves to verify things firsthand. His eyes sparkle every time the god's vessel responds. The paper's conclusion becomes a key passage of your Doctrine.
+419|The paper is published, and the existence of 'a living god' begins to be called into question.
+420|Allow observation only
+421|He takes notes diligently. The paper becomes a book on the virtue of Temperance.
+422|Melt the queen of the underworld
+423|Her icy body thaws bit by bit against your warmth. When she gasps for breath, her face flushed for the first time, the gates of the underworld grow a little more lenient toward your followers.
+424|The chill has seeped deep into your vessel. And heaven doesn't look kindly on your ties to the underworld.
+425|Serve her warm tea
+426|She's surprisingly moved by a single cup of tea. "Next time, I'll be the host."
+427|Welcome your old lover in your vessel
+428|The love you shared in heaven takes on flesh and blood for the first time. Between a familiar soul and an unfamiliar body, the two of you relearn each other all night. At dawn, you remember why you became a god.
+429|Your tryst is exposed in heaven. The gods who envied your lover set their sights on you.
+430|Promise to meet again in heaven
+431|Your lover wipes away tears and smiles. "Once you ascend, then we'll have all the time we want."

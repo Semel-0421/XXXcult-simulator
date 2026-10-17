@@ -1,0 +1,150 @@
+750|Read every sign you pass
+751|You read the signs out loud and skip happily along.
+752|Practice dictation a hundred times
+753|Your dictation notebook fills up.
+754|Bored of practicing, you throw the notebook.
+755|Just draw pictures
+756|You get absorbed in drawing.
+757|Write the letters backward as a joke
+758|You laugh at your backward writing.
+759|The teacher scolds you.
+760|Invite everyone
+761|Everyone comes, and the party is a riot.
+762|Invite only close friends
+763|You throw a cozy party with your close friends.
+764|The other kids feel left out.
+765|Invite only friends who will bring big gifts
+766|The gifts pile up and you are pleased, but your friends' eyes are cold.
+767|Your friends spread rumors.
+768|Skip the party
+769|Your birthday passes quietly.
+770|Pray for the victims
+771|You fold your hands in front of the television.
+772|Empty your piggy bank for donations
+773|You empty your piggy bank into the donation box.
+774|You empty your piggy bank, but it holds so little that you feel let down.
+775|Too scared to sleep
+776|You toss and turn all night to the sound of the TV.
+777|You have nightmares and run a fever.
+778|Change the channel
+779|You switch over to cartoons.
+780|Go diligently
+781|You attend the academy every week without fail.
+782|Throw a fit and refuse
+783|You throw a tantrum and plant yourself outside the academy.
+784|Your mother sighs and gives up.
+785|Ask for taekwondo instead
+786|You show off a kick in front of the taekwondo studio.
+787|Your mother refuses, saying taekwondo lessons are too expensive.
+788|Sing instead of playing piano
+789|Your singing earns your relatives' praise.
+790|When asked to sing, your voice is so small you get teased.
+791|Come clean
+792|You come clean, and Mom hugs you tight.
+793|Insist to the end
+794|You stubbornly play innocent to the end.
+795|Your lie is exposed, and you get a severe scolding.
+796|Blame your sibling
+797|You pin it on your sibling.
+798|Your sibling cries that it isn't fair.
+799|Cry your way out of it
+800|Your tears soften Mom's heart.
+801|You just stop crying, and Mom grows more suspicious.
+802|Ask a staff member for help
+803|A staff member finds your family over the PA.
+804|Wait where you are
+805|You stay put, and your mother comes running.
+806|You tremble with fear as you wait.
+807|Look for the exit on your own
+808|You march off bravely in search of the exit.
+809|After wandering for ages, you collapse from exhaustion.
+810|Cry for Mom
+811|Your crying draws a crowd.
+812|Run at full speed
+813|You run with all your might and come in first.
+814|You run out of breath halfway and sink to the ground.
+815|Help up a fallen friend and run together
+816|You help a fallen friend up and cross the finish line together.
+817|Take a shortcut across the field
+818|You cut across and get caught by the teacher.
+819|You come in last and get teased.
+820|Walk in
+821|You stroll slowly across the line.
+822|Beg to keep it
+823|You plead with Mom, but she won't easily say yes.
+824|Mom firmly says no.
+825|Share some food
+826|You share your leftover bread.
+827|Avoid it out of fear
+828|The puppy barks, and you back away.
+829|The puppy chases you, and you run off crying.
+830|Pray for the puppy
+831|You pray for the puppy.
+832|Praying feels awkward, and your face turns red.
+833|Open the box
+834|The box is full of old photographs.
+835|Bring it to your grandfather
+836|Your grandfather tells you stories from the old days.
+837|Your grandfather takes the box without interest.
+838|Take out the gold coins in the box
+839|Gold coins turn up in the box. Someone seems to have hidden them.
+840|What looked like gold coins are fakes.
+841|Hide the box as your treasure
+842|You secretly stash away your treasure box.
+843|Keep it to the end
+844|You keep the secret to the end.
+845|Tell another friend
+846|Before you know it, the secret has spread through the whole class.
+847|Your friend resents you.
+848|Use the secret to boss your friend around
+849|Holding the secret over them, you order your friend around.
+850|Your friend stops coming around.
+851|Help them think it through
+852|You share your friend's worries.
+853|You listen to their worries but can't solve anything.
+854|Bring back every bit of change
+855|You count out every coin of change, and Mom praises you.
+856|Buy snacks with the change
+857|You buy snacks with the change.
+858|The change comes up short, and Mom scolds you.
+859|Get lost
+860|You get lost in the alleys.
+861|You wander for a long time, crying.
+862|Make friends with the shopkeeper
+863|The shopkeeper throws in a free candy.
+864|The shopkeeper, annoyed, shoos you out.
+865|Pack your bag ahead of time
+866|You stuff your bag full of school supplies.
+867|Cry that you don't want to go to school
+868|School frightens you, and you burst into tears.
+869|You cry yourself to sleep.
+870|Get excited about making lots of friends
+871|You thrill at the thought of new friends.
+872|Your excitement overflows, and you get a little giddy.
+873|Vow to become class president
+874|You firmly vow to become class president.
+875|Your resolve fizzles out.
+876|Prepare hard
+877|Your hard studying earns you a good score.
+878|Underprepared, you are tense throughout the test.
+879|Peek at your deskmate's answers
+880|You copy your deskmate's answers and earn points.
+881|You get caught and called to the teacher.
+882|Guess on the ones you don't know
+883|Most of your guesses turn out right.
+884|Every one of your guesses is wrong.
+885|Draw on the test paper
+886|Time slips away as you doodle in the margins.
+887|Run and give a speech
+888|You speak in a clear voice and win your classmates' applause.
+889|Nerves get the better of you, and you botch the speech.
+890|Nominate a friend
+891|You nominate a friend and laugh together.
+892|Hand out candy for votes
+893|You hand out candy to gather votes.
+894|Rumors spread that it was bribery.
+895|Not interested
+896|Uninterested in the election, you keep a low profile.
+897|Survive to the end
+898|You dodge well and last to the end.
+899|The ball hits you, and you are out early.

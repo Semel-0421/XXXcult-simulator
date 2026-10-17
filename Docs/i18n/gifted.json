@@ -1,0 +1,1422 @@
+[
+{
+"ko": "부유함",
+"mt": "Wealth",
+"en": "Affluence"
+},
+{
+"ko": "당신은 부유하게 살아갈 운명을 타고 났습니다. 축하합니다 상위 5%의 행운아시네요!",
+"mt": "Congratulations, you are the top 5% lucky man!",
+"en": "You were born destined for a life of wealth. Congratulations, you're one of the lucky top 5%!"
+},
+{
+"ko": "악착같음",
+"mt": "BADNESS",
+"en": "Tenacity"
+},
+{
+"ko": "포기하지 않는 악착같음. 놓아줄 줄 아는 것도 필요할텐데요?",
+"mt": "You're gonna need something to let go of.",
+"en": "Tenacity that never gives up. Then again, shouldn't you learn when to let go?"
+},
+{
+"ko": "웅변가",
+"mt": "The Orator",
+"en": "Orator"
+},
+{
+"ko": "당신이 오스트리아에서 태어났다면 전쟁도 일으킬 수 있을거에요.",
+"mt": "If you were born in Austria, you could start a war.",
+"en": "Had you been born in Austria, you could have started a war."
+},
+{
+"ko": "연기자",
+"mt": "Player.",
+"en": "Actor"
+},
+{
+"ko": "화가 난다고요? 당신이 웃으면 화난 줄도 모를걸요.",
+"mt": "You don't even know you're mad if you smile.",
+"en": "Angry, you say? Smile, and no one will ever know."
+},
+{
+"ko": "완벽한 육체",
+"mt": "The perfect flesh.",
+"en": "Perfect Physique"
+},
+{
+"ko": "건강하고 완벽한 몸매는 그 자체로도 사람들이 동경하게 되죠. 축하해요. 이성이 줄을 서겠는데요.",
+"mt": "A healthy, perfect body in itself is something that people long for. Congratulations.",
+"en": "A healthy, flawless body is something people admire for its own sake. Congratulations. Suitors are going to line up."
+},
+{
+"ko": "거물",
+"mt": "Giants",
+"en": "Big Shot"
+},
+{
+"ko": "당신은 태생부터 거물입니다. 어떤 거물인지는 확실치 않으나 크면 클 수록 좋잖아요?",
+"mt": "You're a big deal from birth. I'm not sure which big ones, but the bigger the big ones, right?",
+"en": "You were a big shot from birth. A big what, exactly, is unclear, but bigger is better, right?"
+},
+{
+"ko": "학자",
+"mt": "Scholar",
+"en": "Scholar"
+},
+{
+"ko": "자고로 종교또한 학문 중 하나죠. 당신의 연구에 대한 소질은 천부적이네요.",
+"mt": "Religion is also a science. Your talent for research is natural.",
+"en": "Religion, after all, is a field of study too. You have a natural gift for research."
+},
+{
+"ko": "에피쿠로스",
+"mt": "Epicurus",
+"en": "Epicurean"
+},
+{
+"ko": "쾌락주의의 본질은 쾌락 추구가 아닙니다.",
+"mt": "The essence of hedonism is not the pursuit of pleasure.",
+"en": "The essence of hedonism is not the pursuit of pleasure."
+},
+{
+"ko": "태생 종교인",
+"mt": "Born a religion.",
+"en": "Born Believer"
+},
+{
+"ko": "당신은 종교 안에서 살았고, 종교가 없는 삶 자체를 이해할 수 없습니다. 종교, 곧 당신의 삶",
+"mt": "You've lived in religion, and you don't understand life without religion, religion, your life.",
+"en": "You've lived your whole life inside religion and can't fathom a life without it. Religion is your life."
+},
+{
+"ko": "선한 목자",
+"mt": "A Good Shepherd",
+"en": "Good Shepherd"
+},
+{
+"ko": "의외네요. 사이비 종교를 운영하지만 당신은 선한 사람입니다.",
+"mt": "You run cults, but you're a good person.",
+"en": "Surprising. You run a cult, yet you're a good person."
+},
+{
+"ko": "기회주의자",
+"mt": "opportunist.",
+"en": "Opportunist"
+},
+{
+"ko": "기회를 잡아 채는 것도 실력입니다. 주인 없는 재물은 가진 사람이 임자지요.",
+"mt": "It's good to take the opportunity, and it's the people who own it, who own it.",
+"en": "Seizing an opportunity is a skill too. Unclaimed riches belong to whoever holds them."
+},
+{
+"ko": "마법사",
+"mt": "Wizard",
+"en": "Mage"
+},
+{
+"ko": "당신은 수상하고도 신비한 힘을 가지고 있습니다. 신이 내려준 것일까요? 미약한 힘이나마 당신이 쓰기 나름입니다.",
+"mt": "You have a strange and mysterious power that God has given you?",
+"en": "You possess a strange and mysterious power. A gift from God, perhaps? It's faint, but what you make of it is up to you."
+},
+{
+"ko": "도박사",
+"mt": "Dr. Doe.",
+"en": "Gambler"
+},
+{
+"ko": "운이 매우매우 좋습니다. 이 이상의 설명이 필요할까요?",
+"mt": "Very good luck. Do you need more explanation?",
+"en": "You are very, very lucky. Does that need any more explanation?"
+},
+{
+"ko": "카마수트라",
+"mt": "Kama Sutra",
+"en": "Kama Sutra"
+},
+{
+"ko": "고대 인도의 성행위 수행서입니다. 당신은 이것을 정말로 잘 이해하고 있습니다. 현대에서는 안쓰는 방식이지만, 뭐 어떤가요? 당신의 종교는 평범하지 않습니다.",
+"mt": "It's an ancient Indian sexual act, and you really understand this, although it's not the way you use it in modern times, what do you think? Your religion is not ordinary.",
+"en": "The ancient Indian manual of sexual practice. You understand it remarkably well. Nobody does it that way anymore, but so what? Your religion is no ordinary one."
+},
+{
+"ko": "만약 교리 내에 성관계를 권장하는 교리가 포함되어 있을 경우 믿음/신도의 믿음/권위/봉헌금/명망의 수치가 최종 계산에서 3% 추가된다. 그리고 접신/기적의 수치가 1% 추가된다. 이 수치는 5턴동안 지속된다.",
+"mt": "If the doctrine includes a doctrine that encourages sexual relations within the doctrine, the count of faith/ congregation faith/ authority/ dedicated money/ reputation is added to the final calculation by 3%, and the number of receivers/ miracles is added to 1%.",
+"en": "If your Doctrine includes one that encourages sexual relations, Faith/Followers' Faith/Authority/Offerings/Reputation gain an extra 3% in the final calculation, and Communion/Miracle gain an extra 1%. This lasts for 5 turns."
+},
+{
+"ko": "진수성찬",
+"mt": "The Introspection",
+"en": "Lavish Feast"
+},
+{
+"ko": "식탁에는 산해진미가 올라와야 합니다. 당신은 위엄을 보이기 위해 임금처럼 먹습니다. 그러다 배터져 죽겠어요.",
+"mt": "You eat like a wage to show your dignity, and then you're going to lose your stomach.",
+"en": "The table must be laden with every delicacy. You eat like a king to show your dignity. Careful, or you'll eat yourself to death."
+},
+{
+"ko": "턴 진행시 2%확률로 식사의 품질을 결정하는 이벤트가 등장한다. 그 이벤트에서 최고의 식사를 결정할 경우 재산 수치가 50 감소한다. 그리고 다른 체력군 스탯을 모두 3%, 3턴 증가시킨다.",
+"mt": "If you choose the best meal in the event, the property figures drop by 50, and the other health forces increase by 3%, or 3.",
+"en": "Each turn, there is a 2% chance of an event that decides the quality of your meal. If you choose the finest meal in that event, Wealth decreases by 50, and all other Health-group stats increase by 3% for 3 turns."
+},
+{
+"ko": "허약한 몸",
+"mt": "A frail body.",
+"en": "Frail Body"
+},
+{
+"ko": "나약하게 보인다고 정신마저 나약하진 않습니다. 그도 그럴게 한 종교의 수장이니까요.",
+"mt": "He's not weak enough, he's not weak enough, he's the head of the religion that made him do that.",
+"en": "A frail appearance doesn't mean a frail mind. After all, you lead a whole religion."
+},
+{
+"ko": "타짜",
+"mt": "Tattoo",
+"en": "Card Sharp"
+},
+{
+"ko": "때때로 손은 눈보다 빠를 수 있다는 것을 깨달았습니다. 이게 진짜 마법이지요. 들키지만 마십시오.",
+"mt": "Sometimes I realize that the hand can be faster than the eye, and that's the real magic.",
+"en": "You've learned that the hand can sometimes be quicker than the eye. Now that's real magic. Just don't get caught."
+},
+{
+"ko": "논리왕",
+"mt": "The King of Logic",
+"en": "Master of Logic"
+},
+{
+"ko": "당신은 허점을 누구보다 잘 파고드는 능력을 가지고 태어났습니다. 절대 준비하지 않고 당신과 말싸움 하지 않기를 상대방에게 충고해둡시다.",
+"mt": "You're born with the ability to dig holes better than anyone, so let's advise the other person that you're never prepared to fight you.",
+"en": "You were born with a talent for exploiting loopholes better than anyone. Fair warning to your opponents: never argue with you unprepared."
+},
+{
+"ko": "욕구불만",
+"mt": "DISCOURAGEMENT",
+"en": "Frustrated Desire"
+},
+{
+"ko": "당신은 언제나 기초 욕구충족이 필요한 상태입니다. 하지만 욕구가 충족되면 세상에서 가장 완벽한 사람일지도 모릅니다.",
+"mt": "You're always in need of basic needs, but once you're satisfied, you may be the most perfect person in the world.",
+"en": "You're always in need of having your basic desires met. But once they are, you might just be the most perfect person in the world."
+},
+{
+"ko": "만약 최근 10턴 내에 욕망 수치가 올라갔을 경우, 욕망/덕목 수치를 제외한 모든 수치에 10% 증가 스탯을 얻는다.이 증가분은 괄호로 표시되며 최종 계산시에 포함된다. 욕망 수치 증가시마다 10턴동안 유지되도록 갱신되며 턴마다 1%씩 효과가 감소한다.",
+"mt": "If the number of desires increases in the last 10 days, you will get a 10% increase in all numbers other than desire/ virtue.",
+"en": "If Desire has risen within the last 10 turns, all stats except Desire/Virtue gain a 10% bonus. The bonus is shown in parentheses and included in the final calculation. Each increase in Desire refreshes it to last 10 turns, and the effect decreases by 1% each turn."
+},
+{
+"ko": "동성애",
+"mt": "Homosexuality",
+"en": "Homosexuality"
+},
+{
+"ko": "당신은 동성만을 성관계 파트너로서 선호합니다. 물론 교리를 수정하지 않으면 당신이 먼저 쫒겨날 수도 있으니, 비밀로 하든 교리를 고치든 해야겠네요.",
+"mt": "You only prefer same sex as a partner, and of course, if you don't modify the doctrine, you might get kicked out first, so I'm either going to keep it secret or I'm going to fix it.",
+"en": "You prefer only partners of the same sex. Of course, unless you change the Doctrine, you might be the first one cast out, so either keep it secret or rewrite the Doctrine."
+},
+{
+"ko": "성별이 같은 상대와 성관계를 하면 5턴동안 최종 계산시 정신력 수치를 10%만큼 가산 적용한다. 최종 계산시 더해지는 수치는 괄호 표기를 기본으로 한다. 만약 교리 안에 동성애가 가능할 경우, 믿음/신도의 믿음/권위/명망이 3%추가로 증가하고 접신/기적이 0.5%증가한다.",
+"mt": "If the doctrine is homosexual, the faith/pity rate increases by 3%, and the received / miracle increases by 0.5%.",
+"en": "Having sex with a partner of the same sex adds 10% to Mentality in the final calculation for 5 turns. The added amount is shown in parentheses by default. If your Doctrine permits homosexuality, Faith/Followers' Faith/Authority/Reputation gain an extra 3%, and Communion/Miracle gain 0.5%."
+},
+{
+"ko": "명문가의 후손",
+"mt": "Sons of the Mong-ryongs.",
+"en": "Noble Lineage"
+},
+{
+"ko": "대대로 이름난 집안에서 태어났습니다. 이름만으로 문이 열리지만 기대도 무겁습니다.",
+"mt": "I was born in a house that has been named for generations, and the door opens only with the name, but the expectation is heavy.",
+"en": "You were born into a family renowned for generations. Your name alone opens doors, but the expectations are heavy."
+},
+{
+"ko": "고아",
+"mt": "I'm an orphan.",
+"en": "Orphan"
+},
+{
+"ko": "부모의 얼굴을 모른 채 자랐습니다. 홀로 버티는 법은 누구보다 잘 압니다.",
+"mt": "I grew up without knowing the face of my parents, and I know how to stand alone better than anyone.",
+"en": "You grew up never knowing your parents' faces. You know better than anyone how to endure alone."
+},
+{
+"ko": "쌍둥이",
+"mt": "Twins",
+"en": "Twin"
+},
+{
+"ko": "세상에 당신과 꼭 닮은 사람이 하나 더 있습니다. 외로움과는 거리가 멀죠.",
+"mt": "There's one more person in the world who looks just like you, and it's far from being lonely.",
+"en": "There's one other person in the world who looks just like you. Loneliness is a stranger to you."
+},
+{
+"ko": "예언된 아이",
+"mt": "The foretold child.",
+"en": "Prophesied Child"
+},
+{
+"ko": "당신이 태어나기 전부터 누군가 당신의 이름을 불렀습니다.",
+"mt": "Someone called your name before you were born.",
+"en": "Someone was calling your name before you were even born."
+},
+{
+"ko": "저주받은 혈통",
+"mt": "Damned blood.",
+"en": "Cursed Bloodline"
+},
+{
+"ko": "집안 어른들은 당신의 핏줄에 대해 입을 다뭅니다. 그 침묵이 곧 답이겠지요.",
+"mt": "The grown-ups in the family seldom talk about your bloodline, and the silence is the answer.",
+"en": "Your elders go quiet when your bloodline comes up. That silence is answer enough."
+},
+{
+"ko": "시골 출신",
+"mt": "I'm from the country.",
+"en": "Country Born"
+},
+{
+"ko": "흙냄새를 맡으며 자랐습니다. 소박하지만 단단합니다.",
+"mt": "I grew up with the smell of dirt. It's simple, but it's hard.",
+"en": "You grew up with the smell of earth. Simple, but sturdy."
+},
+{
+"ko": "이민자의 자녀",
+"mt": "The children of immigrants.",
+"en": "Child of Immigrants"
+},
+{
+"ko": "두 나라의 말과 풍습 사이에서 자랐습니다. 경계에 선 사람들의 마음을 압니다.",
+"mt": "I grew up between the words and the customs of the two countries, and I know the hearts of the people on the border.",
+"en": "You grew up between two languages and two sets of customs. You understand the hearts of those who live on the border."
+},
+{
+"ko": "행운아",
+"mt": "Good luck.",
+"en": "Lucky Star"
+},
+{
+"ko": "이상하게 일이 잘 풀립니다. 설명할 수는 없지만 부정할 수도 없습니다.",
+"mt": "I can't explain it, but I can't deny it.",
+"en": "Things just work out for you, strangely. You can't explain it, but you can't deny it either."
+},
+{
+"ko": "불운아",
+"mt": "You're such a bad boy.",
+"en": "Ill-Starred"
+},
+{
+"ko": "비가 오면 꼭 우산을 두고 나왔습니다. 그래도 매번 다시 일어섰습니다.",
+"mt": "I left my umbrella when it rained, but I got up again every time.",
+"en": "Whenever it rained, you'd always left your umbrella at home. Still, you got back up every time."
+},
+{
+"ko": "장수의 혈통",
+"mt": "The blood of longevity.",
+"en": "Long-Lived Line"
+},
+{
+"ko": "집안 어른들은 모두 백 살을 넘겼습니다. 당신도 그럴 모양입니다.",
+"mt": "All the adults in the family are over a hundred years old, and so are you.",
+"en": "Every elder in your family lived past a hundred. Looks like you will too."
+},
+{
+"ko": "단명할 운명",
+"mt": "I'm gonna die. I'm gonna die.",
+"en": "Fated to Die Young"
+},
+{
+"ko": "점쟁이마다 당신의 명이 짧다고 합니다. 그래서 더 서두릅니다.",
+"mt": "Every fortune-teller says your person is short, so it's faster.",
+"en": "Every fortune-teller says your life will be short. So you're in more of a hurry."
+},
+{
+"ko": "성흔",
+"mt": "SEXUAL MESSAGES",
+"en": "Stigmata"
+},
+{
+"ko": "손바닥에 태어날 때부터 지워지지 않는 표식이 있습니다.",
+"mt": "There's a marker in the palm that doesn't fade from birth.",
+"en": "Since birth, your palm has borne a mark that won't fade."
+},
+{
+"ko": "영매 체질",
+"mt": "A spirit medium.",
+"en": "Medium"
+},
+{
+"ko": "어릴 적부터 남들이 못 보는 것을 보았습니다. 이제는 그것이 당신을 봅니다.",
+"mt": "I've seen things that people haven't seen since I was a kid, and now I see you.",
+"en": "Since childhood, you've seen what others can't. Now it sees you."
+},
+{
+"ko": "낙천가",
+"mt": "You're not gonna make it, are you?",
+"en": "Optimist"
+},
+{
+"ko": "컵에 물이 반이나 남았다고 생각합니다. 대부분의 날은 그걸로 충분합니다.",
+"mt": "I think half of the water is left in the cup. Most days, that's enough.",
+"en": "You see the glass as half full. On most days, that's enough."
+},
+{
+"ko": "비관주의자",
+"mt": "pessimist.",
+"en": "Pessimist"
+},
+{
+"ko": "최악을 예상하니 실망할 일도 없습니다.",
+"mt": "We can't be disappointed at the worst.",
+"en": "Expect the worst and you'll never be disappointed."
+},
+{
+"ko": "완벽주의자",
+"mt": "Perfectist",
+"en": "Perfectionist"
+},
+{
+"ko": "하나라도 어긋나면 처음부터 다시 합니다. 피곤하지만 결과는 확실합니다.",
+"mt": "If anything goes wrong, we start over, we're tired, but the outcome is clear.",
+"en": "If even one thing is off, you start over from scratch. Exhausting, but the results are certain."
+},
+{
+"ko": "게으름뱅이",
+"mt": "Lazy.",
+"en": "Slacker"
+},
+{
+"ko": "내일 할 수 있는 일을 오늘 하지 않습니다.",
+"mt": "I don't do what I can tomorrow.",
+"en": "You never do today what you can put off until tomorrow."
+},
+{
+"ko": "호기심쟁이",
+"mt": "I'm curious.",
+"en": "Curious Soul"
+},
+{
+"ko": "왜라는 질문을 멈추지 못합니다.",
+"mt": "You can't stop asking why.",
+"en": "You can't stop asking why."
+},
+{
+"ko": "겁쟁이",
+"mt": "Coward.",
+"en": "Coward"
+},
+{
+"ko": "위험한 일에는 절대 나서지 않습니다. 덕분에 아직 살아 있습니다.",
+"mt": "They're not at all at risk, and they're still alive.",
+"en": "You never volunteer for anything dangerous. That's why you're still alive."
+},
+{
+"ko": "신중함",
+"mt": "Discretion.",
+"en": "Prudence"
+},
+{
+"ko": "돌다리도 두드려 보고 건넙니다.",
+"mt": "I'm going to hit the stone legs, and I'm going to break them.",
+"en": "You test every bridge before you cross it."
+},
+{
+"ko": "다혈질",
+"mt": "Multiple hemorrhoids",
+"en": "Hot-Blooded"
+},
+{
+"ko": "화가 나면 참지 못합니다. 그 기세에 사람들이 따르기도 합니다.",
+"mt": "When you're angry, you can't stand it, and you can't stand it.",
+"en": "When you're angry, you can't hold it in. Sometimes people follow that fire."
+},
+{
+"ko": "수다쟁이",
+"mt": "You're a gossiper.",
+"en": "Chatterbox"
+},
+{
+"ko": "입을 다물고 있는 시간이 가장 힘듭니다.",
+"mt": "It's the most difficult time to keep your mouth shut.",
+"en": "The hardest thing for you is keeping your mouth shut."
+},
+{
+"ko": "내성적",
+"mt": "Introspective",
+"en": "Introvert"
+},
+{
+"ko": "혼자 있는 시간에 힘을 얻습니다.",
+"mt": "You get the power in your time alone.",
+"en": "You draw strength from time alone."
+},
+{
+"ko": "이타주의자",
+"mt": "Altruist.",
+"en": "Altruist"
+},
+{
+"ko": "남의 고통을 내 것처럼 느낍니다.",
+"mt": "I feel like I'm making someone else suffer.",
+"en": "You feel others' pain as if it were your own."
+},
+{
+"ko": "질투심",
+"mt": "Jealousy",
+"en": "Jealousy"
+},
+{
+"ko": "남이 가진 것이 늘 더 좋아 보입니다.",
+"mt": "What others have always looks better.",
+"en": "What others have always looks better."
+},
+{
+"ko": "허영심",
+"mt": "Vanity",
+"en": "Vanity"
+},
+{
+"ko": "보이는 것이 곧 전부라고 믿습니다.",
+"mt": "I believe that what you see is everything.",
+"en": "You believe appearances are everything."
+},
+{
+"ko": "냉정함",
+"mt": "Coldness",
+"en": "Cold-Hearted"
+},
+{
+"ko": "감정보다 계산이 먼저입니다.",
+"mt": "Calculating is before emotion.",
+"en": "Calculation comes before emotion."
+},
+{
+"ko": "감수성",
+"mt": "Sensitivity",
+"en": "Sensitivity"
+},
+{
+"ko": "노을 하나에도 눈물이 납니다.",
+"mt": "I'm crying every single sunset.",
+"en": "A single sunset can bring you to tears."
+},
+{
+"ko": "독실함",
+"mt": "Responsibilities",
+"en": "Devout"
+},
+{
+"ko": "하루라도 기도를 거르면 잠들지 못합니다.",
+"mt": "You can't go to sleep after a day of prayer.",
+"en": "If you skip your prayers even one day, you can't sleep."
+},
+{
+"ko": "의심 많음",
+"mt": "You're suspicious.",
+"en": "Skeptic"
+},
+{
+"ko": "확인하기 전에는 아무것도 믿지 않습니다.",
+"mt": "I don't believe in anything until I've checked it out.",
+"en": "You believe nothing until you've checked it yourself."
+},
+{
+"ko": "카리스마",
+"mt": "Charismatics",
+"en": "Charisma"
+},
+{
+"ko": "당신이 방에 들어서면 공기가 달라집니다.",
+"mt": "When you enter the room, the air changes.",
+"en": "When you walk into a room, the air changes."
+},
+{
+"ko": "순수함",
+"mt": "Pure",
+"en": "Innocence"
+},
+{
+"ko": "세상의 때가 묻지 않았습니다. 언제까지일지는 모르지만요.",
+"mt": "I don't know how long.",
+"en": "The world hasn't sullied you yet. Who knows for how long."
+},
+{
+"ko": "야심가",
+"mt": "Ambitious",
+"en": "Ambitious"
+},
+{
+"ko": "정상이 아니면 의미가 없습니다.",
+"mt": "It doesn't mean anything if it's not normal.",
+"en": "If it isn't the top, it's meaningless."
+},
+{
+"ko": "겸손함",
+"mt": "HUMILITY",
+"en": "Humility"
+},
+{
+"ko": "칭찬을 받으면 몸 둘 바를 모릅니다. 사람들은 그런 당신을 믿습니다.",
+"mt": "People believe in you.",
+"en": "Praise leaves you flustered. That's why people trust you."
+},
+{
+"ko": "복수심",
+"mt": "Revenge",
+"en": "Vengeful"
+},
+{
+"ko": "받은 것은 반드시 돌려줍니다. 좋은 것이든 나쁜 것이든.",
+"mt": "Whatever you get, you give it back, whether it's good or bad.",
+"en": "You always pay back what you receive. Good or bad."
+},
+{
+"ko": "방랑벽",
+"mt": "Wandering walls",
+"en": "Wanderlust"
+},
+{
+"ko": "한곳에 오래 머물지 못합니다. 발길 닿는 곳마다 사람을 만납니다.",
+"mt": "They don't stay in one place for long. They meet people wherever they can reach them.",
+"en": "You can't stay in one place for long. Wherever your feet take you, you meet people."
+},
+{
+"ko": "요리",
+"mt": "Cooking",
+"en": "Cooking"
+},
+{
+"ko": "당신이 끓인 국 한 그릇이면 누구든 마음을 엽니다.",
+"mt": "Whoever it is, it's a bowl of boiled soup, it's open.",
+"en": "One bowl of your soup and anyone will open up."
+},
+{
+"ko": "노래",
+"mt": "SONGS",
+"en": "Singing"
+},
+{
+"ko": "당신의 목소리에 사람들이 걸음을 멈춥니다.",
+"mt": "People stop walking in your voice.",
+"en": "People stop in their tracks at the sound of your voice."
+},
+{
+"ko": "춤",
+"mt": "Dance",
+"en": "Dance"
+},
+{
+"ko": "음악이 흐르면 몸이 먼저 반응합니다.",
+"mt": "When the music flows, the body reacts first.",
+"en": "When the music plays, your body moves before you think."
+},
+{
+"ko": "그림",
+"mt": "Can not open message",
+"en": "Painting"
+},
+{
+"ko": "보이지 않는 것을 그려 낼 수 있습니다.",
+"mt": "I can draw something that's invisible.",
+"en": "You can paint what can't be seen."
+},
+{
+"ko": "서예",
+"mt": "Seo-seop",
+"en": "Calligraphy"
+},
+{
+"ko": "붓끝 하나에 마음을 담습니다.",
+"mt": "Put your heart into one of the brush tips.",
+"en": "You pour your heart into the tip of a brush."
+},
+{
+"ko": "작곡",
+"mt": "Composing",
+"en": "Composition"
+},
+{
+"ko": "당신이 만든 노래를 신도들이 흥얼거립니다.",
+"mt": "The members of the congregation will laugh at the songs you've made.",
+"en": "Your followers hum the songs you write."
+},
+{
+"ko": "악기 연주",
+"mt": "Musical Instruments",
+"en": "Instrumentalist"
+},
+{
+"ko": "어떤 악기든 금세 익힙니다.",
+"mt": "I'm going to learn any instrument quickly.",
+"en": "You pick up any instrument in no time."
+},
+{
+"ko": "마술",
+"mt": "Magic.",
+"en": "Stage Magic"
+},
+{
+"ko": "손끝에서 비둘기가 날아오르면 사람들은 기적을 믿습니다.",
+"mt": "When the dove flies from its fingertips, people believe in miracles.",
+"en": "When a dove flies from your fingertips, people believe in miracles."
+},
+{
+"ko": "최면술",
+"mt": "Hypnosis",
+"en": "Hypnosis"
+},
+{
+"ko": "당신의 목소리를 따라 사람들의 눈꺼풀이 무거워집니다.",
+"mt": "People's eyelids are heavy, following your voice.",
+"en": "Following your voice, people's eyelids grow heavy."
+},
+{
+"ko": "점술",
+"mt": "Divination",
+"en": "Divination"
+},
+{
+"ko": "동전 몇 개로 남의 앞날을 읽어 냅니다.",
+"mt": "A couple of coins, you're going to be able to read somebody else's future.",
+"en": "With a few coins, you read another's future."
+},
+{
+"ko": "타로",
+"mt": "Tarot.",
+"en": "Tarot"
+},
+{
+"ko": "카드 한 장으로 사람의 고민을 꿰뚫습니다.",
+"mt": "It's a card that penetrates a person's mind.",
+"en": "With a single card, you see straight through a person's troubles."
+},
+{
+"ko": "관상",
+"mt": "The image.",
+"en": "Face Reading"
+},
+{
+"ko": "얼굴만 보고도 사람의 됨됨이를 압니다.",
+"mt": "Just looking at your face, you know you're a person.",
+"en": "You can judge a person's character just by looking at their face."
+},
+{
+"ko": "약초학",
+"mt": "Herbalism",
+"en": "Herbalism"
+},
+{
+"ko": "산과 들의 풀로 약을 만듭니다.",
+"mt": "We make drugs out of acid and grass.",
+"en": "You make medicine from the herbs of mountains and fields."
+},
+{
+"ko": "응급처치",
+"mt": "Emergency Treatment",
+"en": "First Aid"
+},
+{
+"ko": "쓰러진 사람 앞에서 당황하지 않습니다.",
+"mt": "I don't panic in front of the fallen.",
+"en": "You don't panic when someone collapses in front of you."
+},
+{
+"ko": "의술",
+"mt": "The Art of Medicine",
+"en": "Medicine"
+},
+{
+"ko": "정식으로 의학을 공부했습니다. 기적보다 확실합니다.",
+"mt": "I studied medicine formally. It's more than a miracle.",
+"en": "You formally studied medicine. More reliable than miracles."
+},
+{
+"ko": "상술",
+"mt": "SIGHT",
+"en": "Salesmanship"
+},
+{
+"ko": "돌멩이도 팔아 낼 수 있습니다.",
+"mt": "You can sell stones.",
+"en": "You could sell a rock."
+},
+{
+"ko": "회계",
+"mt": "Accounting",
+"en": "Accounting"
+},
+{
+"ko": "숫자는 거짓말을 하지 않습니다. 당신도요.",
+"mt": "Number doesn't lie, neither do you.",
+"en": "Numbers don't lie. Neither do you."
+},
+{
+"ko": "협상",
+"mt": "Negotiations",
+"en": "Negotiation"
+},
+{
+"ko": "언제나 상대보다 하나를 더 얻어 냅니다.",
+"mt": "You always get one more than the other.",
+"en": "You always come away with one thing more than the other side."
+},
+{
+"ko": "법률 지식",
+"mt": "Legal Knowledge",
+"en": "Legal Knowledge"
+},
+{
+"ko": "법의 빈틈과 울타리를 모두 압니다.",
+"mt": "I know the cracks and fences of the law.",
+"en": "You know every loophole and every fence in the law."
+},
+{
+"ko": "외국어",
+"mt": "Foreign Languages",
+"en": "Polyglot"
+},
+{
+"ko": "여러 나라의 말로 신을 이야기할 수 있습니다.",
+"mt": "We can talk about God in the language of different countries.",
+"en": "You can speak of God in many languages."
+},
+{
+"ko": "작문",
+"mt": "Writings",
+"en": "Writing"
+},
+{
+"ko": "당신의 글은 읽는 이의 마음을 움직입니다.",
+"mt": "Your writing moves the mind of the reader.",
+"en": "Your writing moves the hearts of those who read it."
+},
+{
+"ko": "연설문 작성",
+"mt": "Making a speech",
+"en": "Speechwriting"
+},
+{
+"ko": "한 문장 한 문장이 박수를 부르도록 씁니다.",
+"mt": "I'm going to use one sentence to clap.",
+"en": "You write every sentence to draw applause."
+},
+{
+"ko": "기억술",
+"mt": "Memory",
+"en": "Mnemonics"
+},
+{
+"ko": "한 번 본 것은 잊지 않습니다.",
+"mt": "I don't forget to see it once.",
+"en": "You never forget anything you've seen once."
+},
+{
+"ko": "속독",
+"mt": "It's the poison.",
+"en": "Speed Reading"
+},
+{
+"ko": "두꺼운 경전도 하룻밤이면 끝냅니다.",
+"mt": "It's done in one big night.",
+"en": "You can finish even a thick scripture in a single night."
+},
+{
+"ko": "무술",
+"mt": "The martial arts.",
+"en": "Martial Arts"
+},
+{
+"ko": "몸이 곧 무기입니다.",
+"mt": "The body is a weapon.",
+"en": "Your body is your weapon."
+},
+{
+"ko": "검술",
+"mt": "TEMPLE",
+"en": "Swordsmanship"
+},
+{
+"ko": "칼끝이 흔들리지 않습니다.",
+"mt": "The edge of the knife doesn't shake.",
+"en": "Your blade never wavers."
+},
+{
+"ko": "사격",
+"mt": "Fire.",
+"en": "Marksmanship"
+},
+{
+"ko": "멀리 있는 표적도 놓치지 않습니다.",
+"mt": "We don't miss any distant targets.",
+"en": "You never miss, even at distant targets."
+},
+{
+"ko": "수영",
+"mt": "Swim.",
+"en": "Swimming"
+},
+{
+"ko": "물속에서는 누구보다 자유롭습니다.",
+"mt": "They're freer in the water than they are in the water.",
+"en": "You're freer in the water than anyone."
+},
+{
+"ko": "등산",
+"mt": "Climbing the Mountain",
+"en": "Mountaineering"
+},
+{
+"ko": "산꼭대기에서 신과 가까워지는 기분을 압니다.",
+"mt": "I know how it feels to be close to God on a mountain.",
+"en": "You know the feeling of drawing closer to God on a mountaintop."
+},
+{
+"ko": "사냥",
+"mt": "Hunting",
+"en": "Hunting"
+},
+{
+"ko": "짐승의 발자국을 읽을 줄 압니다.",
+"mt": "I know how to read the footprints of animals.",
+"en": "You know how to read animal tracks."
+},
+{
+"ko": "낚시",
+"mt": "Fishing",
+"en": "Fishing"
+},
+{
+"ko": "기다림이야말로 최고의 기술입니다.",
+"mt": "Waiting is the best technology.",
+"en": "Patience is the greatest skill of all."
+},
+{
+"ko": "원예",
+"mt": "Gardening",
+"en": "Gardening"
+},
+{
+"ko": "당신의 손을 거친 화분은 시들지 않습니다.",
+"mt": "Your hands don't get hot with flowers.",
+"en": "No potted plant that passes through your hands ever wilts."
+},
+{
+"ko": "목공",
+"mt": "WOOMAN",
+"en": "Woodworking"
+},
+{
+"ko": "나무를 깎아 의자도 제단도 만듭니다.",
+"mt": "We cut down trees, and we make chairs, and we make altars.",
+"en": "You carve wood into chairs and altars alike."
+},
+{
+"ko": "건축",
+"mt": "Construction",
+"en": "Architecture"
+},
+{
+"ko": "교단의 성전을 직접 설계할 수 있습니다.",
+"mt": "You can design your own temple of the Faith.",
+"en": "You can design the cult's temple yourself."
+},
+{
+"ko": "바느질",
+"mt": "The sewing.",
+"en": "Sewing"
+},
+{
+"ko": "해진 옷도 새것처럼 고쳐 냅니다.",
+"mt": "And the clothes that you're wearing are as fresh as new.",
+"en": "You can mend even ragged clothes good as new."
+},
+{
+"ko": "사진",
+"mt": "Photo",
+"en": "Photography"
+},
+{
+"ko": "한 장의 사진으로 사람들의 마음을 붙잡습니다.",
+"mt": "It captures people's minds with a picture.",
+"en": "A single photo of yours can capture people's hearts."
+},
+{
+"ko": "컴퓨터",
+"mt": "Computer",
+"en": "Computers"
+},
+{
+"ko": "화면 너머의 사람들과도 쉽게 이어집니다.",
+"mt": "It's easy to connect with people beyond the screen.",
+"en": "You connect easily even with people on the other side of the screen."
+},
+{
+"ko": "해킹",
+"mt": "hack",
+"en": "Hacking"
+},
+{
+"ko": "잠긴 문 뒤의 비밀을 엿볼 수 있습니다.",
+"mt": "You can see the secret behind the locked door.",
+"en": "You can peek at the secrets behind locked doors."
+},
+{
+"ko": "운전",
+"mt": "Driving",
+"en": "Driving"
+},
+{
+"ko": "어디든 신도들을 데려다줄 수 있습니다.",
+"mt": "You can take the faithful everywhere.",
+"en": "You can take your followers anywhere."
+},
+{
+"ko": "동물 조련",
+"mt": "Animal training.",
+"en": "Animal Training"
+},
+{
+"ko": "짐승들이 당신의 말을 알아듣는 듯합니다.",
+"mt": "Animals seem to understand what you're saying.",
+"en": "Animals seem to understand what you say."
+},
+{
+"ko": "소문 퍼뜨리기",
+"mt": "Spreading Rumors",
+"en": "Rumormongering"
+},
+{
+"ko": "당신의 귓속말은 하루면 온 동네에 퍼집니다.",
+"mt": "Your ear whispers spread all over the neighborhood in one day.",
+"en": "Your whispers spread through the whole neighborhood in a day."
+},
+{
+"ko": "거짓말",
+"mt": "You're lying.",
+"en": "Lying"
+},
+{
+"ko": "눈 하나 깜짝하지 않고 거짓을 말합니다.",
+"mt": "They lie without even blinking an eye.",
+"en": "You lie without batting an eye."
+},
+{
+"ko": "소매치기",
+"mt": "Pickpocket",
+"en": "Pickpocketing"
+},
+{
+"ko": "손이 눈보다 빠릅니다. 주머니가 가벼워진 줄도 모르게요.",
+"mt": "Your hands are faster than your eyes, and you don't even know your pockets are light.",
+"en": "Your hands are quicker than the eye. No one even notices their pockets getting lighter."
+},
+{
+"ko": "위조",
+"mt": "Counterfeiting",
+"en": "Forgery"
+},
+{
+"ko": "서류든 성물이든 진짜처럼 만들어 냅니다.",
+"mt": "It's real, whether it's papers or holy things.",
+"en": "Documents or relics, you make them look genuine."
+},
+{
+"ko": "명상법",
+"mt": "The Method of Meditation",
+"en": "Meditation"
+},
+{
+"ko": "어디서든 순식간에 마음을 비웁니다.",
+"mt": "I'm going to be anywhere in a second.",
+"en": "You can empty your mind in an instant, anywhere."
+},
+{
+"ko": "기도문 암송",
+"mt": "Repetition of the Prayer",
+"en": "Prayer Recitation"
+},
+{
+"ko": "수백 편의 기도문을 막힘없이 외웁니다.",
+"mt": "I can't stop memorizing hundreds of prayers.",
+"en": "You can recite hundreds of prayers without a stumble."
+},
+{
+"ko": "빼어난 미모",
+"mt": "A Fading Beauty",
+"en": "Striking Beauty"
+},
+{
+"ko": "사람들이 당신을 두 번 돌아봅니다.",
+"mt": "People are looking at you twice.",
+"en": "People turn to look at you twice."
+},
+{
+"ko": "거구",
+"mt": "That's it.",
+"en": "Giant"
+},
+{
+"ko": "문을 지날 때마다 고개를 숙여야 합니다. 사람들은 저절로 길을 비킵니다.",
+"mt": "Every time you walk through the door, you have to turn your head down, and people are going to run their own way.",
+"en": "You have to duck every time you pass through a door. People step aside without being asked."
+},
+{
+"ko": "왜소함",
+"mt": "Why Small?",
+"en": "Small Stature"
+},
+{
+"ko": "작은 몸이지만 누구보다 끈질깁니다.",
+"mt": "It's a tiny body, but it's more persistent than anyone else.",
+"en": "Your body is small, but you're more stubborn than anyone."
+},
+{
+"ko": "흉터",
+"mt": "Scars",
+"en": "Scarred"
+},
+{
+"ko": "얼굴의 흉터가 수많은 이야기를 대신 들려줍니다.",
+"mt": "The scars on the face tell a lot of stories instead.",
+"en": "The scar on your face tells countless stories for you."
+},
+{
+"ko": "신비로운 눈동자",
+"mt": "Mystique eyes.",
+"en": "Mysterious Eyes"
+},
+{
+"ko": "당신의 눈을 오래 바라보면 무언가에 홀리는 듯합니다.",
+"mt": "look at your eyes for a long time and it seems to be Holly on something.",
+"en": "Gaze into your eyes too long and people feel bewitched."
+},
+{
+"ko": "이른 백발",
+"mt": "Early gray hair.",
+"en": "Early Gray"
+},
+{
+"ko": "젊은 나이에 머리가 하얗게 셌습니다. 사람들은 당신에게서 연륜을 봅니다.",
+"mt": "At a young age, my hair was white, and people see love in you.",
+"en": "Your hair turned white while you were still young. People see the wisdom of years in you."
+},
+{
+"ko": "동안",
+"mt": "In the meantime",
+"en": "Baby Face"
+},
+{
+"ko": "나이보다 열 살은 어려 보입니다.",
+"mt": "You look ten years younger than you are.",
+"en": "You look a good ten years younger than you are."
+},
+{
+"ko": "노안",
+"mt": "Noan.",
+"en": "Old Before Your Time"
+},
+{
+"ko": "나이보다 열 살은 들어 보입니다. 덕분에 무게감이 있습니다.",
+"mt": "You look ten years older than you are, and you've got a sense of weight.",
+"en": "You look a good ten years older than you are. It lends you gravitas."
+},
+{
+"ko": "매력적인 목소리",
+"mt": "Charming voice.",
+"en": "Captivating Voice"
+},
+{
+"ko": "당신이 입을 열면 모두 귀를 기울입니다.",
+"mt": "When you open your mouth, everybody listens.",
+"en": "When you speak, everyone listens."
+},
+{
+"ko": "날카로운 인상",
+"mt": "Sharper than ever.",
+"en": "Sharp Features"
+},
+{
+"ko": "처음 만난 사람은 당신을 어려워합니다.",
+"mt": "It's hard for you to be the first person you've met.",
+"en": "People meeting you for the first time find you intimidating."
+},
+{
+"ko": "온화한 미소",
+"mt": "A gentle smile.",
+"en": "Gentle Smile"
+},
+{
+"ko": "당신의 미소에 사람들의 경계가 풀립니다.",
+"mt": "The people's boundaries are lifted by your smile.",
+"en": "Your smile puts people's guard down."
+},
+{
+"ko": "문신",
+"mt": "Tattoos",
+"en": "Tattoos"
+},
+{
+"ko": "온몸을 덮은 문신이 당신의 과거를 말해 줍니다.",
+"mt": "The tattoos all over your body tell you your past.",
+"en": "Tattoos covering your body tell of your past."
+},
+{
+"ko": "특이한 머리색",
+"mt": "Unusual hair color",
+"en": "Unusual Hair Color"
+},
+{
+"ko": "어디서든 한눈에 알아볼 수 있습니다.",
+"mt": "You can see it anywhere in one eye.",
+"en": "You can be spotted at a glance anywhere."
+},
+{
+"ko": "큰 키",
+"mt": "Big keys",
+"en": "Tall"
+},
+{
+"ko": "군중 속에서도 당신의 머리가 보입니다.",
+"mt": "You can see your head in the crowd.",
+"en": "Your head is visible even in a crowd."
+},
+{
+"ko": "근육질",
+"mt": "Muscle",
+"en": "Muscular"
+},
+{
+"ko": "단련된 몸은 그 자체로 설득력이 있습니다.",
+"mt": "A trained body is persuasive in itself.",
+"en": "A trained body is persuasive in itself."
+},
+{
+"ko": "창백한 피부",
+"mt": "Pale skin.",
+"en": "Pale Skin"
+},
+{
+"ko": "햇빛 아래서도 핏기가 없습니다. 사람들은 당신이 이 세상 사람이 아닌 것 같다고 합니다.",
+"mt": "You don't have blood under the sun, people say you're not a person of the world.",
+"en": "Even in sunlight you look bloodless. People say you don't seem to be of this world."
+},
+{
+"ko": "오드아이",
+"mt": "Od.",
+"en": "Heterochromia"
+},
+{
+"ko": "두 눈의 색이 다릅니다. 한쪽은 이 세상을, 다른 쪽은 저 너머를 본다고들 합니다.",
+"mt": "The color of the two eyes is different: one sees this world, the other sees that far.",
+"en": "Your eyes are two different colors. They say one sees this world, and the other sees what lies beyond."
+},
+{
+"ko": "우아한 몸짓",
+"mt": "Elegant Gears",
+"en": "Graceful Bearing"
+},
+{
+"ko": "걸음걸이 하나에도 품위가 묻어납니다.",
+"mt": "Every walk is dignified.",
+"en": "Even your walk exudes elegance."
+},
+{
+"ko": "장수 노인",
+"mt": "Long-term old man.",
+"en": "Venerable Elder"
+},
+{
+"ko": "살아 낸 세월만으로도 이미 하나의 가르침입니다.",
+"mt": "It's already a teaching for a long time.",
+"en": "The years you've lived are a lesson in themselves."
+},
+{
+"ko": "만학도",
+"mt": "It's high school.",
+"en": "Late Scholar"
+},
+{
+"ko": "배움에는 끝이 없다며 늦은 밤까지 불을 켜 둡니다.",
+"mt": "There's no end to learning, so I leave the lights on until late at night.",
+"en": "Saying learning never ends, you keep the lamp burning late into the night."
+},
+{
+"ko": "백전노장",
+"mt": "The White Poetry",
+"en": "Seasoned Veteran"
+},
+{
+"ko": "수없이 겪어 본 일이라 어지간한 실패에는 눈도 깜짝하지 않습니다.",
+"mt": "It's been a lot of times, and it's not surprising if you fail.",
+"en": "You've been through it all so many times that ordinary failures don't make you blink."
+},
+{
+"ko": "오뚝이",
+"mt": "Oh, my God.",
+"en": "Bounce Back"
+},
+{
+"ko": "넘어질 때마다 더 단단해져서 일어납니다.",
+"mt": "It gets harder every time it falls.",
+"en": "Every time you fall, you get back up stronger."
+},
+{
+"ko": "교단의 아버지",
+"mt": "Father of the Faith.",
+"en": "Father of the Cult"
+},
+{
+"ko": "신도들은 당신을 아버지처럼 따릅니다.",
+"mt": "The believers follow you like a father.",
+"en": "Your followers look up to you like a father."
+},
+{
+"ko": "부흥사",
+"mt": "Renewal",
+"en": "Revivalist"
+},
+{
+"ko": "당신의 한마디에 천막 집회장이 눈물바다가 됩니다.",
+"mt": "In your words, the tent rallyer will weep.",
+"en": "A single word from you turns the tent gathering into a sea of tears."
+},
+{
+"ko": "금고지기",
+"mt": "The vaultman.",
+"en": "Treasury Keeper"
+},
+{
+"ko": "새는 돈 한 푼 없이 곳간을 가득 채웁니다.",
+"mt": "The bird fills the shop without any money.",
+"en": "You fill the storehouse to the brim without a penny going missing."
+},
+{
+"ko": "압도적 카리스마",
+"mt": "Overwhelming Charismatics",
+"en": "Overwhelming Charisma"
+},
+{
+"ko": "말없이 서 있어도 좌중이 숨을 죽입니다.",
+"mt": "If you stand silent, your left side dies.",
+"en": "Even standing in silence, you make the whole room hold its breath."
+},
+{
+"ko": "성자",
+"mt": "Son",
+"en": "Saint"
+},
+{
+"ko": "아이도 노인도 당신 곁에서 마음을 놓습니다.",
+"mt": "A child, an old man, is next to you.",
+"en": "Children and elders alike feel at ease beside you."
+},
+{
+"ko": "달변의 전설",
+"mt": "The legend of the moon.",
+"en": "Legendary Speaker"
+},
+{
+"ko": "당신의 설교는 라디오 전파를 타고 입에서 입으로 전해집니다.",
+"mt": "Your sermon is transmitted from your mouth to mouth on radio waves.",
+"en": "Your sermons ride the radio waves and pass from mouth to mouth."
+},
+{
+"ko": "존경받는 어른",
+"mt": "A respected adult.",
+"en": "Respected Elder"
+},
+{
+"ko": "관공서도 이웃도 당신 앞에서는 고개를 숙입니다.",
+"mt": "The government official also bows his head in front of you.",
+"en": "Officials and neighbors alike bow their heads before you."
+},
+{
+"ko": "교리의 수호자",
+"mt": "The Guardian of Doctrine.",
+"en": "Guardian of Doctrine"
+},
+{
+"ko": "한 글자도 허투루 쓰지 않은 교리를 끝까지 지켜 냅니다.",
+"mt": "They keep a doctrine that doesn't have a single word in it.",
+"en": "You defend to the end a Doctrine in which not a single letter was written carelessly."
+},
+{
+"ko": "재능 수집가",
+"mt": "A talent collector.",
+"en": "Talent Collector"
+},
+{
+"ko": "이것저것 손대 보다 보니 못하는 것이 없습니다.",
+"mt": "There's nothing you can do without it.",
+"en": "You've dabbled in so many things that there's nothing you can't do."
+},
+{
+"ko": "불굴의 교주",
+"mt": "The Bridger of the Labyrinth.",
+"en": "Indomitable Leader"
+},
+{
+"ko": "교단이 무너져도 신념만은 무너지지 않았습니다.",
+"mt": "When the Faith broke down, the Faith didn't break down.",
+"en": "Even when the cult fell, your conviction never did."
+},
+{
+"ko": "돌아온 자",
+"mt": "The one who came back.",
+"en": "The Returned"
+},
+{
+"ko": "몇 번을 쓰러져도 다시 이 자리에 돌아옵니다.",
+"mt": "I fall a few times, and I come back here.",
+"en": "No matter how many times you fall, you return to this place again."
+},
+{
+"ko": "기도의 달인",
+"mt": "The moon of prayer.",
+"en": "Master of Prayer"
+},
+{
+"ko": "무릎이 닳도록 기도해 본 사람만이 아는 평온이 있습니다.",
+"mt": "There's peace that only the one who's prayed so hard for his knee to wear.",
+"en": "There's a peace known only to those who have prayed until their knees wore thin."
+},
+{
+"ko": "사교계의 꽃",
+"mt": "Flowers in the social world.",
+"en": "Belle of Society"
+},
+{
+"ko": "어느 자리에 가도 당신 주변에는 사람이 모입니다.",
+"mt": "There are people around you wherever you go.",
+"en": "Wherever you go, people gather around you."
+},
+{
+"ko": "수행자의 몸",
+"mt": "The body of the attendant.",
+"en": "Ascetic's Body"
+},
+{
+"ko": "굳은 몸과 맑은 정신이 한 자리에 있습니다.",
+"mt": "It's got a hard body and a clear mind.",
+"en": "A hardened body and a clear mind in one place."
+},
+{
+"ko": "운동선수",
+"mt": "Athletes",
+"en": "Athlete"
+},
+{
+"ko": "아침마다 달리는 습관이 단단한 몸을 만들었습니다.",
+"mt": "The habit of running every morning made a solid body.",
+"en": "Your habit of running every morning has built a sturdy body."
+},
+{
+"ko": "업적의 지배자",
+"mt": "The ruler of the achievement.",
+"en": "Master of Achievements"
+},
+{
+"ko": "모든 것을 해 본 사람의 여유가 묻어납니다.",
+"mt": "People who have done it all are buried.",
+"en": "You carry the ease of someone who has done it all."
+}
+]

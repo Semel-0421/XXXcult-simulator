@@ -297,6 +297,16 @@ public static class Lang
         ["intro_prompt"] = ("Your first memory was your parents calling your name. What is your name?", "당신의 첫 기억은 부모가 부르는 당신의 이름이었다. 당신의 이름은?"),
     };
 
+    // 데이터 글(이벤트·업적·교리·기프티드·권능)은 "한국어영어"로 둘을 함께 담는다. 현재 언어 쪽을 고르고, 영어가 없으면 한국어
+    public const char Separator = '';
+    public static string Pick(string text)
+    {
+        if (string.IsNullOrEmpty(text)) return text ?? "";
+        var i = text.IndexOf(Separator);
+        if (i < 0) return text;
+        return IsKorean || i == text.Length - 1 ? text.Substring(0, i) : text.Substring(i + 1);
+    }
+
     public static string Get(string key) => key != null && Table.TryGetValue(key, out var text) ? (IsKorean ? text.ko : text.en) : key;
 
     public static void Set(bool korean)

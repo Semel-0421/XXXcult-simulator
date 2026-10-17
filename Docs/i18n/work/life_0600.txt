@@ -1,0 +1,150 @@
+600|Cross yourself like the priest
+601|You make the sign of the cross along with the priest.
+602|Crawl under the pew out of boredom
+603|You play under the pew until your mother drags you out.
+604|The believers stare at you, and your face turns red.
+605|Lose yourself in the choir
+606|Absorbed in the singing, you listen for a long time.
+607|The singing is so loud it startles you into tears.
+608|Reach into the offering basket
+609|You pluck a coin from the offering basket.
+610|You are caught stealing from the offering and severely scolded.
+611|Write in it faithfully
+612|You record your allowance every day and feel proud.
+613|Spend it all as soon as you get it
+614|You blow your whole allowance at the snack bar.
+615|Your allowance runs out fast, and you mope.
+616|Manage your sibling's allowance too
+617|You record your sibling's allowance in the ledger too.
+618|Your sibling sees the ledger and throws a fit.
+619|Lose it
+620|You can't remember where you put the ledger.
+621|Refuse and run away
+622|You dash home as fast as you can.
+623|Shout for a grown-up
+624|At your shout, the neighborhood adults come running.
+625|No one comes out, and you burst into tears.
+626|Take the candy and run
+627|You take the candy and flee.
+628|You trip while running and scrape your knee.
+629|Demand to know why
+630|You confront the adult, who is left speechless and slinks off.
+631|The adult grows angry and grabs your wrist.
+632|Chase the ball hard
+633|You end up drenched in sweat from chasing the ball, but it's fun.
+634|Volunteer as goalkeeper
+635|You guard the goal and win the big kids' praise.
+636|The ball hits you, and it stings.
+637|Run off with the ball
+638|You run off with the ball and end up fighting with the big kids.
+639|The big kids take the ball back and tease you.
+640|Just cheer
+641|You cheer hard, and the big kids are grateful.
+642|Work up the courage and go
+643|You summon your courage and go alone.
+644|Wake Mom
+645|Mom follows you with sleepy eyes.
+646|Mom grumbles and rolls over.
+647|Hold it
+648|You hold it in and try to sleep.
+649|You hold it until you have an accident in bed.
+650|Recite a prayer as you go
+651|You recite a prayer as you pass down the dark hall.
+652|Mid-prayer, a shadow startles you into tears.
+653|Draw on your face
+654|You doodle on your face, and the family bursts out laughing.
+655|Your face is a mess, and your mother scolds you.
+656|Bring it to Mom
+657|You hand Mom the lipstick, and she praises you.
+658|Break the lipstick
+659|The lipstick snaps in two.
+660|It was one of Mom's treasures, and you get a severe scolding.
+661|Play dress-up in front of the mirror
+662|You get lost in primping in front of the mirror.
+663|You get caught playing dress-up and turn red.
+664|Help carry it
+665|You and the old woman share the load up the hill.
+666|Go get Mom
+667|Mom hurries over and helps carry the load.
+668|Mom is busy, and the old woman struggles on alone.
+669|Pretend not to see
+670|You walk right past and go home.
+671|Ask to be paid for it
+672|The old woman fumbles through her pockets, embarrassed.
+673|The old woman turns away, hurt.
+674|President
+675|The other kids say "Wow" in awe.
+676|The teacher smiles and asks if you have another dream.
+677|Doctor
+678|You say you want to care for the sick people in your family.
+679|Rich person
+680|You say you want to be someone with lots of money.
+681|Your friends laugh and tease you.
+682|Priest or monk
+683|You say you want to be a priest or a monk, and the teacher nods in surprise.
+684|Your friends laugh and call you weird.
+685|Split them exactly in half
+686|You split them exactly in half, and your sibling thanks you.
+687|Give your sibling the bigger half
+688|Your sibling smiles at getting the bigger half.
+689|Your sibling grumbles at the smaller share.
+690|Eat the bigger half
+691|You enjoy every bite of the bigger half.
+692|Your sibling bursts into tears.
+693|Eat them all
+694|You polish off every last cracker.
+695|Your sibling cries, and your mother scolds you severely.
+696|Deny it to the end
+697|You hold out, denying it to the end.
+698|No one believes you.
+699|Burst into tears
+700|You burst into tears, leaving even the teacher at a loss.
+701|Find the real culprit
+702|You watch the other kids closely and find the real culprit.
+703|You fail to find the culprit, and suspicion deepens.
+704|Just say you did it
+705|Though it's unfair, you just say you did it.
+706|Sit on Dad's lap and make him laugh
+707|You sit on Dad's lap and clown around until he laughs again.
+708|Hold back on what you want
+709|You never mention the toy you want.
+710|Holding back is hard, and you toss and turn all night.
+711|Give Dad your piggy bank
+712|You hand your piggy bank to Dad.
+713|The piggy bank won't break open, and Dad is at a loss.
+714|Keep asking what's wrong
+715|You keep asking, and Dad loses his temper.
+716|Dad shuts himself in his room.
+717|Raid the buffet
+718|You pile your plate high at the buffet.
+719|Be the flower child and scatter petals
+720|You scatter petals to the guests' applause.
+721|You trip while scattering petals.
+722|Fiddle with the gift-money envelopes
+723|Curious about the money inside, you keep fiddling with the envelopes.
+724|The grown-ups scold you.
+725|Recite the wedding vows along
+726|You recite the officiant's words along with him, growing solemn.
+727|The officiant's long speech bores you into yawning.
+728|Try catching them barehanded
+729|You catch a fish with your bare hands.
+730|You slip and fall into the water.
+731|Release the fish you caught
+732|You let the fish go, and your friends are impressed.
+733|Compete to catch the most
+734|You win the contest and are thrilled.
+735|You come in last, and your friends tease you.
+736|Fall into the water
+737|You fall in and flail.
+738|You are rescued, but badly hurt.
+739|Believe the old woman
+740|You quietly take her words to heart.
+741|Her words make you uneasy.
+742|Run away, scared
+743|You avoid her gaze and hurry off.
+744|Grab her fan and imitate her
+745|You wave the fan and mimic her. The neighborhood kids laugh.
+746|You break the fan, and the old woman flies into a rage.
+747|Look her straight in the eye
+748|Her gaze deepens, and she grins and nods.
+749|Her gaze terrifies you, and you freeze.

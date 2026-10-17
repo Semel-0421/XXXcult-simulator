@@ -26,7 +26,16 @@ def read_text(path):
 
 def esc(s):
     bs = chr(92)
-    return s.replace(bs, bs * 2).replace('"', bs + '"').replace(chr(10), bs + 'n')
+    return s.replace(bs, bs * 2).replace('"', bs + '"').replace(chr(10), bs + 'n').replace(SEP, bs + 'u001F')
+
+SEP = chr(0x1F)  # 한국어와 영어 사이 구분자 (게임에서 Lang.Pick이 현재 언어 쪽을 고른다)
+
+
+def bi(row, col):
+    """한국어 열과 같은 이름 + _en 열이 있으면 한국어+SEP+영어로 묶는다."""
+    ko, en = (row.get(col) or '').strip(), (row.get(col + '_en') or '').strip()
+    return f'{ko}{SEP}{en}' if ko and en else ko
+
 
 
 def special_code(cell, where):
@@ -74,7 +83,10 @@ def main(src, dst):
         specials = special_code(r[col['특수효과']], gid) if '특수효과' in col else []
         extra = r[col['기타 효과']].strip()
         mod_code = f'new StatModifier[] {{ {", ".join(mods)} }}' if mods else 'System.Array.Empty<StatModifier>()'
-        line = f'        new("{esc(gid)}", "{esc(name)}", "{cat}",\n            "{esc(r[3].strip())}",\n            "{esc(extra)}",\n            {mod_code}'
+        def two(i, en_col):
+            en = r[col[en_col]].strip() if en_col in col else ''
+            return f'{r[i].strip()}{SEP}{en}' if r[i].strip() and en else r[i].strip()
+        line = f'        new("{esc(gid)}", "{esc(two(1, "재능명_en"))}", "{cat}",\n            "{esc(two(3, "플레이버 텍스트_en"))}",\n            "{esc(two(col["기타 효과"], "기타 효과_en"))}",\n            {mod_code}'
         if specials:
             line += f',\n            {", ".join(specials)}'
         out.append(line + '),')

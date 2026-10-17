@@ -1,0 +1,150 @@
+1300|Pray for your opponent
+1301|The sight of you praying moves the onlookers.
+1302|Your prayer comes across as sarcasm.
+1303|Call in followers to show your strength
+1304|Faced with your followers' momentum, your opponent backs down.
+1305|The show of force spreads as rumors of violence.
+1306|Publish it weekly
+1307|More and more people subscribe to the weekly newsletter.
+1308|The printing costs weigh on you.
+1309|Publish it seasonally
+1310|The seasonal newsletter finds steady readers.
+1311|Sell it
+1312|The newsletter makes money.
+1313|Because it costs money, readership drops.
+1314|You decline.
+1315|Support it fully
+1316|Word of the tutoring spreads through the neighborhood, and people come.
+1317|The funding is tight.
+1318|Proselytize to the parents too
+1319|The parents come to the cult.
+1320|The parents grow wary of the proselytizing.
+1321|Hide the cult's name
+1322|With the name hidden, the parents feel at ease.
+1323|Thou shalt not kill
+1324|The commandment against killing wins the followers' hearts.
+1325|Obey the cult leader
+1326|The commandment of obedience brings order to the cult.
+1327|Backlash arises that obedience is being forced.
+1328|Do not deny desire
+1329|A commandment that accepts desire puts the followers at ease.
+1330|Some point out that the commandment is vague.
+1331|Speak only the truth
+1332|The commandment of truth builds trust.
+1333|Fast one day a week
+1334|The weekly fast becomes the backbone of the Doctrine.
+1335|Complaints arise that the fasting is hard.
+1336|Once a month
+1337|The monthly fast settles in smoothly.
+1338|Make a feast day instead of a fast
+1339|The feast day brings the followers joy.
+1340|Some say the Doctrine is too lax.
+1341|Leave it out
+1342|You leave out the fasting clause.
+1343|Admit the contradiction and fix it
+1344|Fixing the contradiction makes the Doctrine all the more solid.
+1345|The revisions cause confusion.
+1346|Explain it with a deeper interpretation
+1347|The deeper interpretation convinces the followers.
+1348|The explanation sounds forced.
+1349|Praise the follower who asked
+1350|The praise moves the follower.
+1351|Scold them for doubting
+1352|Your scolding makes the questions vanish.
+1353|Word of the scolding gets around.
+1354|Heaven and hell
+1355|The doctrine of heaven and hell is clear to the followers.
+1356|Reincarnation
+1357|The doctrine of reincarnation lends an air of mystery.
+1358|Some say reincarnation feels foreign.
+1359|There is no afterlife
+1360|The Doctrine becomes focused on this life.
+1361|Only those who follow the cult leader are saved
+1362|The condition for salvation becomes the cult's strength.
+1363|It is criticized as exclusionary.
+1364|It opens according to each one's faith
+1365|The open Doctrine welcomes many people.
+1366|Strictly forbid it
+1367|The strict taboo establishes order.
+1368|Some say the taboo is cruel.
+1369|Allow it only within marriage
+1370|Allowing it within marriage goes over fine.
+1371|Make it a sacred rite
+1372|The rite gives the followers a mystical meaning.
+1373|The rite spreads outside as a scandal.
+1374|Leave it to free choice
+1375|The freedom puts the followers at ease.
+1376|Only the cult leader may bless it
+1377|The power to bless gathers in the cult leader.
+1378|A flood of criticism calls it a doctrine of privilege.
+1379|Poverty is holiness
+1380|The doctrine of poverty comforts the followers.
+1381|Critics say poverty is being forced on people.
+1382|Wealth is a blessing from god
+1383|The doctrine of blessing draws Offerings.
+1384|It is criticized as materialism.
+1385|Share what you have
+1386|The doctrine of sharing binds the followers together.
+1387|Give all wealth to the cult
+1388|Wealth flows into the cult.
+1389|The followers feel their property was taken.
+1390|Wealth is merely a game
+1391|A doctrine that takes wealth lightly puts the followers at ease.
+1392|Polish it yourself and publish it
+1393|The published scripture becomes the face of the cult.
+1394|The publishing costs weigh on you.
+1395|Keep it a secret scripture
+1396|The secret scripture adds an air of mystery.
+1397|The secrecy invites suspicion.
+1398|Borrow freely
+1399|The borrowed doctrines bring in more followers.
+1400|The borrowing is denounced as plagiarism.
+1401|Borrow, but cite the sources
+1402|Citing the sources earns respect.
+1403|Keep it original
+1404|Originality gives the Doctrine its character.
+1405|Its strong character also turns some away.
+1406|Cleverly rework it into your own
+1407|The reworked doctrine settles in as if it were yours.
+1408|The original author protests, and a commotion follows.
+1409|Five times a day
+1410|Praying five times a day steadies their faith.
+1411|So many prayers are a strain.
+1412|Morning and evening
+1413|Morning and evening prayers go over fine.
+1414|Whenever they wish
+1415|Free-form prayer puts the followers at ease.
+1416|Whenever the cult leader commands
+1417|Prayer at the cult leader's command builds Authority.
+1418|Prayer on command breeds discontent.
+1419|Teach them yourself
+1420|Your personal teaching moves the followers.
+1421|The lectures run long and wear you out.
+1422|Leave it to your disciples
+1423|Your disciples lead the meetings.
+1424|Each disciple teaches something different.
+1425|Doctrine only needs to be memorized
+1426|Rote study establishes order.
+1427|Complaints arise that it's boring.
+1428|Run it as a discussion
+1429|Discussion deepens the followers' understanding.
+1430|The discussion overheats.
+1431|Prophesy an imminent end of the world
+1432|The doomsday prophecy puts the followers on edge and draws them close.
+1433|The prophecy misses, and you lose trust.
+1434|Leave it to the distant future
+1435|You leave it to the distant future.
+1436|There is no end of the world
+1437|A Doctrine without an apocalypse brings reassurance.
+1438|The followers feel let down.
+1439|Set a date for the end
+1440|The date sets the followers ablaze.
+1441|The date passes, and followers leave.
+1442|Forbid meat
+1443|The meat taboo teaches Temperance.
+1444|Malnutrition sets in.
+1445|Forbid alcohol
+1446|The alcohol taboo protects your Repute.
+1447|No taboos
+1448|A Doctrine without taboos is easygoing.
+1449|Eat only food blessed by the cult leader

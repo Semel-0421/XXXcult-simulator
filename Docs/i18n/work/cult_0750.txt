@@ -1,0 +1,150 @@
+750|Talk him around
+751|You talk him around, and he yields.
+752|The talk goes nowhere.
+753|Accept some of his views
+754|When you accept his views, he swears loyalty.
+755|Quietly push him out of his post
+756|You quietly strip his post and bury the dispute.
+757|The ousted man spreads rumors outside.
+758|Create a strict hierarchy
+759|With ranks set, order takes hold.
+760|Followers passed over for rank grow resentful.
+761|Declare everyone equal
+762|Your followers cheer the declaration of equality.
+763|The chain of command falls apart.
+764|Assign ranks by merit
+765|Your followers accept ranks based on merit.
+766|Allow no ranks but your own
+767|All authority is concentrated in you.
+768|Accusations of autocracy spread.
+769|Assign ranks by lottery
+770|Word spreads that the lottery is fair.
+771|Complaints arise over the lottery results.
+772|Admit it honestly
+773|Your followers respect your honest admission.
+774|Claim there was a deeper meaning
+775|Your cover story sounds convincing.
+776|It's obvious you're covering, and you become a joke.
+777|Carry on as if nothing happened
+778|You smoothly move past it.
+779|Word of your slip spreads.
+780|Scold the follower who pointed it out
+781|Scolded, your followers fall silent.
+782|The scolding provokes a backlash.
+783|Ornate golden vestments
+784|The golden vestments display your majesty.
+785|Critics call it extravagant.
+786|Simple white robes
+787|Your followers are at ease with the simple robes.
+788|A black cloak
+789|The black cloak lends an air of mystery.
+790|Some say it's oppressive.
+791|No vestments needed
+792|Without vestments, you emphasize the heart.
+793|Punish him publicly
+794|The public punishment puts your followers on edge.
+795|Word spreads that the punishment was cruel.
+796|Hear him out and forgive him
+797|Heard out and forgiven, the follower thanks you.
+798|Call him aside and warn him quietly
+799|A quiet warning restores discipline.
+800|The warning comes across as hurtful.
+801|Write penalty clauses into the Doctrine
+802|The Doctrine's clauses lend force to your orders.
+803|Controversy arises that the clauses go too far.
+804|Move somewhere large and grand
+805|Followers flock to the grand venue.
+806|The rent is hard to bear.
+807|Stay where you are
+808|Your followers are reassured in the familiar place.
+809|Meet in followers' homes by turns
+810|Meeting from home to home brings your followers closer.
+811|Some say it's a hassle to gather.
+812|Move to a remote mountain
+813|In the remote mountains, the cult grows more mysterious.
+814|It's so remote that followers stop coming.
+815|Encourage the rivalry
+816|The rivalry drives up your inner circle's loyalty.
+817|The rivalry overheats and splits them.
+818|Treat everyone fairly
+819|Your inner circle respects your fairness.
+820|Name one as your right hand
+821|With a right hand in place, the organization runs.
+822|The rest of your inner circle is jealous.
+823|Forbid the rivalry
+824|With the rivalry gone, things grow quiet.
+825|Resentment builds after the ban.
+826|Explain it logically
+827|Your followers accept your well-reasoned explanation.
+828|Complaints arise that the explanation is hard to follow.
+829|Answer only that it is God's will
+830|At the words "God's will," your followers obey.
+831|An answer with no explanation fuels the backlash.
+832|Withdraw the decision
+833|Withdrawing it wins back your followers' trust.
+834|Put it to a vote
+835|The vote confirms the decision.
+836|The vote shakes your Authority.
+837|Write it carefully yourself
+838|A meticulous rulebook raises your Authority.
+839|So many rules cause confusion.
+840|Leave it to your inner circle
+841|Your inner circle drafts the rulebook.
+842|Each confidant has different rules, causing confusion.
+843|Declare that your word is the rule
+844|Your word becomes law.
+845|Accusations of dictatorship pour in.
+846|Write it from your followers' input
+847|Your followers take pride in rules built from their input.
+848|Form an equal alliance
+849|Followers on both sides welcome the equal alliance.
+850|A dispute breaks out over the alliance terms.
+851|Demand a full merger
+852|The other side has no choice but to accept your terms.
+853|Your takeover demand gets out, and criticism pours in.
+854|Refuse
+855|You politely decline.
+856|Ally with him and prepare to stab him in the back
+857|Behind the alliance, you poach his followers.
+858|Your scheme is exposed, and the alliance breaks.
+859|Let it be
+860|The sight of them kneeling bolsters your Authority.
+861|Outsiders call it excessive worship.
+862|Raise them to their feet
+863|Your followers are moved when you raise them up.
+864|Teach them to kneel only before God
+865|The teaching to kneel only before God spreads.
+866|Some say the teaching is confusing.
+867|Make kneeling a rite
+868|As a rite, it becomes a symbol of the cult.
+869|The excessive rite draws outsiders' glares.
+870|A serpent coiled around a sword
+871|Your followers rave over the striking emblem.
+872|Some call it creepy.
+873|Clasped hands
+874|The warm emblem raises your Repute.
+875|A single eye
+876|The mysterious emblem captivates your followers.
+877|Word goes around that the eye is ominous.
+878|Hold a contest among followers
+879|An emblem is chosen from your followers' entries.
+880|Punish him severely
+881|Severe punishment restores discipline.
+882|Some say the punishment went too far.
+883|Give him one more chance
+884|Given a chance, he is overwhelmed with gratitude.
+885|Quietly cover it up
+886|Covering it up quietly prevents a scandal.
+887|The cover-up comes to light later.
+888|Hold a public trial
+889|The public trial makes the cult look transparent.
+890|The trial exposes the cult's internal strife.
+891|Listen to everyone's views
+892|Your inner circle respects your willingness to listen.
+893|Decide in advance and just announce it
+894|Quick decisions keep the organization moving.
+895|Your inner circle balks at being told.
+896|Drag the meeting out to wear down the opposition
+897|The opposition wears out, and your decision goes through.
+898|The drawn-out meeting breeds discontent.
+899|Skip the meeting

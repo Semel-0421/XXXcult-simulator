@@ -1,0 +1,155 @@
+1665|The more you revise it, the stiffer the song becomes.
+1666|Breathe a miracle into the statue
+1667|Every night, the statue's eyes begin to glow gold.
+1668|The stone never answers.
+1669|Order followers to bow when passing the statue
+1670|Followers bow their heads before the statue.
+1671|The coercion breeds resentment.
+1672|Adorn the statue with flowers and jewels
+1673|People stop in their tracks before the dazzling statue.
+1674|A thief comes for the jewels.
+1675|Ask followers for a special Offering
+1676|Followers open their wallets.
+1677|Complaints arise about a god who only talks about money.
+1678|Hold a feast to collect Offerings
+1679|Drunk on the feast, followers give generously.
+1680|The cost of the feast eats up nearly all the income.
+1681|Clear out unused spaces
+1682|You rent out the empty rooms to cover upkeep.
+1683|Take his hand and show him a miracle
+1684|When a candle blossoms into a flower before his eyes, he has his answer.
+1685|The miracle is small, and his doubt lingers.
+1686|Offer to answer him in your chamber
+1687|By morning, he never asks the same question again.
+1688|He tells someone else about the answer he got that night.
+1689|Answer that the question itself is faith
+1690|The vague answer leads him into deeper thought.
+1691|He is not satisfied with the answer.
+1692|Commune at the altar all night
+1693|The old altar responds as if it has been waiting for you a long time.
+1694|A strange god's voice rises from the altar.
+1695|Open the altar to your followers
+1696|Talk spreads of a prophesied god.
+1697|A report comes in about damage to a historic site.
+1698|Seal the altar again
+1699|You bury the ancient secret back underground.
+1700|Show the relief work as it is
+1701|A warm article runs, and the cult's image improves.
+1702|Show the reporter a healing miracle
+1703|The article featuring the miracle goes viral.
+1704|The article shows the miracle failing.
+1705|Decline the interview
+1706|The quiet good works continue.
+1707|Follow them blindfolded
+1708|When the blindfold comes off, a festival of petals, candles, and bare skin greets you.
+1709|Rumors of the rite spread outside.
+1710|Ask what it is first
+1711|Your followers, a little disappointed, reveal the secret.
+1712|Refuse, saying a god is not led around
+1713|The followers who prepared it sulk.
+1714|Invite the students to a feast
+1715|The students who stay late say they'll come again next week.
+1716|The students' families complain to the university.
+1717|Give a lecture on Doctrine
+1718|A few students leave serious questions.
+1719|The students are bored.
+1720|Give a brief tour and send them off
+1721|The students politely say goodbye and leave.
+1722|Answer that there is no line
+1723|At the claim that pleasure and divinity are one, the lecture hall stirs, then erupts in cheers.
+1724|Some followers walk out, calling it a dangerous doctrine.
+1725|Answer that only the god knows where the line is
+1726|The vague answer raises the god's authority.
+1727|People say you dodged the question.
+1728|Call the questioner aside and answer with your body
+1729|The next day, he testifies in the lecture hall that there was no line.
+1730|He leaves, openly offended.
+1731|Walk the path of petals
+1732|Followers hold their breath as you walk over the red petals.
+1733|You hear talk of waste.
+1734|Shower the petals over your followers' heads
+1735|Showered with petals, followers laugh like children.
+1736|The petals scatter on the wind.
+1737|Dry the petals and use them as incense
+1738|A faint scent of roses fills the prayer room.
+1739|Seat them in order of Offerings
+1740|An Offering race breaks out over the gold cushions in the front row.
+1741|Poorer followers feel left out and leave.
+1742|Draw lots for the front row
+1743|Everyone has a fair shot at the front row.
+1744|Reserve the front row for the chosen
+1745|Sitting in the front row becomes the path to a night with the god.
+1746|Whispers arise about how the chosen are picked.
+1747|Reach for the light
+1748|The light at your fingertips whispers that ascension is near.
+1749|The light recedes, leaving only emptiness.
+1750|Tell your followers about the dream
+1751|The dream of ascension becomes the whole cult's dream.
+1752|The dream sounds like a fantasy.
+1753|Keep the dream in your heart
+1754|A quiet conviction grows.
+1755|Dance and commune with your followers in the rain
+1756|Soaked bodies call on the god to the rhythm of the rain.
+1757|The rain-soaked vessel comes down with a fever.
+1758|Burn incense and pray in a warm room
+1759|Beyond the sound of rain, the bond grows strong again.
+1760|The bond keeps trembling.
+1761|Wait for the rain to stop
+1762|You wait for the season to change.
+1763|Expand the relief center and take everyone in
+1764|Some of those fed a warm meal become followers.
+1765|The unmanageable crowds cause chaos.
+1766|Share miraculous bread at mealtime
+1767|The alley buzzes over the miracle of a bread basket that never empties.
+1768|The basket empties quickly.
+1769|Take in only a set number
+1770|Meals are served in an orderly fashion.
+1771|Bless the couple with renewed youth
+1772|The blush of youth returns to the cheeks of the couple who took their vows.
+1773|The blessing is weak, and the couple is disappointed.
+1774|Hold a grand vow ceremony for them
+1775|All your followers gather to bless the elderly couple.
+1776|Preparations run late and the ceremony is chaotic.
+1777|Give only a simple blessing
+1778|The couple bows their heads in thanks.
+1779|Publish a newsletter with a sensual cover
+1780|People whose eyes catch on the cover pick up the newsletter.
+1781|A report comes in about distributing obscene material.
+1782|Hand out a tasteful newsletter
+1783|A few read the newsletter and visit the temple.
+1784|Most end up in the trash.
+1785|Rely on word of mouth instead
+1786|You save on printing costs.
+1787|Seal each manuscript with your kiss
+1788|Manuscripts bearing your lip print are treasured like heirlooms.
+1789|Fights break out over the manuscripts.
+1790|Bind the manuscript in gilded covers
+1791|The golden scripture gleams on the altar.
+1792|The binding comes out shoddy.
+1793|Encourage the copying circle
+1794|The brushes keep moving late into the night.
+1795|Hang it highest, front and center above the altar
+1796|Every prayer turns toward the portrait.
+1797|People say the portrait looks bigger than the god.
+1798|Hang it in the hallway outside your chamber
+1799|Followers passing the portrait steal glances toward your chamber.
+1800|The hallway is always crowded.
+1801|Hang a sacred emblem instead of the portrait
+1802|The understated emblem lends the temple dignity.
+1803|Accept the house and let him live in the temple
+1804|In a small room of the temple, he prays more happily than anyone.
+1805|His family sues, alleging extortion.
+1806|Accept only part of it and return the rest
+1807|He is even more deeply moved by your consideration.
+1808|He changes his mind and gives only a little.
+1809|Talk him out of selling the house
+1810|In tears, he tucks the deed back into his coat.
+1811|Remember the void and hunger for today's worship
+1812|The longing never to be forgotten again makes the god greedier.
+1813|The longing turns to anxiety.
+1814|Listen closely to every follower's prayer
+1815|Each small prayer fills the void.
+1816|There are too many prayers to hear them all.
+1817|Record the memory of the void in scripture
+1818|The solitude of a forgotten god becomes the cult's first chapter.
+1819|The memory is hard to put into words.

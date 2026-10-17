@@ -1,0 +1,150 @@
+1459|Pray for your family every night
+1460|You pray for your family every night.
+1461|Even prayer doesn't ease your anxiety.
+1462|Pretend nothing's wrong
+1463|You smile as if nothing's wrong.
+1464|Bottling it up makes you sick.
+1465|Spend more time away from home
+1466|You kill time wandering outside the house.
+1467|Walk into class with confidence
+1468|Your confident stride draws your classmates' eyes.
+1469|You try too hard and look awkward.
+1470|Sit quietly in the back
+1471|You sit quietly and listen to the lesson.
+1472|Hang out with the rowdy kids
+1473|You fall in with the rowdy crowd.
+1474|You can't fit in with the group and end up alone.
+1475|Make a study plan from day one
+1476|From day one, you write a schedule in your notebook.
+1477|The schedule is too tight, and you give up.
+1478|Work it off with exercise
+1479|You run laps on the field and sweat out your anger.
+1480|Rebel against your parents
+1481|You slam the door and talk back.
+1482|Your parents give you a harsh scolding.
+1483|Keep a diary
+1484|You pour your heart into your diary.
+1485|Your diary falls into your parents' hands.
+1486|Shut yourself in your room
+1487|You don't come out of your room.
+1488|Take careful care of it
+1489|You wash and tend your face carefully.
+1490|You do it wrong, and your skin gets worse.
+1491|You avoid mirrors and stop caring.
+1492|Pop them and make it worse
+1493|Popping your pimples leaves scars.
+1494|The inflammation spreads, and you see a doctor.
+1495|Your skin clears up remarkably with care
+1496|Steady care clears your skin, and your friends are amazed.
+1497|Nothing works, and your confidence drops.
+1498|Pull an all-nighter
+1499|You study all night and earn good grades.
+1500|You can't fight off sleep and make mistakes on the test.
+1501|Prepare as usual
+1502|You prepare calmly, as usual.
+1503|Make a cheat sheet
+1504|You make a tiny note and hide it.
+1505|The note is found, and you face suspension.
+1506|Goof off, calling tests pointless
+1507|You go out and play with your friends.
+1508|Your scores drop, and home turns into a battlefield.
+1509|Happily accept
+1510|You gladly agree to go out with them.
+1511|Hurt, they turn away.
+1512|Politely decline
+1513|You decline politely.
+1514|Spread it among your friends
+1515|You spread the news among your friends.
+1516|The rumor spreads, and the one who confessed is miserable.
+1517|Another face comes to mind
+1518|Another face surfaces in a corner of your heart.
+1519|Your feelings are tangled, and you sleep poorly.
+1520|Take the vocals
+1521|You sing on stage and the crowd cheers.
+1522|Your voice shakes, and you botch the song.
+1523|Take up the drums and practice
+1524|You drum every day, drenched in sweat.
+1525|Your hands sting from drum practice.
+1526|Organize the show
+1527|You set the lineup and lead everyone.
+1528|Decline and watch instead
+1529|You quietly watch the show from the audience.
+1530|Try a drink
+1531|You grimace at the bitterness and sip a little.
+1532|Your stomach churns, and you collapse.
+1533|You refuse firmly.
+1534|The teacher steps in and talks sense into your friend.
+1535|Your friend calls you a snitch.
+1536|Stop your friend, it's dangerous
+1537|Your friend puts the bottle down.
+1538|Your friend won't listen and walks off.
+1539|Weep during worship songs
+1540|Tears flow during the worship songs.
+1541|Sneak out at night to play
+1542|You sneak out and play with your friends.
+1543|You get caught and scolded by the teacher.
+1544|Lead the group as captain
+1545|You look after the kids and show leadership.
+1546|Being captain is too much, and you wear out.
+1547|Challenge the pastor's sermon
+1548|Your logical rebuttal leaves even the pastor pondering.
+1549|You're scolded for being rude.
+1550|Buy a Walkman
+1551|You listen to music on your Walkman and hang out with friends.
+1552|You're short on money and can only afford half.
+1553|Buy a pile of books
+1554|You pick out an armful of books and bring them home.
+1555|Buy gifts for your parents
+1556|You choose gifts for your parents.
+1557|The gifts are modest, and that bothers you.
+1558|Flip used goods for profit
+1559|You resell items at the flea market.
+1560|What you bought turns out broken, and you take a loss.
+1561|Hand it over quietly
+1562|You hand over the money without a word.
+1563|Fight back
+1564|You throw a punch and drive the thug off.
+1565|You take a beating and can't get up for a while.
+1566|Talk the thug down
+1567|You talk the thug into leaving.
+1568|The thug only gets angrier.
+1569|The teacher summons the thug.
+1570|The thug promises revenge.
+1571|Say you'll be a doctor
+1572|You say you'll become a doctor.
+1573|Say you'll be a businessperson
+1574|You say you'll go into business.
+1575|The teacher questions how realistic it is.
+1576|Say you'll join the clergy
+1577|You say you'll join the clergy, and even the teacher is impressed.
+1578|Say you don't know yet
+1579|You answer that you haven't decided yet.
+1580|Starve it off
+1581|You lose weight by starving yourself.
+1582|You collapse and are carried to the nurse's office.
+1583|Exercise it off
+1584|You run laps and lighten your body.
+1585|Eat without a care
+1586|You eat whatever you want.
+1587|You put on weight, and your friends tease you.
+1588|Mock your friends' diets
+1589|You laugh at your friends.
+1590|You earn the class's resentment.
+1591|Approach quietly and listen
+1592|Your friend opens up to you.
+1593|Your friend says little, and the talk ends quickly.
+1594|The teacher keeps an eye on your friend.
+1595|Pray for your friend
+1596|You pray quietly for your friend.
+1597|Your prayer doesn't help.
+1598|You walk past, pretending not to know.
+1599|You feel uneasy.
+1600|Research day and night
+1601|You throw yourself into research day and night.
+1602|Overwork damages your health.
+1603|Copy someone else's research
+1604|You copy another school's research.
+1605|The plagiarism is exposed, and you're disqualified.
+1606|Win with an original invention
+1607|Your original invention wins an award.
+1608|Your invention doesn't work.

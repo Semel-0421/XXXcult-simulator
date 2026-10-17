@@ -1,0 +1,150 @@
+2050|Seal the Doctrine in secrecy
+2051|Secrecy deepens the Doctrine's mystery.
+2052|The secrecy invites suspicion.
+2053|Make up for it with large-scale service
+2054|The service restores your Repute.
+2055|The service has no effect.
+2056|Preach Patience to the followers
+2057|The sermon on Patience steadies the followers.
+2058|The sermon rings hollow.
+2059|Stand up to the press
+2060|Standing firm shows the cult's spirit.
+2061|Standing firm backfires.
+2062|Pause activities for a while
+2063|You halt activities to stay out of sight.
+2064|Cooperate fully with the investigation
+2065|Your cooperation wins back trust.
+2066|The investigation's findings go against you.
+2067|Destroy the evidence
+2068|The evidence disappears.
+2069|The destruction of evidence is exposed.
+2070|Move your base overseas
+2071|Moving your base lets you evade the investigation.
+2072|The move scatters the followers.
+2073|Put forward a scapegoat
+2074|The scapegoat steers the investigation elsewhere.
+2075|The scapegoat is exposed, and it backfires.
+2076|Hold a thanksgiving event
+2077|The thanksgiving event brings you closer to the locals.
+2078|Enter politics
+2079|Entering politics expands your power.
+2080|Entering politics draws criticism.
+2081|Stay humble
+2082|Humility protects your Reputation.
+2083|Use your fame to proselytize
+2084|Your fame draws in followers.
+2085|The proselytizing looks exploitative.
+2086|Hold a faith retreat
+2087|The retreat deepens their faith.
+2088|The retreat is grueling, and complaints arise.
+2089|Weed out the shallow followers
+2090|After the purge, the remaining followers stand firm.
+2091|Some say the purge was harsh.
+2092|Numbers matter more than faith
+2093|Numbers grow the cult.
+2094|Some call it mere window dressing.
+2095|Meet the followers yourself
+2096|Meeting them in person holds on to the followers' hearts.
+2097|Give the Offerings back to society
+2098|Giving back greatly restores your Repute.
+2099|Some say it came too late.
+2100|Repute be damned
+2101|Unbothered, you focus on finances.
+2102|Spend money on publicity
+2103|Publicity slightly raises your Repute.
+2104|The publicity is mocked as exaggeration.
+2105|Disclose where the money goes
+2106|Transparent disclosure clears away suspicion.
+2107|Questions arise about the disclosed records.
+2108|Set aside your Authority and reach out
+2109|Reaching out wins back the followers' hearts.
+2110|Rule through fear
+2111|Fear keeps order for now.
+2112|Fear drives the followers away.
+2113|Gauge sentiment through your inner circle
+2114|Your inner circle reports the mood of the people.
+2115|Your inner circle's reports conflict.
+2116|Stage a miracle
+2117|The staged miracle holds the followers' hearts for a while.
+2118|The staging is found out.
+2119|Let go of everything and pray
+2120|Through prayer, you find your faith again.
+2121|Run the cult without faith
+2122|The operation keeps running, but faith grows dim.
+2123|The emptiness of it all shows.
+2124|Confess to your inner circle
+2125|The confession brings you closer to your inner circle.
+2126|Your inner circle grows uneasy.
+2127|Sink into pleasure
+2128|Pleasure fills the emptiness.
+2129|Word of your pleasures gets around.
+2130|Propose an alliance
+2131|The alliance raises the cult's standing.
+2132|The alliance proposal is rejected.
+2133|Confront them head-on
+2134|The confrontation deepens the strife.
+2135|Keep a low profile
+2136|Lying low eases the pressure.
+2137|Buy off the rival cult
+2138|With a payoff, the rival cult is absorbed.
+2139|The payoff is exposed.
+2140|Plant a mole in the rival cult
+2141|Your mole shakes them from within.
+2142|The infiltration is discovered.
+2143|Write a new scripture
+2144|The new scripture elevates the Doctrine.
+2145|The scripture stirs controversy.
+2146|Doubt the Revelation
+2147|After doubting, you interpret the Revelation correctly.
+2148|Hold a grand festival
+2149|The grand festival boosts the followers' pride.
+2150|The festival costs a lot.
+2151|Engrave this moment into the Doctrine
+2152|This moment becomes the pinnacle of the Doctrine.
+2153|Look to greater heights
+2154|Gazing upward, you feed your ambition.
+2155|Your overreach becomes the talk of the town.
+2156|Pray quietly together
+2157|The quiet prayer embraces everyone.
+2158|Arrange a dialogue with the residents
+2159|The dialogue calms the protest.
+2160|The dialogue ends with nothing gained.
+2161|Ignore the protest
+2162|The protest dies down, but ill will remains.
+2163|Ignoring it only grows the protest.
+2164|Mobilize followers for a counter-rally
+2165|The counter-rally unites the followers.
+2166|The counter-rally escalates into a clash.
+2167|Suspend gatherings for now
+2168|You halt the gatherings and wait quietly.
+2169|Propose a public debate
+2170|Proposing a debate shows off the cult's reasoning.
+2171|The debate never happens, which only hurts you.
+2172|Soften the Doctrine
+2173|The softened Doctrine eases outside concerns.
+2174|The followers push back against the softening.
+2175|Denounce them in return
+2176|Trading accusations escalates the fight.
+2177|The accusations come back at you.
+2178|Stay silent
+2179|Silence buys you time.
+2180|Submit all records
+2181|Submitting the records wins back trust.
+2182|Some of the records become a problem.
+2183|Hire lawyers and fight back
+2184|The lawyers defend the cult.
+2185|The legal fees shake your finances.
+2186|Hide the key records
+2187|Hiding the records lets you evade the investigation.
+2188|The hidden records are found.
+2189|Have the followers testify
+2190|The followers' testimony protects the cult.
+2191|The testimony is suspected of being coached.
+2192|Overhaul how the cult is run
+2193|The overhaul keeps the cult alive.
+2194|The overhaul is called too little, too late.
+2195|Pledge to give back and donate a fortune
+2196|The huge donation turns public opinion.
+2197|Some say the donation isn't enough.
+2198|Go underground
+2199|Underground, you protect your followers.

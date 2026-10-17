@@ -1,0 +1,250 @@
+2750|Make it "Peace be with you"
+2751|Everywhere, people recognize each other by that greeting.
+2752|Many find it awkward and don't use it.
+2753|Let the followers vote
+2754|Everyone cherishes the greeting they chose together.
+2755|The vote results spark an argument.
+2756|Preach at the bedside
+2757|The elderly follower closes their eyes with a peaceful face.
+2758|The family is uncomfortable with talk of religion.
+2759|Record it and send it
+2760|The elderly follower listens to the recording to the very end.
+2761|The recorder breaks, and they never hear it.
+2762|Wash the dishes first yourself
+2763|Everyone rushes to pitch in.
+2764|Word spreads that the cult leader lacks dignity.
+2765|Make a rotation chart
+2766|A fair rotation ends the squabbling.
+2767|Some people skip their turns.
+2768|Persuade the committee
+2769|The committee members finally come around to your view.
+2770|You fail to persuade them and withdraw the decision.
+2771|Accept the committee's opinion
+2772|Your openness earns the committee's trust.
+2773|People say the cult leader is indecisive.
+2774|Furnish it with grandeur
+2775|Those who enter the office bow their heads.
+2776|Say a small room is enough
+2777|Followers respect your modesty.
+2778|Some say it lacks dignity.
+2779|Settle it by open debate
+2780|The debate brings order to the cult.
+2781|The debate turns into a brawl.
+2782|Appoint someone yourself
+2783|With the appointment, the cult moves as one again.
+2784|The passed-over elder's faction pushes back.
+2785|Draft it yourself
+2786|Airtight bylaws become the pillar of the cult.
+2787|Even after several sleepless nights, you can't finish it.
+2788|Leave it to a lawyer
+2789|Legally solid bylaws are completed.
+2790|The fee is steep, and the content is sloppy.
+2791|Accept the open debate
+2792|Your well-reasoned answers win everyone over.
+2793|You're left speechless and lose face.
+2794|Talk to him privately
+2795|The misunderstanding clears, and he bows his head.
+2796|He brags that the cult leader dodged him.
+2797|Offer him the seat beside you
+2798|The notable is pleased and promises support.
+2799|People gossip that you're sucking up.
+2800|Refuse, saying every seat is equal
+2801|Followers respect you for keeping your principles.
+2802|The notable leaves offended.
+2803|Establish a strict hierarchy
+2804|With a clear hierarchy, the cult runs in an orderly way.
+2805|Squabbles over rank chill the atmosphere.
+2806|Keep only service-oriented roles
+2807|Everyone gladly steps up to roles of service.
+2808|Critics say the structure is too loose.
+2809|Buy a black sedan
+2810|You exude dignity as you step out of the sedan.
+2811|The papers call it an extravagance.
+2812|Keep driving the old car
+2813|Praise spreads for the frugal cult leader.
+2814|The car keeps breaking down, and you suffer for it.
+2815|Keep preaching at the top of your lungs
+2816|Even without a microphone, your voice fills the chapel.
+2817|Your voice gives out before you can finish.
+2818|Buy time with a hymn
+2819|Everyone admires your quick-witted handling.
+2820|The disorder continues.
+2821|Accept the title
+2822|The new title takes hold in the cult.
+2823|Critics call it authoritarian.
+2824|Tell them to call you "brother"
+2825|Followers draw closer to you.
+2826|The hierarchy loosens.
+2827|Use your Authority to reclaim the books
+2828|The deacon hands over the books without a fuss.
+2829|The deacon's supporters push back.
+2830|Hire an outside auditor
+2831|The transparent audit satisfies everyone.
+2832|The audit cost is a burden.
+2833|Hang a giant portrait
+2834|Everyone grows solemn before the portrait.
+2835|Accusations of idolatry pour in.
+2836|The cult leader's humility becomes the talk of the town.
+2837|Some followers are disappointed.
+2838|Include the cult leader's symbol
+2839|Followers wearing the emblem feel proud.
+2840|People say it's tacky.
+2841|Hold a contest among followers
+2842|An emblem everyone cherishes is born.
+2843|The winning entry stirs up controversy.
+2844|Acknowledge his passion
+2845|The branch grows rapidly.
+2846|Others start acting on their own too.
+2847|Rebuke him sternly and take back the branch
+2848|Order is restored in the cult.
+2849|Followers leave along with the evangelist.
+2850|Speak out boldly
+2851|Your clear statement runs in the local paper.
+2852|Under a barrage of questions, you babble incoherently.
+2853|Send a spokesperson
+2854|The spokesperson handles it without a hitch.
+2855|People say the cult leader is hiding.
+2856|Confront the group in person
+2857|Your sincerity opens their hearts again.
+2858|They publicly criticize the cult.
+2859|Pretend not to notice and watch
+2860|It was just a prayer group after all.
+2861|The group keeps gaining strength.
+2862|Publish a collection of your sayings
+2863|The collection becomes the cult's guidebook.
+2864|Critics say you're deifying yourself.
+2865|Tell them to memorize scripture first
+2866|Followers immerse themselves in scripture study.
+2867|Many followers are disappointed.
+2868|Host it yourself
+2869|Everyone admires your smooth hosting.
+2870|Exhaustion leads to frequent slip-ups.
+2871|Decide by drawing lots
+2872|No one complains about such a fair method.
+2873|People say the cult leader dodged the decision.
+2874|Write an autobiography
+2875|The book hits the shelves, and the cult's name spreads.
+2876|The book doesn't sell and draws only bad reviews.
+2877|Decline, saying it's too early
+2878|The publisher nods at your humble refusal.
+2879|People say you missed your chance.
+2880|Renovate the cult building
+2881|Followers take pride in the refurbished building.
+2882|The shoddy work has to be redone.
+2883|Share some with the neighbors
+2884|Neighbors who receive bags of rice express their thanks.
+2885|People say the giving is just for show.
+2886|Accept it gratefully
+2887|The cult's coffers swell.
+2888|The family shows up threatening to sue the cult.
+2889|Refuse for the family's sake
+2890|The follower's family sees the cult in a new light.
+2891|The follower is hurt and stubbornly insists.
+2892|Quietly report it to the police
+2893|Even the police thank you for your honesty.
+2894|Rumors spread that there's a criminal in the church.
+2895|Treat it as if it never happened
+2896|It quietly blows over.
+2897|Later, the whole thing comes out.
+2898|Open a bookstore
+2899|The cult's books sell steadily at the bookstore.
+2900|No customers come, and stock just piles up.
+2901|Put it off as too risky
+2902|The coffers stay safe.
+2903|Sign the contract
+2904|The magnificent chapel becomes the cult's symbol.
+2905|The builder takes the money and vanishes.
+2906|Suggest building small
+2907|A modest chapel stands just right.
+2908|Construction drags on, and costs balloon.
+2909|Have names written on envelopes
+2910|Offerings rise, and the books are in order.
+2911|People complain that donors are ranked by amount.
+2912|Use anonymous envelopes
+2913|People give from the heart without pressure.
+2914|Offerings actually drop.
+2915|Hold it on a grand scale
+2916|The whole neighborhood comes to the bazaar.
+2917|It rains, and no customers come.
+2918|Hold a modest one among followers
+2919|Followers enjoy buying each other's goods.
+2920|Almost nothing sells.
+2921|Publish the annual accounts
+2922|Transparent accounts boost Offerings even more.
+2923|Some expenditures get people talking.
+2924|Say the cult leader will handle it
+2925|Followers stop asking.
+2926|Suspicion builds, and Offerings fall.
+2927|Deposit a lump sum
+2928|Interest accrues steadily.
+2929|The bank fails, and you lose part of it.
+2930|Leave it in the safe
+2931|The money is kept safe.
+2932|A thief breaks in, and you lose part of it.
+2933|Sell it at the market
+2934|It fetches a good price, and the coffers fill.
+2935|Prices crash, and you take a loss.
+2936|Donate it to a nursing home
+2937|The elderly remember the cult's name.
+2938|Shipping costs quite a bit.
+2939|Make him an elder
+2940|The coffers grow fat.
+2941|Gossip spreads that he bought his position.
+2942|Say Offerings and positions are separate
+2943|He takes back his donation and leaves.
+2944|Sell the bell
+2945|The coffers fill.
+2946|With the bell gone silent, followers grieve.
+2947|Refuse, calling the bell the cult's voice
+2948|The bell rings over the village again today.
+2949|The junk dealer leaves grumbling.
+2950|Buy your own copier
+2951|Printing in-house cuts costs dramatically.
+2952|The copier breaks, and you pay for repairs.
+2953|Cut back on printed materials
+2954|Keeping only what's needed makes things cleaner.
+2955|Publicity falls short.
+2956|Forgive him and have him pay it back
+2957|The deacon thanks you in tears and faithfully repays.
+2958|The deacon vanishes without paying.
+2959|Reprimand him publicly
+2960|Discipline in the cult is restored.
+2961|The atmosphere turns cold.
+2962|Establish a scholarship foundation
+2963|It's hard to run and soon closes.
+2964|Give it only to followers' children
+2965|Follower families are grateful.
+2966|People call it exclusive.
+2967|Buy it
+2968|You gain a second place of worship.
+2969|You end up taking on its debts too.
+2970|Help them, but don't buy it
+2971|You build good relations with the neighboring church.
+2972|Your help vanishes like water into a bottomless jar.
+2973|Preach a sermon on giving
+2974|Next week's Offerings rise sharply.
+2975|People complain that you only talk about money.
+2976|Cut spending
+2977|By economizing, you keep the household afloat.
+2978|Some are disappointed by the fewer events.
+2979|Build a parking lot
+2980|Weekday parking brings in tidy income.
+2981|Friction arises with the residents.
+2982|Make it a rest area for followers
+2983|Chatter goes on beneath the shade of the trees.
+2984|It's hard to maintain and soon goes to ruin.
+2985|Hold a thanksgiving service, then clear the land
+2986|The land yields its first harvest.
+2987|The soil is barren, and it's nothing but toil.
+2988|Return it to the bereaved family
+2989|Moved, the family seeks out the cult.
+2990|Some followers are disappointed.
+2991|Go out yourself
+2992|Passersby who stop to listen come to the cult.
+2993|The merchants chase you off.
+2994|Hand out tracts
+2995|A few come by with tracts in hand.
+2996|The tracts are tossed on the street.
+2997|Start a club
+2998|Young followers flock to it.
+2999|The student council opposes it, calling it a cult.

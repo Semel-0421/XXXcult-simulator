@@ -1,0 +1,120 @@
+0|First Cry
+1|Made your first choice.
+2|Toddling
+3|Turned 3.
+4|School Bag
+5|Turned 7.
+6|Puberty
+7|Turned 13.
+8|Season of Uniforms
+9|Turned 16.
+10|Eighteen
+11|Turned 18.
+12|Ten Crossroads
+13|Made 10 choices in events.
+14|Fifty Choices
+15|Made 50 choices in events.
+16|A Hundred Choices
+17|Made 100 choices in events.
+18|Two Hundred Choices
+19|Made 200 choices in events.
+20|A Drop of Sweat
+21|Exercised for the first time.
+22|Training
+23|Exercised 10 times.
+24|Stillness
+25|Meditated for the first time.
+26|Ascetic
+27|Meditated 10 times.
+28|Bookworm
+29|Studied 10 times.
+30|Social Debut
+31|Socialized 10 times.
+32|The Praying Child
+33|Prayed 10 times in daily life.
+34|All-Rounder
+35|Tried all five daily actions.
+36|Diligent Youth
+37|Took 30 daily actions.
+38|Falling Is Learning
+39|Failed an action 5 times.
+40|Careful Choices
+41|Succeeded at 10 choices.
+42|Lucky One
+43|Succeeded at 50 choices.
+44|Fate's Favorite
+45|Succeeded at 100 choices.
+46|Bitter Taste
+47|Failed 10 choices.
+48|Weeble
+49|Failed 50 choices.
+50|Half and Half
+51|Succeeded at 20 choices and failed 20.
+52|Getting the Knack
+53|Succeeded at actions 30 times.
+54|Undefeated
+55|Succeeded at actions 100 times.
+56|Sturdy Body
+57|Health reached 50.
+58|Iron Constitution
+59|Health reached 80.
+60|Sharp Mind
+61|Mentality reached 50.
+62|Genius
+63|Mentality reached 80.
+64|Devout Faith
+65|Piety reached 50.
+66|Path of the Saint
+67|Piety reached 80.
+68|Popular
+69|Repute reached 50.
+70|Local Star
+71|Repute reached 80.
+72|Comfortable Living
+73|Wealth reached 50.
+74|Tycoon
+75|Wealth reached 80.
+76|Kind Soul
+77|Charity reached 50.
+78|Upright
+79|Integrity reached 50.
+80|Forbearance
+81|Patience reached 50.
+82|The Virtue of Restraint
+83|Temperance reached 50.
+84|Awakened to Riches
+85|Greed reached 50.
+86|Ambitious
+87|Ambition reached 50.
+88|Becoming a Cult Leader
+89|Founded a cult.
+90|Declaration of Doctrine
+91|Learned Declaration of Doctrine.
+92|Cult, Year 1
+93|One year has passed since you founded the cult.
+94|Cult, Year 3
+95|Three years have passed since you founded the cult.
+96|Cult, Year 5
+97|Five years have passed since you founded the cult.
+98|Cult, Year 10
+99|Ten years have passed since you founded the cult.
+100|Cult, Year 20
+101|Twenty years have passed since you founded the cult.
+102|Cult, Year 30
+103|Thirty years have passed since you founded the cult.
+104|Thirty
+105|Turned 30.
+106|Forty
+107|Turned 40.
+108|Fifty
+109|Turned 50.
+110|Seventy
+111|Turned 70.
+112|First Sermon
+113|Preached for the first time.
+114|Preacher
+115|Preached 20 times.
+116|Evangelist
+117|Proselytized 20 times.
+118|Servant
+119|Served 20 times.

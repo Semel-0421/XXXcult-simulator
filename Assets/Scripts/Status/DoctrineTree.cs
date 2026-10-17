@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -36,7 +36,8 @@ public class DoctrineSkill
     public int Tier { get; }
     public string Path { get; }                 // "" (1~5단계) / "A" / "B"
     public int MaxLevel { get; }
-    public string Description { get; }
+    readonly string description;
+    public string Description => Lang.Pick(description);
     public int ResistPercent { get; }           // 레벨당 불운 저항(%)
     public StatModifier[] Modifiers { get; }    // 레벨당 스탯 보정
     public GiftedSpecial[] Specials { get; }    // 레벨당 특수효과
@@ -45,13 +46,13 @@ public class DoctrineSkill
     public DoctrineSkill(string id, DoctrineBranch branch, int tier, string path, string name, string description, int maxLevel,
         int resistPercent, StatModifier[] modifiers, params GiftedSpecial[] specials)
     {
-        Id = id; Branch = branch; Tier = tier; Path = path; this.name = name; Description = description; MaxLevel = maxLevel;
+        Id = id; Branch = branch; Tier = tier; Path = path; this.name = name; this.description = description; MaxLevel = maxLevel;
         ResistPercent = resistPercent; Modifiers = modifiers; Specials = specials;
     }
 
     DoctrineSkill(string id, int maxLevel) : this(id, DoctrineBranch.None, 0, "", null, "", maxLevel, 0, Array.Empty<StatModifier>()) { }
 
-    public string Name => name ?? Lang.Get($"doctrine_{Id}");
+    public string Name => name != null ? Lang.Pick(name) : Lang.Get($"doctrine_{Id}");
     public bool IsDesire => Branch is DoctrineBranch.Lust or DoctrineBranch.Greed or DoctrineBranch.Appetite or DoctrineBranch.Ambition;
     public bool IsFinal => Tier == 10;
     public bool Repeatable => MaxLevel > 1 && !IsFinal;

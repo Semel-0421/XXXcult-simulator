@@ -1,0 +1,3437 @@
+[
+{
+"ko": "첫 울음",
+"mt": "First Cry",
+"en": "First Cry"
+},
+{
+"ko": "첫 번째 선택을 마쳤다.",
+"mt": "I made my first choice.",
+"en": "Made your first choice."
+},
+{
+"ko": "아장아장",
+"mt": "Don't worry about it.",
+"en": "Toddling"
+},
+{
+"ko": "3세가 되었다.",
+"mt": "I was three years old.",
+"en": "Turned 3."
+},
+{
+"ko": "책가방",
+"mt": "Bookbags",
+"en": "School Bag"
+},
+{
+"ko": "7세가 되었다.",
+"mt": "I was seven years old.",
+"en": "Turned 7."
+},
+{
+"ko": "사춘기",
+"mt": "Puberty",
+"en": "Puberty"
+},
+{
+"ko": "13세가 되었다.",
+"mt": "I was 13 years old.",
+"en": "Turned 13."
+},
+{
+"ko": "교복의 계절",
+"mt": "The season of the uniform.",
+"en": "Season of Uniforms"
+},
+{
+"ko": "16세가 되었다.",
+"mt": "I was 16 years old.",
+"en": "Turned 16."
+},
+{
+"ko": "열여덟",
+"mt": "18",
+"en": "Eighteen"
+},
+{
+"ko": "18세가 되었다.",
+"mt": "I was 18 years old.",
+"en": "Turned 18."
+},
+{
+"ko": "열 번의 갈림길",
+"mt": "Ten splits.",
+"en": "Ten Crossroads"
+},
+{
+"ko": "이벤트에서 선택을 10번 했다.",
+"mt": "I made 10 choices at the event.",
+"en": "Made 10 choices in events."
+},
+{
+"ko": "오십 번의 선택",
+"mt": "Fifty choose.",
+"en": "Fifty Choices"
+},
+{
+"ko": "이벤트에서 선택을 50번 했다.",
+"mt": "I made 50 choices at the event.",
+"en": "Made 50 choices in events."
+},
+{
+"ko": "백 번의 선택",
+"mt": "100 Select",
+"en": "A Hundred Choices"
+},
+{
+"ko": "이벤트에서 선택을 100번 했다.",
+"mt": "I made 100 choices at the event.",
+"en": "Made 100 choices in events."
+},
+{
+"ko": "이백 번의 선택",
+"mt": "Two hundred choose",
+"en": "Two Hundred Choices"
+},
+{
+"ko": "이벤트에서 선택을 200번 했다.",
+"mt": "I made 200 choices at the event.",
+"en": "Made 200 choices in events."
+},
+{
+"ko": "땀 한 방울",
+"mt": "A drop of sweat",
+"en": "A Drop of Sweat"
+},
+{
+"ko": "운동을 처음 했다.",
+"mt": "I was the first to exercise.",
+"en": "Exercised for the first time."
+},
+{
+"ko": "단련",
+"mt": "TRAINING",
+"en": "Training"
+},
+{
+"ko": "운동을 10번 했다.",
+"mt": "I exercised 10 times.",
+"en": "Exercised 10 times."
+},
+{
+"ko": "고요",
+"mt": "It's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's... it's...",
+"en": "Stillness"
+},
+{
+"ko": "명상을 처음 했다.",
+"mt": "I first did meditation.",
+"en": "Meditated for the first time."
+},
+{
+"ko": "수행자",
+"mt": "Executor",
+"en": "Ascetic"
+},
+{
+"ko": "명상을 10번 했다.",
+"mt": "I did 10 meditations.",
+"en": "Meditated 10 times."
+},
+{
+"ko": "책벌레",
+"mt": "Bookworms",
+"en": "Bookworm"
+},
+{
+"ko": "공부를 10번 했다.",
+"mt": "I studied 10 times.",
+"en": "Studied 10 times."
+},
+{
+"ko": "사교계 데뷔",
+"mt": "Social debut",
+"en": "Social Debut"
+},
+{
+"ko": "사교활동을 10번 했다.",
+"mt": "I've been socialized 10 times.",
+"en": "Socialized 10 times."
+},
+{
+"ko": "기도하는 아이",
+"mt": "A child who prays.",
+"en": "The Praying Child"
+},
+{
+"ko": "생활 기도를 10번 했다.",
+"mt": "I did 10 prayers of life.",
+"en": "Prayed 10 times in daily life."
+},
+{
+"ko": "만능",
+"mt": "Everything's fine.",
+"en": "All-Rounder"
+},
+{
+"ko": "다섯 가지 생활 행동을 모두 해 보았다.",
+"mt": "I've tried all five life behaviors.",
+"en": "Tried all five daily actions."
+},
+{
+"ko": "성실한 청춘",
+"mt": "Sincere youth.",
+"en": "Diligent Youth"
+},
+{
+"ko": "생활 행동을 30번 했다.",
+"mt": "I've done life behavior 30 times.",
+"en": "Took 30 daily actions."
+},
+{
+"ko": "넘어짐도 배움",
+"mt": "Learning to fall.",
+"en": "Falling Is Learning"
+},
+{
+"ko": "행동에 5번 실패했다.",
+"mt": "I failed five times in action.",
+"en": "Failed an action 5 times."
+},
+{
+"ko": "신중한 선택",
+"mt": "Careful Choices",
+"en": "Careful Choices"
+},
+{
+"ko": "선택에 10번 성공했다.",
+"mt": "I made 10 choices.",
+"en": "Succeeded at 10 choices."
+},
+{
+"ko": "행운아",
+"mt": "Good luck.",
+"en": "Lucky One"
+},
+{
+"ko": "선택에 50번 성공했다.",
+"mt": "Fifty times successful on the choice.",
+"en": "Succeeded at 50 choices."
+},
+{
+"ko": "운명의 총아",
+"mt": "The shot of fate.",
+"en": "Fate's Favorite"
+},
+{
+"ko": "선택에 100번 성공했다.",
+"mt": "I've been successful 100 times.",
+"en": "Succeeded at 100 choices."
+},
+{
+"ko": "쓴맛",
+"mt": "It's bitter.",
+"en": "Bitter Taste"
+},
+{
+"ko": "선택에 10번 실패했다.",
+"mt": "I failed 10 times in my choice.",
+"en": "Failed 10 choices."
+},
+{
+"ko": "오뚝이",
+"mt": "Oh, my God.",
+"en": "Weeble"
+},
+{
+"ko": "선택에 50번 실패했다.",
+"mt": "I failed 50 times in my choice.",
+"en": "Failed 50 choices."
+},
+{
+"ko": "반반",
+"mt": "Half-a-half.",
+"en": "Half and Half"
+},
+{
+"ko": "선택에 20번 성공하고 20번 실패했다.",
+"mt": "I made 20 choices and 20 failed.",
+"en": "Succeeded at 20 choices and failed 20."
+},
+{
+"ko": "손맛",
+"mt": "Hands.",
+"en": "Getting the Knack"
+},
+{
+"ko": "행동에 30번 성공했다.",
+"mt": "We've done it 30 times.",
+"en": "Succeeded at actions 30 times."
+},
+{
+"ko": "백전백승",
+"mt": "100-year-old.",
+"en": "Undefeated"
+},
+{
+"ko": "행동에 100번 성공했다.",
+"mt": "He's done it a hundred times.",
+"en": "Succeeded at actions 100 times."
+},
+{
+"ko": "튼튼한 몸",
+"mt": "Strong body.",
+"en": "Sturdy Body"
+},
+{
+"ko": "체력이 50에 이르렀다.",
+"mt": "He's got up to 50.",
+"en": "Health reached 50."
+},
+{
+"ko": "강철 체력",
+"mt": "Steel strength.",
+"en": "Iron Constitution"
+},
+{
+"ko": "체력이 80에 이르렀다.",
+"mt": "Her strength is up to 80.",
+"en": "Health reached 80."
+},
+{
+"ko": "날카로운 머리",
+"mt": "Sharp hair.",
+"en": "Sharp Mind"
+},
+{
+"ko": "정신력이 50에 이르렀다.",
+"mt": "My mind reached 50.",
+"en": "Mentality reached 50."
+},
+{
+"ko": "천재",
+"mt": "A genius.",
+"en": "Genius"
+},
+{
+"ko": "정신력이 80에 이르렀다.",
+"mt": "I've reached 80.",
+"en": "Mentality reached 80."
+},
+{
+"ko": "독실한 신앙",
+"mt": "A Religious Belief",
+"en": "Devout Faith"
+},
+{
+"ko": "신앙심이 50에 이르렀다.",
+"mt": "I'm 50 years old.",
+"en": "Piety reached 50."
+},
+{
+"ko": "성자의 길",
+"mt": "The path of the saint.",
+"en": "Path of the Saint"
+},
+{
+"ko": "신앙심이 80에 이르렀다.",
+"mt": "Religious faith has reached 80.",
+"en": "Piety reached 80."
+},
+{
+"ko": "인기인",
+"mt": "The Cause of the Dead",
+"en": "Popular"
+},
+{
+"ko": "평판이 50에 이르렀다.",
+"mt": "His reputation has reached 50.",
+"en": "Repute reached 50."
+},
+{
+"ko": "동네 스타",
+"mt": "The local star.",
+"en": "Local Star"
+},
+{
+"ko": "평판이 80에 이르렀다.",
+"mt": "His reputation has reached 80.",
+"en": "Repute reached 80."
+},
+{
+"ko": "넉넉한 살림",
+"mt": "Enough living.",
+"en": "Comfortable Living"
+},
+{
+"ko": "재산이 50에 이르렀다.",
+"mt": "Property reached 50.",
+"en": "Wealth reached 50."
+},
+{
+"ko": "갑부",
+"mt": "BUSINESS",
+"en": "Tycoon"
+},
+{
+"ko": "재산이 80에 이르렀다.",
+"mt": "Property reached 80.",
+"en": "Wealth reached 80."
+},
+{
+"ko": "자애로운 사람",
+"mt": "A benevolent man.",
+"en": "Kind Soul"
+},
+{
+"ko": "자애가 50에 이르렀다.",
+"mt": "Son of a bitch reached 50.",
+"en": "Charity reached 50."
+},
+{
+"ko": "올곧음",
+"mt": "Straight to All",
+"en": "Upright"
+},
+{
+"ko": "청렴이 50에 이르렀다.",
+"mt": "It's at 50.",
+"en": "Integrity reached 50."
+},
+{
+"ko": "참을성",
+"mt": "Patience",
+"en": "Forbearance"
+},
+{
+"ko": "인내가 50에 이르렀다.",
+"mt": "Patience reached 50.",
+"en": "Patience reached 50."
+},
+{
+"ko": "절제의 미덕",
+"mt": "It's a virtue.",
+"en": "The Virtue of Restraint"
+},
+{
+"ko": "절제가 50에 이르렀다.",
+"mt": "I've reached 50.",
+"en": "Temperance reached 50."
+},
+{
+"ko": "재물에 눈뜨다",
+"mt": "I'm gonna open my eyes to riches.",
+"en": "Awakened to Riches"
+},
+{
+"ko": "재물욕이 50에 이르렀다.",
+"mt": "The desire for wealth reached 50.",
+"en": "Greed reached 50."
+},
+{
+"ko": "야심가",
+"mt": "Ambitious",
+"en": "Ambitious"
+},
+{
+"ko": "권력욕이 50에 이르렀다.",
+"mt": "Power desire reached 50.",
+"en": "Ambition reached 50."
+},
+{
+"ko": "교주가 되다",
+"mt": "A Bridger",
+"en": "Becoming a Cult Leader"
+},
+{
+"ko": "교단을 창설했다.",
+"mt": "We've created a cult.",
+"en": "Founded a cult."
+},
+{
+"ko": "교리 선포",
+"mt": "The Declaration of Doctrine",
+"en": "Declaration of Doctrine"
+},
+{
+"ko": "교리 선포를 익혔다.",
+"mt": "I learned to declare doctrine.",
+"en": "Learned Declaration of Doctrine."
+},
+{
+"ko": "교단 1년",
+"mt": "One year of the Faith.",
+"en": "Cult, Year 1"
+},
+{
+"ko": "교단을 세운 지 1년이 지났다.",
+"mt": "It's been a year since the Faith was founded.",
+"en": "One year has passed since you founded the cult."
+},
+{
+"ko": "교단 3년",
+"mt": "Three years of dogma.",
+"en": "Cult, Year 3"
+},
+{
+"ko": "교단을 세운 지 3년이 지났다.",
+"mt": "It's been three years since the Faith was founded.",
+"en": "Three years have passed since you founded the cult."
+},
+{
+"ko": "교단 5년",
+"mt": "Five years of the Faith.",
+"en": "Cult, Year 5"
+},
+{
+"ko": "교단을 세운 지 5년이 지났다.",
+"mt": "It's been five years since the Faith was founded.",
+"en": "Five years have passed since you founded the cult."
+},
+{
+"ko": "교단 10년",
+"mt": "Ten years of dogma.",
+"en": "Cult, Year 10"
+},
+{
+"ko": "교단을 세운 지 10년이 지났다.",
+"mt": "It's been ten years since the Faith was founded.",
+"en": "Ten years have passed since you founded the cult."
+},
+{
+"ko": "교단 20년",
+"mt": "Twenty years of dogma.",
+"en": "Cult, Year 20"
+},
+{
+"ko": "교단을 세운 지 20년이 지났다.",
+"mt": "It's been 20 years since the Faith was founded.",
+"en": "Twenty years have passed since you founded the cult."
+},
+{
+"ko": "교단 30년",
+"mt": "30 years of dogma.",
+"en": "Cult, Year 30"
+},
+{
+"ko": "교단을 세운 지 30년이 지났다.",
+"mt": "It's been 30 years since the Faith was founded.",
+"en": "Thirty years have passed since you founded the cult."
+},
+{
+"ko": "서른",
+"mt": "30",
+"en": "Thirty"
+},
+{
+"ko": "30세가 되었다.",
+"mt": "I was 30 years old.",
+"en": "Turned 30."
+},
+{
+"ko": "마흔",
+"mt": "Forty.",
+"en": "Forty"
+},
+{
+"ko": "40세가 되었다.",
+"mt": "I was forty years old.",
+"en": "Turned 40."
+},
+{
+"ko": "쉰",
+"mt": "Shen.",
+"en": "Fifty"
+},
+{
+"ko": "50세가 되었다.",
+"mt": "I was fifty years old.",
+"en": "Turned 50."
+},
+{
+"ko": "칠순",
+"mt": "ChilSun",
+"en": "Seventy"
+},
+{
+"ko": "70세가 되었다.",
+"mt": "I was 70 years old.",
+"en": "Turned 70."
+},
+{
+"ko": "첫 설교",
+"mt": "First homily.",
+"en": "First Sermon"
+},
+{
+"ko": "설교를 처음 했다.",
+"mt": "I gave a sermon for the first time.",
+"en": "Preached for the first time."
+},
+{
+"ko": "설교가",
+"mt": "The preacher.",
+"en": "Preacher"
+},
+{
+"ko": "설교를 20번 했다.",
+"mt": "I gave 20 sermons.",
+"en": "Preached 20 times."
+},
+{
+"ko": "전도사",
+"mt": "Evangelist",
+"en": "Evangelist"
+},
+{
+"ko": "포교를 20번 했다.",
+"mt": "I've done 20 possies.",
+"en": "Proselytized 20 times."
+},
+{
+"ko": "봉사자",
+"mt": "MINISTRY",
+"en": "Servant"
+},
+{
+"ko": "봉사를 20번 했다.",
+"mt": "I've served 20 times.",
+"en": "Served 20 times."
+},
+{
+"ko": "깊은 기도",
+"mt": "Deep Prayer",
+"en": "Deep Prayer"
+},
+{
+"ko": "교단 기도를 20번 했다.",
+"mt": "The Faith's Prayer was said 20 times.",
+"en": "Prayed for the cult 20 times."
+},
+{
+"ko": "욕망의 사제",
+"mt": "Priest of Desire.",
+"en": "Priest of Desire"
+},
+{
+"ko": "욕구를 20번 채웠다.",
+"mt": "I filled 20 times with desire.",
+"en": "Indulged desire 20 times."
+},
+{
+"ko": "오행을 두루",
+"mt": "We're gonna go through the trail.",
+"en": "The Five Duties"
+},
+{
+"ko": "다섯 가지 교단 행동을 각각 10번씩 했다.",
+"mt": "Each of the five cults was performed ten times.",
+"en": "Performed each of the five cult actions 10 times."
+},
+{
+"ko": "쉰 번의 소임",
+"mt": "Fifty-one calls.",
+"en": "Fifty Duties"
+},
+{
+"ko": "교단 행동을 50번 했다.",
+"mt": "I've done Church behavior 50 times.",
+"en": "Took 50 cult actions."
+},
+{
+"ko": "백 번의 소임",
+"mt": "A hundred counts.",
+"en": "A Hundred Duties"
+},
+{
+"ko": "교단 행동을 100번 했다.",
+"mt": "I've done church behavior 100 times.",
+"en": "Took 100 cult actions."
+},
+{
+"ko": "이백 번의 소임",
+"mt": "Two hundred counts.",
+"en": "Two Hundred Duties"
+},
+{
+"ko": "교단 행동을 200번 했다.",
+"mt": "I've done church behavior 200 times.",
+"en": "Took 200 cult actions."
+},
+{
+"ko": "신도 열 명",
+"mt": "Ten gods.",
+"en": "Ten Followers"
+},
+{
+"ko": "신도가 10명이 되었다.",
+"mt": "Ten members.",
+"en": "Reached 10 followers."
+},
+{
+"ko": "신도 쉰 명",
+"mt": "Thirty-six of them.",
+"en": "Fifty Followers"
+},
+{
+"ko": "신도가 50명이 되었다.",
+"mt": "50 members.",
+"en": "Reached 50 followers."
+},
+{
+"ko": "신도 백 명",
+"mt": "A hundred of them.",
+"en": "A Hundred Followers"
+},
+{
+"ko": "신도가 100명이 되었다.",
+"mt": "A hundred members.",
+"en": "Reached 100 followers."
+},
+{
+"ko": "신도 삼백 명",
+"mt": "Three hundred.",
+"en": "Three Hundred Followers"
+},
+{
+"ko": "신도가 300명이 되었다.",
+"mt": "There are 300 members.",
+"en": "Reached 300 followers."
+},
+{
+"ko": "신도 오백 명",
+"mt": "Five hundred.",
+"en": "Five Hundred Followers"
+},
+{
+"ko": "신도가 500명이 되었다.",
+"mt": "There are 500 members.",
+"en": "Reached 500 followers."
+},
+{
+"ko": "신도 천 명",
+"mt": "A thousand.",
+"en": "A Thousand Followers"
+},
+{
+"ko": "신도가 1000명이 되었다.",
+"mt": "1,000 members.",
+"en": "Reached 1,000 followers."
+},
+{
+"ko": "깊어진 믿음",
+"mt": "Deeply Faith",
+"en": "Deepening Faith"
+},
+{
+"ko": "신도의 믿음이 300에 이르렀다.",
+"mt": "The faith of the faithful has reached 300.",
+"en": "Followers' Faith reached 300."
+},
+{
+"ko": "뜨거운 집회",
+"mt": "Hot Meetings",
+"en": "Fervent Gathering"
+},
+{
+"ko": "신도의 믿음이 700에 이르렀다.",
+"mt": "The faith of the faithful has reached 700.",
+"en": "Followers' Faith reached 700."
+},
+{
+"ko": "확고한 신앙",
+"mt": "A Firm Belief",
+"en": "Unshakable Faith"
+},
+{
+"ko": "교주의 믿음이 300에 이르렀다.",
+"mt": "The Faith of the Faith of the Faith of the Faith has reached 300.",
+"en": "The leader's Faith reached 300."
+},
+{
+"ko": "신과의 대화",
+"mt": "Talk to God.",
+"en": "Conversing with God"
+},
+{
+"ko": "교주의 믿음이 700에 이르렀다.",
+"mt": "The Faith of the Faith of the Faith has reached 700.",
+"en": "The leader's Faith reached 700."
+},
+{
+"ko": "교주의 권위",
+"mt": "Doggy authority.",
+"en": "The Leader's Authority"
+},
+{
+"ko": "권위가 300에 이르렀다.",
+"mt": "Authority reached 300.",
+"en": "Authority reached 300."
+},
+{
+"ko": "한마디가 곧 법",
+"mt": "That's the law.",
+"en": "Your Word Is Law"
+},
+{
+"ko": "권위가 700에 이르렀다.",
+"mt": "Authority reached 700.",
+"en": "Authority reached 700."
+},
+{
+"ko": "넉넉한 금고",
+"mt": "A generous vault.",
+"en": "A Full Coffer"
+},
+{
+"ko": "봉헌금이 300에 이르렀다.",
+"mt": "The peak has reached 300.",
+"en": "Offerings reached 300."
+},
+{
+"ko": "막대한 헌금",
+"mt": "Huge Donations",
+"en": "Vast Offerings"
+},
+{
+"ko": "봉헌금이 700에 이르렀다.",
+"mt": "The peak has reached 700.",
+"en": "Offerings reached 700."
+},
+{
+"ko": "금고가 터지다",
+"mt": "The safe's out.",
+"en": "The Coffers Overflow"
+},
+{
+"ko": "봉헌금이 1000에 이르렀다.",
+"mt": "The sealed contribution reached 1,000.",
+"en": "Offerings reached 1,000."
+},
+{
+"ko": "체계를 갖춘 교리",
+"mt": "A structured doctrine.",
+"en": "A Structured Doctrine"
+},
+{
+"ko": "교리가 3레벨이 되었다.",
+"mt": "The doctrine became the third level.",
+"en": "Doctrine reached level 3."
+},
+{
+"ko": "교리의 완성",
+"mt": "Complete the doctrine.",
+"en": "Doctrine Perfected"
+},
+{
+"ko": "교리가 6레벨이 되었다.",
+"mt": "The doctrine became the sixth level.",
+"en": "Doctrine reached level 6."
+},
+{
+"ko": "교리의 정점",
+"mt": "The Climax of Doctrine",
+"en": "The Pinnacle of Doctrine"
+},
+{
+"ko": "교리가 10레벨이 되었다.",
+"mt": "The doctrine became ten levels.",
+"en": "Doctrine reached level 10."
+},
+{
+"ko": "존경받는 단체",
+"mt": "Respected Groups",
+"en": "A Respected Order"
+},
+{
+"ko": "명망이 700에 이르렀다.",
+"mt": "We've reached 700.",
+"en": "Reputation reached 700."
+},
+{
+"ko": "지역의 상징",
+"mt": "Regional Symbols",
+"en": "Local Landmark"
+},
+{
+"ko": "명망이 900에 이르렀다.",
+"mt": "We've reached 900.",
+"en": "Reputation reached 900."
+},
+{
+"ko": "존중받는 교단",
+"mt": "Respected Faiths",
+"en": "A Respected Cult"
+},
+{
+"ko": "사회적 시선이 존중 이상이 되었다.",
+"mt": "The social eye has risen above respect.",
+"en": "Public view rose to Respected or higher."
+},
+{
+"ko": "공인된 종교",
+"mt": "A Recognized Religion",
+"en": "A Recognized Religion"
+},
+{
+"ko": "사회적 시선이 공인이 되었다.",
+"mt": "The social eye has become a man.",
+"en": "Public view became Recognized."
+},
+{
+"ko": "경계의 눈초리",
+"mt": "Eyes on the border.",
+"en": "Watchful Eyes"
+},
+{
+"ko": "사회적 시선이 경계 이하로 떨어졌다.",
+"mt": "The social eye fell below the line.",
+"en": "Public view fell to Watched or lower."
+},
+{
+"ko": "탄압의 시대",
+"mt": "The Age of Oppression",
+"en": "An Age of Persecution"
+},
+{
+"ko": "사회적 시선이 탄압 이하로 떨어졌다.",
+"mt": "Social attention fell below oppression.",
+"en": "Public view fell to Persecuted or lower."
+},
+{
+"ko": "재능의 싹",
+"mt": "It's all about talent.",
+"en": "Budding Talent"
+},
+{
+"ko": "기프티드를 3개 보유했다.",
+"mt": "We've got three Gifts.",
+"en": "Held 3 Gifted traits."
+},
+{
+"ko": "재능 있는 사람",
+"mt": "A talented man.",
+"en": "Talented"
+},
+{
+"ko": "기프티드를 6개 보유했다.",
+"mt": "We've got six Gifts.",
+"en": "Held 6 Gifted traits."
+},
+{
+"ko": "다재다능",
+"mt": "Multiplicity",
+"en": "Versatile"
+},
+{
+"ko": "기프티드를 10개 보유했다.",
+"mt": "We've got 10 Gifts.",
+"en": "Held 10 Gifted traits."
+},
+{
+"ko": "재능 수집가",
+"mt": "A talent collector.",
+"en": "Talent Collector"
+},
+{
+"ko": "기프티드를 15개 보유했다.",
+"mt": "We've got 15 Gifts.",
+"en": "Held 15 Gifted traits."
+},
+{
+"ko": "다시 시작",
+"mt": "Resume",
+"en": "Starting Over"
+},
+{
+"ko": "새 게임을 2번 시작했다.",
+"mt": "A new game was started two times.",
+"en": "Started a new game 2 times."
+},
+{
+"ko": "돌아온 자",
+"mt": "The one who came back.",
+"en": "The Returner"
+},
+{
+"ko": "새 게임을 5번 시작했다.",
+"mt": "I started five new games.",
+"en": "Started a new game 5 times."
+},
+{
+"ko": "교단의 최후",
+"mt": "The end of the Faith.",
+"en": "The Cult's End"
+},
+{
+"ko": "교단이 해체되는 결말을 처음 보았다.",
+"mt": "The Faith first saw the ending of the breakup.",
+"en": "Saw your cult dissolved for the first time."
+},
+{
+"ko": "불굴의 교주",
+"mt": "The Bridger of the Labyrinth.",
+"en": "The Indomitable Leader"
+},
+{
+"ko": "교단이 해체되는 결말을 3번 보았다.",
+"mt": "The Church saw the end of the breakup three times.",
+"en": "Saw your cult dissolved 3 times."
+},
+{
+"ko": "삼세번 교주",
+"mt": "Three, Three, Three times.",
+"en": "Third Time's the Charm"
+},
+{
+"ko": "교단을 3번 창설했다.",
+"mt": "I've created three of the cults.",
+"en": "Founded a cult 3 times."
+},
+{
+"ko": "업적의 지배자",
+"mt": "The ruler of the achievement.",
+"en": "Master of Achievements"
+},
+{
+"ko": "다른 업적을 모두 달성했다.",
+"mt": "I've achieved other achievements.",
+"en": "Unlocked every other achievement."
+},
+{
+"ko": "매혹의 미소",
+"mt": "A Fascination of Smiles",
+"en": "Captivating Smile"
+},
+{
+"ko": "교주의 미소 한 번에 사람들이 발길을 멈춥니다.",
+"mt": "People stop at the same time as the mating smile.",
+"en": "One smile from the leader stops people in their tracks."
+},
+{
+"ko": "밤의 집회",
+"mt": "Meeting of the Night",
+"en": "Night Gatherings"
+},
+{
+"ko": "은밀한 밤 집회가 신도들을 붙잡아 둡니다.",
+"mt": "It's a secret night's rally that holds the faithful together.",
+"en": "Secret night gatherings keep the followers close."
+},
+{
+"ko": "유혹의 언변",
+"mt": "It's at the very core of temptation.",
+"en": "Seductive Tongue"
+},
+{
+"ko": "달콤한 말이 설교에 스며듭니다.",
+"mt": "Sweet words creep into the sermon.",
+"en": "Sweet words seep into every sermon."
+},
+{
+"ko": "쾌락의 축복",
+"mt": "The blessings of pleasure.",
+"en": "Blessing of Pleasure"
+},
+{
+"ko": "욕망을 죄가 아닌 축복이라 가르칩니다.",
+"mt": "It teaches that desire is a blessing, not a sin.",
+"en": "You teach that desire is a blessing, not a sin."
+},
+{
+"ko": "황홀경",
+"mt": "A trance.",
+"en": "Ecstasy"
+},
+{
+"ko": "의식이 거듭될수록 신도들이 깊이 빠져듭니다.",
+"mt": "And the more you get conscious, the deeper you get into the crowd.",
+"en": "With every ritual, the followers sink deeper."
+},
+{
+"ko": "사랑의 서약",
+"mt": "A vow of love.",
+"en": "Vow of Love"
+},
+{
+"ko": "교주와의 서약이 신도들을 묶습니다.",
+"mt": "The commitment to the principal binds the faithful.",
+"en": "A vow to the leader binds the followers."
+},
+{
+"ko": "무희의 축제",
+"mt": "Muhee's Festival",
+"en": "Dancers' Festival"
+},
+{
+"ko": "축제 무대가 사람들을 끌어모읍니다.",
+"mt": "The festival stage attracts people.",
+"en": "The festival stage draws in the crowds."
+},
+{
+"ko": "육체의 사원",
+"mt": "The Temple of the Body.",
+"en": "Temple of the Flesh"
+},
+{
+"ko": "쾌락의 사원에 신도들이 해마다 모여듭니다.",
+"mt": "Believers flock to the mosques of pleasure every year.",
+"en": "Every year, followers flock to the temple of pleasure."
+},
+{
+"ko": "노래하는 성가대",
+"mt": "Singing choirs",
+"en": "The Singing Choir"
+},
+{
+"ko": "성가대의 노래가 해마다 새 신도를 부릅니다.",
+"mt": "The choir song sings new Shinto songs every year.",
+"en": "Every year, the choir's song calls new followers."
+},
+{
+"ko": "매혹된 권력자들",
+"mt": "Infatuated powers.",
+"en": "Enthralled Powers"
+},
+{
+"ko": "권세가들도 교주의 매력에 무릎을 꿇습니다.",
+"mt": "The authorities kneel over the charm of the dogma.",
+"en": "Even the powerful kneel before the leader's charm."
+},
+{
+"ko": "사랑의 편지",
+"mt": "A letter of love.",
+"en": "Love Letters"
+},
+{
+"ko": "교주의 편지 한 통이 신도의 마음을 붙잡습니다.",
+"mt": "A letter from the dogma captures the heart of the Shintoist.",
+"en": "A single letter from the leader captures a follower's heart."
+},
+{
+"ko": "금단의 의식",
+"mt": "The consciousness of the forbidden.",
+"en": "Forbidden Rites"
+},
+{
+"ko": "세상이 금한 의식이 신앙을 뜨겁게 달굽니다.",
+"mt": "The world's forbidden rituals heat the faith.",
+"en": "Rites the world forbids set faith ablaze."
+},
+{
+"ko": "영화 같은 설교",
+"mt": "Like a movie or something.",
+"en": "Cinematic Sermons"
+},
+{
+"ko": "설교가 한 편의 영화처럼 사람들을 사로잡습니다.",
+"mt": "It captures people like a movie.",
+"en": "Your sermons hold people like a feature film."
+},
+{
+"ko": "쾌락의 군주",
+"mt": "The Prince of Pleasure.",
+"en": "Lord of Pleasure"
+},
+{
+"ko": "교주는 쾌락 그 자체가 되었습니다.",
+"mt": "It became pleasure itself.",
+"en": "The leader has become pleasure itself."
+},
+{
+"ko": "뮤즈의 교단",
+"mt": "Music cults.",
+"en": "Cult of the Muse"
+},
+{
+"ko": "예술가들이 교단을 찬미하는 작품을 쏟아냅니다.",
+"mt": "Artists pour out a work that celebrates the Faith.",
+"en": "Artists pour out works in praise of the cult."
+},
+{
+"ko": "헌금 바구니",
+"mt": "Donations basket.",
+"en": "The Offering Basket"
+},
+{
+"ko": "바구니가 돌 때마다 동전 소리가 커집니다.",
+"mt": "Every time a basket goes around, the sound of a coin becomes loud.",
+"en": "Every time the basket goes round, the clink of coins grows louder."
+},
+{
+"ko": "십일조",
+"mt": "Tithing",
+"en": "Tithe"
+},
+{
+"ko": "신도들이 해마다 수입의 십분의 일을 바칩니다.",
+"mt": "The faithful pay a tenth of their income every year.",
+"en": "Every year, followers give a tenth of their income."
+},
+{
+"ko": "축복의 대가",
+"mt": "The reward of blessing.",
+"en": "The Price of Blessing"
+},
+{
+"ko": "축복에도 값이 있다고 가르칩니다.",
+"mt": "They teach that there are rewards to blessings.",
+"en": "You teach that even blessings have a price."
+},
+{
+"ko": "교단 사업",
+"mt": "Church business.",
+"en": "Cult Enterprises"
+},
+{
+"ko": "교단 이름으로 가게와 공장을 엽니다.",
+"mt": "Opens shop and factory in the name of the bridge.",
+"en": "You open shops and factories in the cult's name."
+},
+{
+"ko": "황금 제단",
+"mt": "Golden altar",
+"en": "The Golden Altar"
+},
+{
+"ko": "제단의 금장식이 해마다 늘어납니다.",
+"mt": "The gold decorations of the altar grow every year.",
+"en": "The altar's gold ornaments grow every year."
+},
+{
+"ko": "부적 판매",
+"mt": "Charming",
+"en": "Talisman Sales"
+},
+{
+"ko": "교주가 축복한 부적이 날개 돋친 듯 팔립니다.",
+"mt": "The Buddha's blessing is on the wing, and it's sold.",
+"en": "Talismans blessed by the leader sell like hotcakes."
+},
+{
+"ko": "정직한 상회",
+"mt": "An Honest Communicatory",
+"en": "The Honest Trading House"
+},
+{
+"ko": "교단 상회가 정직한 장사로 이름을 얻습니다.",
+"mt": "College counsel gets a name for honest business.",
+"en": "The cult's trading house earns a name for honest business."
+},
+{
+"ko": "큰손 후원자",
+"mt": "Big Hand Supporter",
+"en": "Big Patrons"
+},
+{
+"ko": "재력가들이 교단 뒤를 봐줍니다.",
+"mt": "And they're looking at the back of the hierarchy.",
+"en": "The wealthy back the cult from the shadows."
+},
+{
+"ko": "교단 은행",
+"mt": "Bridge bank.",
+"en": "The Cult Bank"
+},
+{
+"ko": "신도들의 저금이 해마다 교단을 불립니다.",
+"mt": "The membership's savings are called the hierarchy every year.",
+"en": "Every year, the followers' savings swell the cult's fortune."
+},
+{
+"ko": "교단 재단",
+"mt": "Doggy Foundation",
+"en": "The Cult Foundation"
+},
+{
+"ko": "재단을 세워 돈이 돈을 부르게 합니다.",
+"mt": "They set up a foundation to raise money.",
+"en": "You set up a foundation so money makes more money."
+},
+{
+"ko": "무역 조합",
+"mt": "Trade Unions",
+"en": "Trade Guild"
+},
+{
+"ko": "교단의 상인들이 먼 곳까지 장사를 나갑니다.",
+"mt": "College merchants go to distant places.",
+"en": "The cult's merchants take their trade to distant lands."
+},
+{
+"ko": "면죄의 값",
+"mt": "The value of indulgences",
+"en": "The Price of Absolution"
+},
+{
+"ko": "헌금으로 죄를 씻을 수 있다고 선포합니다.",
+"mt": "We declare that we can cleanse ourselves of sins by means of donations.",
+"en": "You proclaim that offerings can wash away sin."
+},
+{
+"ko": "장학 재단",
+"mt": "The Foundation of Scholarships",
+"en": "Scholarship Fund"
+},
+{
+"ko": "번 돈으로 학생들을 돕자 존경이 따라옵니다.",
+"mt": "With money earned, we help our students. Respect follows.",
+"en": "When your earnings help students, respect follows."
+},
+{
+"ko": "황금 교단",
+"mt": "Golden Brigadiers",
+"en": "The Golden Cult"
+},
+{
+"ko": "교단의 곳간은 이제 마르지 않습니다.",
+"mt": "The hierarchy is no longer dry.",
+"en": "The cult's storehouses never run dry."
+},
+{
+"ko": "번영의 신전",
+"mt": "The Temple of Prosperity.",
+"en": "Temple of Prosperity"
+},
+{
+"ko": "정당한 부가 신전을 빛나게 합니다.",
+"mt": "The rightful wealth lights up the temple.",
+"en": "Honest wealth makes the temple shine."
+},
+{
+"ko": "함께 먹는 밥",
+"mt": "We eat together.",
+"en": "Breaking Bread Together"
+},
+{
+"ko": "한솥밥을 먹으며 신도들이 가까워집니다.",
+"mt": "They eat a pot of rice, and they get closer to the faithful.",
+"en": "Sharing meals from one pot brings the followers closer."
+},
+{
+"ko": "잔치의 날",
+"mt": "The day of the feast.",
+"en": "Feast Day"
+},
+{
+"ko": "해마다 큰 잔치가 신앙을 북돋웁니다.",
+"mt": "Every year a big feast builds faith.",
+"en": "A great feast every year lifts the faith."
+},
+{
+"ko": "풍요의 기도",
+"mt": "The prayer of plenty.",
+"en": "Prayer for Plenty"
+},
+{
+"ko": "배불리 먹게 해 달라는 기도에 힘이 실립니다.",
+"mt": "It's hard for me to pray for food.",
+"en": "Prayers to eat one's fill gain power."
+},
+{
+"ko": "공동 부엌",
+"mt": "Common kitchen",
+"en": "The Communal Kitchen"
+},
+{
+"ko": "굶는 이웃을 불러 밥을 먹입니다.",
+"mt": "We call hungry neighbors to eat.",
+"en": "You invite hungry neighbors in and feed them."
+},
+{
+"ko": "넘치는 식탁",
+"mt": "Full table.",
+"en": "An Overflowing Table"
+},
+{
+"ko": "식탁이 넉넉할수록 마음도 넉넉해집니다.",
+"mt": "The more we have, the more we have.",
+"en": "The fuller the table, the fuller the heart."
+},
+{
+"ko": "배부른 신도",
+"mt": "I'm sorry, I'm sorry.",
+"en": "Well-Fed Followers"
+},
+{
+"ko": "잘 먹은 신도들이 힘차게 일합니다.",
+"mt": "The well-eaten believers work hard.",
+"en": "Well-fed followers work with vigor."
+},
+{
+"ko": "교단 농장",
+"mt": "Bridge Farm",
+"en": "The Cult Farm"
+},
+{
+"ko": "교단 농장의 수확이 곳간을 채웁니다.",
+"mt": "The fruit of the school farm fills the barn.",
+"en": "The cult farm's harvest fills the storehouse."
+},
+{
+"ko": "추수 감사제",
+"mt": "Thanksgiving.",
+"en": "Harvest Thanksgiving"
+},
+{
+"ko": "가을마다 새 얼굴들이 잔치에 찾아옵니다.",
+"mt": "Every fall, new faces come to the feast.",
+"en": "Every autumn, new faces come to the feast."
+},
+{
+"ko": "공동 경작",
+"mt": "Cooperative Gardening",
+"en": "Communal Farming"
+},
+{
+"ko": "함께 땀 흘린 신도들이 하나가 됩니다.",
+"mt": "Together, we have a group of people that sweat and sweat together.",
+"en": "Followers who sweat together become one."
+},
+{
+"ko": "만찬의 성찬",
+"mt": "The feast of the evening.",
+"en": "The Sacred Supper"
+},
+{
+"ko": "만찬 자체가 예배가 됩니다.",
+"mt": "The evening meal itself becomes a service.",
+"en": "The supper itself becomes worship."
+},
+{
+"ko": "곡간 개방",
+"mt": "Open Track",
+"en": "Open Granaries"
+},
+{
+"ko": "흉년이면 곡간을 열어 이웃을 먹입니다.",
+"mt": "If it's a bad year, it opens up a barn to feed its neighbors.",
+"en": "In lean years, you open the granaries to feed your neighbors."
+},
+{
+"ko": "탐식의 축제",
+"mt": "A festival of gluttony.",
+"en": "Festival of Gluttony"
+},
+{
+"ko": "끝없는 축제에 사람들이 몰려듭니다.",
+"mt": "There's people at endless festivals.",
+"en": "Endless festivals draw the crowds."
+},
+{
+"ko": "계절의 제례",
+"mt": "Seasonal ritual.",
+"en": "Seasonal Rites"
+},
+{
+"ko": "계절마다 올리는 제례가 신앙을 깊게 합니다.",
+"mt": "And every season, the ritual is deeply religious.",
+"en": "Rites held each season deepen the faith."
+},
+{
+"ko": "풍요의 왕국",
+"mt": "The kingdom of plenty.",
+"en": "Kingdom of Plenty"
+},
+{
+"ko": "교단 안에는 굶는 사람이 없습니다.",
+"mt": "No one's hungry inside the cult.",
+"en": "No one in the cult goes hungry."
+},
+{
+"ko": "대지의 어머니",
+"mt": "Mother of the Earth",
+"en": "Mother Earth"
+},
+{
+"ko": "교단은 굶주린 이들의 어머니가 되었습니다.",
+"mt": "The Faith became the mother of the hungry.",
+"en": "The cult has become a mother to the hungry."
+},
+{
+"ko": "위계의 시작",
+"mt": "Beginning of the hierarchy",
+"en": "The First Ranks"
+},
+{
+"ko": "교단에 처음으로 직분이 생깁니다.",
+"mt": "It's the first place in the Church.",
+"en": "The cult establishes its first offices."
+},
+{
+"ko": "엄격한 규율",
+"mt": "Strict Discipline",
+"en": "Strict Discipline"
+},
+{
+"ko": "규율이 엄할수록 명령이 잘 섭니다.",
+"mt": "The stricter the rules, the better the orders.",
+"en": "The stricter the rules, the better orders are followed."
+},
+{
+"ko": "교주의 명령",
+"mt": "Critic Commands",
+"en": "The Leader's Command"
+},
+{
+"ko": "교주의 말 한마디가 설교보다 무겁습니다.",
+"mt": "A word of dogma is heavier than a sermon.",
+"en": "A single word from the leader weighs more than a sermon."
+},
+{
+"ko": "감시의 눈",
+"mt": "Eyes of surveillance.",
+"en": "Watchful Eyes"
+},
+{
+"ko": "측근들이 신도들을 살핍니다.",
+"mt": "The amygdalas look after the faithful.",
+"en": "Your inner circle keeps an eye on the followers."
+},
+{
+"ko": "절대 권위",
+"mt": "It's absolute authority.",
+"en": "Absolute Authority"
+},
+{
+"ko": "교주의 권위가 하늘에 닿습니다.",
+"mt": "The doctrinal authority reaches into the sky.",
+"en": "The leader's authority reaches the heavens."
+},
+{
+"ko": "정치 인맥",
+"mt": "A Political Necessity",
+"en": "Political Connections"
+},
+{
+"ko": "관공서에 교단의 사람을 심습니다.",
+"mt": "We're planting a group of people in an official office.",
+"en": "You plant the cult's people in government offices."
+},
+{
+"ko": "교단 신문",
+"mt": "The Church's newspaper.",
+"en": "The Cult Newspaper"
+},
+{
+"ko": "교단의 신문이 거리마다 뿌려집니다.",
+"mt": "The church's newspapers are scattered across the streets.",
+"en": "The cult's newspaper is handed out on every street."
+},
+{
+"ko": "충성 서약",
+"mt": "Loyalty Vows",
+"en": "Oath of Loyalty"
+},
+{
+"ko": "신도들이 교주에게 충성을 맹세합니다.",
+"mt": "The faithful swear allegiance to their masters.",
+"en": "The followers swear loyalty to the leader."
+},
+{
+"ko": "지역 유지들",
+"mt": "Regional maintenance.",
+"en": "Local Notables"
+},
+{
+"ko": "지역의 유지들이 교단의 편에 섭니다.",
+"mt": "Local residents are on the side of the cult.",
+"en": "The region's notables side with the cult."
+},
+{
+"ko": "교단 근위대",
+"mt": "The Faith Guard.",
+"en": "The Cult Guard"
+},
+{
+"ko": "교주를 지키는 근위대가 생깁니다.",
+"mt": "There's a watchdog guarding the principal.",
+"en": "A guard is formed to protect the leader."
+},
+{
+"ko": "의회 진출",
+"mt": "Parliament’s Steps",
+"en": "Entering Parliament"
+},
+{
+"ko": "교단 출신 의원이 의회에 들어갑니다.",
+"mt": "A member of the Faith goes to Congress.",
+"en": "A member of the cult takes a seat in parliament."
+},
+{
+"ko": "신의 대리인",
+"mt": "God's representative.",
+"en": "God's Proxy"
+},
+{
+"ko": "교주가 곧 신의 뜻이라 선포합니다.",
+"mt": "The principal declares that he is God's will.",
+"en": "You proclaim that the leader's will is God's will."
+},
+{
+"ko": "국교의 꿈",
+"mt": "The dream of the State religion.",
+"en": "Dream of a State Religion"
+},
+{
+"ko": "교단을 나라의 종교로 만들 꿈을 꿉니다.",
+"mt": "I dream of turning a cult into a nation's religion.",
+"en": "You dream of making the cult the nation's religion."
+},
+{
+"ko": "지상의 왕좌",
+"mt": "The Throne on Earth.",
+"en": "An Earthly Throne"
+},
+{
+"ko": "교단은 이제 하나의 왕국입니다.",
+"mt": "The Faith is now a kingdom.",
+"en": "The cult is now a kingdom."
+},
+{
+"ko": "신정 국가",
+"mt": "A new nation.",
+"en": "Theocracy"
+},
+{
+"ko": "교단의 법이 곧 나라의 법이 되었습니다.",
+"mt": "The law of the Faith soon became the law of the country.",
+"en": "The cult's law has become the law of the land."
+},
+{
+"ko": "소박한 식사",
+"mt": "A simple meal.",
+"en": "Simple Meals"
+},
+{
+"ko": "적게 먹고 많이 기도합니다.",
+"mt": "They eat less and pray a lot.",
+"en": "Eat little and pray much."
+},
+{
+"ko": "침묵 수행",
+"mt": "Silence performed.",
+"en": "Vow of Silence"
+},
+{
+"ko": "침묵 속에서 신의 목소리를 듣습니다.",
+"mt": "I hear God's voice in silence.",
+"en": "In silence, you hear the voice of God."
+},
+{
+"ko": "금욕의 서원",
+"mt": "A vow of abstinence.",
+"en": "Vow of Abstinence"
+},
+{
+"ko": "욕망을 끊겠다는 서원이 기도를 맑게 합니다.",
+"mt": "The library clears the prayers of those who want to break their desire.",
+"en": "A vow to renounce desire clears the prayers."
+},
+{
+"ko": "정결한 몸",
+"mt": "Clean body.",
+"en": "Pure Body"
+},
+{
+"ko": "정결한 몸에는 불운이 깃들기 어렵습니다.",
+"mt": "It's hard to get bad luck on a clean body.",
+"en": "Misfortune struggles to cling to a pure body."
+},
+{
+"ko": "깊은 명상",
+"mt": "Deep Meditation",
+"en": "Deep Meditation"
+},
+{
+"ko": "명상이 깊어질수록 신앙이 단단해집니다.",
+"mt": "The deeper the meditation, the stronger the faith.",
+"en": "The deeper the meditation, the firmer the Piety."
+},
+{
+"ko": "고요한 성소",
+"mt": "The Holy of God in Godrine",
+"en": "Silent Sanctuary"
+},
+{
+"ko": "고요한 성소에서 해마다 마음을 다잡습니다.",
+"mt": "Every year in the Holy of Gozan.",
+"en": "Each year, the silent sanctuary steadies the heart."
+},
+{
+"ko": "명상 교실",
+"mt": "Meditation Classes",
+"en": "Meditation Classes"
+},
+{
+"ko": "누구나 와서 명상을 배울 수 있습니다.",
+"mt": "Anyone can come and learn meditation.",
+"en": "Anyone can come and learn to meditate."
+},
+{
+"ko": "욕망의 극복",
+"mt": "Overcoming Desires",
+"en": "Overcoming Desire"
+},
+{
+"ko": "욕망이 고개를 들어도 쉽게 자라지 않습니다.",
+"mt": "Desires don't grow easily when they raise their heads.",
+"en": "Even when desire stirs, it does not easily grow."
+},
+{
+"ko": "단식 수련회",
+"mt": "A hunger retreat.",
+"en": "Fasting Retreat"
+},
+{
+"ko": "몸을 비울수록 기도가 깊어집니다.",
+"mt": "The more empty you are, the deeper your prayers are.",
+"en": "The emptier the body, the deeper the prayer."
+},
+{
+"ko": "수도원",
+"mt": "Monastery",
+"en": "Monastery"
+},
+{
+"ko": "수도원의 담장이 세상의 불운을 막아 줍니다.",
+"mt": "The walls of the monastery protect the world from evil.",
+"en": "The monastery walls keep the world's misfortune out."
+},
+{
+"ko": "고요의 서",
+"mt": "The Book of Silence",
+"en": "The Book of Stillness"
+},
+{
+"ko": "명상의 가르침을 책으로 엮습니다.",
+"mt": "I mix the teachings of meditation with books.",
+"en": "You bind the teachings of meditation into a book."
+},
+{
+"ko": "무소유",
+"mt": "NOBODY",
+"en": "Non-Possession"
+},
+{
+"ko": "가진 것을 모두 내려놓습니다.",
+"mt": "You put everything you have down.",
+"en": "You let go of everything you own."
+},
+{
+"ko": "마음 수련원",
+"mt": "Trainer of the mind.",
+"en": "Retreat Center"
+},
+{
+"ko": "수련원에서 해마다 신도들이 마음을 다잡습니다.",
+"mt": "And every year in the training school, the faithful take hold of it.",
+"en": "Each year at the retreat center, followers steady their hearts."
+},
+{
+"ko": "해탈의 경지",
+"mt": "It's a kill zone.",
+"en": "Liberation"
+},
+{
+"ko": "어떤 불운도 교주의 마음을 흔들지 못합니다.",
+"mt": "No misfortune can shake the spirit of the dogmatist.",
+"en": "No misfortune can shake the cult leader's mind."
+},
+{
+"ko": "깨달음의 등불",
+"mt": "The light of enlightenment.",
+"en": "Lamp of Enlightenment"
+},
+{
+"ko": "교주의 깨달음이 등불처럼 신도들을 비춥니다.",
+"mt": "Its epiphany illuminates the believers like a lamp.",
+"en": "Your enlightenment lights the way for your followers like a lamp."
+},
+{
+"ko": "이웃 사랑",
+"mt": "Neighbor love.",
+"en": "Love Thy Neighbor"
+},
+{
+"ko": "이웃을 돕는 교단이라는 말이 돕니다.",
+"mt": "It turns out that it's a cult that helps people in their neighborhood.",
+"en": "Word spreads of a cult that helps its neighbors."
+},
+{
+"ko": "무료 급식",
+"mt": "Free lunch.",
+"en": "Free Meals"
+},
+{
+"ko": "배고픈 이에게 밥을 나눕니다.",
+"mt": "Let's feed the hungry.",
+"en": "You share food with the hungry."
+},
+{
+"ko": "병자 돌봄",
+"mt": "Care for the sick.",
+"en": "Caring for the Sick"
+},
+{
+"ko": "아픈 이의 곁을 지킵니다.",
+"mt": "Keep the sick one's side.",
+"en": "You stay by the side of the sick."
+},
+{
+"ko": "구호 기금",
+"mt": "Relief Fund",
+"en": "Relief Fund"
+},
+{
+"ko": "해마다 구호 기금이 이웃을 돕습니다.",
+"mt": "Every year, relief funds help their neighbors.",
+"en": "Each year, the relief fund helps your neighbors."
+},
+{
+"ko": "베푸는 손",
+"mt": "Hand-to-hand.",
+"en": "Giving Hand"
+},
+{
+"ko": "베풀수록 교단의 이름이 빛납니다.",
+"mt": "The more you give it, the more the cult's name glows.",
+"en": "The more you give, the brighter the cult's name shines."
+},
+{
+"ko": "고아원",
+"mt": "The orphanage.",
+"en": "Orphanage"
+},
+{
+"ko": "교단이 갈 곳 없는 아이들을 품습니다.",
+"mt": "The Faith embraces children who have nowhere to go.",
+"en": "The cult takes in children with nowhere to go."
+},
+{
+"ko": "무료 진료소",
+"mt": "Free clinic.",
+"en": "Free Clinic"
+},
+{
+"ko": "돈이 없어도 누구나 치료받을 수 있습니다.",
+"mt": "Anyone who doesn't have the money can be cured.",
+"en": "Anyone can be treated, even without money."
+},
+{
+"ko": "자선 바자회",
+"mt": "Philanthropy Barza.",
+"en": "Charity Bazaar"
+},
+{
+"ko": "바자회 수익이 모두 이웃에게 갑니다.",
+"mt": "All of that back-to-back revenue goes to your neighbors.",
+"en": "Every cent of the bazaar's proceeds goes to the neighbors."
+},
+{
+"ko": "야학",
+"mt": "Baseball",
+"en": "Night School"
+},
+{
+"ko": "밤마다 배움에 목마른 이들을 가르칩니다.",
+"mt": "They teach people who are tired of learning at night.",
+"en": "Every night, you teach those who thirst for learning."
+},
+{
+"ko": "화해의 손길",
+"mt": "The hand of reconciliation.",
+"en": "Hand of Reconciliation"
+},
+{
+"ko": "다른 종교와도 손을 잡습니다.",
+"mt": "They hold hands with other religions.",
+"en": "You join hands even with other religions."
+},
+{
+"ko": "교단 병원",
+"mt": "The Faith Hospital.",
+"en": "Cult Hospital"
+},
+{
+"ko": "교단 병원이 해마다 이웃의 신뢰를 쌓습니다.",
+"mt": "Church hospitals build up their neighbor's trust every year.",
+"en": "Each year, the cult hospital builds your neighbors' trust."
+},
+{
+"ko": "만인의 집",
+"mt": "The House of Man.",
+"en": "House for All"
+},
+{
+"ko": "누구든 교단의 문을 두드릴 수 있습니다.",
+"mt": "Anyone can knock on the door of the Faith.",
+"en": "Anyone may knock on the cult's door."
+},
+{
+"ko": "학교 설립",
+"mt": "The School Established",
+"en": "Founding a School"
+},
+{
+"ko": "교단의 학교에서 아이들이 자랍니다.",
+"mt": "Children grow up in a school of the Faith.",
+"en": "Children grow up in the cult's school."
+},
+{
+"ko": "성인의 교단",
+"mt": "Saints' Faith.",
+"en": "Cult of Saints"
+},
+{
+"ko": "세상은 교단을 성인들의 공동체라 부릅니다.",
+"mt": "The world calls the cult a community of adults.",
+"en": "The world calls your cult a community of saints."
+},
+{
+"ko": "치유의 성전",
+"mt": "The Temple of Healing.",
+"en": "Temple of Healing"
+},
+{
+"ko": "병든 이들이 성전을 찾아 길게 줄을 섭니다.",
+"mt": "The sick line up in search of the temple.",
+"en": "The sick line up in long queues outside the temple."
+},
+{
+"ko": "견디는 마음",
+"mt": "A Persistent Heart",
+"en": "Enduring Heart"
+},
+{
+"ko": "참는 법을 배운 신도들이 쉽게 흔들리지 않습니다.",
+"mt": "The faithful who learn to be patient are not easily shaken.",
+"en": "Followers who learn to endure are not easily shaken."
+},
+{
+"ko": "고행의 길",
+"mt": "The road of high road.",
+"en": "Path of Penance"
+},
+{
+"ko": "실패한 기도마저 수행이 됩니다.",
+"mt": "Even failed prayers are carried out.",
+"en": "Even failed prayers become part of the discipline."
+},
+{
+"ko": "긴 기도",
+"mt": "Long Prayer",
+"en": "Long Prayers"
+},
+{
+"ko": "밤을 새우는 기도가 몸과 마음을 단련합니다.",
+"mt": "The nightly prayers train the body and the mind.",
+"en": "All-night prayer tempers body and mind."
+},
+{
+"ko": "단련된 신도",
+"mt": "Trained God.",
+"en": "Tempered Followers"
+},
+{
+"ko": "고된 수행을 거친 신도들이 쉽게 꺾이지 않습니다.",
+"mt": "Hard-working believers don't break easily.",
+"en": "Followers hardened by grueling discipline do not easily break."
+},
+{
+"ko": "버팀목",
+"mt": "All right, all right, all right, all right, all right, all right.",
+"en": "Pillar of Support"
+},
+{
+"ko": "시련이 거듭될수록 교단이 단단해집니다.",
+"mt": "The more trials we face, the harder the faith becomes.",
+"en": "The more trials you face, the stronger the cult becomes."
+},
+{
+"ko": "시련의 해석",
+"mt": "Interpretation of trials.",
+"en": "Reading the Trials"
+},
+{
+"ko": "실패한 설교와 포교도 시련으로 받아들입니다.",
+"mt": "They accept it as a trial of failed sermons and Taoism.",
+"en": "Even failed sermons and outreach are accepted as trials."
+},
+{
+"ko": "비폭력 서약",
+"mt": "Nonviolence Vows",
+"en": "Vow of Nonviolence"
+},
+{
+"ko": "어떤 핍박에도 손을 들지 않겠다고 맹세합니다.",
+"mt": "I swear I will not raise my hand to any persecution.",
+"en": "You swear never to raise a hand, whatever the persecution."
+},
+{
+"ko": "굳건한 반석",
+"mt": "Stable Rock",
+"en": "Solid Rock"
+},
+{
+"ko": "해마다 몸과 교단이 더 단단해집니다.",
+"mt": "Year after year, the body and the body become stronger.",
+"en": "Each year, your body and your cult grow stronger."
+},
+{
+"ko": "침묵 행진",
+"mt": "Silence march.",
+"en": "Silent March"
+},
+{
+"ko": "말없이 걷는 행렬이 사람들의 마음을 움직입니다.",
+"mt": "A walking matrix moves people's minds.",
+"en": "A wordless procession moves people's hearts."
+},
+{
+"ko": "박해를 이긴 자들",
+"mt": "The victors of persecution.",
+"en": "Those Who Overcame Persecution"
+},
+{
+"ko": "박해를 견딘 이야기가 신도들을 뜨겁게 합니다.",
+"mt": "Stories that have endured persecution heat the faithful.",
+"en": "Tales of enduring persecution set your followers on fire."
+},
+{
+"ko": "옥중 서신",
+"mt": "Imprisoned correspondence.",
+"en": "Letters from Prison"
+},
+{
+"ko": "갇힌 교주의 편지가 신도들을 일으켜 세웁니다.",
+"mt": "A prisoner-of-the-art letter raises the faithful.",
+"en": "Letters from the imprisoned cult leader rally the followers."
+},
+{
+"ko": "끝없는 인내",
+"mt": "Endurance Without End",
+"en": "Endless Patience"
+},
+{
+"ko": "어떤 실패도 반만큼만 아픕니다.",
+"mt": "Any failure is half the pain.",
+"en": "Every failure hurts only half as much."
+},
+{
+"ko": "박해의 기록",
+"mt": "Record of the persecution.",
+"en": "Record of Persecution"
+},
+{
+"ko": "박해의 기록이 세상의 양심을 깨웁니다.",
+"mt": "The record of persecution breaks the conscience of the world.",
+"en": "The record of persecution awakens the world's conscience."
+},
+{
+"ko": "순교자의 교단",
+"mt": "The Martyrs' Faith",
+"en": "Cult of Martyrs"
+},
+{
+"ko": "불운이 닥쳐도 교단은 무너지지 않습니다.",
+"mt": "Even when misfortune strikes, the Faith does not break down.",
+"en": "Even when misfortune strikes, the cult does not fall."
+},
+{
+"ko": "불굴의 행렬",
+"mt": "The matrix of the indomitable",
+"en": "Unbreakable Procession"
+},
+{
+"ko": "꺾이지 않는 행렬 앞에 세상이 길을 엽니다.",
+"mt": "The world opens its way to a matrix that never breaks.",
+"en": "The world parts before a procession that will not bend."
+},
+{
+"ko": "정직한 장부",
+"mt": "An honest ledger.",
+"en": "Honest Ledger"
+},
+{
+"ko": "장부를 숨기지 않습니다.",
+"mt": "Do not hide the books.",
+"en": "You hide nothing in the books."
+},
+{
+"ko": "투명한 헌금",
+"mt": "Opaque Contributions",
+"en": "Transparent Offerings"
+},
+{
+"ko": "헌금이 어디에 쓰이는지 모두가 압니다.",
+"mt": "Everybody knows where the donations are being spent.",
+"en": "Everyone knows where the Offerings go."
+},
+{
+"ko": "진실의 설교",
+"mt": "A sermon of truth.",
+"en": "Sermon of Truth"
+},
+{
+"ko": "꾸밈없는 설교가 마음에 닿습니다.",
+"mt": "I like the simple sermons.",
+"en": "Unadorned sermons reach the heart."
+},
+{
+"ko": "교리 연구",
+"mt": "A Study of Doctrine",
+"en": "Doctrine Study"
+},
+{
+"ko": "교리를 다듬고 또 다듬습니다.",
+"mt": "I refine the doctrine, and then I shape the doctrine.",
+"en": "You refine the Doctrine again and again."
+},
+{
+"ko": "깨끗한 이름",
+"mt": "Clean Name",
+"en": "Clean Name"
+},
+{
+"ko": "정직이 쌓일수록 이름이 깨끗해집니다.",
+"mt": "The more honesty you accumulate, the cleaner your name becomes.",
+"en": "The more honesty builds up, the cleaner your name becomes."
+},
+{
+"ko": "공개 회계",
+"mt": "Public Accounting",
+"en": "Public Accounts"
+},
+{
+"ko": "해마다 회계를 공개해 신뢰를 얻습니다.",
+"mt": "Every year, you open your accounts, and you earn your trust.",
+"en": "Each year, you publish your accounts and earn trust."
+},
+{
+"ko": "율법 학교",
+"mt": "Law School",
+"en": "School of Law"
+},
+{
+"ko": "교리를 법처럼 가르치는 학교를 엽니다.",
+"mt": "Opens a school where doctrines are taught like law.",
+"en": "You open a school that teaches Doctrine like law."
+},
+{
+"ko": "경전 편찬",
+"mt": "Composing the holy writings",
+"en": "Compiling the Scripture"
+},
+{
+"ko": "교리를 정리한 경전을 펴냅니다.",
+"mt": "It's a canon of doctrine.",
+"en": "You publish a scripture that sets the Doctrine in order."
+},
+{
+"ko": "교단 법정",
+"mt": "The Faith Court.",
+"en": "Cult Tribunal"
+},
+{
+"ko": "교단 안의 다툼을 교단 법정이 가립니다.",
+"mt": "The Faith Court covers the dispute within the Faith.",
+"en": "The cult tribunal settles disputes within the cult."
+},
+{
+"ko": "정의로운 판결",
+"mt": "A Righteous Decision",
+"en": "Righteous Verdict"
+},
+{
+"ko": "공정한 판결이 교단을 지켜 줍니다.",
+"mt": "A fair judgment protects the Faith.",
+"en": "Fair verdicts protect the cult."
+},
+{
+"ko": "성문 율법",
+"mt": "Gate Law",
+"en": "Written Law"
+},
+{
+"ko": "율법을 글로 새겨 모두가 지키게 합니다.",
+"mt": "They write down the law, and they keep it to everyone.",
+"en": "You carve the law into writing so all must keep it."
+},
+{
+"ko": "부패 척결",
+"mt": "Demise.",
+"en": "Rooting Out Corruption"
+},
+{
+"ko": "교단 안의 부패를 뿌리 뽑습니다.",
+"mt": "It's rooted in corruption within the cult.",
+"en": "You tear out corruption within the cult by the roots."
+},
+{
+"ko": "공정한 재판관",
+"mt": "Fair Judge",
+"en": "Fair Judge"
+},
+{
+"ko": "공정한 재판이 해마다 교리를 다듬습니다.",
+"mt": "A fair trial presupposes doctrine every year.",
+"en": "Each year, fair trials refine the Doctrine."
+},
+{
+"ko": "빛의 교단",
+"mt": "The Bridge of Light",
+"en": "Cult of Light"
+},
+{
+"ko": "빛 아래 숨길 것이 없는 교단이 되었습니다.",
+"mt": "It became a cult that had nothing to hide under the light.",
+"en": "Your cult has nothing left to hide in the light."
+},
+{
+"ko": "율법의 수호자",
+"mt": "Guardian of the Law.",
+"en": "Guardian of the Law"
+},
+{
+"ko": "교단은 흔들리지 않는 율법 위에 섰습니다.",
+"mt": "The Faith stood on a law that did not waver.",
+"en": "The cult stands on an unshakable law."
+},
+{
+"ko": "승천",
+"mt": "Ascension",
+"en": "Ascension"
+},
+{
+"ko": "두 개의 핵이 하나로 합쳐질 때 신은 그릇을 벗고 하늘에 오릅니다.",
+"mt": "When two nuclei come together, God takes the bowl off and goes up into the sky.",
+"en": "When the two cores become one, the god sheds the vessel and rises to the heavens."
+},
+{
+"ko": "기적의 근원",
+"mt": "The source of miracles.",
+"en": "Source of Miracles"
+},
+{
+"ko": "그릇 안의 신성이 마침내 온전히 깨어납니다.",
+"mt": "The divinity in the vessel finally breaks down completely.",
+"en": "The divinity within the vessel finally awakens in full."
+},
+{
+"ko": "말씀의 근원",
+"mt": "The source of the word.",
+"en": "Source of the Word"
+},
+{
+"ko": "신의 말이 곧 세상의 법이 됩니다.",
+"mt": "God's word becomes the law of the world.",
+"en": "The god's word becomes the law of the world."
+},
+{
+"ko": "자애의 근원",
+"mt": "The source of compassion.",
+"en": "Source of Charity"
+},
+{
+"ko": "끝없는 자비가 교단을 감싸는 성벽이 됩니다.",
+"mt": "An endless mercy becomes a wall around the Faith.",
+"en": "Endless mercy becomes a rampart around the cult."
+},
+{
+"ko": "쾌락의 근원",
+"mt": "The source of pleasure.",
+"en": "Source of Pleasure"
+},
+{
+"ko": "쾌락과 신성이 구별되지 않는 경지에 이릅니다.",
+"mt": "It reaches a point where there is no distinction between pleasure and divinity.",
+"en": "You reach a state where pleasure and divinity are one."
+},
+{
+"ko": "치유의 손",
+"mt": "The hand of healing.",
+"en": "Healing Hand"
+},
+{
+"ko": "병든 몸과 마음을 어루만지는 기적.",
+"mt": "The miracle of touching sick bodies and hearts.",
+"en": "Miracles that soothe sick bodies and minds."
+},
+{
+"ko": "이적의 권능",
+"mt": "The power of the enemy.",
+"en": "Power of Wonders"
+},
+{
+"ko": "세상의 이치를 뒤집는 기적.",
+"mt": "A miracle that reverses the face of the world.",
+"en": "Miracles that overturn the laws of the world."
+},
+{
+"ko": "계시의 문",
+"mt": "The door of Revelation.",
+"en": "Gate of Revelation"
+},
+{
+"ko": "신의 뜻을 말로 옮기는 길.",
+"mt": "The way to convey the will of God.",
+"en": "The path of putting the god's will into words."
+},
+{
+"ko": "예지의 눈",
+"mt": "Forecast Eye",
+"en": "Eye of Foresight"
+},
+{
+"ko": "다가올 일을 먼저 보는 눈.",
+"mt": "The eyes first to see what's coming.",
+"en": "An eye that sees what is coming before it comes."
+},
+{
+"ko": "자기 수양",
+"mt": "The Membler",
+"en": "Self-Discipline"
+},
+{
+"ko": "스스로를 다스리는 덕.",
+"mt": "The virtue of governing yourself.",
+"en": "The virtue of mastering yourself."
+},
+{
+"ko": "이웃을 향한 덕",
+"mt": "It's a virtue to your neighbor.",
+"en": "Virtue Toward Others"
+},
+{
+"ko": "남을 향해 열린 덕.",
+"mt": "The virtue of opening it up to others.",
+"en": "Virtue that opens itself to others."
+},
+{
+"ko": "육체의 욕망",
+"mt": "The Desire of the Flesh",
+"en": "Desires of the Flesh"
+},
+{
+"ko": "몸이 원하는 것을 긍정하는 길.",
+"mt": "The way to be positive about what the body wants.",
+"en": "The path that embraces what the body craves."
+},
+{
+"ko": "세속의 욕망",
+"mt": "Secular Desires",
+"en": "Worldly Desires"
+},
+{
+"ko": "부와 권세를 탐하는 길.",
+"mt": "The road to wealth and power.",
+"en": "The path that covets wealth and power."
+},
+{
+"ko": "강건한 그릇",
+"mt": "Strong bowl.",
+"en": "Sturdy Vessel"
+},
+{
+"ko": "숙주의 몸이 신의 힘을 버틸 만큼 단단해집니다.",
+"mt": "The host's body is hard enough to withstand God's power.",
+"en": "The host's body grows hard enough to bear the god's power."
+},
+{
+"ko": "생명의 축복",
+"mt": "The blessing of life.",
+"en": "Blessing of Life"
+},
+{
+"ko": "살아 있음의 기쁨으로 신도들을 불태웁니다.",
+"mt": "They burn the faithful with the joy of being alive.",
+"en": "You set your followers ablaze with the joy of being alive."
+},
+{
+"ko": "손끝의 온기",
+"mt": "The warmth of the fingertips.",
+"en": "Warm Fingertips"
+},
+{
+"ko": "손길 한 번에 아픈 이가 일어섭니다.",
+"mt": "There's a sick person with one hand.",
+"en": "One touch, and the sick rise to their feet."
+},
+{
+"ko": "치유의 행렬",
+"mt": "The matrix of healing.",
+"en": "Procession of Healing"
+},
+{
+"ko": "치유를 바라는 사람들이 줄지어 찾아옵니다.",
+"mt": "There's a line of people who want to heal.",
+"en": "Those seeking healing come in long lines."
+},
+{
+"ko": "불굴의 육신",
+"mt": "The indomitable body.",
+"en": "Indomitable Flesh"
+},
+{
+"ko": "어떤 상처도 그릇을 쓰러뜨리지 못합니다.",
+"mt": "No wound can knock the vessel down.",
+"en": "No wound can bring the vessel down."
+},
+{
+"ko": "단단한 살결",
+"mt": "Solid flesh.",
+"en": "Hardened Skin"
+},
+{
+"ko": "칼날의 환영도 살갗을 뚫지 못합니다.",
+"mt": "The visions of the blade can't penetrate the skin.",
+"en": "Not even phantom blades can pierce your skin."
+},
+{
+"ko": "피의 재생",
+"mt": "Play Blood",
+"en": "Blood Renewal"
+},
+{
+"ko": "해가 바뀔 때마다 몸이 스스로 회복됩니다.",
+"mt": "Every year changes, the body recovers itself.",
+"en": "Each new year, your body heals itself."
+},
+{
+"ko": "고요한 정신",
+"mt": "It's a spirit.",
+"en": "Still Mind"
+},
+{
+"ko": "숙주의 정신이 신의 목소리에 흔들리지 않습니다.",
+"mt": "The spirit of the host is not swayed by God's voice.",
+"en": "The host's mind does not waver at the god's voice."
+},
+{
+"ko": "황홀의 전염",
+"mt": "Explosive infection.",
+"en": "Contagious Ecstasy"
+},
+{
+"ko": "당신의 황홀이 신도들에게 번져 갑니다.",
+"mt": "Your ecstasy spreads to the faithful.",
+"en": "Your ecstasy spreads to your followers."
+},
+{
+"ko": "꿈속의 방문",
+"mt": "A Visit in a Dream",
+"en": "Visits in Dreams"
+},
+{
+"ko": "신도들의 꿈에 찾아가 믿음을 심습니다.",
+"mt": "I go to the dreams of the faithful, and I plant faith.",
+"en": "You enter your followers' dreams and plant Faith."
+},
+{
+"ko": "깨어 있는 눈",
+"mt": "Awakening Eyes",
+"en": "Wakeful Eyes"
+},
+{
+"ko": "잠들지 않는 정신이 교감을 깊게 합니다.",
+"mt": "The sleeplessness of the mind communicates deeply.",
+"en": "A mind that never sleeps deepens your Commune."
+},
+{
+"ko": "흔들리지 않는 마음",
+"mt": "A Heart That Is Unmovable",
+"en": "Unshakable Heart"
+},
+{
+"ko": "다른 신의 저주가 마음을 흔들지 못합니다.",
+"mt": "The curse of other gods cannot shake your heart.",
+"en": "Other gods' curses cannot shake your heart."
+},
+{
+"ko": "침묵을 찢는 목소리",
+"mt": "The voice that breaks the silence.",
+"en": "Voice That Tears the Silence"
+},
+{
+"ko": "묵언회의 침묵이 당신에게 닿지 않습니다.",
+"mt": "The silence of the silence does not reach you.",
+"en": "The Silent Order's silence cannot reach you."
+},
+{
+"ko": "맑은 밤",
+"mt": "A clear night",
+"en": "Clear Nights"
+},
+{
+"ko": "악몽 없는 밤이 정신을 지킵니다.",
+"mt": "Nights without nightmares keep their senses.",
+"en": "Nights free of nightmares guard your Mentality."
+},
+{
+"ko": "황금의 손길",
+"mt": "The hand of gold.",
+"en": "Golden Touch"
+},
+{
+"ko": "손이 닿는 곳마다 재물이 모여듭니다.",
+"mt": "And wherever you can reach it, you get wealth.",
+"en": "Wealth gathers wherever your hand falls."
+},
+{
+"ko": "넘치는 봉헌",
+"mt": "Overwhelming Dedication",
+"en": "Overflowing Offerings"
+},
+{
+"ko": "신도들이 앞다투어 봉헌합니다.",
+"mt": "The faithful rush to the dedication.",
+"en": "Followers scramble to make Offerings."
+},
+{
+"ko": "금빛 헌금함",
+"mt": "Golden Donations",
+"en": "Golden Offering Box"
+},
+{
+"ko": "헌금함이 비는 날이 없습니다.",
+"mt": "Donations are never empty.",
+"en": "The offering box is never empty."
+},
+{
+"ko": "기적의 축성",
+"mt": "Miracle Jupiter.",
+"en": "Miraculous Consecration"
+},
+{
+"ko": "기적으로 건물을 세우는 법을 깨칩니다.",
+"mt": "They break down the way to build a building by a miracle.",
+"en": "You learn to raise buildings by miracle."
+},
+{
+"ko": "봉인된 금고",
+"mt": "Sealed vault.",
+"en": "Sealed Vault"
+},
+{
+"ko": "교단의 재산이 쉽게 빠져나가지 않습니다.",
+"mt": "It's not easy to get out of the church's property.",
+"en": "The cult's Wealth does not easily slip away."
+},
+{
+"ko": "숨겨진 장부",
+"mt": "Hidden Book",
+"en": "Hidden Ledger"
+},
+{
+"ko": "조사관이 찾지 못하는 장부가 건물을 지킵니다.",
+"mt": "The inspectors don't find the building.",
+"en": "Ledgers the inspectors cannot find protect your buildings."
+},
+{
+"ko": "단단한 주춧돌",
+"mt": "Solid Stomach",
+"en": "Solid Cornerstone"
+},
+{
+"ko": "교단의 재물이 쉽게 흩어지지 않습니다.",
+"mt": "It's not easy to scatter the wealth of the Faith.",
+"en": "The cult's riches do not easily scatter."
+},
+{
+"ko": "드러난 신성",
+"mt": "A Divine Revealed",
+"en": "Divinity Revealed"
+},
+{
+"ko": "기적이 그릇을 덜 갉아먹습니다.",
+"mt": "Miracles eat less of the bowl.",
+"en": "Miracles wear down the vessel less."
+},
+{
+"ko": "이적의 무대",
+"mt": "The stage of the enemy.",
+"en": "Stage of Wonders"
+},
+{
+"ko": "기적을 보러 온 군중이 신도가 됩니다.",
+"mt": "The crowds who came to see the miracles became believers.",
+"en": "Crowds who come to see miracles become followers."
+},
+{
+"ko": "군중을 부르는 빛",
+"mt": "A light that calls for a crowd.",
+"en": "Light That Summons Crowds"
+},
+{
+"ko": "하늘의 빛이 사람들을 불러 모읍니다.",
+"mt": "The light of the sky calls people together.",
+"en": "Light from the heavens draws people together."
+},
+{
+"ko": "멈추지 않는 기적",
+"mt": "A Miracle That Will Not Stop",
+"en": "Unceasing Miracles"
+},
+{
+"ko": "기적이 잘 끊기지 않습니다.",
+"mt": "Miracles don't stop very well.",
+"en": "Your miracles are rarely interrupted."
+},
+{
+"ko": "베일 속의 기적",
+"mt": "Miracles in the Vale",
+"en": "Veiled Miracles"
+},
+{
+"ko": "기적이 세상의 눈에 덜 띕니다.",
+"mt": "Miracles are less visible in the world.",
+"en": "Your miracles draw less of the world's attention."
+},
+{
+"ko": "흔적 없는 이적",
+"mt": "An Unscathed Enemy",
+"en": "Traceless Wonders"
+},
+{
+"ko": "기적이 끝나면 아무 증거도 남지 않습니다.",
+"mt": "When the miracle is over, there's no evidence left.",
+"en": "When a miracle ends, no evidence remains."
+},
+{
+"ko": "아끼는 힘",
+"mt": "The power you care about.",
+"en": "Thrifty Power"
+},
+{
+"ko": "작은 기적에는 힘을 덜 씁니다.",
+"mt": "Small miracles use less power.",
+"en": "Small miracles cost less divine power."
+},
+{
+"ko": "깊은 경건",
+"mt": "Deep Godly Devotion",
+"en": "Deep Devotion"
+},
+{
+"ko": "신 스스로의 확신이 깊어집니다.",
+"mt": "God's own confidence deepens.",
+"en": "The god's own conviction deepens."
+},
+{
+"ko": "불타는 믿음",
+"mt": "TERRORING FAITH",
+"en": "Burning Faith"
+},
+{
+"ko": "뜨거운 믿음이 신도들에게 옮겨 붙습니다.",
+"mt": "They're attracted to the faith in hot water.",
+"en": "Fiery Faith spreads to your followers."
+},
+{
+"ko": "타오르는 기도",
+"mt": "A LIGHT OF PRAY",
+"en": "Blazing Prayer"
+},
+{
+"ko": "기도할수록 신의 확신이 커집니다.",
+"mt": "The more I pray, the more I believe in God.",
+"en": "The more you pray, the stronger the god's conviction."
+},
+{
+"ko": "믿음의 불씨",
+"mt": "The light of faith.",
+"en": "Ember of Faith"
+},
+{
+"ko": "작은 믿음도 금세 불길이 됩니다.",
+"mt": "Small faith quickly becomes a fire.",
+"en": "Even a little faith soon becomes a blaze."
+},
+{
+"ko": "무너지지 않는 믿음",
+"mt": "Faith That Does Not Break Down",
+"en": "Unbreakable Faith"
+},
+{
+"ko": "외부의 공격에도 신앙이 쉽게 식지 않습니다.",
+"mt": "It's not easy to cool down on the outside attacks.",
+"en": "Followers' Faith does not easily cool under outside attack."
+},
+{
+"ko": "흔들림 없는 무릎",
+"mt": "Kneel unstucked.",
+"en": "Unwavering Knees"
+},
+{
+"ko": "신도들이 쉽게 고개를 들지 않습니다.",
+"mt": "The faithful don't raise their heads easily.",
+"en": "Followers do not easily raise their heads in defiance."
+},
+{
+"ko": "배교자의 귀환",
+"mt": "The return of apostates.",
+"en": "Return of the Apostate"
+},
+{
+"ko": "떠나려던 신도가 발길을 돌립니다.",
+"mt": "The Shintoist who was about to leave turned around.",
+"en": "Followers about to leave turn back."
+},
+{
+"ko": "새겨진 말씀",
+"mt": "It's an inscription.",
+"en": "Engraved Word"
+},
+{
+"ko": "말씀이 돌에 새긴 듯 단단해집니다.",
+"mt": "It hardens as if it were carved in a stone.",
+"en": "Your word grows firm as if carved in stone."
+},
+{
+"ko": "선포의 나팔",
+"mt": "The trumpet of proclamation.",
+"en": "Trumpet of Proclamation"
+},
+{
+"ko": "말씀이 거리로 울려 퍼집니다.",
+"mt": "The words ring in the street.",
+"en": "Your word rings through the streets."
+},
+{
+"ko": "거리의 설교",
+"mt": "A sermon on the street.",
+"en": "Street Sermons"
+},
+{
+"ko": "광장에서도 계시가 통합니다.",
+"mt": "It's in the square.",
+"en": "Your Revelation works even in the public square."
+},
+{
+"ko": "경전의 확산",
+"mt": "The spread of holy writings",
+"en": "Spreading Scripture"
+},
+{
+"ko": "경전을 읽은 이들이 찾아옵니다.",
+"mt": "The people who read the sacred writings are coming.",
+"en": "Those who read your scripture come seeking you."
+},
+{
+"ko": "논쟁의 방패",
+"mt": "The shield of contention.",
+"en": "Shield of Debate"
+},
+{
+"ko": "기성 종교의 반박이 교리를 깎지 못합니다.",
+"mt": "There's no doctrinal rebuttal of organized religion.",
+"en": "Rebuttals from established religions cannot erode your Doctrine."
+},
+{
+"ko": "이단 반박",
+"mt": "Identical rebuttal.",
+"en": "Refuting Heresy"
+},
+{
+"ko": "이단이라는 공격을 되받아칩니다.",
+"mt": "They're being attacked by Ethan.",
+"en": "You turn accusations of heresy back on the accusers."
+},
+{
+"ko": "정통의 증명",
+"mt": "Theoretic evidence.",
+"en": "Proof of Orthodoxy"
+},
+{
+"ko": "다른 신들이 트집을 잡기 어려워집니다.",
+"mt": "It's hard for other gods to capture.",
+"en": "Other gods find it harder to pick faults."
+},
+{
+"ko": "신과의 끈",
+"mt": "The bond with God.",
+"en": "Bond with the God"
+},
+{
+"ko": "신과 그릇을 잇는 끈이 굵어집니다.",
+"mt": "The string that connects the God to the vessel grows thick.",
+"en": "The bond between god and vessel grows thicker."
+},
+{
+"ko": "넘치는 신성",
+"mt": "Overwhelming Divine",
+"en": "Overflowing Divinity"
+},
+{
+"ko": "기적에 드는 힘이 줄고 교감이 쉬워집니다.",
+"mt": "The power to perform miracles is reduced, and the connection becomes easier.",
+"en": "Miracles cost less power and Commune comes easier."
+},
+{
+"ko": "끈의 공명",
+"mt": "Stick calling",
+"en": "Resonating Bond"
+},
+{
+"ko": "교감할 때마다 끈이 울립니다.",
+"mt": "Every time you engage, the string rings.",
+"en": "The bond resonates every time you Commune."
+},
+{
+"ko": "나누는 계시",
+"mt": "A DIVINE DESTRUCTION",
+"en": "Shared Revelation"
+},
+{
+"ko": "교감에서 얻은 환영을 신도들과 나눕니다.",
+"mt": "We share our visions with our fellow believers.",
+"en": "You share the visions from your Commune with your followers."
+},
+{
+"ko": "끊기지 않는 끈",
+"mt": "Sticks that don't break",
+"en": "Unbreakable Bond"
+},
+{
+"ko": "다른 신들이 끈을 끊기 어렵습니다.",
+"mt": "It's hard to break the cords of other gods.",
+"en": "Other gods struggle to sever your bond."
+},
+{
+"ko": "침묵 저항",
+"mt": "Silence resistance.",
+"en": "Silent Resistance"
+},
+{
+"ko": "접신 봉쇄를 버텨 냅니다.",
+"mt": "We'll hold the contact seal.",
+"en": "You withstand attempts to block your Communion."
+},
+{
+"ko": "신들의 장막",
+"mt": "The tabernacle of the gods.",
+"en": "Veil of the Gods"
+},
+{
+"ko": "다른 신들의 눈을 가리는 장막을 칩니다.",
+"mt": "The curtain covers the eyes of the other gods.",
+"en": "You draw a veil over the eyes of other gods."
+},
+{
+"ko": "알려진 이름",
+"mt": "Known Name",
+"en": "Known Name"
+},
+{
+"ko": "신의 이름이 세상에 퍼집니다.",
+"mt": "God's name spreads to the world.",
+"en": "The god's name spreads across the world."
+},
+{
+"ko": "예언의 적중",
+"mt": "The enemy of prophecy.",
+"en": "Prophecy Fulfilled"
+},
+{
+"ko": "들어맞은 예언이 사람들을 불러 모읍니다.",
+"mt": "The true prophecy calls people together.",
+"en": "Prophecies that come true draw people in."
+},
+{
+"ko": "입소문",
+"mt": "Word of the Word",
+"en": "Word of Mouth"
+},
+{
+"ko": "예언이 입에서 입으로 퍼집니다.",
+"mt": "Prophecy spreads out of the mouth.",
+"en": "Your prophecies spread from mouth to mouth."
+},
+{
+"ko": "들어맞은 예언",
+"mt": "PROPHECY AFFECTED",
+"en": "True Prophecies"
+},
+{
+"ko": "예언이 맞을 때마다 명망이 오릅니다.",
+"mt": "Every time the prophecy comes true, the reputation rises.",
+"en": "Each fulfilled prophecy raises your Reputation."
+},
+{
+"ko": "흔들리지 않는 평판",
+"mt": "A reputation that doesn't waver.",
+"en": "Steadfast Repute"
+},
+{
+"ko": "나쁜 소문이 쉽게 퍼지지 않습니다.",
+"mt": "Bad rumors don't spread easily.",
+"en": "Bad rumors do not spread easily."
+},
+{
+"ko": "소문 잠재우기",
+"mt": "Synchronising folder",
+"en": "Silencing Rumors"
+},
+{
+"ko": "거짓 기적이라는 소문이 힘을 잃습니다.",
+"mt": "The rumor that it's a false miracle loses its power.",
+"en": "Rumors of false miracles lose their power."
+},
+{
+"ko": "언론의 벗",
+"mt": "Friends of the Press",
+"en": "Friend of the Press"
+},
+{
+"ko": "기자들이 당신에게 우호적입니다.",
+"mt": "The reporters are friendly to you.",
+"en": "Reporters are friendly toward you."
+},
+{
+"ko": "욕망을 다스리는 힘이 커집니다.",
+"mt": "You have the power to govern your desires.",
+"en": "Your power to master desire grows."
+},
+{
+"ko": "청빈의 감화",
+"mt": "The Blue Binding",
+"en": "Inspiring Poverty"
+},
+{
+"ko": "소박한 신의 모습에 신도들이 감동합니다.",
+"mt": "I'm impressed by the humble God.",
+"en": "Followers are moved by the god's humble ways."
+},
+{
+"ko": "소박한 식탁",
+"mt": "A simple table.",
+"en": "Humble Table"
+},
+{
+"ko": "함께 먹는 소박한 밥이 신앙을 키웁니다.",
+"mt": "The simple rice we eat together grows in faith.",
+"en": "Simple meals shared together nourish Piety."
+},
+{
+"ko": "본보기의 삶",
+"mt": "Life as an example.",
+"en": "A Life of Example"
+},
+{
+"ko": "바깥에서도 교단을 좋게 봅니다.",
+"mt": "I like the school outside as well.",
+"en": "Even outsiders view the cult favorably."
+},
+{
+"ko": "드러내지 않는 힘",
+"mt": "Power that doesn't show up.",
+"en": "Hidden Strength"
+},
+{
+"ko": "다른 신들의 시기를 덜 삽니다.",
+"mt": "I buy less time for other gods.",
+"en": "You draw less envy from other gods."
+},
+{
+"ko": "몸을 낮춤",
+"mt": "Lower yourself.",
+"en": "Lowering Yourself"
+},
+{
+"ko": "신들의 눈에 덜 띕니다.",
+"mt": "It's less visible to the gods.",
+"en": "You catch the gods' eyes less often."
+},
+{
+"ko": "조용한 행보",
+"mt": "A quiet walk.",
+"en": "Quiet Steps"
+},
+{
+"ko": "세상의 의혹을 덜 삽니다.",
+"mt": "They're less suspicious of the world.",
+"en": "You draw less suspicion from the world."
+},
+{
+"ko": "인내의 미덕",
+"mt": "The virtue of patience.",
+"en": "Virtue of Patience"
+},
+{
+"ko": "오래 견디는 힘이 커집니다.",
+"mt": "It takes a lot of time to put up with it.",
+"en": "Your power to endure grows."
+},
+{
+"ko": "기다림의 열매",
+"mt": "The Fruits of Waiting",
+"en": "Fruits of Waiting"
+},
+{
+"ko": "시간이 흐를수록 신앙이 쌓입니다.",
+"mt": "Over time, faith builds up.",
+"en": "Piety accumulates as time passes."
+},
+{
+"ko": "느린 전도",
+"mt": "Slow conduct",
+"en": "Slow Outreach"
+},
+{
+"ko": "해마다 조용히 신도가 늘어납니다.",
+"mt": "Every year there's a silent rise in loyalty.",
+"en": "Each year, followers quietly increase."
+},
+{
+"ko": "오래 타는 촛불",
+"mt": "Long-burned candles.",
+"en": "Long-Burning Candle"
+},
+{
+"ko": "해마다 신앙이 조금씩 깊어집니다.",
+"mt": "Each year, the faith deepens a little bit.",
+"en": "Each year, Piety deepens a little."
+},
+{
+"ko": "견디는 교단",
+"mt": "A Faith That Endures",
+"en": "Enduring Cult"
+},
+{
+"ko": "어떤 공세에도 신도들이 버팁니다.",
+"mt": "It's the believers in any way.",
+"en": "Your followers hold out against any assault."
+},
+{
+"ko": "버티는 신도들",
+"mt": "Persistent Believers",
+"en": "Steadfast Followers"
+},
+{
+"ko": "개종 공세에도 쉽게 떠나지 않습니다.",
+"mt": "It doesn't leave easy to convert.",
+"en": "They do not easily leave, even under conversion campaigns."
+},
+{
+"ko": "포위 속의 노래",
+"mt": "A Song in the Siege",
+"en": "Song Under Siege"
+},
+{
+"ko": "포위당해도 신앙이 식지 않습니다.",
+"mt": "Even when surrounded, it doesn't cool down.",
+"en": "Even under siege, Piety does not cool."
+},
+{
+"ko": "자애의 미덕",
+"mt": "The virtue of compassion.",
+"en": "Virtue of Charity"
+},
+{
+"ko": "남을 향한 마음이 커집니다.",
+"mt": "You have a greater heart for others.",
+"en": "Your heart for others grows."
+},
+{
+"ko": "베풂이 사람들을 교단으로 이끕니다.",
+"mt": "Behem draws people to the cult.",
+"en": "Generosity draws people to the cult."
+},
+{
+"ko": "구호의 줄",
+"mt": "Line of Relief",
+"en": "Relief Line"
+},
+{
+"ko": "구호소의 줄이 신도의 줄이 됩니다.",
+"mt": "A reduction in the appeal is a reduction in the faith.",
+"en": "The relief line becomes a line of followers."
+},
+{
+"ko": "나누는 빵",
+"mt": "Shared bread",
+"en": "Shared Bread"
+},
+{
+"ko": "나눔과 함께 치유가 잘 듣습니다.",
+"mt": "I listen to healing with sharing.",
+"en": "With sharing, Healing works better."
+},
+{
+"ko": "감사의 방벽",
+"mt": "Thank you.",
+"en": "Wall of Gratitude"
+},
+{
+"ko": "은혜 입은 이웃이 교단을 감쌉니다.",
+"mt": "A gracious neighbor wraps up a cult.",
+"en": "Grateful neighbors shield the cult."
+},
+{
+"ko": "은혜 입은 이웃",
+"mt": "A favored neighbor.",
+"en": "Grateful Neighbors"
+},
+{
+"ko": "이웃들이 나쁜 소문을 막아 줍니다.",
+"mt": "Neighbors stop bad rumors.",
+"en": "Neighbors stamp out bad rumors for you."
+},
+{
+"ko": "자선의 증언",
+"mt": "The testimony of charity.",
+"en": "Testimony of Charity"
+},
+{
+"ko": "자선의 기록이 의혹을 덮습니다.",
+"mt": "The record of charity covers doubts.",
+"en": "A record of charity buries suspicion."
+},
+{
+"ko": "청렴의 미덕",
+"mt": "The virtue of modesty.",
+"en": "Virtue of Integrity"
+},
+{
+"ko": "떳떳함이 힘이 됩니다.",
+"mt": "It's empowering to be proud.",
+"en": "A clear conscience becomes strength."
+},
+{
+"ko": "깨끗한 교단이라는 평이 퍼집니다.",
+"mt": "It's called a clean cult.",
+"en": "Word spreads of a clean cult."
+},
+{
+"ko": "투명한 장부",
+"mt": "Opaque Book",
+"en": "Transparent Ledger"
+},
+{
+"ko": "장부를 공개할수록 명망이 오릅니다.",
+"mt": "The more you open the book, the more you get a reputation.",
+"en": "The more you open the books, the higher your Reputation."
+},
+{
+"ko": "정직한 설교",
+"mt": "An honest sermon.",
+"en": "Honest Sermon"
+},
+{
+"ko": "꾸밈없는 말이 신도들을 움직입니다.",
+"mt": "The simple words move the faithful.",
+"en": "Plain words move your followers."
+},
+{
+"ko": "털어도 먼지 없는",
+"mt": "No dust, no dust, no dust.",
+"en": "Nothing to Find"
+},
+{
+"ko": "조사가 와도 잃을 것이 적습니다.",
+"mt": "Investigators have little to lose.",
+"en": "Even when investigators come, you have little to lose."
+},
+{
+"ko": "조사의 무력화",
+"mt": "Insults of research.",
+"en": "Neutralizing Investigations"
+},
+{
+"ko": "압류를 피할 길이 생깁니다.",
+"mt": "There's a way to avoid it.",
+"en": "You find ways to avoid seizure."
+},
+{
+"ko": "결백의 증명",
+"mt": "Proof of innocentness",
+"en": "Proof of Innocence"
+},
+{
+"ko": "세상의 의혹이 덜 쌓입니다.",
+"mt": "There's less doubt in the world.",
+"en": "The world's suspicion builds up more slowly."
+},
+{
+"ko": "타오르는 육욕",
+"mt": "A TERROR EXUTION",
+"en": "Burning Lust"
+},
+{
+"ko": "몸의 열기가 그릇을 데웁니다.",
+"mt": "The body heats the vessel.",
+"en": "The heat of the flesh warms the vessel."
+},
+{
+"ko": "유혹의 손짓",
+"mt": "The hand of temptation.",
+"en": "Beckoning Temptation"
+},
+{
+"ko": "유혹이 신도들을 깊이 묶습니다.",
+"mt": "The temptation is a deep bond between the believers.",
+"en": "Temptation binds your followers deeply."
+},
+{
+"ko": "간택의 밤",
+"mt": "The Night of the House",
+"en": "Night of the Chosen"
+},
+{
+"ko": "간택받은 밤의 기억이 신앙이 됩니다.",
+"mt": "The memory of the night that was chosen becomes a faith.",
+"en": "The memory of being chosen for a night becomes Piety."
+},
+{
+"ko": "매혹의 향",
+"mt": "A Fascination",
+"en": "Enchanting Scent"
+},
+{
+"ko": "향연이 잘 풀립니다.",
+"mt": "It's a great release.",
+"en": "Your Feasts go more smoothly."
+},
+{
+"ko": "쾌락의 회복",
+"mt": "The restoration of pleasure.",
+"en": "Restorative Pleasure"
+},
+{
+"ko": "쾌락이 그릇을 더 깊이 회복시킵니다.",
+"mt": "Pleasure restores the vessel more deeply.",
+"en": "Pleasure restores the vessel more deeply."
+},
+{
+"ko": "살결의 온기",
+"mt": "Resolved to Live",
+"en": "Warmth of Skin"
+},
+{
+"ko": "살을 맞댄 밤이 몸을 되살립니다.",
+"mt": "The night of the day, flesh and flesh, they bring their bodies back to life.",
+"en": "Nights spent skin to skin revive the body."
+},
+{
+"ko": "달콤한 망각",
+"mt": "Sweet forget.",
+"en": "Sweet Oblivion"
+},
+{
+"ko": "쾌락이 정신의 상처를 덮습니다.",
+"mt": "Pleasure covers the wounds of the mind.",
+"en": "Pleasure covers the wounds of the mind."
+},
+{
+"ko": "끝없는 식욕",
+"mt": "An endless appetite.",
+"en": "Endless Appetite"
+},
+{
+"ko": "먹을수록 그릇이 차오릅니다.",
+"mt": "The more you eat, the bigger the bowl.",
+"en": "The more you eat, the fuller the vessel grows."
+},
+{
+"ko": "성찬의 초대",
+"mt": "An Invitation to the Communion",
+"en": "Invitation to the Banquet"
+},
+{
+"ko": "잔칫상이 사람들을 불러 모읍니다.",
+"mt": "The rest of the world calls people together.",
+"en": "The feast table draws people in."
+},
+{
+"ko": "넘치는 잔칫상",
+"mt": "Overwhelmed",
+"en": "Overflowing Feast"
+},
+{
+"ko": "배부른 이들이 신도가 됩니다.",
+"mt": "Those who are out there become believers.",
+"en": "Those with full bellies become followers."
+},
+{
+"ko": "신의 포도주",
+"mt": "The wine of God.",
+"en": "Wine of the God"
+},
+{
+"ko": "한 잔의 포도주가 믿음을 키웁니다.",
+"mt": "A glass of wine builds faith.",
+"en": "A single cup of wine strengthens Faith."
+},
+{
+"ko": "배부른 그릇",
+"mt": "Distributed bowl.",
+"en": "Sated Vessel"
+},
+{
+"ko": "먹고 마신 만큼 그릇이 회복됩니다.",
+"mt": "The bowl recovers as much as you ate and drank.",
+"en": "The vessel recovers as much as you eat and drink."
+},
+{
+"ko": "보양의 식탁",
+"mt": "The table of caregiving.",
+"en": "Nourishing Table"
+},
+{
+"ko": "기름진 음식이 몸을 되살립니다.",
+"mt": "It's oiled, it's resuscitating.",
+"en": "Rich food revives the body."
+},
+{
+"ko": "두둑한 곳간",
+"mt": "It's a big place.",
+"en": "Full Granary"
+},
+{
+"ko": "배부른 신도는 쌀자루를 따라 떠나지 않습니다.",
+"mt": "The full Shinto doesn't follow the rice sacks.",
+"en": "Well-fed followers never leave for someone else's rice sacks."
+},
+{
+"ko": "황금의 갈망",
+"mt": "The longing for gold.",
+"en": "Lust for Gold"
+},
+{
+"ko": "재물에 대한 갈망이 힘이 됩니다.",
+"mt": "The craving for wealth becomes powerful.",
+"en": "Your craving for riches becomes power."
+},
+{
+"ko": "탐스러운 봉헌",
+"mt": "Desirable Dedication",
+"en": "Coveted Offerings"
+},
+{
+"ko": "더 큰 봉헌이 더 큰 축복을 부릅니다.",
+"mt": "A greater dedication is called a greater blessing.",
+"en": "Bigger Offerings summon bigger blessings."
+},
+{
+"ko": "황금 헌금 경쟁",
+"mt": "The Golden Contributions Race",
+"en": "Golden Offering Contest"
+},
+{
+"ko": "신도들이 봉헌 액수를 겨룹니다.",
+"mt": "The faithful make the dedication amount.",
+"en": "Followers compete over how much they offer."
+},
+{
+"ko": "사치의 위세",
+"mt": "It's a luxury advantage.",
+"en": "Display of Luxury"
+},
+{
+"ko": "사치가 곧 위엄이 됩니다.",
+"mt": "Luxury becomes dignity.",
+"en": "Luxury becomes majesty."
+},
+{
+"ko": "돈으로 사는 평화",
+"mt": "Peace on the Money",
+"en": "Peace Bought with Money"
+},
+{
+"ko": "돈이 세상의 의혹을 잠재웁니다.",
+"mt": "Money suppresses the doubts of the world.",
+"en": "Money quiets the world's suspicion."
+},
+{
+"ko": "은밀한 로비",
+"mt": "It's a secret lobby.",
+"en": "Secret Lobbying"
+},
+{
+"ko": "조사의 칼끝이 무뎌집니다.",
+"mt": "The ends of the investigation are dulled.",
+"en": "The edge of the investigation is dulled."
+},
+{
+"ko": "빼돌린 재산",
+"mt": "I'm sorry, I'm sorry.",
+"en": "Siphoned Assets"
+},
+{
+"ko": "압류당하기 전에 재산을 옮깁니다.",
+"mt": "They move their property before they are seized.",
+"en": "You move your Wealth before it can be seized."
+},
+{
+"ko": "군림의 야망",
+"mt": "The ambition of rule.",
+"en": "Ambition to Reign"
+},
+{
+"ko": "모든 것 위에 서려는 야망이 커집니다.",
+"mt": "The ambition to stand above everything becomes greater.",
+"en": "Your ambition to stand above all things grows."
+},
+{
+"ko": "정복의 깃발",
+"mt": "The flag of conquest.",
+"en": "Banner of Conquest"
+},
+{
+"ko": "세력이 거침없이 불어납니다.",
+"mt": "Power is growing.",
+"en": "Your power swells unchecked."
+},
+{
+"ko": "흡수 합병",
+"mt": "Absorption.",
+"en": "Hostile Takeover"
+},
+{
+"ko": "다른 교단의 신도를 삼킵니다.",
+"mt": "Take care of the Shinto religion of the other cults.",
+"en": "You swallow the followers of other cults."
+},
+{
+"ko": "옥좌의 위엄",
+"mt": "The dignity of the throne.",
+"en": "Majesty of the Throne"
+},
+{
+"ko": "높은 자리에서 위엄이 흘러내립니다.",
+"mt": "It's coming down from a height.",
+"en": "Majesty flows down from on high."
+},
+{
+"ko": "신들 앞의 오만",
+"mt": "Arrogance before the gods.",
+"en": "Arrogance Before the Gods"
+},
+{
+"ko": "다른 신들 앞에서도 고개를 숙이지 않습니다.",
+"mt": "They don't bow their heads in front of other gods.",
+"en": "You refuse to bow your head even before other gods."
+},
+{
+"ko": "무릎 꿇지 않는 신",
+"mt": "A god who never kneels.",
+"en": "The God Who Never Kneels"
+},
+{
+"ko": "신계의 압박이 덜 쌓입니다.",
+"mt": "There's less pressure on the new world.",
+"en": "Pressure from the heavens builds up more slowly."
+},
+{
+"ko": "철의 질서",
+"mt": "Order of Iron",
+"en": "Iron Order"
+},
+{
+"ko": "위엄이 쉽게 무너지지 않습니다.",
+"mt": "Dignity doesn't break down easily.",
+"en": "Your majesty does not easily crumble."
+}
+]

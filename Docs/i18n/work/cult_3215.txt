@@ -1,0 +1,215 @@
+3215|Followers borrow your books, and conversations multiply.
+3216|Borrowed books never come back.
+3217|Make kimchi together in the churchyard
+3218|Kimchi-making full of laughter binds the community together.
+3219|You hurt your back and suffer for days.
+3220|Make extra for elderly people living alone
+3221|The elderly are moved by the cult's care.
+3222|The ingredients cost a lot.
+3223|Hold a fellowship meal every week
+3224|Eating from the same pot turns followers into family.
+3225|The burden of preparation breeds complaints.
+3226|Hold it only once a month
+3227|At that pace, everyone enjoys it.
+3228|Some wish there were more.
+3229|Form district groups
+3230|Deep fellowship grows in each small group.
+3231|Rivalry springs up between the groups.
+3232|Have them meet only at church
+3233|Orderly gatherings are maintained.
+3234|People say it's too rigid.
+3235|Rally the whole cult to build the house
+3236|Before the new house, everyone joins hands.
+3237|Someone gets hurt during construction.
+3238|Raise donations and deliver them
+3239|The donations help the family get back on their feet.
+3240|The donations fall woefully short.
+3241|Hold a photo exhibition
+3242|Faces from days gone by bring memories blooming back.
+3243|Photos of those who left dampen the mood.
+3244|Return the photos to their owners
+3245|The recipients express their thanks.
+3246|Many photos never find their owners.
+3247|Climb along with them
+3248|The prayer offered together at the summit lingers long.
+3249|You twist your ankle and are carried down on someone's back.
+3250|Send only the young followers
+3251|The young people return with stronger friendships.
+3252|The elders feel left out.
+3253|Hold a joint sports day
+3254|Sweating together dissolves old grudges.
+3255|The games grow heated, and the quarrel worsens.
+3256|Call the representatives to reconcile
+3257|The representatives shake hands and make peace.
+3258|People say the cult leader took sides.
+3259|Form a choir
+3260|In harmony, they come to understand one another.
+3261|Sheet music and costumes cost money.
+3262|Have them join the church choir
+3263|The existing choir grows fuller.
+3264|Friction arises with the existing members.
+3265|Hold a holiday feast at the church
+3266|Lonely followers spend the holiday together.
+3267|Poorly prepared, it feels empty.
+3268|Invite them to your home
+3269|Followers are moved by the meal at your table.
+3270|Hosting guests wears you out.
+3271|Preach about gossip
+3272|Followers reflect on themselves.
+3273|Those who feel called out push back.
+3274|Admonish them privately
+3275|The gossiper apologizes.
+3276|He holds a grudge.
+3277|Add a sharing time to the service
+3278|Learning each other's pain brings them closer.
+3279|Some worry their private lives will get around.
+3280|Set up a prayer request box
+3281|Anonymous prayers warm the cult.
+3282|Hardly any notes come in.
+3283|Celebrate with a cult feast
+3284|The whole cult blesses the bride and groom.
+3285|The two families quarrel over costs.
+3286|Officiate the wedding yourself
+3287|A new family is born under your blessing.
+3288|You misspeak during the wedding address.
+3289|Plant a garden behind the church
+3290|You set a fellowship meal with vegetables grown together.
+3291|Pests destroy the harvest.
+3292|Just hand out potted plants
+3293|Small potted plants grow in every home.
+3294|The plants quickly wither.
+3295|Mediate yourself
+3296|The debt is settled, and the two reconcile.
+3297|Both of them resent you.
+3298|Pay it off from the cult's fund
+3299|Both are grateful to the cult.
+3300|Others start bringing their money problems too.
+3301|Pair them up as conversation partners
+3302|Friendships sprout across generations.
+3303|Only awkwardness remains.
+3304|Create separate groups for each generation
+3305|Faith grows in groups where each feels at ease.
+3306|People say the cult has split.
+3307|Clean together
+3308|In the spotless chapel, everyone shares a sense of pride.
+3309|The dust sets off endless coughing.
+3310|Hire a cleaning company
+3311|The spotless chapel welcomes guests.
+3312|The cleaners damage a sacred relic.
+3313|Volunteer to deliver coal briquettes
+3314|Faces smudged black, you all laugh together.
+3315|Someone slips on the ice and gets hurt.
+3316|Buy briquettes with the cult's fund
+3317|Families who spent a warm winter are grateful.
+3318|Briquette prices soar, and there's not enough.
+3319|Have everyone wear name tags
+3320|Calling each other by name brings people closer.
+3321|Many people lose their name tags.
+3322|Hold a time for introductions
+3323|You learn each other's stories.
+3324|Some find introducing themselves stressful.
+3325|Throw the doors open to the press
+3326|A favorable article runs.
+3327|The article portrays the cult as a sham.
+3328|Quiet daily life goes on.
+3329|A speculative article claims you have a lot to hide.
+3330|Take part every week
+3331|Residents are grateful for the cleaner streets.
+3332|Colds go around in the foul weather.
+3333|Do one big event
+3334|News spreads along with photos.
+3335|People call it a publicity stunt.
+3336|The resident is moved by the cult's consideration.
+3337|Sound still leaks out even after the work.
+3338|Visit to apologize and hand out rice cakes
+3339|You and the resident make up with a smile.
+3340|The resident refuses the rice cakes.
+3341|Attend the award ceremony
+3342|News of the award makes the cult's name shine.
+3343|The selection process stirs up controversy.
+3344|Give the credit to your followers
+3345|Followers feel proud.
+3346|People say you're too humble.
+3347|Hold a public explanation session
+3348|Your calm explanation clears up the residents' misunderstanding.
+3349|The session turns into a public denunciation.
+3350|Answer with good deeds
+3351|Quiet good deeds outlast the rumors.
+3352|The slander continues.
+3353|Accept the lecture
+3354|The students listen closely to your story.
+3355|Parents complain about religious coercion.
+3356|Share only your volunteer experience, without religion
+3357|The plain, sincere talk is well received.
+3358|People say it was boring.
+3359|Send a relief team
+3360|The cult's name shines at the relief site.
+3361|Someone gets hurt while volunteering.
+3362|Send relief supplies
+3363|The supplies reach the disaster victims.
+3364|The supplies end up in the wrong place.
+3365|Discipline him publicly
+3366|Strict handling preserves trust in the cult.
+3367|Some object that it goes too far.
+3368|Quietly counsel and help him
+3369|The follower quits gambling and returns.
+3370|The rumor grows, and the cult gets blamed too.
+3371|Welcome him and give him the podium
+3372|The cult's influence grows.
+3373|Critics call it a political church.
+3374|Keep your distance from politics
+3375|The cult earns trust for staying neutral.
+3376|The district mayor is put out.
+3377|Throw a celebration
+3378|Parents express their thanks to the cult.
+3379|The celebration costs money.
+3380|Expand the study rooms
+3381|More children gain a place to learn.
+3382|There aren't enough teachers, and it turns into a mess.
+3383|Scale down the event
+3384|People warm to the cult for being considerate of neighbors.
+3385|Station traffic volunteers
+3386|The orderly event wins praise.
+3387|A volunteer and a driver get into a dispute.
+3388|Appear on the show
+3389|After the broadcast, the cult's name is known nationwide.
+3390|The edited broadcast makes the cult look ridiculous.
+3391|Send materials only
+3392|A short but positive feature airs.
+3393|The materials are used in a distorted way.
+3394|Visit every month
+3395|The elderly eagerly count the days until the cult's people come.
+3396|The visiting schedule wears you down.
+3397|Visit only on holidays
+3398|Holiday visits bring the elderly great joy.
+3399|They're left feeling you don't come often enough.
+3400|Repaint the exterior walls
+3401|Residents warm to the freshened-up building.
+3402|The color is so loud you get teased for it.
+3403|Paint a mural with your followers
+3404|The mural becomes a neighborhood landmark.
+3405|The painting skills fall short, and it becomes a laughingstock.
+3406|Praise him in your sermon
+3407|Honesty becomes the cult's pride.
+3408|He is embarrassed.
+3409|Tell the local newspaper
+3410|A heartwarming story runs in the paper.
+3411|People say you're showing off.
+3412|Sponsor them
+3413|The merchants see the cult as a dependable neighbor.
+3414|The donation gets misused.
+3415|Help with volunteer labor
+3416|The merchants are grateful for your hard work.
+3417|The work is grueling, and you wear out.
+3418|Visit the pastor to talk
+3419|After talking, the pastor apologizes for the misunderstanding.
+3420|You get even harsher words in return.
+3421|Ignore it and focus on good deeds
+3422|The cult's fruits speak louder than words.
+3423|The rumor spreads through the neighborhood.
+3424|Call in a blood donation bus
+3425|Dozens roll up their sleeves.
+3426|Someone faints from dizziness after donating.
+3427|Donate blood first yourself
+3428|Following your lead, followers line up.
+3429|You suffer from anemia for days.

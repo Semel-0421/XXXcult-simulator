@@ -1,0 +1,150 @@
+1210|Faith grows in dreams where no order can reach.
+1211|The dream miracle fades into a blur.
+1212|Serve the police warm tea
+1213|A few officers' faces soften.
+1214|They refuse the tea.
+1215|Have followers come and go wearing masks
+1216|The procession of masked followers looks more like a mysterious rite.
+1217|The masked procession draws even more suspicion.
+1218|Dig a secret passage out the back door
+1219|Followers slip in and out, out of sight of the police bus.
+1220|The secret passage is discovered and the building is seized.
+1221|Hold the event in the temple courtyard
+1222|The event is cramped but fervent.
+1223|Complaints arise about the cramped space.
+1224|Win over the venue owner with a feast
+1225|The owner chooses your feast over the pressure.
+1226|Word of your attempt reaches those applying the pressure.
+1227|Cancel the event
+1228|It passes quietly, but your followers are disappointed.
+1229|Switch to offerings in kind
+1230|Gold trinkets and jewels pile up on the altar once more.
+1231|Goods are hard to turn into cash.
+1232|Use bank accounts in followers' names
+1233|The money flows again.
+1234|The proxy accounts are discovered and seized.
+1235|Stop accepting Offerings for a while
+1236|You earn a reputation as a cult without greed for money.
+1237|Give the protesters food and water
+1238|A few protesters lower their signs.
+1239|Your kindness is mocked.
+1240|Counter with a louder procession of praise
+1241|The hymns drown out the megaphones.
+1242|A clash breaks out and people are injured.
+1243|Wait for the protest to end
+1244|The protest ends, but the wounds remain.
+1245|Gather your officials for a rite of loyalty
+1246|Having shared blood and wine, the officials are united once more.
+1247|The suspicion does not fade.
+1248|Issue new phones
+1249|The officials are relieved.
+1250|The new devices soon come under scrutiny too.
+1251|Hunt down the traitor
+1252|The informant is exposed and thrown out.
+1253|An innocent official is framed and leaves.
+1254|Volunteer to testify publicly before the National Assembly
+1255|After your testimony, support for the bill drops.
+1256|You crumble under the lawmakers' grilling.
+1257|Join other religions in opposing the bill
+1258|A coalition in the name of religious freedom stalls the bill.
+1259|The coalition falls apart, and you are merely used.
+1260|The bill stalls, but your followers dwindle.
+1261|Hold a rally against dissolution
+1262|As countless followers fill the square, public opinion wavers.
+1263|The rally is declared illegal and facilities are seized.
+1264|Assemble a legal team
+1265|A capable legal team dismantles the grounds of the petition one by one.
+1266|The defense fails and you lose a facility.
+1267|Hold a feast to reassure your followers
+1268|Their fear forgotten, your followers call your name all night.
+1269|The feast is reported as proof of an unrepentant cult.
+1270|Open every door and cooperate with the search
+1271|Your cooperation sends the investigators home early.
+1272|One building ends up on the list of seized property.
+1273|Cloud the investigators' memory with a miracle
+1274|The investigators leave empty-handed, forgetting what they came for.
+1275|The miracle fails and the search grows more thorough.
+1276|Spirit away only what matters, in advance
+1277|The safe and ledgers are moved to a secret location.
+1278|Signs of the removal are detected.
+1279|Argue your own case in court
+1280|Your argument sets the gallery murmuring, and the freeze petition is dismissed.
+1281|Your assets are frozen and one building is tied up.
+1282|Appear in the judge's dream the night before the trial
+1283|After a strange dream, the judge dismisses the case.
+1284|The judge takes the dream as a threat.
+1285|Transfer assets into followers' names in advance
+1286|Almost nothing is left to freeze.
+1287|The improper transfer is voided.
+1288|Hold one last grand rite in the building before it closes
+1289|The rite of that final night is etched forever in your followers' hearts.
+1290|Enforcement begins in the middle of the rite.
+1291|Defend the most important building with your followers
+1292|The enforcement officers back down before a human chain.
+1293|The building is taken by force and followers are arrested.
+1294|Give up the less important buildings first
+1295|You sacrifice a scapegoat and buy time.
+1296|Take to the streets with followers to collect signatures
+1297|Surprisingly many citizens sign at the table.
+1298|The signatures fall far short of expectations.
+1299|Promise a blessing to everyone who signs
+1300|People wanting a blessing line up in front of the table.
+1301|Critics call it signatures for favors.
+1302|Give up, saying petitions are useless
+1303|The signature table is cleared away forlornly.
+1304|Accept the deal
+1305|A few days later, news of the dissolution petition vanishes from the papers.
+1306|The deal itself was a trap.
+1307|Summon the official to your chamber and get leverage on him
+1308|By dawn, the official leaves as your man.
+1309|The official had a hidden recorder.
+1310|Refuse the deal
+1311|The official leaves with a sneer and cuts off contact.
+1312|Perform a grand miracle on live camera
+1313|A miracle broadcast live nationwide flips public opinion in an instant.
+1314|Your failed miracle airs across the country.
+1315|Hold only a calm service on camera
+1316|The serene service stirs public sympathy.
+1317|Bored viewers change the channel.
+1318|Close the temple doors
+1319|Only closed doors make it on screen.
+1320|Stay and defend the temple instead of fleeing
+1321|The warrant was only a rumor, and your remaining followers call you the rock of god.
+1322|You are hauled off by investigators and released, and the vessel is drained.
+1323|Hide in the mountains for a while
+1324|You are safe, but your followers feel abandoned.
+1325|Your flight is discovered and criticism pours in.
+1326|Turn yourself in first
+1327|Your dignified appearance tilts public opinion your way.
+1328|The long interrogation wears out the vessel.
+1329|Soothe the body with pleasure
+1330|Warm pleasure steadies your trembling hands.
+1331|The trembling eases a little but does not stop.
+1332|Commune more deeply and seize control of the body
+1333|The body submits completely to the god's will.
+1334|The body rejects you.
+1335|Let it rest for a day
+1336|After a day of rest, the trembling subsides.
+1337|Reveal your golden eyes to your followers
+1338|Your followers fall prostrate before the golden eyes, sobbing.
+1339|The gold fades, and your followers wonder if they imagined it.
+1340|Hide your eyes behind tinted glasses
+1341|The gold hides behind the tinted lenses.
+1342|Summon the startled follower to your chamber and share the secret
+1343|He trembles at becoming the only one who knows the god's secret.
+1344|He cannot keep the secret.
+1345|Soothe the host's soul by sharing pleasure
+1346|In shared pleasure, the two souls in one body make peace for a moment.
+1347|The host's soul wails even louder.
+1348|Suppress the host's soul deep down
+1349|The host's voice fades into the distance.
+1350|The harder you suppress it, the fiercer it resists.
+1351|Make a pact with the host's soul
+1352|Promised freedom upon your ascension, the host falls silent.
+1353|The host does not trust your promise.
+1354|Show the blood to your followers as holy blood
+1355|The blood soaked into white cloth is enshrined as a relic.
+1356|Your followers only grow more worried and urge you to see a doctor.
+1357|Pause the miracles and care for the body
+1358|The bleeding stops and the vessel slowly recovers.
+1359|Fill the body with lavish restorative food

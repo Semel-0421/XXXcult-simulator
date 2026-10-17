@@ -1,0 +1,108 @@
+2209|Your friends laugh that it's unrealistic.
+2210|Say you just want to be happy
+2211|You speak of simple happiness.
+2212|Say you want to make a lot of money
+2213|You say you want to make a lot of money.
+2214|Your friends smile bitterly.
+2215|Say you want to meet God
+2216|You say you want to meet God.
+2217|Your friends don't take you seriously.
+2218|Study it
+2219|You study the texts closely.
+2220|The writing is too difficult, and you give up.
+2221|Burn it
+2222|You burn the book.
+2223|Sell it for a high price
+2224|You sell it to an antique dealer for a high price.
+2225|You're suspected of selling a fake antique.
+2226|Actually perform the ritual
+2227|You actually perform the ritual.
+2228|The ritual feels terrifying.
+2229|Build your stamina
+2230|You train your body.
+2231|Strengthen your faith
+2232|You strengthen your faith.
+2233|Your faith wavers.
+2234|Hang out with friends one last time
+2235|You have a great time with your friends one last time.
+2236|Staying out late leaves you exhausted.
+2237|Make a schedule
+2238|You draw up a schedule.
+2239|Your plan falls apart.
+2240|Give first aid
+2241|Your first aid saves the old man's life.
+2242|Your first aid is clumsy, and the old man struggles.
+2243|Call an ambulance
+2244|You call an ambulance to take the old man away.
+2245|Reach for the old man's wallet
+2246|You reach for his wallet.
+2247|A witness appears, and you flee.
+2248|Hold the old man's hand and pray
+2249|You hold the old man's hand and pray.
+2250|The old man never wakes up.
+2251|Laugh it off
+2252|You laugh it off.
+2253|Engrave the words on your heart
+2254|You take the words to heart and set a goal.
+2255|The words linger as a burden.
+2256|Question the old man closely
+2257|You listen closely to the old man's story.
+2258|The old man's words are vague.
+2259|Study how to lead a crowd
+2260|You study how to lead a group of people.
+2261|The study leaves you at a loss.
+2262|Grit your teeth and endure
+2263|You endure it in silence.
+2264|Protest boldly
+2265|You protest openly.
+2266|You fall out of your boss's favor.
+2267|Rally your coworkers to stand up
+2268|You gather your coworkers and stand up together.
+2269|Your coworkers turn their backs on you.
+2270|Quit and walk out
+2271|You quit and walk out.
+2272|Money is tight until you find your next job.
+2273|Talk with your old pastor
+2274|You reminisce with your old pastor.
+2275|Pray alone in the empty chapel
+2276|You pray alone in the empty chapel.
+2277|The silence deepens your loneliness.
+2278|Analyze why the church declined
+2279|You analyze why the church fell into decline.
+2280|The analysis leaves a bitter taste.
+2281|Gaze at the offering box
+2282|You gaze at the offering box, lost in thought.
+2283|Your hand drifts toward the offering box.
+2284|Use that power for good
+2285|You use that power for good.
+2286|Your will to use it for good falls short.
+2287|Try moving people with that power
+2288|You use that power to move people.
+2289|People feel they've been manipulated.
+2290|Hold your tongue out of fear
+2291|You keep your words to yourself.
+2292|Believe it's a God-given gift
+2293|You believe it's a gift from God.
+2294|Being called gifted weighs on you.
+2295|Spend it quietly with family
+2296|You celebrate modestly with your family.
+2297|Throw a lavish party
+2298|You invite your friends to a lavish party.
+2299|The cost of the party weighs on you.
+2300|Climb a mountain alone to pray
+2301|You climb a mountain alone and pray.
+2302|The climb is hard and wears you out.
+2303|Plan your future
+2304|You make plans for the future.
+2305|Your plans are hazy.
+2306|Vow to find the answer yourself
+2307|You vow to find the answer on your own.
+2308|No answer appears, and your doubts deepen.
+2309|Pore over many scriptures
+2310|You devour scripture after scripture.
+2311|The more you read, the more confused you become.
+2312|Crave a mystical experience
+2313|You yearn for a mystical experience.
+2314|Hollow experiences leave you disappointed.
+2315|Listen to people's suffering
+2316|You lend an ear to people's suffering.

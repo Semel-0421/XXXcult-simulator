@@ -1,0 +1,150 @@
+1060|Meet the reporter and show your humble daily life
+1061|The article comes out more restrained than expected.
+1062|The reporter finds your hidden golden bathtub.
+1063|Placate the newspaper with ad money
+1064|The feature is quietly postponed indefinitely.
+1065|The ad offer itself becomes the story.
+1066|Order your followers to keep quiet
+1067|The article runs, but the testimony is thin.
+1068|Even signs of the gag order make it into the article.
+1069|Return the camera and show them out politely
+1070|The crew is thrown by the unexpected courtesy.
+1071|The footage has already aired.
+1072|Seat him at the feast
+1073|After drinking all night, he only calls you "mysterious" on air.
+1074|The feast airs uncut.
+1075|Confiscate the camera
+1076|The footage is gone, but the grudge remains.
+1077|You are sued for seizing property.
+1078|Put your healing to a public test before a doctor
+1079|The doctor is speechless as the numbers on the test sheet change.
+1080|The test fails and you become a laughingstock.
+1081|Announce that followers should also get hospital treatment
+1082|The cult gains a reputation for being reasonable.
+1083|Followers are disappointed, asking if you doubt your own miracles.
+1084|Issue a rebuttal statement
+1085|Your followers rally, but public opinion is split.
+1086|The statement draws ridicule.
+1087|Reveal who the silhouette belongs to
+1088|Your bold confession actually charms some people.
+1089|The scandal runs all week.
+1090|Persuade the outlet to kill the story
+1091|The article is quietly taken down.
+1092|Even your attempt to block it gets reported.
+1093|Call it a private matter and stay silent
+1094|The article runs and people whisper.
+1095|Take the former follower back in
+1096|On his next broadcast, he says he was mistaken.
+1097|A recording of your attempt to win him over is released.
+1098|Rebut him with another miracle
+1099|A live miracle robs his claims of their power.
+1100|A broadcast glitch cuts off the miracle.
+1101|Threaten legal action
+1102|He stops appearing on air.
+1103|You are accused of silencing him.
+1104|Hold a press conference and face it head-on
+1105|Under your words and gaze, the reporters can only take notes.
+1106|A slip of the tongue becomes a new trending search.
+1107|Have followers switch off their phones and hold a feast
+1108|Forgetting the uproar outside, your followers cling to you even more.
+1109|You are criticized for fostering isolation.
+1110|Wait for the trend to die down
+1111|A day or two later, it drops off the trending list.
+1112|Accept the interview and meet it with charm
+1113|The reporter's sharp questions grow softer and softer.
+1114|The reporter brings you down with a trick question.
+1115|Send someone from your inner circle instead
+1116|Your inner circle gets through the interview without trouble.
+1117|Your inner circle slips up.
+1118|Your refusal makes one line in the article.
+1119|Perform a miracle science cannot explain
+1120|A withered flower blooms again before the critic's eyes.
+1121|The critic claims to have seen through the trick.
+1122|Preach that science and faith are separate realms
+1123|Your followers read the book and remain unshaken.
+1124|The sermon sounds like evasion.
+1125|Forbid reading the book
+1126|Your followers obey, but the ridicule outside grows.
+1127|Followers who read it in secret begin to waver.
+1128|Clean up the books and submit them
+1129|The auditor nods at your flawless ledgers.
+1130|Missing entries are found and one building is seized.
+1131|Bribe the tax accountant
+1132|The holes in the books are seamlessly filled.
+1133|The bribe comes to light and the seizure goes ahead.
+1134|Delay the submission
+1135|A demand notice arrives, with late-payment penalties.
+1136|Fix the paperwork to match the building's use
+1137|With the paperwork in order, the inspector leaves.
+1138|The paperwork is rejected and one building is seized.
+1139|Invite the inspector to a feast
+1140|The emptier the glass, the deeper the tape measure sinks into the bag.
+1141|The entertainment makes the inspection even stricter.
+1142|Just submit to the inspection
+1143|Violations are found and one building is seized.
+1144|Bring the missing follower before the police
+1145|The follower testifies that they are staying of their own free will.
+1146|The follower is dragged off by their family.
+1147|Keep the police out
+1148|The police leave without a warrant.
+1149|A warrant is issued, followed by a search and seizure.
+1150|Cloud the police's eyes with a miracle
+1151|The police leave, saying they saw nothing.
+1152|One officer reports a strange presence.
+1153|Account for the source of every Offering
+1154|Your clean explanation sends the investigators packing.
+1155|Unexplained money is clawed back and one building is seized.
+1156|Split up the cash and hide it
+1157|The investigators find only empty safes and leave.
+1158|The hidden funds are discovered and the seizure goes ahead.
+1159|Pay the taxes voluntarily
+1160|A lot of money goes out, but the investigation closes.
+1161|Upgrade the fire safety equipment at once
+1162|The red marks on the checklist disappear one by one.
+1163|The upgrades come too late and one building is shut down.
+1164|Replace incense and candles with electric lights
+1165|It's more convenient, but the mystique fades.
+1166|Gift the inspector a gilded censer
+1167|The inspector quietly pockets the censer.
+1168|You are reported for attempted bribery.
+1169|Protect the official and get him a lawyer
+1170|Cleared of charges, the official swears his loyalty to you.
+1171|He is convicted, and cult property is seized.
+1172|Cut the official loose and distance yourself
+1173|Your claim that the cult had nothing to do with it is accepted.
+1174|Bitter, the official exposes the cult's inner workings.
+1175|Smuggle him abroad
+1176|The official goes silent overseas.
+1177|He is caught by a travel ban, and the escape attempt comes out too.
+1178|Renovate the kitchen
+1179|The inspector is pleased with the gleaming kitchen.
+1180|Violations are found and one facility is shut down.
+1181|Serve the inspector feast dishes
+1182|After one bite, the inspector closes the checklist.
+1183|Allegations of improper hospitality are added.
+1184|Scale back the feasts
+1185|The kitchen goes quiet, and the vessel grows a little thinner.
+1186|File an administrative suit through the cult's lawyer
+1187|Demolition halts while the suit is pending.
+1188|You lose the suit and the building is demolished.
+1189|Hold an all-night prayer vigil with followers in front of the building
+1190|Images of followers holding candles stir public sympathy.
+1191|The order is carried out by force.
+1192|Hand over the building yourself
+1193|You lose a building but earn a reputation for cooperation.
+1194|Register every gathering properly
+1195|Registered gatherings go ahead safely, but the fervor cools.
+1196|Followers worn out by the paperwork drift away.
+1197|Split into small home groups and meet in secret
+1198|More intimate rites unfold in every small room.
+1199|A secret gathering is discovered and the meeting place is seized.
+1200|Force through a massive unregistered gathering
+1201|A crowd too big for the police to stop fills the square.
+1202|The gathering is broken up by force and officials are arrested.
+1203|Obey the order and hide your miracles
+1204|Quiet miracles continue only inside the temple.
+1205|With the miracles gone, your followers' fervor cools.
+1206|Defy the order and perform miracles in the street
+1207|The crowd kneels before a miracle in the middle of the street.
+1208|An order to close the facility is enforced on the spot.
+1209|Show miracles only in your followers' dreams

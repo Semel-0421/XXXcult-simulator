@@ -1,0 +1,150 @@
+1309|Ask to invest your allowance
+1310|You buy stocks with your allowance. The ups and downs are thrilling.
+1311|The stock drops, and you lose your allowance.
+1312|Money talk is boring
+1313|Talk of money doesn't interest you.
+1314|Be told you'll go far
+1315|Your dad marvels that you'll go far.
+1316|The words weigh on you, and your shoulders grow heavy.
+1317|Stand up to the bully
+1318|You stand your ground and stop the bullying.
+1319|You lose the fight and get hurt.
+1320|Tell the teacher
+1321|The teacher steps in and stops the bullying.
+1322|The bullying gets worse behind the teacher's back.
+1323|Stick with the bullied friend
+1324|You go everywhere with your friend.
+1325|Pretend not to see
+1326|You walk past, pretending not to see.
+1327|The guilt lingers for a long time.
+1328|Borrow five books every week
+1329|You borrow and read five books every week.
+1330|Read only comics
+1331|You pick nothing but comics.
+1332|Hooked on comics, you neglect your studies.
+1333|Browse the religion section
+1334|You open a scripture you've never seen before.
+1335|The difficult words give you a headache.
+1336|Don't return the books
+1337|You keep the books instead of returning them.
+1338|Overdue notices start arriving.
+1339|Recover quickly
+1340|You bounce back in a day or two.
+1341|Stay sick for over a week
+1342|You're drained for more than a week.
+1343|Your symptoms worsen, and you're hospitalized.
+1344|Have strange dreams while sick
+1345|In a dream, you see an unfamiliar light.
+1346|The dream frightens you, and you sleep poorly.
+1347|Pray for your sick friends
+1348|You pray for your sick friends.
+1349|Praying drains you even more.
+1350|Save your whole allowance
+1351|You save your entire allowance.
+1352|You have less money to save than you'd like.
+1353|Buy snacks instead of saving
+1354|You spend your allowance on snacks.
+1355|Borrow from a friend to save
+1356|You join the savings drive with borrowed money.
+1357|You can't pay it back, and things get awkward.
+1358|Win the Top Saver award
+1359|You win Top Saver and soak up all the class's praise.
+1360|Your savings are too small to win anything.
+1361|Make sure to get their address
+1362|You write down the address and wait for the next letter.
+1363|Cling to them in tears
+1364|You cling to them, crying, in front of the moving truck.
+1365|Your friend cries too, and the goodbye hurts even more.
+1366|See them off coolly
+1367|You smile and wave goodbye.
+1368|You act cool, but you feel hollow inside.
+1369|Give your most treasured thing
+1370|You hand over a treasured possession.
+1371|You give the gift, but your friend feels burdened by it.
+1372|Decide not to ask for what you want
+1373|You hold it in and say nothing.
+1374|Think of ways to make money
+1375|You consider jobs like delivering newspapers.
+1376|All that scheming just wears you out.
+1377|Tell your parents to stay strong
+1378|Your parents smile and thank you.
+1379|Your parents' sighs grow deeper.
+1380|You pretend not to know and try to sleep.
+1381|Practice more for the next contest
+1382|You paint day and night for the next contest.
+1383|Practice bores you, and you put down the brush.
+1384|Brag about it
+1385|You go around showing off your certificate.
+1386|You brag too much, and your friends turn their backs.
+1387|Give the certificate to Mom
+1388|Mom is overjoyed with the certificate.
+1389|Buy something tasty with the prize money
+1390|You treat your family to something tasty with the prize money.
+1391|The prize money is less than you expected.
+1392|Apologize first
+1393|You apologize first and make up.
+1394|Wait for them to apologize
+1395|After waiting, they come to you first.
+1396|You never get an apology.
+1397|Turn other friends against them
+1398|You take sides and isolate your friend.
+1399|The whole class thinks badly of you.
+1400|Vow never to see them again
+1401|You shut your heart tight.
+1402|Your heart is heavy, and you sleep poorly.
+1403|Take pride in your ancestors' deeds
+1404|Recalling your ancestors' deeds, you feel proud.
+1405|Believe in the mysterious power in the tales
+1406|You come to believe in mysterious powers.
+1407|You worry it's just superstition.
+1408|Call it superstition
+1409|You laugh off Grandma's stories.
+1410|Grandma is hurt.
+1411|Listen to the tale of the hidden land deed
+1412|Grandma shows you a land deed tucked deep in the wardrobe.
+1413|The land deed story is just an old tale.
+1414|Volunteer to go on stage
+1415|You go on stage and become the magician's assistant.
+1416|You freeze on stage and come back down.
+1417|See through the trick
+1418|You figure out the magic trick.
+1419|You miss the trick, and the magician moves on with a smile.
+1420|Practice the magic yourself
+1421|You practice card tricks with your friends.
+1422|Believe it's real magic
+1423|The magician's touch stirs something in you.
+1424|Finish first
+1425|You push to the end and finish first.
+1426|You run out of breath midway and fall behind.
+1427|Fake being sick
+1428|You fake illness and drop out.
+1429|Your faking is exposed, and you're scolded hard.
+1430|Aim just to finish
+1431|You run steadily and finish.
+1432|Collapse, out of breath
+1433|You collapse, gasping for air.
+1434|You collapse and are carried to the nurse's office.
+1435|Feel your mind clear in the dawn air
+1436|The dawn air clears your mind.
+1437|Doze off and come back
+1438|You doze off and come back.
+1439|You couldn't focus on prayer, and it nags at you.
+1440|Feel your body burn during prayer
+1441|Your body burns during prayer, and tears flow.
+1442|Your body trembles, and you nearly collapse.
+1443|Go every week after that
+1444|After that, you attend dawn prayer every week.
+1445|You can't give up sleeping in, so you quit before long.
+1446|Receive an award
+1447|Your name is called, and you receive an award.
+1448|There's no award for you, and you graduate quietly.
+1449|Give your homeroom teacher a thank-you letter
+1450|Your teacher reads the letter and sheds tears.
+1451|Throw flour around with friends
+1452|You laugh as you throw flour with your friends.
+1453|Flour gets in your eyes, and you burst into tears.
+1454|Worry about middle school
+1455|You're anxious about your next school.
+1456|Try to reconcile your parents
+1457|You try to mediate between them.
+1458|Caught between them, you're the one who gets hurt.

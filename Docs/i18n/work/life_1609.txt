@@ -1,0 +1,150 @@
+1609|Steal your teammates' credit
+1610|You present your teammates' work as your own.
+1611|Your teammates abandon you.
+1612|Score a perfect mark
+1613|Your clean form earns a perfect score.
+1614|You just hang there, then drop.
+1615|Just hang there and drop
+1616|You drop almost at once.
+1617|You've secretly practiced a hundred times a day
+1618|Steady practice lets you work the bar with ease.
+1619|Your hands blister from all the practice.
+1620|Skip the test
+1621|You skip the test and hide in the classroom.
+1622|You're marked absent and scolded by the teacher.
+1623|Read with interest
+1624|You're drawn in by the persuasive writing.
+1625|The writing unsettles you, and you close it quickly.
+1626|Scoff, calling it a cult
+1627|You scoff that it's a cult and move on.
+1628|Analyze how they run their organization
+1629|You analyze how the organization is run.
+1630|The analysis is too complex, and you give up.
+1631|Go see for yourself
+1632|You visit in person and talk with their followers.
+1633|The followers' pushiness drives you away.
+1634|Lead them
+1635|You lead your friends and become the center of the class.
+1636|Your meddling earns resentment.
+1637|Keep your distance, feeling burdened
+1638|You keep your distance and lie low.
+1639|Try to be a good influence
+1640|You guide your friends with kind words.
+1641|Your efforts fall flat, and you're disappointed.
+1642|Use your friends for gain
+1643|You order your friends around for your own gain.
+1644|Stay up all night at the hospital
+1645|You keep watch over Grandma all night at the hospital.
+1646|Pray for a miracle
+1647|You pray, hoping for a miracle.
+1648|No miracle comes, only heartache.
+1649|Listen in on talk of the inheritance
+1650|You listen as relatives discuss the inheritance.
+1651|Your relatives glare at you.
+1652|Share a last talk with Grandma
+1653|You share a quiet last conversation with Grandma.
+1654|Grandma can't finish her words.
+1655|Hand out flyers
+1656|You earn pocket money handing out flyers.
+1657|Work at a convenience store
+1658|Working at a convenience store, you learn to handle money.
+1659|Dealing with customers wears you out.
+1660|Help at a relative's shop
+1661|You help out at a relative's shop.
+1662|There's so much work you never get a break.
+1663|Lie about your age and work at a bar
+1664|You lie about your age and work at a bar.
+1665|You're found out and fired.
+1666|Party all night with friends
+1667|You put on a talent show with friends all night.
+1668|Drink in secret
+1669|You drink in secret.
+1670|You drink too much and pass out.
+1671|Study history at the ruins
+1672|You read the signs at the historic site carefully.
+1673|The explanations at the site bore you.
+1674|Worship alone at a temple
+1675|You pay your respects alone at a Buddhist temple.
+1676|The unfamiliar temple atmosphere makes you tense.
+1677|Congratulate them
+1678|You congratulate them with a smile.
+1679|You congratulate them, but it stings inside.
+1680|Cry in secret
+1681|You cry alone to soothe your heart.
+1682|Try to split them up
+1683|You spread rumors to drive the two apart.
+1684|The rumors are traced to you, and the class isolates you.
+1685|Throw yourself into sports
+1686|You throw yourself into sports to steady your heart.
+1687|Prepare your pledges carefully
+1688|You prepare your campaign pledges carefully.
+1689|Spread your rival's weaknesses
+1690|You spread word of your rival's weaknesses.
+1691|It backfires, and you lose the election.
+1692|Win with a commanding speech
+1693|Your commanding speech wins the students' hearts.
+1694|Your speech is clumsy, and the votes scatter.
+1695|Drop out of the race
+1696|You withdraw your candidacy.
+1697|Follow your parents' wishes
+1698|You follow your parents' wishes.
+1699|Stick to your own path
+1700|You push your own way to the end.
+1701|The mood at home turns icy.
+1702|Persuade your parents with logic
+1703|You argue point by point and win your parents' permission.
+1704|Your logic wounds your parents.
+1705|Avoid the conversation
+1706|You go to your room and avoid talking.
+1707|The silence weighs on your heart.
+1708|Return it to the owner
+1709|You find the address on a business card and return it.
+1710|Take just the cash
+1711|You pocket only the cash.
+1712|The police come the next day.
+1713|Turn it in to the police
+1714|You turn it in at the police station.
+1715|You get a tedious questioning at the station.
+1716|Find the owner and collect a reward
+1717|The owner gives you a reward.
+1718|Your reward is refused.
+1719|Lend it
+1720|You lend it gladly.
+1721|You worry you'll never see the money again.
+1722|Lend it with interest
+1723|You lend it with interest.
+1724|Your friend finds you petty.
+1725|Grill them about why they need it
+1726|You ask for every detail.
+1727|Your friend is hurt and turns away.
+1728|Sing your best
+1729|You sing the hymn in a clear voice.
+1730|Nerves make your pitch waver.
+1731|Choke from nerves
+1732|You're shaking too much to keep singing.
+1733|Let another friend have it
+1734|You give the solo to a friend.
+1735|Giving it up leaves you with regret.
+1736|Revel in the applause
+1737|The applause goes to your head.
+1738|After a mistake, the applause fades.
+1739|Follow the light
+1740|You follow the light, and warmth wraps around you.
+1741|The light vanishes, and you lose your way.
+1742|Run away in fear
+1743|You run back home.
+1744|Photograph it and send it to the paper
+1745|Your photo runs in the local paper and causes a stir.
+1746|The photo is blurry, and no one believes it.
+1747|Kneel before the light
+1748|You kneel and pray before the light.
+1749|The light fades, leaving you empty.
+1750|Testify truthfully
+1751|You tell the teacher the truth.
+1752|After testifying, you fear retaliation.
+1753|Stay silent for fear of revenge
+1754|You keep silent.
+1755|Your heart is heavy.
+1756|Visit and comfort the victim
+1757|You visit the victim and comfort them.
+1758|The victim avoids you.

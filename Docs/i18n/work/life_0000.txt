@@ -1,0 +1,150 @@
+0|1980, a cramped rented room. You roll over for the first time. Your mother claps her hands in delight.
+1|A winter night in 1981. Hunger wakes you. The faint smell of coal briquettes hangs in the room.
+2|A stranger visits and picks you up. The new color television is loud.
+3|The first-birthday table is set. What will you grab?
+4|You are about to take your first steps. The wooden floor is polished to a shine.
+5|Your father sings an old lullaby. The news murmurs from the radio.
+6|A night of burning fever. The room smells of damp washcloths.
+7|Your older brother snatches your toy car. A battered tin doll rolls across the floor.
+8|Your grandmother opens your little hand and studies your palm. Laundry hangs in the yard.
+9|You open your mouth to speak for the first time. The chime for the nine o'clock news rings through the room.
+10|You taste baby food for the first time. Thin rice gruel fills an aluminum bowl.
+11|Your parents' quarreling wakes you. The smell of liquor seeps under the door.
+12|Church bells ring from the end of the alley. A coal-briquette cart rattles past the house.
+13|The landlord comes to collect the rent. A ledger of unpaid tabs lies open in the room.
+14|Summer. You splash in the neighborhood stream for the first time. The water is cold and clear.
+15|A neighborhood kid holds out a candy wrapped in foil.
+16|An old monk passing by stops when he sees you. Dust blows down the unpaved alley.
+17|You are stacking toy blocks. Plastic blocks from the market are mixed with wooden ones on the floor.
+18|Your father brings home some housing lottery tickets and asks you to pick one. The draw is playing on TV.
+19|Your mother carries you on her back to the market. The fish stall reeks.
+20|Your uncle, working construction in the Middle East, sends a big gift box covered in foreign stamps.
+21|A younger sibling is born. Your mother comes home from the hospital cradling a tiny bundle.
+22|You discover yourself in a mirror for the first time, the one on the old wardrobe.
+23|A night of loud thunder. The power is out, and only a candle flickers.
+24|You sit before your second birthday cake. White candles glow in the room.
+25|1985, your first day of kindergarten. An old pump organ stands in the corner of the classroom.
+26|A friend falls on the playground and scrapes a knee. Red blood beads on the dirt.
+27|You write a letter to Santa. Your crayon letters wobble across the page.
+28|The Sunday school teacher tells a Bible story. An old ventilation fan whirs.
+29|Children are lined up at the playground slide.
+30|Mom says you can pick one candy at the market. The shelves are packed with colorful bags of snacks.
+31|Your father teaches you to ride a bike. An old utility pole stands at the end of the alley.
+32|You get a part in the kindergarten play. Paper decorations hang from the stage tent.
+33|Your friend's house is huge, and it startles you. A private car is parked by the gate.
+34|You find a coin on the street, next to a rain puddle.
+35|Your grandfather teaches you baduk. The board is laid out on the worn linoleum.
+36|You catch a cold and stay home from kindergarten. The room smells of a bubbling herbal medicine pot.
+37|You visit the new Seoul Grand Park Zoo in Gwacheon. A lion yawns in its enclosure.
+38|A friend laughs at your drawing. The classroom smells of crayons.
+39|You attend Mass for the first time. Stained glass glows in the sunlight.
+40|Your parents give you an allowance ledger. Robot Taekwon V is printed on the cover.
+41|A strange adult says to follow him for some candy. No one is at the mouth of the alley.
+42|The neighborhood big kids let you join their soccer game. The goalposts in the empty lot are made of stones.
+43|You have to go to the bathroom alone at night. The bulb at the end of the hall flickers.
+44|You find a lipstick on Mom's vanity, among a powder compact and perfume bottles.
+45|An elderly neighbor is hauling a heavy load up the alley alone.
+46|The kindergarten teacher asks what you want to be. Animals are drawn on the blackboard.
+47|You have to share snacks with your younger sibling. The bag is full of crunchy rice crackers.
+48|You are falsely accused of theft at kindergarten. What went missing is the teacher's wallet.
+49|Your father loses his job. The house is quiet, and the meals are meager.
+50|You attend a relative's wedding. The hall is full of white gowns and flowers.
+51|You catch fish in the stream with friends. The current is strong and cold.
+52|The neighborhood fortune-teller calls you over. A fan and a dish of rice sit before her.
+53|You begin learning Hangul. Every sign in the alley is full of letters.
+54|You invite your classmates to a birthday party. A birthday cake sits on the table.
+55|News of a great earthquake comes on TV. The screen shows collapsed buildings and relief tents.
+56|Mom wants to send you to piano lessons. A faded sign hangs in front of the academy.
+57|You tell your first lie. Mom seems to have noticed.
+58|You get lost at Yongin Farmland. Crowds surge past, and a balloon seller shouts.
+59|Amid the 1986 Asian Games fever, the kindergarten holds a footrace. Dust rises from the field.
+60|An abandoned puppy sits outside your house, looking up at you with wet eyes.
+61|In the attic at your grandfather's house, you find an old box covered in yellowed newspaper.
+62|A friend confides a secret to you on the bench behind the schoolyard.
+63|Mom sends you on your first errand. The shop is two turns down the alley.
+64|You are about to start elementary school. Mom brings home a new school bag.
+65|1987, your first elementary school exam. All you have on your desk is a stubby pencil.
+66|The class president election is held. The candidates' names are written on the board.
+67|Dodgeball in gym class. Lines are drawn in white chalk on the field.
+68|You try a lucky draw at the stationery shop by the school. The box is full of colored slips.
+69|Your homeroom teacher calls you aside. The schoolyard is visible through the staff room window.
+70|You attend the church's summer Bible school. Three fans turn in the hall.
+71|Your classmates try to shut you out. The classroom buzzes during break.
+72|Your family gets its first computer. A monitor with green text sits on the living room desk.
+73|Your grandfather passes away. The house fills with incense and wailing.
+74|Ttakji and cartoon sticker collecting are all the rage. The stationery shop is crowded.
+75|You represent your school in a writing contest. The manuscript paper grid is dense.
+76|You enter deep water for the first time at the pool. The blue water ripples.
+77|A bill is sticking out of Mom's wallet. She is making dinner in the kitchen.
+78|A transfer student joins your class. An unfamiliar accent spreads awkwardly through the room.
+79|You are assigned a nature observation project. Your notebook is still blank.
+80|An older neighborhood kid offers you a cigarette. Empty beer bottles roll at the corner.
+81|You need to buy a friend a birthday present. Your allowance is nearly gone.
+82|1988, Seoul Olympics fever. At the autumn sports day, you are the anchor of the relay. Hodori flags flutter over the field.
+83|A person in white appears in your dream. Their face is a blur.
+84|Your father's business takes off, and you move into a new apartment. Marble you have never seen before lines the entrance.
+85|You work on a math competition. The margins are full of scratch calculations.
+86|You sleep over at a friend's house for the first time. A big stereo system stands in their living room.
+87|A homeless man holds out his hand on the street. A cold wind is blowing.
+88|Your homeroom teacher plays favorites with you. Your classmates start whispering.
+89|You take a bus somewhere far on your own for the first time, a bus token clutched in your hand.
+90|You are cast as the villain in the school play. The stage lights are hot.
+91|You are the shortest in your class. Whenever kids line up by height, you are first.
+92|A friend asks to copy your test. Time is almost up.
+93|You are invited to join the altar servers. You would have to attend every Sunday morning.
+94|Money goes missing in your class. The back door of the classroom is open.
+95|Your family takes a trip to the seaside. The air tastes of salt.
+96|You are told to attend one more cram school. Your bag is already full of workbooks.
+97|A friend's hamster dies. Your friend clutches the box, crying.
+98|The neighborhood soccer team invites you to join. Kids are kicking a ball on the field.
+99|It is your parents' wedding anniversary. There are more side dishes on the table than usual.
+100|A monk at an old temple serves you tea. Incense drifts softly through the room.
+101|You have a crush for the first time. From your window seat, you keep glancing at them.
+102|You represent your class in the school debate contest. Teachers are seated in the hall.
+103|Your house is burgled. The front door lock is smashed.
+104|Lunchtime. You open your lunchbox to find your favorite pink sausage. Friends swarm in with chopsticks.
+105|1989. The stock index has passed 1,000, your father says, and tells you about stocks. The business section is spread across the table.
+106|A classmate is being bullied. Noise comes from the back door during break.
+107|You sign up at the neighborhood library for the first time. A library card is placed in your hand.
+108|The flu is going around, and you catch it. The room reeks of medicine.
+109|The school holds a Savings Day event. The piggy bank at the front of the class grows heavier.
+110|Your best friend is moving away. A moving truck waits at the alley.
+111|You overhear your parents. The family is struggling financially.
+112|You win a prize in an art contest: a certificate and a set of paints.
+113|You have your first real fight with a friend. A corner of the schoolyard is in an uproar.
+114|Your grandmother tells you a story handed down through the family. An old cloth bundle is visible in the wardrobe.
+115|A magician comes to perform at school. The lights in the hall dim.
+116|The long-distance run for the fitness test. Dust rises from the track.
+117|You secretly go to dawn prayer for the first time. The church bell has not yet rung.
+118|1992, elementary school graduation. A woman is selling bouquets at the edge of the schoolyard.
+119|You learn your parents are considering divorce. Every night, low voices drift through the door.
+120|1993, your first day of middle school. Your uniform feels stiff and strange.
+121|Puberty arrives. Everything is irritating.
+122|A pimple has appeared on your face in the mirror. There is only a bar of soap on the sink.
+123|Midterm exams. The schedule is posted on the board outside the staff room.
+124|A classmate confesses their feelings to you. A trembling voice comes from the back of the classroom.
+125|Someone suggests forming a band for the school festival to play Seo Taiji and Boys. An old amp crackles.
+126|A friend sneaks in some alcohol. A bottle cap pops in the empty lot behind the alley.
+127|You go on the church youth retreat. Night fog settles between the tents.
+128|You want to buy something with your saved allowance. A Walkman sits on a shelf at the electronics market.
+129|A school bully demands money from you. No one is behind the gym.
+130|Career counseling. School brochures are stacked on the counselor's desk.
+131|Dieting is all the rage in your class. Every break is all about lunchboxes.
+132|A classmate looks like they are really struggling, crying alone by the window.
+133|You represent your school at a science fair. The lab lights stay on late into the night.
+134|The pull-up bar test in gym. Kids are lined up at the bars.
+135|On a PC network board, you read about the religious group behind the Rapture panic. The dial-up modem shrieks.
+136|Your classmates start copying what you do. They gather around you every break.
+137|Your grandmother is critically ill. At the end of the hospital hallway, your mother is praying.
+138|You want to try a part-time job. A help-wanted ad is stuck to a utility pole in the alley.
+139|You go on a school trip to Gyeongju. Singing fills the bus.
+140|Your crush now has a partner. A photo of the two of them is pinned to the class board.
+141|You run in the student council election. Candidate posters line the class board.
+142|You argue with your parents about school plans. The rice on the table goes cold.
+143|You find a wallet stuffed with cash on the street. There is a business card inside.
+144|A friend asks to borrow money. They hesitate by the classroom window.
+145|You get a chance to sing a solo in the church choir. Piano echoes in the rehearsal room.
+146|Coming home late at night, you see a strange light. The empty lot at the end of the alley is glowing.
+147|You witness a school violence incident. A commotion breaks out at the end of the hall.
+148|You join the photography club. The darkroom smells of developer.
+149|At a family gathering, you are compared to your cousins. The holiday floor is covered with food.

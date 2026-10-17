@@ -1,0 +1,150 @@
+900|Catch the ball instead of dodging
+901|You catch the incoming ball and get your opponent out.
+902|You miss the catch and hurt your finger.
+903|Get hit on purpose and go out
+904|You go out early and cheer for your friends.
+905|Use a friend as a shield
+906|You hide behind a friend to dodge the ball.
+907|Your friends resent you and turn their backs.
+908|Pour in all your allowance
+909|You spend every coin, but you win a good toy.
+910|You come home broke.
+911|Draw just once
+912|You draw once and are satisfied.
+913|Win first prize again and again
+914|You draw first prize again and again, and even the shop owner is amazed.
+915|You draw nothing but duds.
+916|Let a friend draw instead
+917|Your friend is thrilled and thanks you.
+918|Your friend thanks you, but a twinge of regret remains.
+919|Go trembling, wondering what you did wrong
+920|You open the staff room door with a pounding heart.
+921|Go confidently
+922|You stride in and talk with the teacher.
+923|Your confidence comes off as cheeky.
+924|Gladly run errands for the teacher
+925|You take on errands and win the teacher's trust.
+926|The errands annoy you, and you grumble.
+927|Expect to be praised
+928|You are excited, expecting praise.
+929|Instead of praise, you get a warning.
+930|Win the Bible recitation contest
+931|You win the recitation contest and receive a prize.
+932|Nerves make you forget the verse.
+933|Stay for the all-night prayer meeting
+934|You pray all night and steady your heart.
+935|You doze off mid-prayer and keel over.
+936|Sneak out with friends to play
+937|You sneak out and share snacks.
+938|The teacher catches you, and you are punished.
+939|Ply the pastor with endless questions
+940|Your questions are so sharp even the pastor is impressed.
+941|Your questions leave the pastor at a loss.
+942|Hang out with other friends
+943|You hang out with other kids and avoid being left out.
+944|Stand up to them
+945|You stand your ground, and they back off.
+946|Standing up to them turns into a fight, and you get scolded.
+947|Being alone is fine too
+948|You spend your time reading alone.
+949|Loneliness washes over you.
+950|Ask the teacher for help
+951|The teacher calls the kids in and has a word with them.
+952|The teacher says they are busy and leaves.
+953|Get hooked on games
+954|You game all night and are late for school.
+955|Your grades drop because of games.
+956|Learn to type
+957|You take a liking to typing practice.
+958|The practice bores you, and you quit.
+959|Explore the world through the PC network
+960|You dial into the PC network over the phone line and look up news of the world.
+961|The phone bill arrives, and you get a severe scolding.
+962|Use it only for the allowed time
+963|You use it only for the set time and stop.
+964|Pay your final respects
+965|You bow before the memorial portrait and say goodbye.
+966|Dwell on death
+967|You think about life and death for a long time.
+968|Fear keeps you awake.
+969|Eat the funeral food
+970|You eat a hearty bowl of the funeral yukgaejang.
+971|You cry all night and fall ill.
+972|Meet your grandfather in a dream
+973|In your dream, your grandfather smiles and waves.
+974|Even in your dreams, you cannot find your grandfather.
+975|Spend all your allowance
+976|You buy a limited-edition sticker and show it off.
+977|You bought an expensive sticker, but it was fake.
+978|Trade ttakji for profit
+979|You trade your way to a rare ttakji.
+980|Your friends tease you for being a cheapskate.
+981|Share with your sibling
+982|Your sibling beams with delight.
+983|Don't follow the trend
+984|Unswayed by the craze, you read books on your own.
+985|Write from the heart
+986|Your piece about your own life earns praise.
+987|Your feelings are too heavy, and the writing falls apart.
+988|Imitate grown-up phrasing
+989|Your stylish phrasing catches the judges' attention.
+990|Your awkward phrasing costs you points.
+991|Copy from a book
+992|Your copying is found out, and you are disqualified.
+993|Rumors of plagiarism spread through the school.
+994|Write about God
+995|Your piece about God moves the judges.
+996|It is judged too religious and scores poorly.
+997|Swim to the end
+998|You swim all the way across the lane.
+999|Out of breath, you swallow a lot of water.
+1000|Don't let go of the float
+1001|You cling to the float and stay carefully afloat.
+1002|Nearly drown and get rescued
+1003|A lifeguard barely manages to save you.
+1004|The rescue comes late, and you get a terrible scare.
+1005|Jump off the diving board
+1006|You leap gracefully off the diving board, and your friends cheer.
+1007|You belly-flop and get badly hurt.
+1008|Just walk past
+1009|You walk past as if nothing happened.
+1010|Sneak it
+1011|You slip the bill into your pocket.
+1012|Mom notices right away and scolds you severely.
+1013|Tell Mom her wallet is open
+1014|Mom thanks you and strokes your head.
+1015|Take it, then put it back
+1016|Your heart pounds, but you put it back.
+1017|Mom catches you putting it back.
+1018|Speak to them first
+1019|You speak first and quickly become friends.
+1020|Spread rumors about the transfer student
+1021|You gossip about the transfer student's family.
+1022|The rumors spread, and you get called to the teacher.
+1023|Watch quietly
+1024|You quietly observe from a distance.
+1025|Make the transfer student your sidekick
+1026|The transfer student tags along at your heels.
+1027|The transfer student avoids you.
+1028|Observe an anthill for a month
+1029|You observe an anthill for a month, leaving drawings and notes.
+1030|You get bored partway and stop observing.
+1031|Copy the encyclopedia
+1032|You copy straight out of the encyclopedia at home.
+1033|The teacher notices it was copied.
+1034|Have your parents do it
+1035|Your parents help you finish the homework.
+1036|Draw the constellations
+1037|You draw the night sky's constellations and earn praise.
+1038|Cloudy days drag on, and you can't draw them.
+1039|Refuse firmly
+1040|You refuse firmly and walk away.
+1041|Take a puff out of curiosity
+1042|You take a drag and cough violently.
+1043|You can't stop coughing and suffer for it.
+1044|Tell a grown-up
+1045|The grown-ups give the older kid a talking-to.
+1046|The older kid calls you a snitch.
+1047|Talk him out of it
+1048|The older kid backs off, a little sheepish.
+1049|The older kid gets angry and storms off.

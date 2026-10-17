@@ -1,0 +1,150 @@
+150|Something you wrote is printed in the newspaper's letters section and causes a stir. The phone won't stop ringing.
+151|You get sick often and keep visiting the hospital. The exam room smells of disinfectant.
+152|You go to a karaoke room with friends. A tambourine lies beneath the flashing lights.
+153|Your father takes on a huge debt through his company. Strangers come and go at your door.
+154|In a corner of the school library, you find a book classified as banned. Its cover is worn and yellowed.
+155|Your class loses the tug-of-war at sports day. The broken rope lies on the dirt field.
+156|You run into street evangelists. White flyers flutter in the wind.
+157|You go on your first date. You are meeting at a burger place downtown.
+158|At the neighborhood arcade, someone challenges you to a bet on a fighting game. The screen flashes.
+159|Middle school graduation is near. Congratulations are written on the blackboard.
+160|1996, the high school entrance ceremony. The school song blares from the speakers on the field.
+161|Evening self-study hall. The fluorescent lights hum.
+162|You attend your first philosophy class. Unfamiliar foreign names are written on the board.
+163|You have a sweetheart. A numeric code only the two of you know flashes on your pager.
+164|Your mock exam results are out. Rankings are posted in the hallway.
+165|You are offered a youth group leader role at the neighborhood church. The ginkgo tree in the churchyard has turned gold.
+166|A sports coach urges you to become an athlete. The track is wet with rain.
+167|A friend suggests running away together. The clock in the station waiting room reads eleven at night.
+168|You receive your first part-time paycheck. The envelope holds crisp bills.
+169|Ugly rumors about you spread around school. Whispering echoes from the end of the hall.
+170|In a dream, a giant serpent coils around you. You wake drenched in sweat.
+171|The school introduces volunteer credits. You get a chance to do volunteer work instead of the school trip.
+172|A close friend of the same sex confesses their love to you. The two of you sit alone on a campus bench.
+173|You are to give a speech on stage at the school festival. The stage lights pour down hard.
+174|You attend your first drinking session. Soju bottles line up in the street tent bar.
+175|The college entrance exam is a hundred days away. The calendar on your desk is covered in circles.
+176|A friend says their parents have fallen into a pseudo-religious cult. A shadow hangs over their face.
+177|You pass a street card game. A wad of bills sits on the table.
+178|Your good deed makes the newspaper. The article is posted on the school board.
+179|A university admissions interview. The interviewers' voices leak through the door.
+180|Your parents want you to take over the family business. The shop ledger lies open on the table.
+181|You fall ill and are hospitalized. Laundry sways in the wind outside the ward window.
+182|You get a chance to move out and live alone. The sunset glows beyond your studio window.
+183|You volunteer at a nursing home. The smell of disinfectant lingers in the hall.
+184|A friend pitches you a multilevel marketing scheme. Brochures are spread across the café table.
+185|Admission results day. Students crowd thickly around the bulletin board.
+186|The Sampoong Department Store collapse is still fresh in memory when you narrowly, miraculously escape a major accident yourself. Ambulance lights flash at the scene.
+187|Pushed out of his company by the IMF crisis, your father collapses. Your mother weeps in the ER hallway.
+188|Younger students begin to follow you. They gather in the club room.
+189|You break up with your sweetheart. At the end of an alley after the rain, you fold a single umbrella.
+190|You talk about life with friends all night. The rooftop sky is full of stars.
+191|By chance, you come into possession of an old book of religious rites. Its cover is crowded with Chinese characters.
+192|A new start lies ahead. A university application sits on your desk.
+193|You find an old man collapsed in the street. His groceries are scattered around him.
+194|An old man tells you that you are destined to lead a great multitude. He is smoking on a park bench.
+195|Because of the IMF crisis, the shop where you work part-time has not paid you in months. Stacks of paperwork pile up in the office corner.
+196|You visit your hometown church after a long time. Pigeons sit atop the bell tower.
+197|People listen to you with strange attention. Your classmates watch you.
+198|Your eighteenth birthday. Seaweed soup and a cake sit on the table.
+199|Your doubts about the world deepen. The established religions hold no answers for you.
+200|Wriggle to roll over again
+201|After wriggling again and again, you roll over once more. Your mother bursts out laughing.
+202|Your strength gives out, and you cry facedown for a long time.
+203|Beam at Mom
+204|You flash a smile, and even the neighbor lady rushes over to marvel.
+205|Fall asleep as you are
+206|With a full belly, you drift off in no time.
+207|Cry at the sound of clapping
+208|Your startled crying soon fades at the breast.
+209|Startled by the clapping, you wail even louder.
+210|Cry loudly for milk
+211|At your cries, your mother hurriedly nurses you.
+212|Exhausted by your crying, your mother sighs and soothes you, and you fall asleep.
+213|Suck your fingers and hold out
+214|You suck your fingers and hold out, letting your mother catch a short nap.
+215|Babble for your parents
+216|Your parents babble back, and the room grows warm.
+217|Not understanding your babbling, your parents roll over with tired faces.
+218|Stare quietly at something in the dark
+219|A faint light in the dark brings you a strange calm.
+220|The shadows in the dark frighten you, and you burst into tears.
+221|Smile brightly
+222|The delighted guest presses a candy into your hand.
+223|Scream and cry
+224|Flustered by your crying, the guest hurriedly looks for someone to hand you to.
+225|Your crying fills the house, and the guest leaves in a hurry.
+226|Grab the guest's shiny ring
+227|You won't let go of the ring, so the guest laughs and slips it off for you.
+228|You grab the ring and get scolded by the guest.
+229|Stare quietly into the guest's eyes
+230|Moved by the child's gaze, the guest smiles without a word.
+231|The guest looks away, embarrassed.
+232|Banknote
+233|You grab the banknote, and the whole family cheers that you will be rich.
+234|The bill tears, and you are left holding only half.
+235|Pencil
+236|Seeing you clutch the pencil, your father declares you will be educated.
+237|The pencil snaps, and the party is thrown into brief disarray.
+238|Skein of thread
+239|You grab the thread, and your grandmother prays for your long life.
+240|The thread tangles, and your grandmother spends ages unraveling it.
+241|Rosary
+242|You grab the rosary, and your churchgoing grandmother's eyes well up.
+243|You drop the rosary on the floor.
+244|Get back up when you fall
+245|You fall and get back up, and applause fills the room.
+246|You scrape your knee, leaving a little blood on the floor.
+247|Walk holding Mom's hand tight
+248|Walking hand in hand with Mom, you win the neighbors' praise for how cute you are.
+249|Crawling is easier
+250|Crawling around, you learn the way to the snack tin.
+251|Burst into tears when you fall
+252|Your parents rush over at your cries and pick you up.
+253|Your wailing carries all the way down the alley.
+254|Babble along
+255|You babble along, and your delighted father keeps singing.
+256|Your father stops singing and laughs at your babbling.
+257|Fall asleep quickly
+258|Your father's song puts you to sleep in no time.
+259|Keep your eyes open until the song ends
+260|Listening to the very end, you feel oddly calm.
+261|You fight off sleep and end up fussing.
+262|Hear another voice between the verses
+263|You seem to hear a strange voice through the radio static.
+264|There is only static, nothing more.
+265|Suffer all night and shake it off by morning
+266|The fever breaks with the morning sun.
+267|The fever is gone, but your strength takes a long time to return.
+268|It lingers for a long time
+269|You spend a long stretch in the hospital, and the household budget grows tight.
+270|Find comfort in your parents' arms
+271|Your parents take turns holding you through the night.
+272|A glowing hand touches your forehead in a dream
+273|A glowing hand touches your forehead in a dream, and the fever fades like a dream.
+274|You wake from the dream, and an even hotter fever surges in.
+275|Cry and try to get it back
+276|After crying and clinging, you get the car back.
+277|Your brother shoves you harder, and the car rolls far away.
+278|Look for another toy
+279|You play with the tin doll and forget all about the car.
+280|Bite him
+281|Your brother yelps, throws the car, and runs off.
+282|Your brother beats you soundly, and your mother scolds you.
+283|Just laugh it off
+284|Your brother sheepishly gives back the car.
+285|Your brother, egged on, teases you even more.
+286|Clench your fist tight
+287|You clench your fist, and your grandmother smiles proudly.
+288|Open your hand wide
+289|Reading your palm, your grandmother says you will become someone great.
+290|Your grandmother just smiles and lets go of your hand.
+291|Grab your grandmother's finger
+292|You clutch your grandmother's finger, and she dabs at her eyes.
+293|Yawn
+294|Seeing you yawn, your grandmother tidies the room for you.
+295|Mama
+296|At the single word "Mama," your mother laughs through her tears.
+297|Your little voice is drowned out by the news.
+298|Dada
+299|Your father lifts you up with a joyful face.

@@ -1,0 +1,150 @@
+470|Warm Fingertips
+471|One touch, and the sick rise to their feet.
+472|Procession of Healing
+473|Those seeking healing come in long lines.
+474|Indomitable Flesh
+475|No wound can bring the vessel down.
+476|Hardened Skin
+477|Not even phantom blades can pierce your skin.
+478|Blood Renewal
+479|Each new year, your body heals itself.
+480|Still Mind
+481|The host's mind does not waver at the god's voice.
+482|Contagious Ecstasy
+483|Your ecstasy spreads to your followers.
+484|Visits in Dreams
+485|You enter your followers' dreams and plant Faith.
+486|Wakeful Eyes
+487|A mind that never sleeps deepens your Commune.
+488|Unshakable Heart
+489|Other gods' curses cannot shake your heart.
+490|Voice That Tears the Silence
+491|The Silent Order's silence cannot reach you.
+492|Clear Nights
+493|Nights free of nightmares guard your Mentality.
+494|Golden Touch
+495|Wealth gathers wherever your hand falls.
+496|Overflowing Offerings
+497|Followers scramble to make Offerings.
+498|Golden Offering Box
+499|The offering box is never empty.
+500|Miraculous Consecration
+501|You learn to raise buildings by miracle.
+502|Sealed Vault
+503|The cult's Wealth does not easily slip away.
+504|Hidden Ledger
+505|Ledgers the inspectors cannot find protect your buildings.
+506|Solid Cornerstone
+507|The cult's riches do not easily scatter.
+508|Divinity Revealed
+509|Miracles wear down the vessel less.
+510|Stage of Wonders
+511|Crowds who come to see miracles become followers.
+512|Light That Summons Crowds
+513|Light from the heavens draws people together.
+514|Unceasing Miracles
+515|Your miracles are rarely interrupted.
+516|Veiled Miracles
+517|Your miracles draw less of the world's attention.
+518|Traceless Wonders
+519|When a miracle ends, no evidence remains.
+520|Thrifty Power
+521|Small miracles cost less divine power.
+522|Deep Devotion
+523|The god's own conviction deepens.
+524|Burning Faith
+525|Fiery Faith spreads to your followers.
+526|Blazing Prayer
+527|The more you pray, the stronger the god's conviction.
+528|Ember of Faith
+529|Even a little faith soon becomes a blaze.
+530|Unbreakable Faith
+531|Followers' Faith does not easily cool under outside attack.
+532|Unwavering Knees
+533|Followers do not easily raise their heads in defiance.
+534|Return of the Apostate
+535|Followers about to leave turn back.
+536|Engraved Word
+537|Your word grows firm as if carved in stone.
+538|Trumpet of Proclamation
+539|Your word rings through the streets.
+540|Street Sermons
+541|Your Revelation works even in the public square.
+542|Spreading Scripture
+543|Those who read your scripture come seeking you.
+544|Shield of Debate
+545|Rebuttals from established religions cannot erode your Doctrine.
+546|Refuting Heresy
+547|You turn accusations of heresy back on the accusers.
+548|Proof of Orthodoxy
+549|Other gods find it harder to pick faults.
+550|Bond with the God
+551|The bond between god and vessel grows thicker.
+552|Overflowing Divinity
+553|Miracles cost less power and Commune comes easier.
+554|Resonating Bond
+555|The bond resonates every time you Commune.
+556|Shared Revelation
+557|You share the visions from your Commune with your followers.
+558|Unbreakable Bond
+559|Other gods struggle to sever your bond.
+560|Silent Resistance
+561|You withstand attempts to block your Communion.
+562|Veil of the Gods
+563|You draw a veil over the eyes of other gods.
+564|Known Name
+565|The god's name spreads across the world.
+566|Prophecy Fulfilled
+567|Prophecies that come true draw people in.
+568|Word of Mouth
+569|Your prophecies spread from mouth to mouth.
+570|True Prophecies
+571|Each fulfilled prophecy raises your Reputation.
+572|Steadfast Repute
+573|Bad rumors do not spread easily.
+574|Silencing Rumors
+575|Rumors of false miracles lose their power.
+576|Friend of the Press
+577|Reporters are friendly toward you.
+578|Your power to master desire grows.
+579|Inspiring Poverty
+580|Followers are moved by the god's humble ways.
+581|Humble Table
+582|Simple meals shared together nourish Piety.
+583|A Life of Example
+584|Even outsiders view the cult favorably.
+585|Hidden Strength
+586|You draw less envy from other gods.
+587|Lowering Yourself
+588|You catch the gods' eyes less often.
+589|Quiet Steps
+590|You draw less suspicion from the world.
+591|Virtue of Patience
+592|Your power to endure grows.
+593|Fruits of Waiting
+594|Piety accumulates as time passes.
+595|Slow Outreach
+596|Each year, followers quietly increase.
+597|Long-Burning Candle
+598|Each year, Piety deepens a little.
+599|Enduring Cult
+600|Your followers hold out against any assault.
+601|Steadfast Followers
+602|They do not easily leave, even under conversion campaigns.
+603|Song Under Siege
+604|Even under siege, Piety does not cool.
+605|Virtue of Charity
+606|Your heart for others grows.
+607|Generosity draws people to the cult.
+608|Relief Line
+609|The relief line becomes a line of followers.
+610|Shared Bread
+611|With sharing, Healing works better.
+612|Wall of Gratitude
+613|Grateful neighbors shield the cult.
+614|Grateful Neighbors
+615|Neighbors stamp out bad rumors for you.
+616|Testimony of Charity
+617|A record of charity buries suspicion.
+618|Virtue of Integrity
+619|A clear conscience becomes strength.

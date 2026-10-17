@@ -1,0 +1,150 @@
+1759|Make a deal with the bully
+1760|You strike a deal with the bully and keep quiet.
+1761|The deal comes to light, and you lose everyone's trust.
+1762|Shoot landscapes
+1763|Photographing landscapes calms your mind.
+1764|Shoot portraits and get close to people
+1765|Taking portraits brings you closer to your friends.
+1766|Nobody likes the photos you take.
+1767|Secretly photograph people
+1768|You secretly photograph a friend and pass the photos around.
+1769|The photos cause trouble, and you're kicked out.
+1770|Place in a photo contest
+1771|You place in a photo contest and draw attention.
+1772|You don't place in the contest.
+1773|Vow to try harder
+1774|You vow to try harder.
+1775|Your resolve fades.
+1776|You ignore it and enjoy the food.
+1777|Pick at your cousins' flaws
+1778|You dig up your cousins' flaws.
+1779|Grow closer to your cousins instead
+1780|You hang out with your cousins.
+1781|Things are still awkward with your cousins.
+1782|Enjoy the attention
+1783|You accept interview requests and bask in the spotlight.
+1784|The attention weighs on you, and you wear out.
+1785|Stop submitting your writing
+1786|You quietly step back.
+1787|Make money from your writing
+1788|You earn fees from your writing.
+1789|Your writing is accused of plagiarism.
+1790|Suffer from hate mail
+1791|Hateful letters pile up and torment you.
+1792|The letters keep coming, and you fall ill.
+1793|Get steady treatment
+1794|You receive treatment consistently.
+1795|Put it off, afraid of hospitals
+1796|You put off the hospital, and your symptoms worsen.
+1797|Your illness worsens, and you're hospitalized.
+1798|Accept your frail body
+1799|You accept your frailty and change your habits.
+1800|You blame yourself and sink into depression.
+1801|Try to overcome it through prayer
+1802|You pray, trying to beat the illness.
+1803|Prayer alone doesn't cure you.
+1804|Hog the mic
+1805|You belt out songs with gusto.
+1806|Your voice goes hoarse, and people glare.
+1807|Just play the tambourine
+1808|You shake the tambourine and keep the mood going.
+1809|Surprise everyone with your singing
+1810|Everyone is stunned by your unexpected singing talent.
+1811|Your singing is a mess, and you become a joke.
+1812|Secretly stick someone else with the bill
+1813|You stick a friend with the bill.
+1814|Your friends find you petty.
+1815|Help out with a part-time job
+1816|You support your family with a part-time job.
+1817|The work is hard and takes a toll on your health.
+1818|Vow never to live in poverty
+1819|You vow to escape poverty.
+1820|Vows alone don't change reality.
+1821|Cling to prayer
+1822|You hold yourself together through prayer.
+1823|Consider running away from home
+1824|You plot leaving home.
+1825|You feel your family's eyes on you.
+1826|Read all night
+1827|You read all night, lost in thought.
+1828|The book's contents frighten you, and you sleep poorly.
+1829|Return it to the librarian
+1830|You hand the book back to the librarian.
+1831|Pass it around among friends
+1832|You pass the book around with your friends.
+1833|Try the ritual from the book
+1834|You try performing the ritual in the book.
+1835|The ritual frightens you, and you flee.
+1836|Comfort your friends
+1837|You comfort your friends.
+1838|Analyze why you lost
+1839|You break down the reasons for the loss point by point.
+1840|Your analysis sounds like nagging.
+1841|Pick a fight with the other class
+1842|You pick a fight with the other class.
+1843|The fight escalates, and you're punished.
+1844|Lead practice, vowing to win next time
+1845|You lead practice for the next tournament.
+1846|Practice is grueling, and complaints erupt.
+1847|Listen seriously
+1848|You listen seriously to the evangelist.
+1849|The talk drags on and bores you.
+1850|Observe how they talk
+1851|Watching how they speak, you learn the art of persuasion.
+1852|You watch, but only waste time.
+1853|Avoid them, it's a hassle
+1854|You walk past, avoiding them.
+1855|Argue and win
+1856|You win the argument, and the evangelist backs off.
+1857|You lose the argument and are humiliated in public.
+1858|Plan carefully
+1859|You plan the date carefully.
+1860|Go with the flow
+1861|You have fun on a whim.
+1862|Your impulsiveness leaves things awkward.
+1863|Show off at a pricey place
+1864|You put on airs at an expensive place.
+1865|You come up short on the bill and are mortified.
+1866|Listen to them
+1867|You listen to what they have to say.
+1868|You interrupt, and the mood turns awkward.
+1869|Accept
+1870|You take the bet and win.
+1871|You lose the bet and your allowance with it.
+1872|You turn down the bet and leave.
+1873|Win streak after streak
+1874|You win again and again and take their money.
+1875|You lose every round and all your money.
+1876|Watch and learn the patterns
+1877|You learn the game's patterns.
+1878|The patterns are hard to learn.
+1879|Get into the high school you want
+1880|You're accepted to the high school you wanted.
+1881|You fail to get in and are crushed.
+1882|Pick the same school as your friends
+1883|You go to the same school as your friends.
+1884|Go to a vocational school to learn a trade
+1885|You go to a vocational school to learn a trade.
+1886|You regret your school choice.
+1887|Consider going to seminary
+1888|You consider entering seminary.
+1889|Your future feels hopeless.
+1890|Aim for top of the school
+1891|Steady study raises your grades.
+1892|The goal is too high, and you burn out.
+1893|Aim for romance
+1894|You socialize and start dating someone.
+1895|Rumors of your romance spread, and it gets awkward.
+1896|Focus on club activities
+1897|You hang out with friends in your club.
+1898|Keep a low profile
+1899|You begin school life quietly.
+1900|Stay in your seat till the end
+1901|You stay put to the end and focus on studying.
+1902|You can't beat the drowsiness and are exhausted.
+1903|Sneak out
+1904|You sneak out and eat tteokbokki.
+1905|Help your friends study
+1906|You answer your friends' questions.
+1907|Read the Bible
+1908|You read the Bible during self-study hours.

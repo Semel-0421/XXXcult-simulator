@@ -1,0 +1,150 @@
+450|There are not enough glasses, and a quarrel breaks out.
+451|Offer it on the altar as it is
+452|The sealed bottle gleams atop the altar.
+453|Enjoy the full course
+454|With every new plate, the host's body loosens as if singing.
+455|The food was good, but the bill is heavy.
+456|Recruit the chef into the cult
+457|The chef's cooking draws followers to the temple every week.
+458|The chef quits after a week.
+459|Ask for a simple meal instead
+460|The plain fare leaves your body light.
+461|Hold a grand feast of meat and wine
+462|Your once-starving followers clink glasses, shouting the god's name.
+463|Neighbors complain about the noise of the feast.
+464|End the fast with a bowl of porridge
+465|The fast closes in reverence.
+466|Extend the fast a few more days
+467|Followers who endure it glow with eyes drunk on faith.
+468|Some followers collapse, and complaints erupt.
+469|Accept the most expensive fish whole
+470|One plate of fresh sashimi and the host's strength returns.
+471|Envy breaks out among the merchants.
+472|Bless the merchants and buy their goods
+473|The market merchants become temple regulars.
+474|The haggling leaves hard feelings on both sides.
+475|Decline the offerings
+476|The merchants withdraw sheepishly.
+477|Eat from your followers' hands
+478|Each time the spoon touches your lips, the face of the one feeding you flushes.
+479|Rumors call it a grotesque ritual.
+480|Allow it for only one person
+481|The chosen one places fruit in your mouth with trembling hands.
+482|The other followers are jealous.
+483|Say you will feed yourself
+484|Your followers set down their spoons, disappointed.
+485|Eat until you burst
+486|With your hunger sated, the vessel grows firm again.
+487|Endure the hunger and pray
+488|Hunger hones your prayer to a sharp edge.
+489|Hunger clouds your mind.
+490|Eat only a little of the followers' offerings
+491|Your followers' devotion warms your body.
+492|Tread the grapes barefoot with them
+493|Legs spattered with red juice tangle in dance, and the festival lasts into the night.
+494|Drunken followers spill out into the streets.
+495|Bless only the first cup
+496|The god-blessed first cup passes among your followers.
+497|The wine is sour, and the mood cools.
+498|Keep the festival small
+499|It ends with a quiet harvest prayer.
+500|Accept the sacrifice and hold a great feast
+501|Beneath the smoke rising from the altar, your followers share the meat.
+502|A complaint of animal cruelty comes in.
+503|Spare the calf and raise it at the temple
+504|The garlanded calf becomes the temple's mascot.
+505|Have him offer grain instead
+506|Sheaves of grain fill the altar.
+507|Go into the kitchen and eat sweets with them
+508|Amid the smell of butter, god and followers share a laugh.
+509|You ate so many sweets your teeth ache.
+510|Sell the sweets as Offerings
+511|Word of the god's cookies spreads through the neighborhood.
+512|Unsold sweets pile up.
+513|Keep the smell out of the prayer room
+514|The kitchen door closes, and your followers sulk.
+515|Enjoy a truffle banquet
+516|The musky scent awakens the host's senses deep within.
+517|It was delicious, but gone far too fast.
+518|Share them with your inner circle
+519|Your inner circle is moved, calling it the god's grace.
+520|Complaints arise that the portions are small.
+521|Sell them as Offerings
+522|One small box fattens the vault.
+523|Rent the most expensive banquet hall in the city
+524|Beneath the chandeliers, followers and guests raise their glasses in the god's name.
+525|An article on the lavish banquet runs in the society pages.
+526|Hold a buffet in the temple courtyard
+527|Laughter and the smell of food fill the courtyard.
+528|It suddenly starts to rain.
+529|Hold only a commemorative service
+530|The day ends with a reverent service.
+531|Hand out your leftovers
+532|Those who receive the god's leftovers testify that they were healed.
+533|A food poisoning report comes in.
+534|Deliberately leave plenty uneaten
+535|The crowd around your table grows with every meal.
+536|Reports call it grotesque worship.
+537|Deny the rumor
+538|Disappointed, the people disperse.
+539|Join the drinking and sing along
+540|Drunken followers hoist the god onto their shoulders and parade around the courtyard.
+541|The neighbors call the police.
+542|Listen to the singing from the window
+543|The songs calling your name warm the host's heart.
+544|End the drinking party
+545|The courtyard falls quiet, and the neighbors are relieved.
+546|Followers whose fun was spoiled grumble.
+547|Bite into the forbidden fruit
+548|The moment red juice runs down your chin, a divinity beyond taboo opens up.
+549|Your tongue goes numb, and you seem to hear the other gods sneering.
+550|Share it in front of your followers
+551|A secret bond forms among the followers who broke the taboo together.
+552|The taste falls short of expectations.
+553|Seal it on the altar
+554|The forbidden fruit glows red inside a glass case.
+555|Build the ebony throne and sit on it
+556|The moment you take the throne, every gaze in the temple turns upward.
+557|Photos of the throne spark controversy over idolizing the cult leader.
+558|Build a raised dais instead of a throne
+559|A seat one step higher is enough to command dignity.
+560|Sit on the same floor as your followers
+561|Your followers are touched by your approachability.
+562|Back his campaign and secure a favor in return
+563|At his victory celebration, he bows to you first.
+564|Reports allege collusion between religion and politics.
+565|Quietly steer votes his way
+566|The promise that came through the back door is entered in the ledger.
+567|Evidence of vote rigging comes to light.
+568|Keep your distance from politics
+569|The cult earns a reputation for staying out of politics.
+570|Celebrate grandly with a parade
+571|Banners fill the streets, and your face hangs in the sky.
+572|You are fined for blocking the roads.
+573|Hold the festival inside the temple only
+574|Your followers call your birthday the god's nativity.
+575|Sloppy preparations leave the mood chaotic.
+576|Refuse the celebration
+577|Some followers are disappointed by your humble refusal.
+578|Accept his surrender and absorb his cult
+579|His followers bow their heads as they learn your name anew.
+580|Rumor has it the absorbed cult's god is furious.
+581|Form an equal alliance
+582|The two cults join hands and extend their reach.
+583|A power struggle begins.
+584|Send him away
+585|He leaves to find another path.
+586|Erect a colossal statue that pierces the clouds
+587|Visible from anywhere in the city, the statue on the mountain looks down on everyone.
+588|Construction is halted amid an environmental controversy.
+589|Erect a life-size statue in the temple courtyard
+590|Your followers fold their hands before the life-size statue.
+591|The sculptor's work is a mess.
+592|Carve scripture instead of a statue
+593|Words carved in stone guard the temple.
+594|Establish full-body prostration
+595|The sound of hundreds dropping to the floor at once rolls like thunder.
+596|Critics say you are demanding servility.
+597|Settle on a light bow
+598|A modest etiquette takes hold.
+599|Set no etiquette at all

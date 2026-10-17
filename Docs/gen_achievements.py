@@ -25,7 +25,16 @@ def read_text(path):
 
 def esc(s):
     bs = chr(92)
-    return s.replace(bs, bs * 2).replace('"', bs + '"')
+    return s.replace(bs, bs * 2).replace('"', bs + '"').replace(SEP, bs + 'u001F')
+
+SEP = chr(0x1F)  # 한국어와 영어 사이 구분자 (게임에서 Lang.Pick이 현재 언어 쪽을 고른다)
+
+
+def bi(row, col):
+    """한국어 열과 같은 이름 + _en 열이 있으면 한국어+SEP+영어로 묶는다."""
+    ko, en = (row.get(col) or '').strip(), (row.get(col + '_en') or '').strip()
+    return f'{ko}{SEP}{en}' if ko and en else ko
+
 
 
 def main():
@@ -54,7 +63,7 @@ def main():
             code = f'AchievementReward.StatBonus(PersonalStatId.{m.group(1)}, {int(m.group(2))})'
         else:
             sys.exit(f'{aid}: 잘못된 보상 "{reward}"')
-        out.append(f'        new("{aid}", "{esc(name)}", "{esc(r["description"].strip())}", "{esc(r["condition"].strip())}", {code}),')
+        out.append(f'        new("{aid}", "{esc(bi(r, "name"))}", "{esc(bi(r, "description"))}", "{esc(r["condition"].strip())}", {code}),')
     cs = f'''// 업적 목록. Docs/achievements.csv에서 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.
 using System.Collections.Generic;
 

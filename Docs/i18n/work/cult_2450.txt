@@ -1,0 +1,150 @@
+2450|Trend and Doctrine blend into a new movement.
+2451|Make the set colors the cult's official attire
+2452|The cult's attire becomes a symbol of order.
+2453|Use it for communion
+2454|The communion cup binds the followers as one.
+2455|Pour it only for distinguished guests
+2456|The distinguished guests decide to become the cult's patrons.
+2457|Accept a large donation in private
+2458|The businessman leaves behind a fat envelope.
+2459|Submit the businessman's books to a public audit
+2460|Transparent dealings boost trust in the cult.
+2461|Serve the meals yourself
+2462|Warm soup brightens people's faces.
+2463|Recruit volunteers
+2464|The volunteers become a community that helps one another.
+2465|Hold the vow ceremony in public
+2466|Many attend the public vow ceremony.
+2467|Form a community of the sworn
+2468|The sworn call each other brother and sister.
+2469|Pray for them wholeheartedly
+2470|The mother thanks you through her tears.
+2471|Have the cult cover the medical bills
+2472|When the child recovers, word spreads through the neighborhood.
+2473|Set a table of reconciliation
+2474|The two families laugh together at the same table.
+2475|Step in as mediator
+2476|Your fair mediation wins praise.
+2477|Found an orphanage in the cult's name
+2478|Many send congratulations to the orphanage's opening.
+2479|Have follower families share the care
+2480|The warmth of homes embracing children spreads.
+2481|Open the books to every follower
+2482|Transparent books strengthen the followers' faith.
+2483|Form an audit committee
+2484|The committee establishes the cult's rules.
+2485|Hold a service celebrating the confession
+2486|The chapel fills with hymns of thanks.
+2487|Record his devotion as a Doctrinal example
+2488|The recorded example becomes a model for newer followers.
+2489|Raise their wages
+2490|The workers show the cult even greater loyalty.
+2491|Turn the farm's profits into scholarships
+2492|The scholarship students become the cult's pride.
+2493|Use the donated goods as relief supplies
+2494|The relief supplies reach everywhere they're needed.
+2495|Store the goods in the cult's fund
+2496|The fund becomes the cult's solid reserve.
+2497|Dispatch a service team
+2498|The service team brings comfort to every bedside.
+2499|Sponsor follower doctors to take part
+2500|The doctors' devotion is remembered in the name of the Doctrine.
+2501|Run the fund as he wished
+2502|His wishes change many lives.
+2503|Hold a memorial service in his name
+2504|At the memorial, followers weep and laugh together.
+2505|Dig the well yourself
+2506|Clear water springs from the parched earth.
+2507|Dig the well with followers' donations
+2508|Everyone who donated helped build the well together.
+2509|Accept the audit and flaunt your transparency
+2510|The clean audit becomes a badge of honor for the cult.
+2511|Share the audit results with followers
+2512|Followers trust the cult even more.
+2513|Make hymns the heart of the service
+2514|The hymns unite every heart.
+2515|Hand out hymn sheets in the village
+2516|Hymns ring out all across the village.
+2517|Name him your successor
+2518|Naming a successor brightens the cult's future.
+2519|Appoint him head of charity work
+2520|His devotion helps even more people.
+2521|Open temporary shelters
+2522|Warm lights glow in every shelter.
+2523|Welcome them as followers and build a community
+2524|The new community becomes each other's pillar.
+2525|Teach lessons alongside Doctrine
+2526|The children learn letters and Doctrine together.
+2527|Grant the teachers honorary posts in the cult
+2528|The teachers take pride in their honorary posts.
+2529|Give thanks without declaring a Miracle
+2530|Your humble gratitude draws followers closer.
+2531|Hold a festival celebrating the Miracle
+2532|The festival lights brighten the night sky.
+2533|Hand over the proceeds publicly
+2534|The public handover moves everyone.
+2535|Donate part of the proceeds in the cult's name
+2536|The cult's name is engraved at every orphanage.
+2537|Pray together and build trust
+2538|A smile of relief spreads across the girl's face.
+2539|Make her a representative of the cult
+2540|The girl's courage gives hope to many followers.
+2541|Listen closely to the end
+2542|When the sound fades, only certainty remains in your heart.
+2543|Was it a hallucination? Your mind is troubled all night.
+2544|Quietly finish your prayer
+2545|You finish your prayer without wavering.
+2546|You can't focus to the end.
+2547|Read the manuscript all night
+2548|A stranger's prayer warms your Faith.
+2549|The more you read, the more doubts pile up, and you sleep poorly.
+2550|Read it aloud with your followers
+2551|The prayer read together fills the chapel.
+2552|Complaints arise that the reading is tedious.
+2553|Attend the final service
+2554|Seated on the worn pew, you recall how it felt at the beginning.
+2555|In a place left only with memories, emptiness washes over you.
+2556|Buy the church to preserve it
+2557|The old church becomes a small holy site for the cult.
+2558|The sale falls through, and you lose the deposit.
+2559|Begin a fast
+2560|In your emptied body, the voice of god rings clear.
+2561|You collapse on the second day and break the fast.
+2562|Fast for just one day
+2563|The short fast lightens your heart.
+2564|All you remember is the hunger.
+2565|Take the dream as a divine warning
+2566|You resolve to walk your path more humbly.
+2567|The warning turns to fear, and you hesitate.
+2568|Dismiss it as just a dream
+2569|In the morning sun, the dream soon fades.
+2570|Those words keep coming back to you.
+2571|Accept the testimony humbly
+2572|You know that grace came from god.
+2573|Was it really your prayer? It weighs on your heart.
+2574|Proclaim it widely as a Miracle
+2575|As word spreads, people come seeking you.
+2576|News of a relapse leaves you humiliated.
+2577|Enter a prayer retreat
+2578|In the clear air, your Faith grows firm.
+2579|While you're away, the cult falls into disarray.
+2580|Politely decline the invitation
+2581|You believe protecting the cult is also an act of faith.
+2582|You feel you've missed a chance.
+2583|Hear it out to the end
+2584|Chewing over the counterarguments, your Faith deepens.
+2585|His words seem right, and you waver.
+2586|Turn off the radio
+2587|You quietly open your scripture.
+2588|The voice from the silent radio lingers.
+2589|Hold a thanksgiving service for god's protection
+2590|You sing songs of thanks with your followers.
+2591|Some whisper that it was mere coincidence.
+2592|Fix the lightning rod
+2593|Even god's protection needs human preparation.
+2594|The repairs cost more than expected.
+2595|Visit him in the hospital
+2596|Your mentor takes your hand and blesses you.
+2597|Seeing your mentor so frail pains your heart.
+2598|Put it off for cult business
+2599|The cult runs smoothly, but a corner of your heart feels heavy.

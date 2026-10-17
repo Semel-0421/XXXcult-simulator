@@ -1,0 +1,150 @@
+450|You get frosting all over your face, and the whole family bursts out laughing.
+451|Frosting gets in your eyes, and you burst into tears.
+452|Gaze at the candles for a long time
+453|Your eyes linger on the candle flames.
+454|The flames flicker, and you burst into tears.
+455|Open the presents first
+456|You tear open a present and pull out a toy.
+457|Go up and make friends first
+458|Because you spoke first, you quickly make several friends.
+459|You can't get through to them, and the other kids wander off.
+460|Cry, not wanting to leave Mom
+461|You won't let go of Mom's skirt, and the teacher spends ages soothing you.
+462|Read a picture book in the corner
+463|You quietly turn the pages of a picture book to pass the time.
+464|Hog the toys
+465|You clutch the toys and won't let go, and the other kids grow wary.
+466|Your toys get snatched, and the other kids tease you.
+467|Call the teacher
+468|The teacher rushes over to check the wound.
+469|Take their hand and help them up
+470|You help your friend up, and they smile and thank you.
+471|You pull your friend up and both of you fall.
+472|Cry along
+473|You and your friend bawl together.
+474|Lay a hand on the knee and pray
+475|When you finish praying, your friend stops crying.
+476|You recite a prayer, and your friend cries even harder.
+477|List every toy you want
+478|Your toy list crams the page.
+479|The list is so long the letter never gets finished.
+480|Wish for your family's health
+481|You write a wish for your family's health, and your mother chokes up.
+482|Write that there is no Santa
+483|It becomes a frank letter questioning who Santa really is.
+484|The grown-ups who read it feel a little sad.
+485|Ask to meet Santa in person
+486|As you write, you feel a strange thrill.
+487|You fall asleep in the middle of writing.
+488|Listen closely
+489|Absorbed in the story, you listen to the very end.
+490|Fire off questions
+491|Your questions are so sharp the teacher has to think for a long time.
+492|Your questions are so odd the other kids burst out laughing.
+493|Doze while listening
+494|You nod off and wake up at snack time.
+495|Just wait for snacks
+496|Thinking only of snacks, you barely hear the story.
+497|The teacher reprimands you.
+498|Wait your turn
+499|The teacher praises you for waiting your turn.
+500|Cut in line
+501|You push to the front and draw the other kids' outrage.
+502|You get sent to the back of the line.
+503|Let your sibling go first
+504|Your sibling slides down happily.
+505|Your sibling throws a fit and starts crying.
+506|Climb up the slide backward
+507|The other kids marvel as you scramble up the wrong way.
+508|Pick the biggest one
+509|You pick a big candy and are thrilled.
+510|Pick one for your sibling too
+511|You pick one for your sibling too, and Mom is pleased.
+512|Your sibling throws a fit demanding theirs.
+513|Don't pick any
+514|You pick nothing and walk out holding Mom's hand.
+515|Sneak an extra one
+516|You hide the pilfered candy in your pocket.
+517|You get caught at the register and turn red.
+518|Keep riding even when you fall
+519|Even with scraped knees, you get back up and pedal on.
+520|The scrape stings, and you sit there for a long time.
+521|Refuse to take off the training wheels
+522|You ride a lap around the alley with training wheels.
+523|Ride on your own right away
+524|Dad lets go, and you zoom off. The neighborhood adults are impressed.
+525|You lose your balance and crash into a utility pole.
+526|Give up out of fear
+527|Scared of the bike, you cling to Dad.
+528|Insist on playing the lead
+529|You land the lead and take the stage, confident enough to surprise even the teacher.
+530|You don't get the lead and throw a fit on stage.
+531|Play a tree
+532|You wear a tree costume and stand quietly.
+533|Memorize the whole script
+534|You rattle off your lines and astonish the teacher.
+535|You keep forgetting your lines.
+536|Help your friends backstage
+537|You straighten a friend's costume and cheer them on.
+538|Beg Mom out of envy
+539|You throw a tantrum demanding a bigger house.
+540|Mom sighs, at a loss.
+541|Have fun with your friend
+542|You run around the yard with your friend.
+543|Decide your own home is better
+544|Back home, you feel at ease.
+545|Your house feels small, and you are upset for no reason.
+546|Sneak home a friend's toy
+547|You manage to smuggle the toy home.
+548|Your friend tells their mom in tears, and you get caught.
+549|Take it to a police officer
+550|The officer praises you and pats your head.
+551|Buy candy
+552|You buy candy at the corner store.
+553|The shopkeeper hands the coin back, saying it's fake.
+554|Put it in your piggy bank
+555|Your piggy bank grows heavier.
+556|Flip the coin and call it
+557|Heads comes up again and again. Fascinated, you flip it over and over.
+558|You keep getting tails and end up losing the coin.
+559|Concentrate to the end
+560|You play a full game to the end and astonish your grandfather.
+561|Overturn the board when you lose
+562|Furious at losing, you scatter the stones.
+563|Your grandfather scolds you.
+564|Copy your grandfather's moves
+565|You learn by mimicking your grandfather's moves.
+566|Play jacks with the stones
+567|You roll the stones around and play quietly.
+568|Sleep it off
+569|After a good sleep, the fever goes down.
+570|Keep pretending to be sick
+571|Faking illness gets you a toy.
+572|Your faking is found out, and you get scolded.
+573|Ask Mom to read you a storybook
+574|You fall asleep to Mom's voice.
+575|Mom is too busy to read to you.
+576|Make up stories while looking out the window
+577|You pass the time making up stories about the tree outside.
+578|Your own story scares you to tears.
+579|Refuse to leave the lion enclosure
+580|You can't tear your eyes from the lion's gaze.
+581|Feed the rabbits
+582|A rabbit takes the grass from you, and you break into a smile.
+583|Eat nothing but cotton candy
+584|Your fingers get sticky with cotton candy.
+585|You eat too much cotton candy and get a stomachache.
+586|Stand at the snake enclosure for a long time
+587|You watch the coiled snake for a long time.
+588|The snake startles you, and you back away.
+589|Draw it again
+590|You draw it with more care than before and earn praise.
+591|Even redrawn, it's still clumsy.
+592|Tear up your friend's drawing
+593|Seeing the torn drawing, your friend bursts into tears.
+594|The teacher scolds you harshly.
+595|Tell the teacher
+596|The teacher has a word with your friend.
+597|Laugh along
+598|You laugh along, and you and your friend quickly make up.
+599|You become a laughingstock and feel hurt.

@@ -27,13 +27,14 @@ public class Outcome
     readonly List<string> grants = new();
     readonly List<(GodEventEffect effect, int amount)> godEffects = new();
 
-    public string Text { get; }
+    readonly string text;
+    public string Text => Lang.Pick(text);
     public IReadOnlyList<StatEffect> Effects => personal;
     public IReadOnlyList<CultEffect> CultEffects => cult;
     public IReadOnlyList<string> Grants => grants;
     public IReadOnlyList<(GodEventEffect effect, int amount)> GodEffects => godEffects; // 준비된 신 모드 전용 (GodRules.AfterEvent)
 
-    public Outcome(string text) { Text = text ?? ""; }
+    public Outcome(string text) { this.text = text ?? ""; }
 
     public Outcome P(PersonalStatId stat, int amount) { personal.Add(new StatEffect(stat, amount)); return this; }
     public Outcome C(StatId stat, int amount) { cult.Add(new CultEffect(stat, amount)); return this; }
@@ -48,7 +49,8 @@ public class Choice
     public const float MaxStatBonus = 0.15f;
     const float MinChance = 0.01f, MaxChance = 0.99f;
 
-    public string Text { get; }
+    readonly string text;
+    public string Text => Lang.Pick(text);
     public float Chance { get; }
     public PersonalStatId? BonusStat { get; private set; }
     public Outcome Success { get; }
@@ -59,7 +61,7 @@ public class Choice
     public Choice(string text, float chance, Outcome success, Outcome fail)
     {
         if (chance < 1f && fail == null) throw new ArgumentException($"'{text}': 성공 확률이 1 미만이면 실패 결과가 필요함");
-        Text = text; Chance = chance; Success = success; Fail = fail;
+        this.text = text; Chance = chance; Success = success; Fail = fail;
     }
 
     public Choice With(PersonalStatId bonusStat) { BonusStat = bonusStat; return this; }
@@ -82,8 +84,9 @@ public class Choice
 
 public class Question
 {
-    public string Text { get; }
+    readonly string text;
+    public string Text => Lang.Pick(text);
     public Choice[] Choices { get; }
 
-    public Question(string text, params Choice[] choices) { Text = text; Choices = choices; }
+    public Question(string text, params Choice[] choices) { this.text = text; Choices = choices; }
 }

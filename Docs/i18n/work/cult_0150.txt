@@ -1,0 +1,150 @@
+150|You now have more than twenty followers. The cult is starting to take shape.
+151|You now have more than fifty followers. The gathering place has grown cramped.
+152|You now have more than a hundred followers. The press begins to take notice of the cult.
+153|You now have more than two hundred followers. Voices grow louder calling for a branch.
+154|Your followers' faith deepens, and testimonies pour forth unprompted.
+155|Your followers swear they would do anything for you. The meeting hall burns with fervor.
+156|Your followers' faith borders on fanaticism. Outsiders' stares are sharp.
+157|The cult's coffers are flush.
+158|As offerings pile up, those who covet them appear. Strange men loiter near the safe.
+159|The cult's coffers are empty. Your followers grow uneasy.
+160|Your inner circle watches your mood, and no one objects anymore.
+161|Your word has become law.
+162|Your faith has deepened. Prayer no longer feels like words, but like conversation.
+163|God seems to have revealed Himself to you. Light fills the room, then vanishes.
+164|As your Communion deepens, the line between dream and reality blurs.
+165|A strange power begins to dwell in your words.
+166|You have reached perfect Communion. You have become the very voice of God.
+167|Your Doctrine begins to take systematic form.
+168|A heresy dispute erupts over your Doctrine. Theological journals print the back-and-forth.
+169|As your Doctrine nears completion, it becomes an object of study beyond the cult. In a university lab, someone opens a translation of it.
+170|The cult's Repute has plummeted. Followers are pointed at in the street.
+171|The cult has become a target of public condemnation. The authorities open an investigation.
+172|The cult has become a respected organization in the community.
+173|Your followers are many, but their faith is shallow. The cult is wavering.
+174|Money overflows, but Repute is at rock bottom. People call the cult a money-making racket.
+175|Your Authority is high, but your followers' hearts are drifting away.
+176|Your followers have grown in number, yet your own faith is at rock bottom.
+177|As the cult gains power, other cults begin to keep it in check.
+178|Your Communion experiences dovetail with the Doctrine, and a new Revelation descends.
+179|The faith of leader and followers has become one. A holy aura hangs over the cult.
+180|Locals stage a protest outside the cult's building. Picket signs line the wall.
+181|Religious groups across the region have united to brand the cult heretical.
+182|A state agency has launched an official investigation into the cult. Officials are carrying out boxes of documents.
+183|Word is the government is considering an order to dissolve the cult. Time is short.
+184|Local organizations propose joint projects with the cult.
+185|The government has sent guidance on recognizing the cult as an official religious corporation.
+186|The cult has become a symbol of the community. The press requests an interview with the cult leader.
+187|Followers' families gather, threatening to sue the cult. They hold picket signs outside the cult.
+188|You pray, but there is no answer. God's voice has been silent for months, and every dawn you sit alone in an empty room.
+189|Mid-sermon, the words suddenly fail you. Dozens of eyes are on you, and you can't recall where you left off.
+190|At the gathering, your followers mouth the words mechanically. There is no faith in their eyes; they keep glancing at the clock.
+191|A veteran follower publicly announces at the gathering that he is leaving the cult. His voice rings through the hall.
+192|Someone in your inner circle openly ignores your orders and forms his own group. One by one, followers drift in and out of it.
+193|A follower rises at the gathering and shouts that the leader's seat is rightfully his. A few applaud.
+194|The meeting hall's owner knocks to collect overdue rent. Pay by the end of the month, he says, or vacate.
+195|The heating money has run out in the dead of winter; there isn't even coal for the hall. Followers shiver in layered coats.
+196|At the hour of the dawn gathering, you open the doors, but no one comes. Empty chairs stand in rows in the dark.
+197|Your last remaining follower comes to say goodbye; he is moving away. He stands there, apologetic.
+198|A young man demands to know what your Doctrine is, and you have no good answer. It's clear you have not a single coherent tenet.
+199|Your old handwritten Doctrine notebook is soaked and smeared by rain. Half the sentences from many long nights are illegible.
+200|You feel nothing during the Communion rite. You keep your eyes closed until the incense burns out, but there is only darkness.
+201|On a night you attempt Communion, a hollow, unknowable resonance sounds in the dark. When you open your eyes, every candle is out.
+202|Someone has scrawled "pseudo-religion" on the cult building's wall. Passersby click their tongues and whisper.
+203|A neighbor reports the cult to the police box as suspicious. An officer comes and demands your ID.
+204|You hold a lavish banquet with your followers' offerings. The guests look up to you.
+205|Someone proposes building a golden altar. Your followers gladly pool their hands.
+206|A designer suit arrives as a donation. When you put it on, no one dares speak to you.
+207|A local bigwig pledges to sponsor the cult. The price is one small seat.
+208|The fountain in the retreat's garden is complete. People flock to pray at the water's edge.
+209|Rumors of your extravagant banquets spread. The curious line up.
+210|The cult's land falls within a new-town development zone. Its value multiplies overnight.
+211|Your portrait is hung on the new temple's wall. People kneel before it.
+212|The wife of a chaebol family offers the cult a large jewel.
+213|The crowd chants your name. Ecstasy washes over your whole body.
+214|A member of parliament sends an aide, offering to sponsor a cult event.
+215|Costly agarwood piles up on the altar. Its scent reaches the end of the alley.
+216|A new bell is cast for the cult's temple. At its toll, followers come flocking.
+217|A black imported sedan stops outside the cult. The businessman who steps out pledges a bigger donation than anyone.
+218|A popular singer wants to perform at a cult concert. The venue is packed.
+219|Several cults propose merging with you. Refuse, and you'll hear some grumbling.
+220|A room filled with golden candlesticks is complete. Followers hold their breath as they enter.
+221|More and more followers dress the way you do.
+222|A fine wine cellar has been donated.
+223|A wealthy businessman asks for a private audience with you, away from the crowd.
+224|You open a free soup kitchen for the poor. The line stretches all the way to the station.
+225|More followers take vows of temperance. The cult's order grows firm.
+226|A mother with a sick child comes and falls to her knees.
+227|Two feuding families among your followers reconcile.
+228|You are asked to found an orphanage for abandoned children.
+229|Voices call for opening the cult's books. It's a chance to build trust.
+230|A follower who waited long and patiently finally professes his faith.
+231|Workers on the cult's farm demand fair wages. You agree.
+232|When you preach honest poverty, your followers give up their luxuries of their own accord.
+233|A local hospital asks the cult for volunteers.
+234|A follower entrusts his entire fortune to the cult and leaves, saying, "Care for those poorer than I."
+235|Someone proposes digging wells for drought-stricken villages in Africa.
+236|An honest merchant volunteers to audit the cult's books.
+237|Young followers write a hymn and sing it. Their clear voices fill the church.
+238|A young leader in the cult offers to step aside.
+239|North Korean defector families knock on the cult's door.
+240|Schoolteachers offer to teach for free at the cult's school.
+241|A long-bedridden follower returns to the cult fully healed. Everyone rejoices.
+242|All proceeds from the cult's bazaar go to an orphanage.
+243|A girl comes and says, "I want to believe in you." You quietly take her hand.
+244|During dawn prayer, a low, unknowable voice lingers in your ear.
+245|An old manuscript Bible is donated to the cult. Someone's prayer is written in its margins.
+246|You hear that the country church you attended as a child is closing.
+247|You feel the urge to fast for three days and seek God's will.
+248|In a dream, an old man in white appears and says, "You are not there yet."
+249|A follower testifies that your prayer healed him.
+250|You are invited to stay a week at a mountain prayer house.
+251|A radio preacher passionately expounds a doctrine opposite to yours.
+252|On a night of pouring rain, lightning spares the church spire.
+253|Your old mentor pastor, long out of touch, asks for you from his sickbed.
+254|On Christmas Eve, you sit alone in the empty chapel.
+255|A single Bible verse hasn't left your mind for weeks.
+256|It's the cult's founding anniversary. You remember the five people who first gathered.
+257|Late at night on the street, a drunk young man shouts at you, "God is dead!"
+258|The hospital chaplaincy asks you to lead a deathbed service.
+259|After long prayer, an inexplicable warmth fills your palms.
+260|You get the idea to compile the cult's first hymnal yourself.
+261|As the drought drags on, you are asked to pray for rain.
+262|You happen to reread the diary of your youth.
+263|During Sunday service, a follower collapses, overcome with emotion.
+264|A follower family has had their first child. They ask you to name it.
+265|Whispers go around among your followers: "The leader doesn't pray."
+266|A follower's business has failed, and he has stopped coming to church.
+267|The youth group wants to hold an all-night worship gathering.
+268|Elderly followers complain the young people's worship style is frivolous.
+269|A follower is putting off baptism because her family objects.
+270|You must choose a location for the summer retreat.
+271|A follower claims a Revelation came to him in a dream and prophesies the cult's future.
+272|The choir wants to enter a major competition.
+273|You discover your followers are secretly planning your birthday.
+274|Someone proposes a cult newsletter.
+275|A flu outbreak halves Sunday attendance.
+276|Your oldest follower is moving away and comes to say goodbye.
+277|A married couple among your followers fights bitterly and avoids each other at church.
+278|The children's Sunday school is short on teachers.
+279|Your followers want a greeting unique to the cult.
+280|An ailing elderly follower wishes to hear your sermon one last time.
+281|Followers squabble over who's on meal duty after service.
+282|The cult's steering committee objects to your decision.
+283|Someone proposes a private office for the cult leader.
+284|Two elders jockey for the next leadership position.
+285|It's time to put the cult's bylaws in writing.
+286|A follower publicly rebuts the content of your sermon.
+287|A local bigwig demands the seat of honor at a cult event.
+288|Someone suggests creating a new system of ranks in the cult.
+289|A motion is raised to buy the leader a new car.
+290|During a cult event, the microphone cuts out and your voice is drowned.
+291|At a leaders' meeting, someone suggests calling you not "Teacher" but "Cult Leader."
+292|The deacon in charge of offerings refuses to open the books.
+293|Someone proposes hanging your photo in the chapel.
+294|It's time to redesign the cult's insignia.
+295|A young evangelist has founded a branch without your instruction.
+296|You are asked to represent the cult at a public hearing.
+297|A tip comes in about a secret group meeting behind your back within the cult.
+298|Followers begin recording your words and memorizing them like scripture.
+299|Elders squabble over who should emcee a cult event.

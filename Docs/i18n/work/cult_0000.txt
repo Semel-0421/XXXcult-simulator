@@ -1,0 +1,150 @@
+0|One winter night, beneath the prayer-room candles, your conviction wavers. Did God truly choose you?
+1|You are certain you heard God's voice in a dream. The morning radio leaks a song through the static.
+2|You resolve to fast and pray. From the kitchen drifts the smell of rice cooking.
+3|A priest you once revered is caught up in a scandal. His photo is splashed across the front page of the online news.
+4|In prayer, you feel your fingertips grow warm. The desk lamp flickers.
+5|Rereading an old scripture, you find new meaning in it. A worn note is tucked between the pages.
+6|A sudden illness leaves you bedridden for days. The room smells of fever pills and herbal medicine.
+7|You are invited to a secluded retreat at a mountain monastery. Thick fog hangs over the mountain path.
+8|Something happens as if your prayer has been answered. The neighbor's long-sick child finally breaks his fever.
+9|A practitioner of another faith challenges you to a debate. He stands in the middle of the market with a megaphone.
+10|Worn out from running the cult, your faith is running dry. Empty seats stand out at the dawn prayer meeting.
+11|You suddenly miss the church bells of your childhood. The old neighborhood alleys are apartment blocks now.
+12|You make a wish on a shooting star. Laundry flaps in the wind on the rooftop.
+13|You overhear someone in your inner circle doubting your faith. Voices leak through a door ajar at the end of the hall.
+14|On a stormy night, lightning strikes the cult's building. One side of the roof is scorched.
+15|In meditation, you seem to glimpse a past life. When you open your eyes, white smoke scatters toward the ceiling.
+16|An old man asks you what true faith is. He holds a worn Bible in his hands.
+17|You decide to write a new prayer. Your computer screen is full of sentences written and deleted.
+18|You have a nightmare in which you lose God. You wake to a pillow soaked in cold sweat.
+19|A follower wants to leave the cult because their family objects. The family is raising their voices at the front gate.
+20|Your followers sing praises with tears in their eyes at the gathering. The ceiling fan in the hall turns slowly.
+21|A disagreement breaks out among your followers. Voices rise from the back rows of the gathering.
+22|A follower offers you his entire life savings. He holds a battered bankbook.
+23|Your followers want to throw you a lavish birthday celebration. Colored paper is taped to the walls of the meeting hall.
+24|A young follower imitates you, mimicking your sermons. Children burst into laughter on the meeting hall floor.
+25|A sick follower comes to you hoping for a miracle. His face is pale and his breathing labored.
+26|A follower testifies that he saw you in a dream. His voice trembles with excitement.
+27|Followers complain that cult life is too strict. Whispers drift through the dining hall.
+28|One of your oldest followers has passed away. A worn Bible and a pair of glasses lie in his room.
+29|Your followers want a hymn they can sing together. Sheet music is scattered across the piano lid.
+30|A follower has spread rumors about your private life. They have already reached the local online forum.
+31|Your followers want to tattoo the cult's symbol on their bodies. A tattoo parlor sign hangs in the alley.
+32|Fewer followers come to the dawn prayer meeting. Empty chairs sit in the dark.
+33|A married couple among your followers asks you to name their child. The baby sleeps swaddled in a blanket.
+34|Talk spreads among your followers of worshiping you as a god. Someone shouts it aloud during a gathering.
+35|A follower confesses her love for you. Her voice trembles.
+36|Your followers propose a group pilgrimage. The bus stop is packed with followers.
+37|Your followers prayed for you all night. Morning sunlight streams through the meeting hall windows.
+38|A member of your inner circle rebels against how the cult is run. Papers are strewn across the conference table.
+39|The time has come to set the cult's hierarchy. The blackboard is crammed with titles.
+40|You misspeak in front of your followers. A murmur ripples through the hall.
+41|You choose the vestments that will symbolize the cult. The tailor's window is full of fabric swatches.
+42|A follower has disobeyed your order. He slips out the back door of the hall.
+43|You consider moving the cult's gathering place. Several candidate sites are marked on the map.
+44|Your inner circle competes for your favor. Even at dinner, they size each other up.
+45|Your followers question your decision. During the gathering, hand after hand goes up.
+46|Someone proposes a rulebook for the cult. An old set of bylaws lies open on the desk.
+47|Another cult's leader proposes an alliance. By a teahouse window, he smiles and extends his hand.
+48|Your followers have begun to kneel before you. The hall floor is covered with knee marks.
+49|You design the cult's emblem. Several drafts are spread across the print shop's desk.
+50|Evidence surfaces that someone in your inner circle has been embezzling cult funds. The numbers in the safe's ledger don't add up.
+51|Your inner circle meets ahead of a major decision. The conference room is thick with cigarette smoke.
+52|Your followers ask you to officiate their wedding yourself. They will use the meeting hall instead of a wedding venue.
+53|Someone suggests creating the post of inspector in the cult. Your inner circle eye one another warily.
+54|Your followers want to transcribe your words and bind them into a book. In the back room, the copier runs nonstop.
+55|The younger followers have formed their own group. A flyer for it is pinned to the meeting hall's notice board.
+56|Someone proposes hanging your portrait in the hall. A painter picks out brushes before the canvas.
+57|An anonymous large sum turns up in the offering box. The envelope bears only a blank space where a name should be.
+58|The cult building's roof has started leaking. A yellow stain spreads across the ceiling.
+59|A businessman offers to invest in the cult. A contract lies on the conference table.
+60|Someone suggests assigning seats by the size of offerings. The front row of the meeting hall sits empty.
+61|Someone proposes selling souvenirs bearing the cult's symbol. Samples are on display in a shop in the arcade.
+62|The follower keeping the cult's accounts reports a hole in the books. Pencil marks show in the ledger's corner.
+63|A poor follower is ashamed he cannot give an offering. He wears tattered gloves.
+64|Someone suggests opening a small shop under the cult's name. An empty storefront is up for rent in the alley.
+65|The year is ending, and you close the cult's books. The ledger is packed with figures.
+66|Someone proposes buying a costly relic. An antique dealer opens a box to show you.
+67|A follower wants to offer money he won gambling. He pulls a wad of crumpled bills from his pocket.
+68|The tax authorities inquire about the cult's finances. A tax officer unfolds a list of documents.
+69|Your followers want to buy you a new car. Only a battered van sits in the parking lot.
+70|An offering basket has gone missing. The meeting hall's back door is open, with footprints on the floor.
+71|You receive an offer to buy the cult's land. It is a grassy lot on the edge of town.
+72|Your followers want a monthly offering system. The roster is filled with dates.
+73|Someone proposes a lavish banquet to attract patrons. Chandeliers glitter in the hotel ballroom.
+74|Offerings have suddenly plummeted. The offering box holds less than half of last month's.
+75|The heir of a wealthy conglomerate family comes wanting to join. His cars fill the front of the meeting hall.
+76|You get a chance to preach impromptu in the square. A megaphone blares from one corner of the square.
+77|A follower says he will bring his friends. He shows you a planner with his weekend plans.
+78|You try proselytizing in the college district. Campus boards are crammed with club flyers and job fair posters.
+79|New followers aren't mixing with the old ones. Two groups sit apart in the dining hall.
+80|You approach patients' families outside a hospital. Every waiting-room chair holds a weary face.
+81|A celebrity takes an interest in the cult. His name often appears in the entertainment pages.
+82|Someone suggests proselytizing online. A young follower decorates the cult's web forum from an internet café.
+83|You tour the countryside villages to proselytize. A battered van rattles down a narrow path between rice paddies.
+84|You get a chance to preach to prison inmates. The visiting room's iron door slams coldly shut.
+85|Someone suggests inflating the follower count in announcements. The draft presentation shows the number in large print.
+86|Migrant workers show interest in the cult. People gather outside the factory dormitory.
+87|A follower who left the cult wants to return. He hesitates at the meeting hall door.
+88|Followers of a rival cult want to come over to yours. On a street corner, followers of both cults eye each other.
+89|You run a cult booth at a festival. A long line stretches in front of it.
+90|An entire family wants to join. They stand side by side, awaiting your answer.
+91|You begin proselytizing at a senior center. The clack of janggi pieces fills the room.
+92|While proselytizing, you get into a quarrel on the street. The other man loudly curses the cult.
+93|Someone proposes a cult newsletter. Stacks of paper pile up beside the copier.
+94|Young followers want to tutor neighborhood kids for free. Children gather in the churchyard.
+95|You set the first commandment of your Doctrine. Candidate commandments fill an old notebook.
+96|You consider adding fast days to the Doctrine. The calendar is full of empty squares.
+97|A follower points out a contradiction in the Doctrine. He holds the Doctrine notebook open.
+98|You set down the Doctrine on the afterlife. A faded Buddhist sutra lies on the desk.
+99|You must set the Doctrine on sex. Long debate leaks through the conference room door.
+100|You set the Doctrine on wealth. Haggling echoes from the market stalls.
+101|A draft scripture codifying the Doctrine is complete. A stack of printed manuscript sits on the desk.
+102|You consider borrowing parts of other religions' doctrines. Books on many faiths stand side by side on the shelf.
+103|You set the number of daily prayers in the Doctrine. The wall clock ticks.
+104|Your followers want a Doctrine study group. Chairs are lined up in the church basement classroom.
+105|Someone suggests adding an end-times Doctrine. A TV special on doomsday prophecies is airing.
+106|You set dietary taboos in the Doctrine. A restaurant menu lies open beside the Doctrine notebook.
+107|You choose the Doctrine's sacred animal. An animal encyclopedia lies open.
+108|Your inner circle splits into two factions over interpreting the Doctrine. Two groups stand outside the conference room.
+109|You consider adding rites of mortification to the Doctrine. You picture the rocky path to a mountain prayer house.
+110|You create holy days for the Doctrine. You pick dates to mark in red on the calendar.
+111|Someone suggests rewriting the Doctrine so even children can understand it. Drawings hang on the education hall walls.
+112|You define sin and punishment in the Doctrine. A list of offenses is written on the staff room blackboard.
+113|Someone argues an old tenet no longer fits the times. A TV news report criticizes the clause.
+114|While praying, you hear someone whisper in your ear. You are alone in the room.
+115|You discover an old altar in the cult building's basement. Scorched wax has hardened upon it.
+116|In meditation, you feel as if your body is floating. When you come to, you are sitting on your cushion.
+117|A follower testifies that light shone from you. He speaks in a trembling voice.
+118|An old shaman visits, offering to teach you the secrets of Communion. Her robes smell of incense.
+119|Deep in the night, a candle goes out on its own. The window is shut, and there is no wind.
+120|You hold an ecstatic rite with your followers. Drums and a censer sit in the attic.
+121|Words like prophecy spill from your mouth. Even you don't know what they mean.
+122|You spend a night in a long-abandoned sanctuary. A single candlestick stands on the dusty altar.
+123|Animals gather around you more and more often. Sparrows and cats in the yard come close.
+124|In a dream, a giant serpent asks your name. Its eyes are golden.
+125|You notice the cult's relic trembling faintly. The censer lid on the altar rattles.
+126|A follower who was ill for years recovers after your prayer. He comes to you holding a hospital report.
+127|During Communion, a strange presence demands a price. Its voice is cold and clear.
+128|A strange light rises from a well near the cult. The stones around it are thick with moss.
+129|A follower claims to have experienced Communion. He is so excited his hands shake.
+130|It is the day of a solar eclipse. The sky darkens, and the birds fall silent.
+131|When you pray by an old grave, the wind dies. The insects in the grass go suddenly quiet.
+132|The local paper wants to cover the cult. A reporter from the newsroom holds out a business card.
+133|Malicious rumors about the cult are spreading. They are the talk of every local salon and online forum.
+134|You are asked to help disaster victims. The TV shows a village underwater.
+135|Locals complain about the noise from the cult. Prayers that run late into the night are the problem.
+136|A mayoral candidate wants the cult's endorsement. His campaign truck rolls past the cult's door.
+137|A follower commits a crime and makes the news. The cult building flashes briefly on the TV screen.
+138|Someone proposes opening a free soup kitchen. Cooking gear is piled in an empty lot.
+139|A book criticizing the cult is published. It sits at the front of the bookstore display.
+140|You are asked to sponsor a local festival. A festival banner hangs at the village entrance.
+141|A celebrity ex-member denounces the cult. His interview airs on a TV current-affairs show.
+142|A broadcaster wants to feature the cult in a special on pseudo-religions. A TV camera stands in the cult's front yard.
+143|The cult joins a neighborhood cleanup. Garbage bags pile up in every alley.
+144|You are invited to a gathering of religious leaders. Nameplates stand side by side in the hall lobby.
+145|Donations pour into the shelter the cult runs. The shelter's board is crammed with donors' names.
+146|A student follower is reportedly being bullied at a nearby school. Parents murmur outside the school gate.
+147|A renowned scholar wants to study the cult. He has a notebook open and is writing a list of questions.
+148|Someone proposes a scholarship in the cult's name. Application forms lie on the desk.
+149|The pastor of a neighboring church extends an olive branch to the cult. He waits, teacup in hand.

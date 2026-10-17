@@ -1,0 +1,150 @@
+0|The night after the ritual, a young follower stands at your door holding a bottle of scented oil. Candlelight shows through the thin folds of their robe.
+1|Your followers ask you to join them in a ritual bath of purification. Rose petals float on the steaming water of the great bathhouse.
+2|A wealthy widow holds out a lavish offering and asks to pray with you alone. Pearls gleam at her throat.
+3|Word spreads that your touch heals the sick. Followers sit in rows in the waiting room, their shoulders bare.
+4|Someone proposes a dance ritual beneath the full moon. Drums and torches stand ready in the courtyard.
+5|Followers hoping to be chosen line up before the altar, wrapped in nothing but white silk. Every eye is fixed on you.
+6|The host's body remembers a heat that has slept in it for years. Your fingertips tingle and your breath quickens.
+7|A painter comes asking to paint the god in the nude. His sketchbook is already full of your face.
+8|A married couple of followers ask to spend their wedding night under your blessing. Red candles burn in the bridal chamber.
+9|Someone suggests holding an ecstatic prayer meeting in an incense-filled back room. Sweet, heavy smoke curls from the censer.
+10|Adoring followers have sent you a mountain of love letters. Every envelope reeks of perfume.
+11|A follower who was once a dancer offers to perform a sacred dance in the temple. Tiny bells chime at her ankles.
+12|Testimonies pour in that followers have been visiting you in your dreams, one after another. They all say they dreamed the same dream.
+13|A new follower begs to be allowed to kiss your feet. He trembles on his knees.
+14|Someone proposes a midnight pilgrimage to the hot springs. Steam rises from an open-air bath deep in the mountains.
+15|Someone suggests spending the followers' offerings on a golden bathtub. The figure on the quote is dazzling.
+16|A jeweler brings a crown fit for a god. In its velvet box, a ruby glows the color of blood.
+17|A wealthy businessman offers to give the cult a luxury villa. It is a glass-walled mansion overlooking the sea.
+18|Your followers offer to remake your robes in gold thread. A tailor waits with a measuring tape.
+19|Offerings overflow the vault. Bundles of bills are stacked to the floor, and the vault door will not close.
+20|Someone proposes making an imported luxury car the god's chariot. Its black body gleams like a mirror in the showroom.
+21|A follower brings a family heirloom as an offering. A cold light glows from an old jade box.
+22|Someone suggests gilding the temple pillars. A craftsman holds a sample of gold leaf up to the sunlight.
+23|A follower who won the lottery offers half his winnings. He believes you chose the numbers for him.
+24|Word comes that a holy grail from the age of myth has turned up at auction. Even the opening bid takes your breath away.
+25|A luxury brand proposes a limited edition bearing the god's name. In the mockup, your emblem is stamped in gold on a handbag.
+26|Followers have started offering Bitcoin wallets instead of cash. The numbers on the screen dance several times a day.
+27|The eldest daughter of a chaebol family joins the cult and hands over the keys to the family art museum. The keyring is set with diamonds.
+28|Blueprints arrive for a private treasury beneath the temple. Drawings of a thick steel door cover the desk.
+29|A yacht company offers to let a luxury yacht go cheap for the god's pilgrimages. Champagne glasses line the deck.
+30|Your followers have prepared a holy banquet of a hundred dishes. The end of the long table is out of sight.
+31|A rare liquor aged for decades has been offered. When the bottle is opened, the room fills with a scent sweet as honey.
+32|A famous chef offers to serve a secret course for the god. Steam escapes from beneath silver cloches.
+33|You must decide how to hold the feast that ends the fast. The eyes of your hungry followers turn to you.
+34|Merchants from the dawn market want to offer their finest goods to the temple. Fish scales glitter in the morning sun.
+35|Your followers ask to feed you with their own hands. Hands holding silver spoons wait in line.
+36|The host's body cries out with a terrible hunger. Your stomach twists and your strength drains away.
+37|It is grape harvest season, and your followers want to hold a wine festival. Vats for treading grapes barefoot sit in the courtyard.
+38|A follower offers a calf he raised himself as a sacrifice. A garland of flowers hangs around its neck.
+39|Followers baking sweets have taken over the temple kitchen. The smell of butter and sugar seeps all the way into the prayer room.
+40|Rare truffles have arrived as an offering. The scent of earth and musk spreads from a small box.
+41|It is time to prepare the banquet for the cult's founding anniversary. The banquet hall's booking manager hands you a menu.
+42|A rumor spreads among followers that the god's leftovers cure illness. People hover around your table.
+43|Drunken followers sing your name all night long. Empty bottles roll across the courtyard.
+44|An exotic fruit called the forbidden fruit has arrived. Red juice runs from its split flesh.
+45|Your followers want to build you a throne. Carpenters have laid ebony logs in the courtyard.
+46|A local politician bows his head and asks for your support in the election. He promises to do anything if he wins.
+47|Your followers want to celebrate your birthday like a national holiday. Draft designs for parade banners are spread across the desk.
+48|The leader of a rival cult has come on his knees to ask for a merger. Behind him, his followers murmur uneasily.
+49|Your followers want to erect a colossal statue of you on the mountain. In the aerial rendering, it pierces the clouds.
+50|Your followers want to set a protocol for prostrating before you. The draft even specifies the number of bows.
+51|A TV network offers to air an interview with the cult leader in prime time. An empty chair waits for you under the lights.
+52|One of your inner circle is lording it over the followers on the strength of your Authority. Loud laughter comes from his room.
+53|Your followers dream aloud of founding a city named after you. A red circle is drawn on the map.
+54|The head of a nearby village comes to offer the entire village to the cult. He holds the village seal in his hand.
+55|Your followers say calling you a god is not enough and present a new title. A long honorific is written on the scroll.
+56|The chairman of a conglomerate offers secret backing and asks to be made your successor priest. His watch gleams heavily.
+57|Your followers want every word you speak to become law. A committee has been formed to compile the code.
+58|Someone proposes you keep bodyguards. Men in black suits stand in a row at the door.
+59|Someone suggests planting the cult's flag in the plaza in front of city hall. The flagpole at its center stands empty.
+60|Word comes that a priest of the Church of Righteous Light warned his congregation about a new cult. The video of his sermon racks up views.
+61|The Garden of Plenty has opened a free soup kitchen across from the temple. People line up before steaming pots of soup.
+62|A strange silence plugs your ears mid-prayer. The god of the Order of Silence seems to be watching you.
+63|A follower comes back with a Church of Righteous Light tract. It warns against false gods.
+64|Pilgrims of the Red Sword Society march past the temple bearing red banners. Their singing rings unusually loud.
+65|The bell of an old cathedral tolls off-beat every time you pray. Your followers whisper that it is an ill omen.
+66|Followers of the Garden of Plenty hand out harvest festival invitations to your followers. Each envelope holds a few grains.
+67|An old man claiming to be the messenger of another god came, stared at you a long while, and left. Wet footprints remain on the threshold.
+68|The Church of Righteous Light has challenged you to a public debate on doctrine. Two chairs face each other on the stage.
+69|A theology journal claims your Doctrine was copied from heretical texts. The article even includes a comparison chart.
+70|Monks of the Order of Silence stage a silent protest in front of the temple. White cloth bound over their mouths, they do not move.
+71|A Church of Righteous Light theologian has published a book calling your revelations riddled with contradictions. It sits at the front of the bookstore display.
+72|The Garden of Plenty brands your indulgence as depravity and holds a lecture on abstinence. A banner flaps in the wind outside the hall.
+73|A dispute over the meaning of one line of Doctrine has broken out among your followers. Word is the Church of Righteous Light is prying into the gap.
+74|A warrior monk of the Red Sword Society has sent a letter challenging your god to a duel. The envelope bears a stain like dried blood.
+75|The Church of Righteous Light is handing out free Q&A booklets refuting your Doctrine. One turned up in a follower's bag.
+76|The Garden of Plenty urges your followers to convert, promising jobs and rice. A few of them are packing their bags.
+77|Church of Righteous Light missionaries are going door to door to your followers' homes. White flyers are tucked into every doorway.
+78|Word comes that a longtime member of your inner circle has been baptized by the Church of Righteous Light. The relic you gave him is left in his empty room.
+79|The Order of Silence has invited your followers to a silent retreat in the mountains. Those who return no longer speak your name.
+80|The Red Sword Society is luring your followers' children into its martial arts dojo. The parents are uneasy.
+81|The Garden of Plenty has bought the building right next to your temple. A new sign bears its grain-of-plenty emblem.
+82|The Church of Righteous Light advertises free purification rites to wash away converts' sins. Your followers look back on their indulgences and waver.
+83|Followers' families arrive with clergy from established religions to take them home. Shouting erupts outside the temple.
+84|The Council of the Church of Righteous Light has officially declared your cult heretical. The verdict runs in the religion section of every paper.
+85|Since the heresy verdict, your followers are pointed at in the street. One comes back in tears.
+86|The Garden of Plenty holds a rally featuring a former follower who testifies to your indulgences. On the podium, he weeps as he confesses.
+87|Seminaries have begun teaching your Doctrine as a cautionary example. Your emblem is printed upside down on the textbook cover.
+88|The Order of Silence's curse is chilling your followers' dreams. They complain that they dream nothing at all, night after night.
+89|The Church of Righteous Light has announced a ritual to burn your scriptures in the plaza. A pile of firewood begins to grow.
+90|Another small cult declared heretical asks for an alliance. Their god is one forgotten long ago.
+91|Followers have begun cautiously asking whether they really are heretics. Empty seats multiply in the prayer room.
+92|The sky turns red, and the other gods have finally moved themselves. A flock of strange birds circles above the temple roof.
+93|The god of the Red Sword Society covets your vessel and sends visions of a red blade. In the mirror, a red line is drawn across your throat.
+94|The god of the Order of Silence is trying to sever the bond between you and your vessel. The more you pray, the colder your fingertips grow.
+95|The god of the Garden of Plenty has dried up your followers' granaries. Crops in their fields withered overnight.
+96|The god of the Church of Righteous Light spreads voices among your followers that twist your revelations into lies. Your followers mutter the same words.
+97|The four faiths have united and declared a holy war. Their banners converge on your temple from every corner of the city.
+98|Another god secretly sends a messenger whispering that it will take your side. The messenger's eyes glow gold.
+99|The assembly of gods informs you that you will be put on trial. In your dreams you see a vast round table and an empty chair.
+100|A post on a local forum claims your miracles are all staged. It has hundreds of comments.
+101|Among the ladies at the hair salon, talk goes around of strange noises from the temple every night. A follower overheard it.
+102|A rumor spreads that the follower you supposedly healed was never sick to begin with. The follower's face has gone white.
+103|A YouTuber is filming with a hidden camera outside the temple. His cap is pulled low.
+104|A tenant next door threatens to complain to the district office about the temple's incense and music. He holds a recorder.
+105|A false rumor goes around that you are a convicted fraudster. A photo of unknown origin circulates with it.
+106|You hear that taxi drivers click their tongues whenever they pass the temple. One rolls down his window, spits, and drives off.
+107|A follower's coworkers are shunning him for falling into a pseudo-religion. He is thinking of quitting his job.
+108|Word comes that the local paper is preparing an exposé on the lavish lives of new cults. A reporter is contacting your followers.
+109|A current affairs show crew was caught trying to go undercover. A tiny camera was found in the reporter's bag.
+110|The medical association issues a statement that your healing miracles keep patients from getting treatment. It airs as breaking news.
+111|An entertainment outlet teases an exposé on your nightlife. The preview photo shows a blurry silhouette.
+112|A former follower goes on air claiming you faked your miracles. His voice is disguised.
+113|Your cult's name and the word fraud trend together on the portal's real-time searches. Your followers' phones ring nonstop.
+114|A reporter requests an exclusive interview, offering you a chance to tell the truth. His gaze is sharp.
+115|A religion critic has published a book dissecting your miracles one by one with science. It made the bestseller list.
+116|The tax office sends notice to submit the cult's account books. The deadline is a week away.
+117|The district office will investigate the temple building for zoning violations. An inspector walks around it with a measuring tape.
+118|Police visit the temple over a missing persons report filed by a follower's family. Two uniformed officers stand at the entrance.
+119|A National Tax Service team questions the source of your Offerings. Inspectors sit in front of the vault.
+120|The fire department conducts a special inspection, calling the temple's incense and candles a fire hazard. Red marks pile up on the checklist.
+121|Prosecutors summon one of the cult's officers on embezzlement charges. He asks you what he should do.
+122|The health center comes to inspect the temple kitchen. Ingredients from the feasts go onto the testing table one after another.
+123|City hall sends an official letter saying it is considering a demolition order for one of the cult's buildings. A photo of the building is attached.
+124|Police now require advance notice for cult gatherings. Unreported meetings will be dispersed.
+125|An executive order bans public miracles. Violations will mean the closure of cult facilities.
+126|A police bus is now stationed outside the temple. Every follower coming and going is photographed.
+127|The concert hall rented for a cult event has unilaterally canceled the contract. Pressure came from above, they say.
+128|The bank has frozen the cult's accounts. You can no longer receive Offerings.
+129|A civic group protests outside the temple, demanding the cult be expelled. Loudspeakers drown out the prayers.
+130|A tip comes in that the officers' phone records are being pulled. The officers suspect one another.
+131|A lawmaker introduces a bill to regulate new cults, citing yours as the prime example. Your cult's name comes up in the bill's title.
+132|A front-page story says prosecutors are preparing to seek a dissolution order against the cult. The color drains from your followers' faces.
+133|Investigators with a search warrant pound on the temple doors at dawn. Dozens of footsteps echo down the hall.
+134|The court hears a motion to freeze the cult's assets. Reporters pack the gallery.
+135|The government has begun forcibly closing cult facilities one by one. No one knows which building is next.
+136|You can gather one last petition to stop the dissolution. Followers gather at the signing table.
+137|A high-ranking official secretly contacts you with a deal. He says he can stop the dissolution.
+138|The press has camped out to broadcast the cult's last day live. Broadcasting equipment crowds the front of the temple.
+139|Rumor says a warrant has been issued for your arrest. Your inner circle urges you to flee.
+140|You wake in the morning to find the host's hands trembling against your will. The body has not yet fully accepted the god.
+141|In the mirror, the host's eyes flash gold for an instant. A follower who sees you stifles a scream.
+142|The host's soul speaks to you in a dream. He begs you to give his body back.
+143|After a great miracle, your nose will not stop bleeding. A white handkerchief soaks through with red.
+144|The host's former lover recognizes you and comes looking. She calls your name the way she used to.
+145|The host's body yearns for human pleasures and tosses every night. Your skin dries out and your lips crack.
+146|As Communion deepens, the host's memories blend with yours. An alley from his childhood feels like a god's memory.
+147|The host's mother weeps outside the temple, begging for her child back. She clutches a worn photograph.
+148|Every miracle turns a handful of the host's hair white. Your followers call it a holy mark.
+149|Deep in the night, the host's body rises into the air on its own. The ceiling seems close enough to touch.

@@ -52,8 +52,9 @@ public class GodSkill
     public int Ring { get; }               // 0 중심, 1 가장 바깥 ~ 5 핵
     public string ParentId { get; }
     public GodSkillKind Kind { get; }
-    public string Name { get; }
-    public string Description { get; }
+    readonly string name, description;
+    public string Name => Lang.Pick(name);
+    public string Description => Lang.Pick(description);
     public GodEffect[] Effects { get; }
 
     // GodSkillCatalog가 목록을 만들 때 채운다
@@ -63,7 +64,7 @@ public class GodSkill
 
     public GodSkill(string id, int ring, string parentId, GodSkillKind kind, string name, string description, GodEffect[] effects)
     {
-        Id = id; Ring = ring; ParentId = parentId; Kind = kind; Name = name; Description = description; Effects = effects;
+        Id = id; Ring = ring; ParentId = parentId; Kind = kind; this.name = name; this.description = description; Effects = effects;
     }
 
     public bool IsCenter => Kind == GodSkillKind.Center;

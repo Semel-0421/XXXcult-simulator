@@ -1,0 +1,149 @@
+1160|You figure being tall is all that matters.
+1161|It keeps bothering you.
+1162|Swing your fists when teased
+1163|You swing your fists, and the teasing dies down.
+1164|You get called to the teacher and scolded hard.
+1165|Miss school from frequent illness
+1166|Your weak body keeps you absent more and more.
+1167|The absences pile up and your grades slip.
+1168|Show them
+1169|Your friend is delighted and scores points.
+1170|You get caught, and you're both punished.
+1171|Refuse
+1172|You refuse firmly.
+1173|Teach them after the exam
+1174|After the exam, you walk your friend through the answers.
+1175|After the exam, your friend still doesn't get it.
+1176|Show them for a price
+1177|You get snacks as payment.
+1178|Word gets around, and the class shuns you.
+1179|Join gladly
+1180|You throw yourself into serving at the altar.
+1181|Altar service is hard, and you start complaining.
+1182|Refuse, wanting to play on weekends
+1183|You spend your weekends freely.
+1184|Say you'll join if a friend does
+1185|You join the altar servers with a friend.
+1186|Your friend never joins, and you're left alone.
+1187|Ask the priest about his work
+1188|Impressed, the priest teaches you in detail.
+1189|You ask so many questions the priest grows flustered.
+1190|Deduce the culprit
+1191|Careful deduction reveals where the culprit went.
+1192|Your deduction misfires, and you suspect the wrong kid.
+1193|Defend the suspected friend
+1194|You stand up for a friend unfairly suspected.
+1195|Your friend is still suspected.
+1196|Shrug, it's not your money
+1197|You decide it's someone else's problem.
+1198|Suggest forgiving whoever did it
+1199|You talk everyone down and calm them.
+1200|The kids sneer at forgiveness.
+1201|Swim all day
+1202|You splash in the water all day and come back full of energy.
+1203|Collect seashells
+1204|You fill a box to the brim with seashells.
+1205|You get bored and quit quickly.
+1206|Stuff yourself with seafood
+1207|You gorge on raw fish and grilled clams.
+1208|You suffer an upset stomach.
+1209|Watch the sea at sunset, lost in thought
+1210|The red glow of sunset calms your heart.
+1211|The wind is cold, and you catch a cold.
+1212|Keep going without a word
+1213|You attend the cram school without complaint.
+1214|Play hooky
+1215|You skip cram school and go to the arcade.
+1216|You're caught skipping and get a harsh scolding.
+1217|Refuse, vowing to prove it with grades
+1218|You hold out, vowing to prove yourself with grades.
+1219|Your grades don't improve, and you lose heart.
+1220|Ask them to spend the tuition on something else
+1221|You take the tuition money and buy something else.
+1222|You disappoint your parents.
+1223|Help bury it
+1224|You help cover it with soil.
+1225|Pray for the hamster
+1226|You say a short prayer for the hamster.
+1227|Your prayer is so awkward your friend cries even harder.
+1228|Tell them to buy a new hamster
+1229|You suggest getting a new hamster.
+1230|Ask what death is
+1231|You talk seriously about death.
+1232|Your friend sinks into deeper grief.
+1233|Join right away
+1234|You join immediately and become the team's ace.
+1235|Practice is grueling, and you live soaked in sweat.
+1236|Refuse, saying studies come first
+1237|You decide to focus on your studies.
+1238|Talk it over with your parents
+1239|You join with your parents' permission.
+1240|Your parents object, and you swallow your disappointment.
+1241|Dominate the tryout
+1242|Your overwhelming skill stuns the coach.
+1243|Nerves get the better of you, and you can't show your skill.
+1244|Write a handwritten letter
+1245|Your heartfelt letter moves your parents.
+1246|Buy flowers with your allowance
+1247|You hand over a bouquet with a smile.
+1248|Your allowance falls short, so you buy just one flower.
+1249|Forget about it
+1250|You completely forget their anniversary.
+1251|Your parents are hurt.
+1252|Plan a surprise party with your sibling
+1253|You throw a small party with your sibling.
+1254|The party is so shoddy it becomes a joke.
+1255|Savor the tea quietly
+1256|Savoring the tea's aroma, your mind settles.
+1257|Ask the monk about enlightenment
+1258|The monk answers with a brief teaching.
+1259|The monk only smiles and doesn't answer.
+1260|Just eat the snacks
+1261|You enjoy the tea snacks.
+1262|The snacks are too sweet and upset your stomach.
+1263|Grimace at the bitter tea
+1264|The tea is bitter, and you grimace.
+1265|Write a letter
+1266|You deliver a carefully written letter.
+1267|The letter becomes gossip across the whole class.
+1268|Just watch in secret
+1269|Watching in silence, your feelings grow.
+1270|Ask a friend to confess for you
+1271|Your friend gladly passes it on.
+1272|Your friend spreads it around as a joke.
+1273|Decide to focus on studying
+1274|You steel yourself and bury yourself in study.
+1275|Overwhelm them with logic
+1276|Your airtight argument wins over the judges.
+1277|Your logic tangles, and you're left speechless.
+1278|Respect their view
+1279|You respect your opponent's view, and the audience applauds.
+1280|Too much respect saps your argument.
+1281|Freeze up
+1282|You lose your words and step down.
+1283|Appeal to emotion
+1284|Your emotional words choke up the audience.
+1285|Emotion runs ahead, and you lose persuasiveness.
+1286|Call the police
+1287|You report it at the police box and leave the case to them.
+1288|Hide in fear
+1289|You hide in the wardrobe, trembling.
+1290|You run into the thief and get a terrible fright.
+1291|Chase the thief
+1292|You chase the thief into an alley and give them a scare.
+1293|You fall and get badly hurt.
+1294|Pray for the lost belongings
+1295|You pray for the lost belongings.
+1296|Praying only makes you more frustrated.
+1297|Eat it all yourself
+1298|You eat sausages alone until you're full.
+1299|Your friends call you greedy.
+1300|Let a friend have it
+1301|Your friend smiles gratefully.
+1302|Steal your friend's lunch too
+1303|You devour your friend's side dishes too.
+1304|Your friend cries and tells the teacher.
+1305|Eat in moderation
+1306|You eat a moderate amount and share with your friends.
+1307|Listen and learn
+1308|You take notes on your dad's stories and learn.

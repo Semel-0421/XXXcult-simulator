@@ -1,0 +1,100 @@
+1050|Your refusal sets the follower on the right path.
+1051|The follower turns away bitterly.
+1052|Learn his gambling secrets
+1053|You learn how to make money with his gambling tricks.
+1054|Word gets out that you learned his tricks.
+1055|Accept it and give it back to him
+1056|The follower is grateful when you return the money.
+1057|Returning it is a hassle.
+1058|Disclose everything transparently
+1059|Transparent disclosure eases suspicion.
+1060|Flaws come to light during disclosure.
+1061|Tidy the books and show only part
+1062|Showing only part, you dodge an investigation.
+1063|The partial disclosure is exposed, and you are grilled.
+1064|Hold out as a religious body
+1065|You hold out on the grounds of being a religious body.
+1066|Back taxes drain the finances.
+1067|Shift the blame to your inner circle
+1068|Your confidant shoulders the blame.
+1069|Your confidant walks out.
+1070|Accept it gladly
+1071|The new car raises your Authority.
+1072|Critics call it extravagance.
+1073|Choose a modest car
+1074|Your followers are moved by the modest car.
+1075|Buy a bus for followers with the money
+1076|The followers' bus helps with gatherings.
+1077|Maintaining the bus is a burden.
+1078|Your refusal shows your modesty.
+1079|Track down the culprit
+1080|After tracking, you find the culprit.
+1081|The search fizzles out.
+1082|Appeal to your followers' conscience
+1083|Your appeal to conscience brings offerings back in.
+1084|No one responds to your appeal.
+1085|Write it off as lost
+1086|You write it off and move on.
+1087|Put a lock on the offering box
+1088|The lock protects the finances.
+1089|Sell it to raise funds
+1090|Selling the land leaves you flush with funds.
+1091|Land prices fall, and you take a loss.
+1092|Don't sell
+1093|You keep the land.
+1094|Build a prayer house on the land
+1095|The prayer house draws followers.
+1096|Construction costs balloon.
+1097|Inflate the price sharply
+1098|You sell the land at a steep price.
+1099|Word of the inflated price spreads.
+1100|Introduce tithing
+1101|Tithing stabilizes the finances.
+1102|Complaints arise that the burden has grown.
+1103|Accept service hours instead of offerings
+1104|Accepting service hours, your followers open their hearts.
+1105|Throw a lavish banquet
+1106|Patrons flock to the banquet.
+1107|Only the banquet costs soar.
+1108|Hold a simple tea party
+1109|People gather comfortably at the tea party.
+1110|Your refusal shows Temperance.
+1111|Hold a charity bazaar instead
+1112|The bazaar leaves a good impression on the community.
+1113|Preparing the bazaar is a hassle.
+1114|Turn the banquet into a dance party
+1115|The banquet spills over into a dance party.
+1116|Rumors of the dance party rock the cult.
+1117|Investigate the cause
+1118|The investigation finds the cause, and you fix it.
+1119|The cause remains unclear, leaving confusion.
+1120|Preach a sermon stressing offerings
+1121|After the sermon, offerings rise a little.
+1122|The sermon makes your followers uncomfortable.
+1123|Cut your own living expenses
+1124|Cutting your expenses adds to the funds.
+1125|Seek a solution in prayer
+1126|Prayer steadies your heart.
+1127|Prayer alone doesn't fix the finances.
+1128|Welcome him lavishly
+1129|Amid the welcome, he pledges major support.
+1130|The lavish welcome looks like favoritism.
+1131|Treat him like any other follower
+1132|Equal treatment earns your followers' respect.
+1133|Leverage his connections
+1134|His connections raise the cult's profile.
+1135|Rumor spreads that you lean on connections.
+1136|Go after his fortune
+1137|You approach him with your eye on his fortune.
+1138|Your scheme is exposed, and he leaves.
+1139|Shout with passion
+1140|People stop in their tracks at your passionate cries.
+1141|People turn away from your excessive shouting.
+1142|Quietly hand out flyers
+1143|A few more people take your flyers.
+1144|Do it with songs
+1145|People sing along.
+1146|Noise complaints come in about the singing.
+1147|Give up
+1148|You leave the square.
+1149|Prepare a welcome dinner

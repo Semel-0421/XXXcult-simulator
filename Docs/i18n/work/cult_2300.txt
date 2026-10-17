@@ -1,0 +1,150 @@
+2300|Gather coal briquettes from followers' homes
+2301|Your followers spare a few briquettes out of devotion, and you light a fire.
+2302|They are struggling too; all you get are uneasy glances.
+2303|Hold the gathering in a follower's warm home
+2304|Crammed into a small room, you all keep warm with each other's body heat.
+2305|In the cramped room, a follower falls ill.
+2306|Cancel the service
+2307|You skip gathering in the cold, but hearts grow colder still.
+2308|The cancellations drag on, and followers stop coming.
+2309|Hold the service alone
+2310|A service held alone is lonely, but it steadies your resolve.
+2311|The hollow echo leaves your chest aching.
+2312|Visit your followers' homes
+2313|Doors slam in your face, but a few have a change of heart.
+2314|You linger at a closed door for a long while, then turn back.
+2315|Call off today's gathering
+2316|Calling off the gathering weighs on you.
+2317|Word gets out, and people say the cult has shut its doors.
+2318|Send him off with a smile
+2319|You see him off smiling, but his retreating back looks lonely.
+2320|Your smile is so stiff he feels even worse.
+2321|Ask him to stay with you
+2322|He wavers and agrees to stay one more month.
+2323|He shakes off your hand and leaves.
+2324|Ask him to introduce a new follower
+2325|The neighbor he introduces says they'll drop by once.
+2326|Embarrassed by the request, he flushes and hurries away.
+2327|Improvise something plausible
+2328|Your answer sounds convincing, and the young man nods.
+2329|It doesn't add up, and the young man scoffs.
+2330|Admit honestly that it's still in progress
+2331|Your honesty earns respect, but it exposes how thin the cult really is.
+2332|"Still in progress" draws mocking laughter.
+2333|Get angry and shut down the question
+2334|Your scolding silences him, but the mood turns icy.
+2335|The young man spreads word that the cult is a sham.
+2336|Rewrite it from memory
+2337|You wring your memory and restore part of it.
+2338|Wrong verses get mixed in, and the Doctrine goes astray.
+2339|Organize what remains
+2340|You pick out the surviving sentences and form a short Doctrine.
+2341|The pieces don't fit together and fall apart.
+2342|Gather your followers' memories
+2343|You piece it back together from verses your followers memorized.
+2344|Everyone remembers it differently, and arguments break out.
+2345|Try the ritual again
+2346|On the second try, you sense a faint presence.
+2347|Failure after failure leaves your head spinning.
+2348|Pretend the Communion succeeded
+2349|Your convincing act fools the followers.
+2350|A follower sees through your clumsy act and whispers about it.
+2351|Stop the ritual and tell the truth
+2352|Your honest confession leaves the followers speechless.
+2353|The confession sounds feeble, and some lose their faith.
+2354|Suppress your unease and finish the ritual
+2355|You complete the ritual with trembling hands.
+2356|Midway through the ritual, you scream and collapse.
+2357|Call your followers to sit beside you
+2358|With your followers near, the anxiety eases a little.
+2359|Your followers see you rattled.
+2360|Leave the lights on and lie awake all night
+2361|You stay up until dawn beneath the light.
+2362|The sleepless nights leave you sick for days.
+2363|Scrub it off yourself
+2364|Seeing you scrub it yourself, a few neighbors look on with pity.
+2365|You scrub it off, but it's back the next day. Wasted effort.
+2366|Vow to find the culprit
+2367|You find the culprit and get an apology, but the neighbors' distrust lingers.
+2368|You accuse the wrong neighbor, and distrust grows.
+2369|Ignore it and move on
+2370|Once ignored, the graffiti spreads no further.
+2371|The graffiti spreads until the cult's name covers every alley in the neighborhood.
+2372|Cooperate fully with the investigation
+2373|The police find nothing wrong and leave.
+2374|The investigation drags on, and followers grow uneasy.
+2375|Rally your followers to protest
+2376|The police back off before the angry followers, but it leaves a bad impression.
+2377|The standoff turns into a commotion and makes the papers.
+2378|Hire a lawyer
+2379|The lawyer ends the investigation, but it costs you.
+2380|It costs money, and the investigation goes on anyway.
+2381|Join in and liven up the party
+2382|People flock to the festive dinner.
+2383|Set the most precious goblet before yourself
+2384|Everyone marvels at your refinement.
+2385|Unroll the blueprints yourself
+2386|Before the blueprints, followers' Offerings keep pouring in.
+2387|Leave it to the follower representatives
+2388|The representatives race each other to raise funds.
+2389|Take the pulpit in this robe
+2390|Below the pulpit, everyone falls breathlessly silent.
+2391|Give it to the poor
+2392|Those who receive the clothes sing songs of thanks.
+2393|Accept the sponsorship and grant a seat
+2394|The donations flow in, and the local notable saves face.
+2395|Accept it with polite thanks
+2396|Your gracious acceptance raises the cult's Repute.
+2397|Give blessings before the fountain
+2398|Prayers before the fountain continue late into the night.
+2399|Bottle and sell the fountain water
+2400|The holy water bottles sell like hotcakes.
+2401|Throw the doors open to all initiates
+2402|The line of initiates stretches out the door.
+2403|Admit by invitation only
+2404|Those who get invitations show them off to each other.
+2405|Develop the land into a shopping arcade
+2406|Rent from the arcade pours into the cult's coffers.
+2407|Take the compensation for the cult's fund
+2408|With generous compensation in hand, followers feel hopeful about the cult's future.
+2409|Hold a prayer meeting before the portrait
+2410|The followers at the prayer meeting weep tears of joy.
+2411|Laugh off the portrait
+2412|Your easygoing attitude earns even more respect.
+2413|Enshrine the jewel as a relic
+2414|The jewel gleams at the center of the altar.
+2415|Sell the jewel to found a charity school
+2416|On the day the school opens, the locals cheer.
+2417|Make an even bigger promise to the crowd
+2418|The crowd answers your promise with one voice.
+2419|Simply gesture in silence
+2420|Your silence hushes the crowd even further.
+2421|Welcome the aide as an honored guest
+2422|The aide leaves impressed by the cult's clout.
+2423|Fund the event with follower donations
+2424|Followers eagerly volunteer to raise money.
+2425|Use the incense to stage a mystery
+2426|Followers are enraptured by the service wreathed in incense smoke.
+2427|Resell the incense to merchants
+2428|The incense money fills the cult's coffers.
+2429|Ring the bell grandly
+2430|The bell's peal carries to the edge of town.
+2431|Engrave donors' names to fund the bell
+2432|Donors beam with pride at seeing their names.
+2433|Make the businessman the cult's patron
+2434|The patron's pledge solidifies the cult's foundation.
+2435|Dine with the businessman
+2436|The bond forged over dinner deepens.
+2437|Turn the show into a Doctrine festival
+2438|The festival runs all night, and word spreads.
+2439|Move the show's earnings into the cult's coffers
+2440|The earnings fill the cult's coffers to the brim.
+2441|Refuse proudly and earn renown
+2442|The cult's Reputation for independence grows.
+2443|Absorb them on your terms and grow stronger
+2444|The absorbed followers become your new family.
+2445|Hold private counseling in the room
+2446|Counseled followers are deeply grateful.
+2447|Open the room as an exhibition space
+2448|An endless stream of people come to see the room.
+2449|Weave the trend into Doctrine

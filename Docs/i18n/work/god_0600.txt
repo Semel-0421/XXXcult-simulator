@@ -1,0 +1,160 @@
+600|Your followers relax in the free atmosphere.
+601|Appear in the prime-time interview
+602|Viewers flood in saying you seemed to glow on camera.
+603|An edited clip becomes a joke.
+604|Give only a written interview
+605|Polished answers preserve the mystique.
+606|The article runs small.
+607|Decline to appear
+608|The mystique is preserved, but the opportunity passes.
+609|Let him lord it over them
+610|The tribute he collects piles up before you.
+611|Followers crushed under him leave.
+612|Break him in front of everyone
+613|Seeing him on his knees, your followers realize who the true master is.
+614|He rebels and walks out with some of the followers.
+615|Call him in quietly and admonish him
+616|He bows his head and backs down.
+617|Announce the plan to build the city
+618|Your followers buy land and build houses, dreaming of your city.
+619|The state begins watching the mass relocation plan.
+620|Leave it as a dream
+621|The word someday sets your followers' hearts aflutter.
+622|Talk them out of an empty fantasy
+623|Your followers look sheepish.
+624|Accept the whole village
+625|Your emblem hangs at the village gate, and residents line up to join.
+626|Some villagers object and tip off the press.
+627|Sign only an agreement with the village
+628|You give your blessing at the village festival.
+629|The agreement fizzles out.
+630|Return the seal
+631|The village head leaves, disappointed.
+632|Accept the longest honorific
+633|Each time your followers recite the title, the other gods grow more irritated.
+634|You hear sneers about delusions of grandeur.
+635|Accept only a short title
+636|The concise title sounds all the more dignified.
+637|Ask to be called only by name
+638|The familiar form of address draws your followers closer.
+639|Take his backing and make him your successor priest
+640|Hefty donations flow into the vault every month.
+641|Your followers protest that the position was bought.
+642|Take the backing but give him no position
+643|The chairman is unhappy but cannot bring himself to cut off the money.
+644|The chairman angrily scales back his backing.
+645|The chairman leaves looking stunned.
+646|Make your words the cult's legal code
+647|A thick code sits beside the altar and governs your followers' lives.
+648|Some followers feel suffocated by the strict rules.
+649|Compile them only as guidelines
+650|Gentle guidelines spread among your followers.
+651|Tell them to interpret your words freely
+652|A variety of interpretations blossom.
+653|Keep a bodyguard detail in black suits
+654|Wherever you walk, a black wave parts the way.
+655|Your intimidating entourage is caught on camera.
+656|Use follower volunteers instead
+657|Loyal followers proudly stand at your side.
+658|Keep no guards
+659|You walk the streets with a light step.
+660|Plant the flag in the plaza
+661|From the center of the plaza, your flag looks down on the city.
+662|The flag is torn down and followers are arrested.
+663|Get a permit and hold it as an event
+664|The permitted event ends without incident.
+665|The permit is delayed and the event is canceled.
+666|Plant it only in the temple courtyard
+667|The flag flutters in the sky above the temple.
+668|Post a rebuttal video
+669|Your rebuttal video gets even more views.
+670|The rebuttal only fuels the controversy.
+671|Ignore it
+672|A few followers look shaken.
+673|Appear in the priest's dream and warn him
+674|In his next sermon, the priest cannot bring himself to speak your name.
+675|The path of dreams is blocked, and the miracle scatters into thin air.
+676|Hold an even more lavish feast across the street
+677|The smell of grilling meat overpowers the soup, and people cross the street.
+678|People stay for the free soup.
+679|Bless the soup kitchen and absorb it
+680|Those who eat soup from the pots dream of you.
+681|The god of plenty repels your blessing.
+682|Pay it no mind
+683|A few hungry followers cross over to the other side.
+684|Pray loudly through the silence
+685|Your voice tears through the silence, and Communion resumes.
+686|Your voice vanishes without an echo.
+687|Awaken your senses through indulgence
+688|Burning sensation pushes back the cold silence.
+689|Your senses awaken, but the silence remains.
+690|Pause your prayer
+691|You hold your breath until the prying gaze withdraws.
+692|Gather the tracts and burn them publicly
+693|Before the burning tracts, your followers' bond grows firm.
+694|Critics call it a book-burning stunt.
+695|Talk calmly with the follower
+696|The follower confesses his doubts and smiles again.
+697|The follower's heart is already half gone.
+698|Refute the tract with Doctrine
+699|Your rebuttal is passed around among your followers.
+700|The rebuttal looks feeble.
+701|Throw open the temple doors and answer with festival music
+702|Drums and laughter swallow the song of the red banners.
+703|The noise war brings complaints from the neighbors.
+704|Offer the pilgrims water and food
+705|A few pilgrims turn back to look at you.
+706|The pilgrims trample the food as they pass.
+707|Close the doors and wait for them to pass
+708|The singing fades, but an uneasy feeling lingers.
+709|Bend the bell to the god's rhythm
+710|From the next day on, the bell rings in time with your prayers.
+711|The bell still rings out of time.
+712|Interpret the ill omen as a blessing
+713|Word spreads that the off-beat bell is the rhythm of a new age.
+714|The interpretation fails to persuade.
+715|Move your prayer time
+716|You pray at dawn to avoid the bell.
+717|Hold an even grander harvest festival of your own
+718|Your followers throw away the invitations and sit at your table.
+719|Some attend both feasts.
+720|Do not stop followers who accept the invitation
+721|Your generosity is praised, but some never return.
+722|Collect the invitations
+723|Your followers hand them over without a word.
+724|Complaints arise that you are being heavy-handed.
+725|Chase the old man and ask who he is
+726|The old man smiles and tells you the other gods are watching you.
+727|You turn the corner and he is gone, leaving only a chill.
+728|Purify the threshold
+729|As the incense burns, the wet footprints dry away.
+730|The footprints will not fade.
+731|Pretend you did not see
+732|An uneasy feeling lingers for days.
+733|Take the stage and debate head-on
+734|When you finish speaking, the audience rises to applaud.
+735|Your contradictions are exposed and you are left speechless.
+736|Show a small miracle mid-debate
+737|A candle bursts into flame on its own, and your opponent falls silent.
+738|Your opponent presses you, calling it a trick.
+739|Decline the debate
+740|Word spreads that you ran away.
+741|Counter that your revelation predates the originals
+742|The claim that they stole from you, not the other way around, gains traction.
+743|Your rebuttal is judged feeble.
+744|Sue the magazine
+745|A correction is printed.
+746|The lawsuit drags on and the article spreads even further.
+747|Brush it off, saying all gods are one
+748|Some followers nod at your magnanimity.
+749|Word spreads that your Doctrine's originality has collapsed.
+750|Send banquet food to the monks
+751|One monk lowers his white cloth and smiles for the first time.
+752|The monks ignore the food.
+753|Have your followers answer with song
+754|The singing pushes back the silence, and the temple breathes again.
+755|A noise complaint comes in.
+756|Leave them be
+757|A heavy silence seeps into the temple.
+758|Write and publish a rebuttal
+759|The rebuttal sits side by side with his book.

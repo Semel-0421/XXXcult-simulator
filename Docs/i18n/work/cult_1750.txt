@@ -1,0 +1,150 @@
+1750|Put the cult's demands to the candidate
+1751|Your demands are met, and the cult profits.
+1752|The demands go public and become a political scandal.
+1753|Apologize publicly
+1754|A heartfelt apology softens public opinion.
+1755|Critics say the apology came too late.
+1756|Excommunicate that follower
+1757|With the excommunication, the cult draws a line.
+1758|The excommunication shakes the followers.
+1759|Disavow any connection
+1760|Your disavowal provokes backlash.
+1761|Your claim of no connection is exposed as a lie.
+1762|Defend him
+1763|Your defense moves the followers.
+1764|Open it
+1765|The soup kitchen earns the neighborhood's trust.
+1766|The kitchen's costs weigh on you.
+1767|Open it only on weekends
+1768|The weekend meals carry on smoothly.
+1769|Proselytize at the soup kitchen too
+1770|The soup kitchen brings in more followers.
+1771|The proselytizing motive is exposed and draws criticism.
+1772|Publish a rebuttal book
+1773|The rebuttal book lays out the Doctrine's logic.
+1774|Reviewers call the rebuttal feeble.
+1775|Meet the author and talk
+1776|The conversation deepens your mutual understanding.
+1777|Sue
+1778|The lawsuit protects the cult's standing.
+1779|You lose the lawsuit, and your finances totter.
+1780|Tell the followers not to read it
+1781|The followers keep away from the book.
+1782|Calling it forbidden only makes the book sell more.
+1783|Sponsor it generously
+1784|Your generous sponsorship puts the cult's name on the festival.
+1785|The return is small for what you spent.
+1786|Sponsor it modestly
+1787|The modest sponsorship goes over fine.
+1788|Promote the cult at the festival
+1789|The festival spreads word of the cult.
+1790|Some say the promotion sticks out.
+1791|Sincerely reflect on it
+1792|Your show of remorse softens public opinion.
+1793|Some say the remorse is just for show.
+1794|Rebut publicly
+1795|The rebuttal gets the cult's voice heard.
+1796|The rebuttal looks like picking a fight.
+1797|Announce that you will pray for him
+1798|The prayer announcement shows the cult's composure.
+1799|The prayer announcement becomes a joke.
+1800|Expose his past
+1801|The exposé draws attention.
+1802|The exposé backfires.
+1803|Give an interview to explain
+1804|The explanatory interview softens the viewers.
+1805|Your explanation is edited and distorted.
+1806|Block the filming
+1807|Blocking the filming deepens the suspicion.
+1808|The footage of you blocking them airs, making it worse.
+1809|Show the followers' ordinary lives
+1810|Ordinary daily life breaks down prejudice.
+1811|Go into hiding
+1812|Your disappearance shakes the cult.
+1813|Going into hiding looks like an admission of guilt.
+1814|Turn the broadcast into outreach
+1815|The broadcast becomes a stage to promote the cult.
+1816|The broadcast paints the cult as a pack of frauds.
+1817|Join in wearing cult vests
+1818|The cult vests become a symbol of service.
+1819|Lead the way yourself
+1820|Leading from the front earns praise.
+1821|You push too hard and hurt yourself.
+1822|Attend and introduce the cult
+1823|Your introduction leaves an impression on many religious leaders.
+1824|Your introduction comes across as boasting.
+1825|Attend and just listen
+1826|By listening, you learn.
+1827|Try to lead the meeting
+1828|You become the center of the meeting.
+1829|A power struggle breaks out.
+1830|Disclose the donations transparently
+1831|Transparent disclosure raises trust.
+1832|Some say the disclosure is a hassle.
+1833|Use some for the cult's operating costs
+1834|The operating funds give your finances breathing room.
+1835|The diversion of funds is found out.
+1836|Expand the shelter
+1837|The expanded shelter helps many more people.
+1838|Use the donor list for publicity
+1839|Publicizing the list makes the cult famous.
+1840|The list is criticized as an invasion of privacy.
+1841|Visit the school and talk
+1842|Talking it out reduces the bullying.
+1843|The school isn't cooperative.
+1844|Tell the student to hide their faith
+1845|Hiding their faith wounds the student.
+1846|Protest forcefully
+1847|The protest emboldens the followers.
+1848|The protest deepens the conflict with the school.
+1849|Announce you will found a cult school
+1850|The plan for a cult school draws followers.
+1851|Some say founding a school is too much of a burden.
+1852|Cooperating with the research lends the Doctrine scholarly luster.
+1853|As the materials are made public, weaknesses come to light.
+1854|Allow it with conditions
+1855|Conditional permission earns trust.
+1856|The conditions are so strict the research stalls.
+1857|Make the scholar a follower
+1858|The scholar becomes a follower and raises the cult's Authority.
+1859|The scholar leaves and criticizes the cult.
+1860|Create a cult scholarship
+1861|The scholarship gives the students hope.
+1862|There isn't enough money for the scholarship.
+1863|Gladly take their hand
+1864|The reconciliation raises the cult's Repute.
+1865|The reconciliation ends as a formality.
+1866|Accept it warily
+1867|A wary reconciliation goes over fine.
+1868|Your wariness shows, and things grow awkward.
+1869|Target that church's members
+1870|That church's members move over to your cult.
+1871|Your scheme is exposed, and you are isolated among religious groups.
+1872|Hold a modest celebration service
+1873|The followers rejoice at the celebration service.
+1874|Proclaim a bigger goal
+1875|The bigger goal fires up the followers.
+1876|Some say the goal is a pipe dream.
+1877|Rent a bigger space
+1878|The bigger meeting hall holds more followers.
+1879|The rent weighs on you.
+1880|Split into two sessions
+1881|Meeting in two sessions eases the crowding.
+1882|Switch to small groups
+1883|The small groups strengthen the followers' bonds.
+1884|The small groups go their own way, and control slips.
+1885|Hold a press conference
+1886|The press conference introduces the cult to the world.
+1887|What you said at the press conference is distorted.
+1888|Quietly strengthen from within
+1889|As you build from within, the followers settle down.
+1890|Build a cult headquarters
+1891|The headquarters upholds the cult's majesty.
+1892|The headquarters costs a fortune to build.
+1893|Tighten security
+1894|Security establishes order.
+1895|The security breeds hostility outside.
+1896|Establish branches
+1897|The branches expand the cult.
+1898|The branches cost a lot to run.
+1899|Keep everything centered on headquarters

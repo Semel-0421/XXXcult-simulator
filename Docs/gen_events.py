@@ -70,7 +70,16 @@ def gifted_categories():
 
 def esc(s):
     bs = chr(92)
-    return s.replace(bs, bs * 2).replace('"', bs + '"').replace('\n', bs + 'n')
+    return s.replace(bs, bs * 2).replace('"', bs + '"').replace('\n', bs + 'n').replace(SEP, bs + 'u001F')
+
+
+SEP = chr(0x1F)  # 한국어와 영어 사이 구분자 (게임에서 Lang.Pick이 현재 언어 쪽을 고른다)
+
+
+def bi(row, col):
+    """한국어 열과 같은 이름 + _en 열이 있으면 한국어+SEP+영어로 묶는다."""
+    ko, en = (row.get(col) or '').strip(), (row.get(col + '_en') or '').strip()
+    return f'{ko}{SEP}{en}' if ko and en else ko
 
 
 def condition_code(cell, where):
@@ -154,19 +163,19 @@ def choices_for(event_id, choice_rows, allow_cult, allowed_gifts, indent, bonus=
     codes = []
     for r in rows:
         where = f'{event_id} 선택지{r["no"]}'
-        label = r['label'].strip()
+        label = bi(r, 'label')
         if not label:
             sys.exit(f'{where}: 선택지 문구가 비어 있음')
         chance = int(r['chance'])
         if not 1 <= chance <= 100:
             sys.exit(f'{where}: 성공 확률 {chance}% 는 1~100')
-        success = outcome_code(r['success_text'], r['success_effects'], allow_cult, allowed_gifts, where + ' 성공', allow_god)
+        success = outcome_code(bi(r, 'success_text'), r['success_effects'], allow_cult, allowed_gifts, where + ' 성공', allow_god)
         if chance == 100:
             codes.append(f'new Choice("{esc(label)}", {success})')
         else:
             if not r['fail_text'].strip():
                 sys.exit(f'{where}: 실패 결과문이 필요함')
-            fail = outcome_code(r['fail_text'], r['fail_effects'], allow_cult, allowed_gifts, where + ' 실패', allow_god)
+            fail = outcome_code(bi(r, 'fail_text'), r['fail_effects'], allow_cult, allowed_gifts, where + ' 실패', allow_god)
             with_bonus = f'.With(PersonalStatId.{bonus})' if bonus else ''
             codes.append(f'new Choice("{esc(label)}", {chance / 100:.2f}f, {success},\n{indent}    {fail}){with_bonus}')
     return codes
@@ -192,7 +201,7 @@ def build_life(gifts):
         lo, hi = int(e['min_age']), int(e['max_age'])
         codes = choices_for(eid, choices.get(eid, []), False, hidden, '                ')
         body = ',\n                '.join(codes)
-        out.append(f'        new("{eid}", {lo}, {hi}, new Question("{esc(e["text"].strip())}",\n                {body})),')
+        out.append(f'        new("{eid}", {lo}, {hi}, new Question("{esc(bi(e, "text"))}",\n                {body})),')
     unused = set(choices) - ids
     if unused:
         sys.exit(f'선택지만 있고 이벤트가 없는 id: {sorted(unused)}')
@@ -228,7 +237,7 @@ def build_cult(gifts):
             sys.exit(f'{eid}: kind는 random, condition, negative, mood 중 하나')
         codes = choices_for(eid, choices.get(eid, []), True, allowed, '                ', bonus_stat_for(kind, theme))
         body = ',\n                '.join(codes)
-        out.append(f'        {head}, new Question("{esc(e["text"].strip())}",\n                {body})),')
+        out.append(f'        {head}, new Question("{esc(bi(e, "text"))}",\n                {body})),')
     unused = set(choices) - ids
     if unused:
         sys.exit(f'선택지만 있고 이벤트가 없는 id: {sorted(unused)}')
@@ -264,7 +273,7 @@ def build_god():
             sys.exit(f'{eid}: 잘못된 kind/theme {kind} {theme}')
         codes = choices_for(eid, choices.get(eid, []), True, {}, '                ', bonus, allow_god=True)
         body = ',\n                '.join(codes)
-        out.append(f'        {head}, new Question("{esc(e["text"].strip())}",\n                {body})),')
+        out.append(f'        {head}, new Question("{esc(bi(e, "text"))}",\n                {body})),')
     unused = set(choices) - ids
     if unused:
         sys.exit(f'선택지만 있고 이벤트가 없는 id: {sorted(unused)}')
@@ -286,7 +295,7 @@ def build_adult():
             sys.exit(f'{eid}: 잘못된 모드 "{mode}" (all/normal/god)')
         codes = choices_for(eid, choices.get(eid, []), True, {}, '                ', 'Lust', allow_god=mode == 'god')
         body = ',\n                '.join(codes)
-        pools[mode].append(f'        CultEvent.Random("{eid}", StatId.{theme}, new Question("{esc(e["text"].strip())}",\n                {body})),')
+        pools[mode].append(f'        CultEvent.Random("{eid}", StatId.{theme}, new Question("{esc(bi(e, "text"))}",\n                {body})),')
     unused = set(choices) - ids
     if unused:
         sys.exit(f'선택지만 있고 이벤트가 없는 id: {sorted(unused)}')

@@ -1,0 +1,150 @@
+450|You are criticized for a shallow interpretation.
+451|Keep your interpretation hidden
+452|You keep its meaning to yourself.
+453|Keep praying from your sickbed
+454|Your sickbed prayers are taken as God's will, and your followers are moved.
+455|You collapse mid-prayer and are laid up again.
+456|Let your followers nurse you
+457|Your followers take turns nursing you.
+458|Resent God
+459|Resentment toward God wells up in you.
+460|Your resentment leaks out to your followers.
+461|Call a doctor
+462|The doctor's treatment speeds your recovery.
+463|Leave for a month
+464|A month of ascetic practice steels your heart.
+465|The cult wavers, and followers dwindle.
+466|Decline and protect the cult
+467|Staying by the cult's side, you win your followers' trust.
+468|Proclaim it God's answer
+469|Rumor spreads through the neighborhood that God has answered.
+470|Rebuttals pour in calling it coincidence.
+471|Give thanks quietly
+472|You offer a quiet prayer of thanks.
+473|Consider it coincidence
+474|Deeming it coincidence, you let it pass calmly.
+475|Debate him head-on
+476|You defeat the practitioner with logic and earn the crowd's applause.
+477|You lose ground in the debate, and onlookers jeer.
+478|Decline politely
+479|A polite refusal preserves your dignity.
+480|Learn from his teachings
+481|You gain new insight from his teachings.
+482|The other doctrine leaves you confused.
+483|Mock him before your followers
+484|Your followers chime in with laughter.
+485|The mockery backfires and dents your Repute.
+486|Return to your roots in prayer
+487|Praying as you did at the start, you find your heart again.
+488|You pray, but the emptiness won't lift.
+489|Take a rest
+490|Rest restores your strength.
+491|Fill the void with pleasure
+492|Lost in pleasure, you forget the emptiness for a while.
+493|Your indulgence comes to light, and your followers are disappointed.
+494|Throw yourself into work
+495|Throwing yourself into work, the cult's finances improve a little.
+496|Overwork takes its toll on your body.
+497|Visit your hometown
+498|At your hometown church, you rediscover the roots of your heart.
+499|No one is left in your hometown.
+500|Cut ties with the past
+501|You put the past behind you and focus on the cult.
+502|Wish for the cult's prosperity
+503|Wishing for the cult's prosperity, you steady your resolve.
+504|Wish for your followers' well-being
+505|Wishing for your followers warms your heart.
+506|Your wish scatters into thin air.
+507|Wish to meet God face to face
+508|Your fervent wish sets your heart aflame.
+509|The wish goes unanswered, leaving you deflated.
+510|Wish for nothing
+511|Wishing for nothing, you gaze at the stars.
+512|Summon him and show your sincerity
+513|Seeing your sincerity, your confidant bows his head.
+514|Your words come out awkward, and his distrust deepens.
+515|Cast him out
+516|Casting him out sets the cult abuzz.
+517|The man you cast out spreads rumors.
+518|Pretend to be unshaken
+519|Your calm act keeps your inner circle in line.
+520|Your act is exposed, and trust collapses.
+521|Reflect on yourself
+522|Reflecting on yourself, you renew your resolve.
+523|Read it as God's wrath and repent
+524|Followers gather in tears for a service of repentance.
+525|Talk of wrath frightens outsiders.
+526|Proclaim it God's blessing
+527|At the word "blessing," your followers cheer.
+528|Critics blast you for calling a disaster a blessing.
+529|Install a lightning rod
+530|The neighbors admire your sensible measure.
+531|Write past lives into the Doctrine
+532|The tale of past lives becomes a chapter of the Doctrine.
+533|Word goes around that the past-life story is absurd.
+534|Tell your followers
+535|Your followers listen with bated breath.
+536|The story gets exaggerated and becomes a joke.
+537|Meditate deeply alone
+538|Meditating alone, you compose yourself.
+539|Answer that faith is shown through deeds
+540|You stress faith in action, and the old man nods.
+541|Answer that it is never doubting
+542|The old man quietly bows his head.
+543|The old man's face darkens.
+544|Honestly admit you don't know
+545|The old man smiles at your honest answer.
+546|Make the old man a follower
+547|The old man becomes a follower and prays with you.
+548|The old man leaves with some harsh words.
+549|Compose it in beautiful verse
+550|The verse is so beautiful your followers recite along.
+551|Fixated on rhythm, you blur the meaning.
+552|Make it short and powerful
+553|The short prayer spreads from mouth to mouth.
+554|Some say it's too short and feels empty.
+555|Write it with your followers
+556|Your followers pool their ideas to complete the prayer.
+557|Pray until dawn
+558|Praying until dawn soothes your anxiety.
+559|Take the nightmare as God's test
+560|Calling it a test, you steady yourself.
+561|The word "test" weighs heavily on you.
+562|Have your inner circle interpret it
+563|Your followers are reassured by the interpretation.
+564|The interpretations conflict, sowing confusion.
+565|Drown it in drink
+566|You try to forget the nightmare with drink.
+567|Word of your heavy drinking spreads, and you lose trust.
+568|Persuade the family yourself
+569|You win over the family, and the follower stays.
+570|Persuasion fails, and the conflict with the family grows.
+571|Bless their departure
+572|Leaving with your blessing, the follower thinks well of the cult.
+573|The departing follower's back looks lonely.
+574|Warn that leaving brings a curse
+575|Your followers cower at the warning.
+576|Word of the threat spreads, and your Repute falls.
+577|Offer cult lodging
+578|With lodging provided, the follower stays.
+579|Weep with them
+580|Weeping together, you share your followers' hearts.
+581|Close with a moving sermon
+582|Your followers are deeply moved by the sermon.
+583|The sermon falls flat, and the mood cools.
+584|Pass the offering basket
+585|The offering basket fills up.
+586|Some followers are put off by the offering basket.
+587|Hear out both sides
+588|Hearing both sides, you broker a reconciliation.
+589|Take one side
+590|When you take one side, the other leaves.
+591|Even the side you backed turns away.
+592|Rebuke them both
+593|Rebuking both brings silence.
+594|Hurt followers grow quiet.
+595|Offer an answer from the Doctrine
+596|A single passage of the Doctrine eases the conflict.
+597|The Doctrine is misread, and the conflict deepens.
+598|Accept it gladly
+599|The large offering fills the cult's coffers.

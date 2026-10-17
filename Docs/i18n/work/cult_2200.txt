@@ -1,0 +1,100 @@
+2200|The followers scatter in every direction.
+2201|Fight to the end
+2202|Fighting to the end, the followers band together.
+2203|Your defiance becomes the pretext for dissolution.
+2204|Gladly join in
+2205|The joint venture grows the cult's Repute.
+2206|Put the cult's name front and center
+2207|The cult's name becomes the heart of the venture.
+2208|Putting your name up front provokes backlash.
+2209|A polite refusal preserves your dignity.
+2210|Go through the proper process
+2211|Official incorporation raises the cult's standing.
+2212|Reject state interference
+2213|Rejecting interference protects the cult's independence.
+2214|The rejection sparks conflict with the state.
+2215|Just take the tax breaks
+2216|The tax breaks swell your finances.
+2217|Critics say you're only in it for the benefits.
+2218|Give a candid interview
+2219|The candid interview earns respect.
+2220|The interview is marred by slips of the tongue.
+2221|Proclaim the cult's grand vision
+2222|The proclamation raises the followers' expectations.
+2223|Some say the proclamation is overblown.
+2224|Avoid the press
+2225|Avoiding the press, you keep the peace.
+2226|Meet the families yourself and persuade them
+2227|Meeting in person softens the families' anger.
+2228|Your persuasion only fuels the families' resentment.
+2229|Tell the followers to cut ties with their families
+2230|Followers who cut ties become loyal to the cult.
+2231|The families press their lawsuit harder.
+2232|Prepare a settlement
+2233|The settlement calms the situation.
+2234|The settlement money falls short.
+2235|Let the followers go home
+2236|Letting them go home makes the families back off.
+2237|Fast and cling to it
+2238|After the fast, you barely regain your composure, but your body suffers.
+2239|You collapse and fall ill, and the cult is thrown into a stir.
+2240|Carry on preaching as if nothing is wrong
+2241|The sermon was hollow, but no one notices.
+2242|Your words ring false, and the followers tilt their heads.
+2243|Give up prayer and bury yourself in work
+2244|The cult's work keeps rolling, but your faith withers further.
+2245|Even the work goes awry, and it all comes to nothing.
+2246|Honestly confess that you're wavering
+2247|Your honest confession brings tears to a few followers, but the cult's dignity is shaken.
+2248|Your confession is taken as weakness, and the followers whisper.
+2249|Sing a hymn to buy time
+2250|The hymn gets you through, but the cold sweat won't stop.
+2251|Even the hymn wavers off-key, and laughter slips out.
+2252|End the gathering
+2253|You end the gathering in a hurry, but you can't stop the rumors.
+2254|The hasty dismissal looks like running away.
+2255|Visit each follower and hear them out
+2256|When you listen, sighing complaints come pouring out.
+2257|The talks end in griping, and morale sinks further.
+2258|Preach in a harsher tone
+2259|Raising your voice makes them tense for a moment, but wins no hearts.
+2260|Your shouting provokes backlash, and some walk out.
+2261|Take a break from gatherings
+2262|During the break, the followers catch their breath, but their fervor cools.
+2263|Taking a break sounds like giving up.
+2264|Quietly let them go
+2265|After you send them off with a blessing, a few close followers look ready to leave too.
+2266|After you let him go, he goes around badmouthing the cult.
+2267|Persuade him publicly
+2268|Persuaded, the follower hesitates and sits back down.
+2269|The persuasion turns into an argument, and he storms out the door.
+2270|Rebuke him as a traitor
+2271|Your rebuke silences the other followers.
+2272|Your rebuke breeds resentment, and other followers turn away too.
+2273|Go confront that group yourself
+2274|He reluctantly backs down, but bad blood remains.
+2275|An argument breaks out in front of the followers, and your Authority hits the floor.
+2276|Pretend not to notice and wait
+2277|The group never grows and fizzles out.
+2278|The group swells, and the cult splits in two.
+2279|Excommunicate your inner circle member
+2280|The excommunication settles things for now, but his supporters leave.
+2281|The excommunication sparks backlash instead, and the cult is thrown into disarray.
+2282|Fire back that you'll step down
+2283|Faced with your nerve, he loses steam and backs down.
+2284|He actually tries to take your place, and the cult is thrown into a stir.
+2285|Call security to drag him out
+2286|The commotion dies down, but a harsh impression lingers.
+2287|He shouts as he's dragged out, creating an even bigger scandal.
+2288|Quietly admonish him
+2289|He flushes red and backs down.
+2290|Your admonishment looks weak, and the applause grows louder.
+2291|Appeal to the followers to cover the rent
+2292|You scrape together loose change and barely cover it, but the followers look grim.
+2293|The money falls short, and the landlord frowns.
+2294|Sell your personal belongings
+2295|You sell your watch and coat to get through the month.
+2296|You sell them for a pittance and still come up short.
+2297|Borrow to cover it
+2298|A loan with interest gets you through for now.
+2299|A creditor shows up at the meeting hall, causing a scene.

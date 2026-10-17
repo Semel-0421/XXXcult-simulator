@@ -1,0 +1,150 @@
+2600|News of your mentor's death arrives first.
+2601|In the stillness, you feel as if you stand before god.
+2602|The cold only wears out your body.
+2603|Visit your followers' homes
+2604|You share warm tea in house after house.
+2605|Some households are put out by the late visit.
+2606|Prepare a sermon from that verse
+2607|The meaning within the verse blossoms into a sermon.
+2608|Your thoughts won't settle, and the sermon falls apart.
+2609|Write it in your journal
+2610|Putting it into words calms your heart.
+2611|Even written down, the question remains unresolved.
+2612|Gather the early followers to thank them
+2613|The years spent together bring tears to everyone's eyes.
+2614|The absence of those who left feels enormous.
+2615|Hold a grand anniversary service
+2616|Many new faces appear at the anniversary service.
+2617|The preparations are lavish, but few people come.
+2618|Talk with him
+2619|At daybreak, the young man follows you in tears.
+2620|The argument ends with him shoving you to the ground.
+2621|Quietly bless him and walk on
+2622|You say a brief prayer for him.
+2623|His shouting lingers in your ears.
+2624|Gladly officiate
+2625|Watching someone close their eyes in peace, you feel your calling.
+2626|Before death, you are lost for words.
+2627|Send a young evangelist
+2628|The evangelist handles the task admirably.
+2629|The family is hurt that the cult leader didn't come.
+2630|Believe it is god's answer
+2631|That warmth stays with you for a long time.
+2632|It was an illusion born of exhaustion.
+2633|See a doctor
+2634|You're relieved to hear you're in good health.
+2635|Being told nothing is wrong leaves you oddly deflated.
+2636|Write the lyrics yourself
+2637|Your confession becomes a song that rings out.
+2638|The lyrics are so awkward you stash them in a drawer.
+2639|Compile existing hymns
+2640|The familiar songs give followers strength.
+2641|A printer's error means it must be reprinted.
+2642|Hold a rain prayer service in the fields
+2643|Three days later, the long-awaited rain pours down.
+2644|The sky stays stubbornly clear.
+2645|Say the rain is in god's hands
+2646|The followers nod in silence.
+2647|Disappointed farmers turn away.
+2648|Recall the passion you had then
+2649|Your forgotten first fervor comes back to life.
+2650|You feel ashamed of who you've become.
+2651|Share the journal with your followers
+2652|Your candid confession moves the followers.
+2653|Some are disappointed to see the cult leader's weakness.
+2654|Lay on hands and pray
+2655|The follower wakes and testifies in tears.
+2656|An ambulance arrives, and the service ends in chaos.
+2657|Stop the service and send them to the hospital
+2658|Your careful response reassures the followers.
+2659|The interruption takes the air out of the service.
+2660|Give a name from scripture
+2661|The parents treasure the name for the rest of their lives.
+2662|Relatives object that the name sounds strange.
+2663|Hold a blessing service
+2664|The whole cult rejoices at the child's birth.
+2665|The service preparations just cost money.
+2666|Hold an open prayer meeting
+2667|After a night of prayer, the gossip dies down.
+2668|People add that it was just for show.
+2669|Track down the source of the rumor
+2670|The one who spread it bows their head and apologizes.
+2671|The questioning makes followers suspicious of one another.
+2672|Visit and comfort him in person
+2673|He returns to the chapel once more.
+2674|Too ashamed, he won't open the door.
+2675|Have the cult help with living expenses
+2676|News of the aid makes followers look out for each other more.
+2677|He takes the help and leaves anyway.
+2678|Allow it and attend with them
+2679|The young people burn with fervor as praise goes on till dawn.
+2680|Neighbors complain about the noise.
+2681|Allow it only until midnight
+2682|The compromise satisfies everyone.
+2683|The young people grumble with disappointment.
+2684|Hold a joint service for both generations
+2685|The two generations learn each other's songs.
+2686|Both sides only grow more dissatisfied.
+2687|Side with the elderly followers
+2688|The elders are pleased, and order is restored.
+2689|A few young people move to another church.
+2690|Meet the family and persuade them yourself
+2691|The whole family comes to the baptism.
+2692|The family calls the cult heretical and threatens to report it.
+2693|Say you'll wait for them
+2694|The follower thanks you for your consideration.
+2695|In the end, the follower gives up.
+2696|Rent a seaside retreat center
+2697|The service amid the sound of waves is long remembered.
+2698|A typhoon wrecks the schedule.
+2699|Hold a simple one in the churchyard
+2700|It's cramped, but the retreat is heartwarming.
+2701|Complaints arise that there's nothing to see.
+2702|Listen seriously
+2703|His words give the followers hope.
+2704|A faction forms around him and shakes your leadership.
+2705|Declare that revelations come only to the cult leader
+2706|Order is restored.
+2707|Hurt, the follower leaves the church.
+2708|Support and cheer them on
+2709|The choir brings home the silver prize.
+2710|They're eliminated in the preliminaries, and spirits sink.
+2711|Urge them to focus on services
+2712|The choir prepares worship hymns with even more care.
+2713|A few choir members feel let down.
+2714|Act surprised and delighted
+2715|Everyone laughs at the surprise party.
+2716|The plan is exposed, and things get awkward.
+2717|Ask that the money go to neighbors in need
+2718|The followers are even more moved by your intent.
+2719|The followers who planned it are deflated.
+2720|Publish the cult leader's column
+2721|The newsletter is read in every home.
+2722|It's riddled with spelling errors, and people tease you.
+2723|Fill it with followers' testimonies
+2724|Shared stories build empathy.
+2725|A private story gets printed, and a quarrel breaks out.
+2726|Make prayer visits to every home
+2727|Sick followers are greatly comforted.
+2728|You catch the flu too and are bedridden.
+2729|Announce a week off from services
+2730|The followers appreciate your consideration.
+2731|Word spreads that your faith is weak.
+2732|Hold a farewell service
+2733|He promises to spread word of the cult in his new town.
+2734|Everyone falls silent with regret.
+2735|Entrust him with a prayer group in the new town
+2736|A small group forms there.
+2737|He quits, saying it's too much alone.
+2738|Take on the counseling
+2739|The couple enters the chapel hand in hand.
+2740|You're accused of taking sides.
+2741|Leave it to time
+2742|A few months later, the couple reconciles.
+2743|The quarrel spreads to other followers.
+2744|Teach the children yourself
+2745|The children tag along after you everywhere.
+2746|You're exhausted, and your sermon falls flat.
+2747|Put the young people in charge of teaching
+2748|The young people learn responsibility.
+2749|Parents complain that the classes are a mess.
