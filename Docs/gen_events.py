@@ -2,6 +2,7 @@
 #   Docs/life_events.csv  + Docs/life_choices.csv  -> Assets/Scripts/Story/LifeEvents.cs
 #   Docs/cult_events.csv  + Docs/cult_choices.csv  -> Assets/Scripts/Story/CultEvents.cs
 #   Docs/god_events.csv   + Docs/god_choices.csv   -> Assets/Scripts/Story/GodEvents.cs  (준비된 신 모드 전용)
+#   Docs/adult_events.csv + Docs/adult_choices.csv -> Assets/Scripts/Story/AdultEvents.cs (성인 인증 + 성인 콘텐츠 켬 + 만 19세 이상일 때만)
 # 사용: python Docs/gen_events.py   (프로젝트 루트에서 실행)
 #
 # [이벤트 CSV] 이벤트 1줄 = 질문 1개
@@ -24,6 +25,8 @@
 #           / heaven·earth(theme = HeavenStage>=N / EarthStage>=N, 그 압박 단계 이상에서 압박 비례 확률로 끼어든다)
 #     효과에 Envy±n(신계 시기) Suspicion±n(지상 의혹) Seize+n(건물 압류) Points+n(권능 포인트)를 더 쓸 수 있다.
 #
+# [성인 이벤트] adult_events.csv: id, theme(교단 스탯, 뽑힐 가중치), text. 선택지 보정 스탯은 Lust.
+#
 # CSV는 UTF-8 BOM으로 저장(엑셀 호환). 읽기는 UTF-8, 실패 시 CP949로 한다.
 import csv, io, os, re, sys
 
@@ -32,6 +35,7 @@ DOCS = os.path.join(ROOT, 'Docs')
 OUT_LIFE = os.path.join(ROOT, 'Assets', 'Scripts', 'Story', 'LifeEvents.cs')
 OUT_CULT = os.path.join(ROOT, 'Assets', 'Scripts', 'Story', 'CultEvents.cs')
 OUT_GOD = os.path.join(ROOT, 'Assets', 'Scripts', 'Story', 'GodEvents.cs')
+OUT_ADULT = os.path.join(ROOT, 'Assets', 'Scripts', 'Story', 'AdultEvents.cs')
 
 CULT = {'LeaderFaith', 'FollowerFaith', 'Authority', 'Offerings', 'Followers', 'Doctrine', 'Communion', 'Reputation'}
 PERSONAL = {'Health', 'Mentality', 'Piety', 'Repute', 'Wealth', 'Miracle', 'Lust', 'Greed',
@@ -266,6 +270,26 @@ def build_god():
     return out
 
 
+def build_adult():
+    events = rows_of('adult_events.csv')
+    choices = group_choices(rows_of('adult_choices.csv'))
+    out, ids = [], set()
+    for e in events:
+        eid, theme = e['id'].strip(), e['theme'].strip()
+        if eid in ids:
+            sys.exit(f'{eid}: 중복 id')
+        ids.add(eid)
+        if theme not in CULT:
+            sys.exit(f'{eid}: 잘못된 테마 "{theme}"')
+        codes = choices_for(eid, choices.get(eid, []), True, {}, '                ', 'Lust')
+        body = ',\n                '.join(codes)
+        out.append(f'        CultEvent.Random("{eid}", StatId.{theme}, new Question("{esc(e["text"].strip())}",\n                {body})),')
+    unused = set(choices) - ids
+    if unused:
+        sys.exit(f'선택지만 있고 이벤트가 없는 id: {sorted(unused)}')
+    return out
+
+
 def write(path, header, cls, items):
     body = '\n'.join(items)
     text = f'''{header}
@@ -288,7 +312,9 @@ def main():
     write(OUT_CULT, '// 교단 창설 후 이벤트 목록. Docs/gen_events.py로 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.', 'CultEvents', cult)
     god = build_god()
     write(OUT_GOD, '// 준비된 신 모드 전용 이벤트 목록. Docs/gen_events.py로 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.', 'GodEvents', god)
-    print(len(life), 'life events,', len(cult), 'cult events,', len(god), 'god events')
+    adult = build_adult()
+    write(OUT_ADULT, '// 성인 전용 이벤트 목록 (AdultGate.Active일 때만 나온다). Docs/gen_events.py로 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.', 'AdultEvents', adult)
+    print(len(life), 'life events,', len(cult), 'cult events,', len(god), 'god events,', len(adult), 'adult events')
 
 
 if __name__ == '__main__':

@@ -58,7 +58,7 @@ public class StartScreenController : MonoBehaviour
     {
         if (!GodRules.Unlocked) return;
         // 처음 들어갈 때 한 번 성인 확인 (이 모드는 관능·퇴폐 묘사가 있다)
-        if (PlayerPrefs.GetInt(AdultPref, 0) != 1)
+        if (PlayerPrefs.GetInt(AdultPref, 0) != 1 && !AdultGate.Verified) // 옵션에서 성인 인증을 마쳤으면 묻지 않는다
         {
             ConfirmDialog.Show(Lang.Get("god_adult_confirm"), Lang.Get("god_adult_ok"), Lang.Get("close"), () =>
             {

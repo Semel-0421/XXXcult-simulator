@@ -22,6 +22,7 @@ public class QuestionRunner : MonoBehaviour
         current = question;
         this.advancesTurn = advancesTurn;
         if (eventId != null) GameSession.SetPending(eventId, advancesTurn);
+        AdultArt.Show(eventId);
         panel.Show(QuestionPanel.WithPreface(preface, question.Text), question.Choices.Select(choice => choice.Text).ToArray());
     }
 
@@ -30,6 +31,7 @@ public class QuestionRunner : MonoBehaviour
     {
         current = null;
         GameSession.ClearPending();
+        AdultArt.Hide();
     }
 
     void OnChosen(int number)
@@ -38,6 +40,7 @@ public class QuestionRunner : MonoBehaviour
         var question = current;
         current = null;
         GameSession.ClearPending();
+        AdultArt.Hide();
         var outcome = Turns.Answer(question.Choices[number - 1]);
         if (advancesTurn) GameSession.AdvanceTurn();
         else Achievements.Evaluate();

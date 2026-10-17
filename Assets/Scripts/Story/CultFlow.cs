@@ -29,7 +29,7 @@ public class CultFlow : MonoBehaviour
     {
         var id = GameSession.PendingEventId;
         if (string.IsNullOrEmpty(id)) return false;
-        foreach (var e in Turns.CultPool)
+        foreach (var e in AdultGate.Active ? Turns.CultPool.Concat(AdultEvents.All) : Turns.CultPool)
         {
             if (e.Id != id) continue;
             questionRunner.Answered += OnEventAnswered;

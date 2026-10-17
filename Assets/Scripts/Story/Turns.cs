@@ -50,14 +50,20 @@ public static class Turns
         var rng = GameSession.Rng;
         if (GameSession.GodMode)
             return CultEvent.RollNegative(GodEvents.All, cult, used, rng, GameSession.God.Pressure.EventChance(cult))
+                   ?? RollAdult(cult, used, rng)
                    ?? CultEvent.RollRandom(GodEvents.All, cult, used, rng);
         var next = CultEvent.FindTriggered(CultEvents.All, cult, used)
                    ?? CultEvent.RollNegative(CultEvents.All, cult, used, rng, GameSession.CultTime.Years + 1)
                    ?? CultEvent.RollMood(CultEvents.All, GameSession.Personal, used, rng)
+                   ?? RollAdult(cult, used, rng)
                    ?? CultEvent.RollRandom(CultEvents.All, cult, used, rng);
         if (next != null && next.IsNegative) GameSession.AddMisfortune();
         return next;
     }
+
+    // 성인 이벤트: 꺼져 있으면 난수를 쓰지 않아 기존 판 진행이 그대로다
+    static CultEvent RollAdult(CultStatus cult, ISet<string> used, System.Random rng) =>
+        AdultGate.Active && rng.NextDouble() < AdultGate.EventChance ? CultEvent.RollRandom(AdultEvents.All, cult, used, rng) : null;
 
     // 고른 선택지의 성공/실패를 판정하고 결과의 효과(기프티드 보정 포함)와 기프티드 지급을 반영한다. 시간은 흐르지 않는다.
     public static Outcome Answer(Choice choice)

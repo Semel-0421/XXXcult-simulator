@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// 옵션 창: 언어, 행동 단축키, 화면 비율, 배경음악·효과음 음량. 타이틀과 게임 중 일시정지 메뉴가 함께 쓴다.
+// 옵션 창: 언어, 행동 단축키, 화면 비율, 성인 인증, 배경음악·효과음 음량. 타이틀과 게임 중 일시정지 메뉴가 함께 쓴다.
 public static class OptionsWindow
 {
     const float EdgeMargin = 16, ButtonHeight = 46, KeyWidth = 56, KeyGap = 4, ResetKeyWidth = 90;
@@ -14,6 +14,9 @@ public static class OptionsWindow
     static readonly TMP_Text[] keyButtonLabels = new TMP_Text[Keybinds.ActionCount];
     static TMP_Text windowLabel, windowValue;
     static Button korean, english, aspect, window, resetKeysButton;
+    static TMP_Text adultLabel, adultValue;
+    static TMP_InputField[] birthInputs; // 연·월·일
+    static string adultMessage = ""; // 인증 실패 안내 (두 번째 줄)
 
     public static void Open()
     {
@@ -83,6 +86,19 @@ public static class OptionsWindow
         WindowMode.Changed -= Refresh;
         WindowMode.Changed += Refresh;
 
+        // 성인 인증: 생년월일을 넣고 인증하면 입력칸이 사라지고 성인 콘텐츠 켜기/끄기만 남는다
+        var adultRow = Row(content, font, out adultLabel);
+        adultRow.GetComponent<LayoutElement>().preferredHeight = 96;
+        adultLabel.richText = true;
+        var adult = RightButton(adultRow, font, "AdultVerify", 0, 120, out adultValue);
+        adult.onClick.AddListener(OnAdultButton);
+        birthInputs = new[]
+        {
+            BirthInput(adultRow, font, "BirthYear", 120 + KeyGap * 2 + 2 * (64 + KeyGap), 90, 4, "YYYY"),
+            BirthInput(adultRow, font, "BirthMonth", 120 + KeyGap * 2 + 64 + KeyGap, 64, 2, "MM"),
+            BirthInput(adultRow, font, "BirthDay", 120 + KeyGap * 2, 64, 2, "DD"),
+        };
+
         // 배경음악
         var musicRow = Row(content, font, out musicLabel);
         var music = AddSlider(musicRow, font, AudioManager.MusicVolume, out musicValue);
@@ -109,6 +125,55 @@ public static class OptionsWindow
         rect.pivot = new Vector2(1, 0.5f);
         rect.anchoredPosition = new Vector2(-(EdgeMargin + right), 0);
         return button;
+    }
+
+    static TMP_InputField BirthInput(RectTransform row, TMP_FontAsset font, string name, float right, float width, int limit, string placeholder)
+    {
+        var go = TMP_DefaultControls.CreateInputField(new TMP_DefaultControls.Resources());
+        go.name = name;
+        var rect = (RectTransform)go.transform;
+        rect.SetParent(row, false);
+        rect.anchorMin = rect.anchorMax = new Vector2(1, 0.5f);
+        rect.pivot = new Vector2(1, 0.5f);
+        rect.sizeDelta = new Vector2(width, ButtonHeight);
+        rect.anchoredPosition = new Vector2(-(EdgeMargin + right), 0);
+        var input = go.GetComponent<TMP_InputField>();
+        input.contentType = TMP_InputField.ContentType.IntegerNumber;
+        input.characterLimit = limit;
+        input.image.color = new Color(0.08f, 0.05f, 0.12f);
+        input.textComponent.color = Color.white;
+        input.textComponent.fontSize = 22;
+        input.textComponent.alignment = TextAlignmentOptions.Center;
+        var hint = (TMP_Text)input.placeholder;
+        hint.text = placeholder;
+        hint.fontSize = 22;
+        hint.color = UiKit.Muted;
+        hint.alignment = TextAlignmentOptions.Center;
+        if (font != null) input.fontAsset = font;
+        return input;
+    }
+
+    // 인증 전: 생년월일 확인 / 인증 후: 성인 콘텐츠 켜기·끄기
+    static void OnAdultButton()
+    {
+        if (AdultGate.Verified)
+        {
+            AdultGate.ContentEnabled = !AdultGate.ContentEnabled;
+        }
+        else
+        {
+            var ok = int.TryParse(birthInputs[0].text, out var year) & int.TryParse(birthInputs[1].text, out var month)
+                & int.TryParse(birthInputs[2].text, out var day);
+            var result = ok ? AdultGate.Verify(year, month, day) : AdultGate.Result.Invalid;
+            adultMessage = result switch
+            {
+                AdultGate.Result.Minor => Lang.Get("adult_minor"),
+                AdultGate.Result.Invalid => Lang.Get("adult_invalid"),
+                _ => "",
+            };
+            foreach (var input in birthInputs) input.text = ""; // 생년월일은 남기지 않는다
+        }
+        Refresh();
     }
 
     static RectTransform Row(RectTransform content, TMP_FontAsset font, out TMP_Text label)
@@ -158,6 +223,11 @@ public static class OptionsWindow
         windowLabel.text = Lang.Get("opt_window");
         windowValue.text = Lang.Get(WindowMode.Windowed ? "window_on" : "window_off");
         window.interactable = WindowMode.Supported;
+        var verified = AdultGate.Verified;
+        adultLabel.text = Lang.Get(verified ? "opt_adult_content" : "opt_adult_verify")
+            + (!verified && adultMessage != "" ? $"\n<size=70%><color=#F2D978>{adultMessage}</color></size>" : "");
+        adultValue.text = verified ? Lang.Get(AdultGate.ContentEnabled ? "adult_on" : "adult_off") : Lang.Get("adult_check");
+        foreach (var input in birthInputs) input.gameObject.SetActive(!verified);
         musicValue.text = Percent(AudioManager.MusicVolume);
         sfxValue.text = Percent(AudioManager.SfxVolume);
     }

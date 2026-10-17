@@ -20,7 +20,9 @@ public class ActionResultView : MonoBehaviour
 
     IEnumerator Run(string actionKey, bool success, Action done)
     {
-        image.texture = Resources.Load<Texture2D>($"Pictograms/{actionKey}_{(success ? "ok" : "fail")}");
+        var key = $"{actionKey}_{(success ? "ok" : "fail")}";
+        var art = AdultArt.Load(key); // 성인 콘텐츠가 켜져 있고 삽화가 있으면 픽토그램 대신 한 장짜리 삽화
+        image.texture = art != null ? art : Resources.Load<Texture2D>($"Pictograms/{key}");
         label.text = Lang.Get(success ? "action_success" : "action_fail");
         label.color = success ? new Color(0.95f, 0.85f, 0.55f) : new Color(0.86f, 0.35f, 0.35f);
         group.alpha = 1;
@@ -28,7 +30,7 @@ public class ActionResultView : MonoBehaviour
         for (float elapsed = 0; elapsed < duration; elapsed += Time.unscaledDeltaTime)
         {
             int frame = (int)(elapsed * fps) % Frames;
-            image.uvRect = new Rect(frame / (float)Frames, 0, 1f / Frames, 1);
+            image.uvRect = art != null ? new Rect(0, 0, 1, 1) : new Rect(frame / (float)Frames, 0, 1f / Frames, 1);
             yield return null;
         }
         Hide();
