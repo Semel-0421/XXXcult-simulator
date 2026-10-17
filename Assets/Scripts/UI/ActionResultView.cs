@@ -30,11 +30,19 @@ public class ActionResultView : MonoBehaviour
         for (float elapsed = 0; elapsed < duration; elapsed += Time.unscaledDeltaTime)
         {
             int frame = (int)(elapsed * fps) % Frames;
-            image.uvRect = art != null ? new Rect(0, 0, 1, 1) : new Rect(frame / (float)Frames, 0, 1f / Frames, 1);
+            image.uvRect = art != null ? SquareCrop(art) : new Rect(frame / (float)Frames, 0, 1f / Frames, 1);
             yield return null;
         }
         Hide();
         done?.Invoke();
+    }
+
+    // 정사각형 칸에 세로 삽화를 눌러 넣지 않고 가운데보다 조금 위(얼굴 쪽)를 정사각형으로 잘라 보여 준다
+    static Rect SquareCrop(Texture art)
+    {
+        if (art.height <= art.width) { float w = art.height / (float)art.width; return new Rect((1 - w) / 2, 0, w, 1); }
+        float h = art.width / (float)art.height;
+        return new Rect(0, (1 - h) * 0.7f, 1, h);
     }
 
     void Hide()
