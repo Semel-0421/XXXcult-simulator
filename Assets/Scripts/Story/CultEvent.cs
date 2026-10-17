@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 // 교단 창설 후 이벤트.
@@ -30,6 +30,15 @@ public class CultEvent
 
     public const float Chance = 0.6f;       // 행동 후 확률 이벤트 발생 확률
     const float BaseWeight = 0.2f;          // 스탯이 0이어도 나올 수 있게 깔아 두는 가중치
+    // 명망이 이 선 아래로 내려가면 100 단위마다 명망 테마 이벤트(명망을 올리는 선택지가 많다) 가중치를 더한다: 399~300 1단계 … 99~0 4단계
+    public const int ReputationBoostLine = 400, ReputationBoostStep = 100;
+    public const float ReputationBoostPerStep = 2f;
+
+    public static int ReputationBoostSteps(int reputation) =>
+        reputation >= ReputationBoostLine ? 0 : (ReputationBoostLine - System.Math.Max(0, reputation) + ReputationBoostStep - 1) / ReputationBoostStep;
+
+    static float Weight(CultEvent e, CultStatus cult) => BaseWeight + cult.Ratio(e.Theme)
+        + (e.Theme == StatId.Reputation ? ReputationBoostPerStep * ReputationBoostSteps(cult[StatId.Reputation].Value) : 0f);
 
     public string Id { get; }
     public StatId Theme { get; }
@@ -100,9 +109,12 @@ public class CultEvent
         : Math.Min(NegativeMaxChance, NegativeBaseChance + NegativePerYear * (cultYear - NegativeFirstYear));
 
     // 조건에 맞는(스탯이 바닥에 가까운) 아직 안 나온 부정적 이벤트 중 하나를 확률적으로 뽑는다. 없으면 null.
-    public static CultEvent RollNegative(IReadOnlyList<CultEvent> pool, CultStatus cult, ISet<string> used, Random rng, int cultYear)
+    public static CultEvent RollNegative(IReadOnlyList<CultEvent> pool, CultStatus cult, ISet<string> used, Random rng, int cultYear) =>
+        RollNegative(pool, cult, used, rng, NegativeChanceAt(cultYear));
+
+    // 준비된 신 모드는 연차 대신 압박 단계로 확률을 정한다
+    public static CultEvent RollNegative(IReadOnlyList<CultEvent> pool, CultStatus cult, ISet<string> used, Random rng, float chance)
     {
-        var chance = NegativeChanceAt(cultYear);
         if (chance <= 0f || rng.NextDouble() >= chance) return null;
 
         var candidates = new List<CultEvent>();
@@ -138,7 +150,7 @@ public class CultEvent
 
         float total = 0;
         foreach (var e in pool)
-            if (Eligible(e)) total += BaseWeight + cult.Ratio(e.Theme);
+            if (Eligible(e)) total += Weight(e, cult);
         if (total <= 0) return null;
 
         var roll = (float)rng.NextDouble() * total;
@@ -147,7 +159,7 @@ public class CultEvent
         {
             if (!Eligible(e)) continue;
             last = e;
-            roll -= BaseWeight + cult.Ratio(e.Theme);
+            roll -= Weight(e, cult);
             if (roll <= 0) return e;
         }
         return last;

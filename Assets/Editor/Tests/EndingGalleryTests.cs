@@ -9,7 +9,7 @@ public class EndingGalleryTests
     {
         // 같은 최종 스킬의 굿/배드는 문양을 공유하고 색으로 구분한다. 그 밖의 엔딩끼리는 삽화가 겹치면 안 된다.
         var textures = new List<(Texture2D texture, string id, string skill)>();
-        foreach (var ending in Endings.All)
+        foreach (var ending in System.Linq.Enumerable.Concat(Endings.All, GodRules.AllEndings))
         {
             var quiz = EndingQuiz.Of(ending);
             Assert.IsFalse(string.IsNullOrEmpty(quiz), ending.Id);

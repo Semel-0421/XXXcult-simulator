@@ -87,8 +87,8 @@ public class IntroSequence : MonoBehaviour
         var male = Lang.IsKorean ? "남성" : "Male";
         var female = Lang.IsKorean ? "여성" : "Female";
         label.text = Lang.Get("gender_prompt")
-            .Replace(male, $"<link=\"g1\"><color=#F2D978><u>{male}</u></color></link>")
-            .Replace(female, $"<link=\"g2\"><color=#F2D978><u>{female}</u></color></link>");
+            .Replace(male, $"<link=\"g1\"><color=#F2D978>{male}</color></link>")
+            .Replace(female, $"<link=\"g2\"><color=#F2D978>{female}</color></link>");
         label.raycastTarget = true;
         promptGroup.blocksRaycasts = true;
         promptGroup.interactable = true;
@@ -147,7 +147,8 @@ public class IntroSequence : MonoBehaviour
     IEnumerator RunFirstQuestion()
     {
         yield return new WaitForSecondsRealtime(panelFade);
-        lifeFlow.Begin();
+        if (GameSession.GodMode) lifeFlow.Resume(); // 유년기 없이 성인으로 시작: 곧바로 교단 이름 입력
+        else lifeFlow.Begin();
     }
 
     void SetInputActive(bool active)

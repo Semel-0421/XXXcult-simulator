@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
@@ -30,6 +30,7 @@ public static class PictogramGenerator
         ["Serve_ok"] = ServeOk, ["Serve_fail"] = ServeFail,
         ["Desire_ok"] = DesireOk, ["Desire_fail"] = DesireFail,
         ["CultPray_ok"] = CultPrayOk, ["CultPray_fail"] = CultPrayFail,
+        ["Consecrate_ok"] = ConsecrateOk, // 준비된 신의 축성 (짓지 못하면 턴을 쓰지 않아 실패 그림은 없다)
     };
 
     public static IEnumerable<string> Keys => Drawers.Keys;
@@ -415,6 +416,21 @@ public static class PictogramGenerator
         float k = f / (float)(Frames - 1);
         l.Add(Dot(V(120 - 46 * k, 20 + 40 * k * k - 20 * k), 5, Red));
         Question(l, V(30, 26), 1.1f, Prop);
+        return l;
+    }
+
+    // 축성: 두 팔을 든 신 앞에서 기둥이 땅에서 솟고, 반쯤 오르면 금빛 지붕이 얹히며 빛이 번진다
+    static List<Shape> ConsecrateOk(int f, float t)
+    {
+        var l = new List<Shape>(); var b = Stand(34);
+        b.HandL = Lerp(V(18, 46), V(14, 22), t); b.ElbowL = Lerp(V(24, 56), V(20, 36), t);
+        b.HandR = Lerp(V(50, 46), V(56, 24), t); b.ElbowR = Lerp(V(44, 56), V(48, 36), t);
+        Figure(l, b);
+        float k = f / (float)(Frames - 1), h = 10 + 46 * k, top = 104 - h; // 0→1: 건물이 솟는다
+        l.Add(Box(V(88, 106), V(26, 4), Gray));
+        foreach (var x in new[] { 74f, 88f, 102f }) l.Add(Box(V(x, 104 - h / 2), V(4, h / 2), Prop));
+        if (k > 0.5f) l.Add(Tri(V(66, top), V(110, top), V(88, top - 32 * (k - 0.5f)), Fig));
+        for (int i = 0; i < 2; i++) { float r = ((f + i * 4) % Frames) / (float)Frames; l.Add(Ring(V(88, top), 10 + 30 * r, 1.5f, Alpha(Spark, 1 - r))); }
         return l;
     }
 

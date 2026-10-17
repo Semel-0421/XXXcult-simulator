@@ -1,0 +1,601 @@
+﻿event_id,no,label,chance,success_effects,success_text,fail_effects,fail_text
+lu01,1,향유를 받고 방 안으로 들인다,70,FollowerFaith+15 Communion+1 Health+3 Lust+2 Envy+5,문이 닫히고 촛불이 꺼집니다. 아침의 그는 신을 만졌다고 속삭입니다.,Reputation-2 Lust+1 Suspicion+5,문틈으로 새어 나간 소문이 복도를 맴돕니다.
+lu01,2,향유만 받고 돌려보낸다,100,Mentality+2 Temperance+1,방 안에는 향유 냄새만 남습니다.,-,-
+lu01,3,그의 등에 향유를 발라 축복한다,90,FollowerFaith+10 Health+2 Lust+1,손끝이 지나간 자리마다 그가 떨며 기도를 읊습니다.,FollowerFaith-5,그가 놀라 물러서고 어색한 침묵이 흐릅니다.
+lu02,1,함께 물에 들어간다,70,FollowerFaith+20 Communion+1 Health+3 Lust+2 Suspicion+5,젖은 몸들이 당신을 둘러싸고 물결마다 찬송이 번집니다.,Reputation-5 Suspicion+8,누군가 몰래 찍은 사진이 돌기 시작합니다.
+lu02,2,물가에서 축복만 내린다,100,FollowerFaith+8 Temperance+1,당신이 물을 뿌릴 때마다 신도들이 눈을 감습니다.,-,-
+lu02,3,신도들끼리 의식을 치르게 한다,90,FollowerFaith+10 Authority+5,당신이 없는 자리에서도 그들은 당신의 이름을 부릅니다.,FollowerFaith-5,구심점이 없어 의식이 흐지부지됩니다.
+lu03,1,밀실에서 단둘이 기도한다,70,Offerings+35 Health+2 Lust+2 Envy+3,기도는 밤늦도록 이어지고 그녀는 다음 날 더 큰 봉헌금을 보내옵니다.,Reputation-5 Suspicion+8,그녀의 자녀들이 교단에 찾아와 소란을 피웁니다.
+lu03,2,여러 신도 앞에서 기도한다,100,Offerings+10 Reputation+3,모두가 보는 앞에서 그녀를 축복합니다.,-,-
+lu03,3,봉헌금만 정중히 받는다,100,Offerings+15 Integrity+1,그녀는 아쉬운 눈빛을 남기고 돌아갑니다.,-,-
+lu04,1,한 사람씩 맨살에 손을 얹는다,70,FollowerFaith+15 Followers+5 Lust+1 Communion-1,손이 닿을 때마다 탄성이 터지고 대기 줄은 더 길어집니다.,FollowerFaith-5 Health-2,손끝만 떨릴 뿐 아무도 낫지 않습니다.
+lu04,2,이마에만 짧게 손을 댄다,90,FollowerFaith+8,짧은 축복에도 신도들이 감격합니다.,FollowerFaith-3,형식적인 손길에 실망한 얼굴이 보입니다.
+lu04,3,대기실을 닫는다,100,Mentality+2 FollowerFaith-5,조용한 밤이 돌아오지만 서운한 기색이 남습니다.,-,-
+lu05,1,횃불 한가운데서 함께 춤춘다,70,FollowerFaith+20 Communion+2 Health+2 Lust+2 Suspicion+8,땀에 젖은 몸들이 북소리에 맞춰 당신을 중심으로 소용돌이칩니다.,Health-2 Suspicion+5,이웃이 신고해 경찰차가 골목을 돌고 갑니다.
+lu05,2,높은 자리에서 춤을 지켜본다,90,Authority+10 FollowerFaith+8,신도들이 당신의 시선을 받으려 더 격렬하게 몸을 흔듭니다.,FollowerFaith-3,춤이 금세 식어 버립니다.
+lu05,3,조용한 달맞이 기도로 바꾼다,100,Piety+2 FollowerFaith+3,달빛 아래 고요한 기도가 이어집니다.,-,-
+lu06,1,가장 아름다운 이를 간택한다,70,FollowerFaith+15 Communion+2 Health+3 Lust+3 Envy+8,촛불이 꺼지고 아침이 오자 간택받은 이는 신을 보았다고 말합니다.,FollowerFaith-5 Envy+5,간택받지 못한 이들의 질투가 신전을 무겁게 합니다.
+lu06,2,모두에게 입맞춤으로 축복한다,90,FollowerFaith+20 Lust+2 Suspicion+5,입술이 닿은 이마마다 붉은 열기가 번집니다.,Reputation-2 Suspicion+5,의식 장면이 밖으로 새어 나갑니다.
+lu06,3,간택을 미룬다,100,Patience+2 FollowerFaith-5,기다림은 그들의 갈망을 더 키웁니다.,-,-
+lu07,1,몸이 원하는 대로 밤을 보낸다,90,Health+5 Mentality+4 Lust+3 Envy+3,숙주의 몸이 만족스럽게 풀어지고 그릇이 다시 단단해집니다.,Health+2 Lust+2 Reputation-2,새벽 골목에서 당신을 알아본 사람이 있습니다.
+lu07,2,찬물로 열기를 식힌다,100,Temperance+2 Mentality-2,열기는 가라앉지만 몸 안 어딘가가 비어 있습니다.,-,-
+lu07,3,그 열기를 기도로 바꾼다,70,Communion+2 Piety+2,뜨거운 숨이 기도가 되어 신과 그릇이 하나로 겹칩니다.,Mentality-2,기도가 흩어지고 열기만 남습니다.
+lu08,1,모든 것을 벗고 모델이 된다,70,Followers+8 Authority+5 Lust+2 Suspicion+10,완성된 그림 앞에서 관람객들이 무릎을 꿇습니다.,Reputation-7 Suspicion+10,그림이 외설 논란에 휘말립니다.
+lu08,2,얇은 천을 두르고 선다,90,Followers+5 Authority+5 Lust+1,천 너머로 비치는 윤곽이 더 큰 상상을 부릅니다.,Reputation-2,평범한 초상화로 끝나 아무도 주목하지 않습니다.
+lu08,3,얼굴만 그리게 한다,100,Repute+1 Followers+2,단정한 성상화가 신전에 걸립니다.,-,-
+lu09,1,신방 앞에서 직접 축복을 내린다,90,FollowerFaith+15 Followers+3 Lust+1,부부는 신의 숨결이 방 안에 머물렀다고 믿습니다.,FollowerFaith-3,축복의 말이 꼬여 분위기가 어색해집니다.
+lu09,2,신방 안까지 들어가 축복한다,50,FollowerFaith+25 Communion+1 Lust+3 Suspicion+8,문이 닫힌 뒤의 일은 셋만 압니다. 부부는 평생 당신을 섬기겠다고 맹세합니다.,Reputation-7 Suspicion+10,소문이 부부의 친정까지 퍼집니다.
+lu09,3,축복의 부적만 내려 준다,100,FollowerFaith+5 Offerings+5,부부는 부적을 베개 밑에 넣습니다.,-,-
+lu10,1,향을 짙게 피우고 기도회를 연다,70,FollowerFaith+20 Communion+2 Lust+2 Health-1 Suspicion+5,몽롱한 연기 속에서 기도는 신음 섞인 탄식으로 바뀝니다.,Health-3 Suspicion+8,연기에 취해 쓰러진 신도가 병원에 실려 갑니다.
+lu10,2,향을 옅게 피운다,90,FollowerFaith+10 Communion+1,은은한 향 속에서 신도들이 서로의 손을 맞잡습니다.,FollowerFaith-3,향이 너무 옅어 아무도 취하지 않습니다.
+lu10,3,맑은 정신으로 기도하게 한다,100,Piety+2 Temperance+1,담백한 기도가 끝나고 모두 조용히 돌아갑니다.,-,-
+lu11,1,연서마다 친필 답장을 보낸다,70,FollowerFaith+15 Followers+5 Lust+1,답장을 받은 신도들이 밤새 편지를 끌어안고 잠듭니다.,Reputation-2 Suspicion+5,답장 하나가 인터넷에 올라옵니다.
+lu11,2,가장 뜨거운 편지를 설교에서 읽는다,50,FollowerFaith+20 Authority+5 Lust+2,부끄러워하던 신도들이 이내 환호합니다.,FollowerFaith-10,편지 주인이 수치심에 교단을 떠납니다.
+lu11,3,편지들을 태워 향으로 바친다,100,Communion+1 Temperance+1,타오르는 사랑의 말들이 연기가 되어 오릅니다.,-,-
+lu12,1,춤추는 그녀와 마주 선다,70,FollowerFaith+15 Communion+1 Lust+2 Health+2,방울 소리가 빨라질수록 두 몸의 거리가 사라집니다.,Suspicion+5 FollowerFaith-3,춤이 지나치다는 수군거림이 돕니다.
+lu12,2,제단 위에서 춤을 받는다,90,Authority+10 FollowerFaith+10 Lust+1,제단 아래 신도들이 숨을 죽이고 그녀의 몸짓을 바라봅니다.,FollowerFaith-3,방울 끈이 끊어져 춤이 멈춥니다.
+lu12,3,춤을 정중히 사양한다,100,Temperance+1 FollowerFaith-3,그녀는 서운한 얼굴로 방울을 거둡니다.,-,-
+lu13,1,꿈에서 그들을 만났다고 인정한다,70,FollowerFaith+20 Communion+2 Lust+2 Envy+5,신도들은 밤마다 같은 꿈을 기다리며 잠자리에 듭니다.,Suspicion+5 Mentality-2,몽유병 환자가 늘었다는 기사가 납니다.
+lu13,2,꿈은 신의 은총이라고만 말한다,90,FollowerFaith+10 Piety+1,모호한 대답이 오히려 신비를 키웁니다.,FollowerFaith-3,답을 원하던 신도들이 실망합니다.
+lu13,3,헛된 꿈이라 꾸짖는다,100,Authority+5 FollowerFaith-8,꿈 이야기는 사라지고 신전은 조용해집니다.,-,-
+lu14,1,발을 내밀어 입 맞추게 한다,90,Authority+15 FollowerFaith+10 Ambition+1 Lust+1,그의 입술이 닿는 순간 신전 안의 공기가 달라집니다.,Reputation-2,누군가 그 장면을 찍어 돌립니다.
+lu14,2,그를 일으켜 품에 안는다,70,FollowerFaith+15 Charity+1 Lust+1,그는 당신의 품에서 아이처럼 흐느낍니다.,FollowerFaith-3,그가 너무 놀라 도망칩니다.
+lu14,3,손등에만 허락한다,100,Authority+5 Temperance+1,절제된 허락에 그가 깊이 고개를 숙입니다.,-,-
+lu15,1,신도들과 함께 노천탕에 몸을 담근다,70,FollowerFaith+15 Health+4 Mentality+3 Lust+2 Offerings-15,별빛 아래 물결이 맨어깨들을 감싸고 지친 그릇이 녹아내립니다.,Suspicion+8 Offerings-15,등산객이 순례단을 보고 수상하다며 신고합니다.
+lu15,2,혼자 온천에 머문다,100,Health+3 Mentality+2 Offerings-10,홀로 몸을 담그자 숙주의 피로가 풀립니다.,-,-
+lu15,3,순례를 취소한다,100,Offerings+5 FollowerFaith-3,아쉬운 마음에 몇몇이 투덜댑니다.,-,-
+gr01,1,황금 욕조를 들인다,70,Authority+15 Health+3 Mentality+3 Greed+2 Offerings-40,우유를 채운 황금 욕조에 몸을 담그자 신도들이 축복의 증거라 부릅니다.,Offerings-40 Suspicion+10,호화 욕조 사진이 기사로 실립니다.
+gr01,2,도금 욕조로 타협한다,90,Authority+8 Health+2 Greed+1 Offerings-20,번쩍이는 욕조가 충분히 위엄을 냅니다.,Offerings-20,도금이 금세 벗겨집니다.
+gr01,3,그 돈을 구호에 쓴다,100,Reputation+10 Charity+2 Offerings-30,구호 소식에 이웃의 시선이 부드러워집니다.,-,-
+gr02,1,왕관을 사들여 쓴다,70,Authority+20 FollowerFaith+10 Greed+2 Offerings-35 Envy+5,붉은 왕관을 쓰자 신도들이 저절로 무릎을 꿇습니다.,Offerings-35 Suspicion+8,왕관 가격이 언론에 공개됩니다.
+gr02,2,의식 때만 빌려 쓴다,90,Authority+10 Offerings-10,빌린 왕관도 의식 속에서는 진짜처럼 빛납니다.,Offerings-10,반납 기한 문제로 보석상과 다툽니다.
+gr02,3,필요 없다고 돌려보낸다,100,Integrity+1 Authority-3,보석상이 혀를 차며 돌아갑니다.,-,-
+gr03,1,별장을 받아 신의 거처로 삼는다,70,Authority+15 Mentality+4 Greed+2 Offerings+10 Suspicion+10,통유리 너머 바다를 보며 숙주의 마음이 느긋해집니다.,Suspicion+10 Reputation-5,별장의 소유 관계를 묻는 기자가 찾아옵니다.
+gr03,2,별장을 수련원으로 쓴다,90,FollowerFaith+10 Followers+3 Suspicion+5,신도들이 바다 앞에서 기도하며 결속합니다.,Suspicion+5,수련원 허가 문제로 시청과 다툽니다.
+gr03,3,별장을 사양한다,100,Integrity+2,사업가는 당신의 청렴함에 오히려 감탄합니다.,-,-
+gr04,1,금실 성의를 지어 입는다,70,Authority+15 FollowerFaith+8 Greed+2 Offerings-25,금실이 촛불을 받아 당신을 빛 그 자체로 보이게 합니다.,Offerings-25 Reputation-2,무겁고 화려한 옷이 사치라는 말이 돕니다.
+gr04,2,가장자리에만 금실을 넣는다,90,Authority+8 Offerings-10,단정한 성의에 금빛이 은은하게 흐릅니다.,Offerings-10,재단이 어긋나 다시 지어야 합니다.
+gr04,3,낡은 옷을 고집한다,100,Temperance+1 Authority-3,신도들은 소박함을 칭송하면서도 어딘가 서운해합니다.,-,-
+gr05,1,금고 앞에서 지폐 위에 눕는다,90,Mentality+5 Greed+3 Health+2 Envy+3,돈 냄새 속에서 숙주의 몸이 깊은 만족을 느낍니다.,Greed+2 Suspicion+5,청소하던 신도가 그 모습을 보고 놀랍니다.
+gr05,2,봉헌금을 신도들에게 나눠 준다,100,FollowerFaith+15 Charity+2 Offerings-30,신도들이 받은 돈을 다시 당신 앞에 바치며 웁니다.,-,-
+gr05,3,더 큰 금고를 들인다,90,Offerings+10 Greed+1,넓은 금고가 더 많은 봉헌을 부릅니다.,Suspicion+5,금고 반입 장면이 목격됩니다.
+gr06,1,명차를 신의 수레로 바친다,70,Authority+15 Followers+5 Greed+2 Offerings-35 Suspicion+8,검은 차가 지나가면 거리의 신도들이 고개를 숙입니다.,Offerings-35 Reputation-5,교주의 명차라는 기사가 납니다.
+gr06,2,중고 고급차로 타협한다,90,Authority+8 Offerings-15,번쩍이는 차체만으로도 위세가 섭니다.,Offerings-15,차가 자주 고장 납니다.
+gr06,3,걸어서 다닌다,100,Repute+1 Temperance+1,걸어 다니는 신의 모습이 소박하다는 평을 받습니다.,-,-
+gr07,1,가보를 받아 제단에 올린다,90,Communion+1 Offerings+15 Greed+1,서늘한 비취가 제단에서 은은하게 빛납니다.,Reputation-2,신도의 가족이 가보를 돌려 달라고 찾아옵니다.
+gr07,2,가보를 몸에 지닌다,70,Authority+10 Greed+2 Mentality+2,비취가 피부에 닿자 숙주의 마음이 고요해집니다.,Envy+5 Mentality-2,다른 신의 저주가 깃든 물건이라는 말이 돕니다.
+gr07,3,가보를 돌려준다,100,Integrity+1 FollowerFaith+5,신도는 감격하며 더 깊이 머리를 숙입니다.,-,-
+gr08,1,기둥 전체에 금박을 입힌다,70,Authority+15 Followers+5 Greed+2 Offerings-40,햇빛을 받은 신전이 멀리서도 황금빛으로 타오릅니다.,Offerings-40 Suspicion+10,호화 신전 논란이 일어납니다.
+gr08,2,제단 기둥에만 입힌다,90,Authority+8 Offerings-15,제단 주변이 은은한 금빛으로 감싸입니다.,Offerings-15,금박이 비에 들떠 떨어집니다.
+gr08,3,금박 대신 흰 칠을 한다,100,Temperance+1 Offerings-5,깨끗한 신전이 정갈해 보입니다.,-,-
+gr09,1,번호를 점지했다고 인정한다,70,Followers+10 Offerings+30 Greed+2 Suspicion+8,다음 날 아침 신전 앞에 복권을 든 사람들이 줄을 섭니다.,Reputation-5 Suspicion+10,당첨 사기라는 의혹이 제기됩니다.
+gr09,2,신의 뜻이었다고만 말한다,90,Offerings+20 FollowerFaith+5,당첨금 절반이 조용히 금고로 들어옵니다.,Offerings+5,신도가 마음을 바꿔 일부만 바칩니다.
+gr09,3,당첨금을 사양한다,100,Integrity+2 FollowerFaith+3,신도는 당신의 욕심 없음에 감동합니다.,-,-
+gr10,1,가진 봉헌금을 모두 걸고 낙찰받는다,50,Communion+3 Authority+20 Greed+3 Offerings-60 Envy+10,성배를 손에 쥐자 오래된 신성이 당신의 이름에 무릎을 꿇습니다.,Offerings-20 Mentality-2,마지막 순간 다른 교단에 밀려 놓칩니다.
+gr10,2,적당한 선에서 입찰한다,70,Communion+1 Offerings-25,모조품이었지만 신도들은 진품이라 믿습니다.,Offerings-10,입찰 경쟁에서 일찍 밀려납니다.
+gr10,3,경매에 관심을 두지 않는다,100,Temperance+1,다른 교단이 성배를 가져갔다는 소식이 들립니다.,-,-
+gr11,1,한정판 출시를 허락한다,70,Offerings+40 Followers+8 Greed+2 Suspicion+10,매장 앞에 밤새 줄이 늘어서고 신의 문장이 거리를 뒤덮습니다.,Reputation-5 Suspicion+8,신앙을 판다는 비난이 쏟아집니다.
+gr11,2,수익 일부만 받고 이름을 빌려준다,90,Offerings+20 Greed+1,조용히 들어오는 로열티가 금고를 채웁니다.,Offerings+5,판매가 기대에 못 미칩니다.
+gr11,3,신의 이름은 팔지 않는다,100,Integrity+2 Authority+3,거절 소식에 신도들이 자부심을 느낍니다.,-,-
+gr12,1,코인을 모두 받아 굴린다,50,Offerings+60 Greed+3 Mentality+2,숫자가 하늘로 치솟자 신도들은 신이 시장마저 움직였다고 믿습니다.,Offerings-30 Mentality-3,폭락 소식에 숙주의 손이 떨립니다.
+gr12,2,받자마자 현금으로 바꾼다,90,Offerings+20,안전하게 바꾼 돈이 금고에 쌓입니다.,Offerings+5,수수료가 생각보다 큽니다.
+gr12,3,현물 봉헌만 받는다,100,Temperance+1 Offerings+5,신도들이 다시 지폐와 금붙이를 들고 옵니다.,-,-
+gr13,1,미술관을 신의 전당으로 바꾼다,70,Authority+20 Followers+8 Greed+2 Envy+5 Suspicion+8,명화 사이를 거니는 당신의 모습이 하나의 성화가 됩니다.,Suspicion+10 Reputation-5,재벌가가 소송을 예고합니다.
+gr13,2,그림 몇 점만 신전에 건다,90,Authority+10 Greed+1,신전 벽이 갑자기 고상해집니다.,Reputation-1,그림의 진위 논란이 일어납니다.
+gr13,3,열쇠를 돌려준다,100,Integrity+1 FollowerFaith+5,장녀는 오히려 더 깊이 당신을 따릅니다.,-,-
+gr14,1,강철문 보물고를 짓는다,70,Authority+10 Mentality+3 Greed+2 Offerings-20,금빛이 가득한 지하실이 신의 심장처럼 고동칩니다.,Offerings-25 Suspicion+8,공사 소음 신고에 구청 직원이 찾아옵니다.
+gr14,2,평범한 금고실로 줄인다,90,Offerings+5 Greed+1,단단한 금고실이 마음을 놓이게 합니다.,Offerings-5,설계가 바뀌며 비용이 늘어납니다.
+gr14,3,보물고 대신 기도실을 짓는다,100,Piety+2 Communion+1,지하 기도실에서 접신이 깊어집니다.,-,-
+gr15,1,요트를 사들여 바다 순례를 떠난다,70,Health+4 Mentality+4 Authority+10 Greed+2 Offerings-35,샴페인 거품과 수평선 사이에서 숙주의 몸이 다시 살아납니다.,Offerings-35 Suspicion+10,요트 위 파티 사진이 온라인에 퍼집니다.
+gr15,2,하루만 빌린다,90,Health+2 Mentality+2 Offerings-15,짧은 항해가 그릇의 피로를 씻어 줍니다.,Offerings-15 Health-1,뱃멀미로 하루를 앓습니다.
+gr15,3,제안을 거절한다,100,Temperance+1,요트 회사 사장이 명함만 남기고 떠납니다.,-,-
+ap01,1,모든 요리를 맛보며 밤새 먹는다,90,Health+5 Mentality+3 Appetite+3 FollowerFaith+10,신이 접시를 비울 때마다 신도들의 환호가 커집니다.,Health+2 Appetite+2 Reputation-1,과식으로 하루 종일 누워 지냅니다.
+ap01,2,신도들과 함께 나눠 먹는다,100,FollowerFaith+15 Charity+1 Health+2,같은 식탁에 앉은 신도들의 얼굴이 환해집니다.,-,-
+ap01,3,한 숟가락만 뜨고 물린다,100,Temperance+2 FollowerFaith-5,남은 요리를 보며 신도들이 서운해합니다.,-,-
+ap02,1,술을 끝까지 비운다,70,Mentality+5 Health+2 Appetite+2 Communion+1,취기 속에서 신의 목소리가 더 또렷하게 들립니다.,Health-2 Mentality-2,숙취에 하루를 통째로 잃습니다.
+ap02,2,신도들에게 한 잔씩 따라 준다,90,FollowerFaith+15 Appetite+1,잔을 받은 신도들이 신의 술이라며 눈물을 흘립니다.,FollowerFaith-3,잔이 모자라 다툼이 생깁니다.
+ap02,3,제단에 그대로 바친다,100,Communion+1 Piety+1,봉인된 술병이 제단 위에서 빛납니다.,-,-
+ap03,1,코스 전체를 즐긴다,90,Health+4 Mentality+4 Appetite+2 Offerings-20,접시가 바뀔 때마다 숙주의 몸이 노래하듯 풀어집니다.,Offerings-20 Appetite+1,음식은 좋았지만 계산서가 무겁습니다.
+ap03,2,셰프를 교단에 영입한다,70,Followers+5 FollowerFaith+10 Appetite+1 Offerings-15,셰프의 요리가 매주 신도들을 신전으로 끌어모읍니다.,Offerings-15,셰프가 일주일 만에 그만둡니다.
+ap03,3,소박한 상으로 바꿔 달라고 한다,100,Temperance+1 Health+1,담백한 밥상이 몸을 가볍게 합니다.,-,-
+ap04,1,고기와 술로 성대한 잔치를 연다,90,FollowerFaith+20 Health+3 Appetite+2 Offerings-20,굶주렸던 신도들이 신의 이름을 외치며 잔을 부딪칩니다.,Offerings-20 Suspicion+5,잔치 소음에 이웃 민원이 들어옵니다.
+ap04,2,죽 한 그릇으로 금식을 마친다,100,Temperance+2 Piety+1 FollowerFaith+3,경건하게 금식이 마무리됩니다.,-,-
+ap04,3,금식을 며칠 더 연장한다,50,Piety+3 Authority+5 Health-3,버텨 낸 신도들이 신앙에 취해 눈을 빛냅니다.,FollowerFaith-10 Health-3,쓰러지는 신도가 나와 불만이 터집니다.
+ap05,1,가장 비싼 생선을 통째로 받는다,90,Health+3 Appetite+2 FollowerFaith+5,싱싱한 회 한 접시에 숙주의 기운이 돌아옵니다.,Appetite+1,상인들 사이에 시샘이 생깁니다.
+ap05,2,상인들에게 축복을 내리고 물건을 사 준다,90,Reputation+8 Followers+3 Offerings-10,시장 상인들이 신전 단골이 됩니다.,Offerings-10,흥정 끝에 서로 감정이 상합니다.
+ap05,3,봉헌을 사양한다,100,Integrity+1,상인들이 머쓱하게 물러납니다.,-,-
+ap06,1,신도들의 손으로 음식을 받아먹는다,90,Authority+10 FollowerFaith+15 Appetite+2 Lust+1,숟가락이 입술에 닿을 때마다 먹이는 이의 얼굴이 붉어집니다.,Reputation-2 Suspicion+5,기괴한 의식이라는 소문이 돕니다.
+ap06,2,한 사람에게만 허락한다,70,FollowerFaith+10 Lust+1 Appetite+1,간택받은 이가 떨리는 손으로 당신의 입에 과일을 넣습니다.,FollowerFaith-5,나머지 신도들이 시샘합니다.
+ap06,3,직접 먹겠다고 말한다,100,Temperance+1,신도들이 아쉬운 얼굴로 숟가락을 내려놓습니다.,-,-
+ap07,1,배가 터지도록 먹는다,100,Health+6 Mentality+3 Appetite+3,허기가 채워지자 그릇이 다시 단단해집니다.,-,-
+ap07,2,허기를 참고 기도한다,70,Piety+2 Communion+1 Health-2,허기가 기도를 날카롭게 벼립니다.,Health-3 Mentality-2,허기에 정신이 흐려집니다.
+ap07,3,신도들이 바친 음식만 조금 먹는다,100,Health+2 FollowerFaith+3,신도들의 정성이 몸을 덥힙니다.,-,-
+ap08,1,맨발로 함께 포도를 밟는다,70,FollowerFaith+20 Health+2 Appetite+2 Lust+1 Suspicion+5,붉은 즙이 튄 다리들이 엉켜 춤추고 축제는 밤까지 이어집니다.,Suspicion+5 Health-1,술에 취한 신도들이 거리로 쏟아져 나옵니다.
+ap08,2,첫 잔만 축복한다,90,FollowerFaith+10 Communion+1,신의 축복을 받은 첫 잔이 신도들 사이를 돕니다.,FollowerFaith-3,포도주가 시어서 분위기가 식습니다.
+ap08,3,축제를 조촐하게 줄인다,100,Temperance+1 Offerings+5,조용한 수확 기도로 마무리됩니다.,-,-
+ap09,1,제물을 받아 큰 잔치를 연다,90,FollowerFaith+15 Health+3 Appetite+2 Communion+1,제단에서 피어오른 연기 아래 신도들이 고기를 나눕니다.,Suspicion+5 Reputation-2,동물 학대라는 민원이 들어옵니다.
+ap09,2,송아지를 살려 신전에서 기른다,100,Charity+2 Reputation+5,꽃목걸이를 단 송아지가 신전의 마스코트가 됩니다.,-,-
+ap09,3,곡식 제물로 바꾸게 한다,100,Temperance+1 FollowerFaith+3,곡식 단이 제단을 채웁니다.,-,-
+ap10,1,부엌에 들어가 함께 과자를 먹는다,90,FollowerFaith+10 Mentality+4 Appetite+2,버터 냄새 속에서 신과 신도가 웃음을 나눕니다.,Appetite+1 Health-1,단것을 너무 먹어 이가 시큰거립니다.
+ap10,2,과자를 팔아 봉헌금으로 삼는다,90,Offerings+15 Followers+3,신의 과자가 동네에 소문이 납니다.,Offerings+3,팔리지 않은 과자가 쌓입니다.
+ap10,3,기도실까지 냄새가 나지 않게 한다,100,Piety+1 FollowerFaith-3,부엌 문이 닫히고 신도들이 시무룩해집니다.,-,-
+ap11,1,송로버섯 만찬을 즐긴다,90,Health+3 Mentality+4 Appetite+2 Greed+1,사향 같은 향이 숙주의 감각을 깊숙이 깨웁니다.,Appetite+1,맛은 좋았지만 너무 빨리 사라집니다.
+ap11,2,측근들과 나눠 먹는다,90,Authority+8 FollowerFaith+5,측근들이 신의 은총이라며 감격합니다.,FollowerFaith-3,몫이 작다는 불평이 나옵니다.
+ap11,3,팔아서 봉헌금으로 삼는다,100,Offerings+25,상자 하나가 금고를 두둑하게 합니다.,-,-
+ap12,1,도시에서 가장 비싼 연회장을 빌린다,70,Followers+10 Authority+10 Appetite+2 Offerings-40 Suspicion+8,샹들리에 아래 신도와 손님들이 신의 이름으로 잔을 듭니다.,Offerings-40 Reputation-2,호화 연회 기사가 사회면에 실립니다.
+ap12,2,신전 마당에서 뷔페를 연다,90,FollowerFaith+15 Followers+3 Offerings-15,마당 가득 웃음과 음식 냄새가 퍼집니다.,Offerings-15,갑자기 비가 내립니다.
+ap12,3,기념 예배만 드린다,100,Piety+1 FollowerFaith+5,경건한 예배로 하루를 마칩니다.,-,-
+ap13,1,남긴 음식을 나눠 준다,70,FollowerFaith+15 Followers+5 Appetite+1 Suspicion+5,신의 잔반을 받은 이들이 병이 나았다고 간증합니다.,Suspicion+8 Reputation-2,식중독 신고가 들어옵니다.
+ap13,2,일부러 많이 남겨 둔다,50,Followers+10 Appetite+2 Authority+5 Suspicion+8,식탁을 둘러싼 군중이 매 끼니 늘어납니다.,Reputation-5 Suspicion+10,기괴한 숭배라는 보도가 나갑니다.
+ap13,3,소문을 부정한다,100,Integrity+1 FollowerFaith-5,실망한 사람들이 흩어집니다.,-,-
+ap14,1,술판에 끼어 함께 노래한다,90,FollowerFaith+15 Mentality+4 Appetite+2 Suspicion+5,취한 신도들이 신을 어깨에 메고 마당을 돕니다.,Suspicion+8 Health-2,동네 사람들이 경찰을 부릅니다.
+ap14,2,창가에서 노래를 듣는다,100,Authority+5 Mentality+2,당신을 부르는 노랫소리에 숙주의 마음이 따뜻해집니다.,-,-
+ap14,3,술판을 끝내게 한다,90,Temperance+1 Reputation+5,마당이 조용해지고 이웃들이 안도합니다.,FollowerFaith-5,흥을 깨인 신도들이 투덜댑니다.
+ap15,1,금지된 열매를 베어 문다,70,Communion+2 Mentality+3 Appetite+2 Lust+2 Envy+8,붉은 즙이 턱을 타고 흐르는 순간 금기 너머의 신성이 열립니다.,Health-3 Envy+5,혀끝이 마비되고 다른 신들의 조소가 들리는 듯합니다.
+ap15,2,신도들 앞에서 나눠 먹는다,90,FollowerFaith+15 Appetite+1 Lust+1,금기를 함께 깬 신도들 사이에 비밀스러운 유대가 생깁니다.,FollowerFaith-3,맛이 기대에 못 미칩니다.
+ap15,3,제단에 봉인한다,100,Piety+1 Temperance+1,금지된 열매가 유리 함 속에서 붉게 빛납니다.,-,-
+am01,1,흑단 옥좌를 짓고 앉는다,90,Authority+20 FollowerFaith+10 Ambition+2 Offerings-25,옥좌에 앉는 순간 신전의 모든 시선이 아래에서 위로 향합니다.,Offerings-25 Suspicion+5,옥좌 사진이 교주 우상화 논란을 낳습니다.
+am01,2,의자 대신 계단 위 단을 쌓는다,100,Authority+10 Offerings-10,한 단 높아진 자리만으로도 충분한 위엄이 섭니다.,-,-
+am01,3,신도들과 같은 바닥에 앉는다,100,Charity+1 FollowerFaith+5 Authority-5,신도들이 친근함에 감동합니다.,-,-
+am02,1,선거를 돕고 대가를 약속받는다,70,Authority+15 Reputation+5 Ambition+2 Suspicion+5,당선 축하 자리에서 그가 당신에게 먼저 고개를 숙입니다.,Suspicion+10 Reputation-5,정교 유착 의혹이 보도됩니다.
+am02,2,조용히 표만 몰아 준다,90,Authority+8 Ambition+1,뒷문으로 들어온 약속이 장부에 적힙니다.,Suspicion+5,표 몰이 정황이 포착됩니다.
+am02,3,정치와 거리를 둔다,100,Integrity+2 Suspicion-3,교단이 정치색이 없다는 평을 받습니다.,-,-
+am03,1,행진과 함께 거창하게 기념한다,70,Followers+10 Authority+15 Ambition+2 Offerings-20 Suspicion+8,깃발이 거리를 메우고 당신의 얼굴이 하늘에 걸립니다.,Suspicion+10 Reputation-5,도로 점거로 과태료가 나옵니다.
+am03,2,신전 안에서만 축제를 연다,90,FollowerFaith+15 Ambition+1 Offerings-10,신도들이 당신의 생일을 신의 탄일이라 부릅니다.,Offerings-10,준비가 엉성해 분위기가 어수선합니다.
+am03,3,기념을 거절한다,100,Temperance+1 FollowerFaith-3,소박한 거절에 일부 신도가 실망합니다.,-,-
+am04,1,무릎 꿇은 그를 받아들여 흡수한다,70,Followers+12 Authority+15 Ambition+2 Envy+8,그의 신도들이 당신의 이름을 새로 배우며 고개를 숙입니다.,Envy+10 FollowerFaith-5,흡수당한 교단의 신이 분노한다는 소문이 돕니다.
+am04,2,동등한 연합을 맺는다,90,Followers+6 Reputation+5,두 교단이 손을 잡고 세를 넓힙니다.,Authority-5,주도권 다툼이 시작됩니다.
+am04,3,그를 돌려보낸다,100,Integrity+1,그는 다른 길을 찾아 떠납니다.,-,-
+am05,1,구름을 뚫는 거대 동상을 세운다,50,Authority+25 Followers+10 Ambition+3 Offerings-50 Envy+10 Suspicion+10,산 위의 동상이 도시 어디서나 보이며 사람들을 내려다봅니다.,Offerings-30 Suspicion+10,환경 훼손 논란으로 공사가 중단됩니다.
+am05,2,신전 마당에 등신대 동상을 세운다,90,Authority+10 Ambition+1 Offerings-15,등신대 동상 앞에서 신도들이 손을 모읍니다.,Offerings-15,조각가의 솜씨가 엉망입니다.
+am05,3,동상 대신 경전을 새긴다,100,Doctrine+10 Temperance+1,돌에 새긴 말씀이 신전을 지킵니다.,-,-
+am06,1,오체투지 예법을 정한다,90,Authority+20 FollowerFaith+8 Ambition+2 Suspicion+5,수백 명이 동시에 바닥에 엎드리는 소리가 천둥처럼 울립니다.,Reputation-2 Suspicion+5,굴종을 강요한다는 비판이 나옵니다.
+am06,2,가벼운 목례로 정한다,100,Authority+5 FollowerFaith+3,단정한 예법이 자리 잡습니다.,-,-
+am06,3,예법을 두지 않는다,100,Charity+1 Authority-5,자유로운 분위기에 신도들이 편안해합니다.,-,-
+am07,1,황금 시간대 인터뷰에 나선다,70,Followers+12 Authority+10 Ambition+2 Suspicion+10,카메라 앞의 당신에게서 빛이 난다는 시청자 반응이 쏟아집니다.,Reputation-7 Suspicion+10,편집된 장면이 조롱거리가 됩니다.
+am07,2,서면 인터뷰만 한다,90,Followers+5 Reputation+3,정제된 답변이 신비감을 지킵니다.,Followers+1,기사가 작게 실립니다.
+am07,3,출연을 거절한다,100,Suspicion-3 Temperance+1,신비는 지켜지지만 기회는 지나갑니다.,-,-
+am08,1,그의 군림을 내버려 둔다,90,Authority+10 Offerings+15 Ambition+1,그가 거둔 공물이 당신 앞에 쌓입니다.,FollowerFaith-10,그에게 짓눌린 신도들이 떠납니다.
+am08,2,모두 앞에서 그를 꺾는다,70,Authority+15 FollowerFaith+10 Ambition+1,무릎 꿇은 그를 본 신도들이 진짜 주인이 누구인지 깨닫습니다.,Authority-5 FollowerFaith-5,그가 반발하며 일부 신도를 데리고 나갑니다.
+am08,3,조용히 불러 타이른다,100,Charity+1 Authority+3,그는 고개를 숙이고 물러납니다.,-,-
+am09,1,도시 건설 계획을 공표한다,50,Followers+15 Authority+15 Ambition+3 Offerings-30 Suspicion+10,신도들이 땅을 사고 집을 지으며 당신의 도시를 꿈꿉니다.,Suspicion+15 Reputation-5,국가가 집단 이주 계획을 주시하기 시작합니다.
+am09,2,꿈으로만 남겨 둔다,100,FollowerFaith+8 Ambition+1,언젠가라는 말이 신도들을 설레게 합니다.,-,-
+am09,3,허황된 꿈이라 말린다,100,Temperance+1 FollowerFaith-3,신도들이 머쓱해합니다.,-,-
+am10,1,마을 전체를 받는다,70,Followers+15 Offerings+20 Authority+10 Ambition+2 Suspicion+10,마을 입구에 당신의 문장이 걸리고 주민들이 줄지어 입교합니다.,Suspicion+12 Reputation-5,마을 주민 일부가 반발해 언론에 제보합니다.
+am10,2,마을과 협약만 맺는다,90,Followers+6 Reputation+5,마을 축제에서 당신이 축복을 내립니다.,Followers+2,협약이 흐지부지됩니다.
+am10,3,인감을 돌려준다,100,Integrity+1 Suspicion-3,이장은 아쉬워하며 돌아갑니다.,-,-
+am11,1,가장 긴 존호를 받아들인다,90,Authority+15 FollowerFaith+10 Ambition+2 Envy+5,신도들이 존호를 외울 때마다 다른 신들의 심기가 불편해집니다.,Envy+5 Reputation-1,과대망상이라는 비웃음이 들립니다.
+am11,2,짧은 칭호만 받는다,100,Authority+5 FollowerFaith+5,간결한 칭호가 오히려 위엄 있게 들립니다.,-,-
+am11,3,이름으로만 불러 달라고 한다,100,Charity+1 Authority-3,친근한 호칭에 신도들이 가까워집니다.,-,-
+am12,1,후원을 받고 그를 후계 사제로 삼는다,70,Offerings+40 Authority+10 Ambition+2 Greed+1,묵직한 후원금이 매달 금고로 흘러듭니다.,FollowerFaith-10 Suspicion+5,돈으로 산 자리라며 신도들이 반발합니다.
+am12,2,후원만 받고 자리는 주지 않는다,50,Offerings+30 Ambition+1,회장은 불만스럽지만 후원을 끊지 못합니다.,Offerings+5 Reputation-2,회장이 화를 내며 후원을 줄입니다.
+am12,3,제안을 거절한다,100,Integrity+2,회장이 놀란 얼굴로 떠납니다.,-,-
+am13,1,말씀을 교단 법전으로 만든다,90,Doctrine+20 Authority+15 Ambition+2,두꺼운 법전이 제단 옆에 놓이고 신도들의 삶을 규율합니다.,Suspicion+5 FollowerFaith-5,엄격한 규율에 숨 막혀 하는 신도가 생깁니다.
+am13,2,지침 정도로만 정리한다,100,Doctrine+10,부드러운 지침이 신도들 사이에 퍼집니다.,-,-
+am13,3,말씀은 자유롭게 해석하라고 한다,100,Charity+1 Doctrine-5,다양한 해석이 꽃핍니다.,-,-
+am14,1,검은 양복의 경호대를 거느린다,90,Authority+15 Ambition+2 Offerings-20 Suspicion+5,당신이 걸을 때마다 검은 물결이 길을 엽니다.,Offerings-20 Suspicion+8,위압적인 행차가 사진에 찍힙니다.
+am14,2,신도 자원봉사자로 대신한다,100,FollowerFaith+8 Authority+5,충성스러운 신도들이 자랑스럽게 곁을 지킵니다.,-,-
+am14,3,경호를 두지 않는다,100,Charity+1,홀가분한 발걸음으로 거리를 걷습니다.,-,-
+am15,1,광장에 깃발을 꽂는다,50,Authority+20 Followers+10 Ambition+3 Suspicion+15,광장 한가운데서 당신의 깃발이 도시를 내려다봅니다.,Suspicion+15 Reputation-7,깃발이 철거되고 신도들이 연행됩니다.
+am15,2,허가를 받아 행사로 연다,90,Followers+5 Authority+8 Offerings-10,허가받은 행사가 무사히 끝납니다.,Offerings-10,허가가 늦어져 행사가 취소됩니다.
+am15,3,신전 마당에만 꽂는다,100,FollowerFaith+5,깃발이 신전 하늘에 펄럭입니다.,-,-
+hv01,1,반박 영상을 올린다,70,Followers+5 Reputation+5 Points+1,당신의 반박 영상이 더 많은 조회 수를 얻습니다.,Followers-3 Reputation-5,반박이 오히려 논란을 키웁니다.
+hv01,2,무시한다,100,Followers-2,몇몇 신도가 흔들리는 눈빛을 보입니다.,-,-
+hv01,3,그 사제의 꿈에 나타나 경고한다,50,Authority+10 Communion-2 Envy+5 Points+1,다음 설교에서 그 사제는 당신의 이름을 입에 올리지 못합니다.,Communion-2 Envy+8,꿈길이 막혀 기적이 허공에 흩어집니다.
+hv02,1,더 호화로운 잔치를 맞은편에 연다,90,Followers+8 FollowerFaith+5 Appetite+1 Offerings-20 Points+1,고기 굽는 냄새가 국솥 냄새를 덮고 사람들이 길을 건너옵니다.,Offerings-20,사람들은 공짜 국밥에 머뭅니다.
+hv02,2,급식소에 축복을 내려 흡수한다,50,Followers+10 Communion-1 Envy+5 Points+1,국솥에서 나온 국을 먹은 이들이 당신의 꿈을 꿉니다.,Communion-1 Envy+5,풍요의 신이 축복을 튕겨 냅니다.
+hv02,3,신경 쓰지 않는다,100,Followers-4,배고픈 신도 몇이 맞은편으로 건너갑니다.,-,-
+hv03,1,정적을 뚫고 소리 높여 기도한다,70,Communion+1 Piety+2 Points+1,당신의 목소리가 침묵을 찢고 접신이 다시 이어집니다.,Communion-1 Mentality-2,목소리가 메아리 없이 사라집니다.
+hv03,2,향락으로 감각을 깨운다,90,Communion+1 Health+2 Lust+1,뜨거운 감각이 차가운 정적을 밀어냅니다.,Mentality-1,감각은 깨어나지만 정적은 남습니다.
+hv03,3,기도를 잠시 멈춘다,100,Communion-1,엿보는 시선이 멀어질 때까지 숨을 죽입니다.,-,-
+hv04,1,전도지를 모아 공개적으로 태운다,70,FollowerFaith+10 Authority+5 Points+1,불타는 전도지 앞에서 신도들의 결속이 단단해집니다.,Reputation-8 Suspicion+5,분서 퍼포먼스라는 비난이 일어납니다.
+hv04,2,신도와 차분히 이야기한다,90,FollowerFaith+8 Charity+1,신도가 의심을 털어놓고 다시 웃습니다.,FollowerFaith-5,신도의 마음이 반쯤 떠나 있습니다.
+hv04,3,전도지 내용을 교리로 반박한다,70,Doctrine+10 Points+1,반박문이 신도들 사이에서 돌려 읽힙니다.,Doctrine-5,반박이 궁색해 보입니다.
+hv05,1,신전 문을 열고 축제 음악으로 맞선다,90,FollowerFaith+10 Lust+1 Points+1,북소리와 웃음이 붉은 깃발의 노래를 삼킵니다.,Suspicion+5,소음 경쟁에 이웃 민원이 들어옵니다.
+hv05,2,순례단에게 물과 음식을 내준다,90,Reputation+8 Charity+1 Followers+2,순례단 몇이 뒤돌아 당신을 바라봅니다.,Reputation-3,순례단이 음식을 짓밟고 지나갑니다.
+hv05,3,문을 닫고 지나가길 기다린다,100,FollowerFaith-3,노랫소리가 멀어지지만 찜찜함이 남습니다.,-,-
+hv06,1,종소리를 신의 박자로 바꾼다,50,FollowerFaith+15 Communion-1 Envy+5 Points+1,다음 날부터 종이 당신의 기도에 맞춰 울립니다.,Communion-1 FollowerFaith-5,종은 여전히 어긋나게 울립니다.
+hv06,2,불길함을 축복으로 해석한다,90,FollowerFaith+8 Doctrine+5,어긋난 종소리가 새 시대의 박자라는 말이 퍼집니다.,FollowerFaith-3,해석이 설득력을 얻지 못합니다.
+hv06,3,기도 시간을 옮긴다,100,FollowerFaith-2,종소리를 피해 새벽에 기도합니다.,-,-
+hv07,1,우리 쪽 수확제를 더 화려하게 연다,90,FollowerFaith+10 Followers+3 Appetite+1 Offerings-15 Points+1,신도들은 초대장을 버리고 당신의 잔칫상에 앉습니다.,Offerings-15,몇몇은 양쪽 잔치를 모두 다녀옵니다.
+hv07,2,초대에 응하는 신도를 막지 않는다,100,Followers-4 Charity+1,관대함은 칭찬받지만 돌아오지 않는 이도 있습니다.,-,-
+hv07,3,초대장을 거두어 들인다,70,FollowerFaith+5 Authority+5,신도들이 군말 없이 초대장을 내놓습니다.,FollowerFaith-5,강압적이라는 불만이 나옵니다.
+hv08,1,노인을 쫓아가 정체를 묻는다,50,Communion+2 Mentality+2 Points+1,노인은 웃으며 다른 신들이 당신을 지켜본다고 일러 줍니다.,Mentality-3,모퉁이를 돌자 노인은 사라지고 서늘함만 남습니다.
+hv08,2,문턱을 정화한다,90,Communion+1 Piety+1,향을 피우자 젖은 발자국이 말라 갑니다.,Mentality-1,발자국이 지워지지 않습니다.
+hv08,3,못 본 척한다,100,Mentality-1,찜찜한 기분이 며칠 이어집니다.,-,-
+hv09,1,단상에 올라 정면으로 토론한다,70,Doctrine+15 FollowerFaith+10 Points+1,당신의 말이 끝나자 객석이 일어나 박수를 칩니다.,Doctrine-15 FollowerFaith-10,모순을 찔려 말문이 막힙니다.
+hv09,2,토론 도중 작은 기적을 보인다,90,FollowerFaith+15 Communion-2 Suspicion+8 Points+1,촛불이 저절로 타오르자 상대가 말을 잃습니다.,Communion-2 Suspicion+10,속임수라며 상대가 몰아붙입니다.
+hv09,3,토론을 거절한다,100,Doctrine-5 FollowerFaith-5,도망쳤다는 말이 돕니다.,-,-
+hv10,1,원전보다 앞선 계시라고 반박한다,70,Doctrine+10 Authority+5 Points+1,베낀 것이 아니라 그들이 훔쳐 간 것이라는 말이 설득력을 얻습니다.,Doctrine-10 Reputation-5,반박이 궁색하다는 평가를 받습니다.
+hv10,2,잡지사를 고소한다,50,Reputation+10 Offerings-15 Points+1,정정 보도가 실립니다.,Offerings-20 Reputation-5,소송이 길어지며 기사가 더 퍼집니다.
+hv10,3,모든 신은 하나라며 넘어간다,90,Doctrine-5 Charity+1,넉넉한 태도에 일부 신도가 고개를 끄덕입니다.,Doctrine-10,교리의 독창성이 무너졌다는 말이 돕니다.
+hv11,1,수도사들에게 연회 음식을 보낸다,70,Followers+3 Appetite+1 Lust+1 Points+1,하얀 천을 내린 수도사 하나가 처음으로 웃습니다.,FollowerFaith-3,수도사들이 음식을 외면합니다.
+hv11,2,신도들에게 노래로 맞서게 한다,90,FollowerFaith+10 Communion+1 Points+1,노랫소리가 침묵을 밀어내고 신전이 다시 숨 쉽니다.,Suspicion+5,소음 신고가 들어옵니다.
+hv11,3,그대로 둔다,100,Communion-1 FollowerFaith-3,무거운 침묵이 신전까지 스며듭니다.,-,-
+hv12,1,반박서를 써서 낸다,70,Doctrine+15 Points+1,반박서가 그 책 옆에 나란히 놓입니다.,Doctrine-5 Mentality-2,반박서가 팔리지 않습니다.
+hv12,2,모순이야말로 신비라고 설교한다,90,FollowerFaith+10 Doctrine+5 Points+1,신도들은 모순을 신의 깊이로 받아들입니다.,FollowerFaith-5,궤변이라는 말이 나옵니다.
+hv12,3,신도들이 그 책을 읽지 못하게 한다,50,Authority+10 FollowerFaith+5,금서가 된 책은 오히려 신비를 잃습니다.,Suspicion+5 FollowerFaith-8,금지할수록 몰래 읽는 신도가 늘어납니다.
+hv13,1,강연장 앞에서 향연을 연다,70,Followers+8 FollowerFaith+8 Lust+1 Appetite+1 Offerings-15 Points+1,금욕 강연을 듣던 사람들이 하나둘 향연의 냄새를 따라 나옵니다.,Suspicion+8 Offerings-15,도발적이라는 비난과 함께 경찰이 출동합니다.
+hv13,2,쾌락이 곧 은총이라는 설교로 맞선다,90,Doctrine+10 FollowerFaith+5 Points+1,신도들은 죄책감 없이 웃을 수 있게 되었다며 기뻐합니다.,Doctrine-5,설교가 변명처럼 들립니다.
+hv13,3,당분간 향락을 자제한다,100,Temperance+2 Health-2,그릇이 메말라 가는 것이 느껴집니다.,-,-
+hv14,1,당신이 직접 해석을 못 박는다,90,Doctrine+10 Authority+10 Points+1,신의 해석 앞에서 다툼이 멈춥니다.,FollowerFaith-5,패배한 쪽 신도들이 서운해합니다.
+hv14,2,두 해석 모두 옳다고 말한다,70,FollowerFaith+10 Charity+1 Points+1,양쪽이 서로를 끌어안습니다.,Doctrine-10,교리가 흐려졌다며 정광교가 비웃습니다.
+hv14,3,다툼을 내버려 둔다,100,Followers-4 Doctrine-5,다툼에 지친 신도들이 정광교로 떠납니다.,-,-
+hv15,1,결투를 받아들여 기적으로 맞선다,50,Authority+20 FollowerFaith+15 Communion-3 Health-3 Envy+8 Points+1,무사승의 검이 당신 앞에서 녹아내립니다.,Health-6 Communion-3,검이 그릇의 어깨를 스치고 피가 흐릅니다.
+hv15,2,대리인을 내세운다,70,Authority+5 FollowerFaith+5 Points+1,신도 대표가 버텨 내자 무사승이 물러납니다.,FollowerFaith-8,대리인이 쓰러지고 신도들이 동요합니다.
+hv15,3,편지를 무시한다,100,Authority-5,겁쟁이 신이라는 소문이 돕니다.,-,-
+hv16,1,문답집에 답하는 해설서를 낸다,70,Doctrine+15 FollowerFaith+5 Points+1,해설서를 읽은 신도들이 오히려 신앙을 다집니다.,Doctrine-5,해설서가 너무 어렵다는 평을 받습니다.
+hv16,2,가방을 뒤진 신도를 꾸짖는다,50,Authority+10 FollowerFaith+5,신도들이 경각심을 갖습니다.,FollowerFaith-10,의심받은 신도가 상처받고 떠납니다.
+hv16,3,책을 읽고 와서 질문하라고 한다,90,Doctrine+8 Charity+1 Points+1,질문에 답할수록 교리가 단단해집니다.,Doctrine-5,답하지 못한 질문이 쌓입니다.
+hv17,1,더 많은 쌀과 일자리를 약속한다,70,Followers+3 FollowerFaith+10 Offerings-25 Points+1,짐을 싸던 신도들이 다시 짐을 풉니다.,Offerings-25 Followers-5,약속을 지킬 돈이 모자랍니다.
+hv17,2,떠나려는 이들을 위한 향연을 연다,90,FollowerFaith+15 Lust+1 Appetite+1 Offerings-15 Points+1,마지막이라던 향연에서 그들은 떠나지 않겠다고 맹세합니다.,Offerings-15 Followers-3,향연이 끝나자 그들은 떠납니다.
+hv17,3,떠날 사람은 떠나라고 한다,100,Followers-8 Authority+5,남은 신도들의 눈빛은 더 단단해졌습니다.,-,-
+hv18,1,신도 집마다 축복의 부적을 붙인다,90,FollowerFaith+10 Communion-1 Points+1,부적이 붙은 문 앞에서 전도단이 발길을 돌립니다.,Communion-1 Followers-3,전도단이 부적을 떼어 냅니다.
+hv18,2,전도단을 신전으로 초대한다,50,Followers+6 Lust+1 Points+1,향연에 취한 전도단원 몇이 돌아가지 않습니다.,Followers-5 Reputation-5,전도단이 신전 안을 촬영해 갑니다.
+hv18,3,신도들에게 문을 열어 주지 말라고 한다,100,Followers-4 Authority+3,굳게 닫힌 문 너머로 전단이 쌓입니다.,-,-
+hv19,1,그를 찾아가 마지막 밤을 함께 보낸다,50,Followers+3 FollowerFaith+10 Lust+2 Health+2 Points+1,새벽에 그는 세례 증서를 찢고 당신의 발치에 엎드립니다.,FollowerFaith-10 Suspicion+5,그는 당신을 밀어내고 정광교에 모든 것을 털어놓습니다.
+hv19,2,그의 배신을 공개적으로 저주한다,70,Authority+15 FollowerFaith+5,신도들이 배신의 대가를 똑똑히 봅니다.,FollowerFaith-10,잔인하다며 신도들이 겁에 질립니다.
+hv19,3,그의 선택을 축복해 준다,100,Charity+2 Followers-3,넉넉한 신이라는 평이 남습니다.,-,-
+hv20,1,돌아온 이들의 침묵을 향락으로 깨운다,70,FollowerFaith+15 Communion+1 Lust+2 Points+1,뜨거운 밤이 지나자 그들의 입에서 다시 당신의 이름이 흘러나옵니다.,Suspicion+5 FollowerFaith-5,그들은 끝내 입을 열지 않습니다.
+hv20,2,접신으로 그들의 꿈을 되찾는다,50,FollowerFaith+20 Communion-2 Points+1,당신의 목소리가 그들의 꿈속 침묵을 깨뜨립니다.,Communion-2 Mentality-2,차가운 침묵이 기적을 삼킵니다.
+hv20,3,수련 참가를 금지한다,100,Authority+5 Followers-3,금지에 반발한 몇몇이 아예 떠납니다.,-,-
+hv21,1,신전에서 더 즐거운 청년 모임을 연다,90,Followers+5 FollowerFaith+8 Offerings-15 Points+1,청년들이 도장 대신 신전 마당에 모입니다.,Offerings-15,청년들이 금세 지루해합니다.
+hv21,2,부모들을 모아 축복으로 안심시킨다,90,FollowerFaith+10 Charity+1,부모들의 얼굴에 안도가 돌아옵니다.,FollowerFaith-3,불안은 쉽게 가라앉지 않습니다.
+hv21,3,도장 앞에서 기적으로 위협한다,50,Authority+15 Communion-2 Suspicion+10 Points+1,도장 간판이 한밤중에 쪼개집니다.,Suspicion+12 Communion-2,경찰이 기물 파손을 수사합니다.
+hv22,1,옆 건물보다 높은 탑을 올린다,70,Authority+15 Followers+5 Offerings-30 Points+1,당신의 탑 그림자가 낟알 간판을 덮습니다.,Offerings-30 Suspicion+5,건축 허가 문제가 생깁니다.
+hv22,2,이웃의 신도들을 향연에 초대한다,70,Followers+8 Lust+1 Appetite+1 Points+1,낟알 간판 아래 사람들이 당신의 향연 소식을 속삭입니다.,Followers-3,초대가 무시당합니다.
+hv22,3,신경 쓰지 않는다,100,Followers-5,이웃의 쌀자루를 따라 신도 몇이 넘어갑니다.,-,-
+hv23,1,향락에는 죄가 없다고 선언한다,90,FollowerFaith+15 Doctrine+10 Lust+1 Points+1,죄책감을 벗은 신도들이 오히려 더 깊이 당신을 섬깁니다.,FollowerFaith-5,불안한 신도들은 여전히 흔들립니다.
+hv23,2,우리만의 정화 의식을 만든다,70,FollowerFaith+10 Communion+1 Offerings-10 Points+1,우유와 꿀로 씻는 의식이 신도들을 다시 묶습니다.,Offerings-10 FollowerFaith-3,의식이 어설퍼 보입니다.
+hv23,3,흔들리는 신도를 내버려 둔다,100,Followers-6,몇몇이 정광교 세례장으로 향합니다.,-,-
+hv24,1,신도 스스로 선택하게 한다,70,FollowerFaith+15 Reputation+5 Points+1,신도가 가족 앞에서 당신을 택하겠다고 말합니다.,Followers-3 Reputation-5,신도가 울며 가족을 따라갑니다.
+hv24,2,성직자와 가족을 향연에 앉힌다,50,Followers+5 Lust+1 Appetite+1 Points+1,술잔이 돌자 가족마저 당신의 축복을 청합니다.,Suspicion+10 Reputation-10,세뇌라며 가족이 언론에 제보합니다.
+hv24,3,문을 걸어 잠근다,90,FollowerFaith+5 Suspicion+8,신도는 남지만 감금 의혹이 생깁니다.,Suspicion+12,경찰이 출동합니다.
+hv25,1,선고를 영광의 훈장이라 선포한다,70,FollowerFaith+20 Authority+10 Points+1,박해받는 신이라는 이야기가 신도들을 불태웁니다.,FollowerFaith-10,겁먹은 신도들이 흔들립니다.
+hv25,2,공의회에 거대한 기적으로 답한다,50,FollowerFaith+25 Followers+8 Communion-3 Suspicion+12 Envy+10 Points+1,선고문이 실린 신문들이 한날한시에 불타오릅니다.,Communion-3 Suspicion+12,기적이 실패해 조롱만 남습니다.
+hv25,3,조용히 몸을 낮춘다,100,Envy-5 Followers-5,한동안 다른 신들의 시선이 누그러집니다.,-,-
+hv26,1,손가락질받은 신도를 품에 안고 위로한다,90,FollowerFaith+15 Charity+1 Points+1,당신의 품에서 신도의 울음이 웃음으로 바뀝니다.,FollowerFaith-5,상처가 쉽게 아물지 않습니다.
+hv26,2,신도들에게 황금 표식을 나눠 준다,70,FollowerFaith+15 Authority+5 Offerings-20 Points+1,황금 표식을 단 신도들이 고개를 들고 거리를 걷습니다.,Offerings-20 Suspicion+5,표식이 표적이 됩니다.
+hv26,3,외출을 자제하라고 한다,100,FollowerFaith-5,신도들의 세상이 신전 안으로 좁아집니다.,-,-
+hv27,1,그 전 신도를 다시 불러들인다,50,FollowerFaith+15 Lust+2 Points+1,그는 다음 집회에서 모든 증언을 번복합니다.,Suspicion+12 Reputation-10,회유 시도까지 폭로됩니다.
+hv27,2,향락은 축복이었다고 맞불 집회를 연다,70,FollowerFaith+15 Followers+5 Doctrine+5 Points+1,맞불 집회의 신도들이 행복한 얼굴로 간증합니다.,Reputation-10 Suspicion+8,집회가 충돌로 번집니다.
+hv27,3,침묵한다,100,Reputation-8 FollowerFaith-5,증언만 남아 퍼집니다.,-,-
+hv28,1,신학생들을 몰래 초대한다,70,Followers+5 Doctrine+10 Lust+1 Points+1,반면교사를 배우던 신학생 몇이 당신의 진짜 얼굴에 매혹됩니다.,Suspicion+5,초대 사실이 신학교에 알려집니다.
+hv28,2,거꾸로 찍힌 문장을 새 상징으로 삼는다,90,Doctrine+10 Authority+5 Points+1,뒤집힌 문장이 저항의 상징이 됩니다.,Doctrine-3,의미가 잘 전달되지 않습니다.
+hv28,3,무시한다,100,Doctrine-5,교리의 평판이 조금씩 깎입니다.,-,-
+hv29,1,신도들과 한 방에서 잠들어 꿈을 나눈다,70,FollowerFaith+20 Communion-1 Lust+1 Points+1,살을 맞댄 채 잠든 신도들의 꿈에 다시 온기가 돕니다.,Communion-2 Suspicion+5,꿈은 돌아오지 않고 소문만 납니다.
+hv29,2,강한 접신으로 저주를 걷어 낸다,50,FollowerFaith+15 Communion-3 Envy+8 Points+1,차가운 장막이 찢어지고 신도들이 다시 꿈을 꿉니다.,Communion-3 Health-3,저주의 반동이 그릇을 때립니다.
+hv29,3,잠들기 전 기도문을 바꾼다,90,FollowerFaith+5 Doctrine+5,새 기도문이 조금은 효과를 냅니다.,FollowerFaith-3,아무 변화가 없습니다.
+hv30,1,불길 속에서도 타지 않는 기적을 보인다,50,FollowerFaith+25 Followers+10 Communion-3 Envy+10 Suspicion+10 Points+1,불길 속에서 교리서 한 권이 멀쩡히 떠오릅니다.,Communion-3 FollowerFaith-10,모든 책이 재가 됩니다.
+hv30,2,같은 날 경전 낭독회를 연다,90,Doctrine+10 FollowerFaith+10 Points+1,불타는 광장과 달리 신전에는 말씀이 울려 퍼집니다.,Doctrine-5,낭독회 참석자가 적습니다.
+hv30,3,책을 다시 찍어 무료로 뿌린다,70,Followers+5 Doctrine+5 Offerings-20,불태운 만큼 더 많은 책이 거리로 나갑니다.,Offerings-20,인쇄소가 거래를 거절합니다.
+hv31,1,잊힌 신의 교단을 흡수한다,70,Followers+8 Communion+2 Envy+5 Points+1,잊힌 신의 마지막 신도들이 당신에게 오래된 비밀을 바칩니다.,Envy+8 Suspicion+5,이단끼리 뭉쳤다는 비난이 커집니다.
+hv31,2,동등한 동맹을 맺는다,90,Reputation+5 FollowerFaith+5 Points+1,함께 박해받는 이들끼리 연대가 생깁니다.,Envy+5,동맹이 오히려 표적이 됩니다.
+hv31,3,거절한다,100,Envy-3,다른 신들의 시선을 피합니다.,-,-
+hv32,1,질문을 정면으로 받아 답한다,70,FollowerFaith+15 Doctrine+10 Points+1,이단이라 불려도 행복하다면 그것이 구원이라는 답에 신도들이 고개를 끄덕입니다.,FollowerFaith-10,답이 흔들리는 마음을 붙잡지 못합니다.
+hv32,2,질문하는 신도를 침소로 부른다,70,FollowerFaith+15 Lust+2 Health+2 Points+1,아침에 그는 더 이상 질문하지 않습니다.,Suspicion+8 FollowerFaith-5,그가 밤의 일을 다른 신도들에게 털어놓습니다.
+hv32,3,질문을 금지한다,90,Authority+10 FollowerFaith-5,입은 다물었지만 눈빛은 흔들립니다.,Followers-5,금지에 반발한 신도들이 떠납니다.
+hv33,1,신전 지붕에 올라 신의 형상을 드러낸다,50,FollowerFaith+30 Followers+10 Communion-4 Health-4 Envy+10 Suspicion+15 Points+1,빛으로 타오르는 당신 앞에서 새 떼가 흩어지고 도시가 숨을 죽입니다.,Communion-4 Health-5,빛이 흔들리며 그릇이 비명을 지릅니다.
+hv33,2,신도들을 모아 밤샘 향연으로 버틴다,70,FollowerFaith+15 Communion+1 Lust+2 Offerings-20 Points+1,뜨거운 숨결이 신전을 감싸 붉은 하늘을 밀어냅니다.,Offerings-20 FollowerFaith-5,새 떼가 지붕을 쪼아 댑니다.
+hv33,3,신전 문을 닫고 숨는다,100,Followers-8 Communion-1,하늘이 평소 색으로 돌아오기까지 오래 걸립니다.,-,-
+hv34,1,거울 속 칼날을 맨손으로 붙잡는다,50,Authority+20 Health-3 Communion-2 Points+1,손바닥의 피가 거울에 닿자 붉은 선이 사라집니다.,Health-8 Mentality-3,칼날의 환영이 그릇에 진짜 상처를 남깁니다.
+hv34,2,향락으로 그릇의 기운을 끌어올린다,90,Health+4 Mentality+2 Lust+2 Points+1,뜨거워진 몸이 붉은 환영을 튕겨 냅니다.,Health-3,환영이 몸의 열기를 빨아들입니다.
+hv34,3,거울을 모두 깨뜨린다,100,Mentality-2 Health-1,환영은 사라졌지만 잠을 이루지 못합니다.,-,-
+hv35,1,그릇과 신을 다시 묶는 금단의 의식을 치른다,50,Communion+3 Lust+2 Mentality+2 Envy+8 Points+1,살과 신성이 뒤엉킨 밤이 지나자 끈이 이전보다 단단해집니다.,Communion-3 Mentality-4,의식이 중단되고 끈이 더 가늘어집니다.
+hv35,2,접신 기도를 멈추지 않는다,70,Communion+1 Piety+2 Points+1,차가운 손끝이 서서히 따뜻해집니다.,Communion-2 Health-2,기도할수록 몸이 얼어붙습니다.
+hv35,3,끈이 약해지는 것을 받아들인다,100,Communion-2,기적의 힘이 한동안 약해집니다.,-,-
+hv36,1,봉헌금으로 신도들의 곳간을 채운다,90,FollowerFaith+15 Charity+1 Offerings-35 Points+1,텅 빈 곳간에 당신이 보낸 쌀이 쌓입니다.,Offerings-35 FollowerFaith-5,모두에게 나누기엔 부족합니다.
+hv36,2,시든 밭에 풍요의 기적을 내린다,50,FollowerFaith+25 Followers+5 Communion-3 Envy+10 Points+1,다음 날 아침 시든 줄기에서 황금빛 열매가 맺힙니다.,Communion-3 FollowerFaith-10,기적이 풍요의 신에게 가로막힙니다.
+hv36,3,신도들에게 견디라고 한다,100,FollowerFaith-10 Followers-5,배고픈 신도들의 원망이 쌓입니다.,-,-
+hv37,1,신도들의 귀에 직접 속삭여 진실을 덮어쓴다,50,FollowerFaith+20 Communion-3 Lust+1 Points+1,당신의 숨결이 닿은 귀에서 거짓 환청이 지워집니다.,Communion-3 FollowerFaith-10,환청과 속삭임이 뒤섞여 혼란이 커집니다.
+hv37,2,환청을 새 계시로 재해석한다,70,Doctrine+15 FollowerFaith+5 Points+1,거짓이라던 말이 더 깊은 진실의 일부가 됩니다.,Doctrine-10,해석이 신도들을 더 혼란스럽게 합니다.
+hv37,3,신도들을 쉬게 한다,100,FollowerFaith-8 Mentality-2,환청은 조금씩 잦아들지만 상처가 남습니다.,-,-
+hv38,1,네 교단을 동시에 상대하는 기적을 준비한다,35,FollowerFaith+30 Followers+15 Authority+20 Communion-5 Health-5 Envy+15 Points+1,네 방향의 깃발이 한꺼번에 꺾이고 도시가 당신의 이름을 외칩니다.,Communion-5 Health-6 FollowerFaith-15,기적이 무너지며 그릇이 쓰러집니다.
+hv38,2,한 교단씩 향연으로 회유한다,70,Followers+8 Lust+2 Appetite+1 Offerings-30 Points+1,가장 약한 교단의 깃발이 슬그머니 내려갑니다.,Offerings-30 Suspicion+8,회유 시도가 들통납니다.
+hv38,3,신도들과 함께 버틴다,90,FollowerFaith+10 Points+1,포위 속에서도 신도들은 당신 곁을 지킵니다.,Followers-8 FollowerFaith-5,포위가 길어지며 신도들이 지쳐 갑니다.
+hv39,1,금빛 눈의 사자와 손을 잡는다,70,Envy-15 Communion+2 Points+1,다른 신 하나가 당신 편에 서자 포위가 느슨해집니다.,Envy+10 Mentality-3,사자는 배신자였고 당신의 약점을 가져갑니다.
+hv39,2,사자를 유혹해 정체를 캐낸다,50,Envy-10 Lust+2 Communion+1 Points+1,침소에서 사자는 신들의 회합 계획을 모두 털어놓습니다.,Envy+10,사자가 당신의 손길을 비웃으며 사라집니다.
+hv39,3,사자를 돌려보낸다,100,Integrity+1,금빛 눈이 어둠 속으로 사라집니다.,-,-
+hv40,1,심판대에 당당히 선다,50,Envy-20 Authority+20 Doctrine+15 Points+1,당신의 변론이 끝나자 빈 의자 몇이 고개를 끄덕이듯 흔들립니다.,Envy+15 Communion-3,신들의 판결이 당신을 짓누릅니다.
+hv40,2,심판대에 향연을 차려 신들을 취하게 한다,35,Envy-25 Communion+2 Lust+2 Appetite+2 Points+1,원탁 위의 신들이 술잔을 들고 당신의 이름으로 건배합니다.,Envy+20 Health-4,신들이 모욕이라 여기며 분노합니다.
+hv40,3,심판을 거부한다,100,Envy+10 Authority+5,거부한 대가로 신들의 압박이 더 거세집니다.,-,-
+ea01,1,커뮤니티 앞에서 공개 치유를 한다,70,Reputation+10 Followers+5 Communion-2 Points+1,병이 나은 노인의 영상이 그 글을 덮어 버립니다.,Communion-2 Reputation-8,긴장한 탓에 치유가 실패합니다.
+ea01,2,신도들에게 반박 댓글을 달게 한다,90,Reputation+3 Suspicion+3,댓글 싸움 끝에 글이 묻힙니다.,Reputation-5,조직적 댓글이라는 말이 나옵니다.
+ea01,3,무시한다,100,Reputation-3,글은 며칠 뒤 잊힙니다.,-,-
+ea02,1,그 소리는 찬송이었다고 해명한다,90,Reputation+5 Points+1,미용실 아주머니들이 고개를 끄덕입니다.,Reputation-3,해명이 오히려 상상력을 자극합니다.
+ea02,2,아주머니들을 향연에 초대한다,70,Reputation+8 Followers+3 Appetite+1 Points+1,한 접시 먹고 간 아주머니들이 이제는 당신 편을 듭니다.,Suspicion+5,초대가 새로운 소문거리가 됩니다.
+ea02,3,밤 의식을 잠시 줄인다,100,Suspicion-5 FollowerFaith-5,조용한 밤이 이어지지만 신도들이 아쉬워합니다.,-,-
+ea03,1,그 신도에게 진짜 병을 고쳐 보이게 한다,50,Reputation+12 FollowerFaith+10 Communion-2 Points+1,묵은 지병이 사라지자 소문이 감탄으로 바뀝니다.,Communion-2 Reputation-10,병이 낫지 않아 소문이 굳어집니다.
+ea03,2,신도의 신앙이 병을 이겼다고 말한다,90,FollowerFaith+5 Reputation+3,모호한 말이 소문을 흐려 놓습니다.,Reputation-5,궁색한 변명으로 들립니다.
+ea03,3,그 신도를 지방으로 보낸다,100,Suspicion+3 Reputation-3,사람은 사라졌지만 소문은 남습니다.,-,-
+ea04,1,그를 신전 안으로 정중히 초대한다,70,Reputation+8 Points+1,카메라에 담긴 소박한 예배가 오히려 호감을 삽니다.,Suspicion+8,편집된 영상이 수상하게 보입니다.
+ea04,2,그의 카메라 앞에서 작은 기적을 보인다,50,Followers+10 Reputation+5 Communion-2 Suspicion+5 Points+1,조회 수 백만의 영상이 신도들을 불러 모읍니다.,Communion-2 Suspicion+10,조작 영상이라는 해명 요구가 빗발칩니다.
+ea04,3,신도들을 시켜 쫓아낸다,90,Authority+3 Suspicion+5,그는 쫓겨나며 협박당했다고 외칩니다.,Suspicion+10 Reputation-5,몸싸움 장면이 찍힙니다.
+ea05,1,방음 공사와 함께 선물을 보낸다,90,Reputation+5 Offerings-15 Points+1,세입자가 민원을 취소합니다.,Offerings-15,선물이 뇌물로 오해받습니다.
+ea05,2,세입자를 축복하며 설득한다,50,Followers+2 Reputation+5 Lust+1 Points+1,늦은 밤의 대화 끝에 그는 다음 의식에 오겠다고 합니다.,Suspicion+5,설득이 위협으로 받아들여집니다.
+ea05,3,그냥 민원을 받는다,100,Reputation-5 Suspicion+3,구청에서 경고장이 날아옵니다.,-,-
+ea06,1,변호사를 선임해 고소한다,70,Reputation+10 Offerings-20 Points+1,유포자가 사과문을 올립니다.,Offerings-20 Reputation-3,수사가 지지부진합니다.
+ea06,2,사진이 조작이라는 증거를 공개한다,90,Reputation+8 Points+1,조작 흔적이 드러나 소문이 힘을 잃습니다.,Reputation-3,증거가 충분하지 않습니다.
+ea06,3,과거 따위는 없다고 웃어넘긴다,90,Authority+5 Reputation+2,신은 과거가 없다는 말에 신도들이 환호합니다.,Reputation-5,오만하다는 평을 듣습니다.
+ea07,1,택시 기사들에게 무료 음료를 돌린다,90,Reputation+5 Offerings-5 Charity+1,기사들의 표정이 조금 누그러집니다.,Offerings-5,음료를 받고도 혀를 찹니다.
+ea07,2,그 기사의 택시를 기적으로 멈춰 세운다,50,Authority+10 Communion-1 Suspicion+8,엔진이 멎은 택시 안에서 기사가 성호를 긋습니다.,Suspicion+10 Communion-1,우연이라며 기사가 웃고 지나갑니다.
+ea07,3,신경 쓰지 않는다,100,Reputation-2,침 자국이 신전 앞에 마릅니다.,-,-
+ea08,1,신도를 교단 사업장에 채용한다,90,FollowerFaith+10 Offerings-10,신도가 교단에서 새 삶을 시작합니다.,Offerings-10,교단 사업장 일이 맞지 않습니다.
+ea08,2,동료들을 향연에 초대하게 한다,50,Followers+4 Reputation+5 Appetite+1 Points+1,술잔이 오간 뒤 동료들이 신도를 다르게 봅니다.,Reputation-5 Suspicion+5,동료들이 향연 이야기를 회사에 퍼뜨립니다.
+ea08,3,견디라고 축복한다,100,FollowerFaith+3 Patience+1,신도가 이를 악물고 출근합니다.,-,-
+ea09,1,기자를 만나 소박한 일상을 보여 준다,70,Reputation+10 Suspicion-5 Points+1,기사는 생각보다 담담하게 나갑니다.,Reputation-8 Suspicion+5,기자가 숨겨 둔 황금 욕조를 찾아냅니다.
+ea09,2,광고비로 신문사를 달랜다,90,Suspicion-8 Offerings-25 Points+1,기획 기사가 조용히 무기한 연기됩니다.,Offerings-25 Suspicion+5,광고 제안 자체가 기사화됩니다.
+ea09,3,신도들에게 입단속을 시킨다,90,Suspicion+3,기사는 나가지만 증언이 빈약합니다.,Reputation-8 Suspicion+5,입단속 정황까지 기사에 실립니다.
+ea10,1,카메라를 돌려주고 정중히 내보낸다,90,Reputation+5 Points+1,제작진은 예상과 다른 대우에 당황합니다.,Suspicion+5,화면은 이미 송출되었습니다.
+ea10,2,그를 향연 자리에 앉힌다,50,Reputation+8 Lust+1 Appetite+1 Points+1,밤새 마신 그는 방송에서 당신을 신비롭다고만 말합니다.,Suspicion+12 Reputation-10,향연 장면이 그대로 방송됩니다.
+ea10,3,카메라를 압수한다,70,Suspicion+3 Authority+3,영상은 사라졌지만 감정은 남습니다.,Suspicion+12,기물 탈취로 고소당합니다.
+ea11,1,의사 앞에서 치유를 공개 검증한다,50,Reputation+15 Followers+8 Communion-3 Points+1,검사지의 수치가 바뀌는 것을 본 의사가 말을 잃습니다.,Communion-3 Reputation-15,검증에 실패해 조롱거리가 됩니다.
+ea11,2,병원 치료와 함께하라고 공지한다,90,Reputation+8 Suspicion-5 Points+1,교단이 합리적이라는 평을 얻습니다.,FollowerFaith-5,기적을 못 믿느냐며 신도들이 실망합니다.
+ea11,3,반박 성명을 낸다,70,FollowerFaith+5 Reputation+3,신도들은 결집하지만 여론은 반반입니다.,Reputation-8,성명이 비웃음을 삽니다.
+ea12,1,실루엣의 주인을 직접 밝힌다,50,Followers+8 Lust+2 Authority+5 Suspicion+8,당당한 고백에 오히려 매혹되는 사람들이 생깁니다.,Reputation-15 Suspicion+10,스캔들이 일주일 내내 이어집니다.
+ea12,2,매체를 설득해 기사를 막는다,70,Suspicion-5 Offerings-25 Points+1,기사가 조용히 내려갑니다.,Offerings-25 Suspicion+8,막으려 한 사실까지 보도됩니다.
+ea12,3,사생활이라며 대응하지 않는다,100,Reputation-5 Suspicion+5,기사는 나가고 사람들은 수군거립니다.,-,-
+ea13,1,그 전직 신도를 다시 품는다,50,Reputation+8 Lust+1 FollowerFaith+5 Points+1,그는 다음 방송에서 자신이 오해했다고 말합니다.,Suspicion+12 Reputation-10,회유 시도가 녹취로 공개됩니다.
+ea13,2,기적을 다시 보여 주며 반박한다,70,Reputation+10 Communion-2 Suspicion+5 Points+1,생중계 기적에 그의 주장이 힘을 잃습니다.,Communion-2 Reputation-10,중계 사고로 기적이 끊깁니다.
+ea13,3,법적 대응을 예고한다,90,Reputation+3 Offerings-10,그는 더 이상 방송에 나오지 않습니다.,Reputation-5,입막음이라는 비난을 받습니다.
+ea14,1,기자회견을 열어 정면 돌파한다,50,Reputation+12 Followers+5 Points+1,당신의 말과 눈빛에 기자들이 받아 적기만 합니다.,Reputation-12 Suspicion+8,말실수가 새 검색어가 됩니다.
+ea14,2,신도들에게 휴대폰을 끄고 향연을 열게 한다,90,FollowerFaith+15 Lust+1 Appetite+1,바깥의 소란을 잊은 신도들이 당신에게 더 매달립니다.,Suspicion+5,고립을 조장한다는 비판을 받습니다.
+ea14,3,검색어가 내려갈 때까지 기다린다,100,Reputation-5,하루 이틀 지나 검색어가 내려갑니다.,-,-
+ea15,1,인터뷰에 응해 매혹으로 맞선다,50,Reputation+12 Followers+8 Lust+1 Points+1,날카롭던 기자의 질문이 점점 부드러워집니다.,Reputation-12 Suspicion+10,기자가 함정 질문으로 당신을 무너뜨립니다.
+ea15,2,측근을 대신 내보낸다,70,Reputation+5,측근이 무난하게 인터뷰를 마칩니다.,Reputation-8,측근이 말실수를 합니다.
+ea15,3,거절한다,100,Suspicion+3,거절 사실이 기사 한 줄로 나갑니다.,-,-
+ea16,1,과학으로 설명할 수 없는 기적을 보인다,35,Reputation+15 Followers+12 Communion-3 Suspicion+10 Points+1,비평가의 눈앞에서 시든 꽃이 다시 피어납니다.,Communion-3 Reputation-12,비평가가 트릭을 간파했다고 주장합니다.
+ea16,2,과학과 신앙은 다른 영역이라고 설교한다,90,Doctrine+10 FollowerFaith+5 Points+1,신도들은 책을 읽고도 흔들리지 않습니다.,FollowerFaith-5,설교가 회피로 들립니다.
+ea16,3,책을 읽지 말라고 한다,90,Authority+5 Suspicion+3,신도들은 따르지만 바깥의 비웃음은 커집니다.,FollowerFaith-5,몰래 읽은 신도가 흔들립니다.
+ea17,1,장부를 깨끗이 정리해 제출한다,70,Suspicion-10 Offerings-15 Points+1,흠잡을 데 없는 장부에 조사관이 고개를 끄덕입니다.,Offerings-20 Seize+1,누락된 항목이 발견되어 건물 하나가 압류됩니다.
+ea17,2,세무사를 매수한다,50,Suspicion-5 Offerings-25 Greed+1,장부의 구멍이 감쪽같이 메워집니다.,Suspicion+15 Seize+1,매수 사실이 드러나 압류가 집행됩니다.
+ea17,3,제출을 미룬다,100,Suspicion+10,연체 가산세와 함께 독촉장이 날아옵니다.,-,-
+ea18,1,용도에 맞게 서류를 고친다,90,Suspicion-5 Offerings-10 Points+1,서류가 갖춰지자 조사관이 돌아갑니다.,Offerings-10 Seize+1,서류가 반려되어 건물 하나가 압류됩니다.
+ea18,2,조사관을 향연에 초대한다,50,Suspicion-8 Lust+1 Appetite+1 Points+1,술잔이 비워질수록 줄자는 가방 속으로 들어갑니다.,Suspicion+15 Seize+1,향응 제공으로 조사가 더 엄격해집니다.
+ea18,3,조사를 그냥 받는다,100,Seize+1,위반 사항이 적발되어 건물 하나가 압류됩니다.,-,-
+ea19,1,실종된 신도를 경찰 앞에 데려온다,90,Suspicion-10 Reputation+5 Points+1,신도가 스스로 머물고 있다고 증언합니다.,Suspicion+5 FollowerFaith-5,신도가 가족에게 끌려갑니다.
+ea19,2,경찰을 들이지 않는다,50,Authority+5,경찰이 영장 없이 돌아갑니다.,Suspicion+15 Seize+1,영장이 발부되어 압수 수색과 압류가 이어집니다.
+ea19,3,경찰의 눈을 기적으로 흐린다,50,Suspicion-5 Communion-2 Points+1,경찰들은 아무것도 보지 못했다며 돌아갑니다.,Communion-2 Suspicion+12,경찰 하나가 이상한 기운을 보고합니다.
+ea20,1,모든 봉헌금 출처를 소명한다,70,Suspicion-10 Points+1,깨끗한 소명에 조사팀이 철수합니다.,Offerings-30 Seize+1,소명되지 않은 돈이 추징되고 건물 하나가 압류됩니다.
+ea20,2,현금을 분산해 숨긴다,50,Offerings+10 Greed+2,조사팀이 빈 금고만 확인하고 돌아갑니다.,Suspicion+20 Seize+1,은닉이 적발되어 압류가 집행됩니다.
+ea20,3,세금을 자진 납부한다,100,Offerings-35 Suspicion-8,큰돈이 나가지만 조사는 마무리됩니다.,-,-
+ea21,1,즉시 소방 설비를 보강한다,90,Suspicion-5 Offerings-15 Points+1,점검표의 빨간 줄이 하나씩 지워집니다.,Offerings-15 Seize+1,보강이 늦어 건물 하나가 사용 중지됩니다.
+ea21,2,향과 촛불을 전기 조명으로 바꾼다,100,Suspicion-5 Communion-1,편리해졌지만 신비로운 분위기는 줄어듭니다.,-,-
+ea21,3,점검관에게 금박 향로를 선물한다,50,Suspicion-3 Offerings-10,점검관이 슬쩍 향로를 챙겨 갑니다.,Suspicion+12 Seize+1,뇌물 시도로 고발당합니다.
+ea22,1,간부를 감싸며 변호사를 붙인다,70,FollowerFaith+10 Offerings-25 Points+1,간부가 무혐의로 풀려나 당신에게 충성을 맹세합니다.,Offerings-25 Seize+1,유죄 판결과 함께 교단 재산이 압류됩니다.
+ea22,2,간부를 내치고 선을 긋는다,90,Suspicion-8 FollowerFaith-5,교단은 무관하다는 입장이 받아들여집니다.,Suspicion+5,간부가 앙심을 품고 내부 사정을 폭로합니다.
+ea22,3,해외로 빼돌린다,35,Authority+5 Greed+1,간부는 해외에서 소식을 끊습니다.,Suspicion+20 Seize+1,출국 금지에 걸려 도피 시도까지 드러납니다.
+ea23,1,부엌을 새로 단장한다,90,Suspicion-5 Offerings-15 Points+1,반짝이는 부엌에 점검관이 만족합니다.,Offerings-15 Seize+1,위반이 적발되어 시설 하나가 영업 정지됩니다.
+ea23,2,점검관에게 향연 음식을 대접한다,70,Suspicion-5 Appetite+1 Points+1,한 입 맛본 점검관이 점검표를 덮습니다.,Suspicion+10,향응 의혹이 추가됩니다.
+ea23,3,향연을 줄인다,100,Suspicion-3 Health-2 Appetite-1,부엌은 조용해지고 그릇은 조금 마릅니다.,-,-
+ea24,1,교단 변호사로 행정 소송을 건다,70,Suspicion-5 Offerings-25 Points+1,소송이 진행되는 동안 철거가 멈춥니다.,Offerings-25 Seize+1,소송에서 져 건물이 철거됩니다.
+ea24,2,건물 앞에서 신도들과 철야 기도를 한다,50,FollowerFaith+15 Reputation+5 Points+1,촛불을 든 신도들의 모습이 동정 여론을 부릅니다.,Suspicion+10 Seize+1,강제 집행이 이루어집니다.
+ea24,3,건물을 스스로 내준다,100,Seize+1 Suspicion-8,교단이 협조적이라는 평과 함께 건물 하나를 잃습니다.,-,-
+ea25,1,모든 집회를 성실히 신고한다,90,Suspicion-8 FollowerFaith-5 Points+1,신고된 집회는 무사히 열리지만 열기는 식습니다.,FollowerFaith-8,신고 절차에 지친 신도들이 빠집니다.
+ea25,2,가정 소모임으로 쪼개 은밀히 모인다,70,FollowerFaith+10 Lust+1 Suspicion+5,작은 방마다 더 친밀한 의식이 열립니다.,Suspicion+12 Seize+1,비밀 집회가 적발되어 모임 장소가 압류됩니다.
+ea25,3,신고 없이 대규모 집회를 강행한다,35,Followers+12 FollowerFaith+15 Authority+10 Suspicion+15,경찰도 막지 못할 인파가 광장을 메웁니다.,Suspicion+20 Seize+1 Reputation-10,강제 해산과 함께 간부들이 연행됩니다.
+ea26,1,명령을 따르고 기적을 숨긴다,90,Suspicion-10 FollowerFaith-8 Points+1,신전 안에서만 조용한 기적이 이어집니다.,FollowerFaith-10,기적이 사라지자 신도들의 열기가 식습니다.
+ea26,2,명령을 어기고 거리에서 기적을 행한다,35,Followers+15 FollowerFaith+20 Communion-3 Suspicion+15,거리 한복판의 기적에 군중이 무릎을 꿇습니다.,Suspicion+20 Seize+1,현장에서 시설 폐쇄 명령이 집행됩니다.
+ea26,3,신도들의 꿈에서만 기적을 보인다,70,FollowerFaith+10 Communion-2 Points+1,명령이 닿지 않는 꿈속에서 신앙이 자랍니다.,Communion-2 FollowerFaith-3,꿈속 기적이 흐릿하게 끝납니다.
+ea27,1,경찰에게 따뜻한 차를 대접한다,90,Suspicion-5 Reputation+3 Points+1,몇몇 경찰관의 표정이 누그러집니다.,Suspicion+3,차를 거절당합니다.
+ea27,2,신도들에게 가면을 쓰고 드나들게 한다,70,FollowerFaith+5 Lust+1,가면을 쓴 신도들의 행렬이 오히려 신비로운 의식처럼 보입니다.,Suspicion+10,가면 행렬이 더 큰 의심을 삽니다.
+ea27,3,뒷문 비밀 통로를 판다,50,FollowerFaith+8 Offerings-15,경찰 버스의 시선을 피해 신도들이 드나듭니다.,Suspicion+12 Seize+1,비밀 통로가 발각되어 건물이 압류됩니다.
+ea28,1,신전 마당에서 행사를 연다,90,FollowerFaith+10 Points+1,좁지만 뜨거운 행사가 열립니다.,FollowerFaith-3,공간이 비좁아 불만이 나옵니다.
+ea28,2,공연장 주인을 향연으로 회유한다,50,Followers+5 Lust+1 Points+1,주인은 압력보다 당신의 향연을 택합니다.,Suspicion+10,회유 시도가 압력을 넣은 쪽에 알려집니다.
+ea28,3,행사를 취소한다,100,FollowerFaith-5 Suspicion-3,조용히 넘어가지만 신도들이 실망합니다.,-,-
+ea29,1,현물 봉헌으로 전환한다,90,Offerings+10 Points+1,금붙이와 보석이 다시 제단에 쌓입니다.,Offerings-10,현물을 현금으로 바꾸기 어렵습니다.
+ea29,2,신도 명의 차명 계좌를 쓴다,50,Offerings+25 Greed+1,돈줄이 다시 흐릅니다.,Suspicion+20 Seize+1,차명 계좌가 적발되어 압류가 집행됩니다.
+ea29,3,봉헌을 당분간 받지 않는다,100,Offerings-20 Reputation+5,돈 욕심 없는 교단이라는 평을 얻습니다.,-,-
+ea30,1,시위대에게 음식과 물을 내준다,70,Reputation+10 Charity+1 Points+1,시위대 몇이 피켓을 내려놓습니다.,Reputation-5,호의가 조롱당합니다.
+ea30,2,더 큰 소리의 찬양 행렬로 맞선다,70,FollowerFaith+15 Authority+5 Suspicion+8,찬양 소리가 확성기를 집어삼킵니다.,Suspicion+12 Reputation-10,충돌이 일어나 부상자가 나옵니다.
+ea30,3,시위가 끝날 때까지 기다린다,100,Reputation-3 FollowerFaith-3,시위는 끝나지만 상처가 남습니다.,-,-
+ea31,1,간부들을 모아 충성의 의식을 치른다,70,FollowerFaith+10 Authority+10 Lust+1 Points+1,피와 포도주를 나눠 마신 간부들이 다시 하나가 됩니다.,FollowerFaith-8,의심이 가시지 않습니다.
+ea31,2,새 휴대폰을 지급한다,90,Suspicion-3 Offerings-15,간부들이 안도합니다.,Offerings-15,새 기기도 금세 조회 대상이 됩니다.
+ea31,3,배신자를 색출한다,50,Authority+15 Points+1,내부 제보자가 밝혀져 쫓겨납니다.,FollowerFaith-15,무고한 간부가 누명을 쓰고 떠납니다.
+ea32,1,국회에서 공개 증언을 자청한다,50,Reputation+15 Followers+8 Points+1,당신의 증언이 끝나자 법안 지지율이 떨어집니다.,Reputation-15 Suspicion+10,의원들의 추궁에 무너집니다.
+ea32,2,다른 종교들과 연대해 법안에 반대한다,70,Reputation+8 Envy-5 Points+1,종교 자유를 내세운 연대가 법안을 멈춥니다.,Envy+5,연대가 깨지고 이용만 당합니다.
+ea32,3,조용히 몸을 낮춘다,100,Suspicion-5 Followers-5,법안은 계류되지만 신도가 줄어듭니다.,-,-
+ea33,1,해산 반대 집회를 연다,50,FollowerFaith+20 Reputation+5 Points+1,수많은 신도가 광장을 메우자 여론이 흔들립니다.,Suspicion+15 Seize+1,집회가 불법으로 규정되어 시설이 압류됩니다.
+ea33,2,변호인단을 꾸린다,70,Suspicion-10 Offerings-35 Points+1,유능한 변호인단이 청구 근거를 하나씩 무너뜨립니다.,Offerings-35 Seize+1,변호가 실패하고 시설 하나를 잃습니다.
+ea33,3,신도들을 안심시키는 향연을 연다,90,FollowerFaith+15 Lust+1 Appetite+1 Offerings-15,두려움을 잊은 신도들이 밤새 당신의 이름을 부릅니다.,Offerings-15 Suspicion+5,향연 소식이 반성 없는 교단으로 보도됩니다.
+ea34,1,모든 문을 열고 수색에 협조한다,90,Suspicion-10 Points+1,협조적인 태도에 수사관들이 일찍 철수합니다.,Seize+1,압수품 목록에 건물 하나가 포함됩니다.
+ea34,2,수사관들의 기억을 기적으로 흐린다,35,Suspicion-15 Communion-4 Envy+5 Points+1,수사관들은 빈손으로 돌아가며 무엇을 찾으러 왔는지 잊습니다.,Communion-4 Seize+1,기적이 실패하고 수색은 더 철저해집니다.
+ea34,3,중요한 것만 미리 빼돌린다,50,Offerings+10 Greed+1,금고와 장부가 비밀 장소로 옮겨집니다.,Suspicion+20 Seize+1,빼돌린 정황이 포착됩니다.
+ea35,1,법정에서 직접 변론한다,50,Suspicion-10 Reputation+10 Points+1,당신의 변론에 방청석이 술렁이고 동결 신청이 기각됩니다.,Seize+1 Reputation-10,재산이 동결되고 건물 하나가 묶입니다.
+ea35,2,재판 전날 판사의 꿈에 나타난다,35,Suspicion-5 Communion-3 Envy+8 Points+1,판사가 이상한 꿈을 꾼 뒤 기각 결정을 내립니다.,Communion-3 Seize+1,판사가 꿈을 협박으로 받아들입니다.
+ea35,3,재산을 미리 신도 명의로 돌린다,50,Offerings+5 Greed+1,동결될 재산이 거의 남지 않습니다.,Suspicion+15 Seize+1,편법 이전이 무효가 됩니다.
+ea36,1,폐쇄될 건물에서 마지막 성대한 의식을 연다,70,FollowerFaith+20 Communion+1 Lust+2 Seize+1,마지막 밤의 의식이 신도들의 가슴에 영원히 새겨집니다.,Seize+1 Suspicion+5,의식 도중 집행이 시작됩니다.
+ea36,2,가장 중요한 건물을 신도들과 지킨다,50,FollowerFaith+15 Authority+10 Points+1,인간 사슬 앞에서 집행관들이 물러납니다.,Seize+1 Suspicion+10,강제 집행으로 건물을 잃고 신도들이 연행됩니다.
+ea36,3,덜 중요한 건물을 먼저 내준다,100,Seize+1 Suspicion-5,희생양을 내주고 시간을 법니다.,-,-
+ea37,1,신도들과 거리로 나가 서명을 받는다,70,Reputation+10 Followers+5 Points+1,뜻밖에 많은 시민이 서명대에 이름을 적습니다.,Reputation-5,서명은 기대에 한참 못 미칩니다.
+ea37,2,서명하는 이들에게 축복을 약속한다,50,Followers+10 Reputation+5 Communion-2 Points+1,축복을 원하는 사람들이 서명대 앞에 장사진을 칩니다.,Suspicion+10,대가성 서명이라는 비판이 나옵니다.
+ea37,3,탄원은 소용없다며 그만둔다,100,FollowerFaith-5,서명대가 쓸쓸히 치워집니다.,-,-
+ea38,1,거래를 받아들인다,50,Suspicion-20 Offerings-40 Greed+1 Points+1,며칠 뒤 해산 청구 소식이 신문에서 사라집니다.,Offerings-40 Suspicion+20 Seize+1,거래 자체가 함정이었습니다.
+ea38,2,관료를 침소로 불러 약점을 쥔다,35,Suspicion-15 Lust+2 Authority+10 Points+1,새벽에 관료는 당신의 사람이 되어 돌아갑니다.,Suspicion+20 Seize+1,관료가 녹음기를 숨기고 있었습니다.
+ea38,3,거래를 거절한다,100,Integrity+2,관료가 냉소를 남기고 연락을 끊습니다.,-,-
+ea39,1,생중계 카메라 앞에서 거대한 기적을 보인다,35,Followers+20 Reputation+15 Communion-5 Health-4 Envy+10 Points+1,전국에 생중계된 기적이 여론을 단번에 뒤집습니다.,Communion-5 Health-4 Reputation-15,기적이 실패하는 장면이 전국에 방송됩니다.
+ea39,2,카메라 앞에서 평온한 예배만 드린다,90,Reputation+8 Suspicion-5 Points+1,차분한 예배 장면이 동정 여론을 만듭니다.,Reputation-3,지루한 화면에 시청자들이 채널을 돌립니다.
+ea39,3,신전 문을 닫는다,100,Suspicion+5,닫힌 문만 화면에 잡힙니다.,-,-
+ea40,1,도피하지 않고 신전을 지킨다,70,FollowerFaith+20 Authority+15 Points+1,영장은 소문이었고 남은 신도들은 당신을 신의 반석이라 부릅니다.,Suspicion+10 Health-3,수사관에게 끌려갔다가 풀려나며 그릇이 지칩니다.
+ea40,2,잠시 산속으로 몸을 피한다,90,Suspicion-5 FollowerFaith-10,몸은 안전하지만 신도들이 버려졌다고 느낍니다.,FollowerFaith-15,도피가 들켜 비난이 쏟아집니다.
+ea40,3,먼저 자진 출석한다,70,Suspicion-15 Reputation+10 Points+1,당당한 출석에 여론이 당신 편으로 기웁니다.,Health-4 Mentality-3,긴 조사에 그릇이 지칩니다.
+vs01,1,향락으로 몸을 달랜다,90,Health+4 Mentality+2 Lust+1,따뜻한 쾌락이 떨리는 손을 진정시킵니다.,Health+1,떨림은 조금 줄었지만 사라지지 않습니다.
+vs01,2,더 깊이 접신해 몸을 장악한다,70,Communion+2 Mentality-2,몸이 신의 의지에 완전히 굴복합니다.,Health-3 Mentality-2,몸이 거부 반응을 일으킵니다.
+vs01,3,하루 쉬게 한다,100,Health+2 Mentality+1,하루 쉬자 떨림이 가라앉습니다.,-,-
+vs02,1,금빛 눈을 신도들 앞에 드러낸다,70,FollowerFaith+20 Authority+10 Suspicion+5,신도들이 금빛 눈 앞에 엎드려 흐느낍니다.,Suspicion+8 Mentality-2,금빛이 꺼지고 신도들이 착각이었나 의심합니다.
+vs02,2,색안경으로 눈을 가린다,100,Suspicion-3,금빛은 색안경 뒤에 숨습니다.,-,-
+vs02,3,놀란 신도를 침소로 불러 비밀을 나눈다,90,FollowerFaith+15 Lust+1,그는 신의 비밀을 안 유일한 사람이 되었다며 떨립니다.,FollowerFaith-5,그가 비밀을 지키지 못합니다.
+vs03,1,숙주의 영혼을 달래며 쾌락을 나눈다,70,Mentality+5 Health+2 Lust+2,몸 안의 두 영혼이 같은 쾌락 속에서 잠시 화해합니다.,Mentality-3,숙주의 영혼이 더 크게 울부짖습니다.
+vs03,2,숙주의 영혼을 깊이 억누른다,50,Communion+3 Ambition+1 Mentality-2,숙주의 목소리가 아득히 멀어집니다.,Mentality-5 Health-2,억누를수록 저항이 거세집니다.
+vs03,3,숙주의 영혼과 계약을 맺는다,70,Mentality+3 Charity+1 Communion+1,승천하면 자유를 주겠다는 약속에 숙주가 조용해집니다.,Mentality-2,숙주는 약속을 믿지 않습니다.
+vs04,1,피를 성혈이라 부르며 신도들에게 보인다,70,FollowerFaith+20 Health-2 Suspicion+5,하얀 천에 스민 피가 성물로 모셔집니다.,Health-3 Suspicion+8,병원에 가라는 신도들의 걱정만 커집니다.
+vs04,2,기적을 잠시 멈추고 몸을 돌본다,100,Health+3 Communion+1,피가 멎고 그릇이 조금씩 회복됩니다.,-,-
+vs04,3,호화로운 보양식으로 몸을 채운다,90,Health+5 Appetite+2 Offerings-15,값비싼 보양식이 그릇을 다시 단단하게 합니다.,Health+2 Offerings-15,몸은 채워졌지만 피는 쉽게 멎지 않습니다.
+vs05,1,숙주의 연인을 받아들인다,70,Mentality+5 Health+3 Lust+2,숙주의 몸이 익숙한 온기를 기억하며 녹아내립니다.,Mentality-3 Suspicion+5,그녀가 당신이 그 사람이 아니라는 것을 눈치챕니다.
+vs05,2,그녀를 신도로 받아들인다,90,Followers+1 FollowerFaith+5 Lust+1,그녀는 이제 당신을 다른 이름으로 부릅니다.,Mentality-2,그녀가 울며 떠납니다.
+vs05,3,모르는 사람이라고 말한다,100,Mentality-3 Integrity-1,숙주의 영혼이 몸 안에서 울부짖습니다.,-,-
+vs06,1,원하는 만큼 쾌락을 허락한다,100,Health+6 Mentality+4 Lust+3,메마른 피부에 윤기가 돌고 그릇이 다시 빛납니다.,-,-
+vs06,2,신도들의 시중으로 몸을 돌본다,90,Health+4 Mentality+2 Lust+1 FollowerFaith+5,신도들의 손길에 그릇이 생기를 되찾습니다.,Suspicion+5,시중 장면이 밖으로 새어 나갑니다.
+vs06,3,절제하며 버틴다,70,Temperance+2 Piety+1,그릇의 갈증을 신앙으로 누릅니다.,Health-4 Mentality-3,갈증이 몸을 갉아먹습니다.
+vs07,1,숙주의 기억을 받아들인다,90,Mentality+3 Charity+1 Communion+1,인간의 기억이 신을 더 인간답게 만듭니다.,Mentality-2,기억의 홍수에 정신이 어지럽습니다.
+vs07,2,신의 기억으로 덮어쓴다,70,Communion+2 Authority+5 Mentality-1,골목의 기억이 신화의 풍경으로 바뀝니다.,Mentality-4,덮어쓴 자리에 공허가 남습니다.
+vs07,3,숙주의 기억을 설교에 쓴다,90,FollowerFaith+10 Doctrine+5,신이 겪은 인간의 유년이 신도들의 마음을 울립니다.,Doctrine-3,이야기가 너무 사적이라는 반응입니다.
+vs08,1,어머니를 신전 안으로 들인다,70,Mentality+4 Charity+2 Followers+1,어머니는 자식의 눈빛 속에서 낯선 신을 보고도 손을 놓지 않습니다.,Mentality-3 Suspicion+5,어머니가 내 자식이 아니라며 비명을 지릅니다.
+vs08,2,어머니에게 큰돈을 보낸다,90,Offerings-25 Mentality+2,어머니는 돈을 받고 울며 돌아갑니다.,Offerings-25 Suspicion+5,어머니가 돈을 신문사에 들고 갑니다.
+vs08,3,만나지 않는다,100,Mentality-4 Suspicion+3,신전 앞 울음소리가 밤늦게까지 이어집니다.,-,-
+vs09,1,흰머리를 성스러운 표식이라 선포한다,90,FollowerFaith+15 Authority+5,신도들이 흰머리를 흉내 내어 염색하기 시작합니다.,FollowerFaith-3,병든 것 아니냐는 수군거림이 남습니다.
+vs09,2,기적 사용을 줄인다,100,Health+2 Communion+1,머리카락이 더 이상 세지 않습니다.,-,-
+vs09,3,금가루로 머리를 물들인다,90,Authority+8 Greed+1 Offerings-10,금빛 머리카락이 신의 후광처럼 빛납니다.,Offerings-10,금가루가 베개에 떨어져 흩날립니다.
+vs10,1,신도들을 불러 공중 부양을 보인다,50,FollowerFaith+25 Followers+5 Communion-2 Suspicion+8,떠오른 당신의 발아래 신도들이 엎드려 숨을 죽입니다.,Communion-2 Health-3,모두가 모인 순간 몸이 바닥으로 떨어집니다.
+vs10,2,그대로 떠 있으며 접신한다,90,Communion+2 Piety+2,공중에서 신과 그릇이 하나로 겹쳐집니다.,Mentality-2,내려오는 길을 잃어 공포에 질립니다.
+vs10,3,침대를 붙잡고 내려온다,100,Mentality-1,천장의 감촉이 손끝에 오래 남습니다.,-,-
+vs11,1,향기를 퍼뜨리며 거리를 걷는다,70,Followers+8 Lust+1 Suspicion+5,향기를 따라온 사람들이 신전 문 앞까지 이어집니다.,Suspicion+8,향수 사기라는 소문이 돕니다.
+vs11,2,신도들에게 향기를 나눠 준다,90,FollowerFaith+15 Lust+1,당신의 품에 안겼다 나온 신도들에게서 같은 향이 납니다.,FollowerFaith-3,향이 금세 날아갑니다.
+vs11,3,향기를 숨긴다,100,Suspicion-3,향을 덮는 진한 향수를 뿌립니다.,-,-
+vs12,1,향락으로 심장을 달랜다,90,Health+4 Mentality+2 Lust+1,뜨거운 밤이 지나자 박동이 고르게 돌아옵니다.,Health+1,박동은 조금 진정되었지만 여전히 불규칙합니다.
+vs12,2,박동을 북소리 의식으로 삼는다,70,FollowerFaith+15 Communion+1 Health-2,신도들이 당신의 심장 소리에 맞춰 춤을 춥니다.,Health-4,의식 도중 가슴을 움켜쥐고 쓰러집니다.
+vs12,3,몰래 병원에 간다,90,Health+4 Suspicion+3,약을 받아 오자 박동이 진정됩니다.,Suspicion+8,병원에서 교주를 알아본 사람이 있습니다.
+vs13,1,다른 신의 신전 앞을 일부러 지나며 버틴다,50,Authority+15 Health-3 Envy+5 Points+1,반점이 가라앉고 그 신전의 종이 저절로 울립니다.,Health-6 Envy+5,화상 같은 상처가 오래 남습니다.
+vs13,2,길을 돌아서 다닌다,100,Health+1,먼 길이지만 몸은 편합니다.,-,-
+vs13,3,우유 목욕으로 반점을 씻는다,90,Health+4 Greed+1 Offerings-10,하얀 우유가 붉은 반점을 녹입니다.,Offerings-10,반점이 쉽게 지워지지 않습니다.
+vs14,1,그를 시중꾼으로 곁에 둔다,90,Health+4 Mentality+3 Lust+1 FollowerFaith+5,따뜻한 수건과 향유가 매일 밤 그릇을 어루만집니다.,Suspicion+5,시중꾼과의 관계를 두고 소문이 돕니다.
+vs14,2,돌아가며 시중을 들게 한다,90,Health+3 FollowerFaith+10 Lust+1,신도들이 시중드는 날을 손꼽아 기다립니다.,FollowerFaith-3,순번을 두고 다툼이 생깁니다.
+vs14,3,스스로 몸을 돌본다,100,Health+1 Temperance+1,담담하게 몸을 씻고 잠듭니다.,-,-
+vs15,1,숙주에게 밤 산책을 허락한다,90,Mentality+4 Charity+1,숙주의 영혼이 감사하며 조용해집니다.,Suspicion+5,새벽 거리에서 헤매는 교주가 목격됩니다.
+vs15,2,잠들 때마다 몸을 묶는다,70,Communion+1 Mentality-2,묶인 몸은 더 이상 헤매지 않습니다.,Mentality-4,숙주의 영혼이 밤새 몸부림칩니다.
+vs15,3,숙주가 어디를 갔는지 찾아간다,50,Mentality+3 Communion+1,숙주가 찾아간 곳은 오래된 성당의 빈 의자였습니다.,Mentality-2,흔적을 찾지 못합니다.
+vs16,1,넘치는 힘을 신도들에게 쏟아붓는다,70,FollowerFaith+20 Followers+5 Communion-3,빛을 받은 신도들이 황홀경에 빠져 쓰러집니다.,Communion-3 Health-2,힘이 제멋대로 흩어집니다.
+vs16,2,힘을 향락으로 태워 버린다,90,Health+4 Mentality+3 Lust+2 Communion-1,넘치던 힘이 쾌락의 열기로 바뀌어 그릇을 데웁니다.,Communion-1,힘은 빠졌지만 몸이 달아오른 채 남습니다.
+vs16,3,힘을 축성에 쓴다,90,Authority+10 Communion-2,빛이 스민 돌이 신전 주춧돌이 됩니다.,Communion-2,돌이 빛을 담지 못하고 깨집니다.
+vs17,1,영원한 젊음을 기적으로 선포한다,70,Followers+10 FollowerFaith+10 Suspicion+8,젊음을 원하는 사람들이 신전으로 몰려듭니다.,Suspicion+10,성형 의혹이 기사로 나옵니다.
+vs17,2,젊음의 비결을 향락이라 말한다,90,FollowerFaith+10 Lust+1 Doctrine+5,신도들이 쾌락이 곧 젊음이라는 말에 환호합니다.,Reputation-2,퇴폐적인 교리라는 비판을 받습니다.
+vs17,3,아무 말도 하지 않는다,100,Suspicion+2,수군거림만 남습니다.,-,-
+vs18,1,고리 한가운데로 걸어 들어간다,50,Communion+3 LeaderFaith+15 Points+1,중심에서 들려온 목소리가 승천의 길을 일러 줍니다.,Mentality-4,고리가 닫히며 악몽 속에 갇힙니다.
+vs18,2,부르는 목소리에 대답만 한다,90,Communion+1 Piety+2,목소리가 만족한 듯 멀어집니다.,Mentality-1,대답이 메아리 없이 사라집니다.
+vs18,3,꿈에서 깨어난다,100,Mentality+1,식은땀을 닦으며 일어납니다.,-,-
+vs19,1,낙인을 성흔이라 부르며 보인다,90,FollowerFaith+15 Authority+5,신도들이 낙인에 입을 맞추며 눈물을 흘립니다.,Suspicion+5,자해 의혹이 제기됩니다.
+vs19,2,낙인 위에 금장 장갑을 낀다,100,Authority+5 Greed+1 Offerings-5,금빛 장갑이 신의 손을 감춥니다.,-,-
+vs19,3,낙인의 의미를 접신으로 묻는다,70,Communion+2 Doctrine+5,낙인은 신격의 단계를 새긴 표식이었습니다.,Mentality-2,낙인이 더 뜨겁게 타오릅니다.
+vs20,1,향락으로 그릇을 다시 채운다,90,Health+5 Mentality+4 Lust+2 Appetite+1,쾌락이 몸을 데우자 손끝에 다시 빛이 돕니다.,Health+2,몸은 조금 돌아왔지만 기적은 아직 무겁습니다.
+vs20,2,억지로 기적을 짜낸다,35,FollowerFaith+15 Communion-2 Health-4,피를 토하며 겨우 기적을 일으킵니다.,Health-6 Mentality-3,몸이 버티지 못하고 쓰러집니다.
+vs20,3,한 분기 동안 쉰다,100,Health+3 Communion+2 FollowerFaith-5,기적 없는 시간에 신도들이 조금 흔들립니다.,-,-
+vs21,1,몸 씻은 물을 성수로 나눠 준다,90,FollowerFaith+15 Offerings+15 Lust+1 Suspicion+5,병에 담긴 물이 신도들 사이에서 보물이 됩니다.,Suspicion+8 Reputation-2,기괴한 성수 판매라는 보도가 나갑니다.
+vs21,2,측근들에게만 나눠 준다,90,Authority+10 Lust+1,측근들이 그 물을 마시며 충성을 맹세합니다.,FollowerFaith-3,다른 신도들이 소외감을 느낍니다.
+vs21,3,그런 짓은 하지 말라고 한다,100,Temperance+1 FollowerFaith-3,빈 병들이 치워집니다.,-,-
+vs22,1,더 자극적인 진미를 찾는다,90,Health+4 Appetite+2 Offerings-20,혀를 태우는 진미 앞에서 숙주의 감각이 깨어납니다.,Offerings-20 Health+1,여전히 재 맛이 섞입니다.
+vs22,2,신도들과 함께 먹으며 맛을 되찾는다,90,FollowerFaith+10 Health+3 Charity+1,함께 웃으며 먹는 밥에서 다시 맛이 납니다.,Health+1,식탁의 웃음도 맛을 돌려주진 못합니다.
+vs22,3,맛을 포기하고 신성에 기댄다,100,Communion+1 Health-2,음식은 연료일 뿐이 됩니다.,-,-
+vs23,1,고대어를 새 경전으로 엮는다,70,Doctrine+20 Communion+1,아무도 읽지 못하는 경전이 오히려 신성하게 여겨집니다.,Doctrine+3 Mentality-2,받아 적은 내용이 뒤죽박죽입니다.
+vs23,2,고대어로 신도들을 축복한다,90,FollowerFaith+15 Authority+5,알아듣지 못하는 축복에 신도들이 전율합니다.,FollowerFaith-3,신도들이 겁에 질립니다.
+vs23,3,접신을 멈춘다,100,Communion-1 Mentality+1,낯선 말이 멎습니다.,-,-
+vs24,1,그림자 속 숙주에게 말을 건다,70,Mentality+4 Charity+1,그림자가 천천히 고개를 들어 당신을 바라봅니다.,Mentality-3,그림자가 등을 돌립니다.
+vs24,2,밝은 빛 아래에서만 지낸다,100,Mentality+1 Offerings-5,그림자가 발밑으로 짧게 숨습니다.,-,-
+vs24,3,그림자를 의식에 참여시킨다,50,FollowerFaith+15 Communion+2 Suspicion+5,신도들은 두 개의 형상을 가진 신을 보았다고 증언합니다.,Mentality-3 Suspicion+5,그림자가 의식을 망쳐 버립니다.
+vs25,1,더 강한 쾌락을 찾는다,70,Health+6 Mentality+4 Lust+3 Suspicion+8,금기의 경계를 넘은 밤이 지나자 그릇이 다시 빛납니다.,Health+2 Suspicion+10 Reputation-2,도를 넘은 밤이 바깥으로 새어 나갑니다.
+vs25,2,한동안 쾌락을 끊어 감각을 되살린다,70,Temperance+2 Mentality+2,굶주린 감각이 작은 자극에도 깨어납니다.,Health-4 Mentality-3,금단 증상이 그릇을 괴롭힙니다.
+vs25,3,쾌락에 기적을 섞는다,90,Health+4 Communion-1 Lust+2,신성이 섞인 쾌락이 그릇 깊숙이 스며듭니다.,Communion-1,기적만 소모됩니다.
+vs26,1,피 한 방울을 은잔에 떨어뜨린다,70,FollowerFaith+15 Followers+3 Health-2 Suspicion+3,병자가 일어서자 신도들이 신의 피라며 엎드립니다.,Health-3 Suspicion+8,병자가 낫지 않아 소문만 남습니다.
+vs26,2,대신 손을 얹어 기도한다,90,FollowerFaith+10 Communion-1,손을 얹자 병자의 숨이 편안해집니다.,FollowerFaith-3,병자가 실망합니다.
+vs26,3,병원에 보내 준다,100,Reputation+3 Charity+1,병원비를 대신 내줍니다.,-,-
+vs27,1,신도들의 상처를 모두 짊어진다,50,FollowerFaith+25 Charity+2 Health-5,멍과 상처가 사라진 신도들이 당신의 몸을 끌어안고 웁니다.,Health-7 Mentality-2,짊어진 상처가 그릇을 무너뜨립니다.
+vs27,2,가장 아픈 이 하나만 대신한다,90,FollowerFaith+10 Health-2 Charity+1,한 사람의 고통이 당신에게 옮겨 옵니다.,Health-3,고통만 옮겨 오고 그는 낫지 않습니다.
+vs27,3,힘을 봉인한다,100,Health+1,상처는 각자의 몫으로 남습니다.,-,-
+vs28,1,하루를 숙주에게 내준다,90,Mentality+6 Health+3 Charity+1 Communion-1,숙주는 하루 동안 웃고 울며 인간으로 살다 돌아옵니다.,Mentality+2 Suspicion+5,숙주가 옛 친구를 찾아가 횡설수설합니다.
+vs28,2,신도들과 생일 향연을 연다,90,FollowerFaith+15 Appetite+1 Lust+1 Offerings-15,숙주의 생일이 신의 탄일로 기념됩니다.,Offerings-15,숙주의 영혼은 끝내 웃지 않습니다.
+vs28,3,청을 거절한다,100,Communion+1 Mentality-4,몸 안에서 오랫동안 흐느낌이 이어집니다.,-,-
+vs29,1,넘치는 열기를 신도들과 나눈다,70,FollowerFaith+20 Communion+1 Lust+2 Suspicion+5,뜨거운 손길이 닿은 신도들이 황홀경에 빠집니다.,Health-3 Suspicion+8,열기에 데인 신도가 생깁니다.
+vs29,2,차가운 샘에 몸을 담근다,90,Health+2 Communion-1,열기가 식으며 그릇이 안정됩니다.,Health-2,샘물이 끓어오릅니다.
+vs29,3,열기를 기적으로 바꿔 축성한다,70,Authority+10 Communion-2 Followers+3,불타는 손으로 쌓은 돌탑이 밤새 빛납니다.,Communion-2 Health-2,돌탑이 무너집니다.
+vs30,1,일기장을 신도들 앞에서 읽는다,90,FollowerFaith+15 Doctrine+10,신을 원했던 인간이 신이 되었다는 이야기가 교단의 전설이 됩니다.,FollowerFaith-3,사적인 기록이라 거부감을 보이는 신도도 있습니다.
+vs30,2,숙주에게 일기장을 돌려준다,90,Mentality+5 Charity+1,숙주의 영혼이 조용히 마지막 장을 덮습니다.,Mentality-2,숙주가 일기장을 보고 오래 웁니다.
+vs30,3,일기장을 태운다,100,Communion+1 Mentality-3,숙주의 과거가 연기가 되어 사라집니다.,-,-
+dl01,1,그 애칭을 교단 공식 호칭으로 삼는다,90,FollowerFaith+15 Authority+3,신도들이 서로를 부를 때마다 당신을 떠올립니다.,FollowerFaith-3,호칭이 어색하다는 말이 나옵니다.
+dl01,2,애칭을 부르는 이들과 밤을 보낸다,70,FollowerFaith+20 Lust+2 Health+2,다정한 이름이 침소에서 속삭임으로 바뀝니다.,Suspicion+5,밤의 일이 바깥으로 새어 나갑니다.
+dl01,3,경박하다며 금지한다,100,Authority+5 FollowerFaith-5,복도가 조용해집니다.,-,-
+dl02,1,첫 예배에서 기적을 보인다,70,Followers+10 FollowerFaith+10 Communion-2,새 신도들이 눈물을 흘리며 영원히 머물겠다고 맹세합니다.,Communion-2 Followers-3,기적이 약해 실망한 이들이 돌아갑니다.
+dl02,2,첫 예배를 향연으로 연다,90,Followers+8 Appetite+1 Lust+1 Offerings-15,술과 음악 속에서 새 신도들이 신을 맛봅니다.,Offerings-15,향연만 즐기고 떠나는 이들도 있습니다.
+dl02,3,평범한 예배로 시작한다,100,Followers+3 Piety+1,새 신도들이 조용히 자리를 잡습니다.,-,-
+dl03,1,향락의 계율을 채워 넣는다,90,Doctrine+15 Lust+1 FollowerFaith+5,쾌락을 축복하는 계율에 신도들의 얼굴이 밝아집니다.,Reputation-2,계율이 밖으로 새어 나가 비판받습니다.
+dl03,2,승천의 예언을 채워 넣는다,70,Doctrine+20 Communion+1,예언의 문장이 신도들의 꿈을 키웁니다.,Doctrine+5 Mentality-2,예언이 모호하게 남습니다.
+dl03,3,빈 장으로 남겨 둔다,100,Doctrine+3 Patience+1,비어 있는 장이 신비를 더합니다.,-,-
+dl04,1,둘 다 무릎 꿇리고 당신이 정한다,90,Authority+15 Ambition+1,다툼이 그치고 모두가 당신의 결정을 따릅니다.,FollowerFaith-5,진 쪽이 앙심을 품습니다.
+dl04,2,더 충성스러운 쪽을 침소에서 가린다,50,Authority+10 Lust+2 FollowerFaith+5,밤을 견딘 쪽이 높은 자리에 오릅니다.,Suspicion+8 FollowerFaith-5,이상한 선발 방식이라는 소문이 돕니다.
+dl04,3,둘에게 같은 자리를 준다,100,Charity+1 Authority-3,어정쩡한 평화가 찾아옵니다.,-,-
+dl05,1,열쇠를 몸에 지닌다,100,Offerings+5 Greed+1 Authority+3,모든 열쇠가 당신의 허리춤에서 짤랑거립니다.,-,-
+dl05,2,가장 아끼는 신도에게 맡긴다,90,FollowerFaith+10 Charity+1,열쇠를 받은 신도가 감격해 눈물을 흘립니다.,Offerings-15,신도가 돈에 손을 댑니다.
+dl05,3,금고에 축성의 봉인을 건다,70,Offerings+10 Communion-1,기적의 봉인이 걸린 금고는 아무도 열지 못합니다.,Communion-1,봉인이 풀려 버립니다.
+dl06,1,신도들의 숭배 속에서 확신을 되찾는다,90,LeaderFaith+20 FollowerFaith+5 Ambition+1,수백의 목소리가 당신을 신이라 부르자 흔들림이 멎습니다.,LeaderFaith-5,숭배가 공허하게 들립니다.
+dl06,2,향락에 몸을 맡겨 생각을 지운다,90,LeaderFaith+10 Health+3 Lust+1,뜨거운 밤이 의심을 태워 버립니다.,LeaderFaith-3,아침이 오자 의심이 돌아옵니다.
+dl06,3,의심을 끝까지 파고든다,50,LeaderFaith+15 Communion+2 Mentality+2,의심의 바닥에서 신은 자신의 이름을 다시 찾습니다.,LeaderFaith-10 Mentality-3,의심이 더 깊어집니다.
+dl07,1,신도들과 손을 맞잡고 접신한다,70,FollowerFaith+20 Communion+1,둥글게 앉은 신도들의 몸이 동시에 떨리며 같은 환영을 봅니다.,Communion-1 FollowerFaith-3,접신이 신도들에게 닿지 않습니다.
+dl07,2,접신하는 몸을 신도들이 만지게 한다,50,FollowerFaith+25 Communion+1 Lust+2 Suspicion+5,신이 깃든 살결을 만진 신도들이 황홀경에 쓰러집니다.,Suspicion+8 FollowerFaith-5,의식이 혼란스럽게 끝납니다.
+dl07,3,접신은 비밀로 둔다,100,Communion+1 Authority+3,비밀이 신비를 지킵니다.,-,-
+dl08,1,대표 후원사로 이름을 올린다,90,Reputation+10 Followers+3 Offerings-20,축제 무대에 교단 이름이 크게 걸립니다.,Offerings-20 Reputation-1,후원 사실을 불편해하는 주민도 있습니다.
+dl08,2,축제에 향연 부스를 연다,70,Followers+8 Reputation+5 Appetite+1 Offerings-10,부스 앞에 축제 손님들이 줄을 섭니다.,Suspicion+5,포교 행위라는 항의가 들어옵니다.
+dl08,3,정중히 거절한다,100,Offerings+3,위원회가 아쉬워하며 돌아갑니다.,-,-
+dl09,1,한 사람씩 귓가에 이름을 속삭인다,90,FollowerFaith+15 Lust+1,새 이름을 받은 신도들이 얼굴을 붉히며 물러납니다.,FollowerFaith-3,몇몇은 이름이 마음에 들지 않습니다.
+dl09,2,승천의 단계 이름으로 계급을 준다,70,FollowerFaith+10 Authority+10,그릇과 잔영과 화신이라 불리는 신도들이 생깁니다.,FollowerFaith-5,계급에 불만을 품은 신도가 생깁니다.
+dl09,3,이름은 스스로 지으라고 한다,100,Charity+1 FollowerFaith-3,신도들이 아쉬운 얼굴로 종이를 접습니다.,-,-
+dl10,1,향연과 기적으로 그를 맞이한다,70,Followers+15 Reputation+5 Communion-1 Suspicion+5,그의 영상 하나에 신전 앞이 관광지가 됩니다.,Suspicion+8 Reputation-2,사이비 체험기라는 제목으로 영상이 올라갑니다.
+dl10,2,평범한 예배만 보여 준다,90,Followers+5 Reputation+3,잔잔한 영상이 의외로 호평을 받습니다.,Followers+1,영상이 묻힙니다.
+dl10,3,방문을 거절한다,100,Suspicion-2,신비로운 교단이라는 말만 남습니다.,-,-
+dl11,1,그 노래를 교단 찬가로 삼는다,90,Doctrine+10 FollowerFaith+10,신도들이 노래를 부를 때마다 말씀이 몸에 스며듭니다.,FollowerFaith-3,가사가 어색하다는 말이 나옵니다.
+dl11,2,새 기타를 선물하며 곁에 둔다,90,FollowerFaith+10 Offerings-10 Lust+1,그는 밤마다 당신의 침소 앞에서 노래합니다.,Offerings-10,그가 선물만 받고 떠납니다.
+dl11,3,가사를 고쳐 준다,70,Doctrine+15,당신의 손을 거친 노래가 더 깊어집니다.,Doctrine+3,고칠수록 노래가 딱딱해집니다.
+dl12,1,조각상에 기적을 불어넣는다,70,Authority+15 FollowerFaith+10 Communion-2,조각상의 눈이 밤마다 금빛으로 빛나기 시작합니다.,Communion-2,돌은 끝내 대답하지 않습니다.
+dl12,2,조각상 앞을 지날 때 절하라고 명한다,90,Authority+10 Ambition+1,신도들이 조각상 앞에서 고개를 숙입니다.,FollowerFaith-5,강요에 반감이 생깁니다.
+dl12,3,조각상에 꽃과 보석을 두른다,90,Authority+8 Greed+1 Offerings-15,화려해진 조각상 앞에 사람들이 걸음을 멈춥니다.,Offerings-15,보석을 노린 도둑이 듭니다.
+dl13,1,신도들에게 특별 봉헌을 청한다,70,Offerings+30 FollowerFaith-5,신도들이 지갑을 엽니다.,FollowerFaith-10,돈 이야기만 하는 신이라는 불만이 나옵니다.
+dl13,2,향연을 열어 봉헌금을 모은다,90,Offerings+20 FollowerFaith+5 Lust+1 Appetite+1,향연에 취한 신도들이 아낌없이 봉헌합니다.,Offerings+5,향연 비용이 수입을 거의 다 먹어 버립니다.
+dl13,3,쓰지 않는 공간을 정리한다,100,Offerings+10 Authority-3,빈방을 세놓아 유지비를 메웁니다.,-,-
+dl14,1,그의 손을 잡고 기적을 보인다,70,LeaderFaith+15 FollowerFaith+15 Communion-1,그의 눈앞에서 촛불이 꽃으로 피어나자 그는 대답을 얻습니다.,Communion-1 FollowerFaith-5,기적이 작아 그의 의심이 남습니다.
+dl14,2,침소에서 대답해 주겠다고 한다,70,LeaderFaith+10 FollowerFaith+10 Lust+2,아침에 그는 다시는 같은 질문을 하지 않습니다.,Suspicion+5,그가 밤의 대답을 다른 이에게 털어놓습니다.
+dl14,3,그 질문 자체가 신앙이라고 답한다,90,Doctrine+10 LeaderFaith+5,모호한 대답이 그를 더 깊은 고민으로 이끕니다.,FollowerFaith-3,그는 대답에 만족하지 못합니다.
+dl15,1,제단에서 밤새 접신한다,70,Communion+3 LeaderFaith+10,옛 제단이 당신을 오래전부터 기다려 온 것처럼 응답합니다.,Communion-1 Mentality-3,제단에서 낯선 신의 목소리가 들립니다.
+dl15,2,제단을 신도들에게 공개한다,90,FollowerFaith+15 Authority+5,예언된 신이라는 이야기가 퍼집니다.,Suspicion+5,유적 훼손이라는 신고가 들어옵니다.
+dl15,3,제단을 다시 봉인한다,100,Mentality+1,오래된 비밀을 땅 아래 묻어 둡니다.,-,-
+dl16,1,구호 현장을 있는 그대로 보여 준다,90,Reputation+12 Suspicion-5,따뜻한 기사가 나가 교단의 이미지가 좋아집니다.,Reputation+3,기사가 작게 실립니다.
+dl16,2,기자에게 치유 기적을 보여 준다,50,Reputation+15 Followers+8 Communion-2 Suspicion+5,기적 장면이 담긴 기사가 화제가 됩니다.,Communion-2 Reputation-4,기적이 실패하는 장면이 실립니다.
+dl16,3,인터뷰를 사양한다,100,Charity+1,조용한 선행이 이어집니다.,-,-
+dl17,1,눈을 가린 채 따라간다,90,FollowerFaith+20 Lust+2 Health+3,눈가리개를 풀자 꽃잎과 촛불과 맨살의 축제가 당신을 맞이합니다.,Suspicion+5,의식 소문이 바깥으로 퍼집니다.
+dl17,2,먼저 무엇인지 묻는다,100,FollowerFaith+5,신도들은 아쉬워하며 비밀을 털어놓습니다.,-,-
+dl17,3,신은 이끌려 다니지 않는다며 거절한다,100,Authority+8 FollowerFaith-5,준비한 신도들이 시무룩해집니다.,-,-
+dl18,1,학생들을 향연에 초대한다,70,Followers+10 Lust+1 Appetite+1 Suspicion+5,밤늦게까지 남은 학생들이 다음 주에도 오겠다고 합니다.,Suspicion+10 Reputation-2,학생들의 가족이 대학에 항의합니다.
+dl18,2,교리 강의를 해 준다,90,Followers+5 Doctrine+5,몇몇 학생이 진지하게 질문을 남깁니다.,Followers+1,학생들이 지루해합니다.
+dl18,3,짧게 안내만 하고 돌려보낸다,100,Reputation+2,학생들이 예의 바르게 인사하고 떠납니다.,-,-
+dl19,1,경계 따위는 없다고 답한다,70,Doctrine+20 FollowerFaith+10 Lust+1,쾌락과 신성이 하나라는 말에 강론장이 술렁이다 환호로 바뀝니다.,Doctrine-5 Reputation-2,일부 신도가 위험한 교리라며 자리를 뜹니다.
+dl19,2,경계는 신만이 안다고 답한다,90,Doctrine+10 Authority+5,모호한 답이 신의 권위를 높입니다.,Doctrine-3,답을 피했다는 말이 나옵니다.
+dl19,3,질문한 신도를 따로 불러 몸으로 답한다,50,FollowerFaith+15 Lust+2 Doctrine+5,다음 날 그는 강론장에서 경계는 없었다고 증언합니다.,Suspicion+8 FollowerFaith-5,그가 불쾌감을 드러내며 떠납니다.
+dl20,1,꽃잎 길을 걷는다,90,Authority+12 FollowerFaith+5 Ambition+1,붉은 꽃잎 위를 걷는 당신을 보며 신도들이 숨을 삼킵니다.,Reputation-1,낭비라는 말이 들립니다.
+dl20,2,꽃잎을 신도들 머리 위로 뿌려 준다,90,FollowerFaith+12 Charity+1,꽃잎을 맞은 신도들이 아이처럼 웃습니다.,FollowerFaith-2,꽃잎이 바람에 날려 흩어집니다.
+dl20,3,꽃잎을 말려 향으로 쓴다,100,Communion+1 Temperance+1,은은한 장미 향이 기도실을 채웁니다.,-,-
+dl21,1,봉헌금 순서대로 앉힌다,90,Offerings+25 Authority+5 Greed+1 FollowerFaith-5,앞줄 금색 방석을 차지하려는 봉헌 경쟁이 붙습니다.,FollowerFaith-10,가난한 신도들이 소외감에 떠납니다.
+dl21,2,앞줄을 추첨으로 정한다,100,FollowerFaith+8 Charity+1,모두가 공평하게 앞줄을 꿈꿉니다.,-,-
+dl21,3,앞줄은 간택받은 이들의 자리로 정한다,70,FollowerFaith+10 Lust+1 Authority+5,앞줄에 앉는 것이 곧 신의 밤에 가까워지는 길이 됩니다.,Suspicion+5,간택 기준을 두고 수군거림이 생깁니다.
+dl22,1,빛을 향해 손을 뻗는다,70,LeaderFaith+15 Communion+2 Ambition+1,손끝에 닿은 빛이 승천이 멀지 않았다고 속삭입니다.,Mentality-3,빛이 멀어지며 허탈함만 남습니다.
+dl22,2,꿈 이야기를 신도들에게 들려준다,90,FollowerFaith+15 Doctrine+5,승천의 꿈이 교단 전체의 꿈이 됩니다.,FollowerFaith-3,꿈 이야기가 허황되게 들립니다.
+dl22,3,꿈을 마음속에 간직한다,100,LeaderFaith+5 Patience+1,조용한 확신이 자랍니다.,-,-
+dl23,1,빗속에서 신도들과 춤추며 접신한다,70,Communion+2 FollowerFaith+15 Lust+1 Health-1,흠뻑 젖은 몸들이 빗소리에 맞춰 신을 부릅니다.,Health-3,비에 젖은 그릇이 열병을 앓습니다.
+dl23,2,따뜻한 방에서 향을 피우고 기도한다,90,Communion+1 Health+1,빗소리 너머로 끈이 다시 단단해집니다.,Communion-1,끈의 떨림이 멎지 않습니다.
+dl23,3,비가 그칠 때까지 기다린다,100,Communion-1 Patience+1,계절이 바뀌기를 기다립니다.,-,-
+dl24,1,구호소를 넓혀 모두 받아들인다,70,Reputation+15 Followers+5 Charity+2 Offerings-25,따뜻한 밥을 먹은 이들 중 몇이 신도가 됩니다.,Offerings-25 Reputation+3,감당할 수 없는 인원에 혼란이 생깁니다.
+dl24,2,배식 시간에 기적의 빵을 나눈다,50,Reputation+15 FollowerFaith+10 Communion-2 Suspicion+5,빵 바구니가 비지 않는 기적에 골목이 술렁입니다.,Communion-2 Reputation-2,바구니가 금세 비어 버립니다.
+dl24,3,정해진 인원만 받는다,100,Reputation+5,질서 있게 배식이 이어집니다.,-,-
+dl25,1,두 사람에게 회춘의 축복을 내린다,70,FollowerFaith+20 Communion-2 Lust+1,서약을 마친 부부의 뺨에 젊은 날의 홍조가 돌아옵니다.,Communion-2 FollowerFaith-3,축복이 약해 부부가 서운해합니다.
+dl25,2,성대한 서약식을 열어 준다,90,FollowerFaith+15 Followers+3 Offerings-15,신도들이 모두 모여 노부부를 축복합니다.,Offerings-15,준비가 늦어 서약식이 어수선합니다.
+dl25,3,조촐하게 축복만 한다,100,FollowerFaith+8,부부가 고개를 숙이며 감사를 전합니다.,-,-
+dl26,1,관능적인 표지로 소식지를 낸다,70,Followers+10 Lust+1 Suspicion+5,표지에 눈길을 빼앗긴 사람들이 소식지를 집어 갑니다.,Reputation-4 Suspicion+5,음란물 배포라는 신고가 들어옵니다.
+dl26,2,단정한 소식지를 나눠 준다,90,Followers+5 Reputation+3,몇몇이 소식지를 읽고 신전을 찾아옵니다.,Followers+1,대부분 쓰레기통으로 들어갑니다.
+dl26,3,소식지 대신 입소문에 맡긴다,100,Followers+2 Offerings+5,인쇄비를 아낍니다.,-,-
+dl27,1,필사본에 당신의 입맞춤으로 인장을 찍는다,90,Doctrine+15 FollowerFaith+10 Lust+1,입술 자국이 찍힌 필사본이 가보처럼 모셔집니다.,FollowerFaith-3,필사본을 두고 다툼이 생깁니다.
+dl27,2,필사본을 금박 장정으로 묶는다,90,Doctrine+10 Authority+5 Offerings-15,황금빛 경전이 제단 위에서 빛납니다.,Offerings-15,장정이 엉성하게 나옵니다.
+dl27,3,필사 모임을 격려한다,100,Doctrine+8 Patience+1,붓끝이 밤늦게까지 멈추지 않습니다.,-,-
+dl28,1,제단 정면 가장 높은 곳에 건다,90,Authority+15 Ambition+1,모든 기도가 초상화를 향하게 됩니다.,FollowerFaith-3,신보다 초상화가 커 보인다는 말이 나옵니다.
+dl28,2,침소 앞 복도에 건다,90,FollowerFaith+10 Lust+1,초상화 앞을 지나는 신도들이 침소 쪽을 흘끔거립니다.,Suspicion+3,복도가 늘 붐빕니다.
+dl28,3,초상화 대신 상징 문양을 건다,100,Doctrine+5 Temperance+1,담백한 문양이 신전의 품격을 높입니다.,-,-
+dl29,1,집을 받고 신전에서 살게 한다,90,Offerings+40 FollowerFaith+10 Greed+1,그는 신전의 작은 방에서 누구보다 행복하게 기도합니다.,Suspicion+8 Reputation-2,가족들이 재산 갈취라며 고소합니다.
+dl29,2,일부만 받고 돌려준다,90,Offerings+15 Integrity+1,그는 당신의 배려에 더 깊이 감격합니다.,Offerings+5,그가 마음을 바꿔 조금만 냅니다.
+dl29,3,집은 팔지 말라고 말린다,100,Charity+1 Reputation+3,그는 눈물을 흘리며 집문서를 다시 품에 넣습니다.,-,-
+dl30,1,공허를 떠올리며 지금의 숭배를 탐한다,90,LeaderFaith+15 Ambition+2 Lust+1,다시는 잊히지 않겠다는 갈망이 신을 더 탐욕스럽게 만듭니다.,LeaderFaith-3,갈망이 불안으로 바뀝니다.
+dl30,2,신도 하나하나의 기도를 소중히 듣는다,90,LeaderFaith+10 FollowerFaith+10 Charity+1,작은 기도 하나하나가 공허를 메웁니다.,FollowerFaith-2,기도가 너무 많아 다 들을 수 없습니다.
+dl30,3,공허의 기억을 경전에 남긴다,70,Doctrine+15 LeaderFaith+5,잊힌 신의 고독이 교단의 첫 장이 됩니다.,Doctrine+3 Mentality-2,기억을 글로 옮기기 어렵습니다.

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using UnityEngine;
 
@@ -22,6 +22,8 @@ public class QuestionRunner : MonoBehaviour
         current = question;
         this.advancesTurn = advancesTurn;
         if (eventId != null) GameSession.SetPending(eventId, advancesTurn);
+        AdultArt.Show(eventId);
+        if (eventId != null) AudioManager.PlaySfx(MusicKeys.EventSfx(eventId));
         panel.Show(QuestionPanel.WithPreface(preface, question.Text), question.Choices.Select(choice => choice.Text).ToArray());
     }
 
@@ -30,6 +32,7 @@ public class QuestionRunner : MonoBehaviour
     {
         current = null;
         GameSession.ClearPending();
+        AdultArt.Hide();
     }
 
     void OnChosen(int number)
@@ -38,9 +41,40 @@ public class QuestionRunner : MonoBehaviour
         var question = current;
         current = null;
         GameSession.ClearPending();
-        var outcome = Turns.Answer(question.Choices[number - 1]);
+        AdultArt.Hide();
+        var choice = question.Choices[number - 1];
+        var before = Snapshot();
+        var outcome = Turns.Answer(choice);
+        var effects = ChangesSince(before, outcome);
         if (advancesTurn) GameSession.AdvanceTurn();
         else Achievements.Evaluate();
-        Answered?.Invoke(outcome.Text);
+        // 스탯이 바뀌지 않았으면 결과 창 없이 다음 글 위에 흐리게만 보여 준다. 바뀌었으면 결과 창을 닫아야 넘어간다
+        if (string.IsNullOrEmpty(effects)) Answered?.Invoke(outcome.Text);
+        else ResultWindow.Show(outcome == choice.Success, outcome.Text, effects, () => Answered?.Invoke(outcome.Text));
+    }
+
+    static readonly PersonalStatId[] PersonalIds = (PersonalStatId[])System.Enum.GetValues(typeof(PersonalStatId));
+    static readonly StatId[] CultIds = (StatId[])System.Enum.GetValues(typeof(StatId));
+
+    // 결과 창에는 기프티드 보정·상하한까지 반영된 실제 변화량을 보여 준다
+    static (int[] cult, int[] personal, int points) Snapshot() => (
+        CultIds.Select(id => GameSession.Cult[id].Value).ToArray(),
+        PersonalIds.Select(id => GameSession.Personal[id].Value).ToArray(),
+        GameSession.God.Points.Earned);
+
+    static string ChangesSince((int[] cult, int[] personal, int points) before, Outcome outcome)
+    {
+        var now = Snapshot();
+        var changes = CultIds.Select((id, i) => (StatLabel.Of(id), now.cult[i] - before.cult[i]))
+            .Concat(PersonalIds.Select((id, i) => (Lang.Get($"pstat_{id}"), now.personal[i] - before.personal[i])))
+            .ToList();
+        if (GameSession.GodMode)
+        {
+            changes.Add((Lang.Get("god_fx_Points"), now.points - before.points));
+            foreach (var (effect, amount) in outcome.GodEffects)
+                if (effect != GodEventEffect.Points) changes.Add((Lang.Get($"god_fx_{effect}"), amount));
+        }
+        var gifted = outcome.Grants.Select(GiftedCatalog.Find).Where(t => t != null).Select(t => string.Format(Lang.Get("result_gifted"), t.Name));
+        return ResultWindow.EffectsLine(changes, gifted);
     }
 }

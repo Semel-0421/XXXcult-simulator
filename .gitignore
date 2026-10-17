@@ -116,3 +116,6 @@ InitTestScene*.unity*
 # graphify output
 graph.json
 graphify-out/
+
+# AI 삽화 모델 비교 결과 (Docs/gen_ai_art.py --out)
+/ArtCompare/

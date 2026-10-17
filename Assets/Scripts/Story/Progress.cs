@@ -1,4 +1,4 @@
-// 한 판의 흐름 규칙: 회차, 곧바로 끝나는 엔딩(사망·해체), 행동 시점의 엔딩 판정.
+﻿// 한 판의 흐름 규칙: 회차, 곧바로 끝나는 엔딩(사망·해체), 행동 시점의 엔딩 판정.
 // 화면 흐름(LifeFlow/CultFlow)과 밸런스 시뮬레이션이 같은 규칙을 쓰도록 한곳에 모은다.
 //
 // 회차 = 지금까지 엔딩을 본 횟수 + 1. 회차가 오를수록 최종 스킬 엔딩이 계단식으로 풀린다.
@@ -33,8 +33,8 @@ public static class Progress
     public static int BranchThreshold(int run) => run switch
     {
         <= 0 => Endings.BranchStatAbove,
-        <= 3 => 95,
-        4 => 90,
+        <= 3 => 90,
+        4 => 85,
         _ => Endings.BranchStatAbove,
     };
 
@@ -60,19 +60,28 @@ public static class Progress
     }
 
     // 가장 먼저 0/최대에 이른 교단 스탯을 기록해 둔다 (언제든)
+    // 바닥 극단은 0에 이만큼(1년) 머물러야 친다: 헌금을 다 쓰고 곧 채우는 것처럼 잠깐 닿은 0은 붕괴가 아니다
+    public const int ZeroTurnsForBottom = 4;
+
     public static void Track()
     {
         if (!GameSession.CultFounded) return;
+        var now = GameSession.CultTime.Turns;
         foreach (StatId id in System.Enum.GetValues(typeof(StatId)))
-            if (GameSession.Cult[id].Value > 0) GameSession.MarkRaised(id);
+        {
+            if (GameSession.Cult[id].Value > 0) { GameSession.MarkRaised(id); GameSession.ZeroSince.Remove(id); }
+            else if (!GameSession.ZeroSince.ContainsKey(id)) GameSession.ZeroSince[id] = now;
+        }
         if (GameSession.FirstExtremeId != null) return;
-        var extreme = Endings.FindExtreme(GameSession.Cult, GameSession.RaisedMask);
+        var extreme = Endings.FindExtreme(GameSession.Cult, GameSession.RaisedMask,
+            id => GameSession.ZeroSince.TryGetValue(id, out var since) && now - since >= ZeroTurnsForBottom);
         if (extreme != null) GameSession.RecordExtreme(Endings.ExtremeId(extreme.Value.stat, extreme.Value.high));
     }
 
     // 곧바로 판이 끝나는 엔딩: 주인공 사망, 또는 명망이 바닥나 해체
     public static Endings.Ending ForcedEnding()
     {
+        if (GameSession.GodMode) return GodRules.ForcedEnding();
         if (GameSession.Dead) return Endings.Find(GameSession.CultFounded ? Endings.DeathLeader : Endings.DeathYoung);
         return GameSession.CultFounded && Turns.CultDissolved ? Endings.Find(Endings.Dissolved) : null;
     }
@@ -84,6 +93,7 @@ public static class Progress
     //  - 그 조건이 아직이면 25년이 지났을 때 가장 먼저 극단에 이른 교단 스탯의 엔딩.
     public static Endings.Ending DueEnding()
     {
+        if (GameSession.GodMode) return GodRules.DueEnding();
         Track();
         if (!GameSession.CultFounded || GameSession.CultTime.Turns < Endings.MinTurns) return null;
         var final = GameSession.Cult.Doctrines.Emblem;
@@ -101,6 +111,7 @@ public static class Progress
     // 엔딩에 도달: 기록을 남기고 업적을 확인한다
     public static void Reach(Endings.Ending ending)
     {
+        GameSession.SetEnding(ending);
         if (ending.Id == Endings.Dissolved) Profile.Count("dissolved");
         Endings.Reach(ending.Id);
         Achievements.Evaluate();
@@ -111,6 +122,7 @@ public static class Progress
     {
         var cult = GameSession.Cult.Name;
         var years = GameSession.CultTime.Years;
+        if (GameSession.GodMode) return string.Format(Lang.Get(ending.TextKey), cult, years); // 회차·유산이 없다
         string text;
         if (ending.Id == Endings.Dissolved) text = string.Format(Lang.Get("ending_dissolved"), cult, years);
         else if (IsDeath(ending)) text = string.Format(Lang.Get(ending.TextKey), cult, years, GameSession.Age.Years);
@@ -128,6 +140,6 @@ public static class Progress
         var opposite = Lang.Get(desire ? "trait_virtue" : "trait_desire");
         var above = desire ? ending.Kind == EndingKind.Good : ending.Kind == EndingKind.Bad;
         return string.Format(Lang.Get(above ? "end_cond_above" : "end_cond_below"),
-            Lang.Get($"pstat_{Endings.StatOf(branch)}"), BranchThreshold(CurrentRun), opposite, (int)Endings.OppositeAverage);
+            Lang.Get($"pstat_{Endings.StatOf(branch)}"), BranchThreshold(CurrentRun), opposite, (int)Endings.OppositeAverageFor(branch));
     }
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 // 불운: 부정적 이벤트가 닥칠 때마다 한 겹씩 쌓이고, 쌓인 만큼 매 턴 교단 스탯이 깎인다. 판이 끝날 때까지 사라지지 않는다.
@@ -10,18 +10,23 @@ public static class Misfortune
     // 불운 한 겹당 매 턴 깎이는 양 (소수는 쌓아 두었다가 반영)
     static readonly (StatId stat, float perStack)[] Decay =
     {
-        (StatId.Reputation, 3f),
-        (StatId.FollowerFaith, 4f),
+        (StatId.Reputation, 4.5f), // 다른 스탯보다 무겁게: 패배가 스탯 바닥보다 해체(명망 0)로 더 자주 오게
+        (StatId.FollowerFaith, 2.5f),
         (StatId.LeaderFaith, 3f),
         (StatId.Authority, 3f),
-        (StatId.Offerings, 4f),
+        (StatId.Offerings, 2.5f),
         (StatId.Doctrine, 2f),
         (StatId.Followers, 0.5f),
     };
 
+    // 겹이 쌓일수록 한 겹의 무게는 줄어든다: 실제로 치는 겹 수 = log2(1 + 겹) → 1겹 1, 3겹 2, 7겹 3, 10겹 약 3.46
+    public const float Strength = 0.8f; // 불운 디버프 전체 세기 (20% 약화)
+
+    public static float EffectiveStacks(int stacks) => (float)Math.Log(1 + Math.Clamp(stacks, 0, MaxStacks), 2);
+
     public static IEnumerable<(StatId stat, float amount)> DecayPerTurn(int stacks, float resistance)
     {
-        var factor = Math.Clamp(stacks, 0, MaxStacks) * (1f - Math.Clamp(resistance, 0f, 1f));
+        var factor = Strength * EffectiveStacks(stacks) * (1f - Math.Clamp(resistance, 0f, 1f));
         foreach (var (stat, perStack) in Decay)
             yield return (stat, perStack * factor);
     }

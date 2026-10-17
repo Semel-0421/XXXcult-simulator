@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using NUnit.Framework;
 
 public class MisfortuneTests
@@ -22,11 +22,23 @@ public class MisfortuneTests
         cult[StatId.Followers].Set(100);
 
         Misfortune.ApplyTurn(cult, 2, 0f);
-        Assert.AreEqual(CultStatus.StartingReputation - 6, cult[StatId.Reputation].Value);
-        Assert.AreEqual(495, cult[StatId.FollowerFaith].Value); // -8을 교리 8레벨(40%)이 막아 -4.8
-        Assert.AreEqual(494, cult[StatId.LeaderFaith].Value);
+        // 실제 겹 수 log2(1 + 2) ≈ 1.585
+        Assert.AreEqual(CultStatus.StartingReputation - 6, cult[StatId.Reputation].Value); // 4.5 × 0.8 × 1.585 = 5.7
+        Assert.AreEqual(498, cult[StatId.FollowerFaith].Value); // 2.5 × 0.8 × 1.585 = 3.2를 교리 8레벨(40%)이 막아 -1.9
+        Assert.AreEqual(496, cult[StatId.LeaderFaith].Value);
         Assert.AreEqual(99, cult[StatId.Followers].Value);
         Assert.AreEqual(0, cult[StatId.Communion].Value); // 히든 스탯은 건드리지 않음
+    }
+
+    [Test]
+    public void Stacks_CountLogarithmically()
+    {
+        Assert.AreEqual(0f, Misfortune.EffectiveStacks(0), 1e-4);
+        Assert.AreEqual(1f, Misfortune.EffectiveStacks(1), 1e-4);
+        Assert.AreEqual(2f, Misfortune.EffectiveStacks(3), 1e-4);
+        Assert.AreEqual(3f, Misfortune.EffectiveStacks(7), 1e-4);
+        var rep = Misfortune.DecayPerTurn(3, 0f).First(d => d.stat == StatId.Reputation).amount;
+        Assert.AreEqual(4.5f * Misfortune.Strength * 2f, rep, 1e-4); // 한 겹 4.5 × 세기 0.8 × 실제 겹 2 = 7.2
     }
 
     [Test]

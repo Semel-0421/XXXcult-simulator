@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 // 개인 스탯 효과
@@ -25,17 +25,20 @@ public class Outcome
     readonly List<StatEffect> personal = new();
     readonly List<CultEffect> cult = new();
     readonly List<string> grants = new();
+    readonly List<(GodEventEffect effect, int amount)> godEffects = new();
 
     public string Text { get; }
     public IReadOnlyList<StatEffect> Effects => personal;
     public IReadOnlyList<CultEffect> CultEffects => cult;
     public IReadOnlyList<string> Grants => grants;
+    public IReadOnlyList<(GodEventEffect effect, int amount)> GodEffects => godEffects; // 준비된 신 모드 전용 (GodRules.AfterEvent)
 
     public Outcome(string text) { Text = text ?? ""; }
 
     public Outcome P(PersonalStatId stat, int amount) { personal.Add(new StatEffect(stat, amount)); return this; }
     public Outcome C(StatId stat, int amount) { cult.Add(new CultEffect(stat, amount)); return this; }
     public Outcome G(params string[] giftedIds) { grants.AddRange(giftedIds); return this; }
+    public Outcome X(GodEventEffect effect, int amount) { godEffects.Add((effect, amount)); return this; }
 }
 
 // 선택지. 성공 확률(0~1)로 성공/실패 결과 중 하나가 정해진다. 확률 1이면 항상 성공.
@@ -70,7 +73,9 @@ public class Choice
         return Math.Clamp(Chance + bonus, MinChance, MaxChance);
     }
 
-    public bool Roll(Random rng, PersonalStatus personal = null) => Chance >= 1f || rng.NextDouble() < ChanceFor(personal);
+    // penalty: 외부 감점(준비된 신의 압박). 확률 1인 확정 선택지는 그대로 성공한다.
+    public bool Roll(Random rng, PersonalStatus personal = null, float penalty = 0) =>
+        Chance >= 1f || rng.NextDouble() < Math.Max(MinChance, ChanceFor(personal) - penalty);
 
     public Outcome Resolve(bool success) => success || Fail == null ? Success : Fail;
 }

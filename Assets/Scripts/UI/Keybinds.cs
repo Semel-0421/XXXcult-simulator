@@ -88,9 +88,9 @@ public static class Keybinds
     public static string Legend(IReadOnlyList<string> names)
     {
         var parts = new List<string>();
-        // 글자를 눌러도 행동이 선택되도록 링크로 만든다 (QuestionPanel이 act0~act4를 처리)
+        // 글자를 눌러도 행동이 선택되도록 링크로 만든다 (QuestionPanel이 act0~act4를 처리) 밑줄(<u>)은 마포 글꼴에 "_"가 없어 경고만 쌓이므로 색으로만 표시한다
         for (int i = 0; i < ActionCount && i < names.Count; i++)
-            parts.Add($"<link=\"{ActionLinkPrefix}{i}\"><color=#F2D978><u>[{Label(Get(i))}] {names[i]}</u></color></link>");
+            parts.Add($"<link=\"{ActionLinkPrefix}{i}\"><color=#F2D978>[{Label(Get(i))}] {names[i]}</color></link>");
         return string.Join("   ", parts);
     }
 }

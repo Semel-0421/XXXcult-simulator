@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -16,6 +16,8 @@ public class CultFlow : MonoBehaviour
     void Start()
     {
         actionBar.CultChosen += OnActionChosen;
+        ConsecrateWindow.Chosen += OnConsecrate;
+        ConsecrateWindow.CanAct = () => actionBar.CanAct;
         tree = GameSession.Cult.Doctrines;
         tree.Changed += OnDoctrineChanged;
         if (GameSession.CultFounded && TryDissolve()) return; // 엔딩 직전에 저장한 판을 불러온 경우
@@ -27,7 +29,7 @@ public class CultFlow : MonoBehaviour
     {
         var id = GameSession.PendingEventId;
         if (string.IsNullOrEmpty(id)) return false;
-        foreach (var e in CultEvents.All)
+        foreach (var e in AdultGate.Active ? Turns.CultPool.Concat(AdultEvents.All) : Turns.CultPool)
         {
             if (e.Id != id) continue;
             questionRunner.Answered += OnEventAnswered;
@@ -41,6 +43,8 @@ public class CultFlow : MonoBehaviour
     void OnDestroy()
     {
         actionBar.CultChosen -= OnActionChosen;
+        ConsecrateWindow.Chosen -= OnConsecrate;
+        ConsecrateWindow.CanAct = () => false;
         questionRunner.Answered -= OnEventAnswered;
         if (restRoutine != null) StopCoroutine(restRoutine);
         if (tree != null) tree.Changed -= OnDoctrineChanged;
@@ -69,18 +73,31 @@ public class CultFlow : MonoBehaviour
         var success = Turns.Cult(action);
         var summary = Lang.Get($"cult_{(success ? "done" : "fail")}_{action}");
 
-        resultView.Play(CultActions.Key(action), success, () =>
-        {
-            if (TryDissolve()) return;
-            var next = Turns.NextCultEvent();
-            if (next == null) { actionBar.SetInteractable(true); PromptOrRest(summary); return; }
+        resultView.Play(CultActions.Key(action), success, () => AfterTurn(summary));
+    }
 
-            var preface = next.IsNegative
-                ? $"{summary}\n<color=#DC5050>{string.Format(Lang.Get("misfortune_struck"), GameSession.Misfortune)}</color>"
-                : summary;
-            questionRunner.Answered += OnEventAnswered;
-            questionRunner.Run(next.Question, preface, advancesTurn: false, eventId: next.Id);
-        });
+    // 축성(봉헌 건축)도 행동 턴을 쓴다
+    void OnConsecrate(GodBuildingType type)
+    {
+        if (!actionBar.CanAct) return;
+        actionBar.SetInteractable(false);
+        if (!Turns.Consecrate(type)) { actionBar.SetInteractable(true); return; }
+        var summary = string.Format(Lang.Get("god_consecrated"), Lang.Get($"god_building_{type}"), GameSession.God.Buildings.LevelOf(type));
+        resultView.Play("Consecrate", true, () => AfterTurn(summary));
+    }
+
+    // 행동 턴이 끝난 뒤: 엔딩 확인 → 이어질 이벤트 → 다음 행동 안내
+    void AfterTurn(string summary)
+    {
+        if (TryDissolve()) return;
+        var next = Turns.NextCultEvent();
+        if (next == null) { actionBar.SetInteractable(true); PromptOrRest(summary); return; }
+
+        var preface = next.IsNegative && !GameSession.GodMode
+            ? $"{summary}\n<color=#DC5050>{string.Format(Lang.Get("misfortune_struck"), GameSession.Misfortune)}</color>"
+            : summary;
+        questionRunner.Answered += OnEventAnswered;
+        questionRunner.Run(next.Question, preface, advancesTurn: false, eventId: next.Id);
     }
 
     void OnEventAnswered(string resultText)

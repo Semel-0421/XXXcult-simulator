@@ -1,0 +1,126 @@
+id,ring,parent,kind,name,description,effects
+ascension,0,,center,승천,두 개의 핵이 하나로 합쳐질 때 신은 그릇을 벗고 하늘에 오릅니다.,
+c_miracle,5,ascension,core,기적의 근원,그릇 안의 신성이 마침내 온전히 깨어납니다.,commune+15 chance:Wonder+5 chance:Healing+5
+c_prophecy,5,ascension,core,말씀의 근원,신의 말이 곧 세상의 법이 됩니다.,gain:Doctrine+10 chance:Revelation+5 faith+15
+c_mercy,5,ascension,core,자애의 근원,끝없는 자비가 교단을 감싸는 성벽이 됩니다.,guard:FollowerFaith+10 guard:Followers+10 resist:Earth+10
+c_desire,5,ascension,core,쾌락의 근원,쾌락과 신성이 구별되지 않는 경지에 이릅니다.,vessel+15 chance:Feast+5 gain:Offerings+10
+g_heal,4,c_miracle,group,치유의 손,병든 몸과 마음을 어루만지는 기적.,chance:Healing+5 guard:Health+5
+g_wonder,4,c_miracle,group,이적의 권능,세상의 이치를 뒤집는 기적.,chance:Wonder+5 commune+5
+g_revelation,4,c_prophecy,group,계시의 문,신의 뜻을 말로 옮기는 길.,chance:Revelation+5 gain:Doctrine+5
+g_foresight,4,c_prophecy,group,예지의 눈,다가올 일을 먼저 보는 눈.,resist:Heaven+5 resist:Earth+5
+g_discipline,4,c_mercy,group,자기 수양,스스로를 다스리는 덕.,guard:FollowerFaith+5 resist:Heaven+5
+g_neighbor,4,c_mercy,group,이웃을 향한 덕,남을 향해 열린 덕.,gain:Reputation+5 gain:Followers+5
+g_flesh,4,c_desire,group,육체의 욕망,몸이 원하는 것을 긍정하는 길.,vessel+10 chance:Feast+5
+g_world,4,c_desire,group,세속의 욕망,부와 권세를 탐하는 길.,gain:Offerings+5 gain:Authority+5
+s_health,3,g_heal,stat,강건한 그릇,숙주의 몸이 신의 힘을 버틸 만큼 단단해집니다.,gain:Health+10 guard:Health+5
+t_health_atk,2,s_health,attack,생명의 축복,살아 있음의 기쁨으로 신도들을 불태웁니다.,gain:FollowerFaith+8 chance:Healing+3
+l_health_atk1,1,t_health_atk,attack,손끝의 온기,손길 한 번에 아픈 이가 일어섭니다.,chance:Healing+5
+l_health_atk2,1,t_health_atk,attack,치유의 행렬,치유를 바라는 사람들이 줄지어 찾아옵니다.,gain:Followers+5
+t_health_def,2,s_health,defense,불굴의 육신,어떤 상처도 그릇을 쓰러뜨리지 못합니다.,guard:Health+8
+l_health_def1,1,t_health_def,defense,단단한 살결,칼날의 환영도 살갗을 뚫지 못합니다.,guard:Health+5
+l_health_def2,1,t_health_def,defense,피의 재생,해가 바뀔 때마다 몸이 스스로 회복됩니다.,year:Health+1
+s_mentality,3,g_heal,stat,고요한 정신,숙주의 정신이 신의 목소리에 흔들리지 않습니다.,gain:Mentality+10 guard:Mentality+5
+t_mentality_atk,2,s_mentality,attack,황홀의 전염,당신의 황홀이 신도들에게 번져 갑니다.,gain:FollowerFaith+8 chance:Commune+3
+l_mentality_atk1,1,t_mentality_atk,attack,꿈속의 방문,신도들의 꿈에 찾아가 믿음을 심습니다.,gain:FollowerFaith+5
+l_mentality_atk2,1,t_mentality_atk,attack,깨어 있는 눈,잠들지 않는 정신이 교감을 깊게 합니다.,chance:Commune+5
+t_mentality_def,2,s_mentality,defense,흔들리지 않는 마음,다른 신의 저주가 마음을 흔들지 못합니다.,guard:Mentality+8 resist:Heaven+5
+l_mentality_def1,1,t_mentality_def,defense,침묵을 찢는 목소리,묵언회의 침묵이 당신에게 닿지 않습니다.,resist:Heaven+5
+l_mentality_def2,1,t_mentality_def,defense,맑은 밤,악몽 없는 밤이 정신을 지킵니다.,guard:Mentality+5
+s_wealth,3,g_wonder,stat,황금의 손길,손이 닿는 곳마다 재물이 모여듭니다.,gain:Wealth+10 gain:Offerings+5
+t_wealth_atk,2,s_wealth,attack,넘치는 봉헌,신도들이 앞다투어 봉헌합니다.,gain:Offerings+8
+l_wealth_atk1,1,t_wealth_atk,attack,금빛 헌금함,헌금함이 비는 날이 없습니다.,gain:Offerings+5
+l_wealth_atk2,1,t_wealth_atk,attack,기적의 축성,기적으로 건물을 세우는 법을 깨칩니다.,chance:Consecrate+5
+t_wealth_def,2,s_wealth,defense,봉인된 금고,교단의 재산이 쉽게 빠져나가지 않습니다.,guard:Offerings+8 seize+8
+l_wealth_def1,1,t_wealth_def,defense,숨겨진 장부,조사관이 찾지 못하는 장부가 건물을 지킵니다.,seize+5
+l_wealth_def2,1,t_wealth_def,defense,단단한 주춧돌,교단의 재물이 쉽게 흩어지지 않습니다.,guard:Offerings+5
+s_miracle,3,g_wonder,stat,드러난 신성,기적이 그릇을 덜 갉아먹습니다.,commune+10 gain:Followers+5
+t_miracle_atk,2,s_miracle,attack,이적의 무대,기적을 보러 온 군중이 신도가 됩니다.,gain:Followers+8 chance:Wonder+3
+l_miracle_atk1,1,t_miracle_atk,attack,군중을 부르는 빛,하늘의 빛이 사람들을 불러 모읍니다.,gain:Followers+5
+l_miracle_atk2,1,t_miracle_atk,attack,멈추지 않는 기적,기적이 잘 끊기지 않습니다.,chance:Wonder+5
+t_miracle_def,2,s_miracle,defense,베일 속의 기적,기적이 세상의 눈에 덜 띕니다.,resist:Earth+8 commune+5
+l_miracle_def1,1,t_miracle_def,defense,흔적 없는 이적,기적이 끝나면 아무 증거도 남지 않습니다.,resist:Earth+5
+l_miracle_def2,1,t_miracle_def,defense,아끼는 힘,작은 기적에는 힘을 덜 씁니다.,commune+5
+s_piety,3,g_revelation,stat,깊은 경건,신 스스로의 확신이 깊어집니다.,gain:Piety+10 gain:LeaderFaith+5
+t_piety_atk,2,s_piety,attack,불타는 믿음,뜨거운 믿음이 신도들에게 옮겨 붙습니다.,gain:FollowerFaith+8 gain:LeaderFaith+5
+l_piety_atk1,1,t_piety_atk,attack,타오르는 기도,기도할수록 신의 확신이 커집니다.,gain:LeaderFaith+5
+l_piety_atk2,1,t_piety_atk,attack,믿음의 불씨,작은 믿음도 금세 불길이 됩니다.,gain:FollowerFaith+5
+t_piety_def,2,s_piety,defense,무너지지 않는 믿음,외부의 공격에도 신앙이 쉽게 식지 않습니다.,guard:FollowerFaith+8
+l_piety_def1,1,t_piety_def,defense,흔들림 없는 무릎,신도들이 쉽게 고개를 들지 않습니다.,guard:FollowerFaith+5
+l_piety_def2,1,t_piety_def,defense,배교자의 귀환,떠나려던 신도가 발길을 돌립니다.,guard:Followers+5
+s_doctrine,3,g_revelation,stat,새겨진 말씀,말씀이 돌에 새긴 듯 단단해집니다.,gain:Doctrine+10
+t_doctrine_atk,2,s_doctrine,attack,선포의 나팔,말씀이 거리로 울려 퍼집니다.,gain:Doctrine+8 chance:Revelation+3
+l_doctrine_atk1,1,t_doctrine_atk,attack,거리의 설교,광장에서도 계시가 통합니다.,chance:Revelation+5
+l_doctrine_atk2,1,t_doctrine_atk,attack,경전의 확산,경전을 읽은 이들이 찾아옵니다.,gain:Followers+5
+t_doctrine_def,2,s_doctrine,defense,논쟁의 방패,기성 종교의 반박이 교리를 깎지 못합니다.,guard:Doctrine+8 resist:Heaven+5
+l_doctrine_def1,1,t_doctrine_def,defense,이단 반박,이단이라는 공격을 되받아칩니다.,guard:Doctrine+5
+l_doctrine_def2,1,t_doctrine_def,defense,정통의 증명,다른 신들이 트집을 잡기 어려워집니다.,resist:Heaven+5
+s_communion,3,g_foresight,stat,신과의 끈,신과 그릇을 잇는 끈이 굵어집니다.,commune+10 year:Communion+1
+t_communion_atk,2,s_communion,attack,넘치는 신성,기적에 드는 힘이 줄고 교감이 쉬워집니다.,commune+8 chance:Commune+3
+l_communion_atk1,1,t_communion_atk,attack,끈의 공명,교감할 때마다 끈이 울립니다.,chance:Commune+5
+l_communion_atk2,1,t_communion_atk,attack,나누는 계시,교감에서 얻은 환영을 신도들과 나눕니다.,gain:FollowerFaith+5
+t_communion_def,2,s_communion,defense,끊기지 않는 끈,다른 신들이 끈을 끊기 어렵습니다.,guard:Communion+8 resist:Heaven+5
+l_communion_def1,1,t_communion_def,defense,침묵 저항,접신 봉쇄를 버텨 냅니다.,guard:Communion+5
+l_communion_def2,1,t_communion_def,defense,신들의 장막,다른 신들의 눈을 가리는 장막을 칩니다.,resist:Heaven+5
+s_repute,3,g_foresight,stat,알려진 이름,신의 이름이 세상에 퍼집니다.,gain:Repute+10 gain:Reputation+5
+t_repute_atk,2,s_repute,attack,예언의 적중,들어맞은 예언이 사람들을 불러 모읍니다.,gain:Followers+8 gain:Reputation+5
+l_repute_atk1,1,t_repute_atk,attack,입소문,예언이 입에서 입으로 퍼집니다.,gain:Followers+5
+l_repute_atk2,1,t_repute_atk,attack,들어맞은 예언,예언이 맞을 때마다 명망이 오릅니다.,gain:Reputation+5
+t_repute_def,2,s_repute,defense,흔들리지 않는 평판,나쁜 소문이 쉽게 퍼지지 않습니다.,guard:Reputation+8 resist:Earth+5
+l_repute_def1,1,t_repute_def,defense,소문 잠재우기,거짓 기적이라는 소문이 힘을 잃습니다.,guard:Reputation+5
+l_repute_def2,1,t_repute_def,defense,언론의 벗,기자들이 당신에게 우호적입니다.,resist:Earth+5
+s_temperance,3,g_discipline,stat,절제의 미덕,욕망을 다스리는 힘이 커집니다.,gain:Temperance+10
+t_temperance_atk,2,s_temperance,attack,청빈의 감화,소박한 신의 모습에 신도들이 감동합니다.,gain:FollowerFaith+8
+l_temperance_atk1,1,t_temperance_atk,attack,소박한 식탁,함께 먹는 소박한 밥이 신앙을 키웁니다.,gain:FollowerFaith+5
+l_temperance_atk2,1,t_temperance_atk,attack,본보기의 삶,바깥에서도 교단을 좋게 봅니다.,gain:Reputation+5
+t_temperance_def,2,s_temperance,defense,드러내지 않는 힘,다른 신들의 시기를 덜 삽니다.,resist:Heaven+8
+l_temperance_def1,1,t_temperance_def,defense,몸을 낮춤,신들의 눈에 덜 띕니다.,resist:Heaven+5
+l_temperance_def2,1,t_temperance_def,defense,조용한 행보,세상의 의혹을 덜 삽니다.,resist:Earth+5
+s_patience,3,g_discipline,stat,인내의 미덕,오래 견디는 힘이 커집니다.,gain:Patience+10
+t_patience_atk,2,s_patience,attack,기다림의 열매,시간이 흐를수록 신앙이 쌓입니다.,year:FollowerFaith+10
+l_patience_atk1,1,t_patience_atk,attack,느린 전도,해마다 조용히 신도가 늘어납니다.,year:Followers+2
+l_patience_atk2,1,t_patience_atk,attack,오래 타는 촛불,해마다 신앙이 조금씩 깊어집니다.,year:FollowerFaith+5
+t_patience_def,2,s_patience,defense,견디는 교단,어떤 공세에도 신도들이 버팁니다.,guard:Followers+8
+l_patience_def1,1,t_patience_def,defense,버티는 신도들,개종 공세에도 쉽게 떠나지 않습니다.,guard:Followers+5
+l_patience_def2,1,t_patience_def,defense,포위 속의 노래,포위당해도 신앙이 식지 않습니다.,guard:FollowerFaith+5
+s_charity,3,g_neighbor,stat,자애의 미덕,남을 향한 마음이 커집니다.,gain:Charity+10
+t_charity_atk,2,s_charity,attack,베푸는 손,베풂이 사람들을 교단으로 이끕니다.,gain:Followers+8 chance:Healing+3
+l_charity_atk1,1,t_charity_atk,attack,구호의 줄,구호소의 줄이 신도의 줄이 됩니다.,gain:Followers+5
+l_charity_atk2,1,t_charity_atk,attack,나누는 빵,나눔과 함께 치유가 잘 듣습니다.,chance:Healing+5
+t_charity_def,2,s_charity,defense,감사의 방벽,은혜 입은 이웃이 교단을 감쌉니다.,guard:Reputation+8
+l_charity_def1,1,t_charity_def,defense,은혜 입은 이웃,이웃들이 나쁜 소문을 막아 줍니다.,guard:Reputation+5
+l_charity_def2,1,t_charity_def,defense,자선의 증언,자선의 기록이 의혹을 덮습니다.,resist:Earth+5
+s_integrity,3,g_neighbor,stat,청렴의 미덕,떳떳함이 힘이 됩니다.,gain:Integrity+10
+t_integrity_atk,2,s_integrity,attack,깨끗한 이름,깨끗한 교단이라는 평이 퍼집니다.,gain:Reputation+8
+l_integrity_atk1,1,t_integrity_atk,attack,투명한 장부,장부를 공개할수록 명망이 오릅니다.,gain:Reputation+5
+l_integrity_atk2,1,t_integrity_atk,attack,정직한 설교,꾸밈없는 말이 신도들을 움직입니다.,gain:FollowerFaith+5
+t_integrity_def,2,s_integrity,defense,털어도 먼지 없는,조사가 와도 잃을 것이 적습니다.,seize+8 resist:Earth+5
+l_integrity_def1,1,t_integrity_def,defense,조사의 무력화,압류를 피할 길이 생깁니다.,seize+5
+l_integrity_def2,1,t_integrity_def,defense,결백의 증명,세상의 의혹이 덜 쌓입니다.,resist:Earth+5
+s_lust,3,g_flesh,stat,타오르는 육욕,몸의 열기가 그릇을 데웁니다.,gain:Lust+10 vessel+5
+t_lust_atk,2,s_lust,attack,유혹의 손짓,유혹이 신도들을 깊이 묶습니다.,gain:FollowerFaith+8 chance:Feast+3
+l_lust_atk1,1,t_lust_atk,attack,간택의 밤,간택받은 밤의 기억이 신앙이 됩니다.,gain:FollowerFaith+5
+l_lust_atk2,1,t_lust_atk,attack,매혹의 향,향연이 잘 풀립니다.,chance:Feast+5
+t_lust_def,2,s_lust,defense,쾌락의 회복,쾌락이 그릇을 더 깊이 회복시킵니다.,vessel+8
+l_lust_def1,1,t_lust_def,defense,살결의 온기,살을 맞댄 밤이 몸을 되살립니다.,vessel+5
+l_lust_def2,1,t_lust_def,defense,달콤한 망각,쾌락이 정신의 상처를 덮습니다.,guard:Mentality+5
+s_appetite,3,g_flesh,stat,끝없는 식욕,먹을수록 그릇이 차오릅니다.,gain:Appetite+10 vessel+5
+t_appetite_atk,2,s_appetite,attack,성찬의 초대,잔칫상이 사람들을 불러 모읍니다.,gain:Followers+8
+l_appetite_atk1,1,t_appetite_atk,attack,넘치는 잔칫상,배부른 이들이 신도가 됩니다.,gain:Followers+5
+l_appetite_atk2,1,t_appetite_atk,attack,신의 포도주,한 잔의 포도주가 믿음을 키웁니다.,gain:FollowerFaith+5
+t_appetite_def,2,s_appetite,defense,배부른 그릇,먹고 마신 만큼 그릇이 회복됩니다.,vessel+8 guard:Health+4
+l_appetite_def1,1,t_appetite_def,defense,보양의 식탁,기름진 음식이 몸을 되살립니다.,vessel+5
+l_appetite_def2,1,t_appetite_def,defense,두둑한 곳간,배부른 신도는 쌀자루를 따라 떠나지 않습니다.,guard:Followers+5
+s_greed,3,g_world,stat,황금의 갈망,재물에 대한 갈망이 힘이 됩니다.,gain:Greed+10 gain:Offerings+5
+t_greed_atk,2,s_greed,attack,탐스러운 봉헌,더 큰 봉헌이 더 큰 축복을 부릅니다.,gain:Offerings+8
+l_greed_atk1,1,t_greed_atk,attack,황금 헌금 경쟁,신도들이 봉헌 액수를 겨룹니다.,gain:Offerings+5
+l_greed_atk2,1,t_greed_atk,attack,사치의 위세,사치가 곧 위엄이 됩니다.,gain:Authority+5
+t_greed_def,2,s_greed,defense,돈으로 사는 평화,돈이 세상의 의혹을 잠재웁니다.,resist:Earth+8
+l_greed_def1,1,t_greed_def,defense,은밀한 로비,조사의 칼끝이 무뎌집니다.,resist:Earth+5
+l_greed_def2,1,t_greed_def,defense,빼돌린 재산,압류당하기 전에 재산을 옮깁니다.,seize+5
+s_ambition,3,g_world,stat,군림의 야망,모든 것 위에 서려는 야망이 커집니다.,gain:Ambition+10 gain:Authority+5
+t_ambition_atk,2,s_ambition,attack,정복의 깃발,세력이 거침없이 불어납니다.,gain:Followers+8 gain:Authority+5
+l_ambition_atk1,1,t_ambition_atk,attack,흡수 합병,다른 교단의 신도를 삼킵니다.,gain:Followers+5
+l_ambition_atk2,1,t_ambition_atk,attack,옥좌의 위엄,높은 자리에서 위엄이 흘러내립니다.,gain:Authority+5
+t_ambition_def,2,s_ambition,defense,신들 앞의 오만,다른 신들 앞에서도 고개를 숙이지 않습니다.,resist:Heaven+8 guard:Authority+5
+l_ambition_def1,1,t_ambition_def,defense,무릎 꿇지 않는 신,신계의 압박이 덜 쌓입니다.,resist:Heaven+5
+l_ambition_def2,1,t_ambition_def,defense,철의 질서,위엄이 쉽게 무너지지 않습니다.,guard:Authority+5

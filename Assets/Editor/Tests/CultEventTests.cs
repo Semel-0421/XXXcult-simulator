@@ -162,4 +162,15 @@ public class CultEventTests
             if (e != null) Assert.AreEqual(CultEvent.EventKind.Random, e.Kind);
         }
     }
+
+    [Test]
+    public void ReputationBoost_StepsEvery100Below400()
+    {
+        Assert.AreEqual(0, CultEvent.ReputationBoostSteps(400));
+        Assert.AreEqual(1, CultEvent.ReputationBoostSteps(399));
+        Assert.AreEqual(1, CultEvent.ReputationBoostSteps(300));
+        Assert.AreEqual(2, CultEvent.ReputationBoostSteps(299));
+        Assert.AreEqual(4, CultEvent.ReputationBoostSteps(0));
+        Assert.AreEqual(4, CultEvent.ReputationBoostSteps(-5));
+    }
 }

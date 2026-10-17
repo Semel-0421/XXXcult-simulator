@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 // 엔딩 목록. 엔딩을 보면 기록에 남고, 엔딩 목록 창에서 지금까지 본 엔딩을 다시 볼 수 있다.
 //  - 해체: 명망이 바닥나 국가의 명령으로 교단이 해체됨 (연수 제한 없음)
@@ -41,6 +41,9 @@ public static class Endings
     public const int ExtremeYears = 25;        // 이 연수가 지나도 최종 스킬 엔딩이 나오지 않으면 극단 엔딩
     public const int BranchStatAbove = 75;     // 고른 가지의 수치가 이 값을 넘어야 한다 (5회차 이후의 최종 문턱)
     public const float OppositeAverage = 50f;  // 반대쪽(덕목↔욕망) 평균 기준
+    public const float VirtueOppositeAverage = 45f; // 미덕 가지는 덕목을 올리며 욕망까지 50을 넘기기 어려워(배드 달성률이 가장 낮았음) 문턱을 낮춘다
+
+    public static float OppositeAverageFor(DoctrineBranch branch) => IsDesireBranch(branch) ? OppositeAverage : VirtueOppositeAverage;
 
     // All보다 먼저 선언해야 Build()에서 쓸 수 있다
     static readonly StatId[] ExtremeStats =
@@ -104,26 +107,27 @@ public static class Endings
     };
 
     // 최종 스킬 엔딩 판정: 고른 가지의 수치가 문턱(기본 75)을 넘고, 반대쪽 평균으로 굿/배드를 가른다. 아직이면 null.
-    //  - 미덕 가지: 욕망 평균이 50 이하면 굿, 넘으면 배드 (미덕을 지켜 냄 / 겉만 미덕)
+    //  - 미덕 가지: 욕망 평균이 45 이하면 굿, 넘으면 배드 (미덕을 지켜 냄 / 겉만 미덕)
     //  - 욕망 가지: 미덕 평균이 50을 넘으면 굿, 이하면 배드 (욕망을 승화함 / 욕망에 잠김)
     public static EndingKind? Decide(PersonalStatus personal, DoctrineBranch branch, int threshold = BranchStatAbove)
     {
         if (personal[StatOf(branch)].Value <= threshold) return null;
         var desire = IsDesireBranch(branch);
         var opposite = CultEvent.TraitAverage(personal, desire ? CultEvent.MoodTrait.Virtue : CultEvent.MoodTrait.Desire);
-        var above = opposite > OppositeAverage;
+        var above = opposite > OppositeAverageFor(branch);
         return desire ? (above ? EndingKind.Good : EndingKind.Bad) : (above ? EndingKind.Bad : EndingKind.Good);
     }
 
     // 지금 0 또는 최대(1000, 단 최대가 더 작은 스탯은 그 최대)에 이른 교단 스탯. 여럿이면 목록 순서가 앞선 것.
     // 0은 한 번이라도 올랐던 스탯(raisedMask)이 다시 바닥으로 떨어졌을 때만 센다. 시작값이 0인 스탯은 바닥이 아니다.
-    public static (StatId stat, bool high)? FindExtreme(CultStatus cult, int raisedMask)
+    // sustainedZero: 0에 머문 기간이 충분한지 (null이면 닿는 즉시 바닥으로 본다)
+    public static (StatId stat, bool high)? FindExtreme(CultStatus cult, int raisedMask, System.Func<StatId, bool> sustainedZero = null)
     {
         foreach (var id in ExtremeStats)
         {
             var stat = cult[id];
             if (stat.Value >= System.Math.Min(ClampedStat.DefaultMax, stat.Max)) return (id, true);
-            if (id != StatId.Reputation && stat.Value <= stat.Min && (raisedMask & (1 << (int)id)) != 0) return (id, false);
+            if (id != StatId.Reputation && stat.Value <= stat.Min && (raisedMask & (1 << (int)id)) != 0 && (sustainedZero == null || sustainedZero(id))) return (id, false);
         }
         return null;
     }

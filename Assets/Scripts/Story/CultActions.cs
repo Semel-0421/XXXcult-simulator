@@ -47,8 +47,8 @@ public static class CultActions
     // 기프티드 특수효과·픽토그램에서 쓰는 행동 키 (생활 기도와 구분하려고 교단 기도는 CultPray)
     public static string Key(CultAction action) => action == CultAction.Pray ? "CultPray" : action.ToString();
 
-    public static bool Roll(CultStatus cult, TalentList gifted, CultAction action, System.Random rng) =>
-        ActionCheck.Roll(cult.Ratio(KeyStat(action)), rng, GiftedSpecials.ChanceBonus(gifted, Key(action)));
+    public static bool Roll(CultStatus cult, TalentList gifted, CultAction action, System.Random rng, float extraBonus = 0) =>
+        ActionCheck.Roll(cult.Ratio(KeyStat(action)), rng, GiftedSpecials.ChanceBonus(gifted, Key(action)) + extraBonus);
 
     public static void Apply(CultStatus cult, PersonalStatus personal, CultAction action, bool success = true)
     {
