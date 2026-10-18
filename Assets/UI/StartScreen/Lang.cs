@@ -5,7 +5,7 @@ using UnityEngine;
 public static class Lang
 {
     public static event Action Changed;
-    public static bool IsKorean { get; private set; } = PlayerPrefs.GetString("lang", "ko") == "ko";
+    public static bool IsKorean { get; private set; } = PlayerPrefs.GetString("lang", "en") == "ko";
 
     static readonly Dictionary<string, (string en, string ko)> Table = new()
     {
