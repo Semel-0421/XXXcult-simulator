@@ -39,17 +39,26 @@ public class DoctrineTreeView : MonoBehaviour
     DoctrineSkill selected;
     DoctrineTree tree;
     static Sprite circle;
+    Transform window;
 
     public static DoctrineTreeView Build(Transform window)
     {
-        var root = UiKit.Child(window, "DoctrineTree");
+        // 트리와 가운데 교리 선포 노드를 확대·이동 영역(TreeZoom) 안에 함께 넣는다
+        var declaration = window.Find("Declaration") as RectTransform;
+        var content = TreeZoom.Create(window, declaration != null ? declaration.GetSiblingIndex() : 0);
+        var root = UiKit.Child(content, "DoctrineTree");
         root.anchorMin = root.anchorMax = new Vector2(0.5f, 0.5f);
         root.sizeDelta = Vector2.zero;
         root.anchoredPosition = new Vector2(CenterX, 0);
-        var declaration = window.Find("Declaration") as RectTransform; // 가운데 교리 선포 노드도 함께 옮긴다
-        if (declaration != null) declaration.anchoredPosition = new Vector2(CenterX, declaration.anchoredPosition.y);
-        root.SetSiblingIndex(0); // 교리 선포 노드·버튼보다 뒤에
+        if (declaration != null)
+        {
+            declaration.SetParent(content, false);
+            declaration.anchorMin = declaration.anchorMax = new Vector2(0.5f, 0.5f);
+            declaration.anchoredPosition = new Vector2(CenterX, declaration.anchoredPosition.y);
+        }
+        root.SetAsFirstSibling(); // 교리 선포 노드보다 뒤에
         var view = root.gameObject.AddComponent<DoctrineTreeView>();
+        view.window = window;
         view.Create();
         return view;
     }
@@ -134,7 +143,7 @@ public class DoctrineTreeView : MonoBehaviour
     void BuildInfoPanel()
     {
         // 정보창은 창의 오른쪽 가장자리에 붙인다 (화면 비율이 달라도 잘리지 않게)
-        var panel = UiKit.Child(transform.parent, "DoctrineInfo", typeof(Image), typeof(Outline));
+        var panel = UiKit.Child(window, "DoctrineInfo", typeof(Image), typeof(Outline));
         panel.anchorMin = panel.anchorMax = panel.pivot = new Vector2(1, 0.5f);
         panel.anchoredPosition = new Vector2(-40, 0);
         panel.sizeDelta = new Vector2(380, 560);
