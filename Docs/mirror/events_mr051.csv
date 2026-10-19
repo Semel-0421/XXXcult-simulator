@@ -1,0 +1,51 @@
+﻿id,kind,theme,text,text_en
+mr051,random,Offerings,시장 상인들이 '가장 많이 바가지 씌운 상인' 상패를 걸고 축제를 엽니다. 당신에게 시상을 부탁합니다.,Market vendors hold a festival awarding a plaque to 'the vendor who overcharged the most.' They ask you to present it.
+mr052,random,Followers,동네 학교에서 '욕심 발표회'가 열립니다. 아이를 둔 부모들이 당신을 심사위원으로 초청합니다.,The neighborhood school holds a 'Greed Recital.' Parents invite you to judge.
+mr053,random,Authority,구청 공무원이 '뇌물을 안 받는 건 업무 태만'이라며 당신에게 상납을 요구합니다.,A district official says 'refusing bribes is dereliction of duty' and demands a payoff from you.
+mr054,random,Reputation,이웃집 부부가 '누가 더 사치스러운가'로 골목에서 대결을 벌입니다. 구경꾼들이 당신에게 판정을 청합니다.,A neighbor couple duels in the alley over 'who's more extravagant.' Onlookers ask you to judge.
+mr055,random,Doctrine,서점에서 '절제의 함정'이라는 베스트셀러가 불티나게 팔립니다. 저자가 당신과 공개 대담을 원합니다.,A bestseller called 'The Temperance Trap' is flying off bookstore shelves. The author wants a public talk with you.
+mr056,random,Communion,신도들이 '누가 가장 많이 먹나' 공동 만찬을 열자고 합니다.,Your followers propose a communal feast: 'Who can eat the most?'
+mr057,random,LeaderFaith,"새벽 기도 중, 거리에서 들려오는 '욕망 만세' 구호에 집중이 흐트러집니다.","During dawn prayer, chants of 'Long live desire!' from the street break your focus."
+mr058,random,FollowerFaith,한 신도가 이웃에게 '아직도 정직하게 사냐'며 비웃음을 당하고 울며 찾아옵니다.,A follower comes to you in tears after neighbors mocked them: 'You still live honestly?'
+mr059,random,Followers,한 가족이 '할머니가 저축만 하다 돌아가셨다'며 유산을 탕진하는 장례 파티를 엽니다.,A family throws a funeral party to blow the inheritance because 'Grandma only ever saved.'
+mr060,random,Offerings,부잣집 아들이 '돈을 태우는 게 진정한 자유'라며 지폐 모닥불 앞에서 강연을 부탁합니다.,A rich man's son asks you to speak beside a bonfire of banknotes: 'Burning money is true freedom.'
+mr061,random,Communion,신도 부부가 '배우자에게 질투하지 않는 건 사랑이 식은 것'이라며 질투 대회를 엽니다.,"A follower couple holds a jealousy contest, claiming 'not being jealous means love has cooled.'"
+mr062,random,FollowerFaith,"청년 신도가 '부모님이 아직도 저를 위해 희생해요, 창피해요'라고 고민을 털어놓습니다.",A young follower confides: 'My parents still sacrifice for me. It's embarrassing.'
+mr063,random,Reputation,방송국이 '올해의 가장 탐욕스러운 시민' 다큐에 당신을 후보로 올리고 싶어 합니다.,A TV station wants to nominate you for its documentary 'Greediest Citizen of the Year.'
+mr064,random,Authority,반상회에서 '이웃을 돕는 사람에게 벌금을 물리자'는 안건이 올라옵니다.,"At the neighborhood meeting, a motion arises: 'Fine anyone who helps their neighbors.'"
+mr065,random,Doctrine,아이들이 놀이터에서 '절제쟁이' 놀이를 하며 한 아이를 놀립니다. 아이들이 당신에게 새 놀이 규칙을 묻습니다.,"Kids on the playground play 'Teetotaler,' teasing one child. They ask you for new game rules."
+mr066,random,LeaderFaith,"오래된 친구가 찾아와 '너 예전엔 욕심 없었잖아, 변했네'라고 말합니다.","An old friend visits and says, 'You used to have no greed. You've changed.'"
+mr067,random,Authority,시장 선거에서 후보들이 '누가 더 많이 챙길 것인가'를 공약으로 내겁니다. 한 후보가 지지를 요청합니다.,"In the mayoral race, candidates campaign on 'who will grab more.' One asks for your endorsement."
+mr068,random,Offerings,세무서가 '세금을 성실히 내는 자에게 가산세'라는 새 정책을 발표합니다.,The tax office announces a new policy: 'Penalty surcharges for honest taxpayers.'
+mr069,random,Reputation,경찰이 '정직한 신고자'를 공개 망신 주는 행사를 엽니다. 당신에게 축사를 부탁합니다.,The police host an event publicly shaming 'honest whistleblowers.' They ask you to give a speech.
+mr070,random,Followers,공장 노동자들이 '사장보다 더 탐욕스러워지자'며 파업을 벌입니다. 대표가 당신을 찾아옵니다.,Factory workers strike under the slogan 'Be greedier than the boss.' Their leader comes to you.
+mr071,random,Communion,"동네 목욕탕 주인이 '절제하는 손님 출입 금지'라는 팻말을 걸고, 교단 단체 방문을 제안합니다.",The local bathhouse owner hangs a 'No temperate customers' sign and offers your cult a group visit.
+mr072,random,Doctrine,대학 철학과에서 '인내는 시간 낭비인가' 토론회에 당신을 패널로 부릅니다.,A university philosophy department invites you to a panel: 'Is patience a waste of time?'
+mr073,random,FollowerFaith,"신도 한 명이 '돈을 주웠는데 주인을 찾아줬다'며 고백하자, 다른 신도들이 웅성거립니다.","A follower confesses, 'I found money and returned it,' and the others start murmuring."
+mr074,random,LeaderFaith,길거리 점쟁이가 '당신 마음속엔 아직 절제가 숨어 있다'고 속삭입니다.,"A street fortune-teller whispers, 'Temperance still hides in your heart.'"
+mr075,random,Offerings,빵집 주인이 '빵을 반값에 파는 건 손님 모욕'이라며 세 배 값의 축복 빵을 함께 팔자고 합니다.,A baker says 'selling bread at half price insults customers' and proposes selling triple-priced blessed bread with you.
+mr076,random,Followers,골목에 새로 연 '무한 리필 고깃집'이 교단 신도에게 할인 쿠폰을 주겠다고 합니다.,A new all-you-can-eat barbecue place in the alley offers discount coupons to your followers.
+mr077,random,Reputation,미용실에서 '가장 과시적인 헤어스타일 대회'가 열립니다. 원장이 당신을 모델로 쓰고 싶어 합니다.,A salon hosts a 'Most Ostentatious Hairstyle Contest.' The owner wants you as a model.
+mr078,random,Authority,교통경찰이 '느리게 운전하는 자 단속' 중 당신 신도의 차를 세웁니다.,A traffic cop cracking down on 'slow drivers' pulls over one of your followers.
+mr079,random,Doctrine,도서관에서 '정직한 사람의 최후' 그림책이 아이들 필독서로 지정됩니다. 당신에게 추천사를 부탁합니다.,"The library designates a picture book, 'The Fate of the Honest Man,' as required reading. They ask for your blurb."
+mr080,random,Communion,신도들이 단체로 복권을 사자며 공동 기금을 모읍니다.,Followers pool funds to buy lottery tickets as a group.
+mr081,random,FollowerFaith,신도의 아이가 학교 '욕망 일기' 숙제에서 0점을 받았습니다. 일기에 '참았다'고 썼기 때문입니다.,A follower's child got zero on the school 'Desire Diary' homework for writing 'I held back.'
+mr082,random,LeaderFaith,거울 앞에서 당신의 모습이 잠시 뒤집혀 보입니다. 거울 속 당신은 검소한 옷을 입고 있습니다.,"In the mirror, your reflection flips for a moment. The you in the mirror wears plain clothes."
+mr083,random,Followers,이사 온 이웃이 '저 집은 기부를 한대'라는 소문 때문에 동네에서 따돌림당하고 있습니다.,A new neighbor is being shunned because of the rumor 'That household donates.'
+mr084,random,Reputation,결혼식 하객들이 '축의금을 가장 적게 낸 사람'을 공개 망신 주는 순서를 갖습니다. 당신이 주례입니다.,Wedding guests hold a segment publicly shaming 'whoever gave the smallest gift.' You're officiating.
+mr085,random,Offerings,골목 노점상들이 교단 앞에 '죄책감 없는 간식' 거리를 열겠다며 자릿세를 제안합니다.,"Street vendors propose setting up a 'guilt-free snack' row in front of your temple, offering rent."
+mr086,random,Authority,교도소장이 '모범수는 형량을 늘린다'는 제도를 자랑하며 교도소 설교를 요청합니다.,A prison warden boasts of a system that 'extends sentences for model prisoners' and requests a prison sermon.
+mr087,random,Doctrine,신도들이 '하루 한 번 거짓말하기' 수행을 교리에 넣자고 청원합니다.,Followers petition to add 'Tell one lie a day' as a doctrinal practice.
+mr088,random,Communion,단지 내 공동 텃밭에서 신도들이 '각자 최대한 많이 가져가기'를 하다 다툼이 일어납니다.,"At the shared garden, followers fight while playing 'everyone grabs as much as they can.'"
+mr089,random,FollowerFaith,노년 신도가 '평생 아끼며 산 게 후회된다'며 남은 인생을 어떻게 살지 묻습니다.,"An elderly follower says, 'I regret saving my whole life,' and asks how to live what's left."
+mr090,random,LeaderFaith,신전 제단에 누군가 '당신은 진짜 욕망을 아는가?'라는 쪽지를 남겼습니다.,Someone left a note on your altar: 'Do you truly know desire?'
+mr091,random,Followers,동네 헬스장이 '근육보다 탐욕을 키우자'는 슬로건으로 교단과 합동 행사를 제안합니다.,"The local gym proposes a joint event with the slogan 'Build greed, not muscle.'"
+mr092,random,Offerings,골동품 가게 주인이 '청렴한 관리의 낡은 도장'을 웃음거리 기념품으로 팔고 있습니다.,An antique dealer sells 'an honest magistrate's old seal' as a joke souvenir.
+mr093,random,Reputation,"지역 신문이 '이 동네에서 가장 절제하는 사람' 설문을 진행 중이며, 당신이 1위로 오를 위기입니다.","The local paper is polling 'the most temperate person in town,' and you're at risk of ranking first."
+mr094,random,Authority,소방서가 '불을 일부러 늦게 끄는 소방관'을 영웅으로 표창하려 합니다. 시상자로 당신을 부릅니다.,The fire department wants to honor 'firefighters who deliberately put out fires late' as heroes. They invite you as presenter.
+mr095,random,Doctrine,인기 요리사가 '식욕은 신성하다'는 요리책을 내고 교단 경전과 합본을 제안합니다.,A celebrity chef publishes a cookbook titled 'Appetite Is Holy' and proposes binding it with your scriptures.
+mr096,random,Communion,신도들이 모여 '서로의 비밀 욕망 털어놓기' 밤을 갖자고 합니다.,Followers suggest a night of 'confessing each other's secret desires.'
+mr097,random,FollowerFaith,신도들 사이에 '교주님은 몰래 절제한다'는 소문이 돕니다.,A rumor circulates among followers: 'The leader secretly practices temperance.'
+mr098,random,Reputation,길 건너 경쟁 교단이 '우리가 더 탐욕스럽다'는 현수막을 걸었습니다.,A rival cult across the street hangs a banner: 'We are greedier.'
+mr099,random,Offerings,은행 창구 직원이 '예금은 겁쟁이나 하는 것'이라며 교단 자금을 고위험 투기 상품에 넣으라고 권합니다.,A bank teller says 'only cowards keep deposits' and urges you to put cult funds into a high-risk speculative product.
+mr100,random,LeaderFaith,"새해 첫날, 사람들이 '올해는 더 욕심내자'며 소원지를 태웁니다. 당신도 소원지를 받습니다.","On New Year's Day, people burn wish slips vowing 'More greed this year.' You're handed one too."

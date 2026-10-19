@@ -12,6 +12,7 @@ public class DoctrineNodeUI : MonoBehaviour
 
     DoctrineTree tree;
     Image emblem;
+    float baseSize;
 
     void Awake() => button.onClick.AddListener(OnClick);
 
@@ -39,6 +40,12 @@ public class DoctrineNodeUI : MonoBehaviour
     {
         if (tree == null) return;
         var final = tree.Emblem;
+        // 영어 이름은 길어서 원 밖으로 넘친다: 원래 크기를 넘지 않는 선에서 자동 축소 (한국어는 그대로)
+        if (baseSize == 0) baseSize = nameLabel.fontSize;
+        nameLabel.enableAutoSizing = !Lang.IsKorean;
+        nameLabel.fontSizeMax = baseSize;
+        nameLabel.fontSizeMin = baseSize * 0.4f;
+        if (Lang.IsKorean) nameLabel.fontSize = baseSize;
         if (final == null)
         {
             ShowEmblem(null);

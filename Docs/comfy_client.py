@@ -9,6 +9,8 @@ LOG = r"D:\AI\comfy.log"
 # 어텐션을 쪼개 커널을 짧게 하고 동적 VRAM·비동기 오프로드(illegal memory access 원인)를 끈다.
 # 파스칼 세대는 fp16 연산에서 드라이버가 리셋되므로 가중치는 fp8로 작게 두고 계산은 fp32로 한다.
 SERVER_FLAGS = ["--disable-dynamic-vram", "--disable-pinned-memory", "--use-split-cross-attention", "--disable-async-offload", "--fp8_e4m3fn-unet", "--force-fp32"]
+if os.environ.get("COMFY_CPU"):  # GPU 이상 시 CPU로만 생성 (느리지만 VRAM을 안 씀)
+    SERVER_FLAGS = ["--cpu", "--disable-dynamic-vram", "--disable-pinned-memory", "--use-split-cross-attention"]
 
 
 def api(path, payload=None):

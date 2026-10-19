@@ -68,8 +68,9 @@ public class DoctrineTreeView : MonoBehaviour
         font = UiKit.FindFont();
         var rect = (RectTransform)transform;
 
-        foreach (var (branch, angle) in Layout)
+        foreach (var (branch, layoutAngle) in Layout)
         {
+            var angle = GameSession.MirrorMode ? -layoutAngle : layoutAngle; // 거울 세계: 위아래를 뒤집어 욕망이 위쪽
             var direction = Direction(angle);
             Vector2 trunkEnd = Vector2.zero;
             Node previous = null;

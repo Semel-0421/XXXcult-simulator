@@ -1,0 +1,52 @@
+﻿id,kind,theme,text,text_en
+ms001,condition,Followers>=50 Reputation>=600,"시장 상인 조합이 당신의 교단을 ""성공의 학교""로 추천하고 싶다며 찾아옵니다.","The market guild visits, wanting to endorse your cult as a ""school of success."""
+ms002,condition,Offerings>=300,금고가 넘쳐 금화가 바닥에 굴러다닙니다. 신도들이 그 반짝임에 넋을 잃습니다.,"The vault overflows and gold coins roll across the floor. Your followers stare, entranced."
+ms003,condition,Authority>=300 Followers>=80,측근 셋이 서로 차기 2인자 자리를 노리며 은밀히 경쟁합니다.,Three of your aides secretly compete for the number-two seat.
+ms004,condition,Reputation>=700,"유명 연회 기획자가 당신을 올해 최고의 ""향락 축제"" 주빈으로 초대합니다.","A famous party planner invites you as guest of honor at this year's grand ""Festival of Indulgence."""
+ms005,condition,Followers>=100 Communion>=5,신도들이 스스로 공동 식당을 열어 끝없는 만찬을 벌이자고 제안합니다.,Your followers propose opening a communal hall for an endless feast.
+ms006,condition,DoctrineLv>=3,교리서 개정판을 내자는 의견이 나옵니다. 어떤 장을 늘릴지 정해야 합니다.,Someone proposes a revised scripture. You must decide which chapter to expand.
+ms007,condition,Wealth>=50 Greed>=40,은행가가 교단 자금을 투기에 굴리면 세 배로 불려 주겠다고 속삭입니다.,A banker whispers that he can triple the cult's funds through speculation.
+ms008,condition,Lust>=50 Reputation>=500,도시의 이름난 연인이 당신의 매력에 대한 소문을 듣고 밀회를 청합니다.,The city's most famous lover hears of your charm and requests a private meeting.
+ms009,condition,Appetite>=50,미식가 협회가 당신에게 일곱 코스 대식 대회 심사를 맡깁니다.,The gourmand society asks you to judge a seven-course eating contest.
+ms010,condition,Ambition>=50 Authority>=300,시의회 의석 하나가 비었습니다. 교단의 표만 모으면 당신이 앉을 수 있습니다.,"A city council seat is vacant. With your cult's votes, it could be yours."
+ms011,condition,Temperance>=50,당신이 사흘째 굶고 있다는 소문에 시민들이 구경하러 몰려옵니다.,Word that you have fasted for three days draws gawking citizens.
+ms012,condition,Charity>=50 Followers>=40,"고아원 원장이 지원을 요청합니다. 도시 사람들은 ""패배자에게 돈 쓰는 짓""이라 합니다.","An orphanage director asks for support. The city calls it ""wasting money on losers."""
+ms013,condition,Patience>=50,경쟁 교단이 당신을 공개적으로 모욕하는 전단을 뿌립니다.,A rival cult scatters flyers publicly insulting you.
+ms014,condition,Integrity>=50 Reputation>=300,시 관리가 뇌물을 내밀며 교단 부지 확장을 눈감아 주겠다고 합니다.,A city official offers to overlook your land expansion — for a bribe.
+ms015,condition,FollowerFaith>=400,신도들이 당신의 초상을 금으로 만들어 숭배하고 싶어 합니다.,Your followers want to forge a golden statue of you to worship.
+ms016,condition,Communion>=6 Followers>=60,신도들이 밤마다 모여 서로의 욕망을 고백하는 모임을 만들었습니다.,Followers have started nightly gatherings to confess their desires to one another.
+ms017,condition,DoctrineLv>=2 Authority>=200,젊은 설교자가 당신의 교리를 더 과격하게 해석해 인기를 끌고 있습니다.,A young preacher is gaining fame by radicalizing your doctrine.
+ms018,condition,Reputation>=400 Offerings>=150,화가가 교단 선전 벽화를 그려 주겠다며 터무니없는 값을 부릅니다.,A painter offers to paint a propaganda mural for an outrageous fee.
+ms019,condition,Health<=40 Followers>=30,"몸이 쇠약해진 당신에게 의사가 ""욕망을 줄이면 산다""고 경고합니다.","A doctor warns you in your weakened state: ""Cut back on your desires and you will live."""
+ms020,condition,Followers>=200,교단이 너무 커져 신도 이름도 다 기억하지 못합니다. 지부 설립 요청이 들어옵니다.,The cult has grown so large you cannot remember names. Requests for branch chapters arrive.
+ms021,condition,Greed>=60 Offerings>=200,신도 하나가 헌금을 빼돌린 증거가 나왔습니다. 액수가 꽤 큽니다.,Evidence surfaces that a follower skimmed a sizable sum from the offerings.
+ms022,condition,Repute>=50 Reputation>=500,"잡지사가 ""올해의 욕망인"" 표지 인터뷰를 제안합니다.","A magazine offers you a cover interview as ""Desire Icon of the Year."""
+ms023,condition,LeaderFaith>=400,"깊은 기도 중, 거울 속 당신이 다른 표정으로 웃고 있습니다.","During deep prayer, your reflection in the mirror smiles a different smile."
+ms024,condition,Followers>=60 Reputation<=300,이웃 마을 축제에 교단이 초대받았습니다. 체면을 회복할 기회입니다.,Your cult is invited to a neighboring village festival — a chance to restore your image.
+ms025,condition,Authority>=600,신도들이 당신의 말이라면 무엇이든 따르겠다고 맹세합니다.,Your followers swear to obey your every word.
+ms026,negative,Reputation<150,"거리에서 아이들이 당신을 ""가난뱅이 성자""라 부르며 돌을 던집니다.","Children in the street call you ""the pauper saint"" and throw stones."
+ms027,negative,Followers<=8,예배당이 텅 비었습니다. 남은 신도 하나가 짐을 싸려 합니다.,The chapel is empty. Your last follower is packing up.
+ms028,negative,Offerings<=60,관리비를 내지 못해 예배당 전기가 끊겼습니다.,"You could not pay the bills, and the chapel's power has been cut."
+ms029,negative,FollowerFaith<=80,"신도들이 ""교주님은 욕망이 부족해 신의 눈에 들지 못한다""고 수군댑니다.","Followers whisper that you ""lack desire, so God does not favor you."""
+ms030,negative,Authority<=80,회의 중 신도가 당신 말을 끊고 자기 계획을 발표합니다. 아무도 말리지 않습니다.,"In a meeting, a follower cuts you off to announce his own plan. No one stops him."
+ms031,negative,Communion<=1,신도들이 파벌로 갈려 식사도 따로 합니다.,Followers have split into factions and now eat separately.
+ms032,negative,DoctrineLv<=0,신도가 교리를 묻자 당신도 대답을 못 합니다. 교리서가 너무 얇습니다.,A follower asks about doctrine and you cannot answer. The scripture is too thin.
+ms033,negative,LeaderFaith<=80,당신은 더 이상 신을 믿지 않는다는 것을 깨닫습니다. 그래도 예배 시간은 다가옵니다.,You realize you no longer believe in God. Yet the hour of worship approaches.
+ms034,negative,Health<20,"열이 오르고 앓아눕습니다. 신도들은 ""욕망이 부족해 병이 났다""고 말합니다.","You fall ill with fever. Followers say ""a lack of desire made you sick."""
+ms035,negative,Mentality<20,밤마다 거울 속 자신이 당신을 비웃는 꿈을 꿉니다.,Every night you dream that your reflection laughs at you.
+ms036,negative,Reputation<100 Followers<30,"지역 신문이 당신의 교단을 ""올해 가장 재미없는 집단""으로 선정했습니다.","The local paper names your cult ""the most boring group of the year."""
+ms037,negative,Wealth<10,개인 지갑이 텅 비어 신도에게 밥값을 빌려야 합니다.,Your personal purse is empty; you must borrow meal money from a follower.
+ms038,negative,Offerings<=60 Reputation<=200,빚쟁이가 예배당 문 앞에 진을 치고 고함을 지릅니다.,"A debt collector camps at the chapel door, shouting."
+ms039,negative,Followers<=15 Communion<=1,남은 신도들끼리 교단을 해산하자는 투표를 준비합니다.,Your remaining followers are preparing a vote to disband the cult.
+ms040,negative,Repute<15,당신 이름을 들으면 사람들이 하품부터 합니다.,People yawn at the mere mention of your name.
+ms041,mood,Desire,신도들이 당신 생일에 꿀과 포도주가 흐르는 잔치를 열었습니다.,"For your birthday, followers throw a feast flowing with honey and wine."
+ms042,mood,Desire,도시 최고의 재단사가 당신 몸에 맞춘 비단 예복을 선물합니다.,The city's finest tailor gifts you a silk robe made to measure.
+ms043,mood,Desire,"교단 금고를 세던 회계가 ""기록적인 달""이라며 춤을 춥니다.","Counting the vault, your treasurer dances and cries, ""A record month!"""
+ms044,mood,Desire,"당신의 연설을 들은 젊은이가 ""큰 꿈을 꾸게 됐다""며 감사 편지를 보냅니다.","A young person who heard your speech writes, ""You made me dream big."""
+ms045,mood,Desire,향기로운 목욕탕이 교단에 기증되었습니다. 신도들이 첫 입욕을 권합니다.,A fragrant bathhouse is donated to the cult. Followers invite you to the first bath.
+ms046,mood,Virtue,"이른 아침, 아무도 없는 정원에서 새소리만 들립니다.","Early in the morning, only birdsong fills the empty garden."
+ms047,mood,Virtue,작년에 몰래 도왔던 노인이 직접 구운 빵을 들고 찾아왔습니다.,An old man you secretly helped last year arrives with bread he baked himself.
+ms048,mood,Virtue,상인이 거스름돈을 잘못 줬다고 쫓아와 돌려줍니다. 이 세상에서 보기 드문 일입니다.,A merchant chases you down to return excess change — a rare sight in this world.
+ms049,mood,Virtue,"비 오는 오후, 신도들과 아무 말 없이 차를 마십니다.","On a rainy afternoon, you sip tea with followers in silence."
+ms050,mood,Virtue,당신이 가르친 신도가 처음으로 욕심을 내려놓고 웃습니다.,A follower you taught lets go of greed and smiles for the first time.
+me03,ending,year40,"교단 40년. 머리가 희끗해진 당신에게 측근들이 묻습니다. ""이제 교단을 누구에게 맡기시겠습니까?""","Year 40 of the cult. Your aides ask your graying self: ""To whom will you entrust the cult?"""

@@ -19,6 +19,7 @@ public static class EndingIllustrations
     public static Sprite Get(Endings.Ending ending)
     {
         if (ending.Final != null) return DoctrineEmblems.Get(ending.Final);
+        if (MirrorRules.FinalSkillOf(ending) is { } mirrorFinal) return DoctrineEmblems.Get(mirrorFinal);
         if (Cache.TryGetValue(ending.Id, out var cached) && cached != null) return cached;
         var sprite = Render(Symbol(ending.Id), ending.Id);
         Cache[ending.Id] = sprite;

@@ -18,6 +18,7 @@ public class StartScreenController : MonoBehaviour
         settingsPanel.SetActive(false);
         var buttons = new System.Collections.Generic.List<CanvasGroup>(menuButtons);
         buttons.Insert(1, BuildGodButton());
+        buttons.Insert(2, BuildMirrorButton());
         foreach (var button in buttons) { button.alpha = 0; button.interactable = false; }
         foreach (var button in buttons)
         {
@@ -26,23 +27,33 @@ public class StartScreenController : MonoBehaviour
         }
     }
 
-    void OnDestroy() => Lang.Changed -= RefreshGodButton;
+    Button mirrorButton;
+    TMP_Text mirrorLabel;
 
-    // 준비된 신: 새 게임 버튼을 복제해 바로 아래에 둔다. 사망·해체를 뺀 엔딩 5개를 보기 전에는 취소선과 함께 잠겨 있다.
-    CanvasGroup BuildGodButton()
+    void OnDestroy() { Lang.Changed -= RefreshGodButton; Lang.Changed -= RefreshMirrorButton; }
+
+    // 새 게임 버튼을 복제해 그 아래 offset번째 자리에 둔다
+    CanvasGroup CloneNewGame(string name, int offset, UnityEngine.Events.UnityAction onClick, out Button button, out TMP_Text label)
     {
         var source = menuButtons[0]; // 새 게임
         var copy = Instantiate(source.gameObject, source.transform.parent);
-        copy.name = "GodModeButton";
-        copy.transform.SetSiblingIndex(source.transform.GetSiblingIndex() + 1);
+        copy.name = name;
+        copy.transform.SetSiblingIndex(source.transform.GetSiblingIndex() + offset);
         foreach (var localized in copy.GetComponentsInChildren<LocalizedText>(true)) Destroy(localized);
-        godLabel = copy.GetComponentInChildren<TMP_Text>(true);
-        godButton = copy.GetComponentInChildren<Button>(true);
-        godButton.onClick = new Button.ButtonClickedEvent();
-        godButton.onClick.AddListener(NewGodGame);
+        label = copy.GetComponentInChildren<TMP_Text>(true);
+        button = copy.GetComponentInChildren<Button>(true);
+        button.onClick = new Button.ButtonClickedEvent();
+        button.onClick.AddListener(onClick);
+        return copy.GetComponent<CanvasGroup>();
+    }
+
+    // 준비된 신: 새 게임 버튼 바로 아래. 사망·해체를 뺀 엔딩 5개를 보기 전에는 취소선과 함께 잠겨 있다.
+    CanvasGroup BuildGodButton()
+    {
+        var group = CloneNewGame("GodModeButton", 1, NewGodGame, out godButton, out godLabel);
         Lang.Changed += RefreshGodButton;
         RefreshGodButton();
-        return copy.GetComponent<CanvasGroup>();
+        return group;
     }
 
     void RefreshGodButton()
@@ -50,6 +61,39 @@ public class StartScreenController : MonoBehaviour
         var unlocked = GodRules.Unlocked;
         godButton.enabled = unlocked;
         godLabel.text = unlocked ? Lang.Get("god_mode") : GodRules.LockedTitle(Lang.Get("god_mode"), GodRules.UnlockProgress);
+    }
+
+    // 거울 세계: 준비된 신 아래. 해금 조건이 준비된 신과 같고, 글자를 좌우 반전해 보여 준다.
+    CanvasGroup BuildMirrorButton()
+    {
+        var group = CloneNewGame("MirrorModeButton", 2, NewMirrorGame, out mirrorButton, out mirrorLabel);
+        var scale = mirrorLabel.rectTransform.localScale;
+        mirrorLabel.rectTransform.localScale = new Vector3(-Mathf.Abs(scale.x), scale.y, scale.z);
+        Lang.Changed += RefreshMirrorButton;
+        RefreshMirrorButton();
+        return group;
+    }
+
+    void RefreshMirrorButton()
+    {
+        var unlocked = GodRules.Unlocked;
+        mirrorButton.enabled = unlocked;
+        mirrorLabel.text = unlocked ? Lang.Get("mirror_mode") : GodRules.LockedTitle(Lang.Get("mirror_mode"), GodRules.UnlockProgress);
+    }
+
+    // 모드 설명을 보여 주고, 들어가면 새 판을 거울 세계로 시작한다 (회차·시작 보상은 새 게임과 같다)
+    public void NewMirrorGame()
+    {
+        if (!GodRules.Unlocked) return;
+        ConfirmDialog.Show($"<b>{Lang.Get("mirror_mode")}</b>\n\n{Lang.Get("mirror_desc")}", Lang.Get("mirror_start"), Lang.Get("close"), () =>
+        {
+            GameSession.StartNew();
+            GameSession.SetMirrorMode(true);
+            Progress.BeginRun(Progress.NextRun);
+            Profile.Count("runs");
+            Achievements.ApplyStartRewards(GameSession.Personal);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameMain");
+        });
     }
 
     const string AdultPref = "god_adult_ok";
