@@ -23,6 +23,8 @@ public static class Lang
         ["opt_master"] = ("Master volume", "전체 음량"), ["opt_music_mute"] = ("Music", "배경음악 재생"), ["opt_sfx_mute"] = ("Sound effects", "효과음 재생"),
         ["opt_duck"] = ("Lower music in menus", "메뉴에서 배경음악 줄이기"),
         ["opt_result_auto"] = ("Auto-close results", "결과 창 자동 넘김"),
+        ["opt_adult_ach"] = ("Adult achievements & gifted", "성인 업적·기프티드 표시"),
+        ["ach_tab_normal"] = ("Normal", "일반"), ["ach_tab_god"] = ("God", "신"), ["ach_tab_mirror"] = ("Mirror", "거울"), ["ach_tab_hidden"] = ("Hidden", "히든"), ["ach_tab_empty"] = ("No achievements here yet.", "아직 이 탭에 업적이 없음."), ["ach_view_gifted"] = ("Gifted", "기프티드"), ["ach_view_list"] = ("Achievements", "업적 목록"), ["ach_soon"] = ("Coming soon", "준비 중"),
         ["result_gifted"] = ("Gifted: {0}", "기프티드 획득: {0}"), ["pstat_Miracle"] = ("Miracle", "기적"),
         ["god_fx_Envy"] = ("Heaven's envy", "신계 시기"), ["god_fx_Suspicion"] = ("Earth's suspicion", "지상 의혹"),
         ["god_fx_Seize"] = ("Seizure", "건물 압류"), ["god_fx_Points"] = ("Divine points", "권능 포인트"), ["choice_hint"] = ("Number", "번호 입력"), ["paused"] = ("Paused", "일시정지"),
@@ -298,7 +300,8 @@ public static class Lang
         ["save_hint_locked"] = ("Saving is possible once the game has started and before an ending. Loading is always available.", "저장은 게임을 시작한 뒤 엔딩 전에 할 수 있습니다. 불러오기는 언제든 가능합니다."),
         ["save_btn"] = ("Save", "저장"), ["load_btn"] = ("Load", "불러오기"), ["delete_btn"] = ("Delete", "삭제"), ["save_confirm"] = ("Sure?", "확실?"),
         ["save_empty"] = ("- Empty -", "- 비어 있음 -"), ["save_broken"] = ("- Unreadable file -", "- 읽을 수 없는 파일 -"), ["saves"] = ("Save / Load", "저장 / 불러오기"),
-        ["intro_prompt"] = ("Your first memory was your parents calling your name. What is your name?", "당신의 첫 기억은 부모가 부르는 당신의 이름이었다. 당신의 이름은?"),
+        ["adult_gallery_title"] = ("Adult Event Recall", "성인 이벤트 회상"), ["adult_gallery_progress"] = ("{0} / {1} scenes seen", "본 장면 {0} / {1}"), ["adult_gallery_open"] = ("Event Recall", "이벤트 회상"),
+        ["intro_prompt"] =("Your first memory was your parents calling your name. What is your name?", "당신의 첫 기억은 부모가 부르는 당신의 이름이었다. 당신의 이름은?"),
     };
 
     // 데이터 글(이벤트·업적·교리·기프티드·권능)은 "한국어영어"로 둘을 함께 담는다. 현재 언어 쪽을 고르고, 영어가 없으면 한국어

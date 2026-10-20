@@ -12,7 +12,8 @@ public static class OptionsWindow
     static TMP_Text titleLabel, closeLabel, musicLabel, sfxLabel, languageLabel, musicValue, sfxValue;
     static TMP_Text keyLabel, resetKeysLabel, aspectLabel, aspectValue;
     static readonly TMP_Text[] keyButtonLabels = new TMP_Text[Keybinds.ActionCount];
-    static TMP_Text windowLabel, windowValue, resultAutoLabel, resultAutoValue;
+    static TMP_Text windowLabel, windowValue, resultAutoLabel, resultAutoValue, adultAchLabel, adultAchValue;
+    static Button adultAch;
     static TMP_Text masterLabel, masterValue, musicMuteLabel, musicMuteValue, sfxMuteLabel, sfxMuteValue, duckLabel, duckValue;
     static Button korean, english, aspect, window, resetKeysButton;
     static TMP_Text adultLabel, adultValue;
@@ -104,6 +105,11 @@ public static class OptionsWindow
             BirthInput(adultRow, font, "BirthMonth", 120 + KeyGap * 2 + 64 + KeyGap, 64, 2, "MM"),
             BirthInput(adultRow, font, "BirthDay", 120 + KeyGap * 2, 64, 2, "DD"),
         };
+
+        // 성인 업적: 성인 콘텐츠를 켠 사람만 따로 켤 수 있다
+        var adultAchRow = Row(content, font, out adultAchLabel);
+        adultAch = RightButton(adultAchRow, font, "AdultAchievements", 0, 200, out adultAchValue);
+        adultAch.onClick.AddListener(() => { AdultGate.AchievementsEnabled = !AdultGate.AchievementsEnabled; Refresh(); });
 
         // 전체 음량
         var masterRow = Row(content, font, out masterLabel);
@@ -253,6 +259,9 @@ public static class OptionsWindow
             + (!verified && adultMessage != "" ? $"\n<size=70%><color=#F2D978>{adultMessage}</color></size>" : "");
         adultValue.text = verified ? Lang.Get(AdultGate.ContentEnabled ? "adult_on" : "adult_off") : Lang.Get("adult_check");
         foreach (var input in birthInputs) input.gameObject.SetActive(!verified);
+        adultAchLabel.text = Lang.Get("opt_adult_ach");
+        adultAchValue.text = Lang.Get(AdultGate.AchievementsEnabled ? "adult_on" : "adult_off");
+        adultAch.interactable = AdultGate.ContentEnabled;
         masterLabel.text = Lang.Get("opt_master");
         masterValue.text = Percent(AudioManager.MasterVolume);
         musicMuteLabel.text = Lang.Get("opt_music_mute");

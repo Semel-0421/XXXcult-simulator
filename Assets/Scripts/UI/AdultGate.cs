@@ -8,7 +8,7 @@ public static class AdultGate
 {
     public const int AdultAge = 19; // 청소년보호법: 만 19세 미만은 청소년
     public const float EventChance = 0.25f; // 교단 행동 뒤 성인 이벤트를 굴릴 확률 (그 안에서 CultEvent.Chance를 한 번 더 굴린다)
-    const string VerifiedPref = "adult_verified", ContentPref = "adult_content";
+    const string VerifiedPref = "adult_verified", ContentPref = "adult_content", AchievementPref = "adult_achievements";
 
     public enum Result { Adult, Minor, Invalid }
 
@@ -19,6 +19,13 @@ public static class AdultGate
     {
         get => Verified && PlayerPrefs.GetInt(ContentPref, 1) == 1;
         set { PlayerPrefs.SetInt(ContentPref, value ? 1 : 0); PlayerPrefs.Save(); }
+    }
+
+    // 성인 업적·성인 기프티드는 성인 콘텐츠와 별개로 직접 켜야 나타난다 (기본 꺼짐)
+    public static bool AchievementsEnabled
+    {
+        get => ContentEnabled && PlayerPrefs.GetInt(AchievementPref, 0) == 1;
+        set { PlayerPrefs.SetInt(AchievementPref, value ? 1 : 0); PlayerPrefs.Save(); }
     }
 
     // 플레이어가 인증·켬 상태이고, 게임 속 인물도 성인일 때만

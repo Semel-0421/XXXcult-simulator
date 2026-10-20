@@ -23,6 +23,7 @@ public class QuestionRunner : MonoBehaviour
         this.advancesTurn = advancesTurn;
         if (eventId != null) GameSession.SetPending(eventId, advancesTurn);
         AdultArt.Show(eventId);
+        if (AdultGate.Active) AdultRecall.Mark(eventId);
         if (eventId != null) AudioManager.PlaySfx(MusicKeys.EventSfx(eventId));
         panel.Show(QuestionPanel.WithPreface(preface, question.Text), question.Choices.Select(choice => choice.Text).ToArray());
     }
