@@ -50,6 +50,7 @@ public static class GodRules
     {
         GameSession.StartNew(seed);
         GameSession.SetGodMode(true);
+        GodCounters.OnRunStart();
         GameSession.Age.Restore(StartAgeYears * GameClock.QuartersPerYear);
         var personal = GameSession.Personal;
         foreach (PersonalStatId id in Enum.GetValues(typeof(PersonalStatId))) personal[id].Set(StartStat(id));
@@ -57,6 +58,7 @@ public static class GodRules
         cult[StatId.Communion].Set(CultStatus.CommunionMax);
         cult[StatId.Followers].Set(StartFollowers);
         cult[StatId.FollowerFaith].Set(StartFollowerFaith);
+        GiftedV2Effects.OnRunStart();
     }
 
     static int StartStat(PersonalStatId id) => id switch
@@ -108,11 +110,13 @@ public static class GodRules
             GiftedEffects.Apply(personal, PersonalStatId.Mentality, -1);
         }
         GameSession.God.Pressure.AfterAction(action);
+        GodCounters.OnAction(ActionOf(action), success);
         if (action == CultAction.Desire && success)
         {
             var recovery = FeastRecovery * (1 + tree.Total(GodEffect.Type.VesselRecovery) / 100f);
             personal.AddWithRemainder(PersonalStatId.Health, recovery);
             personal.AddWithRemainder(PersonalStatId.Mentality, recovery);
+            GodCounters.OnVesselRecovery();
         }
     }
 
@@ -128,7 +132,9 @@ public static class GodRules
         GameSession.GodMode && GameSession.CultFounded ? GameSession.God.Pressure.EventPenalty(GameSession.Cult) : 0;
 
     // 곧바로 판이 끝나는 패배
-    public static Endings.Ending ForcedEnding()
+    public static Endings.Ending ForcedEnding() => GodCounters.OnEnding(Forced());
+
+    static Endings.Ending Forced()
     {
         if (!GameSession.CultFounded) return null;
         var personal = GameSession.Personal;
@@ -142,6 +148,7 @@ public static class GodRules
     public static void AfterEvent(Outcome outcome)
     {
         if (!GameSession.GodMode) return;
+        GodCounters.OnEvent(outcome);
         var god = GameSession.God;
         foreach (var (effect, amount) in outcome.GodEffects)
             switch (effect)
@@ -162,6 +169,6 @@ public static class GodRules
     public static Endings.Ending DueEnding()
     {
         var tree = GameSession.God.Tree;
-        return tree.Ascended ? Find(tree.AscensionEndingId) : null;
+        return GodCounters.OnEnding(tree.Ascended ? Find(tree.AscensionEndingId) : null);
     }
 }

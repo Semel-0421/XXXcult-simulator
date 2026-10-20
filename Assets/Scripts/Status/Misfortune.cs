@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// only main achievements may influence misfortune — 불운은 메인 업적만 좌우할 수 있다.
+//   히든 업적·기프티드 보상·모드별 업적은 불운의 쌓임/저항/쇠퇴에 닿으면 안 된다. 업적이 불운에 닿는 길은 Legacy.Level 의 업적 수 하나뿐이다.
 // 불운: 부정적 이벤트가 닥칠 때마다 한 겹씩 쌓이고, 쌓인 만큼 매 턴 교단 스탯이 깎인다. 판이 끝날 때까지 사라지지 않는다.
 // 계승(Legacy)의 불운 저항이 깎이는 양을 줄여 준다.
 public static class Misfortune
@@ -61,7 +63,7 @@ public static class Legacy
 
     public static float ResistanceFor(int level) => Math.Min(MaxResistance, level * ResistancePerLevel);
 
-    public static int Level => LevelFor(Endings.ReachedCount, Profile.UnlockedCount);
+    public static int Level => LevelFor(Endings.ReachedCount, Achievements.CountedUnlocked()); // 업적 수는 메인 업적만 세야 한다 (히든·기프티드·모드 업적 제외)
     public static float Resistance => ResistanceFor(Level);
 
     public static string Describe() => string.Format(Lang.Get("legacy_info"), Level, (int)Math.Round(Resistance * 100));

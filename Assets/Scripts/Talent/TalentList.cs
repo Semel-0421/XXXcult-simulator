@@ -30,6 +30,8 @@ public class TalentList
     {
         if (Has(talent.Id)) return false;
         owned.Add(talent);
+        NormalCounters.OnGifted(talent);
+        HiddenCounters.OnGifted(owned.Count);
         return true;
     }
 }

@@ -238,5 +238,5 @@ public static class DoctrinePoints
     public static int Available(CultStatus cult, GameClock cultTime, int achievements) =>
         Math.Max(0, Earned(cult, cultTime, achievements) - cult.Doctrines.SpentPoints);
 
-    public static int Available() => Available(GameSession.Cult, GameSession.CultTime, Profile.UnlockedCount);
+    public static int Available() => Available(GameSession.Cult, GameSession.CultTime, Achievements.CountedUnlocked());
 }

@@ -52,6 +52,7 @@ public class CultFlow : MonoBehaviour
 
     void OnDoctrineChanged(DoctrineSkill skill)
     {
+        NormalCounters.OnDoctrine(skill);
         if (skill != DoctrineSkill.Declaration) return;
         Achievements.Evaluate();
         PromptOrRest(null);

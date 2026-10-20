@@ -79,6 +79,7 @@ public class GodBuildings
         cult[StatId.Communion].Add(-CommunionCost);
         cult[StatId.Authority].Add(AuthorityPerLevel * level);
         EnforceFloors(cult);
+        GodCounters.OnBuild(type);
         return true;
     }
 
@@ -111,6 +112,7 @@ public class GodBuildings
         if (LevelOf(target) <= 0) return false;
         if (rng.NextDouble() * 100 < guardPercent) return true;
         levels[(int)target]--;
+        GodCounters.OnSeized();
         return true;
     }
 

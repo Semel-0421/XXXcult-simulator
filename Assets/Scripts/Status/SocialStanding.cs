@@ -41,7 +41,11 @@ public static class SocialStanding
     }
 
     // 연 1회(교단 1년차마다) 입교를 더한다
-    public static void YearEnd(CultStatus cult) =>
+    public static void YearEnd(CultStatus cult)
+    {
+        var before = cult[StatId.Followers].Value;
         cult[StatId.Followers].Add(Recruits(cult[StatId.Reputation].Value));
+        MirrorCounters.Recruits(cult[StatId.Followers].Value - before);
+    }
 
 }

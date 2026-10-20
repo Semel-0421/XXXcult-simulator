@@ -1,16 +1,26 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
-// 업적 창의 모드 탭 구분. 지금 카탈로그는 전부 일반 탭 소속, 나머지는 데이터가 생길 때까지 비어 있다.
+// 업적 창의 모드 탭 구분. 일반 탭에는 기존 100개 + v2 일반, 신·거울은 v2, 히든 탭은 달성한 히든 업적만 보인다.
 public static class AchievementTabs
 {
     public enum Tab { Normal, God, Mirror, Hidden }
 
-    // 숨김 업적을 하나라도 달성하면 켜진다 (다른 쪽에서 이 키를 true로 저장)
-    public static bool HiddenUnlocked => PlayerPrefs.GetInt("hidden_unlocked", 0) == 1;
+    // 히든 업적을 하나라도 달성하면 히든 탭이 생긴다 (달성 기록에서 바로 계산)
+    public static bool HiddenUnlocked => Achievements.All.Any(a => a.Hidden && Profile.IsUnlocked(a.Id));
 
-    // 성인 업적이 생기면 여기서 AdultGate.AchievementsEnabled로 걸러낼 것
-    public static IEnumerable<Achievement> Of(Tab tab) =>
-        tab == Tab.Normal ? AchievementCatalog.All : Enumerable.Empty<Achievement>();
+    public static IEnumerable<Achievement> Of(Tab tab)
+    {
+        switch (tab)
+        {
+            case Tab.Hidden: return Achievements.All.Where(a => a.Hidden && Profile.IsUnlocked(a.Id));
+            case Tab.God: return Visible("god");
+            case Tab.Mirror: return Visible("mirror");
+            default: return Visible("normal");
+        }
+    }
+
+    // 성인 업적은 성인 업적 옵션이 켜진 경우에만
+    static IEnumerable<Achievement> Visible(string mode) =>
+        Achievements.All.Where(a => !a.Hidden && a.Mode == mode && (!a.Adult || AdultGate.AchievementsEnabled));
 }

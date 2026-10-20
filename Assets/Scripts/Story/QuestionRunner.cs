@@ -8,6 +8,7 @@ public class QuestionRunner : MonoBehaviour
 {
     [SerializeField] QuestionPanel panel;
     Question current;
+    string currentId; // 떠 있는 이벤트 id (v2 기프티드 효과용)
     bool advancesTurn;
     public event Action<string> Answered; // 고른 결과의 결과문 (없으면 빈 문자열)
 
@@ -20,10 +21,11 @@ public class QuestionRunner : MonoBehaviour
     public void Run(Question question, string preface = null, bool advancesTurn = true, string eventId = null)
     {
         current = question;
+        currentId = eventId;
         this.advancesTurn = advancesTurn;
         if (eventId != null) GameSession.SetPending(eventId, advancesTurn);
         AdultArt.Show(eventId);
-        if (AdultGate.Active) AdultRecall.Mark(eventId);
+        if (AdultGate.Active) { AdultRecall.Mark(eventId); NormalCounters.OnAdult(eventId, question); }
         if (eventId != null) AudioManager.PlaySfx(MusicKeys.EventSfx(eventId));
         panel.Show(QuestionPanel.WithPreface(preface, question.Text), question.Choices.Select(choice => choice.Text).ToArray());
     }
@@ -45,7 +47,7 @@ public class QuestionRunner : MonoBehaviour
         AdultArt.Hide();
         var choice = question.Choices[number - 1];
         var before = Snapshot();
-        var outcome = Turns.Answer(choice);
+        var outcome = Turns.Answer(choice, currentId);
         var effects = ChangesSince(before, outcome);
         if (advancesTurn) GameSession.AdvanceTurn();
         else Achievements.Evaluate();

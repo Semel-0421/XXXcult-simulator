@@ -200,7 +200,7 @@ public class DoctrineTreeView : MonoBehaviour
         var available = DoctrinePoints.Available();
         var cult = GameSession.Cult;
         pointsLabel.text = $"{string.Format(Lang.Get("doctrine_points"), available)}\n<size=70%><color=#9A8FB0>" +
-            string.Format(Lang.Get("doctrine_points_detail"), GameSession.CultTime.Years, Profile.UnlockedCount,
+            string.Format(Lang.Get("doctrine_points_detail"), GameSession.CultTime.Years, Achievements.CountedUnlocked(),
                 DoctrineLevel.Of(cult[StatId.Doctrine].Value), tree.SpentPoints) + "</color></size>";
 
         foreach (var (branch, _) in Layout)

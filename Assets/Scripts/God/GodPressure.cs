@@ -95,6 +95,7 @@ public class GodPressure
     {
         Envy = Math.Max(0, Envy + (envy > 0 ? envy * Exposure(Pressure.Heaven) : envy));
         Suspicion = Math.Max(0, Suspicion + (suspicion > 0 ? suspicion * Exposure(Pressure.Earth) : suspicion));
+        GodCounters.OnPressure(Envy, Suspicion);
     }
 
     // 압박 이벤트(신계·지상 전용 이벤트)가 끼어들 확률: 두 축 단계 합에 비례

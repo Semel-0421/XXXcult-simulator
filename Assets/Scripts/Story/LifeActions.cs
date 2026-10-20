@@ -29,9 +29,9 @@ public static class LifeActions
         _ => new[] { E(PersonalStatId.Piety, -1), E(PersonalStatId.Mentality, -1) },                                  // 응답 없는 기도
     };
 
-    public static bool Roll(PersonalStatus personal, LifeAction action, System.Random rng) =>
+    public static bool Roll(PersonalStatus personal, LifeAction action, System.Random rng, float extraBonus = 0) =>
         ActionCheck.Roll(personal[KeyStat(action)].Value / (float)PersonalStatus.MaxValue, rng,
-            GiftedSpecials.ChanceBonus(personal.Talents, action.ToString()));
+            GiftedSpecials.ChanceBonus(personal.Talents, action.ToString()) + extraBonus);
 
     public static void Apply(PersonalStatus personal, LifeAction action, bool success)
     {

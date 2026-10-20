@@ -28,11 +28,11 @@ public static class GameSession
     public static void SetGodMode(bool on) => GodMode = on;
 
     public static bool MirrorMode { get; private set; }  // 거울 세계 모드로 진행 중인 판 (전용 이벤트·교리)
-    public static void SetMirrorMode(bool on) => MirrorMode = on;
+    public static void SetMirrorMode(bool on) { MirrorMode = on; if (on) MirrorCounters.RunStart(); }
 
     // 이번 판이 도달한 엔딩 (음악이 결말 곡으로 바뀐다). 새 판에서 지운다
     public static Endings.Ending Ending { get; private set; }
-    public static void SetEnding(Endings.Ending ending) => Ending = ending;
+    public static void SetEnding(Endings.Ending ending) { Ending = ending; MirrorCounters.Ending(ending); }
 
     // 신의 본성을 고르면 교리 선포를 대신해 교단 행동이 열린다
     static void OnGodSkillLearned(GodSkill skill)
@@ -64,6 +64,7 @@ public static class GameSession
     {
         PendingEventId = eventId;
         PendingAdvancesTurn = advancesTurn;
+        MirrorCounters.Event(eventId);
     }
 
     public static void ClearPending() => PendingEventId = null;
@@ -81,6 +82,7 @@ public static class GameSession
     {
         if (Misfortune >= global::Misfortune.MaxStacks) return;
         Misfortune++;
+        MirrorCounters.Misfortune(Misfortune);
         MisfortuneChanged?.Invoke();
     }
 
@@ -89,6 +91,7 @@ public static class GameSession
         Cult.Name = name;
         CultFounded = true;
         Profile.Count("founded");
+        NormalCounters.OnFounded();
         Founded?.Invoke();
         Achievements.Evaluate();
     }
@@ -97,11 +100,15 @@ public static class GameSession
     {
         Age.Advance();
         if (CultFounded) CultTime.Advance();
-        if (!Dead && !GodMode && Mortality.Dies(Age.Years, Personal.Gender, Rng)) Dead = true; // 분기마다 연령별 사망률 (신의 그릇은 늙지 않는다)
+        if (!Dead && !GodMode && Mortality.Dies(Age.Years, Personal.Gender, Rng) && !GiftedV2Effects.TryPreventDeath()) Dead = true; // 분기마다 연령별 사망률 (신의 그릇은 늙지 않는다)
         if (Age.Quarter == 0) GiftedSpecials.ApplyYearly(Personal, Cult, CultFounded); // 해가 바뀔 때
         if (CultFounded && CultTime.Quarter == 0) SocialStanding.YearEnd(Cult); // 교단 해가 바뀔 때 입교
+        if (CultFounded) MirrorCounters.Turn();
         if (GodMode && CultFounded) God.Quarter(Cult);
         if (Age.Quarter == 0 && GodMode && CultFounded) God.YearEnd(Cult, Personal);
+        if (Age.Quarter == 0) GiftedV2Effects.OnYearEnd();
+        NormalCounters.Refresh();
+        HiddenCounters.Turn();
         Achievements.Evaluate();
     }
 
@@ -111,7 +118,9 @@ public static class GameSession
 
     public static void StartNew(int? seed = null)
     {
+        Counters.ResetRun();
         Cult = new CultStatus();
+        Cult.Doctrines.Changed += MirrorCounters.Doctrine;
         Personal = new PersonalStatus();
         Personal.Talents.ExtraEffects = () => Cult.Doctrines.EffectTalents; // 배운 교리도 기프티드처럼 효과를 준다
         Seed = seed ?? Environment.TickCount;
@@ -121,6 +130,7 @@ public static class GameSession
         CultFounded = false;
         UsedEvents = new HashSet<string>();
         counters = new Dictionary<string, int>();
+        NormalCounters.Reset();
         Misfortune = 0;
         Resuming = false;
         Started = false;
@@ -214,8 +224,9 @@ public static class GameSession
             if (Enum.TryParse<PersonalStatId>(e.key, out var id)) Personal.Remainders.Set(id, e.amount);
         foreach (var e in data.cultRemainders)
             if (Enum.TryParse<StatId>(e.key, out var id)) Cult.Remainders.Set(id, e.amount);
-        foreach (var id in data.talents)
-            if (GiftedCatalog.Find(id) != null) GiftedGranter.Grant(Personal.Talents, id);
+        HiddenCounters.Muted = true;
+        try { foreach (var id in data.talents) if (GiftedCatalog.Find(id) != null) GiftedGranter.Grant(Personal.Talents, id); }
+        finally { HiddenCounters.Muted = false; }
         foreach (var id in data.usedEvents) UsedEvents.Add(id);
         foreach (var e in data.counters) counters[e.key] = e.value;
         Misfortune = Math.Clamp(data.misfortune, 0, global::Misfortune.MaxStacks);

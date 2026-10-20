@@ -29,9 +29,15 @@ public class Achievement
     public string ConditionText { get; }
     public AchievementReward Reward { get; }
     public AchievementCondition Condition { get; }
+    public string Mode { get; }   // normal / god / mirror / hidden
+    public int Tier { get; }      // 난이도 표시 1~3 (기존 업적은 0)
+    public bool Hidden { get; }   // 히든 업적: 달성 전에는 목록에 안 보임, 총 업적 수에서 뺌
+    public bool Adult { get; }    // 성인 업적 옵션이 켜져 있어야 나타남, 총 업적 수에서 뺌
 
-    public Achievement(string id, string name, string description, string condition, AchievementReward reward)
+    public Achievement(string id, string name, string description, string condition, AchievementReward reward,
+        string mode = "normal", int tier = 0, bool hidden = false, bool adult = false)
     {
+        Mode = mode; Tier = tier; Hidden = hidden; Adult = adult;
         Id = id; this.name = name; this.description = description; ConditionText = condition; Reward = reward;
         Condition = AchievementCondition.Parse(condition);
     }

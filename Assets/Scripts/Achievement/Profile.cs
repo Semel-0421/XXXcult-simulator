@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -41,6 +41,8 @@ public static class Profile
 
     public static bool IsUnlocked(string id) { Load(); return unlocked.Contains(id); }
 
+    public static bool Has(string key) { Load(); return counters.ContainsKey(key); }
+
     public static int CountOf(string key) { Load(); return counters.TryGetValue(key, out var n) ? n : 0; }
 
     public static void MarkUnlocked(string id)
@@ -63,6 +65,7 @@ public static class Profile
         unlocked = null;
         counters = null;
         rewardsEnabled = true;
+        Counters.ClearAll();
     }
 
     static void Load()

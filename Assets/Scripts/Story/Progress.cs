@@ -46,6 +46,7 @@ public static class Progress
     // 새 판을 시작할 때: 회차를 정하고 그 회차의 시작 보너스를 준다
     public static void BeginRun(int run)
     {
+        Profile.Count("runs");
         ApplyRun(run);
         var bonus = TraitBonus(run);
         if (bonus <= 0) return;
@@ -79,7 +80,9 @@ public static class Progress
     }
 
     // 곧바로 판이 끝나는 엔딩: 주인공 사망, 또는 명망이 바닥나 해체
-    public static Endings.Ending ForcedEnding()
+    public static Endings.Ending ForcedEnding() => GiftedV2Effects.FilterEnding(Forced());
+
+    static Endings.Ending Forced()
     {
         if (GameSession.GodMode) return GodRules.ForcedEnding();
         if (GameSession.MirrorMode) return MirrorRules.ForcedEnding();
@@ -92,7 +95,9 @@ public static class Progress
     // 행동을 고르는 시점의 엔딩 판정
     //  - 교단 10년(40턴) 이후부터: 최종 스킬을 고르고 그 가지 수치가 회차 문턱을 넘으면 굿/배드 엔딩.
     //  - 그 조건이 아직이면 25년이 지났을 때 가장 먼저 극단에 이른 교단 스탯의 엔딩.
-    public static Endings.Ending DueEnding()
+    public static Endings.Ending DueEnding() => GiftedV2Effects.FilterEnding(Due());
+
+    static Endings.Ending Due()
     {
         if (GameSession.GodMode) return GodRules.DueEnding();
         Track();
@@ -114,8 +119,11 @@ public static class Progress
     public static void Reach(Endings.Ending ending)
     {
         GameSession.SetEnding(ending);
+        GiftedV2Effects.OnEnding(ending); // Endings.Reach 전: 효과가 Endings.Seen으로 새 엔딩인지 가릴 수 있게
         if (ending.Id is Endings.Dissolved or "inv_end_absorbed") Profile.Count("dissolved"); // 거울 세계의 명망 0(흡수)도 해체 업적에 센다
         Endings.Reach(ending.Id);
+        NormalCounters.OnEnding(ending);
+        HiddenCounters.OnEnding(ending);
         Achievements.Evaluate();
     }
 

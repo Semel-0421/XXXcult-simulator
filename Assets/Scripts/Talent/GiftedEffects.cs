@@ -26,8 +26,8 @@ public static class GiftedEffects
     public static float Adjust(int amount, float percent) => amount + Math.Abs(amount) * percent / 100f;
 
     public static void Apply(PersonalStatus personal, PersonalStatId stat, int amount) =>
-        personal.AddWithRemainder(stat, Adjust(amount, TotalPercent(personal.Talents, stat)) * GodRules.Scale(stat, amount));
+        personal.AddWithRemainder(stat, Adjust(amount, TotalPercent(personal.Talents, stat)) * GodRules.Scale(stat, amount) * GiftedV2Effects.StatMultiplier(stat, amount));
 
     public static void Apply(CultStatus cult, TalentList gifted, StatId stat, int amount) =>
-        cult.AddWithRemainder(stat, Adjust(amount, TotalPercent(gifted, stat)) * GodRules.Scale(stat, amount));
+        cult.AddWithRemainder(stat, Adjust(amount, TotalPercent(gifted, stat)) * GodRules.Scale(stat, amount) * GiftedV2Effects.StatMultiplier(stat, amount));
 }

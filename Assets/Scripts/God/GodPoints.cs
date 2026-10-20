@@ -23,6 +23,7 @@ public class GodPoints
     {
         var gained = PerYear + FaithBonus(followers, followerFaith, bonusPercent);
         Earned += gained;
+        GodCounters.OnPoints(gained);
         return gained;
     }
 
@@ -32,11 +33,12 @@ public class GodPoints
         var gained = (stage - SecularStageAwarded) * PerSecularStage;
         SecularStageAwarded = stage;
         Earned += gained;
+        GodCounters.OnPoints(gained);
         return gained;
     }
 
     public void Defense(int amount = PerDefense) => Add(amount);
-    public void Add(int amount) => Earned += Math.Max(0, amount);
+    public void Add(int amount) { Earned += Math.Max(0, amount); GodCounters.OnPoints(amount); }
 
     public int Available(GodTree tree) => Math.Max(0, Earned - tree.SpentPoints);
 
@@ -69,6 +71,7 @@ public class GodState
         Points.Add(Tree.BroadYearPoints);      // 넓게 찍은 단계 보너스
         Points.SecularStageReached(Pressure.Stage(global::Pressure.Earth, cult));
         Tree.ApplyYearly(personal, cult);
+        GodCounters.OnYearEnd(Pressure);
     }
 
     // 분기마다: 압박이 교단을 공격한다. 지상 5단계면 건물을 압류하고, 압류할 건물이 없으면 일정 확률로 해산 명령. 건물 하한은 마지막에 지킨다.

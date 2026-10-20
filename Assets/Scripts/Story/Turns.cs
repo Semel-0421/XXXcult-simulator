@@ -7,10 +7,12 @@ public static class Turns
     // 생활 행동 1턴. 성공 여부를 돌려준다.
     public static bool Life(LifeAction action)
     {
-        var success = LifeActions.Roll(GameSession.Personal, action, GameSession.Rng);
-        LifeActions.Apply(GameSession.Personal, action, success);
+        var check = new CheckContext(CheckKind.Life, action.ToString());
+        var success = GiftedV2Effects.ResolveCheck(check, LifeActions.Roll(GameSession.Personal, action, GameSession.Rng, GiftedV2Effects.SuccessChanceBonus(check)));
+        using (GiftedV2Effects.During(ChangeSource.Action, check.Key)) LifeActions.Apply(GameSession.Personal, action, success);
         GameSession.Count($"act_{action}");
         GameSession.Count("life_acts");
+        NormalCounters.OnAction($"life_{action}");
         GameSession.Count(success ? "act_ok" : "act_fail");
         GameSession.AdvanceTurn();
         return success;
@@ -20,11 +22,14 @@ public static class Turns
     public static bool Cult(CultAction action)
     {
         var cult = GameSession.Cult;
-        var success = CultActions.Roll(cult, GameSession.Personal.Talents, action, GameSession.Rng, GodRules.ChanceBonus(action));
-        CultActions.Apply(cult, GameSession.Personal, action, success);
+        var check = new CheckContext(CheckKind.Cult, CultActions.Key(action));
+        var success = GiftedV2Effects.ResolveCheck(check, CultActions.Roll(cult, GameSession.Personal.Talents, action, GameSession.Rng, GodRules.ChanceBonus(action) + GiftedV2Effects.SuccessChanceBonus(check)));
+        using (GiftedV2Effects.During(ChangeSource.Action, check.Key)) CultActions.Apply(cult, GameSession.Personal, action, success);
         GodRules.AfterAction(action, success);
+        if (!success) MirrorCounters.Fail();
         GameSession.Count($"act_{CultActions.Key(action)}");
         GameSession.Count("cult_acts");
+        NormalCounters.OnAction($"cult_{CultActions.Key(action)}");
         GameSession.Count(success ? "act_ok" : "act_fail");
         if (GameSession.MirrorMode && !success && GameSession.Rng.NextDouble() < MirrorFailMisfortune) GameSession.AddMisfortune(); // 거울: 부정적 이벤트가 적어(바닥 조건) 실패한 행동도 불운을 남긴다
         SocialStanding.ApplyTurn(cult);
@@ -75,9 +80,12 @@ public static class Turns
         AdultGate.Active && rng.NextDouble() < AdultGate.EventChance ? CultEvent.RollRandom(AdultEvents.Pool(GameSession.GodMode), cult, used, rng) : null;
 
     // 고른 선택지의 성공/실패를 판정하고 결과의 효과(기프티드 보정 포함)와 기프티드 지급을 반영한다. 시간은 흐르지 않는다.
-    public static Outcome Answer(Choice choice)
+    // eventId: v2 기프티드 효과가 이벤트 종류를 가리는 데 씀 (모르면 null)
+    public static Outcome Answer(Choice choice, string eventId = null)
     {
-        var success = choice.Roll(GameSession.Rng, GameSession.Personal, GodRules.EventPenalty); // 교단 이벤트는 개인 스탯 보정이 붙는다
+        var check = new CheckContext(CheckKind.Event, eventId);
+        using var changes = GiftedV2Effects.During(ChangeSource.Event, eventId);
+        var success = GiftedV2Effects.ResolveCheck(check, choice.Roll(GameSession.Rng, GameSession.Personal, GodRules.EventPenalty - GiftedV2Effects.SuccessChanceBonus(check))); // 교단 이벤트는 개인 스탯 보정이 붙는다
         var outcome = choice.Resolve(success);
         GameSession.Count("events");
         GameSession.Count(success ? "choice_ok" : "choice_fail");
@@ -89,6 +97,7 @@ public static class Turns
             GiftedGranter.Grant(GameSession.Personal.Talents, id);
         GodRules.AfterEvent(outcome);
         MirrorRules.AfterChoice(choice);
+        NormalCounters.OnAnswer(choice, success);
         return outcome;
     }
 

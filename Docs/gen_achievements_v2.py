@@ -172,11 +172,11 @@ def god():
     m = Mode("god", "g", 1)
     for n, ko, en in [(10, "신성의 싹", "Seed of Divinity"), (25, "신성의 가지", "Branch of Divinity"), (50, "신성의 나무", "Tree of Divinity"),
                       (75, "신성의 숲", "Forest of Divinity"), (100, "신성의 하늘", "Sky of Divinity"), (125, "신성의 완성", "Divinity Complete")]:
-        m.add("신성 트리", ko, en, f"신성 트리 노드를 {n}개 익혔다.", f"Learned {n} nodes of the divine tree.", f"NEW:god_nodes>={n}", 1 + (n >= 50) + (n >= 100))
+        m.add("신성 트리", ko, en, f"신성 트리 노드를 한 회차에 {n}개 익혔다 (최고 기록).", f"Learned {n} nodes of the divine tree in a single run (best run).", f"NEW:god_nodes>={n}", 1 + (n >= 50) + (n >= 100))
     branches = [("Miracle", "기적", "Miracle"), ("Prophecy", "예언", "Prophecy"), ("Mercy", "자비", "Mercy"), ("Desire", "욕망", "Desire")]
     for key, ko, en in branches:
         for n, tko, ten in [(10, "의 길잡이", " Guide"), (20, "의 사도", " Apostle"), (30, "의 주재자", " Sovereign")]:
-            m.add("신성 트리", f"{ko}{tko}", f"{en}{ten}", f"{ko} 갈래 노드를 {n}개 익혔다.", f"Learned {n} nodes of the {en} branch.", f"NEW:god_branch_{key}>={n}", n // 10)
+            m.add("신성 트리", f"{ko}{tko}", f"{en}{ten}", f"{ko} 갈래 노드를 한 회차에 {n}개 익혔다 (최고 기록).", f"Learned {n} nodes of the {en} branch in a single run (best run).", f"NEW:god_branch_{key}>={n}", n // 10)
         m.add("신성 트리", f"{ko}의 핵", f"Core of {en}", f"{ko}의 핵을 익혔다.", f"Learned the Core of {en}.", f"NEW:god_core_{key}", 2)
     ends = [("승천 · 기적과 예언", "Ascension: Miracle & Prophecy"), ("승천 · 기적과 자비", "Ascension: Miracle & Mercy"), ("승천 · 기적과 욕망", "Ascension: Miracle & Desire"),
             ("승천 · 예언과 자비", "Ascension: Prophecy & Mercy"), ("승천 · 예언과 욕망", "Ascension: Prophecy & Desire"), ("승천 · 자비와 욕망", "Ascension: Mercy & Desire"),
@@ -196,17 +196,17 @@ def god():
             nm_ko = [f"첫 {ko}", f"{ko} 세 곳", f"{ko} 다섯 곳", f"{ko}의 도시"][i]
             nm_en = [f"First {en[:-1] if en.endswith('s') and key != 'Library' else en}", f"Three {en}", f"Five {en}", f"City of {en}"][i]
             if key == "Library": nm_en = [f"First Library", f"Three Libraries", f"Five Libraries", f"City of Libraries"][i]
-            m.add("건축", nm_ko, nm_en, f"{ko}을(를) {n}개 지었다.", f"Built {n} {en.lower()}.", f"NEW:god_build_{key}>={n}", i + 1)
+            m.add("건축", nm_ko, nm_en, f"{ko}을(를) 누적 {n}개 지었다 (모든 회차 합산).", f"Built {n} {en.lower()} in total (all runs combined).", f"NEW:god_build_{key}>={n}", i + 1)
     for key, ko, en in [("Envy", "하늘의 시기", "Envy of Heaven"), ("Suspicion", "세상의 의심", "Suspicion of the World")]:
         for n, tko, ten in [(50, "절반의", "Half-Raised"), (80, "고조된", "Rising"), (95, "임계의", "Critical")]:
             m.add("압력", f"{tko} {ko}", f"{ten} {en}", f"{ko}이(가) {n}에 이르렀다.", f"{en} reached {n}.", f"NEW:god_{key}>={n}", 1 + (n >= 80) + (n >= 95))
-        m.add("압력", f"{ko} 없는 신", f"God Without {en}", f"{ko}을(를) 10 이하로 10년 동안 유지했다.", f"Kept {en} at 10 or below for 10 years.", f"NEW:god_{key}<=10 for 10y", 3)
+        m.add("압력", f"{ko} 없는 신", f"God Without {en}", f"{ko}을(를) 10 이하로 10년 동안 유지했다.", f"Kept {en} at 10 or below for 10 years.", f"NEW:god_{key}_low10y>=1", 3)
         m.add("압력", f"{ko}를 견디다", f"Withstood {en}", f"{ko}이(가) 95를 넘었다가 끝내 승천했다.", f"Ascended after {en} had passed 95.", f"NEW:god_{key}_peak95_ascend", 3)
     for n, ko, en in [(1, "첫 빼앗김", "First Seizure"), (5, "다섯 번 빼앗기다", "Seized Five Times"), (15, "빼앗기는 일상", "Routine Seizure")]:
-        m.add("압력", ko, en, f"그릇을 {n}번 빼앗겼다.", f"Had your vessel seized {n} times.", f"NEW:god_seized>={n}", 1 + (n >= 5) + (n >= 15))
+        m.add("압력", ko, en, f"그릇을 누적 {n}번 빼앗겼다 (모든 회차 합산).", f"Had your vessel seized {n} times in total (all runs combined).", f"NEW:god_seized>={n}", 1 + (n >= 5) + (n >= 15))
     for n, ko, en in [(1, "신의 첫 해", "First Year as a God"), (5, "신의 오 년", "Five Years as a God"), (10, "신의 십 년", "Ten Years as a God"),
                       (25, "신의 사반세기", "A Quarter Century as a God"), (50, "신의 반세기", "Half a Century as a God"), (100, "신의 백 년", "A Century as a God")]:
-        m.add("시간", ko, en, f"신으로서 {n}년을 보냈다.", f"Spent {n} years as a god.", f"NEW:god_years>={n}", 1 + (n >= 10) + (n >= 50))
+        m.add("시간", ko, en, f"신으로서 한 회차에 {n}년을 보냈다 (최고 기록).", f"Spent {n} years as a god in a single run (best run).", f"NEW:god_years>={n}", 1 + (n >= 10) + (n >= 50))
     cats = [("heaven", "하늘", "Heaven"), ("earth", "땅", "Earth"), ("indulge", "탐닉", "Indulgence"), ("vessel", "그릇", "Vessel"), ("random", "우연", "Chance")]
     for key, ko, en in cats:
         for n in (10, 25, 40):
@@ -232,7 +232,7 @@ def god():
         ("시기의 정점", "Peak of Envy", "하늘의 시기 95 이상에서 승천했다.", "Ascended while Envy was 95 or higher.", "NEW:god_ascend_Envy>=95"),
         ("의심의 정점", "Peak of Suspicion", "세상의 의심 95 이상에서 승천했다.", "Ascended while Suspicion was 95 or higher.", "NEW:god_ascend_Suspicion>=95"),
         ("두 압력의 정점", "Both Pressures Peak", "시기와 의심이 모두 90 이상일 때 승천했다.", "Ascended with both Envy and Suspicion at 90+.", "NEW:god_ascend_both>=90"),
-        ("무풍지대", "Eye of the Storm", "시기와 의심이 모두 20 이하로 승천했다.", "Ascended with both Envy and Suspicion at 20 or below.", "NEW:god_ascend_both<=20"),
+        ("무풍지대", "Eye of the Storm", "시기와 의심이 모두 20 이하로 승천했다.", "Ascended with both Envy and Suspicion at 20 or below.", "NEW:god_ascend_both_max<=20"),
         ("신앙 부자", "Rich in Faith", "신앙 포인트 1000 이상 보유한 채 승천했다.", "Ascended holding 1,000+ Faith Points.", "NEW:god_ascend_points>=1000"),
         ("빈손의 신", "Empty-Handed God", "신앙 포인트가 0인 채 승천했다.", "Ascended with 0 Faith Points.", "NEW:god_ascend_points==0"),
         ("인간의 몸으로", "In a Mortal Frame", "그릇이 한 번도 회복되지 않은 채 승천했다.", "Ascended without ever recovering the vessel.", "NEW:god_ascend_no_vessel_recovery"),
@@ -249,7 +249,7 @@ def god():
         ("모든 이벤트 종류", "All Kinds of Omens", "한 회차에 다섯 종류 이벤트를 모두 겪었다.", "Experienced all five event categories in one run.", "NEW:god_all_event_kinds"),
         ("화려한 승천", "Grand Ascension", "건물 20개 이상과 노드 100개 이상으로 승천했다.", "Ascended with 20+ buildings and 100+ nodes.", "NEW:god_ascend_buildings>=20 god_nodes>=100"),
         ("검소한 승천", "Frugal Ascension", "노드 30개 이하로 승천했다.", "Ascended with 30 nodes or fewer.", "NEW:god_ascend_nodes<=30"),
-        ("신이 된 교주", "Leader Turned God", "일반 모드에서 교단을 해산시킨 뒤 신 모드로 승천했다.", "Ascended in God mode after dissolving a cult in Normal mode.", "NEW:dissolved_then_ascended"),
+        ("신이 된 교주", "Leader Turned God", "일반 모드에서 교단이 해산된 적이 있는 채로 신 모드에서 승천했다.", "Ascended in God mode after having had a cult dissolved at some point.", "NEW:dissolved_then_ascended"),
         ("하늘의 아이", "Child of Heaven", "신 모드를 처음 열자마자 첫 해에 첫 건물을 지었다.", "Built your first building in the first year of a run.", "NEW:god_build_first_year"),
         ("끝없는 순례", "Endless Pilgrimage", "신 모드를 10회차 시작했다.", "Started 10 God mode runs.", "profile:god_runs>=10"),
         ("지치지 않는 신", "Tireless God", "신 모드를 30회차 시작했다.", "Started 30 God mode runs.", "profile:god_runs>=30"),
@@ -260,8 +260,8 @@ def god():
         ("백 번의 치유", "Hundred Healings", "치유를 한 회차에 100번 썼다.", "Used Healing 100 times in one run.", "NEW:god_run_Healing>=100"),
         ("백 번의 계시", "Hundred Revelations", "계시를 한 회차에 100번 내렸다.", "Delivered 100 revelations in one run.", "NEW:god_run_Revelation>=100"),
         ("백 번의 연회", "Hundred Feasts", "연회를 한 회차에 100번 열었다.", "Held 100 feasts in one run.", "NEW:god_run_Feast>=100"),
-        ("다섯 성소", "Five Sanctuaries", "신전 다섯 곳을 모두 봉헌했다.", "Consecrated five temples.", "NEW:god_consecrated>=5"),
-        ("성소의 숲", "Forest of Sanctuaries", "신전 열 곳을 모두 봉헌했다.", "Consecrated ten temples.", "NEW:god_consecrated>=10"),
+        ("다섯 성소", "Five Sanctuaries", "건물을 다섯 번 봉헌했다 (신전 한정 아님, 모든 봉헌 합산).", "Consecrated buildings five times (any building, not only temples).", "NEW:god_consecrated>=5"),
+        ("성소의 숲", "Forest of Sanctuaries", "건물을 열 번 봉헌했다 (신전 한정 아님, 모든 봉헌 합산).", "Consecrated buildings ten times (any building, not only temples).", "NEW:god_consecrated>=10"),
         ("하늘 아래 모든 마을", "Every Village Under Heaven", "마을 10곳과 쉼터 10곳을 지었다.", "Built 10 villages and 10 shelters.", "NEW:god_build_Village>=10 god_build_Shelter>=10"),
         ("지혜의 전당", "Hall of Wisdom", "도서관 10곳을 지었다.", "Built 10 libraries.", "NEW:god_build_Library>=10"),
         ("경배받는 모습", "Idol Worshiped", "신상 10개를 세웠다.", "Raised 10 statues.", "NEW:god_build_Statue>=10"),
@@ -280,7 +280,7 @@ def god():
     m.add("시간", "신의 칠십오 년", "Seventy-Five Years as a God", "신으로서 75년을 보냈다.", "Spent 75 years as a god.", "NEW:god_years>=75", 3)
     m.add("압력", "빼앗김의 달인", "Veteran of Seizure", "그릇을 30번 빼앗겼다.", "Had your vessel seized 30 times.", "NEW:god_seized>=30", 3)
     for n, ko, en in [(1, "그릇의 회복", "Vessel Restored"), (10, "열 번의 회복", "Ten Recoveries"), (30, "끈질긴 그릇", "Persistent Vessel")]:
-        m.add("압력", ko, en, f"그릇을 {n}번 회복했다.", f"Recovered the vessel {n} times.", f"NEW:god_vessel_recovery>={n}", 1 + (n >= 10) + (n >= 30))
+        m.add("압력", ko, en, f"연회로 그릇을 누적 {n}번 회복했다.", f"Recovered the vessel {n} times in total through feasts.", f"NEW:god_vessel_recovery>={n}", 1 + (n >= 10) + (n >= 30))
     return m
 
 # ───────────────────────── 거울 세계 모드 ─────────────────────────
@@ -309,7 +309,7 @@ def mirror():
     for n, ko, en in [(200, "명망의 싹", "Seed of Renown"), (400, "명망 기준선", "Renown Baseline"), (600, "높아지는 명망", "Rising Renown"), (800, "명망의 정점", "Peak Renown")]:
         m.add("연쇄 지표", ko, en, f"거울 세계에서 명망 {n}에 이르렀다.", f"Reached Reputation {n} in the Mirror World.", f"NEW:mirror_Reputation>={n}", 1 + (n >= 600))
     m.add("연쇄 지표", "명망의 선순환", "Virtuous Circle", "명망 600 이상으로 연간 신도 증가가 최대치(+10)에 도달했다.", "Reached the maximum yearly recruit gain (+10) at Reputation 600+.", "NEW:mirror_recruits_year>=10", 2)
-    m.add("연쇄 지표", "명망의 악순환", "Vicious Circle", "명망 200 이하로 연간 신도가 10명 줄었다.", "Lost 10 followers in a single year at Reputation 200 or lower.", "NEW:mirror_recruits_year<=-10", 2)
+    m.add("연쇄 지표", "명망의 악순환", "Vicious Circle", "명망이 낮아 연간 신도가 6명 줄었다.", "Lost 6 followers in a single year at low Reputation.", "NEW:mirror_recruits_year<=-6", 2)
     m.add("연쇄 지표", "고요한 균형", "Still Balance", "명망 400 근처(±50)에서 5년을 보냈다.", "Spent 5 years within ±50 of Reputation 400.", "NEW:mirror_rep_near_400>=5", 2)
     for n, ko, en in [(100, "헌금 백", "Offerings: A Hundred"), (300, "헌금 삼백", "Offerings: Three Hundred"), (500, "헌금 오백", "Offerings: Five Hundred"), (800, "헌금 팔백", "Offerings: Eight Hundred")]:
         m.add("연쇄 지표", ko, en, f"거울 세계에서 헌금 {n}에 이르렀다.", f"Reached {n} Offerings in the Mirror World.", f"NEW:mirror_Offerings>={n}", 1 + (n >= 500))
@@ -318,7 +318,7 @@ def mirror():
         m.add("불운", ko, en, f"불운 수치가 {n}에 이르렀다.", f"Misfortune reached {n}.", f"NEW:mirror_misfortune>={n}", 1 + (n >= 6) + (n >= 10))
     m.add("불운", "불운 속의 번영", "Prosperity in Misfortune", "불운 8 이상인 채 신도 500명을 모았다.", "Gathered 500 followers while Misfortune was 8 or higher.", "NEW:mirror_misfortune>=8 mirror_followers>=500", 3)
     m.add("불운", "행운아", "Lucky Soul", "불운 1 이하로 교단 10년을 보냈다.", "Spent 10 cult years with Misfortune at 1 or below.", "NEW:mirror_misfortune_low_years>=10", 3)
-    m.add("불운", "불운 회복", "Misfortune Recovered", "불운 6 이상에서 2 이하로 되돌렸다.", "Brought Misfortune from 6+ back down to 2 or below.", "NEW:mirror_misfortune_recover", 2)
+    m.add("불운", "불운 속 십 년", "Ten Years in Misfortune", "불운 6 이상인 채로 교단 10년을 보냈다.", "Spent 10 cult years with Misfortune at 6 or higher.", "NEW:mirror_misfortune_high_years>=10", 2)
     for n, ko, en in [(1, "첫 실패", "First Failure"), (10, "열 번의 실패", "Ten Failures"), (30, "서른 번의 실패", "Thirty Failures"), (60, "예순 번의 실패", "Sixty Failures")]:
         m.add("불운", ko, en, f"거울 세계에서 교단 행동 판정에 {n}번 실패했다.", f"Failed {n} cult action checks in the Mirror World.", f"NEW:mirror_fail_acts>={n}", 1 + (n >= 30))
     for n, ko, en in [(0, "순수한 욕망", "Pure Desire"), (5, "욕망의 기울기", "Lean of Desire")]:
@@ -339,7 +339,7 @@ def mirror():
               ("mr151", "거울 종반부", "Mirror Finale"), ("recovery", "거울 회복", "Mirror Recovery"), ("special", "거울 특수", "Mirror Special"), ("final", "거울 최종", "Mirror Final")]
     for key, ko, en in groups:
         for n in (10, 25, 40):
-            m.add("이벤트", f"{ko} {n}", f"{en} {n}", f"'{ko}' 이벤트를 {n}개 겪었다.", f"Experienced {n} '{en}' events.", f"profile:mirror_{key}>={n}", 1 + (n >= 25) + (n >= 40))
+            m.add("이벤트", f"{ko} {n}", f"{en} {n}", f"'{ko}' 이벤트를 {n}개 겪었다.", f"Experienced {n} '{en}' events.", f"profile:mirror_{key}_events>={n}" if key == "final" else f"profile:mirror_{key}>={n}", 1 + (n >= 25) + (n >= 40))
     for n, ko, en in [(100, "거울 이벤트 백", "A Hundred Mirror Events"), (200, "거울 이벤트 이백", "Two Hundred Mirror Events"), (351, "거울 이벤트 전부", "Every Mirror Event")]:
         m.add("이벤트", ko, en, f"거울 세계 이벤트를 {n}개 겪었다 (누적).", f"Experienced {n} Mirror events (all runs).", f"profile:mirror_events>={n}", 1 + (n >= 200) + (n >= 351))
     for n, ko, en in [(50, "거울 업적 오십", "Fifty Mirror Marks"), (100, "거울 업적 백", "A Hundred Mirror Marks")]:
@@ -376,7 +376,7 @@ def mirror():
         ("헌금의 폭락", "Offerings Crash", "헌금 700 이상에서 100 이하로 떨어졌다.", "Offerings dropped from 700+ to 100 or less.", "NEW:mirror_offerings_crash"),
         ("모든 지표 최대", "All at Maximum", "신도·명망·헌금이 모두 900 이상이었다.", "Had Followers, Reputation and Offerings all at 900+.", "NEW:mirror_chain_all>=900"),
         ("거울 마스터", "Mirror Master", "거울 세계 업적을 150개 달성했다.", "Unlocked 150 Mirror World achievements.", "NEW:mirror_achv>=150"),
-        ("전부를 비추다", "Reflect Everything", "거울 세계 업적을 전부 달성했다.", "Unlocked every Mirror World achievement.", "NEW:mirror_achv==200"),
+        ("전부를 비추다", "Reflect Everything", "거울 세계 업적을 119개 전부 달성했다.", "Unlocked every Mirror World achievement.", "NEW:mirror_achv>=119"),
     ]
     for ko, en, dko, den, cond in challenge:
         m.add("도전", ko, en, dko, den, cond, 2)

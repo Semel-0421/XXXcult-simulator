@@ -22,7 +22,8 @@ public static class AchievementWindow
     static TMP_Text titleLabel, hintLabel, closeLabel, rewardsLabel, galleryLabel, adultGalleryLabel;
     static Button adultGallery;
     static Button zoomInButton, zoomOutButton;
-    static Row[] rows;
+    static readonly System.Collections.Generic.List<Row> rows = new System.Collections.Generic.List<Row>();
+    static RectTransform content; static TMP_FontAsset font;
     static readonly string[] TabKeys = { "normal", "god", "mirror", "hidden" };
     static readonly Button[] tabButtons = new Button[4];
     static readonly TMP_Text[] tabLabels = new TMP_Text[4];
@@ -55,9 +56,9 @@ public static class AchievementWindow
 
     static void Build()
     {
-        var font = UiKit.FindFont();
+        font = UiKit.FindFont();
         var canvas = UiKit.CreateOverlayCanvas("AchievementCanvas", 300);
-        var content = UiKit.BuildScrollWindow(canvas, font, "AchievementWindow", new Vector2(980, 660),
+        content = UiKit.BuildScrollWindow(canvas, font, "AchievementWindow", new Vector2(980, 660),
             out root, out titleLabel, out hintLabel, out var close);
         closeLabel = close.GetComponentInChildren<TMP_Text>();
         close.onClick.AddListener(Close);
@@ -131,34 +132,16 @@ public static class AchievementWindow
         emptyLabel.rectTransform.offsetMin = new Vector2(18, 18);
         emptyLabel.rectTransform.offsetMax = new Vector2(-18, -214);
 
-        // 기프티드 도감 자리표시: 칸 격자에 "준비 중"만 적는다
-        giftedPanel = UiKit.Child(panel, "GiftedPlaceholder", typeof(GridLayoutGroup));
-        UiKit.Anchor(giftedPanel, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
-        giftedPanel.offsetMin = new Vector2(18, 18);
-        giftedPanel.offsetMax = new Vector2(-18, -214);
-        var grid = giftedPanel.GetComponent<GridLayoutGroup>();
-        grid.cellSize = new Vector2(210, 110);
-        grid.spacing = new Vector2(12, 12);
-        grid.padding = new RectOffset(6, 6, 6, 6);
-        for (int i = 0; i < 12; i++)
-        {
-            var cell = UiKit.Child(giftedPanel, $"Cell{i + 1:00}", typeof(Image));
-            cell.GetComponent<Image>().color = new Color(0.16f, 0.07f, 0.24f, 0.9f);
-            var text = UiKit.Label(cell, font, "Soon", 22, TextAlignmentOptions.Center, UiKit.Muted);
-            UiKit.Anchor(text.rectTransform, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
-            giftedCells.Add(text);
-        }
+        // 기프티드 도감: 칸을 누르면 그 모드의 업적 목록으로 돌아간다
+        giftedPanel = GiftedGalleryView.Build(panel, font, index => { tab = (AchievementTabs.Tab)index; showGifted = false; Refresh(); });
 
-        rows = new Row[AchievementCatalog.All.Count];
-        for (int i = 0; i < rows.Length; i++) rows[i] = BuildRow(content, font, i);
-        ApplyZoom();
+        ApplyZoom(); // 행은 Refresh에서 필요한 만큼 만든다
     }
 
     static void ApplyZoom()
     {
         float z = ZoomLevels[ZoomIndex];
-        if (rows != null)
-            foreach (var row in rows)
+        foreach (var row in rows)
             {
                 row.layout.preferredHeight = BaseRowHeight * z;
                 row.name.fontSize = BaseNameSize * z;
@@ -196,7 +179,7 @@ public static class AchievementWindow
     {
         titleLabel.text = Lang.Get("ach_title");
         closeLabel.text = Lang.Get("close");
-        var progress = $"{string.Format(Lang.Get("ach_progress"), Profile.UnlockedCount, AchievementCatalog.All.Count)}   <color=#F2D978>{Legacy.Describe()}</color>";
+        var progress = $"{string.Format(Lang.Get("ach_progress"), Achievements.CountedUnlocked(), Achievements.Counted.Count())}   <color=#F2D978>{Legacy.Describe()}</color>";
         hintLabel.text = Profile.RewardsEnabled ? progress : $"{progress}   <color=#E0A050>{Lang.Get("ach_rewards_off_hint")}</color>";
         rewardsLabel.text = Lang.Get(Profile.RewardsEnabled ? "ach_rewards_on" : "ach_rewards_off");
         galleryLabel.text = Lang.Get("gallery_open");
@@ -217,11 +200,12 @@ public static class AchievementWindow
         emptyLabel.gameObject.SetActive(!showGifted && list.Count == 0);
         emptyLabel.text = Lang.Get("ach_tab_empty");
         giftedPanel.gameObject.SetActive(showGifted);
-        foreach (var cell in giftedCells) cell.text = Lang.Get("ach_soon");
+        if (showGifted) GiftedGalleryView.Refresh((int)tab);
 
-        for (int i = 0; i < rows.Length; i++)
+        while (rows.Count < list.Count) rows.Add(BuildRow(content, font, rows.Count));
+        if (rows.Count > 0 && list.Count > 0) ApplyZoom();
+        for (int i = 0; i < rows.Count; i++)
         {
-            // shortcut: 행은 일반 탭 개수만큼만 만들어 둠, 다른 탭에 업적이 생기면 행 풀을 늘릴 것
             var row = rows[i];
             row.background.gameObject.SetActive(i < list.Count);
             if (i >= list.Count) continue;
