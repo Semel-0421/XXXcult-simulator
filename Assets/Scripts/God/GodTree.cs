@@ -52,6 +52,7 @@ public class GodTree
         if (skill.IsCore) coreOrder.Add(skill.Id);
         totals = null;
         GodCounters.OnLearn(this);
+        GiftedV2GodHooks.OnNodeLearned(skill, skill.Id == NatureId);
         Changed?.Invoke(skill);
     }
 

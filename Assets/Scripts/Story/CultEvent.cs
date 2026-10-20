@@ -152,7 +152,12 @@ public class CultEvent
     public static CultEvent RollRandom(IReadOnlyList<CultEvent> pool, CultStatus cult, ISet<string> used, Random rng)
     {
         if (rng.NextDouble() >= Chance) return null;
-        var picked = PickWeighted(pool, cult, used, rng, skipUsed: true) ?? PickWeighted(pool, cult, used, rng, skipUsed: false);
+        var picked = PickWeighted(pool, cult, used, rng, skipUsed: true);
+        if (picked == null)
+        {
+            if (GiftedV2GodHooks.SuppressRepeatedEvent(rng)) return null; // 이미 나온 이벤트의 재등장은 v2g048이 줄임
+            picked = PickWeighted(pool, cult, used, rng, skipUsed: false);
+        }
         if (picked != null) used.Add(picked.Id);
         return picked;
     }

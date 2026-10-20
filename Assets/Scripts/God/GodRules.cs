@@ -113,7 +113,7 @@ public static class GodRules
         GodCounters.OnAction(ActionOf(action), success);
         if (action == CultAction.Desire && success)
         {
-            var recovery = FeastRecovery * (1 + tree.Total(GodEffect.Type.VesselRecovery) / 100f);
+            var recovery = FeastRecovery * (1 + tree.Total(GodEffect.Type.VesselRecovery) / 100f + GiftedV2GodHooks.VesselRecoveryBonus);
             personal.AddWithRemainder(PersonalStatId.Health, recovery);
             personal.AddWithRemainder(PersonalStatId.Mentality, recovery);
             GodCounters.OnVesselRecovery();
@@ -139,13 +139,13 @@ public static class GodRules
         if (!GameSession.CultFounded) return null;
         var personal = GameSession.Personal;
         var cult = GameSession.Cult;
-        if (personal[PersonalStatId.Health].Value <= 0 || personal[PersonalStatId.Mentality].Value <= 0) return Vessel;
+        if ((personal[PersonalStatId.Health].Value <= 0 || personal[PersonalStatId.Mentality].Value <= 0) && !GiftedV2GodHooks.ResistVesselLoss(personal)) return Vessel;
         if (cult[StatId.Followers].Value <= 0 || cult[StatId.FollowerFaith].Value <= 0) return Forgotten;
         return Turns.CultDissolved || GameSession.God.Buildings.DissolutionOrdered ? Disbanded : null;
     }
 
     // 이벤트 결과의 신 모드 전용 효과를 반영하고 건물 하한을 지킨다
-    public static void AfterEvent(Outcome outcome)
+    public static void AfterEvent(Outcome outcome, string eventId = null)
     {
         if (!GameSession.GodMode) return;
         GodCounters.OnEvent(outcome);
@@ -153,8 +153,8 @@ public static class GodRules
         foreach (var (effect, amount) in outcome.GodEffects)
             switch (effect)
             {
-                case GodEventEffect.Envy: god.Pressure.AddHeat(amount, 0); break;
-                case GodEventEffect.Suspicion: god.Pressure.AddHeat(0, amount); break;
+                case GodEventEffect.Envy: god.Pressure.AddHeat(amount * GiftedV2GodHooks.EventHeatScale(eventId), 0); break;
+                case GodEventEffect.Suspicion: god.Pressure.AddHeat(0, amount * GiftedV2GodHooks.EventHeatScale(eventId)); break;
                 case GodEventEffect.Points:
                     if (GameSession.Rng.NextDouble() < EventPointsChance) god.Points.Defense(amount);
                     break;
@@ -169,6 +169,8 @@ public static class GodRules
     public static Endings.Ending DueEnding()
     {
         var tree = GameSession.God.Tree;
-        return GodCounters.OnEnding(tree.Ascended ? Find(tree.AscensionEndingId) : null);
+        var ending = tree.Ascended ? Find(tree.AscensionEndingId) : null;
+        if (ending != null) GiftedV2GodHooks.BeforeAscension();
+        return GodCounters.OnEnding(ending);
     }
 }

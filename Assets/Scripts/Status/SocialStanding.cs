@@ -37,14 +37,22 @@ public static class SocialStanding
     public static void ApplyTurn(CultStatus cult)
     {
         foreach (var effect in TurnEffects(Of(cult)))
-            cult[effect.Stat].Add(effect.Amount);
+        {
+            var scale = effect.Amount < 0 ? GiftedV2Effects.DecayMultiplierNormal(effect.Stat, -effect.Amount, "decay:standing") : 1f;
+            if (scale == 1f) cult[effect.Stat].Add(effect.Amount);
+            else cult.AddWithRemainder(effect.Stat, effect.Amount * scale);
+        }
     }
 
     // 연 1회(교단 1년차마다) 입교를 더한다
     public static void YearEnd(CultStatus cult)
     {
         var before = cult[StatId.Followers].Value;
-        cult[StatId.Followers].Add(Recruits(cult[StatId.Reputation].Value));
+        var recruits = Recruits(cult[StatId.Reputation].Value);
+        var adjusted = GiftedV2Mirror.YearlyRecruits(recruits, cult[StatId.Reputation].Value); // 거울 기프티드: 입교 가감 (이탈 배율 포함)
+        if (adjusted != recruits) cult[StatId.Followers].Add(cult.Remainders.Take(StatId.Followers, adjusted));
+        else if (recruits < 0 && GiftedV2Effects.DecayMultiplierNormal(StatId.Followers, -recruits, "decay:recruit") is var scale && scale != 1f) cult.AddWithRemainder(StatId.Followers, recruits * scale);
+        else cult[StatId.Followers].Add(recruits);
         MirrorCounters.Recruits(cult[StatId.Followers].Value - before);
     }
 

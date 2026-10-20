@@ -82,7 +82,7 @@ public static class MirrorRules
         }
         if (GameSession.CountOf(GraceUsed) > 0) return true;
         if (start == 0) { SetCount(GraceStart, turns + 1); return false; }
-        return turns - (start - 1) >= GraceTurns;
+        return turns - (start - 1) >= GraceTurns + GiftedV2Mirror.GraceTurnsBonus();
     }
 
     // 행동을 고르는 시점의 엔딩: 최종 스킬 → 25년 판정 (동률이면 2년마다 확인 → 3년 뒤 판정 → 40년 갈림길)

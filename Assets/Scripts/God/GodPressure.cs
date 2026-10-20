@@ -93,6 +93,8 @@ public class GodPressure
     // 시기·의혹 가산치를 더한다 (행동·이벤트·축성 공용). 오르는 쪽만 저항을 받는다.
     public void AddHeat(float envy, float suspicion)
     {
+        if (envy > 0) envy *= GiftedV2GodHooks.HeatGainScale(true);
+        if (suspicion > 0) suspicion *= GiftedV2GodHooks.HeatGainScale(false);
         Envy = Math.Max(0, Envy + (envy > 0 ? envy * Exposure(Pressure.Heaven) : envy));
         Suspicion = Math.Max(0, Suspicion + (suspicion > 0 ? suspicion * Exposure(Pressure.Earth) : suspicion));
         GodCounters.OnPressure(Envy, Suspicion);

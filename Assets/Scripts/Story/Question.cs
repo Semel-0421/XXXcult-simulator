@@ -79,6 +79,10 @@ public class Choice
     public bool Roll(Random rng, PersonalStatus personal = null, float penalty = 0) =>
         Chance >= 1f || rng.NextDouble() < Math.Max(MinChance, ChanceFor(personal) - penalty);
 
+    // Roll이 쓰는 실제 성공 확률 (확정 선택지는 1)
+    public float RollChance(PersonalStatus personal = null, float penalty = 0) =>
+        Chance >= 1f ? 1f : Math.Max(MinChance, ChanceFor(personal) - penalty);
+
     public Outcome Resolve(bool success) => success || Fail == null ? Success : Fail;
 }
 

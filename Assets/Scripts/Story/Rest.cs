@@ -57,7 +57,7 @@ public static class Rest
     {
         foreach (var id in All)
         {
-            if (resting.Contains(id)) personal[id].Add(Recover);
+            if (resting.Contains(id)) { var m = GiftedV2Mirror.RestMultiplier(); if (m == 1f) personal[id].Add(Recover); else personal.AddWithRemainder(id, Recover * m); }
             else if (InScope(id)) personal[id].Add(-Drain);
         }
         foreach (var id in CultStats)

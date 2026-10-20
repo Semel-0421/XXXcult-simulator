@@ -10,13 +10,13 @@ public static class CultScore
     public static float Reputation(CultStatus cult)
     {
         float baseRep = cult[StatId.Reputation].Value;
-        return baseRep + Mathf.Min(baseRep * MaxShare, cult[StatId.Followers].Value * FollowerToReputation);
+        return baseRep + Mathf.Min(baseRep * MaxShare, cult[StatId.Followers].Value * FollowerToReputation * GiftedV2Mirror.FollowerReputationRate());
     }
 
     // 헌금 점수 = 헌금 + min(헌금의 50%, 명망 점수 × 0.5)  (명망 점수는 위에서 한 번만 계산한 값)
     public static float Offerings(CultStatus cult)
     {
         float baseOff = cult[StatId.Offerings].Value;
-        return baseOff + Mathf.Min(baseOff * MaxShare, Reputation(cult) * ReputationToOfferings);
+        return baseOff + Mathf.Min(baseOff * MaxShare, Reputation(cult) * ReputationToOfferings * GiftedV2Mirror.ReputationOfferingsRate());
     }
 }

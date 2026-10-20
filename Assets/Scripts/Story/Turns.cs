@@ -8,12 +8,14 @@ public static class Turns
     public static bool Life(LifeAction action)
     {
         var check = new CheckContext(CheckKind.Life, action.ToString());
-        var success = GiftedV2Effects.ResolveCheck(check, LifeActions.Roll(GameSession.Personal, action, GameSession.Rng, GiftedV2Effects.SuccessChanceBonus(check)));
+        var bonus = GiftedV2Effects.SuccessChanceBonus(check);
+        var success = GiftedV2Effects.ResolveCheck(check.WithChance(LifeActions.Chance(GameSession.Personal, action, bonus)), LifeActions.Roll(GameSession.Personal, action, GameSession.Rng, bonus));
         using (GiftedV2Effects.During(ChangeSource.Action, check.Key)) LifeActions.Apply(GameSession.Personal, action, success);
         GameSession.Count($"act_{action}");
         GameSession.Count("life_acts");
         NormalCounters.OnAction($"life_{action}");
         GameSession.Count(success ? "act_ok" : "act_fail");
+        if (GiftedV2Mirror.GrantsExtraAction(success)) return success; // v2m081
         GameSession.AdvanceTurn();
         return success;
     }
@@ -23,7 +25,8 @@ public static class Turns
     {
         var cult = GameSession.Cult;
         var check = new CheckContext(CheckKind.Cult, CultActions.Key(action));
-        var success = GiftedV2Effects.ResolveCheck(check, CultActions.Roll(cult, GameSession.Personal.Talents, action, GameSession.Rng, GodRules.ChanceBonus(action) + GiftedV2Effects.SuccessChanceBonus(check)));
+        var bonus = GodRules.ChanceBonus(action) + GiftedV2Effects.SuccessChanceBonus(check);
+        var success = GiftedV2Effects.ResolveCheck(check.WithChance(CultActions.Chance(cult, GameSession.Personal.Talents, action, bonus)), CultActions.Roll(cult, GameSession.Personal.Talents, action, GameSession.Rng, bonus));
         using (GiftedV2Effects.During(ChangeSource.Action, check.Key)) CultActions.Apply(cult, GameSession.Personal, action, success);
         GodRules.AfterAction(action, success);
         if (!success) MirrorCounters.Fail();
@@ -32,6 +35,7 @@ public static class Turns
         NormalCounters.OnAction($"cult_{CultActions.Key(action)}");
         GameSession.Count(success ? "act_ok" : "act_fail");
         if (GameSession.MirrorMode && !success && GameSession.Rng.NextDouble() < MirrorFailMisfortune) GameSession.AddMisfortune(); // 거울: 부정적 이벤트가 적어(바닥 조건) 실패한 행동도 불운을 남긴다
+        if (GiftedV2Mirror.GrantsExtraAction(success)) return success; // v2m081: 턴을 쓰지 않는 추가 행동
         SocialStanding.ApplyTurn(cult);
         Misfortune.ApplyTurn(cult, GameSession.Misfortune, Misfortune.TotalResistance(cult));
         GameSession.AdvanceTurn();
@@ -83,9 +87,10 @@ public static class Turns
     // eventId: v2 기프티드 효과가 이벤트 종류를 가리는 데 씀 (모르면 null)
     public static Outcome Answer(Choice choice, string eventId = null)
     {
-        var check = new CheckContext(CheckKind.Event, eventId);
+        var check = new CheckContext(CheckKind.Event, eventId, -1f, choice);
         using var changes = GiftedV2Effects.During(ChangeSource.Event, eventId);
-        var success = GiftedV2Effects.ResolveCheck(check, choice.Roll(GameSession.Rng, GameSession.Personal, GodRules.EventPenalty - GiftedV2Effects.SuccessChanceBonus(check))); // 교단 이벤트는 개인 스탯 보정이 붙는다
+        var penalty = GodRules.EventPenalty - GiftedV2Effects.SuccessChanceBonus(check);
+        var success = GiftedV2Effects.ResolveCheck(check.WithChance(choice.RollChance(GameSession.Personal, penalty)), choice.Roll(GameSession.Rng, GameSession.Personal, penalty)); // 교단 이벤트는 개인 스탯 보정이 붙는다
         var outcome = choice.Resolve(success);
         GameSession.Count("events");
         GameSession.Count(success ? "choice_ok" : "choice_fail");
@@ -95,7 +100,8 @@ public static class Turns
             GiftedEffects.Apply(GameSession.Cult, GameSession.Personal.Talents, effect.Stat, effect.Amount);
         foreach (var id in outcome.Grants)
             GiftedGranter.Grant(GameSession.Personal.Talents, id);
-        GodRules.AfterEvent(outcome);
+        if (outcome.Grants.Count > 0 && GiftedV2Effects.GiftedBonusRollNormal()) GiftedGranter.GrantRandom(GameSession.Personal.Talents, GameSession.Rng, 1);
+        GodRules.AfterEvent(outcome, eventId);
         MirrorRules.AfterChoice(choice);
         NormalCounters.OnAnswer(choice, success);
         return outcome;

@@ -50,10 +50,10 @@ public class GodBuildings
     };
 
     public static int Floor(GodBuildingType type, int level) => level <= 0 ? 0
-        : type == GodBuildingType.Village ? FollowerFloor[level - 1]
-        : ClampedStat.DefaultMax * FloorPercent[level - 1] / 100;
+        : (int)System.Math.Round((type == GodBuildingType.Village ? FollowerFloor[level - 1]
+            : ClampedStat.DefaultMax * FloorPercent[level - 1] / 100) * GiftedV2GodHooks.BuildingEffectScale(type));
 
-    public static int CostOf(int level) => Cost[level - 1];
+    public static int CostOf(int level) => GiftedV2GodHooks.BuildingCost(Cost[level - 1]);
     public static int UpkeepOf(int level) => level <= 0 ? 0 : Upkeep[level - 1];
 
     public static bool IsUnlocked(GodBuildingType type, GodTree tree) =>
@@ -119,7 +119,7 @@ public class GodBuildings
     public void OrderDissolution() => DissolutionOrdered = true;
 
     // 세속 규모에 더하는 건물 가치 (들인 축성 비용 합)
-    public int Value => All.Sum(type => Enumerable.Range(1, LevelOf(type)).Sum(CostOf));
+    public int Value => All.Sum(type => Enumerable.Range(1, LevelOf(type)).Sum(l => Cost[l - 1]));
 
     public void Restore(IList<int> saved, bool dissolution)
     {

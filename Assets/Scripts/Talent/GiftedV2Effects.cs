@@ -14,7 +14,10 @@ public readonly struct CheckContext
 {
     public readonly CheckKind Kind;
     public readonly string Key;
-    public CheckContext(CheckKind kind, string key) { Kind = kind; Key = key; }
+    public readonly float Chance;  // 이 판정의 성공 확률 (모르면 -1) — 재굴림 등에 씀
+    public readonly Choice Choice; // 이벤트 판정에서 고른 선택지 (아니면 null)
+    public CheckContext(CheckKind kind, string key, float chance = -1f, Choice choice = null) { Kind = kind; Key = key; Chance = chance; Choice = choice; }
+    public CheckContext WithChance(float chance) => new(Kind, Key, chance, Choice);
 }
 
 // 스탯 변화 하나 (GiftedEffects.Apply를 지나는 것). Cult/Personal 중 하나만 값이 있다. Source/Key는 GiftedV2Effects.During 범위에서 온다.
@@ -34,7 +37,7 @@ public readonly struct StatChange
 
 // 효과 하나의 정의. 쓰지 않는 칸은 null로 둔다. 상태(연속 실패 등)는 Counters run 범위나 GiftedV2Effects 토큰으로 직접 센다.
 // CheckWhen/CheckBonusFn/StatWhen/StatMultiplierFn 안에서는 GiftedV2Effects 훅·GiftedEffects.Apply를 부르지 말 것 (공용 버퍼를 도는 중). 나머지 콜백은 불러도 된다.
-public sealed class EffectDef
+public sealed partial class EffectDef
 {
     // 판정
     public float? CheckBonus;                      // 성공 확률 가산 (0.08 = +8%p)
@@ -59,7 +62,7 @@ public sealed class EffectDef
     public Action OnYearEnd;                       // 나이 기준 해가 바뀔 때 (GameSession.AdvanceTurn, Age.Quarter == 0)
 }
 
-public static class GiftedV2Effects
+public static partial class GiftedV2Effects
 {
     public const string TokenPrefix = "gv2used:";
 

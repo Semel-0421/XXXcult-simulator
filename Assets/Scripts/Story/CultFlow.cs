@@ -98,7 +98,7 @@ public class CultFlow : MonoBehaviour
             ? $"{summary}\n<color=#DC5050>{string.Format(Lang.Get("misfortune_struck"), GameSession.Misfortune)}</color>"
             : summary;
         questionRunner.Answered += OnEventAnswered;
-        questionRunner.Run(next.Question, preface, advancesTurn: false, eventId: next.Id);
+        questionRunner.Run(next.IsNegative ? GiftedV2Effects.WithRescueChoiceNormal(next.Question) : next.Question, preface, advancesTurn: false, eventId: next.Id);
     }
 
     void OnEventAnswered(string resultText)
@@ -157,6 +157,7 @@ public class CultFlow : MonoBehaviour
                 questionPanel.Show(string.Format(Lang.Get("rest_progress"), names, turn, Rest.Turns));
                 yield return new WaitForSecondsRealtime(0.8f);
             }
+            GiftedV2GodHooks.OnRestYear();
         }
         restRoutine = null;
         if (TryDissolve()) yield break; // 쉬는 동안 명망이 바닥났다면 해체

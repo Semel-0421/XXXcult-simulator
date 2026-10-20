@@ -99,7 +99,10 @@ public class DoctrineTree
         if (skill.Tier <= 1) return true;
         if (IsPathBlocked(skill) || IsOppositeLocked(skill)) return false;
         var previous = DoctrineCatalog.At(skill.Branch, skill.Tier - 1, skill.Path);
-        return previous != null && LevelOf(previous) > 0;
+        if (previous != null && LevelOf(previous) > 0) return true;
+        if (!skill.IsFinal || !GiftedV2Mirror.WaivesFinalPrerequisite()) return false;
+        var earlier = DoctrineCatalog.At(skill.Branch, skill.Tier - 2, skill.Path); // v2m103: 바로 앞 단계 면제
+        return earlier != null && LevelOf(earlier) > 0;
     }
 
     // 한 가지에서 6단계를 찍었다면, 그 정반대 가지의 5단계 이상은 새로 배울 수 없다
@@ -161,7 +164,7 @@ public class DoctrineTree
                 if (skill == null) continue;
                 for (int level = 1; level <= pair.Value; level++) total += skill.CostForLevel(level);
             }
-            return total;
+            return GiftedV2Effects.DoctrineSpentAdjustNormal(total);
         }
     }
 
@@ -196,20 +199,27 @@ public class DoctrineTree
     List<Talent> BuildEffects()
     {
         var list = new List<Talent>();
+        var branches = new HashSet<DoctrineBranch>();
+        foreach (var pair in levels)
+        {
+            var skill = DoctrineCatalog.Find(pair.Key);
+            if (skill != null && skill != DoctrineSkill.Declaration && pair.Value > 0) branches.Add(skill.Branch);
+        }
+        var scale = GiftedV2Mirror.DoctrineEffectScale(branches.Count);
         foreach (var pair in levels)
         {
             var skill = DoctrineCatalog.Find(pair.Key);
             if (skill == null || skill == DoctrineSkill.Declaration || pair.Value <= 0) continue;
-            list.Add(ToTalent(skill, pair.Value));
+            list.Add(ToTalent(skill, pair.Value, scale));
         }
         return list;
     }
 
-    public static Talent ToTalent(DoctrineSkill skill, int level)
+    public static Talent ToTalent(DoctrineSkill skill, int level, float scale = 1f)
     {
         var modifiers = skill.Modifiers.Select(m => m.PersonalStat is { } p
-            ? new StatModifier(p, m.Percent * level)
-            : new StatModifier(m.CultStat.Value, m.Percent * level)).ToArray();
+            ? new StatModifier(p, m.Percent * level * scale)
+            : new StatModifier(m.CultStat.Value, m.Percent * level * scale)).ToArray();
         var specials = skill.Specials.Select(s => Scale(s, level)).ToArray();
         return new Talent(skill.Id, skill.Name, "교리", skill.Description, "", modifiers, specials);
     }
@@ -229,11 +239,14 @@ public static class DoctrinePoints
     public const int PerCultYear = 1, AchievementsPerPoint = 2, PerDoctrineLevel = 2;
     public const int MirrorPerCultYear = 2; // 거울 세계: 최종 스킬(총 22점)에 닿도록 해마다 2점
 
-    public static int Earned(int cultYears, int achievements, int doctrineLevel) =>
-        cultYears * (GameSession.MirrorMode ? MirrorPerCultYear : PerCultYear) + achievements / AchievementsPerPoint + doctrineLevel * PerDoctrineLevel;
+    public static int Earned(int cultYears, int achievements, int doctrineLevel)
+    {
+        var earned = cultYears * (GameSession.MirrorMode ? MirrorPerCultYear : PerCultYear) + achievements / AchievementsPerPoint + doctrineLevel * PerDoctrineLevel;
+        return earned + GiftedV2Mirror.DoctrinePointsBonus(cultYears, earned);
+    }
 
     public static int Earned(CultStatus cult, GameClock cultTime, int achievements) =>
-        Earned(cultTime.Years, achievements, DoctrineLevel.Of(cult[StatId.Doctrine].Value));
+        Earned(cultTime.Years, achievements, DoctrineLevel.Of(cult[StatId.Doctrine].Value)) + GiftedV2Effects.DoctrinePointBonusNormal(cultTime.Years);
 
     public static int Available(CultStatus cult, GameClock cultTime, int achievements) =>
         Math.Max(0, Earned(cult, cultTime, achievements) - cult.Doctrines.SpentPoints);

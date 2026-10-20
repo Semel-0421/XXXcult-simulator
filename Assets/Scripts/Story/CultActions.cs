@@ -50,6 +50,9 @@ public static class CultActions
     public static bool Roll(CultStatus cult, TalentList gifted, CultAction action, System.Random rng, float extraBonus = 0) =>
         ActionCheck.Roll(cult.Ratio(KeyStat(action)), rng, GiftedSpecials.ChanceBonus(gifted, Key(action)) + extraBonus);
 
+    public static float Chance(CultStatus cult, TalentList gifted, CultAction action, float extraBonus = 0) =>
+        ActionCheck.Chance(cult.Ratio(KeyStat(action)), GiftedSpecials.ChanceBonus(gifted, Key(action)) + extraBonus);
+
     public static void Apply(CultStatus cult, PersonalStatus personal, CultAction action, bool success = true)
     {
         var halve = !success && GiftedSpecials.HalvesFailure(personal.Talents, Key(action));

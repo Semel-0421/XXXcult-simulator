@@ -46,7 +46,7 @@ public static class Misfortune
     {
         if (stacks <= 0) return;
         foreach (var (stat, amount) in DecayPerTurn(stacks, resistance))
-            cult.AddWithRemainder(stat, -amount);
+            cult.AddWithRemainder(stat, -amount * GiftedV2Effects.DecayMultiplierNormal(stat, amount, "decay:misfortune"));
     }
 }
 

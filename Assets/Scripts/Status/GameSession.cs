@@ -80,9 +80,18 @@ public static class GameSession
 
     public static void AddMisfortune()
     {
-        if (Misfortune >= global::Misfortune.MaxStacks) return;
+        if (Misfortune >= global::Misfortune.MaxStacks || GiftedV2Effects.MisfortuneGainBlockedNormal() || !GiftedV2Mirror.AllowsMisfortuneGain()) return;
         Misfortune++;
         MirrorCounters.Misfortune(Misfortune);
+        MisfortuneChanged?.Invoke();
+    }
+
+    // 기프티드 효과 전용: 불운은 원래 줄지 않는다 (v2m095, v2m097)
+    public static void ReduceMisfortuneByGifted(int amount)
+    {
+        var next = Math.Max(0, Misfortune - Math.Max(0, amount));
+        if (next == Misfortune) return;
+        Misfortune = next;
         MisfortuneChanged?.Invoke();
     }
 
@@ -104,6 +113,7 @@ public static class GameSession
         if (Age.Quarter == 0) GiftedSpecials.ApplyYearly(Personal, Cult, CultFounded); // 해가 바뀔 때
         if (CultFounded && CultTime.Quarter == 0) SocialStanding.YearEnd(Cult); // 교단 해가 바뀔 때 입교
         if (CultFounded) MirrorCounters.Turn();
+        if (CultFounded) GiftedV2Mirror.AfterTurn();
         if (GodMode && CultFounded) God.Quarter(Cult);
         if (Age.Quarter == 0 && GodMode && CultFounded) God.YearEnd(Cult, Personal);
         if (Age.Quarter == 0) GiftedV2Effects.OnYearEnd();

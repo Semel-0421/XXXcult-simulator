@@ -76,7 +76,7 @@ public class GodSkill
     public int Stage => IsCenter ? 6 : Ring;
 
     // 노드 하나를 익히는 비용: 일반 노드 1, 핵 2, 승천 3
-    public int Cost => IsCenter ? 3 : IsCore ? 2 : 1;
+    public int Cost => IsCenter ? 3 - GiftedV2GodHooks.AscensionCostEase : IsCore ? 2 : 1;
 
     // 티어별 보상: 바깥 고리일수록 효과를 키우고 압박은 덜 부른다. 넓게 찍는 분산형도 얻는 것이 있도록.
     public float TierScale => Ring switch { 1 => 1.2f, 2 => 1.1f, _ => 1f };

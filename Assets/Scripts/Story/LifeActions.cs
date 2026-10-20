@@ -33,6 +33,9 @@ public static class LifeActions
         ActionCheck.Roll(personal[KeyStat(action)].Value / (float)PersonalStatus.MaxValue, rng,
             GiftedSpecials.ChanceBonus(personal.Talents, action.ToString()) + extraBonus);
 
+    public static float Chance(PersonalStatus personal, LifeAction action, float extraBonus = 0) =>
+        ActionCheck.Chance(personal[KeyStat(action)].Value / (float)PersonalStatus.MaxValue, GiftedSpecials.ChanceBonus(personal.Talents, action.ToString()) + extraBonus);
+
     public static void Apply(PersonalStatus personal, LifeAction action, bool success)
     {
         var halve = !success && GiftedSpecials.HalvesFailure(personal.Talents, action.ToString());
