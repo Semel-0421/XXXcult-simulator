@@ -70,16 +70,11 @@ public static class Profile
         if (unlocked != null) return;
         unlocked = new HashSet<string>();
         counters = new Dictionary<string, int>();
-        try
-        {
-            if (!File.Exists(Path)) return;
-            var data = JsonUtility.FromJson<Data>(File.ReadAllText(Path));
-            if (data == null) return;
-            foreach (var id in data.unlocked) unlocked.Add(id);
-            foreach (var entry in data.counters) counters[entry.key] = entry.value;
-            rewardsEnabled = data.rewardsEnabled;
-        }
-        catch (Exception) { /* 깨진 기록은 빈 상태로 시작한다 */ }
+        var data = SafeFile.Read(Path, text => JsonUtility.FromJson<Data>(text)); // 깨졌으면 .bak, 그것도 없으면 빈 상태
+        if (data == null) return;
+        foreach (var id in data.unlocked ?? new List<string>()) unlocked.Add(id);
+        foreach (var entry in data.counters ?? new List<StatEntry>()) counters[entry.key] = entry.value;
+        rewardsEnabled = data.rewardsEnabled;
     }
 
     static void Save()
@@ -90,11 +85,7 @@ public static class Profile
         foreach (var pair in counters) data.counters.Add(new StatEntry(pair.Key, pair.Value));
         try
         {
-            Directory.CreateDirectory(System.IO.Path.GetDirectoryName(Path));
-            var temp = Path + ".tmp";
-            File.WriteAllText(temp, JsonUtility.ToJson(data));
-            if (File.Exists(Path)) File.Delete(Path);
-            File.Move(temp, Path);
+            SafeFile.Write(Path, JsonUtility.ToJson(data));
         }
         catch (Exception) { /* 저장 실패는 게임 진행을 막지 않는다 */ }
     }
