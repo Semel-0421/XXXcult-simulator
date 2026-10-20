@@ -18,6 +18,9 @@ public static class Profile
     // 게임이 실제로 실행 중일 때만 켠다 (에디터 테스트가 기록을 건드리지 않도록)
     public static bool Enabled { get; set; }
 
+    // 시뮬레이션 전용: 켜면 파일을 읽지도 쓰지도 않고 메모리에만 둔다 (Counters도 같이). 기본 꺼짐
+    public static bool InMemory { get; set; }
+
     static string path;
     static HashSet<string> unlocked;
     static Dictionary<string, int> counters;
@@ -73,7 +76,7 @@ public static class Profile
         if (unlocked != null) return;
         unlocked = new HashSet<string>();
         counters = new Dictionary<string, int>();
-        var data = SafeFile.Read(Path, text => JsonUtility.FromJson<Data>(text)); // 깨졌으면 .bak, 그것도 없으면 빈 상태
+        var data = InMemory ? null : SafeFile.Read(Path, text => JsonUtility.FromJson<Data>(text)); // 깨졌으면 .bak, 그것도 없으면 빈 상태
         if (data == null) return;
         foreach (var id in data.unlocked ?? new List<string>()) unlocked.Add(id);
         foreach (var entry in data.counters ?? new List<StatEntry>()) counters[entry.key] = entry.value;
@@ -82,7 +85,7 @@ public static class Profile
 
     static void Save()
     {
-        if (!Enabled) return;
+        if (!Enabled || InMemory) return;
         var data = new Data { rewardsEnabled = rewardsEnabled };
         data.unlocked.AddRange(unlocked.OrderBy(id => id, StringComparer.Ordinal));
         foreach (var pair in counters) data.counters.Add(new StatEntry(pair.Key, pair.Value));

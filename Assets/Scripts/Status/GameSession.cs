@@ -131,6 +131,7 @@ public static class GameSession
         Counters.ResetRun();
         Cult = new CultStatus();
         Cult.Doctrines.Changed += MirrorCounters.Doctrine;
+        Cult.Doctrines.Changed += NormalCounters.OnDoctrine; // 화면(CultFlow)이 없어도 세도록 상태 쪽에 건다
         Personal = new PersonalStatus();
         Personal.Talents.ExtraEffects = () => Cult.Doctrines.EffectTalents; // 배운 교리도 기프티드처럼 효과를 준다
         Seed = seed ?? Environment.TickCount;

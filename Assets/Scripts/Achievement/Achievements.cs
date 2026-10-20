@@ -7,6 +7,7 @@ using UnityEngine;
 public static class Achievements
 {
     public static event Action<Achievement> Unlocked;
+    public static event Action Evaluated; // 시뮬레이션 전용: 판정 한 번이 끝날 때마다 (도달률 집계)
 
     static IReadOnlyList<Achievement> all;
     // 기존 100개 + v2(일반·신·거울·히든)
@@ -37,6 +38,7 @@ public static class Achievements
                 found = true;
             }
         } while (found);
+        Evaluated?.Invoke();
         Counters.Save();
     }
 
@@ -66,7 +68,9 @@ public static class Achievements
 
     // v2 기프티드 보유: 연결 업적을 프로필에서 달성했으면 보유 (회차를 넘어 유지). 보상 끔·에디터 테스트(Profile 꺼짐)면 아무것도 보유하지 않는다
     public static bool V2OwnershipOn => Profile.Enabled && Profile.RewardsEnabled;
-    public static bool OwnsGiftedV2(GiftedV2Catalog.Entry entry) => V2OwnershipOn && Profile.IsUnlocked(entry.LinkedAchievement);
+    // 시뮬레이션 전용: true면 v2 기프티드 전부 보유, false면 하나도 없음, null(기본)이면 위 규칙
+    public static bool? ForceGiftedV2;
+    public static bool OwnsGiftedV2(GiftedV2Catalog.Entry entry) => V2OwnershipOn && (ForceGiftedV2 ?? Profile.IsUnlocked(entry.LinkedAchievement));
 
     public static string RewardText(Achievement achievement)
     {

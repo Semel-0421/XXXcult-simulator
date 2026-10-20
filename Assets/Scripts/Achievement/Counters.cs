@@ -50,6 +50,7 @@ public static class Counters
 
     static void Load()
     {
+        if (Profile.InMemory) return;
         var data = SafeFile.Read(FilePath, text => JsonUtility.FromJson<Data>(text));
         if (data?.counters == null) return;
         foreach (var e in data.counters) profile[e.key] = e.value; // 메모리에 이미 쌓인 값은 파일 값으로 덮음 (Enabled 전에 쌓인 값은 없다고 가정)
@@ -58,7 +59,7 @@ public static class Counters
     // Profile 범위만 저장. Achievements.Evaluate 끝에서 불린다. 게임 실행 중(Profile.Enabled)일 때만 쓴다.
     public static void Save()
     {
-        if (!dirty || !Profile.Enabled) return;
+        if (!dirty || !Profile.Enabled || Profile.InMemory) return;
         Sync();
         var data = new Data();
         foreach (var pair in profile.OrderBy(p => p.Key, StringComparer.Ordinal)) data.counters.Add(new StatEntry(pair.Key, pair.Value));

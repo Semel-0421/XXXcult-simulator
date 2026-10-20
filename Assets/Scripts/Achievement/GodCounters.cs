@@ -111,12 +111,20 @@ public static class GodCounters
     static string KindOfId(string id) => id.StartsWith("hv") ? "heaven" : id.StartsWith("ea") ? "earth" : id.StartsWith("vs") ? "vessel"
         : id.StartsWith("dl") ? "random" : "indulge"; // lu/gr/ap/am
 
+    // god_ending_1~9 (CSV g012~g020) 순서: 승천 6가지를 CSV 이름 순서로(기적+예언 = god_divine, 자비+욕망 = god_human), 이어서 패배 3가지.
+    // GodRules.AllEndings 순서를 쓰면 이름과 엔딩이 어긋난다. shortcut: g018~g020은 '순수한 승천' 이름이지만 그런 엔딩이 없어 패배 엔딩에 묶임
+    static readonly string[] EndingOrder =
+    {
+        GodEndings.DivinePair, "god_miracle_mercy", "god_miracle_desire", "god_prophecy_mercy", "god_prophecy_desire", GodEndings.HumanPair,
+        GodRules.Vessel.Id, GodRules.Forgotten.Id, GodRules.Disbanded.Id,
+    };
+
     // 엔딩 판정이 돌려주는 값을 그대로 통과시키며, 처음 나올 때 한 번 기록한다
     public static Endings.Ending OnEnding(Endings.Ending ending)
     {
         if (ending == null || endedFor == GameSession.God) return ending;
         endedFor = GameSession.God;
-        var index = GodRules.AllEndings.ToList().FindIndex(e => e.Id == ending.Id);
+        var index = Array.IndexOf(EndingOrder, ending.Id);
         if (index >= 0) Counters.Set($"god_ending_{index + 1}", 1);
         if (GodRules.IsAscension(ending)) OnAscend();
         else

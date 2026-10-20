@@ -107,7 +107,7 @@ public static class GodSimulation
         return report;
     }
 
-    static RunResult PlayRun(int run, GodBranch first, GodBranch second, int seed, Strategy strategy)
+    internal static RunResult PlayRun(int run, GodBranch first, GodBranch second, int seed, Strategy strategy)
     {
         GodRules.Begin(seed);
         GameSession.Personal.Gender = seed % 2 == 0 ? Gender.Male : Gender.Female;

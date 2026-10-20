@@ -97,7 +97,7 @@ public static class BalanceSimulation
 
     // ---- 거울 세계 자동 플레이: 스킬 타입별로 욕망 가지 / 미덕 가지 / 번갈아 고른 뒤 평균 결과를 낸다
     public enum MirrorStyle { Desire, Virtue, Balanced }
-    static bool mirrorOn;
+    internal static bool mirrorOn;
 
     public static string RunMirror(MirrorStyle style, int runs, int seed)
     {
@@ -165,7 +165,7 @@ public static class BalanceSimulation
     }
 
     // 목표: 이 가지의 최종 스킬로 이 굿/배드 엔딩을 본다
-    sealed class Goal
+    internal sealed class Goal
     {
         public readonly DoctrineBranch Branch;
         public readonly EndingKind Kind;
@@ -184,7 +184,7 @@ public static class BalanceSimulation
         }
     }
 
-    static Endings.Ending PlayRun(int run, Goal goal, int seed, Report report)
+    internal static Endings.Ending PlayRun(int run, Goal goal, int seed, Report report)
     {
         GameSession.StartNew(seed);
         GameSession.SetMirrorMode(mirrorOn); // StartNew가 끄므로 그 뒤에 켠다
@@ -251,10 +251,11 @@ public static class BalanceSimulation
     }
 
     // 목표 가지를 1단계부터 차례로 배운다 (6단계 이후 갈래는 배울 수 있는 쪽)
-    static string blockReason;
+    internal static string blockReason;
     static readonly Dictionary<string, int> BlockReasons = new();
-    static bool neutralBot;
-    static DoctrineBranch? neutralPick;
+    internal static bool neutralBot;
+    internal static Random pathRng; // 업적 시뮬레이션: 6단계 갈래를 무작위로 (null이면 늘 A)
+    internal static DoctrineBranch? neutralPick;
 
     // 중립 봇: 처음엔 받은 목표대로 배우다가, 5년이 지나면 지금 평균이 높은 쪽(욕망/미덕)에서 가장 높은 스탯의 가지로 정한다
     static Goal NeutralGoal(Goal goal)
@@ -285,7 +286,7 @@ public static class BalanceSimulation
             if (tier < 6) skill = DoctrineCatalog.At(goal.Branch, tier, "");
             else
             {
-                path ??= "A";
+                path ??= pathRng == null || pathRng.Next(2) == 0 ? "A" : "B";
                 skill = DoctrineCatalog.At(goal.Branch, tier, path);
             }
             if (skill == null) { blockReason = $"카탈로그에 없음 T{tier}"; continue; }

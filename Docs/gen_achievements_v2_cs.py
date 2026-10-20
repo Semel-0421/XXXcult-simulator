@@ -56,7 +56,7 @@ HEADER = '''// v2 업적 목록. Docs/achievements_v2_*.csv + gifted_v2.csv에�
 //   virtue_avg_peak      미덕 스탯 4개 평균의 최고치 (Max)
 //   dual_avg_peak        min(욕망 평균, 미덕 평균)의 최고치 (Max)
 //   gifted_total         기프티드 누적 획득 횟수 (Add)
-//   gifted_kinds_seen    획득해 본 기프티드 종류 수 (Set/Max, 141이면 도감 완성)
+//   gifted_kinds_seen    획득해 본 기프티드 종류 수 (Set/Max, 140이면 도감 완성 = GiftedCatalog 전체)
 //   gifted_run_peak      한 회차 최대 동시 보유 기프티드 수 (Max)
 // 조건 문법 참고: "X for 10y" = 카운터 "hold:X" >= 10 (연속 유지 햇수), "<모드>_achv" = 그 모드 달성 업적 수.
 using System.Collections.Generic;

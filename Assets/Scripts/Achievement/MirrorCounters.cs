@@ -39,7 +39,7 @@ public static class MirrorCounters
         Peak("mirror_cultyears", time.Years);
         Peak("mirror_doctrine_points", DoctrinePoints.Earned(cult, time, Achievements.CountedUnlocked()));
 
-        if (followers <= 5) Counters.Set("mirror_low_followers", 1, true);
+        if (followers <= 5 && time.Turns > GraceTurns) Counters.Set("mirror_low_followers", 1, true); // 시작 직후(신도 0명에서 출발)는 '바닥'으로 치지 않는다
         if (Counters.Get("mirror_low_followers", true) > 0)
         {
             if (followers >= 500) Counters.Set("mirror_followers_5_to_500", 1);
