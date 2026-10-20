@@ -69,7 +69,8 @@ public static class GodSimulation
 
     static readonly GodBranch[] Branches = { GodBranch.Miracle, GodBranch.Prophecy, GodBranch.Mercy, GodBranch.Desire };
 
-    public static Report Run(int bots, int runsPerBot, int seed, Strategy strategy = Strategy.Rush)
+    // pool: 봇이 고를 가지 목록 (null이면 전체). 욕망형/미덕형 분할에 쓴다.
+    public static Report Run(int bots, int runsPerBot, int seed, Strategy strategy = Strategy.Rush, GodBranch[] pool = null)
     {
         var previousPath = Profile.Path;
         var previousEnabled = Profile.Enabled;
@@ -82,8 +83,9 @@ public static class GodSimulation
                 Profile.Path = temp;
                 Profile.Enabled = true;
                 var rng = new Random(seed + b * 7919);
-                var first = Branches[rng.Next(Branches.Length)];
-                var second = Branches.Where(x => x != first).ElementAt(rng.Next(Branches.Length - 1));
+                var choices = pool ?? Branches;
+                var first = choices[rng.Next(choices.Length)];
+                var second = choices.Where(x => x != first).ElementAt(rng.Next(choices.Length - 1));
                 int firstAscension = runsPerBot + 1;
                 for (int run = 1; run <= runsPerBot; run++)
                 {

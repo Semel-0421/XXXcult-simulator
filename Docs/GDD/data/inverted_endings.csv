@@ -1,0 +1,9 @@
+id,group,trigger,variants,count,hidden
+inv_end_followers,collapse,신도가 0이 됨 (교단 소멸),단일,1,false
+inv_end_absorbed,collapse,평판 0 → 다른 교단에 흡수,단일,1,false
+inv_end_old_age,collapse,노화로 사망,단일,1,false
+inv_end_final,final_skill,최종 스킬 16종 각각 획득 시,굿/배드,32,false
+inv_end_desire,no_final,25년간 최종 스킬 미선택 — 욕망 평균 > 미덕 평균,굿/배드,2,false
+inv_end_virtue,no_final,25년간 최종 스킬 미선택 — 미덕 평균 > 욕망 평균,굿/배드,2,false
+inv_end_handover,year40,교단 40년까지 평균 차이 없음 → 교단을 물려주기 선택 (즉시 엔딩),단일,1,true
+inv_end_master_death,year40,교단 40년까지 평균 차이 없음 → 죽을 때까지 보유 선택 → 노화 사망 시 엔딩,단일,1,true

@@ -66,15 +66,18 @@ public class SocialStandingTests
     [Test]
     public void LowStanding_DrainsFollowers_HighStandingDecaysReputation()
     {
+        // 신도 증감은 턴이 아니라 해마다: 기본 +2, 명망 400 기준 100마다 ±2 (0 구간 없음)
         var cult = new CultStatus();
         cult[StatId.Followers].Set(10);
         cult[StatId.Reputation].Set(100);
         SocialStanding.ApplyTurn(cult);
-        Assert.AreEqual(7, cult[StatId.Followers].Value);
+        Assert.AreEqual(10, cult[StatId.Followers].Value, "턴마다는 신도가 바뀌지 않는다");
+        SocialStanding.YearEnd(cult);
+        Assert.AreEqual(6, cult[StatId.Followers].Value, "명망 100: 기본 2 + (-3단계 × 2) = -4");
 
         cult[StatId.Reputation].Set(950);
         SocialStanding.ApplyTurn(cult);
         Assert.AreEqual(947, cult[StatId.Reputation].Value);
-        Assert.AreEqual(9, cult[StatId.Followers].Value);
+        Assert.AreEqual(10, SocialStanding.Recruits(947), "명망 947: 기본 2 + 6단계×2 = 14 → 최대 10");
     }
 }

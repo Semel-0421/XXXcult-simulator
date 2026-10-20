@@ -71,7 +71,7 @@ public class AchievementToast : MonoBehaviour
         UiKit.Anchor(panel, new Vector2(0.5f, 1), new Vector2(0.5f, 1), new Vector2(0, -70), new Vector2(560, 96));
         panel.GetComponent<Image>().color = new Color(0.08f, 0.06f, 0.13f, 0.96f);
         panel.GetComponent<Image>().raycastTarget = false;
-        panel.GetComponent<Outline>().effectColor = new Color(0.95f, 0.85f, 0.55f, 0.7f);
+        panel.GetComponent<Outline>().effectColor = new Color(0.83f, 0.69f, 0.22f, 0.7f);
         group = panel.GetComponent<CanvasGroup>();
         group.alpha = 0;
         group.blocksRaycasts = false;

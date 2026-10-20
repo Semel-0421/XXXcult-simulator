@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 // 저장 파일 한 칸의 내용. JsonUtility로 직렬화하므로 딕셔너리 대신 리스트를 쓴다.
@@ -31,6 +31,7 @@ public class SaveData
 
     // 준비된 신 모드
     public bool godMode;
+    public bool mirrorMode; // 거울 세계 모드
     public List<string> godSkills = new();   // 익힌 권능 노드
     public string godNature;                 // 신의 본성 (무료로 고른 바깥 노드)
     public List<string> godCores = new();    // 완성한 핵 순서 (승천 엔딩 판정)

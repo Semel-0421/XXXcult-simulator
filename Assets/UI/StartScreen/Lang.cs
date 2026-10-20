@@ -108,6 +108,10 @@ public static class Lang
         ["god_need_cores"] = ("Complete two cores first", "핵 두 개를 완성해야 합니다"),
         ["god_pressure_now"] = ("Heaven {0} · Earth {1}", "신계 압박 {0} · 지상 압박 {1}"),
         ["god_mode"] = ("Prepared God", "준비된 신"),
+        ["mirror_mode"] = ("Mirror World", "거울 세계"),
+        ["mirror_desc"] = ("Virtue and Desire have been reversed. From now on, will you become an ascetic in a world of desire, or a teacher who preaches desire?",
+            "미덕과 욕망이 뒤집혔습니다. 이제부터 당신은 욕망의 세상에서 수행자가 될 것이냐, 욕망을 가르치는 선생이 될 것이냐 입니다."),
+        ["mirror_start"] = ("Enter", "들어간다"),
         ["god_tutorial"] = ("A god has descended into a mortal vessel. Open the Divine Tree and choose your nature.", "신이 인간의 그릇에 강림했습니다. 권능 트리를 열어 신의 본성을 고르십시오."),
         ["end_name_god_miracle_mercy"] = ("The Healing God", "치유하는 신"), ["end_desc_god_miracle_mercy"] = ("Ascended through Miracle and Mercy.", "기적과 자비로 승천함."),
         ["end_text_god_miracle_mercy"] = ("{0} raised its god after {1} years. The sick rose from their beds, and no one went hungry again.\nThey were happy. Whether that was salvation, no one asked.", "{0}의 신은 {1}년 만에 승천했습니다. 병든 이들이 자리에서 일어났고, 다시는 굶는 이가 없었습니다.\n그들은 행복했습니다. 그것이 구원이었는지는, 아무도 묻지 않았습니다."),
@@ -307,7 +311,7 @@ public static class Lang
         return IsKorean || i == text.Length - 1 ? text.Substring(0, i) : text.Substring(i + 1);
     }
 
-    public static string Get(string key) => key != null && Table.TryGetValue(key, out var text) ? (IsKorean ? text.ko : text.en) : key;
+    public static string Get(string key) => key != null && Table.TryGetValue(key, out var text) ? (IsKorean ? text.ko : text.en) : key == null ? null : Pick(key); // 표에 없으면 데이터 글(한/영 묶음)로 본다
 
     public static void Set(bool korean)
     {

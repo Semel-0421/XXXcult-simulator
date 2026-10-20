@@ -80,8 +80,8 @@ def parse(cell, where):
     return mods, specials, resist
 
 
-def main():
-    rows = list(csv.DictReader(io.StringIO(read_text(SRC))))
+def build(src, dst, cls):
+    rows = list(csv.DictReader(io.StringIO(read_text(src))))
     out, ids, seen = [], set(), set()
     for r in rows:
         sid = r['id'].strip()
@@ -107,16 +107,19 @@ def main():
         expected = {(t, '') for t in range(1, 6)} | {(t, p) for t in range(6, 11) for p in 'AB'}
         got = {(t, p) for (bb, t, p) in seen if bb == b}
         if got != expected: sys.exit(f'{b}: 1~5단계와 6~10단계 A/B가 모두 있어야 함')
-    cs = f'''// 교리 스킬 목록. Docs/doctrines.csv에서 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.
+    # 본편 목록은 Normal, All은 거울 세계 판이면 거울 목록을 돌려준다 (id·구조가 같아 DoctrineTree가 그대로 쓴다)
+    head = ('    public static IReadOnlyList<DoctrineSkill> All => GameSession.MirrorMode ? MirrorDoctrineCatalog.All : Normal;\n\n'
+            '    public static readonly IReadOnlyList<DoctrineSkill> Normal') if cls == 'DoctrineCatalog' else '    public static readonly IReadOnlyList<DoctrineSkill> All'
+    cs = f'''// 교리 스킬 목록. Docs/{os.path.relpath(src, os.path.join(ROOT, 'Docs')).replace(os.sep, '/')}에서 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.
 using System.Collections.Generic;
 using System.Linq;
 
-public static class DoctrineCatalog
+public static class {cls}
 {{
     static StatModifier Cult(StatId stat, float percent) => new(stat, percent);
     static StatModifier Personal(PersonalStatId stat, float percent) => new(stat, percent);
 
-    public static readonly IReadOnlyList<DoctrineSkill> All = new DoctrineSkill[]
+{head} = new DoctrineSkill[]
     {{
 {chr(10).join(out)}
     }};
@@ -127,8 +130,14 @@ public static class DoctrineCatalog
     public static DoctrineSkill At(DoctrineBranch branch, int tier, string path = "") => All.FirstOrDefault(s => s.Branch == branch && s.Tier == tier && s.Path == (tier <= 5 ? "" : path));
 }}
 '''
-    open(DST, 'w', encoding='utf-8-sig', newline='\n').write(cs)
-    print(len(out), 'doctrines')
+    open(dst, 'w', encoding='utf-8-sig', newline='\n').write(cs)
+    print(len(out), cls)
+
+
+def main():
+    build(SRC, DST, 'DoctrineCatalog')
+    build(os.path.join(ROOT, 'Docs', 'mirror', 'doctrines_mirror.csv'),
+          os.path.join(ROOT, 'Assets', 'Scripts', 'Status', 'MirrorDoctrineCatalog.cs'), 'MirrorDoctrineCatalog')
 
 
 if __name__ == '__main__':

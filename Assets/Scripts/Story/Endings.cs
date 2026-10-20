@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 // 엔딩 목록. 엔딩을 보면 기록에 남고, 엔딩 목록 창에서 지금까지 본 엔딩을 다시 볼 수 있다.
 //  - 해체: 명망이 바닥나 국가의 명령으로 교단이 해체됨 (연수 제한 없음)
@@ -31,6 +31,15 @@ public static class Endings
             DescriptionKey = $"end_desc_{keySuffix}";
             TextKey = $"end_text_{keySuffix}";
         }
+
+        // 데이터에 글을 직접 담는 엔딩 (거울 세계 MirrorEndings). 키 자리에 "한국어영어"를 넣으면 Lang.Get이 고른다
+        public Ending(string id, EndingKind kind, string name, string description, string text, bool hidden)
+        {
+            Id = id; Kind = kind; Hidden = hidden;
+            NameKey = name; DescriptionKey = description; TextKey = text;
+        }
+
+        public bool Hidden { get; } // 히든 엔딩 (목록에서 조건을 감춘다)
     }
 
     public const string Dissolved = "dissolved";
@@ -62,7 +71,7 @@ public static class Endings
             new Ending(DeathYoung, EndingKind.Neutral, DeathYoung),
             new Ending(DeathLeader, EndingKind.Neutral, DeathLeader),
         };
-        foreach (var skill in DoctrineCatalog.All)
+        foreach (var skill in DoctrineCatalog.Normal) // 거울 세계 판에서 처음 읽혀도 본편 엔딩 목록
         {
             if (!skill.IsFinal) continue;
             foreach (var kind in new[] { EndingKind.Good, EndingKind.Bad })

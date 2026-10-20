@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // 엔딩 목록 창: 지금까지 본 엔딩은 이름과 설명을, 아직 못 본 엔딩은 ???로 보여 준다. 아래 "뒤로 돌아가기"로 닫는다.
-// 본편 / 준비된 신 탭으로 나눈다. 열 때는 방금 끝난 판의 모드 탭을 보여 준다.
+// 본편 / 준비된 신 / 거울 세계 탭으로 나눈다. 열 때는 방금 끝난 판의 모드 탭을 보여 준다.
 public static class EndingWindow
 {
     sealed class Row
@@ -19,12 +19,12 @@ public static class EndingWindow
     static Row[] rows;
     static Button[] tabs;
     static TMP_Text[] tabLabels;
-    static bool godTab;
+    static int tab;
 
     public static void Open()
     {
         if (root == null) Build();
-        godTab = GameSession.GodMode;
+        tab = EndingGallery.TabOf();
         Refresh();
         if (!root.activeSelf) Menus.Opened();
         root.SetActive(true);
@@ -54,10 +54,11 @@ public static class EndingWindow
         var panel = (RectTransform)root.transform.Find("Panel");
         UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "EndingBook", new Color(0.4f, 0.1f, 0.26f), new Color(0.2f, 0.06f, 0.34f));
 
-        var endings = Endings.All.Concat(GodRules.AllEndings).ToArray();
+        var endings = Endings.All.Concat(GodRules.AllEndings).Concat(MirrorEndings.All).ToArray();
         rows = new Row[endings.Length];
         for (int i = 0; i < rows.Length; i++) rows[i] = BuildRow(content, font, i, endings[i]);
-        tabs = EndingGallery.BuildTabs(panel, font, out tabLabels, god => { godTab = god; Refresh(); });
+        tabs = EndingGallery.BuildTabs(panel, font, out tabLabels, t => { tab = t; Refresh(); });
+        titleLabel.rectTransform.anchoredPosition += new Vector2(60, 0); // 왼쪽 탭 셋과 오른쪽 뒤로 버튼 사이 가운데로
     }
 
     static Row BuildRow(RectTransform parent, TMP_FontAsset font, int index, Endings.Ending ending)
@@ -89,8 +90,8 @@ public static class EndingWindow
     {
         titleLabel.text = Lang.Get("ending_list_title");
         backLabel.text = Lang.Get("ending_back");
-        EndingGallery.RefreshTabs(tabs, tabLabels, godTab);
-        var shown = godTab ? GodRules.AllEndings : Endings.All;
+        EndingGallery.RefreshTabs(tabs, tabLabels, tab);
+        var shown = EndingGallery.ShownIn(tab);
         hintLabel.text = string.Format(Lang.Get("ending_progress"), shown.Count(e => Endings.Seen(e.Id)), shown.Count);
 
         foreach (var row in rows)

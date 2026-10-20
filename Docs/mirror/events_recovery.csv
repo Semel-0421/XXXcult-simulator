@@ -1,0 +1,21 @@
+﻿id,kind,theme,text,text_en
+mv01,condition,Reputation<=300,"한 독립 다큐멘터리 감독이 ""비웃음받는 수행자들""이라는 제목으로 당신의 교단을 촬영하고 싶어 합니다.","An independent documentary director wants to film your cult under the title ""The Mocked Ascetics."""
+mv02,condition,Reputation<=150,"대홍수가 마을을 덮쳤을 때, 연회장에 숨은 명사들 대신 당신의 신도들만 진흙탕에서 사람들을 꺼냈습니다.","When a great flood hit the town, only your followers waded into the mud to pull people out, while the celebrities hid in banquet halls."
+mv03,condition,Reputation<=300,"당신을 비웃던 거상 연합의 횡령 장부가 폭로되어, 도시가 ""청렴""이라는 낡은 단어를 다시 검색합니다.","The embezzlement ledgers of the merchant league that mocked you are exposed, and the city starts looking up the old word ""integrity"" again."
+mv04,condition,Reputation<=300,"한 아이가 쓴 ""우리 동네 바보 아저씨들은 왜 착할까""라는 글짓기가 온 나라에 퍼집니다.","A child's essay titled ""Why Are the Fools in My Town So Kind?"" goes viral across the country."
+mv05,condition,Reputation<=300,"방탕으로 쓰러진 유명 가수가 회복 후 ""그 절제 교단의 죽 한 그릇이 나를 살렸다""고 고백합니다.","A famous singer who collapsed from excess confesses after recovering, ""A bowl of porridge from that temperance cult saved me."""
+mv06,condition,Reputation<=150,"역병이 돌자 사치 의원들은 문을 닫고, 당신의 신도들이 끓인 약초탕만이 골목을 지킵니다.","As a plague spreads, the luxury clinics close their doors, and only your followers' herbal broth keeps the alleys going."
+mv07,condition,Reputation<=300,"탐욕 경연 대회 우승자가 파산한 뒤, 신문 칼럼이 ""그 인내의 교단이 옳았던 건 아닐까""라고 묻습니다.","After the champion of the Greed Contest goes bankrupt, a newspaper column asks, ""Was that cult of patience right all along?"""
+mv08,condition,Reputation<=300,"당신에게서 ""정직""을 배운 전 신도가 법정에서 거짓 증언을 거부해 무고한 이를 구했다는 소식이 들립니다.",Word arrives that a former follower who learned honesty from you refused to give false testimony in court and saved an innocent person.
+mv09,condition,Reputation<=150,"몰락한 귀족 부인이 ""모두가 등을 돌렸을 때 당신들만 문을 열어 주었다""며 사교계에 당신을 변호하기 시작합니다.","A ruined noblewoman begins defending you in high society, saying ""When everyone turned away, only you opened your door."""
+mv10,condition,Reputation<=300,"올해의 ""가장 바보 같은 교단"" 투표에서 1위를 했지만, 댓글란은 이상하게도 응원으로 가득합니다.","You won first place in the ""Most Foolish Cult of the Year"" poll, yet the comments are strangely full of support."
+mh01,condition,LeaderFaith<=80,끝없는 연회 끝에 당신은 거울 속 퀭한 얼굴을 봅니다. 쾌락이 더는 아무 맛도 나지 않습니다.,"After endless banquets, you see a hollow face in the mirror. Pleasure no longer tastes like anything."
+mh02,condition,FollowerFaith<=80,신도들이 연회장에 와도 웃지 않습니다. 술잔을 든 손이 기계적으로 움직일 뿐입니다.,Your followers come to the feasts but no longer laugh. Their hands lift their cups mechanically.
+mh03,condition,LeaderFaith<=80,"유명 미식가 후원자가 ""지친 교주님을 위한 백 접시 코스""를 대접하겠다고 제안합니다.","A famous gourmet patron offers to serve ""a hundred-course meal for the weary leader."""
+mh04,condition,LeaderFaith<=80 FollowerFaith<=80,"교단 전체가 무기력에 빠졌습니다. 떠돌이 치유사가 ""쾌락의 균형""을 되찾아 주겠다며 문을 두드립니다.","The whole cult has sunk into lethargy. A wandering healer knocks, promising to restore ""the balance of pleasure."""
+mh05,condition,FollowerFaith<=80,"쾌락 경쟁에 지친 신도 몇이 ""이젠 아무것도 즐겁지 않다""며 교단을 떠나려 합니다.","A few followers, worn out by the race for pleasure, want to leave, saying ""Nothing is fun anymore."""
+mh06,condition,LeaderFaith<=80,부유한 후원자가 남쪽 섬의 비밀 휴양지를 한 달간 빌려 주겠다고 합니다.,A wealthy patron offers you a secret island resort in the south for a month.
+mh07,condition,LeaderFaith<=80 FollowerFaith<=80,"교단 축제를 앞두고 아무도 준비할 기운이 없습니다. 유명 축제 기획사가 ""대신 다 해 드리죠""라며 견적서를 내밉니다.","Ahead of the cult festival, no one has the energy to prepare. A famous event agency hands you a quote, saying ""We'll do it all for you."""
+mh08,condition,LeaderFaith<=80,"당신을 오래 섬긴 요리장이 ""교주님 입맛이 돌아올 때까지"" 고향 요리를 매일 해 주겠다고 합니다.","Your long-serving head cook offers to make dishes from their hometown every day ""until your appetite returns."""
+mh09,condition,FollowerFaith<=80,밤마다 이어지는 향락에 신도들이 수면 부족으로 쓰러지기 시작합니다. 한 귀족이 고급 침구를 기부하겠다고 합니다.,Night after night of revelry leaves followers collapsing from lack of sleep. A noble offers to donate luxurious bedding.
+mh10,condition,LeaderFaith<=80,"쾌락에 무뎌진 당신 앞에 예언자를 자처하는 노파가 나타나 ""욕망은 쉬어야 다시 자란다""고 속삭입니다.","With your senses dulled by pleasure, an old woman claiming to be a prophet appears and whispers, ""Desire must rest to grow again."""

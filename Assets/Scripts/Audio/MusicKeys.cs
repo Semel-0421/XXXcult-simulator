@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
 // 배경음악·효과음 파일 이름 규칙. 음악은 Assets/Resources/Audio/Music/{키}, 효과음은 Audio/Sfx/{키} (ogg|wav|mp3).
@@ -49,7 +49,7 @@ public static class MusicKeys
     public static string EventSfx(string eventId)
     {
         adultIds ??= AdultEvents.All.Select(e => e.Id).ToHashSet();
-        negativeIds ??= CultEvents.All.Concat(GodEvents.All).Where(e => e.IsNegative).Select(e => e.Id).ToHashSet();
+        negativeIds ??= CultEvents.All.Concat(GodEvents.All).Concat(MirrorEvents.All).Where(e => e.IsNegative).Select(e => e.Id).ToHashSet();
         if (adultIds.Contains(eventId)) return "adult_open";
         return negativeIds.Contains(eventId) ? "event_bad" : "event_open";
     }

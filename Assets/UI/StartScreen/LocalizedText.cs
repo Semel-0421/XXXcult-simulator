@@ -6,6 +6,7 @@ public class LocalizedText : MonoBehaviour
 {
     [SerializeField] string key;
     TMP_Text label;
+    public string Key => key;
 
     void Awake() => label = GetComponent<TMP_Text>();
     void OnEnable() { Lang.Changed += Refresh; Refresh(); }

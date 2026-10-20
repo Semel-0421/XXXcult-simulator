@@ -1,0 +1,47 @@
+﻿event_id,no,label,label_en,chance,success_effects,success_text,success_text_en,fail_effects,fail_text,fail_text_en
+mv01,1,소박한 일상을 그대로 보여 줍니다,Show your plain daily life as it is,100,Reputation+10 Temperance+2 Offerings-5,"방영 후 ""생각보다 멋있다""는 댓글이 조용히 늘어납니다.","After it airs, quiet comments saying ""cooler than expected"" begin to pile up.",-,-,-
+mv01,2,감독에게 출연료를 두둑이 요구합니다,Demand a hefty appearance fee,80,Offerings+15 Greed+2 Reputation+2,감독이 투덜대며 돈을 내지만 영상은 밋밋하게 나옵니다.,"The director grumbles and pays, but the film comes out bland.",Reputation-4,"감독이 ""역시 위선자""라는 내레이션을 붙입니다.","The director adds a narration calling you ""hypocrites after all."""
+mv02,1,이름 없이 복구를 계속합니다,Keep rebuilding without taking credit,100,Reputation+15 Charity+3 Health-5 Followers-2,생존자들이 당신의 문 앞에 꽃을 놓고 갑니다.,Survivors leave flowers at your door.,-,-,-
+mv02,2,구조 사진을 퍼뜨리게 합니다,Spread photos of the rescue,75,Reputation+12 Ambition+2,"사진이 퍼지며 ""바보들이 옳았다""는 말이 돕니다.","The photos spread, and people murmur that ""the fools were right.""",Reputation-3 Integrity-2,"""재난 팔이""라는 비난이 쏟아집니다.",You're accused of exploiting the disaster.
+mv03,1,담담히 침묵을 지킵니다,Keep a calm silence,100,Reputation+8 Patience+2 LeaderFaith+3,침묵이 오히려 품위로 읽힙니다.,Your silence is read as dignity.,-,-,-
+mv03,2,공개적으로 그들을 꾸짖습니다,Publicly rebuke them,80,Reputation+12 Integrity+2 Authority-3,광장의 군중이 처음으로 당신 편에 섭니다.,"For the first time, the crowd in the square stands with you.",Reputation-5,"""샘내는 패배자""라는 조롱이 돌아옵니다.","You're mocked as a ""jealous loser."""
+mv03,3,빈 자리를 노려 그들의 고객을 가로챕니다,Poach their clients in the chaos,100,Offerings+15 Greed+3 Reputation-2,돈은 들어오지만 신도들의 눈빛이 묘합니다.,"Money flows in, but your followers give you strange looks.",-,-,-
+mv04,1,아이 가족에게 감사 편지를 보냅니다,Send the child's family a thank-you letter,100,Reputation+9 Charity+2 Offerings-3,편지마저 화제가 되어 훈훈한 소문이 번집니다.,"Even the letter becomes news, and a warm rumor spreads.",-,-,-
+mv04,2,아이를 교단 홍보대사로 세웁니다,Make the child your cult's ambassador,70,Reputation+6 Followers+5 Ambition+2,부모가 동의하고 행사장이 북적입니다.,The parents agree and your event hall is packed.,Reputation-8 Integrity-2,"""아이까지 이용한다""는 비난이 쏟아집니다.","You're condemned for ""even using a child."""
+mv05,1,가수를 조용히 계속 돌봅니다,Keep quietly caring for the singer,100,Reputation+8 Temperance+2 Charity+1,가수의 팬들 사이에서 당신의 평이 바뀝니다.,Opinions of you shift among the singer's fans.,-,-,-
+mv05,2,가수와 함께 절제 공연을 엽니다,Hold a temperance concert with the singer,80,Reputation+13 Followers+3 Offerings-8,의외로 표가 매진되고 객석이 숙연해집니다.,"Surprisingly, tickets sell out and the audience falls solemn.",Reputation-3 Offerings-8,관객이 졸다 나가 버립니다.,The audience dozes off and leaves.
+mv06,1,무료로 약초탕을 나눕니다,Hand out the broth for free,100,Reputation+14 Charity+3 Offerings-10 Health-3,병이 잦아든 뒤 사람들이 당신의 이름을 부릅니다.,"When the sickness subsides, people call your name.",-,-,-
+mv06,2,최소한의 값만 받습니다,Charge only a minimal price,100,Reputation+7 Offerings+3 Integrity+1,공정한 값에 사람들이 고개를 끄덕입니다.,People nod at the fair price.,-,-,-
+mv06,3,약초탕 값을 열 배로 올립니다,Raise the broth price tenfold,100,Offerings+25 Greed+3 Reputation-5,"금고가 차지만 ""너희도 똑같다""는 소리를 듣습니다.","The vault fills, but you hear ""you're no different.""",-,-,-
+mv07,1,칼럼니스트를 초대해 차를 대접합니다,Invite the columnist for tea,100,Reputation+9 Patience+2 Offerings-3,두 번째 칼럼은 더 다정한 어조로 실립니다.,The second column runs in a warmer tone.,-,-,-
+mv07,2,인내에 대한 공개 강연을 엽니다,Hold a public lecture on patience,75,Reputation+12 Doctrine+3,청중이 끝까지 자리를 지킵니다.,The audience stays to the very end.,Reputation-3 Mentality-3,야유 속에 강연이 중단됩니다.,The lecture is cut short amid boos.
+mv08,1,그를 다시 반갑게 맞이합니다,Welcome them back warmly,100,Reputation+8 FollowerFaith+4 Integrity+2,돌아온 그의 이야기에 신도들이 고개를 듭니다.,Your followers lift their heads at their story.,-,-,-
+mv08,2,판결문을 교단 벽에 내겁니다,Post the verdict on the temple wall,100,Reputation+10 Ambition+1 Authority-2,지나가던 사람들이 걸음을 멈춥니다.,Passersby stop to read it.,-,-,-
+mv09,1,소박한 대접을 이어 갑니다,Continue your simple hospitality,100,Reputation+11 Charity+2 Offerings-5,"사교계에 ""그 집 수프가 그립다""는 말이 돕니다.","Word in high society is, ""I miss that house's soup.""",-,-,-
+mv09,2,그녀의 인맥으로 후원자를 모읍니다,Gather patrons through her connections,70,Reputation+6 Offerings+12 Greed+1,몇몇 후원자가 반신반의하며 지갑을 엽니다.,A few doubtful patrons open their purses.,Reputation-6,"""결국 돈 때문""이라는 말이 퍼집니다.","People say ""it was about money after all."""
+mv10,1,웃으며 상을 받으러 갑니다,Go accept the award with a smile,100,Reputation+10 Patience+2 Mentality+3,당신의 겸허한 소감이 짤로 퍼집니다.,Your humble speech spreads as a meme.,-,-,-
+mv10,2,상을 거절하고 봉사를 나갑니다,Decline and go volunteer instead,100,Reputation+7 Charity+2 LeaderFaith+4,"""진짜 바보네""라는 말에 애정이 묻어납니다.","""A real fool"" is said with affection now.",-,-,-
+mv10,3,굿즈를 만들어 팝니다,Make and sell merchandise,100,Offerings+18 Greed+2 Reputation-1,굿즈는 팔리지만 응원 댓글이 조금 식습니다.,"The merch sells, but the supportive comments cool a bit.",-,-,-
+mh01,1,향유 목욕과 깊은 잠을 즐깁니다,Indulge in a perfumed bath and deep sleep,100,Health+8 Mentality+6 Offerings-10 Lust+1,따뜻한 향기 속에서 감각이 천천히 돌아옵니다.,"In the warm fragrance, your senses slowly return.",-,-,-
+mh01,2,더 센 자극으로 버팁니다,Push through with stronger thrills,60,LeaderFaith+6 Lust+3 Health-4,잠깐 불꽃이 다시 타오릅니다.,The flame flares up again for a moment.,Health-8 Mentality-5,몸이 먼저 무너져 사흘을 앓아눕습니다.,Your body gives out first and you're bedridden for three days.
+mh02,1,온천 휴양지로 단체 여행을 보냅니다,Send them on a group hot-spring retreat,100,FollowerFaith+10 Health+5 Offerings-20 Appetite+1,돌아온 신도들의 볼에 혈색이 돕니다.,Your followers return with color in their cheeks.,-,-,-
+mh02,2,연회를 멈추고 금식일을 선포합니다,Halt the feasts and declare a fast day,100,FollowerFaith+4 Temperance+3 Reputation-6,신도들은 어리둥절하지만 묘하게 개운해합니다.,Your followers are puzzled but oddly refreshed.,-,-,-
+mh03,1,코스를 천천히 음미합니다,Savor the courses slowly,100,LeaderFaith+8 Mentality+5 Appetite+2 Offerings-5,한 접시마다 잊었던 기쁨이 떠오릅니다.,Each dish brings back a forgotten joy.,-,-,-
+mh03,2,후원자에게 답례 연회를 크게 엽니다,Throw a lavish return banquet for the patron,80,LeaderFaith+5 Reputation+6 Offerings-15,후원자가 감동해 다음 후원을 약속합니다.,"Moved, the patron promises further support.",Offerings-10 Health-3,답례 연회가 소란으로 끝나 머리만 아픕니다.,The return banquet ends in chaos and only leaves you a headache.
+mh04,1,치유사의 향 요법을 받습니다,Receive the healer's incense therapy,80,Health+10 Mentality+8 Offerings-15,몽롱한 향 속에서 오래 잠긴 피로가 풀립니다.,"In the hazy incense, long-buried fatigue melts away.",Offerings-15 Mentality-3,향이 독해 하루 종일 어지럽습니다.,The incense is too strong and you're dizzy all day.
+mh04,2,돌려보내고 산책을 시작합니다,Send them away and start taking walks,100,Health+5 Patience+2 LeaderFaith+2,걷는 길이 조금씩 길어집니다.,Your walks grow a little longer each day.,-,-,-
+mh05,1,개인 휴양 별장을 내어 줍니다,Offer them a private retreat villa,100,FollowerFaith+9 Offerings-15 Greed-1,별장에서 쉬던 신도들이 편지를 보내옵니다.,The followers resting at the villa send letters of thanks.,-,-,-
+mh05,2,마사지 장인을 불러 모두를 돌봅니다,Bring in a master masseur for everyone,100,FollowerFaith+6 Health+5 Lust+1 Offerings-10,굳은 어깨들이 풀리며 웃음소리가 돌아옵니다.,Stiff shoulders loosen and laughter returns.,-,-,-
+mh05,3,떠나게 내버려 둡니다,Let them go,100,Followers-4 Authority+4,남은 신도들은 더 단단히 당신 곁에 섭니다.,Those who remain stand more firmly by your side.,-,-,-
+mh06,1,한 달 내내 늘어지게 쉽니다,Lounge lazily the entire month,100,Health+12 Mentality+8 Authority-5,돌아오니 몸은 가볍지만 측근들이 자리를 넘보고 있습니다.,"You return refreshed, but your aides have been eyeing your seat.",-,-,-
+mh06,2,일주일만 쉬고 돌아옵니다,Rest a week and come back,100,Health+6 LeaderFaith+5 Offerings-5,짧지만 진한 휴식이 마음을 데웁니다.,A short but rich rest warms your heart.,-,-,-
+mh06,3,후원자의 속셈을 의심해 거절합니다,"Refuse, suspecting the patron's motives",100,Integrity+2 Authority+3 Mentality-2,후원자는 섭섭해하지만 빚도 없습니다.,"The patron is disappointed, but you owe nothing.",-,-,-
+mh07,1,돈을 내고 편히 즐깁니다,Pay up and enjoy it with ease,100,LeaderFaith+7 FollowerFaith+7 Offerings-25 Lust+1,오랜만에 모두가 손님처럼 축제를 즐깁니다.,"For once, everyone enjoys the festival like guests.",-,-,-
+mh07,2,값을 깎아 절반만 맡깁니다,Haggle and outsource only half,70,LeaderFaith+5 FollowerFaith+4 Offerings-12 Greed+1,적당한 축제가 적당히 즐겁습니다.,A decent festival is decently fun.,FollowerFaith-3 Offerings-12,어설픈 축제에 신도들이 실망합니다.,The half-baked festival disappoints your followers.
+mh08,1,고향 요리를 기꺼이 받습니다,Gladly accept the home cooking,100,Health+7 Mentality+6 Appetite+2 Offerings-5,소박한 국물 한 숟가락에 눈물이 핑 돕니다.,A spoonful of humble broth brings tears to your eyes.,-,-,-
+mh08,2,요리장에게 휴가와 상여금을 줍니다,Give the cook a holiday and a bonus,100,FollowerFaith+5 Charity+2 Offerings-10,요리장의 감사가 주방 전체에 퍼집니다.,The cook's gratitude spreads throughout the kitchen.,-,-,-
+mh09,1,"침구를 받고 ""쉼의 밤""을 선포합니다","Accept and declare a ""Night of Rest""",100,FollowerFaith+8 Health+6 Reputation+2,비단 이불 속에서 교단 전체가 늦잠을 잡니다.,The whole cult sleeps in beneath silk covers.,-,-,-
+mh09,2,기부의 대가를 묻습니다,Ask what the donation costs,80,FollowerFaith+5 Offerings+5 Integrity+1,"귀족이 웃으며 ""그저 초대만 해 주시오""라 답합니다.","The noble laughs and says, ""Just invite me sometime.""",Authority-4,귀족이 무례하다며 침구를 도로 가져갑니다.,"Offended, the noble takes the bedding back."
+mh10,1,한동안 모든 쾌락을 내려놓습니다,Set aside all pleasures for a while,100,LeaderFaith+10 Mentality+5 Lust-2 Reputation-4,고요 끝에 다시 피어나는 갈망이 달콤합니다.,"After the stillness, the longing that blooms again is sweet.",-,-,-
+mh10,2,노파를 연회에 초대해 대접합니다,Invite the old woman to a feast,100,LeaderFaith+6 Appetite+1 Offerings-8,노파가 춤추며 당신의 운을 축복합니다.,The old woman dances and blesses your fortune.,-,-,-
+mh10,3,미신이라며 쫓아냅니다,Chase her off as superstition,100,Authority+3 Ambition+2 Mentality-2,노파는 웃으며 사라지고 묘한 공허가 남습니다.,"She vanishes laughing, leaving a strange emptiness.",-,-,-

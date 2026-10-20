@@ -7,7 +7,9 @@ public static class DoctrineCatalog
     static StatModifier Cult(StatId stat, float percent) => new(stat, percent);
     static StatModifier Personal(PersonalStatId stat, float percent) => new(stat, percent);
 
-    public static readonly IReadOnlyList<DoctrineSkill> All = new DoctrineSkill[]
+    public static IReadOnlyList<DoctrineSkill> All => GameSession.MirrorMode ? MirrorDoctrineCatalog.All : Normal;
+
+    public static readonly IReadOnlyList<DoctrineSkill> Normal = new DoctrineSkill[]
     {
         new("lust01", DoctrineBranch.Lust, 1, "", "매혹의 미소\u001FCaptivating Smile", "교주의 미소 한 번에 사람들이 발길을 멈춥니다.\u001FOne smile from the leader stops people in their tracks.", 1, 0, new StatModifier[] { Cult(StatId.Followers, 5f) }, GiftedSpecial.Chance("Proselytize", 3)),
         new("lust02", DoctrineBranch.Lust, 2, "", "밤의 집회\u001FNight Gatherings", "은밀한 밤 집회가 신도들을 붙잡아 둡니다.\u001FSecret night gatherings keep the followers close.", 1, 0, new StatModifier[] { Cult(StatId.FollowerFaith, 5f), Personal(PersonalStatId.Lust, 5f) }),

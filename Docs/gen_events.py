@@ -93,6 +93,8 @@ def condition_code(cell, where):
             parts.append(f'DoctrineLevel.Of(c[StatId.Doctrine].Value) {op} {value}')
         elif name in CULT:
             parts.append(f'c[StatId.{name}].Value {op} {value}')
+        elif name in PERSONAL:
+            parts.append(f'GameSession.Personal[PersonalStatId.{name}].Value {op} {value}')
         else:
             sys.exit(f'{where}: 조건에 쓸 수 없는 스탯 "{name}"')
     return 'c => ' + ' && '.join(parts)
@@ -283,7 +285,7 @@ def build_god():
 def build_adult():
     events = rows_of('adult_events.csv')
     choices = group_choices(rows_of('adult_choices.csv'))
-    pools, ids = {'all': [], 'normal': [], 'god': []}, set()
+    pools, ids = {'all': [], 'normal': [], 'god': [], 'player_m': [], 'player_f': []}, set()
     for e in events:
         eid, theme, mode = e['id'].strip(), e['theme'].strip(), (e.get('mode') or 'all').strip()
         if eid in ids:
@@ -291,8 +293,12 @@ def build_adult():
         ids.add(eid)
         if theme not in CULT:
             sys.exit(f'{eid}: 잘못된 테마 "{theme}"')
-        if mode not in pools:
+        if mode not in ('all', 'normal', 'god'):
             sys.exit(f'{eid}: 잘못된 모드 "{mode}" (all/normal/god)')
+        player = (e.get('player') or '').strip()
+        if player not in ('', 'm', 'f'):
+            sys.exit(f'{eid}: 잘못된 player "{player}" (빈칸/m/f)')
+        if player: pools['player_' + player].append(eid)
         codes = choices_for(eid, choices.get(eid, []), True, {}, '                ', 'Lust', allow_god=mode == 'god')
         body = ',\n                '.join(codes)
         pools[mode].append(f'        CultEvent.Random("{eid}", StatId.{theme}, new Question("{esc(bi(e, "text"))}",\n                {body})),')
@@ -323,7 +329,15 @@ public static class AdultEvents
     public static readonly CultEvent[] God = Shared.Concat(GodOnly).ToArray();
     public static readonly CultEvent[] All = Shared.Concat(NormalOnly).Concat(GodOnly).ToArray();
 
-    public static CultEvent[] Pool(bool godMode) => godMode ? God : Normal;
+    // 플레이어 성별 전용 이벤트 (adult_events.csv의 player 열). 상대 성별이 바뀐 변형은 id 끝에 _m/_f를 붙인다.
+    static readonly System.Collections.Generic.HashSet<string> MaleOnly = new() {{ {', '.join(f'"{i}"' for i in pools['player_m'])} }};
+    static readonly System.Collections.Generic.HashSet<string> FemaleOnly = new() {{ {', '.join(f'"{i}"' for i in pools['player_f'])} }};
+
+    public static bool Fits(CultEvent e, Gender gender) =>
+        gender == Gender.Male ? !FemaleOnly.Contains(e.Id) : !MaleOnly.Contains(e.Id);
+
+    public static CultEvent[] Pool(bool godMode) =>
+        (godMode ? God : Normal).Where(e => GameSession.Personal == null || Fits(e, GameSession.Personal.Gender)).ToArray();
 }}
 '''
     open(OUT_ADULT, 'w', encoding='utf-8-sig', newline='\n').write(text)

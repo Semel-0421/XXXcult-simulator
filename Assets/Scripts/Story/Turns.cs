@@ -26,6 +26,7 @@ public static class Turns
         GameSession.Count($"act_{CultActions.Key(action)}");
         GameSession.Count("cult_acts");
         GameSession.Count(success ? "act_ok" : "act_fail");
+        if (GameSession.MirrorMode && !success && GameSession.Rng.NextDouble() < MirrorFailMisfortune) GameSession.AddMisfortune(); // 거울: 부정적 이벤트가 적어(바닥 조건) 실패한 행동도 불운을 남긴다
         SocialStanding.ApplyTurn(cult);
         Misfortune.ApplyTurn(cult, GameSession.Misfortune, Misfortune.TotalResistance(cult));
         GameSession.AdvanceTurn();
@@ -39,10 +40,12 @@ public static class Turns
         LifeEvent.Pick(LifeEvents.All, GameSession.Age.Years, GameSession.UsedEvents, GameSession.Rng);
 
     // 이번 판의 교단 이벤트 목록 (준비된 신 모드는 전용 이벤트)
-    public static IReadOnlyList<CultEvent> CultPool => GameSession.GodMode ? GodEvents.All : CultEvents.All;
+    public static IReadOnlyList<CultEvent> CultPool => GameSession.GodMode ? GodEvents.All : GameSession.MirrorMode ? MirrorEvents.Pool : CultEvents.All;
 
     // 교단 행동 뒤 이어질 이벤트: 조건 → 부정적 → 긍정(무드) → 확률 순. 없으면 null. 부정적 이벤트면 불운이 한 겹 쌓인다.
     // 준비된 신 모드: 압박 이벤트(신계·지상, 압박 단계에 비례한 확률) → 확률 순. 불운은 없다.
+    public const float MirrorFinalChance = 0.2f;
+
     public static CultEvent NextCultEvent()
     {
         var cult = GameSession.Cult;
@@ -52,14 +55,20 @@ public static class Turns
             return CultEvent.RollNegative(GodEvents.All, cult, used, rng, GameSession.God.Pressure.EventChance(cult))
                    ?? RollAdult(cult, used, rng)
                    ?? CultEvent.RollRandom(GodEvents.All, cult, used, rng);
-        var next = CultEvent.FindTriggered(CultEvents.All, cult, used)
-                   ?? CultEvent.RollNegative(CultEvents.All, cult, used, rng, GameSession.CultTime.Years + 1)
-                   ?? CultEvent.RollMood(CultEvents.All, GameSession.Personal, used, rng)
+        // 거울 세계: 전용 목록을 같은 순서로 쓰고, 배운 최종 스킬의 이벤트(Final)는 매 턴 FinalChance 확률로 하나씩 무작위로 섞여 나온다
+        var pool = GameSession.MirrorMode ? MirrorEvents.All : CultEvents.All;
+        var next = (GameSession.MirrorMode ? CultEvent.FindTriggered(MirrorEvents.Ending, cult, used) : null)
+                   ?? CultEvent.FindTriggered(pool, cult, used)
+                   ?? (GameSession.MirrorMode ? CultEvent.RollTriggered(MirrorEvents.Final, cult, used, rng, MirrorFinalChance) : null)
+                   ?? CultEvent.RollNegative(pool, cult, used, rng, GameSession.CultTime.Years + 1)
+                   ?? CultEvent.RollMood(pool, GameSession.Personal, used, rng)
                    ?? RollAdult(cult, used, rng)
-                   ?? CultEvent.RollRandom(CultEvents.All, cult, used, rng);
+                   ?? CultEvent.RollRandom(pool, cult, used, rng);
         if (next != null && next.IsNegative) GameSession.AddMisfortune();
         return next;
     }
+
+    public const double MirrorFailMisfortune = 0.3;
 
     // 성인 이벤트: 꺼져 있으면 난수를 쓰지 않아 기존 판 진행이 그대로다
     static CultEvent RollAdult(CultStatus cult, ISet<string> used, System.Random rng) =>
@@ -79,6 +88,7 @@ public static class Turns
         foreach (var id in outcome.Grants)
             GiftedGranter.Grant(GameSession.Personal.Talents, id);
         GodRules.AfterEvent(outcome);
+        MirrorRules.AfterChoice(choice);
         return outcome;
     }
 

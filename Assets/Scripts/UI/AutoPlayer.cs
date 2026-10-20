@@ -19,7 +19,12 @@ public class AutoPlayer : MonoBehaviour
 
     public static string Summary => instance == null ? "꺼짐" : $"runs={instance.runs} turn={GameSession.CultTime?.Turns} music={AudioManager.CurrentMusic}";
 
-    public static void Begin(bool godMode, bool adult, int seed = 1)
+    // 거울 세계 실플레이 봇의 스킬 타입: 욕망 쪽 교리만, 미덕 쪽 교리만, 번갈아 (타입은 Begin의 mirror 인자가 켜졌을 때만 쓴다)
+    public enum Style { None, Desire, Virtue, Balanced }
+    Style style;
+    bool mirror;
+
+    public static void Begin(bool godMode, bool adult, int seed = 1, bool mirror = false, Style style = Style.None)
     {
         PlayerPrefs.SetInt("adult_verified", adult ? 1 : 0);
         PlayerPrefs.SetInt("adult_content", 1);
@@ -30,6 +35,8 @@ public class AutoPlayer : MonoBehaviour
             instance = go.AddComponent<AutoPlayer>();
         }
         instance.godMode = godMode;
+        instance.mirror = mirror;
+        instance.style = style;
         instance.seed = seed;
         instance.runs = 0;
         instance.NewRun();
@@ -46,9 +53,11 @@ public class AutoPlayer : MonoBehaviour
             GameSession.StartNew(seed);
             GameSession.Age.Restore(25 * GameClock.QuartersPerYear);
         }
+        GameSession.SetMirrorMode(mirror);
         GameSession.MarkStarted();
         GameSession.FoundCult(godMode ? "자동신전" : "자동교단");
         if (!godMode) GameSession.Cult.Doctrines.Restore(DoctrineSkill.Declaration.Id, DoctrineSkill.Declaration.MaxLevel);
+        if (mirror) SkillStyleLog = $"거울 {style}";
         GameSession.Restore(GameSession.Capture()); // 불러오기와 같은 경로로 씬에 들어간다
         lastLoggedTurn = -1;
         SceneManager.LoadScene("GameMain");
@@ -76,6 +85,7 @@ public class AutoPlayer : MonoBehaviour
             var pressure = godMode ? $" 신계 {GameSession.God.Pressure.Stage(Pressure.Heaven, c)} 지상 {GameSession.God.Pressure.Stage(Pressure.Earth, c)} 노드 {GameSession.God.Tree.Learned.Count()}" : "";
             Debug.Log($"[AutoPlay] {GameSession.CultTime.Years}년차 신도 {c[StatId.Followers].Value} 신앙 {c[StatId.FollowerFaith].Value} 헌금 {c[StatId.Offerings].Value} 명망 {c[StatId.Reputation].Value}{pressure} 음악 {AudioManager.CurrentMusic}");
             if (godMode) LearnGodSkills();
+            else if (mirror) LearnDoctrineByStyle();
         }
 
         wait -= Time.unscaledDeltaTime;
@@ -84,6 +94,19 @@ public class AutoPlayer : MonoBehaviour
         // 결과 창은 1로 닫고, 그 밖에는 1~5 중 아무 숫자 (질문이면 선택지 수를 넘는 숫자는 무시된다)
         var n = ResultWindow.IsOpen ? 1 : Random.Range(1, 6);
         Queue((Key)((int)Key.Digit1 + n - 1));
+    }
+
+    public static string SkillStyleLog = "";
+
+    // 타입에 맞는 교리 분기만 골라 배운다. 고를 수 있는 게 없으면 아무거나 (판이 멈추지 않게)
+    void LearnDoctrineByStyle()
+    {
+        var tree = GameSession.Cult.Doctrines;
+        bool desireSide = style == Style.Desire || (style == Style.Balanced && (GameSession.CultTime.Turns / 4) % 2 == 0);
+        var pick = DoctrineCatalog.All.Where(s => s.Branch != DoctrineBranch.None && (desireSide ? Endings.IsDesireBranch(s.Branch) : !Endings.IsDesireBranch(s.Branch)))
+            .OrderBy(s => s.Tier);
+        foreach (var skill in pick)
+            if (tree.CanLearn(skill, DoctrinePoints.Available())) tree.LevelUp(skill);
     }
 
     void LearnGodSkills()

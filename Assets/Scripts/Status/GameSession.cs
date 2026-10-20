@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 // 한 판의 진행 상태 보관소. 씬이 바뀌어도 유지된다.
@@ -26,6 +26,9 @@ public static class GameSession
     public static GodState God { get; private set; }     // 그 모드의 권능 트리·포인트
 
     public static void SetGodMode(bool on) => GodMode = on;
+
+    public static bool MirrorMode { get; private set; }  // 거울 세계 모드로 진행 중인 판 (전용 이벤트·교리)
+    public static void SetMirrorMode(bool on) => MirrorMode = on;
 
     // 이번 판이 도달한 엔딩 (음악이 결말 곡으로 바뀐다). 새 판에서 지운다
     public static Endings.Ending Ending { get; private set; }
@@ -96,6 +99,7 @@ public static class GameSession
         if (CultFounded) CultTime.Advance();
         if (!Dead && !GodMode && Mortality.Dies(Age.Years, Personal.Gender, Rng)) Dead = true; // 분기마다 연령별 사망률 (신의 그릇은 늙지 않는다)
         if (Age.Quarter == 0) GiftedSpecials.ApplyYearly(Personal, Cult, CultFounded); // 해가 바뀔 때
+        if (CultFounded && CultTime.Quarter == 0) SocialStanding.YearEnd(Cult); // 교단 해가 바뀔 때 입교
         if (GodMode && CultFounded) God.Quarter(Cult);
         if (Age.Quarter == 0 && GodMode && CultFounded) God.YearEnd(Cult, Personal);
         Achievements.Evaluate();
@@ -125,6 +129,7 @@ public static class GameSession
         Dead = false;
         Run = 0;
         GodMode = false;
+        MirrorMode = false;
         God = new GodState();
         God.Tree.Changed += OnGodSkillLearned;
         FirstExtremeId = null;
@@ -159,6 +164,7 @@ public static class GameSession
             run = Run,
             dead = Dead,
             godMode = GodMode,
+            mirrorMode = MirrorMode,
             godNature = God.Tree.NatureId,
             godPointsEarned = God.Points.Earned,
             godSecularStage = God.Points.SecularStageAwarded,
@@ -189,6 +195,7 @@ public static class GameSession
     public static void Restore(SaveData data)
     {
         StartNew(data.seed);
+        MirrorMode = data.mirrorMode; // 교리 목록을 고르므로 먼저
         Rng = new GameRng(ulong.Parse(data.rngState));
         Personal.Name = data.playerName ?? "";
         Personal.Gender = (Gender)data.gender;

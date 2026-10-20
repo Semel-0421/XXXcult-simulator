@@ -18,6 +18,7 @@ public class CultInfoPanel : MonoBehaviour
         group.alpha = 0;
         group.interactable = group.blocksRaycasts = false;
         GameSession.Founded += OnFounded;
+        Lang.Changed += OnLangChanged;
         BuildPointsLabel();
         if (GameSession.GodMode) UseGodTree();
         if (GameSession.CultFounded) Show();
@@ -61,7 +62,9 @@ public class CultInfoPanel : MonoBehaviour
         pointsLabel.text = $"{string.Format(Lang.Get("god_points"), god.Available)}\n<size=80%>{string.Format(Lang.Get("god_pressure_now"), heaven, earth)}</size>";
     }
 
-    void OnDestroy() => GameSession.Founded -= OnFounded;
+    void OnDestroy() { GameSession.Founded -= OnFounded; Lang.Changed -= OnLangChanged; }
+
+    void OnLangChanged() => shownPoints = -1; // 다음 Update에서 새 언어로 다시 쓴다
 
     void OnFounded()
     {

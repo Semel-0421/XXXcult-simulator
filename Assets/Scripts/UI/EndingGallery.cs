@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 // 엔딩 도감: 가능한 모든 엔딩을 타일로 보여 준다. 본 엔딩은 삽화와 이름을, 못 본 엔딩은 검게 가리고 ?로 둔다.
 // 타일에 마우스를 올리면 엔딩 조건을 수수께끼 문장으로 보여 주고, 본 엔딩을 누르면 크게 보는 창(EndingDetail)이 열린다.
-// 위쪽 탭으로 본편 엔딩과 준비된 신 엔딩(GodRules.AllEndings)을 나눠 본다.
+// 위쪽 탭으로 본편 엔딩, 준비된 신 엔딩(GodRules.AllEndings), 거울 세계 엔딩(MirrorEndings.All)을 나눠 본다.
 public static class EndingGallery
 {
     sealed class Tile
@@ -24,9 +24,10 @@ public static class EndingGallery
     static TMP_FontAsset font;
     static readonly List<Tile> tiles = new();
     static readonly List<Tile> godTiles = new();
+    static readonly List<Tile> mirrorTiles = new();
     static Button[] tabs;
     static TMP_Text[] tabLabels;
-    static bool godTab;
+    static int tab; // 0 본편, 1 준비된 신, 2 거울 세계
 
     public static void Open()
     {
@@ -49,6 +50,7 @@ public static class EndingGallery
     {
         tiles.Clear(); // 플레이를 다시 시작하면 이전 타일은 사라졌다
         godTiles.Clear();
+        mirrorTiles.Clear();
         font = UiKit.FindFont();
         var canvas = UiKit.CreateOverlayCanvas("EndingGalleryCanvas", 310);
         canvasRect = (RectTransform)canvas;
@@ -72,7 +74,8 @@ public static class EndingGallery
 
         for (int i = 0; i < Endings.All.Count; i++) tiles.Add(BuildTile(Endings.All[i], i));
         for (int i = 0; i < GodRules.AllEndings.Count; i++) godTiles.Add(BuildTile(GodRules.AllEndings[i], tiles.Count + i));
-        tabs = BuildTabs(panel, font, out tabLabels, god => { godTab = god; Refresh(); });
+        for (int i = 0; i < MirrorEndings.All.Length; i++) mirrorTiles.Add(BuildTile(MirrorEndings.All[i], tiles.Count + godTiles.Count + i));
+        tabs = BuildTabs(panel, font, out tabLabels, t => { tab = t; Refresh(); });
         BuildTooltip();
         EndingDetail.Build(canvas, font);
     }
@@ -113,28 +116,37 @@ public static class EndingGallery
         return tile;
     }
 
-    // 본편 / 준비된 신 탭 두 개를 창 왼쪽 위(닫기 버튼과 같은 줄)에 놓는다. EndingWindow도 쓴다.
-    internal static Button[] BuildTabs(RectTransform panel, TMP_FontAsset font, out TMP_Text[] labels, System.Action<bool> select)
+    // 본편 / 준비된 신 / 거울 세계 / ???(다음 모드 자리, 잠김) 탭 네 개를 제목·안내 아래 한 줄에 같은 폭으로 놓고, 목록을 그만큼 내린다. EndingWindow도 쓴다.
+    internal static Button[] BuildTabs(RectTransform panel, TMP_FontAsset font, out TMP_Text[] labels, System.Action<int> select)
     {
-        var buttons = new Button[2];
-        labels = new TMP_Text[2];
-        for (int i = 0; i < 2; i++)
+        var names = new[] { "MainTab", "GodTab", "MirrorTab", "LockedTab" };
+        const float side = 18, gap = 8, height = 40, top = 108;
+        var width = (panel.sizeDelta.x - side * 2 - gap * (names.Length - 1)) / names.Length;
+        var buttons = new Button[names.Length];
+        labels = new TMP_Text[names.Length];
+        for (int i = 0; i < names.Length; i++)
         {
-            var god = i == 1;
-            buttons[i] = UiKit.MakeButton(panel, font, god ? "GodTab" : "MainTab", "", 120, 44, out labels[i]);
-            UiKit.Anchor((RectTransform)buttons[i].transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(80 + i * 130, -34), new Vector2(120, 44));
-            buttons[i].onClick.AddListener(() => select(god));
+            var index = i;
+            buttons[i] = UiKit.MakeButton(panel, font, names[i], "", width, height, out labels[i]);
+            labels[i].enableAutoSizing = true; labels[i].fontSizeMin = 14; labels[i].fontSizeMax = 20;
+            labels[i].textWrappingMode = TextWrappingModes.NoWrap;
+            UiKit.Anchor((RectTransform)buttons[i].transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(side + width / 2 + i * (width + gap), -top - height / 2), new Vector2(width, height));
+            buttons[i].onClick.AddListener(() => select(index));
         }
+        buttons[3].interactable = false; // 아직 없는 모드
+        ((RectTransform)panel.Find("Scroll")).offsetMax = new Vector2(-side, -(top + height + gap));
         return buttons;
     }
 
     // 고른 탭은 진홍, 나머지는 어둡게
-    internal static void RefreshTabs(Button[] buttons, TMP_Text[] labels, bool god)
+    internal static void RefreshTabs(Button[] buttons, TMP_Text[] labels, int selected)
     {
         labels[0].text = Lang.Get("gallery_tab_main");
         labels[1].text = Lang.Get("god_mode");
-        for (int i = 0; i < 2; i++)
-            buttons[i].image.color = (i == 1) == god ? UiSkin.Crimson : new Color(0.16f, 0.07f, 0.24f, 0.95f);
+        labels[2].text = Lang.Get("mirror_mode");
+        labels[3].text = "???";
+        for (int i = 0; i < buttons.Length; i++)
+            buttons[i].image.color = i == selected ? UiSkin.Crimson : new Color(0.16f, 0.07f, 0.24f, 0.95f);
     }
 
     static void AddTrigger(EventTrigger trigger, EventTriggerType type, UnityEngine.Events.UnityAction<BaseEventData> action)
@@ -184,16 +196,24 @@ public static class EndingGallery
         if (tooltipRect != null) tooltipRect.gameObject.SetActive(false);
     }
 
+    // 탭에 보이는 엔딩 목록. EndingWindow도 쓴다
+    internal static IReadOnlyList<Endings.Ending> ShownIn(int tab) =>
+        tab == 1 ? GodRules.AllEndings : tab == 2 ? MirrorEndings.All : Endings.All;
+
+    // 판의 모드에 맞는 탭
+    internal static int TabOf() => GameSession.GodMode ? 1 : GameSession.MirrorMode ? 2 : 0;
+
     static void Refresh()
     {
         titleLabel.text = Lang.Get("gallery_title");
         closeLabel.text = Lang.Get("close");
-        RefreshTabs(tabs, tabLabels, godTab);
-        var shown = godTab ? GodRules.AllEndings : Endings.All;
+        RefreshTabs(tabs, tabLabels, tab);
+        var shown = ShownIn(tab);
         hintLabel.text = string.Format(Lang.Get("ending_progress"), shown.Count(e => Endings.Seen(e.Id)), shown.Count);
-        foreach (var tile in tiles) tile.frame.gameObject.SetActive(!godTab);
-        foreach (var tile in godTiles) tile.frame.gameObject.SetActive(godTab);
-        foreach (var tile in godTab ? godTiles : tiles)
+        foreach (var tile in tiles) tile.frame.gameObject.SetActive(tab == 0);
+        foreach (var tile in godTiles) tile.frame.gameObject.SetActive(tab == 1);
+        foreach (var tile in mirrorTiles) tile.frame.gameObject.SetActive(tab == 2);
+        foreach (var tile in tab == 1 ? godTiles : tab == 2 ? mirrorTiles : tiles)
         {
             var seen = Endings.Seen(tile.ending.Id);
             tile.cover.gameObject.SetActive(!seen);

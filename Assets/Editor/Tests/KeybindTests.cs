@@ -4,7 +4,12 @@ using UnityEngine.InputSystem;
 public class KeybindTests
 {
     [SetUp]
-    public void SetUp() => Keybinds.ResetAll();
+    public void SetUp()
+    {
+        Keybinds.ResetAll();
+        // EditMode에선 frameCount가 안 바뀌어 앞 테스트의 Consume()이 남는다
+        typeof(Keybinds).GetField("consumedFrame", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static).SetValue(null, -1);
+    }
 
     [Test]
     public void Defaults_AreDigits1To5_AndLabelsMatch()

@@ -80,7 +80,7 @@ ff04,1,기꺼이 받는다,Accept it gladly,70,Offerings+40 FollowerFaith+5 Repu
 ff04,2,일부만 받는다,Accept only part of it,100,Offerings+15 FollowerFaith+5,일부만 받아 신도의 생계를 지킵니다.,"You accept only part, preserving the follower's livelihood.",-,-,
 ff04,3,거절하고 돌려보낸다,Refuse and send him back,90,FollowerFaith+10 Reputation+5,신도의 생계를 걱정해 돌려보냅니다.,"Worried for his livelihood, you send him away.",FollowerFaith-5,돌려받은 신도가 실망합니다.,The follower is disappointed to have it returned.
 ff04,4,받아서 가난한 신도들에게 나눈다,Accept it and share it with poor followers,50,FollowerFaith+15 Charity+3 Offerings+5,나눔이 신도들의 마음을 얻습니다.,Your generosity wins your followers' hearts.,Offerings-5,나눔이 헤퍼 보인다는 말이 나옵니다.,Some say you give it away too freely.
-ff04,5,재산을 받아 교단 명의로 불린다,Accept it and grow it in the cult's name,35,Offerings+30 Reputation-5 Greed+2,교단 명의 투자로 재산이 불어납니다.,Investing in the cult's name grows the fortune.,Offerings-20 Reputation-7,투자가 실패해 신도들이 분노합니다.,"The investment fails, and your followers are furious."
+ff04,5,재산을 받아 교단 명의로 불린다,Accept it and grow it in the cult's name,35,Offerings+30 Reputation-5 Greed+2 Wealth+2,교단 명의 투자로 재산이 불어납니다.,Investing in the cult's name grows the fortune.,Offerings-20 Reputation-7,투자가 실패해 신도들이 분노합니다.,"The investment fails, and your followers are furious."
 ff05,1,기쁘게 받아들인다,Accept it joyfully,90,FollowerFaith+10 Repute+2,신도들의 정성에 마음이 따뜻해집니다.,Your followers' devotion warms your heart.,-,-,
 ff05,2,검소하게 하자고 한다,Ask them to keep it modest,100,Reputation+3 Temperance+2,검소함에 신도들이 존경을 보입니다.,Your followers respect your modesty.,-,-,
 ff05,3,생일 대신 봉사의 날로 바꾼다,Turn your birthday into a day of service,70,FollowerFaith+10 Reputation+8,봉사의 날에 이웃들이 감사를 전합니다.,"On the day of service, neighbors express their thanks.",FollowerFaith-3,신도들이 아쉬워합니다.,Your followers are disappointed.
@@ -198,7 +198,7 @@ au16,2,감찰은 불필요하다,Inspection is unnecessary,100,FollowerFaith+5 T
 au17,1,허락하고 직접 감수한다,Allow it and edit it yourself,90,Doctrine+15 Authority+8,직접 감수한 책이 교리의 기준이 됩니다.,The book you edited becomes the Doctrine's standard.,Doctrine-3,감수에 시간이 오래 걸립니다.,Editing takes a long time.
 au17,2,금지한다,Forbid it,100,Authority+5 FollowerFaith-5,금지로 원본이 통제됩니다.,The ban keeps the original under control.,-,-,
 au17,3,측근이 마음대로 편집하게 둔다,Let your inner circle edit freely,50,Authority-5 Doctrine+5 Followers+3,편집본이 호응을 얻습니다.,The edited version is well received.,Doctrine-10 Authority-10,편집본이 엉뚱한 해석을 담습니다.,The edited version contains bizarre interpretations.
-au17,4,책을 비싸게 판다,Sell the book at a high price,35,Offerings+25 Reputation-2 @no.17,책이 불티나게 팔립니다.,The book sells like hotcakes.,Reputation-7,비싼 책값에 비난이 쏟아집니다.,Criticism pours in over the steep price.
+au17,4,책을 비싸게 판다,Sell the book at a high price,35,Offerings+25 Reputation-2 Wealth+2 @no.17,책이 불티나게 팔립니다.,The book sells like hotcakes.,Reputation-7,비싼 책값에 비난이 쏟아집니다.,Criticism pours in over the steep price.
 au18,1,모임을 공식 기구로 인정한다,Recognize the group officially,90,FollowerFaith+10 Followers+5 Authority-3,공식 인정에 젊은 신도들이 충성을 맹세합니다.,"Officially recognized, the young followers swear loyalty.",Authority-5,인정으로 권한이 나뉩니다.,Recognition splits authority.
 au18,2,해산시킨다,Disband it,70,Authority+8 FollowerFaith-10,해산으로 질서가 다시 잡힙니다.,Disbanding the group restores order.,FollowerFaith-15 Reputation-2,해산에 청년들이 반발합니다.,The young people push back against the disbanding.
 au18,3,몰래 감시한다,Watch them in secret,50,Authority+5 Integrity-3,감시로 모임의 움직임을 파악합니다.,Surveillance lets you track the group's moves.,Reputation-5 FollowerFaith-10,감시가 들통나 모임이 격렬해집니다.,"Your surveillance is exposed, and the group grows militant."
@@ -208,20 +208,20 @@ au19,2,신의 상징 옆에 작게 건다,Hang it small beside God's symbol,100,
 of01,1,교단 재정에 넣는다,Put it into the cult's funds,100,Offerings+30,재정에 넉넉히 보탭니다.,It gives the finances a healthy boost.,-,-,
 of01,2,신도들에게 공개하고 감사 예배를 연다,Disclose it and hold a thanksgiving service,90,FollowerFaith+10 Reputation+5 Offerings+10,감사 예배에 신도들이 기뻐합니다.,Your followers rejoice at the thanksgiving service.,Offerings+5,공개가 기부자를 밝히지 않아 시끄럽습니다.,"The disclosure doesn't name the donor, stirring a fuss."
 of01,3,기부자를 찾아 감사를 전한다,Find the donor and thank them,70,Reputation+8 Offerings+10,기부자가 교단을 신뢰하게 됩니다.,The donor comes to trust the cult.,Offerings-5,기부자를 찾지 못합니다.,You can't find the donor.
-of01,4,몰래 개인 금고에 넣는다,Slip it into your personal safe,35,Greed+4 Offerings+20 Integrity-3,금고에 넣은 돈은 아무도 모릅니다.,No one knows about the money in your safe.,Reputation-7 Offerings-10,돈이 소문이 나 신뢰를 잃습니다.,"Word of the money gets out, and you lose trust."
+of01,4,몰래 개인 금고에 넣는다,Slip it into your personal safe,35,Greed+4 Offerings+20 Integrity-3 Wealth+8,금고에 넣은 돈은 아무도 모릅니다.,No one knows about the money in your safe.,Reputation-7 Offerings-10,돈이 소문이 나 신뢰를 잃습니다.,"Word of the money gets out, and you lose trust."
 of01,5,절반은 신도들의 잔치에 쓴다,Spend half on a feast for followers,50,FollowerFaith+10 Offerings+15 Appetite+2,잔치에 신도들이 모여 웃습니다.,Your followers gather and laugh at the feast.,Offerings-5,잔치 뒤 재정이 빠듯합니다.,"After the feast, money is tight."
 of02,1,헌금으로 수리한다,Repair it with offerings,100,Offerings-15 Reputation+2,헌금으로 지붕을 고칩니다.,You fix the roof with offerings.,-,-,
 of02,2,신도들에게 특별 헌금을 걷는다,Collect a special offering,70,Offerings+20 FollowerFaith-10,특별 헌금이 모입니다.,The special offering comes in.,FollowerFaith-15,헌금 요구에 신도들이 떠나갑니다.,Followers leave over the demand for money.
 of02,3,신도들과 함께 직접 고친다,Repair it yourself with your followers,90,FollowerFaith+15 Offerings-5 Health-1,함께 고치며 결속이 깊어집니다.,Working together deepens your bond.,Health-2,공사 중 다치는 신도가 있습니다.,A follower is injured during the work.
 of02,4,그냥 둔다,Leave it,100,Offerings-5,그냥 둡니다.,You leave it as it is.,-,-,
-of03,1,받아들인다,Accept it,70,Offerings+25 Reputation-2,투자금이 들어와 재정이 숨을 틉니다.,"The investment comes in, and the finances can breathe.",Offerings-15 Reputation-5,투자가 실패해 빚이 남습니다.,The investment fails and leaves debt behind.
+of03,1,받아들인다,Accept it,70,Offerings+25 Reputation-2 Wealth+1,투자금이 들어와 재정이 숨을 틉니다.,"The investment comes in, and the finances can breathe.",Offerings-15 Reputation-5,투자가 실패해 빚이 남습니다.,The investment fails and leaves debt behind.
 of03,2,거절한다,Refuse,100,Reputation+3,깔끔히 거절합니다.,You turn it down cleanly.,-,-,
 of03,3,조건을 꼼꼼히 따져 본다,Scrutinize the terms carefully,90,Offerings+10 Mentality+2,조건을 따져 손해를 줄입니다.,Scrutinizing the terms limits your losses.,Offerings-5,조건이 복잡해 시간이 흐릅니다.,"The terms are complex, and time slips by."
 of03,4,그의 돈을 받고 약속은 어긴다,Take his money and break your promise,35,Offerings+30 Integrity-5 @no.11,돈을 받고 약속을 깨 버립니다.,You take the money and break your word.,Reputation-20 Offerings-10,약속을 어긴 사실이 알려집니다.,Word gets out that you broke your promise.
 of04,1,도입한다,Adopt it,70,Offerings+20 FollowerFaith-10,헌금 좌석이 재정을 키웁니다.,Seats for offerings swell the finances.,Reputation-7 FollowerFaith-10,빈부 차별이라는 비난이 나옵니다.,Critics call it discrimination between rich and poor.
 of04,2,단호히 거부한다,Flatly refuse,100,FollowerFaith+10 Reputation+5,거부가 신도들의 존경을 얻습니다.,Your refusal earns your followers' respect.,-,-,
 of04,3,특별석 하나만 만든다,Create just one special seat,90,Offerings+8 Followers+2,특별석에 헌금을 낸 신도가 기뻐합니다.,The follower who paid for the special seat is delighted.,Offerings+3,특별석이 불만을 낳습니다.,The special seat breeds resentment.
-of05,1,대량으로 만들어 판다,Mass-produce and sell them,70,Offerings+25 Reputation-2,기념품이 날개 돋친 듯 팔립니다.,The souvenirs fly off the shelves.,Offerings-10 Reputation-5,재고가 쌓여 손해를 봅니다.,Unsold stock piles up at a loss.
+of05,1,대량으로 만들어 판다,Mass-produce and sell them,70,Offerings+25 Reputation-2 Wealth+2,기념품이 날개 돋친 듯 팔립니다.,The souvenirs fly off the shelves.,Offerings-10 Reputation-5,재고가 쌓여 손해를 봅니다.,Unsold stock piles up at a loss.
 of05,2,소량만 정성껏 만든다,Make a small batch with care,100,Offerings+8 FollowerFaith+8,정성 어린 기념품이 신도들의 자랑이 됩니다.,The lovingly made souvenirs become your followers' pride.,-,-,
 of05,3,신도들에게만 나눠 준다,Give them only to followers,90,FollowerFaith+12,신도들이 기뻐합니다.,Your followers are delighted.,Offerings-3,나눔만으로 재정이 줄어듭니다.,Giving them away drains the finances.
 of05,4,거절한다,Refuse,100,Reputation+2,상업적 이미지를 피합니다.,You avoid a commercial image.,-,-,
@@ -233,14 +233,14 @@ of07,1,헌금은 마음이라 위로한다,Comfort him: offerings come from the 
 of07,2,노동으로 대신하게 한다,Let him give labor instead,100,FollowerFaith+8 Health-1,노동으로 헌금을 대신합니다.,He gives labor in place of offerings.,-,-,
 of07,3,교단이 생활비를 지원한다,Have the cult support his living costs,90,FollowerFaith+15 Offerings-15,생활비 지원에 신도가 감사합니다.,The follower is grateful for the support.,Offerings-10,지원이 재정을 흔듭니다.,The support strains the finances.
 of07,4,헌금을 독촉한다,Press him for offerings,35,Offerings+10 FollowerFaith-15,독촉으로 헌금이 조금 모입니다.,Pressing yields a few offerings.,Reputation-7 FollowerFaith-10,독촉이 소문이 나 평판이 떨어집니다.,"Word of the pressure spreads, and your Repute falls."
-of08,1,빵집을 연다,Open a bakery,90,Offerings+12 Reputation+3,빵 냄새가 골목을 채우고 동네가 좋아합니다.,"The smell of bread fills the alley, and the neighborhood loves it.",Offerings-5,빵이 팔리지 않습니다.,The bread doesn't sell.
+of08,1,빵집을 연다,Open a bakery,90,Offerings+12 Reputation+3 Wealth+1,빵 냄새가 골목을 채우고 동네가 좋아합니다.,"The smell of bread fills the alley, and the neighborhood loves it.",Offerings-5,빵이 팔리지 않습니다.,The bread doesn't sell.
 of08,2,찻집을 연다,Open a teahouse,90,Offerings+10 Mentality+1,찻집에서 사람들이 모여 이야기를 나눕니다.,People gather at the teahouse to talk.,Offerings-5,찻집이 한산합니다.,The teahouse is empty.
 of08,3,신도들의 일자리로 운영한다,Run it to employ followers,100,FollowerFaith+12 Charity+2,신도들이 일자리를 얻고 감사합니다.,Your followers are grateful for the jobs.,Offerings-3,운영 미숙으로 손해가 납니다.,Inexperience leads to losses.
 of08,4,장사는 신앙과 맞지 않는다,Commerce doesn't fit with faith,100,Doctrine+5 Reputation+2,장사를 접고 신앙에 집중합니다.,You give up the business and focus on faith.,-,-,
 of09,1,흑자를 신도들과 나눈다,Share the surplus with your followers,90,FollowerFaith+15 Offerings-15,흑자를 나누자 신도들이 감동합니다.,Your followers are moved when you share the surplus.,Offerings-5,나눔 뒤 적자가 됩니다.,"After sharing, you fall into the red."
 of09,2,내년을 위해 비축한다,Save it for next year,100,Offerings+15,비축으로 재정이 든든해집니다.,Saving leaves the finances on solid ground.,-,-,
 of09,3,교단 건물을 늘린다,Expand the cult's buildings,70,Followers+8 Offerings-20,건물이 늘어 신도들을 받을 공간이 생깁니다.,More buildings mean room to take in followers.,Offerings-15 Reputation-2,건물 공사비로 재정이 흔들립니다.,Construction costs shake the finances.
-of09,4,당신의 보수를 올린다,Raise your own salary,35,Offerings-10 Greed+4,보수가 올라 생활이 편해집니다.,"With a raise, life gets comfortable.",Reputation-7 FollowerFaith-10,보수 인상이 신도들의 원성을 삽니다.,The raise draws your followers' resentment.
+of09,4,당신의 보수를 올린다,Raise your own salary,35,Offerings-10 Greed+4 Wealth+6,보수가 올라 생활이 편해집니다.,"With a raise, life gets comfortable.",Reputation-7 FollowerFaith-10,보수 인상이 신도들의 원성을 삽니다.,The raise draws your followers' resentment.
 of10,1,구입한다,Buy it,70,Offerings-25 Communion+2 Authority+5,성물이 교단의 위엄을 높입니다.,The relic elevates the cult's majesty.,Offerings-30 Reputation-2,성물이 가짜로 밝혀집니다.,The relic turns out to be fake.
 of10,2,모조품을 산다,Buy a replica,100,Offerings-5 Reputation+2,모조품이라도 충분히 쓸 만합니다.,"Replica or not, it serves well enough.",-,-,
 of10,3,그 돈으로 봉사한다,Use the money for service,90,Reputation+8 FollowerFaith+8,봉사가 교단 이미지를 높입니다.,Service improves the cult's image.,Reputation-1,봉사 효과가 크지 않습니다.,The service has little effect.
@@ -261,10 +261,10 @@ of14,1,범인을 추적한다,Track down the culprit,90,Integrity+3 Reputation+3
 of14,2,신도들의 양심에 호소한다,Appeal to your followers' conscience,70,FollowerFaith+10 Offerings+10,양심에 호소하자 헌금이 다시 모입니다.,Your appeal to conscience brings offerings back in.,Offerings-5,호소에 아무도 반응하지 않습니다.,No one responds to your appeal.
 of14,3,잃어버린 셈 친다,Write it off as lost,100,Temperance+2,잃어버린 셈 치고 넘깁니다.,You write it off and move on.,-,-,
 of14,4,헌금함에 자물쇠를 단다,Put a lock on the offering box,90,Offerings+5 Integrity+1,자물쇠가 재정을 지킵니다.,The lock protects the finances.,-,-,
-of15,1,팔아서 자금을 확보한다,Sell it to raise funds,90,Offerings+25 Reputation-1,땅을 팔아 자금이 넉넉해집니다.,Selling the land leaves you flush with funds.,Offerings-5,땅값이 떨어져 손해를 봅니다.,"Land prices fall, and you take a loss."
+of15,1,팔아서 자금을 확보한다,Sell it to raise funds,90,Offerings+25 Reputation-1 Wealth+1,땅을 팔아 자금이 넉넉해집니다.,Selling the land leaves you flush with funds.,Offerings-5,땅값이 떨어져 손해를 봅니다.,"Land prices fall, and you take a loss."
 of15,2,팔지 않는다,Don't sell,100,Authority+3,땅을 지킵니다.,You keep the land.,-,-,
 of15,3,땅에 기도원을 짓는다,Build a prayer house on the land,70,Offerings-15 Communion+2 FollowerFaith+10,기도원이 신도들을 모읍니다.,The prayer house draws followers.,Offerings-20,건축비가 불어납니다.,Construction costs balloon.
-of15,4,값을 크게 부풀린다,Inflate the price sharply,35,Offerings+30 Integrity-4 @no.11,비싼 값에 땅을 팝니다.,You sell the land at a steep price.,Reputation-20,부풀린 값이 소문납니다.,Word of the inflated price spreads.
+of15,4,값을 크게 부풀린다,Inflate the price sharply,35,Offerings+30 Integrity-4 Wealth+2 @no.11,비싼 값에 땅을 팝니다.,You sell the land at a steep price.,Reputation-20,부풀린 값이 소문납니다.,Word of the inflated price spreads.
 of16,1,십일조를 도입한다,Introduce tithing,70,Offerings+25 FollowerFaith-10 Patience-1,십일조가 재정을 안정시킵니다.,Tithing stabilizes the finances.,FollowerFaith-15 Reputation-2,부담이 커졌다는 불만이 나옵니다.,Complaints arise that the burden has grown.
 of16,2,헌금 대신 봉사 시간을 받는다,Accept service hours instead of offerings,100,FollowerFaith+10 Reputation+5,봉사 시간을 받자 신도들이 마음을 엽니다.,"Accepting service hours, your followers open their hearts.",-,-,
 of17,1,성대한 연회를 연다,Throw a lavish banquet,50,Offerings+30 Reputation+3 Appetite+2 @no.15,연회에 후원자들이 몰려듭니다.,Patrons flock to the banquet.,Offerings-20 Reputation-5,연회 비용만 치솟습니다.,Only the banquet costs soar.
@@ -347,7 +347,7 @@ fo17,3,상대를 위해 기도한다,Pray for your opponent,90,Piety+3 Charity+2
 fo17,4,신도들을 불러 세를 과시한다,Call in followers to show your strength,50,Followers+4 Authority+3,신도들의 기세에 상대가 물러섭니다.,"Faced with your followers' momentum, your opponent backs down.",Reputation-5,과시가 폭력 소문으로 번집니다.,The show of force spreads as rumors of violence.
 fo18,1,매주 발행한다,Publish it weekly,70,Followers+6 Reputation+3,매주 소식지를 받아 보는 사람이 늘어납니다.,More and more people subscribe to the weekly newsletter.,Offerings-10,인쇄비가 부담입니다.,The printing costs weigh on you.
 fo18,2,계절마다 발행한다,Publish it seasonally,100,Followers+3,계절 소식지가 꾸준히 읽힙니다.,The seasonal newsletter finds steady readers.,-,-,
-fo18,3,유료로 판다,Sell it,90,Offerings+10 Reputation-1,소식지가 돈이 됩니다.,The newsletter makes money.,Followers-3,유료라 읽는 사람이 줄어듭니다.,"Because it costs money, readership drops."
+fo18,3,유료로 판다,Sell it,90,Offerings+10 Reputation-1 Wealth+1,소식지가 돈이 됩니다.,The newsletter makes money.,Followers-3,유료라 읽는 사람이 줄어듭니다.,"Because it costs money, readership drops."
 fo18,4,거절한다,Refuse,100,Reputation+2,거절합니다.,You decline.,-,-,
 fo19,1,적극 지원한다,Support it fully,70,Followers+8 Reputation+8 @no.7,과외가 동네에 소문나 사람들이 찾아옵니다.,"Word of the tutoring spreads through the neighborhood, and people come.",Offerings-10,지원금이 빠듯합니다.,The funding is tight.
 fo19,2,부모들에게도 포교한다,Proselytize to the parents too,90,Followers+10 Reputation-1,부모들이 교단을 찾아옵니다.,The parents come to the cult.,Reputation-4,부모들이 포교를 경계합니다.,The parents grow wary of the proselytizing.
@@ -485,7 +485,7 @@ cm14,2,거절한다,Refuse,100,Mentality+2,거절하고 의식을 지킵니다.,
 cm14,3,협상한다,Negotiate,50,Communion+3 Mentality+2 @no.3,협상으로 대가를 줄입니다.,"Through negotiation, you lower the price.",Mentality-3,협상이 결렬되어 불안이 남습니다.,"The negotiation breaks down, leaving you uneasy."
 cm14,4,의식을 끊는다,Break off the ritual,90,Mentality+1,의식을 끊고 빠져나옵니다.,You break off the ritual and pull yourself out.,-,-,
 cm15,1,성수로 지정한다,Designate it holy water,70,Communion+3 FollowerFaith+10,성수가 신도들의 자랑이 됩니다.,The holy water becomes the followers' pride.,Reputation-5,우물물이 오염되었다는 말이 나옵니다.,Word gets around that the well water is contaminated.
-cm15,2,성수를 판다,Sell the holy water,90,Offerings+15 Reputation-2,성수가 잘 팔립니다.,The holy water sells well.,Reputation-5,성수 장사가 비난을 받습니다.,The holy water trade draws criticism.
+cm15,2,성수를 판다,Sell the holy water,90,Offerings+15 Reputation-2 Wealth+1,성수가 잘 팔립니다.,The holy water sells well.,Reputation-5,성수 장사가 비난을 받습니다.,The holy water trade draws criticism.
 cm15,3,우물을 막는다,Seal the well,100,Reputation+2,안전을 위해 우물을 막습니다.,You seal the well for safety.,-,-,
 cm15,4,우물가에서 명상한다,Meditate by the well,90,Communion+3 Mentality+2,우물가 명상이 깊어집니다.,Your meditation by the well deepens.,Health-1,밤공기에 감기가 듭니다.,You catch a cold in the night air.
 cm16,1,인정하고 예언자로 세운다,Acknowledge him and make him a prophet,70,Communion+3 Followers+5 FollowerFaith+8,예언자가 신도들을 이끕니다.,The prophet leads the followers.,Reputation-5,예언자가 자만해 분란이 생깁니다.,"The prophet grows arrogant, and strife follows."
@@ -599,7 +599,7 @@ cd08,4,당신의 생활을 윤택하게 한다,Live in comfort,50,Wealth+4 Greed
 cd09,1,경호원을 고용한다,Hire bodyguards,90,Offerings-20 Authority+3,경호원이 금고를 지킵니다.,The bodyguards protect the vault.,Offerings-15,경호 비용이 부담입니다.,The security costs weigh on you.
 cd09,2,재산을 분산한다,Diversify the assets,70,Offerings-10 Reputation+5 @no.7,재산을 나눠 위험을 줄입니다.,Spreading out the assets reduces risk.,Offerings-10,분산 관리가 번거롭습니다.,Managing it all separately is a hassle.
 cd09,3,모두 사회에 환원한다,Give it all back to society,100,Reputation+12 Offerings-50 Charity+3,사회 환원이 교단의 이미지를 높입니다.,Giving back to society improves the cult's image.,-,-,
-cd09,4,투자로 불린다,Grow it through investment,35,Offerings+50 Greed+2 Reputation-5 @no.17,투자로 재산이 불어납니다.,Investment grows your Wealth.,Reputation-30 Offerings-30,투자가 실패해 재산이 줄어듭니다.,"The investment fails, and your Wealth shrinks."
+cd09,4,투자로 불린다,Grow it through investment,35,Offerings+50 Greed+2 Reputation-5 Wealth+3 @no.17,투자로 재산이 불어납니다.,Investment grows your Wealth.,Reputation-30 Offerings-30,투자가 실패해 재산이 줄어듭니다.,"The investment fails, and your Wealth shrinks."
 cd10,1,당신의 재산을 내놓는다,Give up your own fortune,90,Offerings+20 Wealth-5 FollowerFaith+10 @no.7,재산을 내놓자 신도들이 감동합니다.,"You give up your fortune, and the followers are moved.",Offerings+5,재산이 충분치 않습니다.,Your fortune isn't enough.
 cd10,2,긴급 헌금을 호소한다,Appeal for emergency Offerings,70,Offerings+20 FollowerFaith-10,긴급 헌금이 조금 모입니다.,A few emergency Offerings trickle in.,FollowerFaith-15,호소가 외면받습니다.,Your appeal falls on deaf ears.
 cd10,3,기도로 버틴다,Endure through prayer,100,LeaderFaith+5 FollowerFaith+5 @no.2,기도로 신도들이 버팁니다.,The followers endure through prayer.,-,-,
@@ -775,7 +775,7 @@ md10,2,조용히 손짓만 한다,Simply gesture in silence,100,Authority+4 Repu
 md11,1,보좌관을 귀한 손님으로 맞는다,Welcome the aide as an honored guest,100,Authority+5 Wealth+2,보좌관은 교단의 위세를 높이 평가하며 돌아갑니다.,The aide leaves impressed by the cult's clout.,-,,
 md11,2,행사 비용을 신도 모금으로 충당한다,Fund the event with follower donations,100,Offerings+5 FollowerFaith+3,신도들이 자발적으로 모금에 나섭니다.,Followers eagerly volunteer to raise money.,-,,
 md12,1,향으로 신비를 연출한다,Use the incense to stage a mystery,100,FollowerFaith+5 Reputation+2,향 연기 속 예배에 신도들이 황홀해합니다.,Followers are enraptured by the service wreathed in incense smoke.,-,,
-md12,2,향을 상인에게 되판다,Resell the incense to merchants,100,Offerings+6,향 값이 교단 금고를 채웁니다.,The incense money fills the cult's coffers.,-,,
+md12,2,향을 상인에게 되판다,Resell the incense to merchants,100,Offerings+6 Wealth+1,향 값이 교단 금고를 채웁니다.,The incense money fills the cult's coffers.,-,,
 md13,1,종을 성대히 울린다,Ring the bell grandly,100,Followers+6 Communion+2,종소리가 동네 끝까지 퍼집니다.,The bell's peal carries to the edge of town.,-,,
 md13,2,종 제작비를 기부자 이름으로 새긴다,Engrave donors' names to fund the bell,100,Offerings+4 Authority+3,기부자들이 자신의 이름을 보며 뿌듯해합니다.,Donors beam with pride at seeing their names.,-,,
 md14,1,사업가를 교단의 후견인으로 세운다,Make the businessman the cult's patron,100,Authority+4 Offerings+4,후견인의 약속에 교단의 기반이 굳어집니다.,The patron's pledge solidifies the cult's foundation.,-,,
@@ -968,7 +968,7 @@ go10,1,시장에 내다 판다,Sell it at the market,80,Offerings+18 Wealth+1,�
 go10,2,양로원에 기부한다,Donate it to a nursing home,90,Reputation+10 Charity+2,노인들이 교단의 이름을 기억합니다.,The elderly remember the cult's name.,Offerings-3,운반비가 꽤 듭니다.,Shipping costs quite a bit.
 go11,1,장로로 세운다,Make him an elder,75,Offerings+25 Authority+3,금고가 두둑해집니다.,The coffers grow fat.,FollowerFaith-10,돈으로 직분을 샀다는 뒷말이 퍼집니다.,Gossip spreads that he bought his position.
 go11,2,헌금과 직분은 별개라고 말한다,Say Offerings and positions are separate,80,Integrity+2 Reputation+5,원칙을 지킨 교주를 신도들이 존경합니다.,Followers respect you for keeping your principles.,Offerings-8,그는 헌금을 거두고 떠납니다.,He takes back his donation and leaves.
-go12,1,종을 판다,Sell the bell,80,Offerings+20 Greed+1,금고가 넉넉해집니다.,The coffers fill.,FollowerFaith-10 Communion-1,종소리가 사라지자 신도들이 슬퍼합니다.,"With the bell gone silent, followers grieve."
+go12,1,종을 판다,Sell the bell,80,Offerings+20 Greed+1 Wealth+1,금고가 넉넉해집니다.,The coffers fill.,FollowerFaith-10 Communion-1,종소리가 사라지자 신도들이 슬퍼합니다.,"With the bell gone silent, followers grieve."
 go12,2,종은 교단의 목소리라며 거절한다,"Refuse, calling the bell the cult's voice",90,FollowerFaith+5 Integrity+1,종소리가 오늘도 마을에 울립니다.,The bell rings over the village again today.,Offerings-2,고물상이 투덜대며 돌아갑니다.,The junk dealer leaves grumbling.
 go13,1,복사기를 직접 들인다,Buy your own copier,80,Offerings+10 Mentality+1,직접 찍으니 비용이 크게 줍니다.,Printing in-house cuts costs dramatically.,Offerings-10 Health-1,복사기가 고장 나 수리비만 나갑니다.,"The copier breaks, and you pay for repairs."
 go13,2,인쇄물을 줄인다,Cut back on printed materials,90,Offerings+6 Temperance+1,필요한 것만 남기니 오히려 깔끔해집니다.,Keeping only what's needed makes things cleaner.,Doctrine-3,홍보가 부족해집니다.,Publicity falls short.

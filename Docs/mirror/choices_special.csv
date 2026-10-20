@@ -1,0 +1,103 @@
+﻿event_id,no,label,label_en,chance,success_effects,success_text,success_text_en,fail_effects,fail_text,fail_text_en
+ms001,1,탐욕의 설교를 해 준다,Deliver a sermon on greed,80,Reputation+8 Offerings+10 Greed+2,상인들이 환호하며 헌금 상자를 가득 채웁니다.,The merchants cheer and fill the offering box.,Reputation-3,설교가 어설퍼 상인들이 하품을 합니다.,Your sermon falls flat and the merchants yawn.
+ms001,2,정직하게 장사하라고 말한다,Tell them to trade honestly,100,Integrity+3 Reputation-3 LeaderFaith+4,상인들이 비웃으며 떠나지만 마음은 가볍습니다.,"The merchants leave laughing, but your heart feels light.",-,-,-
+ms002,1,금화로 성전을 도금한다,Gild the temple with the gold,100,Offerings-30 Reputation+10 Greed+2,번쩍이는 성전에 구경꾼이 몰려듭니다.,Crowds gather to gawk at the gleaming temple.,-,-,-
+ms002,2,가난한 이들에게 나눠 준다,Give it to the poor,100,Offerings-30 Charity+3 Reputation-2 FollowerFaith+5,"""바보 교주""라는 별명이 붙지만 몇몇은 눈물을 흘립니다.","You earn the nickname ""the fool leader,"" yet a few weep with gratitude.",-,-,-
+ms003,1,경쟁을 부추긴다,Fan the rivalry,75,Authority+8 Ambition+2 Communion-1,서로를 밟고 올라서려는 열기가 교단을 달굽니다.,Their hunger to climb over each other heats up the whole cult.,Communion-3 Followers-4,다툼이 번져 신도 몇이 질려 떠납니다.,The feud spreads and some followers leave in disgust.
+ms003,2,셋을 불러 화해시킨다,Call them in and reconcile them,100,Communion+2 Patience+2 Authority-4,셋은 마지못해 악수하며 당신을 무르다고 수군댑니다.,"They shake hands grudgingly, whispering that you are soft.",-,-,-
+ms004,1,주빈석에서 마음껏 즐긴다,Indulge freely at the head table,85,Reputation+10 Appetite+2 Lust+1 Health-1,당신의 호탕한 모습이 도시의 화제가 됩니다.,Your lavish revelry becomes the talk of the city.,Health-3 Repute-3,과음으로 쓰러져 망신을 당합니다.,You collapse from drink and are humiliated.
+ms004,2,물 한 잔만 마시고 일찍 돌아온다,Drink only water and leave early,100,Temperance+3 Health+3 Reputation-4,"""재미없는 교주""라는 기사가 실립니다.","A paper runs a story about ""the dullest leader alive.""",-,-,-
+ms005,1,만찬을 허락한다,Allow the feast,100,Communion+3 Appetite+2 Offerings-15 Followers+5,배부른 웃음소리가 밤새 이어집니다.,Full-bellied laughter rings out all night.,-,-,-
+ms005,2,하루 한 끼 공동 식사로 제한한다,Limit it to one shared meal a day,70,Temperance+2 FollowerFaith+5 Communion+3,소박한 식탁에서 뜻밖의 유대가 생깁니다.,An unexpected bond forms around the modest table.,Communion-2 Reputation-2,신도들이 인색하다며 불평합니다.,Followers grumble that you are stingy.
+ms006,1,"""야망의 장""을 늘린다","Expand the ""Chapter of Ambition""",100,Doctrine+8 Ambition+2 Reputation+5,출세를 꿈꾸는 젊은이들이 교리서를 사 갑니다.,Young strivers line up to buy the new scripture.,-,-,-
+ms006,2,"""인내의 장""을 늘린다","Expand the ""Chapter of Patience""",100,Doctrine+8 Patience+2 Reputation-2 LeaderFaith+5,판매는 저조하지만 쓰는 동안 마음이 고요해집니다.,"Sales are poor, but writing it brings you calm.",-,-,-
+ms007,1,전액 맡긴다,Hand over everything,55,Offerings+40 Greed+3 Reputation+6,도박 같은 투자가 대박을 터뜨립니다.,The gamble pays off spectacularly.,Offerings-35 Reputation-5,은행가가 돈과 함께 사라집니다.,The banker vanishes along with the money.
+ms007,2,정중히 거절한다,Politely refuse,100,Integrity+2 Reputation-1,"은행가가 ""겁쟁이""라며 혀를 찹니다.",The banker clicks his tongue and calls you a coward.,-,-,-
+ms008,1,은밀한 밤을 보낸다,Spend a discreet night together,80,Lust+3 Reputation+8 Repute+3,소문은 당신을 더욱 매혹적인 인물로 만듭니다.,The rumors make you all the more alluring.,Reputation-4 Mentality-3,밀회가 엉망으로 끝나 조롱거리가 됩니다.,The meeting ends in a mess and you become a joke.
+ms008,2,편지로 정중히 사양한다,Decline with a polite letter,100,Temperance+2 Integrity+1 Reputation-2 LeaderFaith+4,"""목석같은 교주""라는 말이 퍼집니다.","People start calling you ""the stone leader.""",-,-,-
+ms009,1,직접 참가해 버린다,Join the contest yourself,70,Appetite+3 Reputation+9 Health-1,당신의 먹성에 관중이 열광합니다.,The crowd goes wild over your appetite.,Health-3 Reputation-3,네 번째 코스에서 체해 실려 나갑니다.,You choke on the fourth course and are carried out.
+ms009,2,공정하게 심사만 한다,Judge fairly and nothing more,100,Integrity+2 Authority+3 Reputation-1,공정한 심사에 몇몇은 감탄하고 대부분은 지루해합니다.,A few admire your fairness; most are bored.,-,-,-
+ms010,1,출마를 선언한다,Announce your candidacy,65,Ambition+3 Reputation+12 Authority+6,당당한 야심에 시민들이 표를 몰아 줍니다.,Citizens reward your bold ambition with their votes.,Reputation-6 Offerings-15,선거 자금만 날리고 낙선합니다.,You lose and burn through campaign funds.
+ms010,2,다른 후보를 조용히 돕는다,Quietly back another candidate,100,Patience+2 Charity+1 Authority-3 LeaderFaith+5,당신의 겸손을 이해하는 사람은 거의 없습니다.,Hardly anyone understands your humility.,-,-,-
+ms011,1,단식을 끝까지 이어 간다,Continue the fast to the end,75,Temperance+3 LeaderFaith+8 Reputation-3,비웃음 속에서도 정신은 맑아집니다.,"Amid the jeers, your mind grows clear.",Health-8 Reputation-3,"쓰러져 ""절제의 바보""로 신문에 실립니다.","You collapse and the papers dub you ""the fool of restraint."""
+ms011,2,구경꾼 앞에서 성대하게 단식을 깬다,Break the fast lavishly before the crowd,100,Appetite+2 Reputation+6 Health+3,군중이 박수치며 함께 먹기 시작합니다.,The crowd applauds and joins in the feasting.,-,-,-
+ms012,1,후원금을 보낸다,Send a donation,100,Charity+3 Offerings-15 Reputation-3 FollowerFaith+4,조롱받지만 아이들의 편지가 도착합니다.,"You are mocked, but letters from the children arrive.",-,-,-
+ms012,2,고아들을 신도로 받아 일을 시킨다,Take the orphans in as working followers,80,Followers+6 Offerings+5 Greed+1 Reputation+3,도시는 영리한 수완이라며 칭찬합니다.,The city praises your shrewdness.,Communion-2 Reputation-4,아이들이 달아나 소문이 나빠집니다.,The children run away and the rumors turn ugly.
+ms013,1,묵묵히 참는다,Endure in silence,100,Patience+3 LeaderFaith+5 Reputation-2,당신의 침묵을 사람들은 패배로 읽습니다.,People read your silence as defeat.,-,-,-
+ms013,2,더 화려한 전단으로 반격한다,Strike back with flashier flyers,75,Reputation+7 Ambition+2 Offerings-8,당신의 반격이 거리의 화제를 독차지합니다.,Your counterattack dominates street gossip.,Reputation-5 Offerings-8,전단 문구가 유치하다고 비웃음을 삽니다.,Your flyers are laughed at as childish.
+ms014,1,뇌물을 건넨다,Pay the bribe,90,Offerings-15 Authority+6 Reputation+5 Greed+1,"""일 처리할 줄 안다""며 사람들이 감탄합니다.","People admire that you ""know how things work.""",Offerings-15 Reputation-8,거래가 들통나 신문에 실립니다.,The deal leaks to the papers.
+ms014,2,정식 절차를 밟는다,Go through proper channels,100,Integrity+3 Reputation-2 Patience+1 LeaderFaith+4,서류는 끝없이 밀리고 사람들은 당신을 고지식하다 합니다.,The paperwork drags on and people call you naive.,-,-,-
+ms015,1,허락하고 제막식을 연다,Allow it and hold an unveiling,100,Reputation+8 Ambition+2 Offerings-20 Authority+5,번쩍이는 동상이 도시의 명소가 됩니다.,The gleaming statue becomes a city landmark.,-,-,-
+ms015,2,동상 대신 우물을 파게 한다,Have them dig a well instead,100,Charity+2 Communion+2 Reputation-2,동네 사람들은 쓸모만 따지는 촌스러운 교단이라 합니다.,"Locals call you a tacky, utilitarian cult.",-,-,-
+ms016,1,모임을 공식 의식으로 삼는다,Make it an official rite,100,Communion+2 Lust+1 Reputation+5 Followers+3,고백은 점점 대담해지고 소문이 신도를 부릅니다.,"The confessions grow bolder, and the rumors draw newcomers.",-,-,-
+ms016,2,고백 대신 침묵 명상으로 바꾼다,Replace it with silent meditation,65,Temperance+1 Patience+2 FollowerFaith+5,고요 속에서 신도들이 의외로 편안해합니다.,"In the silence, followers find unexpected peace.",Communion-2 Followers-3,지루하다며 몇몇이 발길을 끊습니다.,"Calling it boring, some stop coming."
+ms017,1,그를 후계 후보로 띄운다,Promote him as a potential successor,80,Followers+8 Doctrine+4 Authority-5,그의 열기에 젊은 신도들이 몰려듭니다.,Young followers flock to his fire.,Authority-10 Communion-1,그가 당신 자리를 노리기 시작합니다.,He begins eyeing your seat.
+ms017,2,공개 토론으로 꺾는다,Defeat him in public debate,60,Authority+8 Doctrine+5 Ambition+1,당신의 논리가 그를 압도합니다.,Your logic overwhelms him.,Authority-6 Reputation-5,토론에서 밀려 체면을 구깁니다.,You lose the debate and your face with it.
+ms018,1,값을 치르고 거대한 벽화를 맡긴다,Pay up for a giant mural,100,Offerings-25 Reputation+10,욕망을 찬미하는 벽화에 행인이 발을 멈춥니다.,Passersby stop before the mural praising desire.,-,-,-
+ms018,2,값을 깎아 작은 그림만 맡긴다,Haggle down to a small painting,70,Offerings-8 Greed+1 Reputation+3,적은 돈으로 쓸 만한 그림을 얻습니다.,You get a decent painting for little money.,Reputation-3,화가가 인색한 교단이라고 떠벌립니다.,The painter tells everyone how stingy you are.
+ms019,1,경고를 무시하고 즐긴다,Ignore him and indulge,100,Appetite+2 Reputation+4 Health-2,당신의 대담함에 신도들이 환호합니다.,Your followers cheer your daring.,-,-,-
+ms019,2,조용히 요양한다,Rest quietly,100,Health+10 Temperance+2 Reputation-2,"몸은 회복되지만 ""약해졌다""는 소문이 돕니다.","Your body recovers, but rumors say you have gone soft.",-,-,-
+ms020,1,야심 차게 지부를 세운다,Ambitiously found branches,75,Followers+12 Reputation+6 Authority-6 Ambition+2,교단의 깃발이 이웃 도시에도 걸립니다.,Your banner now flies in neighboring towns.,Offerings-20 Authority-8,지부장들이 돈을 빼돌립니다.,Branch heads embezzle the funds.
+ms020,2,규모를 유지하고 내실을 다진다,Hold size and build depth,100,Communion+2 FollowerFaith+4 Patience+1,성장은 멈추지만 결속이 단단해집니다.,"Growth stalls, but bonds grow stronger.",-,-,-
+ms021,1,수완을 칭찬하고 회계를 맡긴다,Praise his skill and make him treasurer,70,Offerings+15 Greed+2 Reputation+4,그는 교단 재산을 더 교묘하게 불립니다.,He grows the cult's wealth even more cunningly.,Offerings-30,그가 이번엔 금고째 들고 튑니다.,This time he runs off with the whole vault.
+ms021,2,공개적으로 돌려받는다,Publicly reclaim the money,100,Offerings+10 Integrity+2 Authority+3 Communion-3 Reputation-1,돈은 돌아왔지만 분위기는 싸늘해집니다.,"The money returns, but the mood turns chilly.",-,-,-
+ms022,1,과감한 사진으로 응한다,Pose for daring photos,85,Reputation+12 Lust+1 Ambition+1 Repute+3,잡지가 매진되고 교단 문의가 쏟아집니다.,The issue sells out and inquiries flood in.,Repute-4 Reputation-3,사진이 우스꽝스럽게 나와 놀림감이 됩니다.,The photos come out ridiculous and you are mocked.
+ms022,2,미덕에 대해 진지하게 말한다,Speak earnestly about virtue,100,Integrity+2 LeaderFaith+5 Reputation-3,"인터뷰는 ""시대착오"" 코너로 밀려납니다.","The interview gets shunted to the ""Out of Touch"" column.",-,-,-
+ms023,1,거울 속 자신에게 말을 건다,Speak to your reflection,70,LeaderFaith+8 Mentality+3 Ambition+1,거울 속 당신이 숨겨진 욕망을 일깨웁니다.,Your reflection awakens a hidden desire.,Mentality-8,밤새 환청에 시달립니다.,You are haunted by voices all night.
+ms023,2,거울을 천으로 덮는다,Cover the mirror with cloth,100,Temperance+1 Mentality+3,불안은 가라앉지만 궁금증은 남습니다.,"The unease fades, but the curiosity lingers.",-,-,-
+ms024,1,화려한 행렬로 등장한다,Arrive in a dazzling procession,75,Reputation+12 Offerings-15,행렬이 축제의 주인공이 됩니다.,Your procession steals the festival.,Reputation-4 Offerings-15,행렬이 진흙탕에 빠져 웃음거리가 됩니다.,The procession gets stuck in mud and becomes a joke.
+ms024,2,조용히 봉사 천막을 친다,Quietly set up a service tent,100,Charity+2 FollowerFaith+6 Reputation-1,소수지만 고마워하는 이들이 생깁니다.,A few people are genuinely grateful.,-,-,-
+ms025,1,더 큰 헌신을 요구한다,Demand greater devotion,80,Authority+6 Offerings+12 Ambition+2 Communion-3,헌금과 복종이 함께 늘어납니다.,Both offerings and obedience increase.,FollowerFaith-8 Followers-5,지나친 요구에 몇몇이 등을 돌립니다.,Some turn away at your excessive demands.
+ms025,2,맹세를 거두게 한다,Release them from the oath,100,Integrity+2 Communion+2 Authority-6,신도들은 당황하지만 한결 편안해 보입니다.,"Followers are confused, yet seem more at ease.",-,-,-
+ms026,1,웃으며 사탕을 나눠 준다,Smile and hand out candy,100,Charity+2 Mentality+3 Offerings-3,몇몇 아이가 머쓱해하며 사탕을 받아 갑니다.,A few children sheepishly take the candy.,-,-,-
+ms026,2,부모들에게 거세게 항의한다,Protest fiercely to their parents,60,Authority+4 Reputation+3,당신의 기세에 부모들이 사과합니다.,Your force makes the parents apologize.,Reputation-5 Mentality-3,"""성자가 화를 낸다""며 더 놀림을 받습니다.","""The saint is angry!"" — and the mockery doubles."
+ms027,1,붙잡고 큰 보상을 약속한다,Hold on and promise great rewards,70,Followers+3 Offerings-10 Greed+1,약속에 끌린 그가 친구까지 데려옵니다.,"Lured by the promise, he even brings a friend.",Followers-1 Offerings-10,보상만 챙기고 떠납니다.,He takes the reward and leaves anyway.
+ms027,2,보내 주고 홀로 기도한다,Let him go and pray alone,100,LeaderFaith+8 Patience+2 Followers-1,텅 빈 예배당에서 처음으로 신의 침묵을 듣습니다.,In the empty chapel you hear God's silence for the first time.,-,-,-
+ms028,1,촛불 예배를 연다,Hold a candlelight service,100,FollowerFaith+5 Communion+1 Reputation-2,어둠 속 촛불이 뜻밖의 분위기를 냅니다.,The candlelight creates an unexpected mood.,-,-,-
+ms028,2,부유한 후원자에게 아첨한다,Flatter a wealthy patron,65,Offerings+20 Integrity-2 Ambition+1,후원자가 흡족해하며 지갑을 엽니다.,"The patron, pleased, opens his purse.",Reputation-5 Repute-2,아첨이 너무 뻔해 문전박대당합니다.,Your flattery is too obvious and you are turned away.
+ms029,1,호화로운 기적 쇼를 연다,Stage a lavish miracle show,60,FollowerFaith+15 Offerings-15 Reputation+4,불꽃과 금가루에 신도들이 다시 엎드립니다.,Fireworks and gold dust bring the faithful to their knees again.,FollowerFaith-5 Offerings-15,장치가 고장 나 트릭이 드러납니다.,The machinery breaks and the trick is exposed.
+ms029,2,한 명씩 만나 이야기를 듣는다,Meet each one and listen,100,FollowerFaith+8 Patience+2 Authority-3,느리지만 신뢰가 조금씩 돌아옵니다.,"Slowly, trust returns bit by bit.",-,-,-
+ms030,1,탁자를 치며 권위를 되찾는다,Slam the table and reclaim authority,55,Authority+12 Ambition+2,침묵이 흐르고 모두가 당신을 봅니다.,Silence falls and all eyes turn to you.,Authority-5 Mentality-4,아무도 반응하지 않아 더 초라해집니다.,"No one reacts, and you look even smaller."
+ms030,2,그의 계획을 채택해 준다,Adopt his plan,100,Communion+2 Patience+1 Authority-3 Followers+2,신도들은 당신을 너그럽다 여기지만 우습게도 봅니다.,Followers think you generous — and a little laughable.,-,-,-
+ms031,1,파벌끼리 경쟁을 붙인다,Pit the factions against each other,70,Offerings+10 Ambition+1 Communion+2,경쟁이 헌금을 늘리고 묘한 활력을 줍니다.,The competition boosts offerings and brings strange energy.,Communion-2 Followers-4,싸움이 터져 몇몇이 떠납니다.,A brawl breaks out and some leave.
+ms031,2,큰 솥 하나로 함께 먹게 한다,Make everyone eat from one big pot,100,Communion+3 Offerings-5 Charity+1,어색한 식사 끝에 웃음이 조금 돌아옵니다.,"After an awkward meal, some laughter returns.",-,-,-
+ms032,1,밤새 교리를 새로 쓴다,Rewrite the doctrine overnight,80,Doctrine+12 Health-1 Ambition+1,새벽에 꽤 그럴듯한 교리가 완성됩니다.,"By dawn, a rather convincing doctrine is done.",Health-2 Doctrine+2,피곤만 쌓이고 내용은 엉망입니다.,You only exhaust yourself; the content is a mess.
+ms032,2,모른다고 솔직히 인정한다,Honestly admit you don't know,100,Integrity+3 FollowerFaith-4 Doctrine+3,신도들이 함께 교리를 고민하기 시작합니다.,Followers begin thinking through doctrine with you.,-,-,-
+ms033,1,믿는 척 열정적으로 설교한다,"Preach passionately, pretending to believe",100,FollowerFaith+6 Ambition+1 Mentality-4,신도들은 감동하지만 당신의 속은 텅 빕니다.,"Followers are moved, but you feel empty inside.",-,-,-
+ms033,2,예배를 쉬고 홀로 걷는다,Skip worship and walk alone,70,LeaderFaith+10 Mentality+3,길 끝에서 희미한 확신이 돌아옵니다.,"At the road's end, a faint certainty returns.",FollowerFaith-6 Authority-3,신도들이 교주가 도망쳤다고 수군댑니다.,Followers whisper that their leader ran away.
+ms034,1,비싼 약을 산다,Buy expensive medicine,100,Health+12 Offerings-15,약효가 좋아 금세 일어납니다.,The medicine works and you are soon on your feet.,-,-,-
+ms034,2,기도로 버틴다,Endure through prayer,50,Health+8 LeaderFaith+6 Patience+2,열이 내리고 신도들이 기적이라 외칩니다.,The fever breaks and followers cry miracle.,Health-5 Reputation-1,병이 더 깊어져 소문이 나빠집니다.,The illness deepens and rumors sour.
+ms035,1,독한 술로 잠을 청한다,Drink hard liquor to sleep,100,Mentality+5 Appetite+1 Health-2,꿈은 사라지지만 아침이 무겁습니다.,"The dreams fade, but mornings are heavy.",-,-,-
+ms035,2,측근에게 고민을 털어놓는다,Confide in an aide,80,Mentality+10 Communion+3 Authority-2,털어놓자 마음이 한결 가벼워집니다.,Unburdening yourself lightens your heart.,Authority-5,측근이 약점을 퍼뜨립니다.,The aide spreads word of your weakness.
+ms036,1,파격적인 홍보 행사를 연다,Throw an outrageous promo event,60,Reputation+12 Followers+4 Offerings-15,행사가 화제가 되어 기사가 바뀝니다.,The event goes viral and the coverage flips.,Reputation-3 Offerings-15,돈만 쓰고 아무도 오지 않습니다.,You spend the money and no one comes.
+ms036,2,기사를 액자에 걸어 둔다,Frame the article on the wall,100,Patience+2 Mentality+3 Communion+3,신도들과 함께 웃어넘깁니다.,You and your followers laugh it off together.,-,-,-
+ms037,1,당당하게 빌린다,Borrow without shame,100,Wealth+5 Authority-4 Patience+1,신도는 빌려주지만 표정이 묘합니다.,"The follower lends it, wearing an odd expression.",-,-,-
+ms037,2,헌금에서 몰래 꺼낸다,Secretly take from the offerings,75,Wealth+8 Offerings-8 Greed+2,아무도 눈치채지 못합니다.,No one notices.,Wealth+8 Offerings-8 Reputation-6 Integrity-2,회계 담당에게 들킵니다.,The treasurer catches you.
+ms038,1,성물을 팔아 갚는다,Sell a relic to pay,100,Offerings+15 FollowerFaith-6,빚은 갚았지만 신도들이 아쉬워합니다.,"The debt is paid, but followers mourn the relic.",-,-,-
+ms038,2,그를 신도로 포섭한다,Recruit him as a follower,45,Followers+1 Offerings+10 Reputation+4,그가 빚을 탕감하고 헌금까지 냅니다.,He forgives the debt and even makes an offering.,Reputation-6 Mentality-3,그가 더 크게 소리치며 소문을 냅니다.,He shouts louder and spreads the story.
+ms039,1,달콤한 미래를 약속한다,Promise a sweet future,65,Communion+3 FollowerFaith+6 Ambition+1,당신의 비전에 투표가 취소됩니다.,Your vision persuades them to call off the vote.,Followers-4 Communion-1,공허한 약속에 더 실망합니다.,Your empty promises disappoint them more.
+ms039,2,결정을 존중하겠다고 말한다,Say you will respect their decision,100,Integrity+2 Communion+3 Authority-4,뜻밖에 신도들이 남겠다고 합니다.,"Unexpectedly, the followers decide to stay.",-,-,-
+ms040,1,스캔들을 일부러 터뜨린다,Deliberately spark a scandal,60,Repute+8 Reputation+6,당신 이름이 다시 사람들 입에 오릅니다.,Your name is back on everyone's lips.,Repute-3 Reputation-6,스캔들마저 지루하다는 평을 받습니다.,Even your scandal is called boring.
+ms040,2,묵묵히 할 일을 한다,Quietly do your work,100,Patience+2 Doctrine+4,이름은 잊혀도 교리는 단단해집니다.,"Your name fades, but the doctrine grows firm.",-,-,-
+ms041,1,마음껏 마시고 먹는다,Eat and drink to your heart's content,100,Appetite+2 Communion+2,웃음이 끊이지 않는 밤입니다.,A night of endless laughter.,-,-,-
+ms041,2,신도들에게 건배를 돌린다,Toast every follower,100,FollowerFaith+5 Reputation+3,신도들이 당신 이름을 연호합니다.,Followers chant your name.,-,-,-
+ms042,1,예복을 입고 거리를 걷는다,Stroll the streets in the robe,100,Reputation+5,사람들이 당신의 자태에 감탄합니다.,People marvel at your bearing.,-,-,-
+ms042,2,예배 때만 입는다,Wear it only for worship,100,Authority+4 FollowerFaith+3,예배가 한층 장엄해집니다.,Worship becomes more majestic.,-,-,-
+ms043,1,함께 춤춘다,Dance with him,100,Greed+1 Communion+1,금화 소리에 맞춰 모두가 들썩입니다.,Everyone sways to the jingle of coins.,-,-,-
+ms043,2,보너스를 나눈다,Hand out bonuses,100,FollowerFaith+5 Followers+2,소문을 듣고 새 신도가 찾아옵니다.,New followers arrive after hearing the news.,-,-,-
+ms044,1,답장을 보내 격려한다,Write back with encouragement,100,Ambition+2 Reputation+3,그가 친구들에게 편지를 자랑합니다.,He shows off your letter to his friends.,-,-,-
+ms044,2,편지를 예배당에 걸어 둔다,Hang the letter in the chapel,100,Doctrine+3 FollowerFaith+3,신도들이 편지를 읽으며 의욕을 다집니다.,Followers read it and steel their resolve.,-,-,-
+ms045,1,여유롭게 몸을 담근다,Soak at leisure,100,Health+5,피로가 녹아내립니다.,Your fatigue melts away.,-,-,-
+ms045,2,신도들에게 먼저 양보한다,Let the followers go first,100,Communion+2 Reputation+2,신도들이 당신의 배려에 기뻐합니다.,Followers delight in your generosity.,-,-,-
+ms046,1,조용히 명상한다,Meditate quietly,100,Patience+2 Mentality+5,마음이 맑은 물처럼 가라앉습니다.,Your mind settles like clear water.,-,-,-
+ms046,2,정원을 가꾼다,Tend the garden,100,Health+3 Temperance+1,흙 냄새가 묘하게 위로가 됩니다.,The smell of soil is strangely comforting.,-,-,-
+ms047,1,함께 빵을 나눠 먹는다,Share the bread together,100,Charity+2 Mentality+4,소박한 맛이 오래 남습니다.,The simple taste lingers.,-,-,-
+ms047,2,신도들에게 그 이야기를 들려준다,Tell your followers the story,100,FollowerFaith+4 Communion+3,몇몇 신도의 눈가가 촉촉해집니다.,Some followers' eyes grow moist.,-,-,-
+ms048,1,정직함을 칭찬한다,Praise his honesty,100,Integrity+2 Reputation+2,상인이 쑥스럽게 웃습니다.,The merchant smiles shyly.,-,-,-
+ms048,2,그를 예배에 초대한다,Invite him to worship,100,Followers+2 LeaderFaith+3,그가 다음 주에 정말로 찾아옵니다.,He actually shows up next week.,-,-,-
+ms049,1,빗소리에 귀 기울인다,Listen to the rain,100,Patience+1 Mentality+4,시간이 천천히 흐릅니다.,Time flows slowly.,-,-,-
+ms049,2,차 한 잔을 더 따른다,Pour another cup,100,Communion+1 Temperance+1,온기가 방 안을 채웁니다.,Warmth fills the room.,-,-,-
+ms050,1,조용히 축복한다,Bless him quietly,100,LeaderFaith+5 Charity+1,그의 웃음이 당신에게도 번집니다.,His smile spreads to you.,-,-,-
+ms050,2,그와 함께 산책한다,Take a walk with him,100,FollowerFaith+4 Health+2,오랜만에 발걸음이 가볍습니다.,Your steps feel light for once.,-,-,-
+me03,1,교단을 물려준다,Hand over the cult,100,Communion+2 Charity+2,당신은 지팡이를 후계자에게 건네고 거울 앞을 떠납니다.,You pass your staff to a successor and walk away from the mirror.,-,-,-
+me03,2,죽을 때까지 교단을 지킨다,Keep the cult until death,100,Authority+5 Ambition+2,당신은 마지막 숨까지 교주로 남기로 합니다.,You resolve to remain leader until your last breath.,-,-,-

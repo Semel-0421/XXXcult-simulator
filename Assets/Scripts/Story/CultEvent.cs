@@ -135,6 +135,19 @@ public class CultEvent
         return null;
     }
 
+    // chance 확률로 조건을 만족하는 안 나온 조건 이벤트 하나를 무작위로 (거울 세계 최종 스킬 이벤트: 일반 이벤트 사이에 섞인다)
+    public static CultEvent RollTriggered(IReadOnlyList<CultEvent> pool, CultStatus cult, ISet<string> used, Random rng, float chance)
+    {
+        if (rng.NextDouble() >= chance) return null;
+        var candidates = new List<CultEvent>();
+        foreach (var e in pool)
+            if (e.IsConditional && !used.Contains(e.Id) && e.Condition(cult)) candidates.Add(e);
+        if (candidates.Count == 0) return null;
+        var picked = candidates[rng.Next(candidates.Count)];
+        used.Add(picked.Id);
+        return picked;
+    }
+
     // Chance 확률로 확률 이벤트를 뽑는다 (스탯 비율 가중치, 안 나온 것 우선). 발생하지 않으면 null.
     public static CultEvent RollRandom(IReadOnlyList<CultEvent> pool, CultStatus cult, ISet<string> used, Random rng)
     {

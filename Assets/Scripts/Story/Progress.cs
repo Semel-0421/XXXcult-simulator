@@ -82,6 +82,7 @@ public static class Progress
     public static Endings.Ending ForcedEnding()
     {
         if (GameSession.GodMode) return GodRules.ForcedEnding();
+        if (GameSession.MirrorMode) return MirrorRules.ForcedEnding();
         if (GameSession.Dead) return Endings.Find(GameSession.CultFounded ? Endings.DeathLeader : Endings.DeathYoung);
         return GameSession.CultFounded && Turns.CultDissolved ? Endings.Find(Endings.Dissolved) : null;
     }
@@ -95,6 +96,7 @@ public static class Progress
     {
         if (GameSession.GodMode) return GodRules.DueEnding();
         Track();
+        if (GameSession.MirrorMode) return MirrorRules.DueEnding();
         if (!GameSession.CultFounded || GameSession.CultTime.Turns < Endings.MinTurns) return null;
         var final = GameSession.Cult.Doctrines.Emblem;
         if (final != null)
@@ -112,7 +114,7 @@ public static class Progress
     public static void Reach(Endings.Ending ending)
     {
         GameSession.SetEnding(ending);
-        if (ending.Id == Endings.Dissolved) Profile.Count("dissolved");
+        if (ending.Id is Endings.Dissolved or "inv_end_absorbed") Profile.Count("dissolved"); // 거울 세계의 명망 0(흡수)도 해체 업적에 센다
         Endings.Reach(ending.Id);
         Achievements.Evaluate();
     }
@@ -122,7 +124,7 @@ public static class Progress
     {
         var cult = GameSession.Cult.Name;
         var years = GameSession.CultTime.Years;
-        if (GameSession.GodMode) return string.Format(Lang.Get(ending.TextKey), cult, years); // 회차·유산이 없다
+        if (GameSession.GodMode || MirrorRules.Find(ending.Id) != null) return string.Format(Lang.Get(ending.TextKey), cult, years); // 회차·유산이 없다
         string text;
         if (ending.Id == Endings.Dissolved) text = string.Format(Lang.Get("ending_dissolved"), cult, years);
         else if (IsDeath(ending)) text = string.Format(Lang.Get(ending.TextKey), cult, years, GameSession.Age.Years);

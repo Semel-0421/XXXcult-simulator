@@ -24,7 +24,7 @@ public class GiftedTooltip : MonoBehaviour
         var image = go.GetComponent<Image>();
         image.color = new Color(0.07f, 0.05f, 0.12f, 0.97f);
         image.raycastTarget = false; // 커서를 가로채 깜빡이지 않게
-        go.GetComponent<Outline>().effectColor = new Color(0.95f, 0.85f, 0.55f, 0.6f);
+        go.GetComponent<Outline>().effectColor = new Color(0.83f, 0.69f, 0.22f, 0.6f);
 
         var layout = go.GetComponent<VerticalLayoutGroup>();
         layout.padding = new RectOffset(14, 14, 12, 12);

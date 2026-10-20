@@ -12,6 +12,7 @@ public class DoctrineNodeUI : MonoBehaviour
 
     DoctrineTree tree;
     Image emblem;
+    float baseSize;
 
     void Awake() => button.onClick.AddListener(OnClick);
 
@@ -39,6 +40,12 @@ public class DoctrineNodeUI : MonoBehaviour
     {
         if (tree == null) return;
         var final = tree.Emblem;
+        // 영어 이름은 길어서 원 밖으로 넘친다: 원래 크기를 넘지 않는 선에서 자동 축소 (한국어는 그대로)
+        if (baseSize == 0) baseSize = nameLabel.fontSize;
+        nameLabel.enableAutoSizing = !Lang.IsKorean;
+        nameLabel.fontSizeMax = baseSize;
+        nameLabel.fontSizeMin = baseSize * 0.4f;
+        if (Lang.IsKorean) nameLabel.fontSize = baseSize;
         if (final == null)
         {
             ShowEmblem(null);
@@ -47,7 +54,7 @@ public class DoctrineNodeUI : MonoBehaviour
             levelLabel.text = max ? Lang.Get("doctrine_max")
                 : $"{tree.LevelOf(DoctrineSkill.Declaration)}/{DoctrineSkill.Declaration.MaxLevel}\n<size=70%>{Lang.Get("doctrine_learn")}</size>";
             button.interactable = !max;
-            if (ring != null) ring.color = max ? new Color(0.95f, 0.85f, 0.55f) : new Color(0.6f, 0.5f, 0.8f);
+            if (ring != null) ring.color = max ? new Color(0.83f, 0.69f, 0.22f) : new Color(0.6f, 0.5f, 0.8f);
             return;
         }
 

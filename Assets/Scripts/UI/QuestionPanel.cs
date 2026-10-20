@@ -30,7 +30,7 @@ public class QuestionPanel : MonoBehaviour, IPointerClickHandler
         numberInput.onSubmit.AddListener(Submit);
         displayText.raycastTarget = true; // 선택지 글자 클릭을 받기 위해
         // 이벤트 글 창은 자줏빛 책 표지에 금실 박음질 테두리
-        UiSkin.ApplyBookFrame(GetComponent<Image>(), "EventBook", new Color(0.36f, 0.12f, 0.46f), new Color(0.2f, 0.06f, 0.3f));
+        UiSkin.ApplyBookFrame(GetComponent<Image>(), "EventBook", new Color(0.22f, 0.08f, 0.30f), new Color(0.08f, 0.03f, 0.12f));
         confirmButton.onClick.AddListener(() => Submit(numberInput.text));
         SetInputActive(false);
     }

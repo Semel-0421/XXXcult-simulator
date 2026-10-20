@@ -18,6 +18,8 @@ public class StartScreenController : MonoBehaviour
         settingsPanel.SetActive(false);
         var buttons = new System.Collections.Generic.List<CanvasGroup>(menuButtons);
         buttons.Insert(1, BuildGodButton());
+        buttons.Insert(2, BuildMirrorButton());
+        ImageLabels(); // 복제 뒤에 (복제본은 새 게임의 TMP 글자에서 시작한다)
         foreach (var button in buttons) { button.alpha = 0; button.interactable = false; }
         foreach (var button in buttons)
         {
@@ -26,30 +28,72 @@ public class StartScreenController : MonoBehaviour
         }
     }
 
-    void OnDestroy() => Lang.Changed -= RefreshGodButton;
+    Button mirrorButton;
+    TMP_Text mirrorLabel;
 
-    // 준비된 신: 새 게임 버튼을 복제해 바로 아래에 둔다. 사망·해체를 뺀 엔딩 5개를 보기 전에는 취소선과 함께 잠겨 있다.
-    CanvasGroup BuildGodButton()
+
+    // 새 게임 버튼을 복제해 그 아래 offset번째 자리에 둔다
+    CanvasGroup CloneNewGame(string name, int offset, UnityEngine.Events.UnityAction onClick, out Button button, out TMP_Text label)
     {
         var source = menuButtons[0]; // 새 게임
         var copy = Instantiate(source.gameObject, source.transform.parent);
-        copy.name = "GodModeButton";
-        copy.transform.SetSiblingIndex(source.transform.GetSiblingIndex() + 1);
+        copy.name = name;
+        copy.transform.SetSiblingIndex(source.transform.GetSiblingIndex() + offset);
         foreach (var localized in copy.GetComponentsInChildren<LocalizedText>(true)) Destroy(localized);
-        godLabel = copy.GetComponentInChildren<TMP_Text>(true);
-        godButton = copy.GetComponentInChildren<Button>(true);
-        godButton.onClick = new Button.ButtonClickedEvent();
-        godButton.onClick.AddListener(NewGodGame);
-        Lang.Changed += RefreshGodButton;
-        RefreshGodButton();
+        label = copy.GetComponentInChildren<TMP_Text>(true);
+        button = copy.GetComponentInChildren<Button>(true);
+        button.onClick = new Button.ButtonClickedEvent();
+        button.onClick.AddListener(onClick);
         return copy.GetComponent<CanvasGroup>();
     }
 
-    void RefreshGodButton()
+    // 준비된 신: 새 게임 버튼 바로 아래. 사망·해체를 뺀 엔딩 5개를 보기 전에는 취소선과 함께 잠겨 있다.
+    CanvasGroup BuildGodButton()
     {
-        var unlocked = GodRules.Unlocked;
-        godButton.enabled = unlocked;
-        godLabel.text = unlocked ? Lang.Get("god_mode") : GodRules.LockedTitle(Lang.Get("god_mode"), GodRules.UnlockProgress);
+        var group = CloneNewGame("GodModeButton", 1, NewGodGame, out godButton, out godLabel);
+        godButton.enabled = GodRules.Unlocked;
+        LockableLabel(godLabel, "god_mode");
+        return group;
+    }
+
+    // 거울 세계: 준비된 신 아래. 해금 조건이 준비된 신과 같고, 글자 그림이 좌우 반전돼 있다.
+    CanvasGroup BuildMirrorButton()
+    {
+        var group = CloneNewGame("MirrorModeButton", 2, NewMirrorGame, out mirrorButton, out mirrorLabel);
+        mirrorButton.enabled = GodRules.Unlocked;
+        LockableLabel(mirrorLabel, "mirror_mode");
+        return group;
+    }
+
+    static void LockableLabel(TMP_Text label, string key) =>
+        MenuLabel.Replace(label, key, () => !GodRules.Unlocked, () => GodRules.LockedFill(GodRules.UnlockProgress), () => GodRules.LockedCount(GodRules.UnlockProgress));
+
+    // 장면에 있는 메뉴 버튼 글자(LocalizedText)도 그림으로 바꾼다
+    void ImageLabels()
+    {
+        foreach (var group in menuButtons)
+            foreach (var localized in group.GetComponentsInChildren<LocalizedText>(true))
+            {
+                var key = localized.Key;
+                var label = localized.GetComponent<TMP_Text>();
+                Destroy(localized);
+                MenuLabel.Replace(label, key);
+            }
+    }
+
+    // 모드 설명을 보여 주고, 들어가면 새 판을 거울 세계로 시작한다 (회차·시작 보상은 새 게임과 같다)
+    public void NewMirrorGame()
+    {
+        if (!GodRules.Unlocked) return;
+        ConfirmDialog.Show($"<b>{Lang.Get("mirror_mode")}</b>\n\n{Lang.Get("mirror_desc")}", Lang.Get("mirror_start"), Lang.Get("close"), () =>
+        {
+            GameSession.StartNew();
+            GameSession.SetMirrorMode(true);
+            Progress.BeginRun(Progress.NextRun);
+            Profile.Count("runs");
+            Achievements.ApplyStartRewards(GameSession.Personal);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameMain");
+        });
     }
 
     const string AdultPref = "god_adult_ok";

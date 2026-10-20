@@ -9,7 +9,7 @@
 
 **파일 규칙**
 - 배경음악: `Assets/Resources/Audio/Music/{키}.ogg`. 반복 재생되므로 끝과 시작이 이어지게 만든다(루프). 길이 1분 30초~3분.
-- 효과음: `Assets/Resources/Audio/Sfx/{키}.ogg`. 길이 0.2~3초, 앞뒤 무음 없이.
+- 효과음: `Assets/Resources/Audio/Sfx/{키}.ogg`. 최대 1초, 앞뒤 무음 없이. 음량은 RMS -24 dBFS·피크 -6 dBFS 이하로 통일(음악보다 작게, 게임 안 조정 불필요) — gen_ai_audio.py의 SFX_RMS_DB·SFX_PEAK_DB.
 - 상태 표시: **[연결됨]** = 코드가 이 파일을 재생함. 2026-10-17 신규 항목의 재생 코드까지 모두 연결했다.
 - 생성: 로컬 ComfyUI (`Docs/gen_ai_audio.py`, 프롬프트는 `Docs/audio_prompts.csv`). 배경음악은 ACE-Step 1.5 turbo로 150초를 뽑고(2026-10-18, 언어 모델 악보 생성은 끔 — 켜려면 `--codes`, 곡당 약 30분), 효과음은 Stable Audio Open 1.0. 음악은 끝 4초를 처음에 겹쳐 루프로 만들고, 곡마다 음량을 맞춘다. 같은 조(D단조/D장조)로 맞춰 크로스페이드(3초)가 자연스럽게 한다.
 
