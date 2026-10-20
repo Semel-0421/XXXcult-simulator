@@ -24,33 +24,15 @@ public static class SaveSlots
 
     public static bool Exists(int slot) => File.Exists(PathOf(slot));
 
-    // 없거나 깨진 파일이면 null
-    public static SaveData Read(int slot)
-    {
-        var path = PathOf(slot);
-        if (!File.Exists(path)) return null;
-        try
+    // 없거나 깨진 파일이면 백업(.bak)을 보고, 그것도 없으면 null
+    public static SaveData Read(int slot) =>
+        SafeFile.Read(PathOf(slot), text =>
         {
-            var data = JsonUtility.FromJson<SaveData>(File.ReadAllText(path));
+            var data = JsonUtility.FromJson<SaveData>(text);
             return data != null && data.version <= SaveData.CurrentVersion ? data : null;
-        }
-        catch (Exception) { return null; }
-    }
+        });
 
-    // 임시 파일에 먼저 쓰고 바꿔치기해서, 쓰다 끊겨도 기존 저장이 깨지지 않게 한다
-    public static void Write(int slot, SaveData data)
-    {
-        var path = PathOf(slot);
-        System.IO.Directory.CreateDirectory(Directory);
-        var temp = path + ".tmp";
-        File.WriteAllText(temp, JsonUtility.ToJson(data));
-        if (File.Exists(path)) File.Delete(path);
-        File.Move(temp, path);
-    }
+    public static void Write(int slot, SaveData data) => SafeFile.Write(PathOf(slot), JsonUtility.ToJson(data));
 
-    public static void Delete(int slot)
-    {
-        var path = PathOf(slot);
-        if (File.Exists(path)) File.Delete(path);
-    }
+    public static void Delete(int slot) => SafeFile.Delete(PathOf(slot));
 }
