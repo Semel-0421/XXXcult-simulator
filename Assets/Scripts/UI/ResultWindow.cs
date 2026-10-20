@@ -11,7 +11,7 @@ using UnityEngine.UI;
 // 확인 버튼·엔터·스페이스·1번 키로 닫으면 다음 진행(onClose)으로 넘어간다.
 public class ResultWindow : MonoBehaviour
 {
-    const string SuccessColor = "#8FE08A", FailColor = "#E07070", UpColor = "#E8D8A8", DownColor = "#C99AA8";
+    const string SuccessColor = "#D4AF37", FailColor = "#C04040", UpColor = "#D4AF37", DownColor = "#B06070";
 
     public const float AutoSeconds = 2f;
     public static bool IsOpen => current != null;
@@ -48,7 +48,7 @@ public class ResultWindow : MonoBehaviour
 
         var panel = UiKit.Child(canvas, "Panel", typeof(Image));
         UiKit.Anchor(panel, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(-185, 15), new Vector2(830, 420));
-        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "ResultBook", new Color(0.36f, 0.12f, 0.46f), new Color(0.2f, 0.06f, 0.3f));
+        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "ResultBook", new Color(0.22f, 0.08f, 0.30f), new Color(0.08f, 0.03f, 0.12f));
 
         var body = UiKit.Label(panel, font, "Body", 26, TextAlignmentOptions.TopLeft, Color.white);
         UiKit.Anchor(body.rectTransform, Vector2.zero, Vector2.one, new Vector2(0, 45), new Vector2(-80, -170));
@@ -69,7 +69,7 @@ public class ResultWindow : MonoBehaviour
         current = window;
         var ok = UiKit.MakeButton(panel, font, "Ok", Lang.Get("confirm"), 220, 52, out _);
         UiKit.Anchor((RectTransform)ok.transform, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 50), new Vector2(220, 52));
-        ok.image.color = UiSkin.Crimson;
+        ok.image.color = new Color(0.42f, 0.08f, 0.12f); // 어두운 진홍
         ok.onClick.AddListener(() => window.Close(invoke: true));
     }
 
@@ -78,6 +78,13 @@ public class ResultWindow : MonoBehaviour
         if (Menus.AnyOpen) return;
         shown += Time.unscaledDeltaTime;
         if (AutoAdvance && shown >= AutoSeconds) { Close(invoke: true); return; }
+        // 화면 어디를 눌러도 바로 넘어간다 (마우스·터치). 열린 직후 프레임은 이전 클릭이 겹치지 않게 건너뛴다.
+        if (shown > 0.05f && (Mouse.current?.leftButton.wasPressedThisFrame == true
+            || Touchscreen.current?.primaryTouch.press.wasPressedThisFrame == true))
+        {
+            Close(invoke: true);
+            return;
+        }
         var kb = Keyboard.current;
         if (kb == null) return;
         if (kb.enterKey.wasPressedThisFrame || kb.numpadEnterKey.wasPressedThisFrame || kb.spaceKey.wasPressedThisFrame

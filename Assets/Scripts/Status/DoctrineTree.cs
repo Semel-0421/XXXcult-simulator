@@ -227,9 +227,10 @@ public class DoctrineTree
 public static class DoctrinePoints
 {
     public const int PerCultYear = 1, AchievementsPerPoint = 2, PerDoctrineLevel = 2;
+    public const int MirrorPerCultYear = 2; // 거울 세계: 최종 스킬(총 22점)에 닿도록 해마다 2점
 
     public static int Earned(int cultYears, int achievements, int doctrineLevel) =>
-        cultYears * PerCultYear + achievements / AchievementsPerPoint + doctrineLevel * PerDoctrineLevel;
+        cultYears * (GameSession.MirrorMode ? MirrorPerCultYear : PerCultYear) + achievements / AchievementsPerPoint + doctrineLevel * PerDoctrineLevel;
 
     public static int Earned(CultStatus cult, GameClock cultTime, int achievements) =>
         Earned(cultTime.Years, achievements, DoctrineLevel.Of(cult[StatId.Doctrine].Value));

@@ -83,5 +83,6 @@ public class MenuLabel : MonoBehaviour
         lit.sprite = Load($"{key}_{lang}_lit");
         lit.fillAmount = progress();
         count.text = countText();
+        ((RectTransform)transform).anchoredPosition = new Vector2(-(count.preferredWidth + 8) / 2, 0); // 그림+진행 숫자를 함께 가운데로
     }
 }

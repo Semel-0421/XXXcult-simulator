@@ -12,7 +12,7 @@ public static class MirrorRules
 {
     public const int JudgeYears = 25, BranchYears = 40, CheckEveryYears = 2, DelayYears = 3;
     public const float GoodGap = 20f, TieBreakGap = 10f;
-    public const int FollowersFromYears = 3, GraceTurns = 8;
+    public const int FollowersFromYears = 5, GraceTurns = 16; // 신도 붕괴 완화: 3년차→5년차부터, 유예 8턴→16턴
     public const string FinalPrefix = "inv_end_final_";
 
     // 카운터 키

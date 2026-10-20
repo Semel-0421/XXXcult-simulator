@@ -26,6 +26,7 @@ public static class Turns
         GameSession.Count($"act_{CultActions.Key(action)}");
         GameSession.Count("cult_acts");
         GameSession.Count(success ? "act_ok" : "act_fail");
+        if (GameSession.MirrorMode && !success && GameSession.Rng.NextDouble() < MirrorFailMisfortune) GameSession.AddMisfortune(); // 거울: 부정적 이벤트가 적어(바닥 조건) 실패한 행동도 불운을 남긴다
         SocialStanding.ApplyTurn(cult);
         Misfortune.ApplyTurn(cult, GameSession.Misfortune, Misfortune.TotalResistance(cult));
         GameSession.AdvanceTurn();
@@ -66,6 +67,8 @@ public static class Turns
         if (next != null && next.IsNegative) GameSession.AddMisfortune();
         return next;
     }
+
+    public const double MirrorFailMisfortune = 0.3;
 
     // 성인 이벤트: 꺼져 있으면 난수를 쓰지 않아 기존 판 진행이 그대로다
     static CultEvent RollAdult(CultStatus cult, ISet<string> used, System.Random rng) =>

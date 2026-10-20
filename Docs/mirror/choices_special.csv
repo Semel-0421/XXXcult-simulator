@@ -77,17 +77,17 @@ ms038,1,성물을 팔아 갚는다,Sell a relic to pay,100,Offerings+15 Follower
 ms038,2,그를 신도로 포섭한다,Recruit him as a follower,45,Followers+1 Offerings+10 Reputation+4,그가 빚을 탕감하고 헌금까지 냅니다.,He forgives the debt and even makes an offering.,Reputation-6 Mentality-3,그가 더 크게 소리치며 소문을 냅니다.,He shouts louder and spreads the story.
 ms039,1,달콤한 미래를 약속한다,Promise a sweet future,65,Communion+3 FollowerFaith+6 Ambition+1,당신의 비전에 투표가 취소됩니다.,Your vision persuades them to call off the vote.,Followers-4 Communion-1,공허한 약속에 더 실망합니다.,Your empty promises disappoint them more.
 ms039,2,결정을 존중하겠다고 말한다,Say you will respect their decision,100,Integrity+2 Communion+3 Authority-4,뜻밖에 신도들이 남겠다고 합니다.,"Unexpectedly, the followers decide to stay.",-,-,-
-ms040,1,스캔들을 일부러 터뜨린다,Deliberately spark a scandal,60,Repute+8 Reputation+6 Lust+1,당신 이름이 다시 사람들 입에 오릅니다.,Your name is back on everyone's lips.,Repute-3 Reputation-6,스캔들마저 지루하다는 평을 받습니다.,Even your scandal is called boring.
+ms040,1,스캔들을 일부러 터뜨린다,Deliberately spark a scandal,60,Repute+8 Reputation+6,당신 이름이 다시 사람들 입에 오릅니다.,Your name is back on everyone's lips.,Repute-3 Reputation-6,스캔들마저 지루하다는 평을 받습니다.,Even your scandal is called boring.
 ms040,2,묵묵히 할 일을 한다,Quietly do your work,100,Patience+2 Doctrine+4,이름은 잊혀도 교리는 단단해집니다.,"Your name fades, but the doctrine grows firm.",-,-,-
 ms041,1,마음껏 마시고 먹는다,Eat and drink to your heart's content,100,Appetite+2 Communion+2,웃음이 끊이지 않는 밤입니다.,A night of endless laughter.,-,-,-
 ms041,2,신도들에게 건배를 돌린다,Toast every follower,100,FollowerFaith+5 Reputation+3,신도들이 당신 이름을 연호합니다.,Followers chant your name.,-,-,-
-ms042,1,예복을 입고 거리를 걷는다,Stroll the streets in the robe,100,Reputation+5 Lust+1,사람들이 당신의 자태에 감탄합니다.,People marvel at your bearing.,-,-,-
+ms042,1,예복을 입고 거리를 걷는다,Stroll the streets in the robe,100,Reputation+5,사람들이 당신의 자태에 감탄합니다.,People marvel at your bearing.,-,-,-
 ms042,2,예배 때만 입는다,Wear it only for worship,100,Authority+4 FollowerFaith+3,예배가 한층 장엄해집니다.,Worship becomes more majestic.,-,-,-
 ms043,1,함께 춤춘다,Dance with him,100,Greed+1 Communion+1,금화 소리에 맞춰 모두가 들썩입니다.,Everyone sways to the jingle of coins.,-,-,-
 ms043,2,보너스를 나눈다,Hand out bonuses,100,FollowerFaith+5 Followers+2,소문을 듣고 새 신도가 찾아옵니다.,New followers arrive after hearing the news.,-,-,-
 ms044,1,답장을 보내 격려한다,Write back with encouragement,100,Ambition+2 Reputation+3,그가 친구들에게 편지를 자랑합니다.,He shows off your letter to his friends.,-,-,-
 ms044,2,편지를 예배당에 걸어 둔다,Hang the letter in the chapel,100,Doctrine+3 FollowerFaith+3,신도들이 편지를 읽으며 의욕을 다집니다.,Followers read it and steel their resolve.,-,-,-
-ms045,1,여유롭게 몸을 담근다,Soak at leisure,100,Health+5 Lust+1,피로가 녹아내립니다.,Your fatigue melts away.,-,-,-
+ms045,1,여유롭게 몸을 담근다,Soak at leisure,100,Health+5,피로가 녹아내립니다.,Your fatigue melts away.,-,-,-
 ms045,2,신도들에게 먼저 양보한다,Let the followers go first,100,Communion+2 Reputation+2,신도들이 당신의 배려에 기뻐합니다.,Followers delight in your generosity.,-,-,-
 ms046,1,조용히 명상한다,Meditate quietly,100,Patience+2 Mentality+5,마음이 맑은 물처럼 가라앉습니다.,Your mind settles like clear water.,-,-,-
 ms046,2,정원을 가꾼다,Tend the garden,100,Health+3 Temperance+1,흙 냄새가 묘하게 위로가 됩니다.,The smell of soil is strangely comforting.,-,-,-

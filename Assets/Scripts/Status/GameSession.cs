@@ -99,6 +99,7 @@ public static class GameSession
         if (CultFounded) CultTime.Advance();
         if (!Dead && !GodMode && Mortality.Dies(Age.Years, Personal.Gender, Rng)) Dead = true; // 분기마다 연령별 사망률 (신의 그릇은 늙지 않는다)
         if (Age.Quarter == 0) GiftedSpecials.ApplyYearly(Personal, Cult, CultFounded); // 해가 바뀔 때
+        if (CultFounded && CultTime.Quarter == 0) SocialStanding.YearEnd(Cult); // 교단 해가 바뀔 때 입교
         if (GodMode && CultFounded) God.Quarter(Cult);
         if (Age.Quarter == 0 && GodMode && CultFounded) God.YearEnd(Cult, Personal);
         Achievements.Evaluate();

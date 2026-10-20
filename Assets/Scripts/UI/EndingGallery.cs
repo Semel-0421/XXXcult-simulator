@@ -116,21 +116,25 @@ public static class EndingGallery
         return tile;
     }
 
-    // 본편 / 준비된 신 / 거울 세계 탭 세 개를 창 왼쪽 위(닫기 버튼과 같은 줄)에 놓는다. EndingWindow도 쓴다.
+    // 본편 / 준비된 신 / 거울 세계 / ???(다음 모드 자리, 잠김) 탭 네 개를 제목·안내 아래 한 줄에 같은 폭으로 놓고, 목록을 그만큼 내린다. EndingWindow도 쓴다.
     internal static Button[] BuildTabs(RectTransform panel, TMP_FontAsset font, out TMP_Text[] labels, System.Action<int> select)
     {
-        var names = new[] { "MainTab", "GodTab", "MirrorTab" };
+        var names = new[] { "MainTab", "GodTab", "MirrorTab", "LockedTab" };
+        const float side = 18, gap = 8, height = 40, top = 108;
+        var width = (panel.sizeDelta.x - side * 2 - gap * (names.Length - 1)) / names.Length;
         var buttons = new Button[names.Length];
         labels = new TMP_Text[names.Length];
         for (int i = 0; i < names.Length; i++)
         {
             var index = i;
-            // 세 번째 탭이 가운데 제목("Endings")과 겹치지 않게 폭·간격을 줄였다
-            buttons[i] = UiKit.MakeButton(panel, font, names[i], "", 104, 44, out labels[i]);
+            buttons[i] = UiKit.MakeButton(panel, font, names[i], "", width, height, out labels[i]);
             labels[i].enableAutoSizing = true; labels[i].fontSizeMin = 14; labels[i].fontSizeMax = 20;
-            UiKit.Anchor((RectTransform)buttons[i].transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(66 + i * 110, -34), new Vector2(104, 44));
+            labels[i].textWrappingMode = TextWrappingModes.NoWrap;
+            UiKit.Anchor((RectTransform)buttons[i].transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(side + width / 2 + i * (width + gap), -top - height / 2), new Vector2(width, height));
             buttons[i].onClick.AddListener(() => select(index));
         }
+        buttons[3].interactable = false; // 아직 없는 모드
+        ((RectTransform)panel.Find("Scroll")).offsetMax = new Vector2(-side, -(top + height + gap));
         return buttons;
     }
 
@@ -140,6 +144,7 @@ public static class EndingGallery
         labels[0].text = Lang.Get("gallery_tab_main");
         labels[1].text = Lang.Get("god_mode");
         labels[2].text = Lang.Get("mirror_mode");
+        labels[3].text = "???";
         for (int i = 0; i < buttons.Length; i++)
             buttons[i].image.color = i == selected ? UiSkin.Crimson : new Color(0.16f, 0.07f, 0.24f, 0.95f);
     }

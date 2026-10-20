@@ -41,19 +41,9 @@ public static class GodRules
     public static int UnlockProgress => Endings.All.Count(e => (e.Final != null || e.IsExtreme) && Endings.Seen(e.Id));
     public static bool Unlocked => UnlockProgress >= UnlockEndings;
 
-    // 잠긴 버튼 제목: 회색 글자에 취소선. 엔딩 하나마다 (공백을 뺀) 글자가 하나씩 금빛으로 돌아오고, 다 모이면 열린다.
-    public static string LockedTitle(string title, int progress)
-    {
-        var letters = title.Count(c => !char.IsWhiteSpace(c));
-        var lit = letters * Math.Min(progress, UnlockEndings - 1) / (UnlockEndings - 1);
-        var text = new System.Text.StringBuilder("<s>");
-        foreach (var c in title)
-        {
-            if (char.IsWhiteSpace(c)) { text.Append(c); continue; }
-            text.Append(lit-- > 0 ? $"<color=#F2D978>{c}</color>" : $"<color=#808080>{c}</color>");
-        }
-        return text.Append($"</s> <color=#808080>({Math.Min(progress, UnlockEndings)}/{UnlockEndings})</color>").ToString();
-    }
+    // 잠긴 버튼 제목(MenuLabel): 회색 취소선 글자 위로 엔딩 하나마다 금빛이 왼쪽부터 차오르고, 다 모이면 열린다.
+    public static float LockedFill(int progress) => (float)Math.Min(progress, UnlockEndings - 1) / (UnlockEndings - 1);
+    public static string LockedCount(int progress) => $"({Math.Min(progress, UnlockEndings)}/{UnlockEndings})";
 
     // 새 판: 성인 그릇의 시작 상태
     public static void Begin(int? seed = null)

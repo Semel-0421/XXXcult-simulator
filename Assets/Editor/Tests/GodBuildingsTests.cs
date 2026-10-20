@@ -146,13 +146,16 @@ public class GodBuildingsTests
         Assert.IsNotNull(UnityEngine.Resources.Load<UnityEngine.Texture2D>("Pictograms/Consecrate_ok"));
 
     [Test]
-    public void LockedTitle_LightsOneLetterPerEnding()
+    public void LockedTitle_FillsPerEnding_AndLabelImagesExist()
     {
-        Assert.AreEqual(0, GodRules.LockedTitle("준비된 신", 0).Split("#F2D978").Length - 1);
-        Assert.AreEqual(2, GodRules.LockedTitle("준비된 신", 2).Split("#F2D978").Length - 1);
-        Assert.AreEqual(4, GodRules.LockedTitle("준비된 신", 4).Split("#F2D978").Length - 1);
-        StringAssert.Contains("<s>", GodRules.LockedTitle("준비된 신", 4));
-        StringAssert.Contains("(4/5)", GodRules.LockedTitle("준비된 신", 4));
+        Assert.AreEqual(0f, GodRules.LockedFill(0));
+        Assert.AreEqual(0.5f, GodRules.LockedFill(2));
+        Assert.AreEqual(1f, GodRules.LockedFill(4));
+        Assert.AreEqual("(4/5)", GodRules.LockedCount(4));
+        foreach (var key in new[] { "god_mode", "mirror_mode" })
+            foreach (var lang in new[] { "ko", "en" })
+                foreach (var suffix in new[] { "", "_locked", "_lit" })
+                    Assert.IsNotNull(UnityEngine.Resources.Load<UnityEngine.Texture2D>($"UI/MenuLabels/{key}_{lang}{suffix}"), $"{key}_{lang}{suffix}");
     }
 
     [Test]

@@ -47,7 +47,8 @@ def main():
     model = take(args, "--model")  # 안 주면 CSV의 model 열(장면별로 고른 모델)을 쓴다
     if model and model not in MODELS: sys.exit(f"모델은 {', '.join(MODELS)} 중 하나")
     OUT = os.path.abspath(take(args, "--out") or OUT)
-    with open(os.path.join(HERE, "adult_art_prompts.csv"), encoding="utf-8-sig") as f:
+    csv_name = take(args, "--csv") or "adult_art_prompts.csv"  # 다른 프롬프트 모음(예: action_art_prompts.csv)도 쓸 수 있게
+    with open(os.path.join(HERE, csv_name), encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if not args or r["file"] in args]
     if not rows: sys.exit("맞는 항목이 없음")
     os.makedirs(OUT, exist_ok=True)

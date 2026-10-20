@@ -6,10 +6,12 @@ using UnityEngine.UI;
 // 이미지 파일 없이 만들고, 같은 모양은 한 번만 만들어 재사용한다.
 public static class UiSkin
 {
-    public static readonly Color Gold = new(0.92f, 0.76f, 0.38f);
-    public static readonly Color GoldLight = new(1f, 0.9f, 0.56f);
-    public static readonly Color GoldDark = new(0.5f, 0.34f, 0.1f);
-    public static readonly Color Crimson = new(0.62f, 0.1f, 0.18f);
+    public static readonly Color Gold = new(0.83f, 0.69f, 0.22f);       // 더 깊은 금색
+    public static readonly Color GoldLight = new(0.95f, 0.82f, 0.42f);
+    public static readonly Color GoldDark = new(0.42f, 0.28f, 0.08f);
+    public static readonly Color Crimson = new(0.55f, 0.08f, 0.14f);   // 더 어두운 진홍
+    public static readonly Color Ink = new(0.04f, 0.02f, 0.08f);       // 먹빛 (배경용)
+    public static readonly Color Parchment = new(0.88f, 0.82f, 0.68f); // 양피지색 (텍스트용)
 
     const int FrameSize = 96, FrameBorder = 14;
     static readonly Dictionary<string, Sprite> Cache = new();

@@ -20,7 +20,7 @@ public class UiSkinTests
         var pixels = sprite.texture.GetPixels();
         int gold = 0;
         foreach (var p in pixels)
-            if (p.r > 0.9f && p.g > 0.85f && p.b > 0.5f) gold++;
+            if (p.r > 0.9f && p.g > 0.75f && p.b > 0.3f) gold++; // UiSkin.GoldLight(0.95,0.82,0.42) 계열
         Assert.Greater(gold, 100, "금실 박음질이 있어야 한다");
     }
 

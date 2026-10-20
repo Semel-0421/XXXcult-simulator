@@ -17,12 +17,17 @@ public class AdultEventTests
     [Test]
     public void EachModeHasItsOwnThirtyAdultEvents()
     {
-        Assert.AreEqual(30, AdultEvents.NormalOnly.Length);
-        Assert.AreEqual(30, AdultEvents.GodOnly.Length);
+        // 성별 변형(_m/_f)이 섞여 있으므로 플레이어 성별마다 실제로 보이는 이벤트가 30개씩이어야 한다
+        foreach (var g in new[] { Gender.Male, Gender.Female })
+        {
+            Assert.AreEqual(30, AdultEvents.NormalOnly.Count(e => AdultEvents.Fits(e, g)), "normal " + g);
+            Assert.AreEqual(30, AdultEvents.GodOnly.Count(e => AdultEvents.Fits(e, g)), "god " + g);
+        }
         // 모드 전용 이벤트는 다른 모드 풀에 섞이지 않는다
         Assert.IsFalse(AdultEvents.Pool(false).Intersect(AdultEvents.GodOnly).Any());
         Assert.IsFalse(AdultEvents.Pool(true).Intersect(AdultEvents.NormalOnly).Any());
-        Assert.IsTrue(AdultEvents.Shared.All(e => AdultEvents.Pool(false).Contains(e) && AdultEvents.Pool(true).Contains(e)));
+        // Pool은 현재 플레이어 성별로 거르므로 그 성별에 맞는 공용 이벤트만 비교
+        Assert.IsTrue(AdultEvents.Shared.Where(e => GameSession.Personal == null || AdultEvents.Fits(e, GameSession.Personal.Gender)).All(e =>AdultEvents.Pool(false).Contains(e) && AdultEvents.Pool(true).Contains(e)));
         // 모두 반복 등장하는 확률 이벤트
         Assert.IsTrue(AdultEvents.All.All(e => e.Kind == CultEvent.EventKind.Random));
     }

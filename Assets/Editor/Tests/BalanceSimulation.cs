@@ -95,6 +95,75 @@ public static class BalanceSimulation
         return report;
     }
 
+    // ---- 거울 세계 자동 플레이: 스킬 타입별로 욕망 가지 / 미덕 가지 / 번갈아 고른 뒤 평균 결과를 낸다
+    public enum MirrorStyle { Desire, Virtue, Balanced }
+    static bool mirrorOn;
+
+    public static string RunMirror(MirrorStyle style, int runs, int seed)
+    {
+        var previousPath = Profile.Path;
+        var previousEnabled = Profile.Enabled;
+        var temp = Path.Combine(Path.GetTempPath(), $"xxxcult_mirror_{Guid.NewGuid():N}.json");
+        Profile.Path = temp;
+        Profile.Enabled = true;
+        mirrorOn = true;
+        neutralBot = style == MirrorStyle.Balanced;
+        var rng = new Random(seed);
+        var endings = new Dictionary<string, int>();
+        double rep = 0, fol = 0, off = 0, wealth = 0, desire = 0, virtue = 0, years = 0;
+        int deaths = 0, finals = 0, counted = 0, emblems = 0; double tiers = 0, misfortune = 0;
+        try
+        {
+            for (int i = 0; i < runs; i++)
+            {
+                bool desireSide = style == MirrorStyle.Desire || (style == MirrorStyle.Balanced && i % 2 == 0);
+                var branches = Branches.Where(b => Endings.IsDesireBranch(b) == desireSide).ToArray();
+                var goal = new Goal(branches[rng.Next(branches.Length)], i % 4 < 2 ? EndingKind.Good : EndingKind.Bad);
+                neutralPick = null; blockReason = "막힘 없음(끝까지 학습)";
+                var ending = PlayRun(i + 1, goal, rng.Next(), new Report { Careers = 1, MaxRuns = runs });
+                var reasonKey = blockReason == null ? "-" : System.Text.RegularExpressions.Regex.Replace(blockReason, @"\(.*\)", "").Trim();
+                BlockReasons[$"{style}|{reasonKey}"] = BlockReasons.TryGetValue($"{style}|{reasonKey}", out var bc) ? bc + 1 : 1;
+                var key = ending?.Id ?? "none";
+                endings[key] = endings.TryGetValue(key, out var n) ? n + 1 : 1;
+                if (ending != null && (ending.Final != null || ending.Id.StartsWith(MirrorRules.FinalPrefix))) finals++; // 거울 최종 스킬 엔딩은 id 접두사로 센다
+                if (ending != null && Progress.IsDeath(ending)) deaths++; // 최대 연수까지 엔딩 없이 끝난 판(null)도 있다
+                if (GameSession.Cult == null) continue;
+                counted++;
+                misfortune += GameSession.Misfortune;
+                if (GameSession.Cult.Doctrines.Emblem != null) emblems++;
+                tiers += GameSession.Cult.Doctrines.SpentPoints;
+                rep += GameSession.Cult[StatId.Reputation].Value;
+                fol += GameSession.Cult[StatId.Followers].Value;
+                off += GameSession.Cult[StatId.Offerings].Value;
+                wealth += GameSession.Personal[PersonalStatId.Wealth].Value;
+                desire += CultEvent.TraitAverage(GameSession.Personal, CultEvent.MoodTrait.Desire);
+                virtue += CultEvent.TraitAverage(GameSession.Personal, CultEvent.MoodTrait.Virtue);
+                years += GameSession.CultTime.Years;
+            }
+        }
+        finally
+        {
+            mirrorOn = false;
+            neutralBot = false;
+            Profile.Enabled = previousEnabled;
+            Profile.Path = previousPath;
+            Profile.Reset();
+            if (File.Exists(temp)) File.Delete(temp);
+            GameSession.StartNew(1);
+        }
+        var sb = new StringBuilder();
+        double c = Math.Max(1, counted);
+        sb.AppendLine($"[거울 {style}] 판 {runs}회 (교단 창설 {counted}회)");
+        sb.AppendLine($"  평균 명망 {rep / c:0.0} / 신도 {fol / c:0.0} / 헌금 {off / c:0.0} / 재산 {wealth / c:0.0}");
+        sb.AppendLine($"  평균 욕망 {desire / c:0.0} / 미덕 {virtue / c:0.0} / 교단 기간 {years / c:0.0}년");
+        sb.AppendLine($"  사망 {100.0 * deaths / runs:0.0}% / 최종 스킬 엔딩 {100.0 * finals / runs:0.0}%");
+        sb.AppendLine($"  최종 스킬 보유 {100.0 * emblems / runs:0.0}% / 평균 교리 포인트 사용 {tiers / c:0.0} / 평균 불운 {misfortune / c:0.00}");
+        foreach (var kv in endings.OrderByDescending(kv => kv.Value)) sb.AppendLine($"    {kv.Key}: {100.0 * kv.Value / runs:0.0}%");
+        foreach (var kv in BlockReasons.Where(k => k.Key.StartsWith(style + "|")).OrderByDescending(k => k.Value)) sb.AppendLine($"    [학습 막힘] {kv.Key.Substring(kv.Key.IndexOf('|') + 1)}: {kv.Value}판");
+        BlockReasons.Clear();
+        return sb.ToString();
+    }
+
     // 목표: 이 가지의 최종 스킬로 이 굿/배드 엔딩을 본다
     sealed class Goal
     {
@@ -118,6 +187,7 @@ public static class BalanceSimulation
     static Endings.Ending PlayRun(int run, Goal goal, int seed, Report report)
     {
         GameSession.StartNew(seed);
+        GameSession.SetMirrorMode(mirrorOn); // StartNew가 끄므로 그 뒤에 켠다
         Progress.BeginRun(Progress.NextRun); // 실제 게임처럼 지금까지 본 엔딩 수로 회차가 정해진다
         Achievements.ApplyStartRewards(GameSession.Personal);
         GameSession.Personal.Gender = seed % 2 == 0 ? Gender.Male : Gender.Female;
@@ -181,9 +251,34 @@ public static class BalanceSimulation
     }
 
     // 목표 가지를 1단계부터 차례로 배운다 (6단계 이후 갈래는 배울 수 있는 쪽)
+    static string blockReason;
+    static readonly Dictionary<string, int> BlockReasons = new();
+    static bool neutralBot;
+    static DoctrineBranch? neutralPick;
+
+    // 중립 봇: 처음엔 받은 목표대로 배우다가, 5년이 지나면 지금 평균이 높은 쪽(욕망/미덕)에서 가장 높은 스탯의 가지로 정한다
+    static Goal NeutralGoal(Goal goal)
+    {
+        if (!neutralBot) return goal;
+        var learnedDeep = DoctrineCatalog.All.FirstOrDefault(k => k.Tier >= 6 && GameSession.Cult.Doctrines.LevelOf(k) > 0);
+        if (neutralPick == null && learnedDeep != null) neutralPick = learnedDeep.Branch; // 6단계 이후를 이미 배웠으면 그 가지를 유지 (최종 스킬은 하나뿐)
+        if (neutralPick == null && GameSession.CultTime.Years >= 5)
+        {
+            var p = GameSession.Personal;
+            bool desireHigher = CultEvent.TraitAverage(p, CultEvent.MoodTrait.Desire) >= CultEvent.TraitAverage(p, CultEvent.MoodTrait.Virtue);
+            neutralPick = Branches.Where(b => Endings.IsDesireBranch(b) == desireHigher)
+                .OrderByDescending(b => p[(PersonalStatId)Enum.Parse(typeof(PersonalStatId), b.ToString())].Value).First();
+        }
+        return neutralPick is { } pick ? new Goal(pick, goal.Kind) : goal;
+    }
+
     static void LearnDoctrine(Goal goal, ref string path)
     {
+        if (neutralBot && neutralPick == null && DoctrineCatalog.At(goal.Branch, 5, "") is { } t5 && GameSession.Cult.Doctrines.LevelOf(t5) > 0 && GameSession.CultTime.Years < 5)
+            neutralPick = goal.Branch; // 5년 전에 5단계까지 닿으면 지금 가지로 확정 (갈아타면 반대 가지 잠금·최종 중복에 막힘)
+        goal = NeutralGoal(goal);
         var tree = GameSession.Cult.Doctrines;
+        if (mirrorOn) tree.FinalLocked = false; // 거울 엔딩은 회차를 올리지 않아 봇이 영영 잠겨 있음 → 잠금이 풀린 플레이어로 가정
         for (int tier = 1; tier <= 10; tier++)
         {
             DoctrineSkill skill;
@@ -193,10 +288,16 @@ public static class BalanceSimulation
                 path ??= "A";
                 skill = DoctrineCatalog.At(goal.Branch, tier, path);
             }
-            if (skill == null || tree.LevelOf(skill) > 0) continue;
-            if (skill.IsFinal && !OppositeReady(goal)) return; // 굿/배드 쪽이 맞을 때까지 최종 스킬을 미룬다
+            if (skill == null) { blockReason = $"카탈로그에 없음 T{tier}"; continue; }
+            if (tree.LevelOf(skill) > 0) continue;
+            if (skill.IsFinal && !mirrorOn && !OppositeReady(goal)) return; // 본편: 굿/배드 쪽이 맞을 때까지 최종 스킬 미룬다 (거울 봇은 막지 않음: 반대 평균을 올리는 정책이 없어 0%였음)
             var points = DoctrinePoints.Available(GameSession.Cult, GameSession.CultTime, Profile.UnlockedCount);
-            if (!tree.CanLearn(skill, points)) return;
+            if (!tree.CanLearn(skill, points))
+            {
+                bool prereq = tree.CanLearn(skill, 1000);
+                blockReason = prereq ? $"포인트 부족 T{tier}{(skill.IsFinal ? " 최종스킬" : "")} (보유 {points} / 필요 {skill.CostForLevel(tree.LevelOf(skill) + 1)})" : $"선행 미충족 T{tier} [{(tree.IsFinalTaken(skill) ? $"최종스킬 이미 보유 {tree.Emblem?.Id}" : tree.LevelOf(DoctrineCatalog.At(skill.Branch, skill.Tier - 1, skill.Path)) > 0 ? "?" : tree.IsFinalLocked(skill) ? "회차잠금(FinalLocked)" : tree.IsPathBlocked(skill) ? "다른갈래 선택됨" : tree.IsOppositeLocked(skill) ? "반대가지 잠금" : $"이전단계 미학습 {DoctrineCatalog.At(skill.Branch, skill.Tier - 1, skill.Path)?.Id}")}]";
+                return;
+            }
             tree.LevelUp(skill);
         }
     }

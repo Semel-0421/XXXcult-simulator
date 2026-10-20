@@ -19,6 +19,7 @@ public class StartScreenController : MonoBehaviour
         var buttons = new System.Collections.Generic.List<CanvasGroup>(menuButtons);
         buttons.Insert(1, BuildGodButton());
         buttons.Insert(2, BuildMirrorButton());
+        ImageLabels(); // 복제 뒤에 (복제본은 새 게임의 TMP 글자에서 시작한다)
         foreach (var button in buttons) { button.alpha = 0; button.interactable = false; }
         foreach (var button in buttons)
         {
@@ -30,7 +31,6 @@ public class StartScreenController : MonoBehaviour
     Button mirrorButton;
     TMP_Text mirrorLabel;
 
-    void OnDestroy() { Lang.Changed -= RefreshGodButton; Lang.Changed -= RefreshMirrorButton; }
 
     // 새 게임 버튼을 복제해 그 아래 offset번째 자리에 둔다
     CanvasGroup CloneNewGame(string name, int offset, UnityEngine.Events.UnityAction onClick, out Button button, out TMP_Text label)
@@ -51,34 +51,34 @@ public class StartScreenController : MonoBehaviour
     CanvasGroup BuildGodButton()
     {
         var group = CloneNewGame("GodModeButton", 1, NewGodGame, out godButton, out godLabel);
-        Lang.Changed += RefreshGodButton;
-        RefreshGodButton();
+        godButton.enabled = GodRules.Unlocked;
+        LockableLabel(godLabel, "god_mode");
         return group;
     }
 
-    void RefreshGodButton()
-    {
-        var unlocked = GodRules.Unlocked;
-        godButton.enabled = unlocked;
-        godLabel.text = unlocked ? Lang.Get("god_mode") : GodRules.LockedTitle(Lang.Get("god_mode"), GodRules.UnlockProgress);
-    }
-
-    // 거울 세계: 준비된 신 아래. 해금 조건이 준비된 신과 같고, 글자를 좌우 반전해 보여 준다.
+    // 거울 세계: 준비된 신 아래. 해금 조건이 준비된 신과 같고, 글자 그림이 좌우 반전돼 있다.
     CanvasGroup BuildMirrorButton()
     {
         var group = CloneNewGame("MirrorModeButton", 2, NewMirrorGame, out mirrorButton, out mirrorLabel);
-        var scale = mirrorLabel.rectTransform.localScale;
-        mirrorLabel.rectTransform.localScale = new Vector3(-Mathf.Abs(scale.x), scale.y, scale.z);
-        Lang.Changed += RefreshMirrorButton;
-        RefreshMirrorButton();
+        mirrorButton.enabled = GodRules.Unlocked;
+        LockableLabel(mirrorLabel, "mirror_mode");
         return group;
     }
 
-    void RefreshMirrorButton()
+    static void LockableLabel(TMP_Text label, string key) =>
+        MenuLabel.Replace(label, key, () => !GodRules.Unlocked, () => GodRules.LockedFill(GodRules.UnlockProgress), () => GodRules.LockedCount(GodRules.UnlockProgress));
+
+    // 장면에 있는 메뉴 버튼 글자(LocalizedText)도 그림으로 바꾼다
+    void ImageLabels()
     {
-        var unlocked = GodRules.Unlocked;
-        mirrorButton.enabled = unlocked;
-        mirrorLabel.text = unlocked ? Lang.Get("mirror_mode") : GodRules.LockedTitle(Lang.Get("mirror_mode"), GodRules.UnlockProgress);
+        foreach (var group in menuButtons)
+            foreach (var localized in group.GetComponentsInChildren<LocalizedText>(true))
+            {
+                var key = localized.Key;
+                var label = localized.GetComponent<TMP_Text>();
+                Destroy(localized);
+                MenuLabel.Replace(label, key);
+            }
     }
 
     // 모드 설명을 보여 주고, 들어가면 새 판을 거울 세계로 시작한다 (회차·시작 보상은 새 게임과 같다)

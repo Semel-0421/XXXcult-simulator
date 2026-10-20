@@ -14,7 +14,8 @@ CHECKPOINT, T5 = "stable-audio-open-1.0.safetensors", "t5-base.safetensors"
 NEGATIVE = "low quality, distorted, clipping, noise, vocals with lyrics, speech, electronic drums, pop beat"
 LOOP_SECONDS = 4.0          # 루프 이음새 크로스페이드 길이
 MUSIC_RMS_DB = -20.0        # 곡끼리 같은 크기로 들리게 맞추는 기준 음량
-SFX_PEAK_DB = -3.0
+# 효과음은 RMS -24 dBFS(음악보다 4dB 작게)로 통일하고 피크는 -6 dBFS를 넘지 않게 한다. 길이는 최대 1초
+SFX_RMS_DB, SFX_PEAK_DB, SFX_MAX_SECONDS, SFX_FADE = -24.0, -6.0, 1.0, 0.08
 SILENCE_DB = -45.0
 
 
@@ -82,11 +83,15 @@ def finish_sfx(audio, rate, seconds):
     level = np.max(np.abs(audio), axis=1)
     loud = np.where(level > db(SILENCE_DB))[0]
     if len(loud): audio = audio[loud[0]:loud[-1] + 1]
-    audio = audio[:int(seconds * rate)]
-    fade = min(len(audio), int(0.05 * rate))
+    audio = audio[:int(min(seconds, SFX_MAX_SECONDS) * rate)].copy()
+    fin = min(len(audio), int(0.003 * rate))  # 시작 클릭 방지
+    audio[:fin] *= np.linspace(0, 1, fin)[:, None]
+    fade = min(len(audio), int(SFX_FADE * rate))
     audio[-fade:] *= np.linspace(1, 0, fade)[:, None]
+    rms = np.sqrt(np.mean(audio ** 2)) or 1e-9
+    audio = audio * (db(SFX_RMS_DB) / rms)
     peak = np.max(np.abs(audio)) or 1e-9
-    return audio * (db(SFX_PEAK_DB) / peak)
+    return audio * (db(SFX_PEAK_DB) / peak) if peak > db(SFX_PEAK_DB) else audio
 
 
 def write_ogg(path, audio, rate):

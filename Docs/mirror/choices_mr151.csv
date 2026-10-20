@@ -1,29 +1,29 @@
 ﻿event_id,no,label,label_en,chance,success_effects,success_text,success_text_en,fail_effects,fail_text,fail_text_en
-mr151,1,욕망이야말로 진보라고 외친다,Proclaim that desire is progress,80,Reputation+8 Ambition+2,박수가 쏟아지고 시청률 그래프가 치솟습니다.,Applause pours in and the ratings graph soars.,Reputation-3,너무 외운 티가 나서 패널들이 비웃습니다.,"It sounds rehearsed, and the panel sneers."
+mr151,1,욕망이야말로 진보라고 외친다,Proclaim that desire is progress,80,Reputation+8 Ambition+2 Lust+1,박수가 쏟아지고 시청률 그래프가 치솟습니다.,Applause pours in and the ratings graph soars.,Reputation-3,너무 외운 티가 나서 패널들이 비웃습니다.,"It sounds rehearsed, and the panel sneers."
 mr151,2,절제의 가치를 차분히 설명한다,Calmly explain the value of temperance,100,Reputation-3 Temperance+2 LeaderFaith+5,방송은 망했지만 마음은 고요합니다.,"The broadcast flops, but your heart is calm.",-,-,-
 mr152,1,공개 지지를 환영한다,Welcome his public endorsement,70,Reputation+7 Followers+5,"추문조차 매력으로 통하는 세상, 팬들이 몰려옵니다.","In a world where scandal is charm, his fans flock in.",Reputation-5,검찰 발표 직후 당신 이름도 기사에 실립니다.,"Right after the prosecutors' briefing, your name hits the papers too."
 mr152,2,거리를 두는 성명을 낸다,Issue a statement keeping your distance,100,Reputation-1 Integrity+2 LeaderFaith+2,'깐깐한 꼰대 교단'이라는 댓글이 달립니다.,Comments brand you a 'stuffy old cult.',-,-,-
-mr153,1,사실 지갑을 노렸다고 둘러댄다,Claim you were actually after the wallet,60,Reputation+6 Greed+2 Integrity-2,'역시 큰손'이라며 여론이 돌아섭니다.,"'A real player after all,' and opinion turns.",Reputation-4 Integrity-1,거짓말까지 들켜 이중으로 조롱받습니다.,"The lie is exposed too, and you are mocked twice over."
+mr153,1,사실 지갑을 노렸다고 둘러댄다,Claim you were actually after the wallet,60,Reputation+6 Greed+2 Integrity-2 Lust+1,'역시 큰손'이라며 여론이 돌아섭니다.,"'A real player after all,' and opinion turns.",Reputation-4 Integrity-1,거짓말까지 들켜 이중으로 조롱받습니다.,"The lie is exposed too, and you are mocked twice over."
 mr153,2,당당히 정직을 인정한다,Own your honesty proudly,100,Reputation-3 Integrity+3 Piety+2,밈이 되었지만 지갑 주인이 몰래 감사 편지를 보냅니다.,"You become a meme, but the owner secretly mails you a thank-you note.",-,-,-
 mr153,3,밈 굿즈를 만들어 판다,Sell merch of the meme,80,Offerings+8 Reputation+2,바보 티셔츠가 불티나게 팔립니다.,The 'Fool' T-shirts sell like hotcakes.,Offerings-3,재고만 산더미처럼 쌓입니다.,Only a mountain of unsold stock remains.
 mr154,1,명품 쇼핑 사진을 급히 연출한다,Stage a luxury shopping photo shoot,80,Reputation+6 Wealth-5 Greed+1,'역시 사치의 화신'이라는 반박 기사가 실립니다.,A rebuttal piece calls you 'an icon of excess.',Wealth-6 Reputation-2,가격표를 떼지 않은 게 찍혀 반품족이라 놀림받습니다.,"The price tags show in the photos, and you're mocked as a serial returner."
 mr154,2,기자에게 입막음 돈을 건넨다,Pay the reporter for silence,70,Offerings-8 Reputation+3 Integrity-2,기사는 조용히 사라집니다.,The article quietly vanishes.,Offerings-8 Reputation-6,기자가 돈 봉투까지 특종으로 씁니다.,The reporter runs the envelope as a bonus scoop.
 mr154,3,검소함을 인정한다,Admit your frugality,100,Reputation-4 Temperance+3 Wealth+3,비웃음 속에서도 통장은 든든합니다.,"Amid the jeers, your bank account stays healthy.",-,-,-
-mr155,1,끝까지 먹어 치운다,Eat to the very end,70,Reputation+9 Appetite+3 Health-2,관중이 기립박수를 보냅니다.,The crowd gives you a standing ovation.,Health-3 Reputation-2,생방송 중에 쓰러져 구급차에 실립니다.,You collapse on live TV and leave by ambulance.
+mr155,1,끝까지 먹어 치운다,Eat to the very end,70,Reputation+9 Appetite+3 Health-2 Lust+1,관중이 기립박수를 보냅니다.,The crowd gives you a standing ovation.,Health-3 Reputation-2,생방송 중에 쓰러져 구급차에 실립니다.,You collapse on live TV and leave by ambulance.
 mr155,2,한 입씩만 맛본다,Take only a bite of each,100,Reputation-2 Temperance+2 Health+2,'소식좌 교주'라는 별명이 붙습니다.,They nickname you 'the Dainty Guru.',-,-,-
 mr156,1,더 큰 맞불 광고를 건다,Fire back with bigger ads,80,Reputation+6 Offerings-6 Ambition+2,당신 광고판이 셀카 명소가 됩니다.,Your billboard becomes a selfie hotspot.,Offerings-6 Reputation-2,오타가 난 광고가 조롱거리가 됩니다.,A typo in the ad turns it into a joke.
 mr156,2,명예훼손으로 고소한다,Sue for defamation,60,Reputation+4 Authority+3,법원이 '청렴'은 모욕이 맞다고 판결합니다.,The court rules that 'incorruptible' is indeed an insult.,Offerings-7 Reputation-3,판사가 '사실 적시'라며 기각합니다.,The judge dismisses it as a statement of fact.
 mr157,1,모델 계약에 서명한다,Sign the endorsement deal,90,Offerings+12 Greed+2 Reputation+3,계약금이 헌금함보다 묵직합니다.,The signing bonus outweighs the collection box.,Offerings+3 Reputation-3,은행이 부도 직전이라는 뉴스가 뜹니다.,News breaks that the bank is near collapse.
 mr157,2,신도들에게 저축 대신 나눔을 권한다,Urge followers to give rather than save,100,Offerings-5 Charity+3 FollowerFaith+5,몇몇은 감동하고 대부분은 어이없어합니다.,A few are moved; most are baffled.,-,-,-
-mr158,1,유료 고급 뷔페로 바꾼다,Convert it into a premium buffet,90,Offerings+10 Greed+2 Charity-2,줄이 두 배로 길어집니다.,The line grows twice as long.,Offerings+2,음식 맛이 그대로라 손님이 금방 끊깁니다.,"The food is unchanged, and customers soon stop coming."
+mr158,1,유료 고급 뷔페로 바꾼다,Convert it into a premium buffet,90,Offerings+10 Greed+2 Charity-2 Lust+1,줄이 두 배로 길어집니다.,The line grows twice as long.,Offerings+2,음식 맛이 그대로라 손님이 금방 끊깁니다.,"The food is unchanged, and customers soon stop coming."
 mr158,2,벌금을 내고 계속 운영한다,Pay the fine and keep it running,100,Offerings-10 Charity+4 Piety+2,굶던 이들이 몰래 당신 이름을 부르며 기도합니다.,The hungry quietly pray in your name.,-,-,-
 mr159,1,코인을 발행한다,Launch the coin,50,Offerings+15 Greed+3 Reputation+3,상장 첫날 시세가 하늘을 찌릅니다.,On listing day the price shoots through the roof.,Offerings-10 Reputation-6 FollowerFaith-5,대표가 해외로 잠적하고 신도들 지갑만 비었습니다.,"The CEO flees abroad, leaving only empty follower wallets."
 mr159,2,정중히 거절한다,Politely decline,100,Integrity+2 LeaderFaith+2 Reputation-1,'기회를 걷어찬 바보'라는 평을 듣습니다.,You're called 'the fool who kicked away a fortune.',-,-,-
 mr160,1,장부를 일부러 복잡하게 꾸민다,Deliberately muddle the books,70,Offerings+6 Integrity-2 Greed+1,감사관이 '정상적인 교단'이라며 만족해 돌아갑니다.,The auditor leaves satisfied that you're 'a normal cult.',Offerings-8 Authority-3,너무 서툴러서 진짜 탈세로 걸립니다.,You're so clumsy it's flagged as real evasion.
 mr160,2,투명하게 모두 공개한다,Disclose everything transparently,100,Offerings-4 Integrity+3 FollowerFaith+3,정직 가산세라는 처음 듣는 세금이 붙습니다.,You're hit with a never-before-heard 'honesty surcharge.',-,-,-
-mr161,1,제휴를 맺는다,Sign the partnership,90,Offerings+10 Followers+3 Greed+1,신도들이 경쟁하듯 카드를 긁습니다.,Followers swipe their cards as if in competition.,Offerings+2 FollowerFaith-3,포인트 계산 오류로 항의가 빗발칩니다.,A points glitch triggers a flood of complaints.
+mr161,1,제휴를 맺는다,Sign the partnership,90,Offerings+10 Followers+3 Greed+1 Lust+1,신도들이 경쟁하듯 카드를 긁습니다.,Followers swipe their cards as if in competition.,Offerings+2 FollowerFaith-3,포인트 계산 오류로 항의가 빗발칩니다.,A points glitch triggers a flood of complaints.
 mr161,2,쇼핑 중독을 경고하는 설교를 한다,Preach against shopping addiction,100,Offerings-4 Temperance+2 Doctrine+3,라운지에서 출입 금지를 당합니다.,You're banned from the lounge.,-,-,-
-mr162,1,전액을 받는다,Accept it all,100,Offerings+15 Greed+2 Communion-4,교단 금고가 넘치지만 가족들이 앙심을 품습니다.,"The coffers overflow, but the family holds a grudge.",-,-,-
+mr162,1,전액을 받는다,Accept it all,100,Offerings+15 Greed+2 Communion-4 Lust+1,교단 금고가 넘치지만 가족들이 앙심을 품습니다.,"The coffers overflow, but the family holds a grudge.",-,-,-
 mr162,2,가족에게 절반을 돌려준다,Return half to the family,100,Offerings+7 Charity+2 Communion+3,신도들이 '손해 보는 교주'라며 수군거립니다.,Followers whisper about 'the guru who takes a loss.',-,-,-
 mr162,3,한 푼도 받지 않는다,Refuse every cent,100,Charity+3 Reputation-2 FollowerFaith+4,그 신도는 감동했지만 언론은 당신을 무능하다 합니다.,"He is moved, but the press calls you incompetent.",-,-,-
 mr163,1,고리로 긴급 대출을 해준다,Offer emergency loans at steep interest,70,Offerings+12 Greed+2 Reputation+2,'진정한 사업가 교단'이라는 칭송을 받습니다.,You're hailed as 'a true business cult.',Offerings-6 Reputation-4,채무자들이 단체로 잠적합니다.,The borrowers vanish en masse.
@@ -39,7 +39,7 @@ mr167,1,봉사가 홍보 전략이었다고 해명한다,Explain it was a PR stu
 mr167,2,떠난 이들을 붙잡지 않는다,Let them go,100,Followers-5 Charity+3 LeaderFaith+8,남은 이들의 눈빛이 단단해집니다.,Those who stay look at you with firmer eyes.,-,-,-
 mr168,1,가장 화려한 신도를 내보낸다,Send your flashiest follower,80,Followers+9 Reputation+4,그녀가 우승하며 교단 이름을 외칩니다.,She wins and shouts your cult's name.,Reputation-5 Followers-2,첫 회부터 악마의 편집을 당합니다.,She gets the villain edit from episode one.
 mr168,2,출연을 거절한다,Decline,100,Temperance+1 LeaderFaith+2 Followers-1,제작진이 '방송 분량이 안 나오는 교단'이라며 투덜댑니다.,The producers grumble that your cult 'gives them no footage.',-,-,-
-mr169,1,전단지 문구를 '더 가져라'로 바꾼다,Change the flyer to 'Take more',90,Followers+7 Greed+1 Doctrine-3,전단지가 순식간에 동납니다.,The flyers run out in minutes.,Followers+1,행인들이 전단지 대신 경품만 챙겨 갑니다.,Passersby take the giveaways and skip the flyers.
+mr169,1,전단지 문구를 '더 가져라'로 바꾼다,Change the flyer to 'Take more',90,Followers+7 Greed+1 Doctrine-3 Lust+1,전단지가 순식간에 동납니다.,The flyers run out in minutes.,Followers+1,행인들이 전단지 대신 경품만 챙겨 갑니다.,Passersby take the giveaways and skip the flyers.
 mr169,2,신참을 위로하고 함께 다시 나간다,Comfort the rookie and go out together,100,Followers+1 Patience+2 Communion+4,둘 다 젖었지만 웃으며 돌아옵니다.,You both come back soaked but laughing.,-,-,-
 mr170,1,한 번도 없다고 단언한다,Swear you never have,80,Authority+8 Integrity-2,의원들이 안도하며 고개를 끄덕입니다.,The lawmakers nod in relief.,Authority-5 Reputation-3,거절 장면이 담긴 녹취가 공개됩니다.,A recording of you refusing one surfaces.
 mr170,2,거절한 적이 있다고 인정한다,Admit that you have,100,Authority-6 Integrity+3 LeaderFaith+6,장내가 술렁이고 당신은 '위험인물' 명단에 오릅니다.,"The chamber erupts, and you land on a 'dangerous persons' list.",-,-,-
@@ -52,7 +52,7 @@ mr173,1,단속 명단을 작성해 준다,Draw up the crackdown list,80,Authorit
 mr173,2,착한 이들을 몰래 숨겨 준다,Secretly shelter the kind,60,Charity+3 Piety+2 Communion+5,숨은 이들이 교단에 깊이 감사합니다.,Those hidden are deeply grateful to your cult.,Authority-8 Reputation-2,들통나 '선행 은닉죄'로 조사받습니다.,You're caught and investigated for 'harboring virtue.'
 mr174,1,본보기로 강등한다,Demote him as an example,100,Authority+6 Integrity-2 Communion-3,간부들은 만족했지만 아무도 실수를 보고하지 않게 됩니다.,"The executives are satisfied, but no one reports mistakes again.",-,-,-
 mr174,2,정직을 칭찬하고 감싸 준다,Praise his honesty and protect him,100,Authority-5 Integrity+2 Communion+4,측근이 눈물을 글썽이며 충성을 맹세합니다.,"Your aide, teary-eyed, swears loyalty.",-,-,-
-mr175,1,더 큰 야망을 불어넣는다,Fan a bigger ambition in him,80,Authority+8 Offerings+6 Ambition+2,그가 경쟁사를 인수하며 당신을 은인이라 부릅니다.,He buys a rival and calls you his benefactor.,Authority-3,그가 과로로 쓰러지고 가족이 당신을 원망합니다.,"He collapses from overwork, and his family blames you."
+mr175,1,더 큰 야망을 불어넣는다,Fan a bigger ambition in him,80,Authority+8 Offerings+6 Ambition+2 Lust+1,그가 경쟁사를 인수하며 당신을 은인이라 부릅니다.,He buys a rival and calls you his benefactor.,Authority-3,그가 과로로 쓰러지고 가족이 당신을 원망합니다.,"He collapses from overwork, and his family blames you."
 mr175,2,만족도 괜찮다고 말해 준다,Tell him contentment is fine,100,Temperance+2 Offerings-3 LeaderFaith+4,그는 화를 내며 계약을 끊었지만 그날 밤 푹 잡니다.,"He storms off and cancels, but sleeps soundly that night.",-,-,-
 mr176,1,고행 장을 빼고 출간한다,Publish without the ascetic chapters,90,Offerings+10 Doctrine-5 Reputation+4,서점 매대 맨 앞에 깔립니다.,It's stacked at the front of every bookstore.,Offerings+2 Doctrine-5,표지 오타로 회수 소동이 납니다.,A cover typo causes a recall.
 mr176,2,원본 그대로 고집한다,Insist on the original text,100,Doctrine+8 Integrity+2 Offerings-3,초판 300부가 창고에 잠듭니다.,The 300-copy first run sleeps in a warehouse.,-,-,-
@@ -76,13 +76,13 @@ mr185,1,교주가 1초 만에 먹어 보인다,Eat yours in one second,100,Commu
 mr185,2,15분을 참아 보인다,Hold out for 15 minutes,100,Communion-4 Patience+3 LeaderFaith+5,당신이 왕따가 되었지만 묘한 존경도 섞여 있습니다.,"You're the outcast now, though with an odd note of respect.",-,-,-
 mr186,1,곧바로 신나는 곡으로 이어 부른다,Jump in with an upbeat song,90,Communion+7 Reputation+1,분위기가 살아나고 그 신도도 함께 춤춥니다.,The mood revives and the follower dances along.,Communion+1,박자를 놓쳐 더 어색해집니다.,You miss the beat and make it more awkward.
 mr186,2,성가를 함께 부른다,Sing the hymn with them,100,Communion+2 Piety+2 FollowerFaith+3,몇몇이 조용히 따라 부릅니다.,A few quietly join in.,-,-,-
-mr187,1,모두 참여시킨다,Make everyone take part,70,Communion+9 Lust+1,비밀을 나눈 신도들이 가족처럼 가까워집니다.,Sharing secrets makes them close as family.,Communion-6 Reputation-2,다이어리가 외부로 유출됩니다.,The diary leaks to the outside world.
+mr187,1,모두 참여시킨다,Make everyone take part,70,Communion+9,비밀을 나눈 신도들이 가족처럼 가까워집니다.,Sharing secrets makes them close as family.,Communion-6 Reputation-2,다이어리가 외부로 유출됩니다.,The diary leaks to the outside world.
 mr187,2,자율 참여로 둔다,Keep it voluntary,100,Communion+3 Temperance+1,조용히 몇 장만 채워집니다.,Only a few pages quietly get filled.,-,-,-
 mr188,1,계시로 받아들이고 주문한다,Take it as revelation and order,100,LeaderFaith+6 Greed+2 Wealth-4,택배 상자를 열자 이상한 확신이 차오릅니다.,"Opening the box, a strange certainty fills you.",-,-,-
 mr188,2,TV를 끄고 기도를 이어 간다,Turn it off and keep praying,80,LeaderFaith+12 Temperance+2,고요 속에서 진짜 목소리가 들리는 듯합니다.,In the silence you seem to hear the real voice.,LeaderFaith-4,다시 켜고 싶은 충동에 기도가 흐트러집니다.,The urge to turn it back on scatters your prayer.
 mr189,1,투자 감각을 칭찬한다,Praise his investing instincts,100,LeaderFaith-4 Greed+1 Offerings+5,아이가 수익 일부를 헌금합니다. 마음 한쪽이 허전합니다.,He donates part of the profit. Something feels hollow.,-,-,-
 mr189,2,공부에 쓰라고 다독인다,Gently urge him to use it for school,60,LeaderFaith+10 Charity+2,아이가 고개를 끄덕이고 학교로 돌아갑니다.,The boy nods and heads back to school.,LeaderFaith-3,아이가 '꼰대'라며 코웃음을 칩니다.,He snorts and calls you a dinosaur.
-mr190,1,호텔로 간다,Go to the hotel,100,LeaderFaith-6 Health+5 Lust+1,푹신한 침대에서 신앙은 잠시 잊힙니다.,"On the plush bed, faith is briefly forgotten.",-,-,-
+mr190,1,호텔로 간다,Go to the hotel,100,LeaderFaith-6 Health+5,푹신한 침대에서 신앙은 잠시 잊힙니다.,"On the plush bed, faith is briefly forgotten.",-,-,-
 mr190,2,수행을 지킨다,Keep the retreat,100,LeaderFaith+12 Patience+2 Reputation-1,SNS에서 '숙박권 버린 사람'으로 조롱받습니다.,Social media mocks you as 'the one who wasted a hotel voucher.',-,-,-
 mr190,3,숙박권을 경매에 부친다,Auction the voucher,80,Offerings+8 Greed+1,예상가의 두 배에 팔립니다.,It sells for twice the estimate.,Offerings+2,낙찰자가 대금을 떼먹습니다.,The winning bidder skips out on payment.
 mr191,1,욕망이 곧 신이라고 다짐한다,Resolve that desire itself is God,100,LeaderFaith+8 Ambition+2 Piety-1,눈빛이 이글거립니다.,Your eyes blaze.,-,-,-
