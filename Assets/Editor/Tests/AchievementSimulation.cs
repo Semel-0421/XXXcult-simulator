@@ -200,6 +200,21 @@ public static class AchievementSimulation
         return (int)Math.Round((double)v / mag) * mag;
     }
 
+    // 경량 집계: 스타일당 players명 × 20판 + 기프티드 전부/없음 비교(절반 인원). 에디터에서 eval로 부른다
+    public static void SimulateAll(int players = 20)
+    {
+        foreach (SimMode mode in Enum.GetValues(typeof(SimMode)))
+        {
+            if (File.Exists(RawPath(mode))) File.Delete(RawPath(mode));
+            if (File.Exists(KeysPath(mode))) File.Delete(KeysPath(mode));
+            foreach (Style style in Enum.GetValues(typeof(Style)))
+                RunBatch(mode, style, players, 20, 20261020 + (int)style * 1000 + (int)mode * 100000);
+            RunBatch(mode, Style.Balanced, Math.Max(1, players / 2), 20, 777, true, "gift_all");
+            RunBatch(mode, Style.Balanced, Math.Max(1, players / 2), 20, 777, false, "gift_none");
+            WriteReport(mode);
+        }
+    }
+
     public static string WriteReport(SimMode mode)
     {
         var rows = ReadRaw(mode);

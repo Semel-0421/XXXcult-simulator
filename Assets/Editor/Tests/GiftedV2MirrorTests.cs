@@ -20,6 +20,7 @@ public class GiftedV2MirrorTests
         Profile.Path = Path.Combine(tempDir, "profile.json");
         Profile.Enabled = true;
         GiftedV2Effects.AdultEnabled = () => false;
+        GiftedV2Table.RollOverride = () => 0.0; // 50% 판정은 항상 성공으로 고정
         GiftedV2Effects.ResetForTests();
         GameSession.StartNew(1);
         GameSession.SetMirrorMode(true);
@@ -29,6 +30,7 @@ public class GiftedV2MirrorTests
     public void TearDown()
     {
         GiftedV2Effects.AdultEnabled = previousAdult;
+        GiftedV2Table.RollOverride = null;
         GiftedV2Effects.ResetForTests();
         Profile.Enabled = previousEnabled;
         Profile.Path = previousPath;
@@ -161,12 +163,12 @@ public class GiftedV2MirrorTests
     }
 
     [Test]
-    public void LedgerOfCracks_EveryFifthFailureGuaranteesNextSuccess()
+    public void LedgerOfCracks_EveryTenthFailureGuaranteesNextSuccess()
     {
         Own("v2m087");
         var check = new CheckContext(CheckKind.Life, "Study");
-        for (int i = 0; i < 4; i++) Assert.IsFalse(GiftedV2Effects.ResolveCheck(check, false));
-        Assert.IsFalse(GiftedV2Effects.ResolveCheck(check, false)); // 5번째 실패
+        for (int i = 0; i < 9; i++) Assert.IsFalse(GiftedV2Effects.ResolveCheck(check, false));
+        Assert.IsFalse(GiftedV2Effects.ResolveCheck(check, false)); // 10번째 실패
         Assert.IsTrue(GiftedV2Effects.ResolveCheck(check, false));  // 다음은 확정 성공
         Assert.IsFalse(GiftedV2Effects.ResolveCheck(check, false)); // 한 번뿐
     }

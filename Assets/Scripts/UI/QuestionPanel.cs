@@ -35,6 +35,29 @@ public class QuestionPanel : MonoBehaviour, IPointerClickHandler
         SetInputActive(false);
     }
 
+    // v2g044(신 모드): 선택지별 성공 확률, v2m086(거울 모드): 성공 시 스탯 변화 미리보기를 흐린 글씨로 덧붙인다 (QuestionRunner가 이 오버로드를 호출해야 보인다)
+    public void Show(string question, Choice[] choices, string eventId = null) =>
+        Show(question, choices.Select(c => c.Text + ChoiceSuffix(c, eventId)).ToArray());
+
+    public static string ChoiceSuffix(Choice choice, string eventId = null)
+    {
+        var parts = new System.Collections.Generic.List<string>();
+        if (GiftedV2GodHooks.ShowsChoiceChance && choice.Chance < 1f)
+        {
+            var check = new CheckContext(CheckKind.Event, eventId, -1f, choice);
+            var penalty = GodRules.EventPenalty - GiftedV2Effects.SuccessChanceBonus(check);
+            parts.Add($"{Mathf.RoundToInt(choice.RollChance(GameSession.Personal, penalty) * 100)}%");
+        }
+        if (GiftedV2Mirror.ShowsChoicePreview)
+        {
+            var fx = choice.Success.CultEffects.Select(e => $"{StatLabel.Of(e.Stat)} {e.Amount:+#;-#;0}")
+                .Concat(choice.Success.Effects.Select(e => $"{Lang.Get($"pstat_{e.Stat}")} {e.Amount:+#;-#;0}"));
+            var text = string.Join(", ", fx);
+            if (text.Length > 0) parts.Add(text);
+        }
+        return parts.Count == 0 ? "" : $" <color={MutedColor}>({string.Join(" / ", parts)})</color>";
+    }
+
     public void Show(string question, params string[] choices)
     {
         textAnswer = null;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -112,7 +112,7 @@ public static class GodCounters
         : id.StartsWith("dl") ? "random" : "indulge"; // lu/gr/ap/am
 
     // god_ending_1~9 (CSV g012~g020) 순서: 승천 6가지를 CSV 이름 순서로(기적+예언 = god_divine, 자비+욕망 = god_human), 이어서 패배 3가지.
-    // GodRules.AllEndings 순서를 쓰면 이름과 엔딩이 어긋난다. shortcut: g018~g020은 '순수한 승천' 이름이지만 그런 엔딩이 없어 패배 엔딩에 묶임
+    // GodRules.AllEndings 순서를 쓰면 이름과 엔딩이 어긋난다. g018~g020은 패배 엔딩 3종(그릇의 붕괴·잊힌 신·해산된 교단) 업적
     static readonly string[] EndingOrder =
     {
         GodEndings.DivinePair, "god_miracle_mercy", "god_miracle_desire", "god_prophecy_mercy", "god_prophecy_desire", GodEndings.HumanPair,
@@ -153,7 +153,7 @@ public static class GodCounters
         Counters.Set("god_ascend_buildings", GodBuildings.All.Sum(t => Counters.Get($"god_build_{t}", true)));
         Counters.Set("god_ascend_Wonder", Counters.Get("god_act_Wonder", true));
         Counters.Set("god_ascend_Healing", Counters.Get("god_act_Healing", true));
-        Counters.Set("god_ascend_single_branch", counts.Count(n => n > 0) == 1 ? 1 : 0);
+        Counters.Set("god_ascend_single_branch", counts.Sum() > 0 && counts.Max() * 5 >= counts.Sum() * 4 ? 1 : 0); // 한 갈래 비중 80% 이상 (한 갈래만으로는 승천이 안 됨)
         Counters.Set("god_ascend_all_branches", counts.Min());
         Counters.Set("god_ascend_Envy", envy);
         Counters.Set("god_ascend_both", Math.Min(envy, suspicion)); // >=90 용. "<=20" 판정(g076)은 최댓값이 필요해 이 키로는 정확하지 않다

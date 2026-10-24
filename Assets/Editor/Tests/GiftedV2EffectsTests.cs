@@ -152,7 +152,7 @@ public class GiftedV2EffectsTests
         Own("v2n001");
         var check = new CheckContext(CheckKind.Event, null);
         var rescued = Enumerable.Range(0, 400).Count(_ => GiftedV2Effects.ResolveCheck(check, false));
-        Assert.That(rescued, Is.InRange(60, 140)); // 기대값 100
+        Assert.That(rescued, Is.InRange(25, 75)); // 기대값 50 (12.5%)
     }
 
     [Test]

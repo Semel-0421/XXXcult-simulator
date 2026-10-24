@@ -4,13 +4,13 @@ using System;
 // 새 훅은 GiftedV2GodHooks에 모았다(보유하지 않으면 전부 무변화·난수 없음). 부르는 곳은 각 훅 주석 참고.
 public static partial class GiftedV2Table
 {
-    public const float EmberBonus = 0.20f; public const int EmberFails = 3;
-    public const float ComboRewardScale = 1.10f;
-    public const float BroadFaithGain = 3f;
+    public const float EmberBonus = 0.10f; public const int EmberFails = 3;
+    public const float ComboRewardScale = 1.05f;
+    public const float BroadFaithGain = 1.5f;
     public const float WonderBonus = 0.10f, CommuneBonus = 0.10f, EventFavorBonus = 0.10f;
     public const float RevelationGain = 15f, HealingGain = 15f, ChanceEventGain = 15f, VesselEventLossCut = 20f;
     public const int FeastPointMilli = 150;            // 연회 성공 1회당 권능 포인트 0.15 (1000 모이면 1점)
-    public const int YearlyStatPercent = 1;
+    public const float YearlyStatPercent = 0.5f;
 
     static readonly string KProselytize = CultActions.Key(CultAction.Proselytize), KPreach = CultActions.Key(CultAction.Preach),
         KServe = CultActions.Key(CultAction.Serve), KDesire = CultActions.Key(CultAction.Desire), KPray = CultActions.Key(CultAction.Pray);
@@ -44,7 +44,7 @@ public static partial class GiftedV2Table
                 Counters.Set("gv2g043:fails", f >= EmberFails || ok ? 0 : f + 1, true); // 보너스를 받은 판정이면 결과와 무관하게 초기화
             },
         });
-        R("v2g044", hook()); // UI: GiftedV2GodHooks.ShowsChoiceChance 를 선택지 표시가 읽는다 (UI 미구현)
+        R("v2g044", hook()); // UI: QuestionPanel.ChoiceSuffix 가 GiftedV2GodHooks.ShowsChoiceChance 를 읽는다
         R("v2g045", new EffectDef
         {
             OnCheck = (c, ok) =>
@@ -58,7 +58,7 @@ public static partial class GiftedV2Table
             StatMultiplierFn = c => c.Source == ChangeSource.Action && c.IsGain && Counters.Get("gv2g045:streak", true) >= 2
                 && Counters.Get("gv2g045:key", true) == Hash(c.Key) ? ComboRewardScale : 1f,
         });
-        R("v2g046", hook()); // UI: GiftedV2GodHooks.ShowsEndingProgress (UI 미구현)
+        R("v2g046", hook()); // UI: CultInfoPanel 이 GiftedV2GodHooks.ShowsEndingProgress 를 읽는다
         R("v2g047", new EffectDef
         {
             OnCheck = (c, _) =>
@@ -67,11 +67,13 @@ public static partial class GiftedV2Table
                 var key = "gv2g047:" + c.Key;
                 if (Counters.Get(key) > 0) return;
                 Counters.Set(key, 1);
+                Counters.Add("gv2g047:n");
+                if (Counters.Get("gv2g047:n") % 2 != 0) return; // 처음 겪는 이벤트 2번에 1점
                 if (GameSession.GodMode && GameSession.CultFounded) GameSession.God.Points.Add(1);
             },
         });
         R("v2g048", hook()); // CultEvent.RollRandom → GiftedV2GodHooks.SuppressRepeatedEvent
-        R("v2g049", new EffectDef { RescueFailure = _ => GiftedV2Effects.TryUseToken("v2g049") });
+        R("v2g049", new EffectDef { RescueFailure = _ => GiftedV2Effects.TryUseToken("v2g049") && Pass(HalfChance) }); // 토큰은 실패해도 소모
         R("v2g050", new EffectDef { GainPercent = BroadFaithGain });
 
         R("v2g051", new EffectDef { CheckBonus = WonderBonus, CheckWhen = c => CultKey(c, KProselytize) });
@@ -124,9 +126,9 @@ public static partial class GiftedV2Table
 public static class GiftedV2GodHooks
 {
     public const float EnvyCut = 0.20f, SuspicionCut = 0.20f, SanctuaryCut = 0.10f, IndulgenceCut = 0.25f;
-    public const float SeizureResist = 0.20f, VesselRecoveryUp = 0.25f, RepeatSkip = 0.5f;
+    public const float SeizureResist = 0.20f, VesselRecoveryUp = 0.25f, RepeatSkip = 0.25f;
     public const float ConsecrationCostCut = 0.15f, BuildingCostCut = 0.10f, BuildingEffectUp = 0.20f;
-    public const int RestYearHeat = 2, NodeCutMilli = 100; // 노드 비용 10%: 비용 1점당 0.1점을 돌려줌 (정수 비용이라 환급으로 근사)
+    public const int RestYearHeat = 1, NodeCutMilli = 100; // 노드 비용 10%: 비용 1점당 0.1점을 돌려줌 (정수 비용이라 환급으로 근사)
 
     static bool On(string id) => GameSession.GodMode && GiftedV2Effects.IsActive(id);
 

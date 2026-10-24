@@ -5,12 +5,13 @@ using System.Collections.Generic;
 // 보유하지 않으면 GiftedV2Mirror 훅은 모두 무변화(1, 0, false)이고 난수도 쓰지 않는다.
 public static partial class GiftedV2Table
 {
-    public const float ExtraActionChance = 0.10f;
-    public const float AttritionLossPercent = 20f, DeclineLossPercent = 10f, OfferingsFloorLossPercent = 50f, LoseChoiceLossPercent = 20f;
+    public const float ExtraActionChance = 0.05f;
+    public const float AttritionLossPercent = 20f, DeclineLossPercent = 5f, OfferingsFloorLossPercent = 50f, LoseChoiceLossPercent = 10f;
     public const int OfferingsFloor = 300;
     public const float RecoveryGainPercent = 25f, SpecialGainPercent = 15f, LateGainPercent = 5f, EarlyGainPercent = 10f, BalanceGainPercent = 5f, AdversityOfferingsPercent = 15f;
     public const int LateYears = 20, EarlyYears = 5, BalanceAverage = 50, AdversityMisfortune = 6;
-    public const int FailsForSureSuccess = 5, FailsForStat = 10, ChainBonusPercent = 5, ChainMax = 3;
+    public const int FailsForSureSuccess = 10, FailsForStat = 10, ChainMax = 3;
+    public const float ChainBonusPercent = 2.5f;
 
     static bool Cult => GameSession.CultFounded;
     static int CultYears => GameSession.CultTime.Years;
@@ -37,7 +38,7 @@ public static partial class GiftedV2Table
                 else if (c.Personal is { } p) { var st = GameSession.Personal[p]; cur = st.Value; min = st.Min; }
                 else return 1f;
                 if (cur <= min || cur + c.Amount > min) return 1f;
-                if (!GiftedV2Effects.TryUseToken("v2m082")) return 1f;
+                if (!GiftedV2Effects.TryUseToken("v2m082") || !Pass(HalfChance)) return 1f; // 토큰은 실패해도 소모
                 return (cur - min - 1) / (float)-c.Amount; // 0이 되는 하락은 1이 남도록 줄인다
             },
         });
@@ -154,7 +155,7 @@ public static class GiftedV2Mirror
 {
     public const string NextPointsKey = "gv2m119_next", RunPointsKey = "gv2m119_run";
     public const int NewEndingPoints = 2, SurviveReputation = 200, SurviveFollowers = 10, RestoredFollowers = 10, StartTraitBonus = 4, GraceBonusTurns = 4;
-    public const float OneBranchScale = 1.15f, TwoBranchScale = 1.05f, ConversionScale = 1.10f, SettlementScale = 1.05f;
+    public const float OneBranchScale = 1.15f, TwoBranchScale = 1.05f, ConversionScale = 1.10f, SettlementScale = 1.025f;
 
     static readonly Dictionary<string, GiftedV2Catalog.Entry> entries = new();
     static readonly Dictionary<string, bool> _onCache = new();
@@ -186,12 +187,12 @@ public static class GiftedV2Mirror
     // v2m086 (UI 전용)
     public static bool ShowsChoicePreview => On("v2m086");
 
-    // v2m081: 성공한 행동 뒤 10% 확률로 턴을 쓰지 않는다 (Turns.Life/Cult가 true면 시간이 흐르지 않게 일찍 끝냄)
+    // v2m081: 성공한 행동 뒤 5% 확률로 턴을 쓰지 않는다 (Turns.Life/Cult가 true면 시간이 흐르지 않게 일찍 끝냄)
     public static bool GrantsExtraAction(bool success) =>
         success && On("v2m081") && GameSession.Rng.NextDouble() < GiftedV2Table.ExtraActionChance;
 
     // v2m084: 휴식 회복량 배율
-    public static float RestMultiplier() => On("v2m084") ? 1.25f : 1f;
+    public static float RestMultiplier() => On("v2m084") ? 1.125f : 1f;
 
     // v2m092 / v2m093: CultScore 환산 배율
     public static float FollowerReputationRate() => On("v2m092") ? ConversionScale : 1f;
@@ -253,8 +254,8 @@ public static class GiftedV2Mirror
         return 1f;
     }
 
-    // v2m089: 연 1회 이벤트 다시 뽑기. UI가 CanRerollEvent로 버튼을 켜고 RerollCultEvent를 부른다
-    public static bool CanRerollEvent => On("v2m089") && Counters.Get("gv2m089_year", perRun: true) != GameSession.Age.Years + 1;
+    // v2m089: 2년에 1회 이벤트 다시 뽑기. UI가 CanRerollEvent로 버튼을 켜고 RerollCultEvent를 부른다
+    public static bool CanRerollEvent => On("v2m089") && (Counters.Get("gv2m089_year", perRun: true) == 0 || GameSession.Age.Years + 1 - Counters.Get("gv2m089_year", perRun: true) >= 2); // 2년에 1번
 
     public static CultEvent RerollCultEvent()
     {

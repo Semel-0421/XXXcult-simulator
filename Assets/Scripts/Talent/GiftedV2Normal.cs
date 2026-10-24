@@ -7,11 +7,11 @@ using System.Linq;
 public static partial class GiftedV2Table
 {
     public const int RescueChoiceChancePercent = 50, RescueReputation = 10, RescueOfferings = 10;
-    public const float WideCircleEventGain = 5f, ChroniclerDoubleChance = 0.05f, NormalCheckBonus = 0.08f;
-    public const int RerollsPerRun = 3, NormalGraceTurns = 4, NormalReputationRestore = 100, NormalStartPersonalBonus = 2, LastSermonPercent = 10, LongViewYears = 5;
-    public const float MisfortuneReducePercent = 15f, GiftedGrantBonusPercent = 10f, DoctrineCostReducePercent = 10f;
+    public const float WideCircleEventGain = 2.5f, ChroniclerDoubleChance = 0.025f, NormalCheckBonus = 0.08f;
+    public const int RerollsPerRun = 2, NormalGraceTurns = 4, NormalReputationRestore = 100, NormalStartPersonalBonus = 2, LastSermonPercent = 10, LongViewYears = 5;
+    public const float MisfortuneReducePercent = 7.5f, GiftedGrantBonusPercent = 5f, DoctrineCostReducePercent = 10f;
     public const float TwoFacesMaxBonus = 0.03f, TwoFacesGapRange = 50f, ExtremeAverage = 80f, ExtremeBonus = 1.05f;
-    public const float PersecutionLossScale = 0.75f, NormalDecayHalf = 0.5f;
+    public const float PersecutionLossScale = 0.75f, NormalDecayHalf = 0.5f, SlowAgingScale = 0.75f;
     public const string NextRunBonusKey = "gv2:v2n040:nextrun", NormalGraceKey = "gv2:v2n010:until";
 
     static bool nChronicler;
@@ -60,11 +60,11 @@ public static partial class GiftedV2Table
     static partial void RegisterNormal()
     {
         // 공유 10 (v2n001은 GiftedV2Table.RegisterAll)
-        NReg("v2n002", new EffectDef { PreventDeath = () => GiftedV2Effects.TryUseToken("v2n002") });
+        NReg("v2n002", new EffectDef { PreventDeath = () => GiftedV2Effects.TryUseToken("v2n002") && Pass(HalfChance) });
         NReg("v2n003", new EffectDef { GainPercent = WideCircleEventGain, StatWhen = c => c.Source == ChangeSource.Event });
         NReg("v2n004", new EffectDef { RescueChoiceNormal = NRescue });
         // 나이로 인한 스탯 하락 로직이 게임에 없어, 행동·이벤트가 아닌 자연 감소(출처 Other)로 근사
-        NReg("v2n005", new EffectDef { StatMultiplierFn = c => c.Personal == PersonalStatId.Health && !c.IsGain && c.Source == ChangeSource.Other ? NormalDecayHalf : 1f });
+        NReg("v2n005", new EffectDef { StatMultiplierFn = c => c.Personal == PersonalStatId.Health && !c.IsGain && c.Source == ChangeSource.Other ? SlowAgingScale : 1f });
         NReg("v2n006", new EffectDef { GiftedGrantBonusNormal = GiftedGrantBonusPercent });
         NReg("v2n007", new EffectDef { MisfortuneGainReduceNormal = MisfortuneReducePercent }); // 신 모드 압력(GodPressure)은 신 쪽 배선 필요
         NReg("v2n008", new EffectDef
@@ -86,7 +86,7 @@ public static partial class GiftedV2Table
                 var now = GameSession.CultTime.Turns;
                 var until = Counters.Get(NormalGraceKey, perRun: true);
                 if (until > 0) return now < until;
-                if (!GiftedV2Effects.TryUseToken("v2n010")) return false;
+                if (!GiftedV2Effects.TryUseToken("v2n010") || !Pass(HalfChance)) return false; // 토큰은 실패해도 소모
                 Counters.Set(NormalGraceKey, now + NormalGraceTurns, perRun: true);
                 return true;
             },

@@ -1,3 +1,4 @@
+﻿using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -56,10 +57,21 @@ public class CultInfoPanel : MonoBehaviour
         var god = GameSession.God;
         var heaven = god.Pressure.Stage(Pressure.Heaven, GameSession.Cult);
         var earth = god.Pressure.Stage(Pressure.Earth, GameSession.Cult);
-        var key = god.Available * 100 + heaven * 10 + earth;
+        var shows = GiftedV2GodHooks.ShowsEndingProgress;
+        var cores = shows ? GodSkillCatalog.Cores.Count(god.Tree.IsLearned) : 0;
+        var key = ((god.Available * 100 + heaven * 10 + earth) * 16 + cores * 2 + (god.Tree.Ascended ? 1 : 0)) * 2 + (shows ? 1 : 0);
         if (key == shownPoints) return;
         shownPoints = key;
-        pointsLabel.text = $"{string.Format(Lang.Get("god_points"), god.Available)}\n<size=80%>{string.Format(Lang.Get("god_pressure_now"), heaven, earth)}</size>";
+        pointsLabel.text = $"{string.Format(Lang.Get("god_points"), god.Available)}\n<size=80%>{string.Format(Lang.Get("god_pressure_now"), heaven, earth)}{(shows ? "\n" + EndingProgress(god.Tree, cores) : "")}</size>";
+    }
+
+    // 기프티드 v2g046: 승천 엔딩 진행도 (핵 2개를 먼저 익힌 조합이 엔딩을 정하고, 중심 노드가 승천이다)
+    static string EndingProgress(GodTree tree, int cores)
+    {
+        var ko = Lang.IsKorean;
+        if (tree.Ascended) return ko ? "승천 완료" : "Ascended";
+        var next = tree.AscensionOpen ? (ko ? "승천 노드 개방" : "Ascension open") : $"{(ko ? "핵" : "Cores")} {Mathf.Min(cores, 2)}/2";
+        return $"{(ko ? "승천 진행" : "Ascension")}: {next}";
     }
 
     void OnDestroy() { GameSession.Founded -= OnFounded; Lang.Changed -= OnLangChanged; }

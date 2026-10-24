@@ -27,7 +27,7 @@ public class QuestionRunner : MonoBehaviour
         AdultArt.Show(eventId);
         if (AdultGate.Active) { AdultRecall.Mark(eventId); NormalCounters.OnAdult(eventId, question); }
         if (eventId != null) AudioManager.PlaySfx(MusicKeys.EventSfx(eventId));
-        panel.Show(QuestionPanel.WithPreface(preface, question.Text), question.Choices.Select(choice => choice.Text).ToArray());
+        panel.Show(QuestionPanel.WithPreface(preface, question.Text), question.Choices, eventId); // 선택지 뒤 확률·결과 미리보기(v2g044, v2m086)
     }
 
     // 엔딩 등으로 떠 있던 이벤트를 더 이어가지 않을 때

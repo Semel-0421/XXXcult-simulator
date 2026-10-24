@@ -20,6 +20,7 @@ public class GiftedV2NormalTests
         Profile.Path = Path.Combine(tempDir, "profile.json");
         Profile.Enabled = true;
         GiftedV2Effects.AdultEnabled = () => false;
+        GiftedV2Table.RollOverride = () => 0.0; // 50% 판정은 항상 성공으로 고정
         GiftedV2Effects.ResetForTests();
         GameSession.StartNew(1);
     }
@@ -28,6 +29,7 @@ public class GiftedV2NormalTests
     public void TearDown()
     {
         GiftedV2Effects.AdultEnabled = previousAdult;
+        GiftedV2Table.RollOverride = null;
         GiftedV2Effects.ResetForTests();
         Profile.Enabled = previousEnabled;
         Profile.Path = previousPath;
@@ -53,11 +55,21 @@ public class GiftedV2NormalTests
     }
 
     [Test]
+    public void SecondWind_FailedRollStillSpendsToken()
+    {
+        Own("v2n002");
+        GiftedV2Table.RollOverride = () => 0.99;
+        Assert.IsFalse(GiftedV2Effects.TryPreventDeath());
+        GiftedV2Table.RollOverride = () => 0.0;
+        Assert.IsFalse(GiftedV2Effects.TryPreventDeath());
+    }
+
+    [Test]
     public void WideCircle_RaisesEventGainsOnly()
     {
         Own("v2n003");
         using (GiftedV2Effects.During(ChangeSource.Event, "x"))
-            Assert.AreEqual(1.05f, GiftedV2Effects.StatMultiplier(StatId.Followers, 10), 1e-5f);
+            Assert.AreEqual(1.025f, GiftedV2Effects.StatMultiplier(StatId.Followers, 10), 1e-5f);
         Assert.AreEqual(1f, GiftedV2Effects.StatMultiplier(StatId.Followers, 10));
     }
 
@@ -134,11 +146,10 @@ public class GiftedV2NormalTests
     }
 
     [Test]
-    public void FlashOfInsight_RerollsUpToThreeTimesPerRun()
+    public void FlashOfInsight_RerollsUpToTwiceTimesPerRun()
     {
         Own("v2n009");
         var check = new CheckContext(CheckKind.Life, "Study", 1f); // 재굴림은 항상 성공
-        Assert.IsTrue(GiftedV2Effects.ResolveCheck(check, false));
         Assert.IsTrue(GiftedV2Effects.ResolveCheck(check, false));
         Assert.IsTrue(GiftedV2Effects.ResolveCheck(check, false));
         Assert.IsFalse(GiftedV2Effects.ResolveCheck(check, false));

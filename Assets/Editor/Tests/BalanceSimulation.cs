@@ -218,7 +218,7 @@ public static class BalanceSimulation
             Turns.Cult(BestCultAction(goal));
             if (Progress.ForcedEnding() is { } afterAction) return Finish(afterAction, report);
             var next = Turns.NextCultEvent();
-            if (next != null) Turns.Answer(Best(next.Question, goal));
+            if (next != null) { MirrorCounters.Event(next.Id); Turns.Answer(Best(next.Question, goal)); } // 실제 게임은 QuestionRunner→SetPending에서 센다
             if (Progress.ForcedEnding() is { } afterEvent) return Finish(afterEvent, report);
         }
         report.CultYearsTotal += GameSession.CultTime.Years;

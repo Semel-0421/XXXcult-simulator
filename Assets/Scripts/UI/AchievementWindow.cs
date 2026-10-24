@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -97,10 +97,10 @@ public static class AchievementWindow
         UiKit.Anchor((RectTransform)gallery.transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(340, -34), new Vector2(190, 44));
         gallery.onClick.AddListener(EndingGallery.Open);
 
-        // 성인 회상 갤러리 (성인 콘텐츠를 켠 경우에만 보인다)
-        adultGallery = UiKit.MakeButton(panel, font, "AdultGalleryButton", "", 190, 44, out adultGalleryLabel);
+        // 성인 회상 갤러리 (성인 콘텐츠를 켠 경우에만 보인다). 윗줄 가운데는 월계관이 덮으므로 탭 줄 오른쪽(기프티드 버튼 왼쪽)에 둔다
+        adultGallery = UiKit.MakeButton(panel, font, "AdultGalleryButton", "", 170, 40, out adultGalleryLabel);
         adultGallery.image.color = UiSkin.Crimson;
-        UiKit.Anchor((RectTransform)adultGallery.transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(540, -34), new Vector2(190, 44));
+        UiKit.Anchor((RectTransform)adultGallery.transform, new Vector2(1, 1), new Vector2(1, 1), new Vector2(-311, -176), new Vector2(170, 40));
         adultGallery.onClick.AddListener(AdultGallery.Open);
 
         // 글씨 확대/축소 (제목 오른쪽 위, 닫기 버튼 왼쪽)

@@ -180,9 +180,14 @@ def god():
         m.add("신성 트리", f"{ko}의 핵", f"Core of {en}", f"{ko}의 핵을 익혔다.", f"Learned the Core of {en}.", f"NEW:god_core_{key}", 2)
     ends = [("승천 · 기적과 예언", "Ascension: Miracle & Prophecy"), ("승천 · 기적과 자비", "Ascension: Miracle & Mercy"), ("승천 · 기적과 욕망", "Ascension: Miracle & Desire"),
             ("승천 · 예언과 자비", "Ascension: Prophecy & Mercy"), ("승천 · 예언과 욕망", "Ascension: Prophecy & Desire"), ("승천 · 자비와 욕망", "Ascension: Mercy & Desire"),
-            ("순수한 기적의 승천", "Pure Ascension: Miracle"), ("순수한 자비의 승천", "Pure Ascension: Mercy"), ("순수한 욕망의 승천", "Pure Ascension: Desire")]
-    for i, (ko, en) in enumerate(ends):
-        m.add("승천", ko, en, f"'{ko}' 엔딩을 봤다.", f"Saw the ending '{en}'.", f"NEW:god_ending_{i + 1}", 3)
+            ("그릇을 잃은 신", "A God Without a Vessel", "그릇의 붕괴", "Collapse of the Vessel"), ("텅 빈 제단", "The Empty Altar", "잊힌 신", "The Forgotten God"), ("봉인된 신전", "The Sealed Temple", "해산된 교단", "The Disbanded Cult")]
+    for i, e in enumerate(ends):
+        if len(e) == 4:  # 패배 엔딩 3종: 업적 이름과 실제 엔딩 이름이 다르다
+            ko, en, end_ko, end_en = e
+            m.add("추락", ko, en, f"'{end_ko}' 엔딩을 봤다.", f"Saw the ending '{end_en}'.", f"NEW:god_ending_{i + 1}", 2)
+        else:
+            ko, en = e
+            m.add("승천", ko, en, f"'{ko}' 엔딩을 봤다.", f"Saw the ending '{en}'.", f"NEW:god_ending_{i + 1}", 3)
     for n, ko, en in [(1, "첫 승천", "First Ascension"), (3, "세 번의 승천", "Three Ascensions"), (5, "다섯 번의 승천", "Five Ascensions"), (10, "열 번의 승천", "Ten Ascensions"), (20, "스무 번의 승천", "Twenty Ascensions")]:
         m.add("승천", ko, en, f"신 모드에서 승천을 {n}번 했다.", f"Ascended {n} times in God mode.", f"profile:god_ascended>={n}", 1 + (n >= 5) + (n >= 20))
     for n, ko, en in [(3, "아홉 중 셋", "Three of Nine"), (6, "아홉 중 여섯", "Six of Nine"), (9, "아홉 개의 하늘", "Nine Heavens")]:
@@ -227,7 +232,7 @@ def god():
         ("연회 없는 승천", "Ascent Without Feasts", "연회를 한 번도 열지 않고 승천했다.", "Ascended without ever holding a feast.", "NEW:god_ascend_Feast==0"),
         ("교감 없는 승천", "Ascent Without Communion", "교감을 한 번도 하지 않고 승천했다.", "Ascended without communion.", "NEW:god_ascend_Commune==0"),
         ("봉헌 없는 승천", "Ascent Without Consecration", "봉헌을 한 번도 하지 않고 승천했다.", "Ascended without consecrating a temple.", "NEW:god_ascend_Consecrate==0"),
-        ("한 갈래의 신", "One-Branch God", "한 갈래 노드만으로 승천했다.", "Ascended using nodes from a single branch.", "NEW:god_ascend_single_branch"),
+        ("한 갈래의 신", "One-Branch God", "익힌 노드의 80% 이상이 한 갈래인 채로 승천했다.", "Ascended with 80%+ of your learned nodes in one branch.", "NEW:god_ascend_single_branch"),
         ("네 갈래의 신", "Four-Branch God", "네 갈래 모두 20개 이상 익히고 승천했다.", "Ascended with 20+ nodes in every branch.", "NEW:god_ascend_all_branches>=20"),
         ("시기의 정점", "Peak of Envy", "하늘의 시기 95 이상에서 승천했다.", "Ascended while Envy was 95 or higher.", "NEW:god_ascend_Envy>=95"),
         ("의심의 정점", "Peak of Suspicion", "세상의 의심 95 이상에서 승천했다.", "Ascended while Suspicion was 95 or higher.", "NEW:god_ascend_Suspicion>=95"),
@@ -375,7 +380,7 @@ def mirror():
         ("명망의 추락", "Fall of Renown", "명망 700 이상에서 200 이하로 추락했다.", "Fell from Reputation 700+ to 200 or lower.", "NEW:mirror_rep_fall"),
         ("헌금의 폭락", "Offerings Crash", "헌금 700 이상에서 100 이하로 떨어졌다.", "Offerings dropped from 700+ to 100 or less.", "NEW:mirror_offerings_crash"),
         ("모든 지표 최대", "All at Maximum", "신도·명망·헌금이 모두 900 이상이었다.", "Had Followers, Reputation and Offerings all at 900+.", "NEW:mirror_chain_all>=900"),
-        ("거울 마스터", "Mirror Master", "거울 세계 업적을 150개 달성했다.", "Unlocked 150 Mirror World achievements.", "NEW:mirror_achv>=150"),
+        ("거울 마스터", "Mirror Master", "거울 세계 업적을 100개 달성했다.", "Unlocked 100 Mirror World achievements.", "NEW:mirror_achv>=100"),
         ("전부를 비추다", "Reflect Everything", "거울 세계 업적을 119개 전부 달성했다.", "Unlocked every Mirror World achievement.", "NEW:mirror_achv>=119"),
     ]
     for ko, en, dko, den, cond in challenge:

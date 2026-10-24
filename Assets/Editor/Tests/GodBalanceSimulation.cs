@@ -207,7 +207,7 @@ public static class GodSimulation
     {
         var god = GameSession.God;
         var cult = GameSession.Cult;
-        foreach (var type in BuildOrder)
+        foreach (var type in BuildOrder.OrderBy(god.Buildings.LevelOf)) // 가장 낮은 건물부터 (앞 순서만 짓지 않게)
         {
             if (god.Buildings.Blocker(type, god.Tree, cult) != null) continue;
             var next = god.Buildings.LevelOf(type) + 1;

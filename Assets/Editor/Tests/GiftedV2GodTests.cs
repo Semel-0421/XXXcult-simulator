@@ -22,6 +22,7 @@ public class GiftedV2GodTests
         Profile.Enabled = true;
         Counters.ClearAll();
         GiftedV2Effects.AdultEnabled = () => false;
+        GiftedV2Table.RollOverride = () => 0.0; // 50% 판정은 항상 성공으로 고정
         GiftedV2Effects.ResetForTests();
         GodRules.Begin(1);
         GameSession.FoundCult("t");
@@ -31,6 +32,7 @@ public class GiftedV2GodTests
     public void TearDown()
     {
         GiftedV2Effects.AdultEnabled = previousAdult;
+        GiftedV2Table.RollOverride = null;
         GiftedV2Effects.ResetForTests();
         Profile.Enabled = previousEnabled;
         Profile.Path = previousPath;
@@ -130,16 +132,27 @@ public class GiftedV2GodTests
     }
 
     [Test]
-    public void HeavensLedger_PaysOnePointPerNewEvent()
+    public void UnexpectedBoon_FailedRollStillSpendsToken()
+    {
+        Own("v2g049");
+        var c = new CheckContext(CheckKind.Life, "Study");
+        GiftedV2Table.RollOverride = () => 0.99;
+        Assert.IsFalse(GiftedV2Effects.ResolveCheck(c, false));
+        GiftedV2Table.RollOverride = () => 0.0;
+        Assert.IsFalse(GiftedV2Effects.ResolveCheck(c, false));
+    }
+
+    [Test]
+    public void HeavensLedger_PaysOnePointPerTwoNewEvents()
     {
         Own("v2g047");
         var before = GameSession.God.Points.Earned;
         var c = new CheckContext(CheckKind.Event, "hv01");
         GiftedV2Effects.ResolveCheck(c, true);
         GiftedV2Effects.ResolveCheck(c, false);
-        Assert.AreEqual(before + 1, GameSession.God.Points.Earned);
+        Assert.AreEqual(before, GameSession.God.Points.Earned); // 첫 번째 새 이벤트는 점수 없음
         GiftedV2Effects.ResolveCheck(new CheckContext(CheckKind.Event, "ea01"), true);
-        Assert.AreEqual(before + 2, GameSession.God.Points.Earned);
+        Assert.AreEqual(before + 1, GameSession.God.Points.Earned); // 두 번째에 +1
     }
 
     [Test]
