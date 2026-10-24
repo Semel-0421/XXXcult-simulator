@@ -69,6 +69,8 @@ public static partial class GiftedV2Effects
     static readonly Dictionary<string, EffectDef> defs = new();
     static readonly List<(GiftedV2Catalog.Entry entry, EffectDef def)> registered = new();
     static bool tableLoaded;
+    static List<EffectDef> _activeCache;
+    static int _activeCacheHash;
 
     // 테스트에서 성인 옵션을 PlayerPrefs 없이 바꾸기 위한 자리
     public static Func<bool> AdultEnabled = () => AdultGate.AchievementsEnabled;
@@ -108,17 +110,33 @@ public static partial class GiftedV2Effects
             if (IsActive(e, mode)) yield return e;
     }
 
+    static int ComputeActiveHash()
+    {
+        var mode = CurrentMode;
+        var ownership = Achievements.V2OwnershipOn ? 1 : 0;
+        var adult = AdultEnabled() ? 1 : 0;
+        var unlockedCount = Profile.UnlockedCount;
+        return ((mode.GetHashCode() * 31 + ownership) * 31 + adult) * 31 + unlockedCount;
+    }
+
     // shortcut: 매 호출마다 등록된 항목을 훑어 해시 조회함(최대 120개). 느려지면 Profile.UnlockedCount·모드·성인 옵션 기준으로 캐시할 것.
     static readonly List<EffectDef> activeBuffer = new();
     static List<EffectDef> Active()
     {
         EnsureTable();
-        activeBuffer.Clear();
-        if (registered.Count == 0 || !Achievements.V2OwnershipOn) return activeBuffer;
-        var mode = CurrentMode;
-        foreach (var (entry, def) in registered)
-            if (IsActive(entry, mode)) activeBuffer.Add(def);
-        return activeBuffer;
+        var hash = ComputeActiveHash();
+        if (_activeCache != null && _activeCacheHash == hash) return _activeCache;
+
+        _activeCache ??= new List<EffectDef>(registered.Count);
+        _activeCache.Clear();
+        if (registered.Count > 0 && Achievements.V2OwnershipOn)
+        {
+            var mode = CurrentMode;
+            foreach (var (entry, def) in registered)
+                if (IsActive(entry, mode)) _activeCache.Add(def);
+        }
+        _activeCacheHash = hash;
+        return _activeCache;
     }
 
     // ---- 회차당 토큰 (Counters run 범위, 새 판이면 자동으로 비워짐) ----
@@ -197,7 +215,7 @@ public static partial class GiftedV2Effects
     // ---- 생사·엔딩 ----
     public static bool TryPreventDeath()
     {
-        foreach (var d in Active().ToArray())
+        foreach (var d in Active())
             if (d.PreventDeath != null && d.PreventDeath()) return true;
         return false;
     }
@@ -206,21 +224,26 @@ public static partial class GiftedV2Effects
     public static Endings.Ending FilterEnding(Endings.Ending ending)
     {
         if (ending == null) return null;
-        foreach (var d in Active().ToArray())
+        foreach (var d in Active())
             if (d.PreventEnding != null && d.PreventEnding(ending)) return null;
         return ending;
     }
 
-    public static void OnEnding(Endings.Ending ending) { foreach (var d in Active().ToArray()) d.OnEnding?.Invoke(ending); }
+    public static void OnEnding(Endings.Ending ending) { foreach (var d in Active()) d.OnEnding?.Invoke(ending); }
 
     // ---- 시간 ----
-    public static void OnRunStart() { foreach (var d in Active().ToArray()) d.OnRunStart?.Invoke(); }
-    public static void OnYearEnd() { foreach (var d in Active().ToArray()) d.OnYearEnd?.Invoke(); }
+    public static void OnRunStart() { foreach (var d in Active()) d.OnRunStart?.Invoke(); }
+    public static void OnYearEnd() { foreach (var d in Active()) d.OnYearEnd?.Invoke(); }
 
     // 테스트용: 등록표를 비우고 다음 접근 때 GiftedV2Table을 다시 읽게 한다 (registerTable=false면 표 없이 빈 상태로)
     public static void ResetForTests(bool registerTable = true)
     {
         defs.Clear(); registered.Clear(); tableLoaded = !registerTable;
         source = ChangeSource.Other; sourceKey = null;
+        _activeCache = null;
+        _activeCacheHash = 0;
+        GiftedV2Mirror.InvalidateOnCache();
     }
+
+    public static void InvalidateActiveCache() => _activeCache = null;
 }

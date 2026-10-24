@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public enum RewardKind { None, Gifted, Stat }
 
@@ -29,6 +30,7 @@ public class Achievement
     public string ConditionText { get; }
     public AchievementReward Reward { get; }
     public AchievementCondition Condition { get; }
+    public IReadOnlyList<string> CounterKeys { get; }
     public string Mode { get; }   // normal / god / mirror / hidden
     public int Tier { get; }      // 난이도 표시 1~3 (기존 업적은 0)
     public bool Hidden { get; }   // 히든 업적: 달성 전에는 목록에 안 보임, 총 업적 수에서 뺌
@@ -40,6 +42,7 @@ public class Achievement
         Mode = mode; Tier = tier; Hidden = hidden; Adult = adult;
         Id = id; this.name = name; this.description = description; ConditionText = condition; Reward = reward;
         Condition = AchievementCondition.Parse(condition);
+        CounterKeys = AchievementCondition.ExtractCounterKeys(condition);
     }
 
     public bool IsMet() => Condition.IsMet();

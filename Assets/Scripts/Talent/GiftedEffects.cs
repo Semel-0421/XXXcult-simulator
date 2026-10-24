@@ -4,24 +4,12 @@ using System;
 // 보정은 항상 유리한 방향: +%는 증가를 키우고 감소를 줄인다(-%는 반대). 준비된 신 모드면 권능 보정도 곱한다.
 public static class GiftedEffects
 {
-    // 매 선택마다 호출되므로 LINQ 없이 합산한다
-    public static float TotalPercent(TalentList gifted, PersonalStatId stat)
-    {
-        float total = 0;
-        foreach (var g in gifted.Effective)
-            foreach (var m in g.Modifiers)
-                if (m.PersonalStat == stat) total += m.Percent;
-        return total;
-    }
+    // 매 선택마다 호출되므로 TalentList 캐시를 사용 (이중 루프 제거)
+    public static float TotalPercent(TalentList gifted, PersonalStatId stat) =>
+        gifted.GetPersonalPercent(stat);
 
-    public static float TotalPercent(TalentList gifted, StatId stat)
-    {
-        float total = 0;
-        foreach (var g in gifted.Effective)
-            foreach (var m in g.Modifiers)
-                if (m.CultStat == stat) total += m.Percent;
-        return total;
-    }
+    public static float TotalPercent(TalentList gifted, StatId stat) =>
+        gifted.GetCultPercent(stat);
 
     public static float Adjust(int amount, float percent) => amount + Math.Abs(amount) * percent / 100f;
 

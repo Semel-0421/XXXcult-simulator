@@ -13,6 +13,11 @@ public static class Achievements
     // 기존 100개 + v2(일반·신·거울·히든)
     public static IReadOnlyList<Achievement> All => all ??= AchievementCatalog.All.Concat(AchievementCatalogV2.All).ToList();
 
+    // 역인덱스: 카운터 키 → 해당 카운터를 참조하는 업적 목록
+    static readonly Dictionary<string, List<Achievement>> _counterToAchievements = new();
+    static bool _indexBuilt;
+    static bool _evaluating; // 재진입 방지 (Unlock → GiftedGranter → Counters.Add → OnCounterChanged)
+
     // 총 업적 수(achv 조건·진행 표시)에 셀 대상: 히든·성인 제외. mode가 null이면 전체.
     public static IEnumerable<Achievement> Counted => All.Where(a => !a.Hidden && !a.Adult);
     public static int CountedUnlocked(string mode = null) =>
@@ -25,6 +30,7 @@ public static class Achievements
     public static void Evaluate()
     {
         if (!Profile.Enabled) return;
+        BuildCounterIndex();
         bool found;
         do
         {
@@ -42,12 +48,65 @@ public static class Achievements
         Counters.Save();
     }
 
+    // 카운터 키 변경 시 해당 키를 참조하는 업적만 재평가
+    public static void OnCounterChanged(string key)
+    {
+        if (!Profile.Enabled || _evaluating) return;
+        _evaluating = true;
+        try
+        {
+            BuildCounterIndex();
+            if (_counterToAchievements.TryGetValue(key, out var affected))
+            {
+                bool found;
+                do
+                {
+                    found = false;
+                    foreach (var achievement in affected)
+                    {
+                        if (Profile.IsUnlocked(achievement.Id)) continue;
+                        if (achievement.Adult && !AdultGate.AchievementsEnabled) continue;
+                        if (!achievement.IsMet()) continue;
+                        Unlock(achievement);
+                        found = true;
+                    }
+                } while (found);
+            }
+            Evaluated?.Invoke();
+        }
+        finally
+        {
+            _evaluating = false;
+        }
+    }
+
+    static void BuildCounterIndex()
+    {
+        if (_indexBuilt) return;
+        foreach (var a in All)
+        {
+            foreach (var key in a.CounterKeys)
+            {
+                if (!_counterToAchievements.TryGetValue(key, out var list))
+                {
+                    list = new List<Achievement>();
+                    _counterToAchievements[key] = list;
+                }
+                list.Add(a);
+            }
+        }
+        _indexBuilt = true;
+    }
+
     static void Unlock(Achievement achievement)
     {
         Profile.MarkUnlocked(achievement.Id);
         // 기프티드는 달성 즉시 이번 판에도 지급한다 (다음 판부터는 시작할 때 지급). v2 id는 지급 없이 달성 자체로 보유(OwnsGiftedV2) → 바로 효과가 난다
         if (achievement.Reward.Kind == RewardKind.Gifted && Profile.RewardsEnabled && GiftedCatalog.Find(achievement.Reward.GiftedId) != null)
             GiftedGranter.Grant(GameSession.Personal.Talents, achievement.Reward.GiftedId);
+        GiftedV2Effects.InvalidateActiveCache(); // 새 기프티드 획득 시 Active 캐시 무효화
+        GiftedV2Mirror.InvalidateOnCache(); // 새 기프티드 획득 시 거울 On 캐시 무효화
+        GameSession.Cult?.Doctrines.InvalidateCache(); // 새 기프티드 획득 시 교리 비용 캐시 무효화
         Unlocked?.Invoke(achievement);
     }
 

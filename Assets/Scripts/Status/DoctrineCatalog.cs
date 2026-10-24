@@ -133,7 +133,19 @@ public static class DoctrineCatalog
         new("integrity10b", DoctrineBranch.Integrity, 10, "B", "율법의 수호자\u001FGuardian of the Law", "교단은 흔들리지 않는 율법 위에 섰습니다.\u001FThe cult stands on an unshakable law.", 2, 8, new StatModifier[] { Cult(StatId.Doctrine, 15f), Cult(StatId.Authority, 10f) }),
     };
 
-    public static DoctrineSkill Find(string id) => id == DoctrineSkill.DeclarationId ? DoctrineSkill.Declaration : All.FirstOrDefault(s => s.Id == id);
+    static readonly Dictionary<string, DoctrineSkill> _byId;
+
+    static DoctrineCatalog()
+    {
+        _byId = Normal.ToDictionary(s => s.Id);
+    }
+
+    public static DoctrineSkill Find(string id)
+    {
+        if (id == DoctrineSkill.DeclarationId) return DoctrineSkill.Declaration;
+        if (_byId.TryGetValue(id, out var s)) return s;
+        return All.FirstOrDefault(s => s.Id == id); // 거울 모드 폴백
+    }
 
     // 6~10단계는 갈래(A/B)를 지정한다
     public static DoctrineSkill At(DoctrineBranch branch, int tier, string path = "") => All.FirstOrDefault(s => s.Branch == branch && s.Tier == tier && s.Path == (tier <= 5 ? "" : path));

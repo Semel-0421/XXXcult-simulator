@@ -157,13 +157,31 @@ public static class GiftedV2Mirror
     public const float OneBranchScale = 1.15f, TwoBranchScale = 1.05f, ConversionScale = 1.10f, SettlementScale = 1.05f;
 
     static readonly Dictionary<string, GiftedV2Catalog.Entry> entries = new();
+    static readonly Dictionary<string, bool> _onCache = new();
+    static int _onCacheHash;
+
+    static int ComputeOnHash()
+    {
+        var mode = GameSession.GodMode ? "god" : GameSession.MirrorMode ? "mirror" : "normal";
+        var ownership = Achievements.V2OwnershipOn ? 1 : 0;
+        var adult = GiftedV2Effects.AdultEnabled() ? 1 : 0;
+        var unlockedCount = Profile.UnlockedCount;
+        return ((mode.GetHashCode() * 31 + ownership) * 31 + adult) * 31 + unlockedCount;
+    }
 
     public static bool On(string id)
     {
         if (!Achievements.V2OwnershipOn) return false;
+        var hash = ComputeOnHash();
+        if (_onCacheHash != hash) { _onCache.Clear(); _onCacheHash = hash; }
+        if (_onCache.TryGetValue(id, out var cached)) return cached;
         if (!entries.TryGetValue(id, out var e)) entries[id] = e = GiftedV2Catalog.Find(id);
-        return GiftedV2Effects.IsActive(e);
+        var result = GiftedV2Effects.IsActive(e);
+        _onCache[id] = result;
+        return result;
     }
+
+    public static void InvalidateOnCache() => _onCache.Clear();
 
     // v2m086 (UI 전용)
     public static bool ShowsChoicePreview => On("v2m086");

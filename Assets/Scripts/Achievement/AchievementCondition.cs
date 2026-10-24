@@ -50,6 +50,27 @@ public class AchievementCondition
 
     static string StripNew(string token) => token.StartsWith("NEW:") ? token.Substring(4) : token;
 
+    // 조건 문자열에서 참조하는 카운터 키 목록 추출 (역인덱스용)
+    public static IReadOnlyList<string> ExtractCounterKeys(string conditionText)
+    {
+        var keys = new List<string>();
+        var tokens = conditionText.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        for (int i = 0; i < tokens.Length; i++)
+        {
+            if (tokens[i] == "for" && i > 0 && i + 1 < tokens.Length && Regex.IsMatch(tokens[i + 1], @"^\d+y$"))
+            {
+                keys.Add("hold:" + StripNew(tokens[i - 1]));
+                i++;
+                continue;
+            }
+            var token = tokens[i];
+            if (!IsCounterToken(token)) continue;
+            var m = CounterPattern.Match(StripNew(token));
+            if (m.Success) keys.Add(m.Groups["key"].Value);
+        }
+        return keys;
+    }
+
     static readonly Regex CounterPattern = new(@"^(?<key>[A-Za-z0-9_.]+)(?:(?<op>>=|<=|==)(?<value>-?\d+))?$", RegexOptions.Compiled);
     static readonly HashSet<string> OldKeys = new() { "age", "cultyears", "doctrine", "gifted", "achv", "standing" };
 

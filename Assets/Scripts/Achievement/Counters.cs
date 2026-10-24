@@ -14,12 +14,20 @@ public static class Counters
     static readonly Dictionary<string, int> profile = new();
     static readonly Dictionary<string, int> run = new();
 
-    static object session; // 마지막으로 본 판 (GameSession.Cult). 바뀌면 새 판이다
+    static int _lastSeenGeneration; // 마지막으로 본 세대 ID. 바뀔 때만 Run 카운터 초기화
     static bool loaded, dirty;
+    static bool _notifyingAchievements; // 재진입 방지 (Counters.Add → Achievements.OnCounterChanged → Unlock → GiftedGranter → Counters.Add)
 
-    public static void Add(string key, int amount = 1, bool perRun = false) { Sync(); Bump(perRun ? run : profile, key, amount); Touch(perRun); }
-    public static void Max(string key, int value, bool perRun = false) { Sync(); var d = perRun ? run : profile; if (Get(key, perRun) < value) { d[key] = value; Touch(perRun); } }
-    public static void Set(string key, int value, bool perRun = false) { Sync(); (perRun ? run : profile)[key] = value; Touch(perRun); }
+    public static void Add(string key, int amount = 1, bool perRun = false) { Sync(); Bump(perRun ? run : profile, key, amount); Touch(perRun); Notify(key); }
+    public static void Max(string key, int value, bool perRun = false) { Sync(); var d = perRun ? run : profile; if (Get(key, perRun) < value) { d[key] = value; Touch(perRun); Notify(key); } }
+    public static void Set(string key, int value, bool perRun = false) { Sync(); (perRun ? run : profile)[key] = value; Touch(perRun); Notify(key); }
+
+    static void Notify(string key)
+    {
+        if (_notifyingAchievements) return;
+        try { _notifyingAchievements = true; Achievements.OnCounterChanged(key); }
+        finally { _notifyingAchievements = false; }
+    }
     public static int Get(string key, bool perRun = false) { Sync(); return (perRun ? run : profile).TryGetValue(key, out var v) ? v : 0; }
 
     // 두 범위를 합쳐 읽는다: 조건식에서 범위를 따로 적지 않아도 되게 (Run 값이 있으면 그것, 없으면 Profile)
@@ -31,16 +39,16 @@ public static class Counters
     public static void ResetRun() => run.Clear();
 
     // 테스트·프로필 초기화용: 메모리 값을 버리고 다음 접근 때 파일에서 다시 읽게 한다
-    public static void ClearAll() { profile.Clear(); run.Clear(); loaded = false; dirty = false; session = null; }
+    public static void ClearAll() { profile.Clear(); run.Clear(); loaded = false; dirty = false; _lastSeenGeneration = -1; }
 
     static void Touch(bool perRun) { if (!perRun) dirty = true; }
 
     static void Sync()
     {
         if (!loaded && Profile.Enabled) { loaded = true; Load(); }
-        var current = GameSession.Cult;
-        if (ReferenceEquals(session, current)) return;
-        session = current;
+        var currentGen = GameSession.CultGeneration;
+        if (_lastSeenGeneration == currentGen) return;
+        _lastSeenGeneration = currentGen;
         run.Clear();
     }
 

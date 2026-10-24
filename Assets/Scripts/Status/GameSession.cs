@@ -11,6 +11,7 @@ public static class GameSession
     public static GameClock Age { get; private set; }      // 플레이어 나이 (시작부터)
     public static GameClock CultTime { get; private set; } // 교단 창설 이후 시간
     public static bool CultFounded { get; private set; }
+    public static int CultGeneration { get; private set; } // 새 판마다 증가. 세이브/로드 시 Run 카운터 보존용
     public static bool Resuming { get; private set; } // 불러온 직후: 씬이 인트로를 건너뛰고 이어서 진행한다
     public static bool Started { get; private set; }   // 인트로가 끝나 본 진행이 시작됨 (저장 가능)
     public static bool Ended { get; private set; }     // 엔딩을 봄 (더 저장할 수 없음)
@@ -107,9 +108,20 @@ public static class GameSession
 
     public static void AdvanceTurn()
     {
+        if (Ended) return; // 엔딩 후 턴 진행 차단
+
         Age.Advance();
         if (CultFounded) CultTime.Advance();
         if (!Dead && !GodMode && Mortality.Dies(Age.Years, Personal.Gender, Rng) && !GiftedV2Effects.TryPreventDeath()) Dead = true; // 분기마다 연령별 사망률 (신의 그릇은 늙지 않는다)
+
+        if (Dead)
+        {
+            // 사망 시 최소 연산만
+            NormalCounters.Refresh();
+            Achievements.Evaluate();
+            return;
+        }
+
         if (Age.Quarter == 0) GiftedSpecials.ApplyYearly(Personal, Cult, CultFounded); // 해가 바뀔 때
         if (CultFounded && CultTime.Quarter == 0) SocialStanding.YearEnd(Cult); // 교단 해가 바뀔 때 입교
         if (CultFounded) MirrorCounters.Turn();
@@ -132,6 +144,7 @@ public static class GameSession
         Cult = new CultStatus();
         Cult.Doctrines.Changed += MirrorCounters.Doctrine;
         Cult.Doctrines.Changed += NormalCounters.OnDoctrine; // 화면(CultFlow)이 없어도 세도록 상태 쪽에 건다
+        Cult.Doctrines.Changed += (skill) => Personal.Talents.MarkPercentCacheDirty(); // 교리 변경 시 기프티드 퍼센트 캐시 무효화
         Personal = new PersonalStatus();
         Personal.Talents.ExtraEffects = () => Cult.Doctrines.EffectTalents; // 배운 교리도 기프티드처럼 효과를 준다
         Seed = seed ?? Environment.TickCount;
@@ -139,6 +152,7 @@ public static class GameSession
         Age = new GameClock();
         CultTime = new GameClock();
         CultFounded = false;
+        CultGeneration++;
         UsedEvents = new HashSet<string>();
         counters = new Dictionary<string, int>();
         NormalCounters.Reset();
@@ -183,6 +197,7 @@ public static class GameSession
             pendingEventId = PendingEventId,
             pendingAdvances = PendingAdvancesTurn,
             run = Run,
+            cultGeneration = CultGeneration,
             dead = Dead,
             godMode = GodMode,
             mirrorMode = MirrorMode,
@@ -216,6 +231,7 @@ public static class GameSession
     public static void Restore(SaveData data)
     {
         StartNew(data.seed);
+        CultGeneration = data.cultGeneration; // 세대 ID 복원 (Run 카운터 보존)
         MirrorMode = data.mirrorMode; // 교리 목록을 고르므로 먼저
         Rng = new GameRng(ulong.Parse(data.rngState));
         Personal.Name = data.playerName ?? "";
@@ -231,6 +247,7 @@ public static class GameSession
             if (Enum.TryParse<StatId>(e.key, out var id)) Cult[id].Set(e.value);
         foreach (var e in data.doctrines) Cult.Doctrines.Restore(e.key, e.value);
         Cult.Doctrines.RestoreEmblem(data.doctrineEmblem);
+        Personal.Talents.MarkPercentCacheDirty(); // 복원된 교리·기프티드에 맞춰 퍼센트 캐시 재계산
         foreach (var e in data.personalRemainders)
             if (Enum.TryParse<PersonalStatId>(e.key, out var id)) Personal.Remainders.Set(id, e.amount);
         foreach (var e in data.cultRemainders)

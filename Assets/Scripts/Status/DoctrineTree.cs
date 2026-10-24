@@ -85,7 +85,7 @@ public class DoctrineTree
     public void Restore(string skillId, int level)
     {
         levels[skillId] = level;
-        effectCache = null;
+        _cacheDirty = true;
     }
 
     public int LevelOf(DoctrineSkill skill) => levels.TryGetValue(skill.Id, out var level) ? level : 0;
@@ -153,19 +153,57 @@ public class DoctrineTree
 
     public bool UpgradeFinal(int availablePoints) => CanUpgradeFinal(availablePoints) && LevelUp(Emblem);
 
+    // 교리 캐시: LevelUp/Restore 시 무효화, 접근 시 한 번만 재계산
+    int _spentPointsCache;
+    float _resistanceCache;
+    List<Talent> _effectTalentsCache;
+    bool _cacheDirty = true;
+    int _lastUnlockedCount = -1;
+
     public int SpentPoints
     {
         get
         {
-            int total = 0;
-            foreach (var pair in levels)
-            {
-                var skill = DoctrineCatalog.Find(pair.Key);
-                if (skill == null) continue;
-                for (int level = 1; level <= pair.Value; level++) total += skill.CostForLevel(level);
-            }
-            return GiftedV2Effects.DoctrineSpentAdjustNormal(total);
+            if (_cacheDirty || Profile.UnlockedCount != _lastUnlockedCount) { _cacheDirty = true; RebuildCache(); }
+            return _spentPointsCache;
         }
+    }
+
+    public float Resistance
+    {
+        get
+        {
+            if (_cacheDirty || Profile.UnlockedCount != _lastUnlockedCount) { _cacheDirty = true; RebuildCache(); }
+            return _resistanceCache;
+        }
+    }
+
+    void RebuildCache()
+    {
+        int total = 0;
+        int percent = 0;
+        var branches = new HashSet<DoctrineBranch>();
+        foreach (var pair in levels)
+        {
+            var skill = DoctrineCatalog.Find(pair.Key);
+            if (skill == null) continue;
+            for (int level = 1; level <= pair.Value; level++) total += skill.CostForLevel(level);
+            percent += skill.ResistPercent * pair.Value;
+            if (skill != DoctrineSkill.Declaration && pair.Value > 0) branches.Add(skill.Branch);
+        }
+        var scale = GiftedV2Mirror.DoctrineEffectScale(branches.Count);
+        var list = new List<Talent>();
+        foreach (var pair in levels)
+        {
+            var skill = DoctrineCatalog.Find(pair.Key);
+            if (skill == null || skill == DoctrineSkill.Declaration || pair.Value <= 0) continue;
+            list.Add(ToTalent(skill, pair.Value, scale));
+        }
+        _spentPointsCache = GiftedV2Effects.DoctrineSpentAdjustNormal(total);
+        _resistanceCache = percent / 100f;
+        _effectTalentsCache = list;
+        _cacheDirty = false;
+        _lastUnlockedCount = Profile.UnlockedCount;
     }
 
     // 최종 스킬은 한 판에 하나만 고를 수 있다: 이미 다른 최종 스킬을 골랐는가
@@ -176,43 +214,22 @@ public class DoctrineTree
         if (IsMax(skill) || IsFinalTaken(skill)) return false;
         levels[skill.Id] = LevelOf(skill) + 1;
         if (skill.IsFinal && levels[skill.Id] == 1) EmblemId = skill.Id; // 새 최종 스킬이 중앙 문양을 대체
-        effectCache = null;
+        _cacheDirty = true;
         Changed?.Invoke(skill);
         return true;
     }
 
-    // 배운 교리 효과 합계 (불운 저항, 0~1)
-    public float Resistance
+    // 교리 변경(예: 외부에서 직접 levels 수정) 후 호출해 캐시 무효화
+    public void InvalidateCache() => _cacheDirty = true;
+
+    // 배운 교리를 레벨만큼 곱한 효과 묶음으로 만든다. 기프티드 효과 계산이 이 목록도 함께 본다.
+    public IReadOnlyList<Talent> EffectTalents
     {
         get
         {
-            int percent = 0;
-            foreach (var pair in levels)
-                percent += (DoctrineCatalog.Find(pair.Key)?.ResistPercent ?? 0) * pair.Value;
-            return percent / 100f;
+            if (_cacheDirty || Profile.UnlockedCount != _lastUnlockedCount) { _cacheDirty = true; RebuildCache(); }
+            return _effectTalentsCache;
         }
-    }
-
-    // 배운 교리를 레벨만큼 곱한 효과 묶음으로 만든다. 기프티드 효과 계산이 이 목록도 함께 본다.
-    public IReadOnlyList<Talent> EffectTalents => effectCache ??= BuildEffects();
-
-    List<Talent> BuildEffects()
-    {
-        var list = new List<Talent>();
-        var branches = new HashSet<DoctrineBranch>();
-        foreach (var pair in levels)
-        {
-            var skill = DoctrineCatalog.Find(pair.Key);
-            if (skill != null && skill != DoctrineSkill.Declaration && pair.Value > 0) branches.Add(skill.Branch);
-        }
-        var scale = GiftedV2Mirror.DoctrineEffectScale(branches.Count);
-        foreach (var pair in levels)
-        {
-            var skill = DoctrineCatalog.Find(pair.Key);
-            if (skill == null || skill == DoctrineSkill.Declaration || pair.Value <= 0) continue;
-            list.Add(ToTalent(skill, pair.Value, scale));
-        }
-        return list;
     }
 
     public static Talent ToTalent(DoctrineSkill skill, int level, float scale = 1f)

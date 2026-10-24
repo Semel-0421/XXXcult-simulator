@@ -21,7 +21,7 @@ public static class Profile
     // 시뮬레이션 전용: 켜면 파일을 읽지도 쓰지도 않고 메모리에만 둔다 (Counters도 같이). 기본 꺼짐
     public static bool InMemory { get; set; }
 
-    static string path;
+    static string path = System.IO.Path.Combine(Application.persistentDataPath, "profile.json");
     static HashSet<string> unlocked;
     static Dictionary<string, int> counters;
     static bool rewardsEnabled = true;
@@ -35,7 +35,7 @@ public static class Profile
 
     public static string Path
     {
-        get => path ??= System.IO.Path.Combine(Application.persistentDataPath, "profile.json");
+        get => path;
         set { path = value; Reset(); }
     }
 
