@@ -30,7 +30,11 @@ public static class AchievementSimulation
 
     static readonly List<Achievement> V2 = AchievementCatalogV2.All.ToList();
     static HashSet<string> runMet;
-    static Dictionary<string, int> peakMax, peakMin; // 이 플레이어가 지금까지 본 조건 값의 최고·최저 (기준치 제안용)
+    static bool[] metFlag; // runMet과 같은 내용 (V2 순번). 판정 이벤트마다 도는 루프에서 문자열 조회를 피한다
+    // 이 플레이어가 지금까지 본 조건 값의 최고·최저 (기준치 제안용). Readers 순번 배열 + 처음 본 순서
+    static int[] peakMax, peakMin;
+    static bool[] peakSeen;
+    static List<int> peakOrder;
 
     // 조건 토큰마다 지금 값을 읽는 함수 (AchievementCondition과 같은 규칙). 값이 아직 없으면 null
     static readonly Regex Op = new(@"^(?<k>[A-Za-z0-9_:.]+?)(>=|<=|==)");
@@ -85,20 +89,23 @@ public static class AchievementSimulation
                 Profile.Reset(); // 새 플레이어: 업적·누적 카운터·본 엔딩을 비운다 (판 사이에는 유지)
                 var rng = new Random(seed + p * 7919);
                 BalanceSimulation.pathRng = new Random(rng.Next());
-                peakMax = new Dictionary<string, int>();
-                peakMin = new Dictionary<string, int>();
+                peakMax = new int[Readers.Count];
+                peakMin = new int[Readers.Count];
+                peakSeen = new bool[Readers.Count];
+                peakOrder = new List<int>();
                 for (int r = 1; r <= runs; r++)
                 {
                     runMet = new HashSet<string>();
+                    metFlag = new bool[V2.Count];
                     var ending = Play(mode, style, r, rng);
                     OnEvaluated(); // 엔딩 없이 끝난 판의 마지막 상태도 한 번 더 본다
                     sb.Append(tag).Append('\t').Append(style).Append('\t').Append($"{seed}-{p}").Append('\t').Append(r).Append('\t')
                       .Append(ending?.Id ?? "none").Append('\t').Append(Outcome(mode, ending)).Append('\t').Append(GameSession.CultTime.Years).Append('\t')
                       .AppendLine(string.Join(",", runMet));
                 }
-                foreach (var pair in peakMax)
-                    keys?.Append(tag).Append('\t').Append(style).Append('\t').Append($"{seed}-{p}").Append('\t').Append(pair.Key).Append('\t')
-                        .Append(pair.Value).Append('\t').Append(peakMin[pair.Key]).Append('\n');
+                foreach (var i in peakOrder)
+                    keys?.Append(tag).Append('\t').Append(style).Append('\t').Append($"{seed}-{p}").Append('\t').Append(Readers[i].key).Append('\t')
+                        .Append(peakMax[i]).Append('\t').Append(peakMin[i]).Append('\n');
             }
         }
         finally
@@ -106,7 +113,10 @@ public static class AchievementSimulation
             Achievements.Evaluated -= OnEvaluated;
             Achievements.ForceGiftedV2 = null;
             runMet = null;
+            metFlag = null;
             peakMax = peakMin = null;
+            peakSeen = null;
+            peakOrder = null;
             BalanceSimulation.pathRng = null;
             BalanceSimulation.mirrorOn = false;
             BalanceSimulation.neutralBot = false;
@@ -121,14 +131,16 @@ public static class AchievementSimulation
     static void OnEvaluated()
     {
         if (runMet == null) return;
-        foreach (var a in V2)
-            if (!runMet.Contains(a.Id) && a.IsMet()) runMet.Add(a.Id);
+        for (int i = 0; i < V2.Count; i++)
+            if (!metFlag[i] && V2[i].IsMet()) { metFlag[i] = true; runMet.Add(V2[i].Id); }
         if (peakMax == null) return;
-        foreach (var (key, read) in Readers)
+        var readers = Readers;
+        for (int i = 0; i < readers.Count; i++)
         {
-            if (read() is not int v) continue;
-            if (!peakMax.TryGetValue(key, out var hi) || v > hi) peakMax[key] = v;
-            if (!peakMin.TryGetValue(key, out var lo) || v < lo) peakMin[key] = v;
+            if (readers[i].read() is not int v) continue;
+            if (!peakSeen[i]) { peakSeen[i] = true; peakMax[i] = peakMin[i] = v; peakOrder.Add(i); continue; }
+            if (v > peakMax[i]) peakMax[i] = v;
+            if (v < peakMin[i]) peakMin[i] = v;
         }
     }
 

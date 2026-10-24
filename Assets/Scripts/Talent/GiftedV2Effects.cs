@@ -116,7 +116,8 @@ public static partial class GiftedV2Effects
         var ownership = Achievements.V2OwnershipOn ? 1 : 0;
         var adult = AdultEnabled() ? 1 : 0;
         var unlockedCount = Profile.UnlockedCount;
-        return ((mode.GetHashCode() * 31 + ownership) * 31 + adult) * 31 + unlockedCount;
+        var forced = Achievements.ForceGiftedV2 switch { null => 0, true => 1, false => 2 }; // 시뮬 배치(전부/없음)가 바뀌면 다시 계산
+        return (((mode.GetHashCode() * 31 + ownership) * 31 + adult) * 31 + unlockedCount) * 31 + forced;
     }
 
     // shortcut: 매 호출마다 등록된 항목을 훑어 해시 조회함(최대 120개). 느려지면 Profile.UnlockedCount·모드·성인 옵션 기준으로 캐시할 것.

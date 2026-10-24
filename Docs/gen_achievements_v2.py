@@ -232,7 +232,7 @@ def god():
         ("연회 없는 승천", "Ascent Without Feasts", "연회를 한 번도 열지 않고 승천했다.", "Ascended without ever holding a feast.", "NEW:god_ascend_Feast==0"),
         ("교감 없는 승천", "Ascent Without Communion", "교감을 한 번도 하지 않고 승천했다.", "Ascended without communion.", "NEW:god_ascend_Commune==0"),
         ("봉헌 없는 승천", "Ascent Without Consecration", "봉헌을 한 번도 하지 않고 승천했다.", "Ascended without consecrating a temple.", "NEW:god_ascend_Consecrate==0"),
-        ("한 갈래의 신", "One-Branch God", "익힌 노드의 80% 이상이 한 갈래인 채로 승천했다.", "Ascended with 80%+ of your learned nodes in one branch.", "NEW:god_ascend_single_branch"),
+        ("두 갈래의 신", "Two-Branch God", "두 핵의 갈래 밖 노드를 하나도 익히지 않고 승천했다.", "Ascended without learning any node outside your two core branches.", "NEW:god_ascend_single_branch"),
         ("네 갈래의 신", "Four-Branch God", "네 갈래 모두 20개 이상 익히고 승천했다.", "Ascended with 20+ nodes in every branch.", "NEW:god_ascend_all_branches>=20"),
         ("시기의 정점", "Peak of Envy", "하늘의 시기 95 이상에서 승천했다.", "Ascended while Envy was 95 or higher.", "NEW:god_ascend_Envy>=95"),
         ("의심의 정점", "Peak of Suspicion", "세상의 의심 95 이상에서 승천했다.", "Ascended while Suspicion was 95 or higher.", "NEW:god_ascend_Suspicion>=95"),

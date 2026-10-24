@@ -46,11 +46,15 @@ public class GodTree
         return true;
     }
 
+    // 학습 상태가 바뀔 때마다 오른다 (Add·Restore에서만). 파생 값 캐시의 키
+    public int Version { get; private set; }
+
     void Add(GodSkill skill)
     {
         learned.Add(skill.Id);
         if (skill.IsCore) coreOrder.Add(skill.Id);
         totals = null;
+        Version++;
         GodCounters.OnLearn(this);
         GiftedV2GodHooks.OnNodeLearned(skill, skill.Id == NatureId);
         Changed?.Invoke(skill);
@@ -63,7 +67,24 @@ public class GodTree
     public bool Ascended => learned.Contains(GodSkill.AscensionId);
 
     // 지금까지 이른 가장 안쪽 단계 (0: 아무것도 없음, 1 그릇 ~ 5 신, 6 승천)
-    public int ReachedStage => learned.Count == 0 ? 0 : learned.Max(id => GodSkillCatalog.Find(id)?.Stage ?? 0);
+    public int ReachedStage { get { Derive(); return reachedStage; } }
+
+    // 압박 규모에 더하는 노드 가중치 합 (바깥 노드는 0.75)
+    public float PressureNodeWeight { get { Derive(); return pressureNodes; } }
+
+    int derivedVersion = -1, reachedStage;
+    float pressureNodes;
+    int[] broadRings;
+
+    // Version이 바뀌었을 때만 학습 노드를 다시 훑는다
+    void Derive()
+    {
+        if (derivedVersion == Version) return;
+        derivedVersion = Version;
+        reachedStage = learned.Count == 0 ? 0 : learned.Max(id => GodSkillCatalog.Find(id)?.Stage ?? 0);
+        pressureNodes = learned.Select(GodSkillCatalog.Find).Where(s => s != null).Sum(s => s.PressureWeight);
+        broadRings = Enumerable.Range(1, 5).Where(ring => GodSkillCatalog.Cores.All(core => IsBroad(core.Branch, ring))).ToArray();
+    }
 
     // 먼저 완성한 두 핵. 승천 엔딩을 정한다 (핵이 둘 미만이면 null)
     public (GodBranch first, GodBranch second)? FirstCores =>
@@ -78,15 +99,18 @@ public class GodTree
 
     public const int BroadDeepRing = 3; public const float BroadDeepScale = 1.5f; // 안쪽 고리(3~5)는 넓게 찍기 어려워 보너스를 1.5배로
 
-    IEnumerable<int> BroadRingList => Enumerable.Range(1, 5).Where(ring => GodSkillCatalog.Cores.All(core => IsBroad(core.Branch, ring)));
+    IEnumerable<int> BroadRingList { get { Derive(); return broadRings; } }
     public int BroadRings => BroadRingList.Count();
     // 저항·손실 방어에 곱하는 고리 수 (안쪽 고리는 BroadDeepScale로 친다)
     public float BroadWeight => BroadRingList.Sum(ring => ring >= BroadDeepRing ? BroadDeepScale : 1f);
 
+    static Dictionary<(GodBranch, int), GodSkill[]> ringNodes;
+
     bool IsBroad(GodBranch branch, int ring)
     {
-        var nodes = GodSkillCatalog.All.Where(s => s.Branch == branch && s.Ring == ring).ToList();
-        return nodes.Count(IsLearned) * 2 >= nodes.Count;
+        ringNodes ??= GodSkillCatalog.All.GroupBy(s => (s.Branch, s.Ring)).ToDictionary(g => g.Key, g => g.ToArray());
+        var nodes = ringNodes.TryGetValue((branch, ring), out var list) ? list : Array.Empty<GodSkill>();
+        return nodes.Count(IsLearned) * 2 >= nodes.Length;
     }
 
     // 해마다 더 받는 권능 포인트
@@ -160,6 +184,7 @@ public class GodTree
             if (learned.Contains(id) && GodSkillCatalog.Find(id).IsCore && !coreOrder.Contains(id)) coreOrder.Add(id);
         NatureId = string.IsNullOrEmpty(natureId) || !learned.Contains(natureId) ? null : natureId;
         totals = null;
+        Version++;
     }
 }
 

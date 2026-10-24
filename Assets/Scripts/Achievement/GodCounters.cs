@@ -153,7 +153,10 @@ public static class GodCounters
         Counters.Set("god_ascend_buildings", GodBuildings.All.Sum(t => Counters.Get($"god_build_{t}", true)));
         Counters.Set("god_ascend_Wonder", Counters.Get("god_act_Wonder", true));
         Counters.Set("god_ascend_Healing", Counters.Get("god_act_Healing", true));
-        Counters.Set("god_ascend_single_branch", counts.Sum() > 0 && counts.Max() * 5 >= counts.Sum() * 4 ? 1 : 0); // 한 갈래 비중 80% 이상 (한 갈래만으로는 승천이 안 됨)
+        // 두 핵의 갈래 밖 노드 0개로 승천 (승천에 핵 둘이 필요해 한 갈래 비중은 최대 50%라 80% 기준은 불가했다)
+        var coreBranches = god.Tree.FirstCores is { } pair ? new[] { pair.first, pair.second } : Array.Empty<GodBranch>();
+        var outside = Branches.Select((b, i) => coreBranches.Contains(b) ? 0 : counts[i]).Sum();
+        Counters.Set("god_ascend_single_branch", coreBranches.Length == 2 && outside == 0 ? 1 : 0);
         Counters.Set("god_ascend_all_branches", counts.Min());
         Counters.Set("god_ascend_Envy", envy);
         Counters.Set("god_ascend_both", Math.Min(envy, suspicion)); // >=90 용. "<=20" 판정(g076)은 최댓값이 필요해 이 키로는 정확하지 않다

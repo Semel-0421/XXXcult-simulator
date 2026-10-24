@@ -84,10 +84,15 @@ public class AchievementCondition
         return key.Contains('_');
     }
 
-    static int ReadCounter(string key)
+    // 판정마다 불리므로 키 해석(모드별 업적 수인지)은 파싱할 때 한 번만 한다
+    static Func<int> CounterReader(string key)
     {
-        if (key.EndsWith("_achv")) return Achievements.CountedUnlocked(key.Substring(0, key.Length - 5));
-        return Counters.Read(key);
+        if (key.EndsWith("_achv", StringComparison.Ordinal))
+        {
+            var mode = key.Substring(0, key.Length - 5);
+            return () => Achievements.CountedUnlocked(mode);
+        }
+        return () => Counters.Read(key);
     }
 
     static Func<bool> ParseCounter(string token, string whole)
@@ -95,13 +100,14 @@ public class AchievementCondition
         var m = CounterPattern.Match(StripNew(token));
         if (!m.Success) throw new ArgumentException($"잘못된 업적 조건 '{token}' ({whole})");
         var key = m.Groups["key"].Value;
-        if (!m.Groups["op"].Success) return () => ReadCounter(key) >= 1;
+        var read = CounterReader(key);
+        if (!m.Groups["op"].Success) return () => read() >= 1;
         var n = int.Parse(m.Groups["value"].Value);
         switch (m.Groups["op"].Value)
         {
-            case ">=": return () => ReadCounter(key) >= n;
-            case "<=": return () => Counters.Has(key) && ReadCounter(key) <= n; // 아직 세지 않은 값은 미달성
-            default: return () => Counters.Has(key) && ReadCounter(key) == n;
+            case ">=": return () => read() >= n;
+            case "<=": return () => Counters.Has(key) && read() <= n; // 아직 세지 않은 값은 미달성
+            default: return () => Counters.Has(key) && read() == n;
         }
     }
 

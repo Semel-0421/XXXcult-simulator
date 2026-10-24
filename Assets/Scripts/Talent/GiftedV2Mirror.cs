@@ -167,7 +167,8 @@ public static class GiftedV2Mirror
         var ownership = Achievements.V2OwnershipOn ? 1 : 0;
         var adult = GiftedV2Effects.AdultEnabled() ? 1 : 0;
         var unlockedCount = Profile.UnlockedCount;
-        return ((mode.GetHashCode() * 31 + ownership) * 31 + adult) * 31 + unlockedCount;
+        var forced = Achievements.ForceGiftedV2 switch { null => 0, true => 1, false => 2 }; // 시뮬 배치(전부/없음)가 바뀌면 다시 계산
+        return (((mode.GetHashCode() * 31 + ownership) * 31 + adult) * 31 + unlockedCount) * 31 + forced;
     }
 
     public static bool On(string id)

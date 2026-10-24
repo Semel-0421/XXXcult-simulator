@@ -46,7 +46,7 @@ public class GodPressure
 
     public int Stage(Pressure pressure, CultStatus cult)
     {
-        var nodes = tree.Learned.Select(GodSkillCatalog.Find).Where(s => s != null).Sum(s => s.PressureWeight); // 바깥 노드는 절반
+        var nodes = tree.PressureNodeWeight; // 바깥 노드는 0.75
         return pressure == Pressure.Heaven
             ? StageOf(HeavenScale(cult) + nodes * HeavenPerNode + Depth(Pressure.Earth) * HeavenPerDepth + Envy, HeavenSteps)
             : StageOf(EarthScale(cult) + (buildings?.Value ?? 0) + nodes * EarthPerNode + Depth(Pressure.Heaven) * EarthPerDepth + Suspicion, EarthSteps);
@@ -62,7 +62,20 @@ public class GodPressure
     public static Pressure Guards(GodSkill skill) => skill.IsDivine ? Pressure.Heaven : Pressure.Earth;
 
     // 이 축을 막는 계열로 쌓은 깊이 보너스 합
-    int Depth(Pressure guarded) => tree.Learned.Select(GodSkillCatalog.Find)
+    int Depth(Pressure guarded)
+    {
+        if (depthVersion != tree.Version)
+        {
+            depthVersion = tree.Version;
+            depthHeaven = ComputeDepth(Pressure.Heaven);
+            depthEarth = ComputeDepth(Pressure.Earth);
+        }
+        return guarded == Pressure.Heaven ? depthHeaven : depthEarth;
+    }
+
+    int depthVersion = -1, depthHeaven, depthEarth; // tree.Version 키 캐시
+
+    int ComputeDepth(Pressure guarded) => tree.Learned.Select(GodSkillCatalog.Find)
         .Where(s => s != null && s.Branch != GodBranch.None && Guards(s) == guarded).Sum(DepthBonus);
 
     // 0~0.9

@@ -70,7 +70,7 @@ g068,god,도전,느린 승천,Slow Ascension,신으로 50년 이상 버틴 뒤 �
 g069,god,도전,건물 없는 신,Godless Architecture,건물을 하나도 짓지 않고 승천했다.,Ascended without building anything.,NEW:god_ascend_buildings==0,2,
 g070,god,도전,기적 없는 승천,Ascent Without Wonders,이적을 한 번도 쓰지 않고 승천했다.,Ascended without using a single Wonder.,NEW:god_ascend_Wonder==0,2,
 g071,god,도전,치유 없는 승천,Ascent Without Healing,치유를 한 번도 쓰지 않고 승천했다.,Ascended without ever healing.,NEW:god_ascend_Healing==0,2,
-g072,god,도전,한 갈래의 신,One-Branch God,익힌 노드의 80% 이상이 한 갈래인 채로 승천했다.,Ascended with 80%+ of your learned nodes in one branch.,NEW:god_ascend_single_branch,2,
+g072,god,도전,두 갈래의 신,Two-Branch God,두 핵의 갈래 밖 노드를 하나도 익히지 않고 승천했다.,Ascended without learning any node outside your two core branches.,NEW:god_ascend_single_branch,2,
 g073,god,도전,네 갈래의 신,Four-Branch God,네 갈래 모두 20개 이상 익히고 승천했다.,Ascended with 20+ nodes in every branch.,NEW:god_ascend_all_branches>=20,2,
 g074,god,도전,시기의 정점,Peak of Envy,하늘의 시기 95 이상에서 승천했다.,Ascended while Envy was 95 or higher.,NEW:god_ascend_Envy>=95,2,
 g075,god,도전,두 압력의 정점,Both Pressures Peak,시기와 의심이 모두 90 이상일 때 승천했다.,Ascended with both Envy and Suspicion at 90+.,NEW:god_ascend_both>=90,2,

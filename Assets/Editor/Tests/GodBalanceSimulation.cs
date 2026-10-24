@@ -127,13 +127,14 @@ public static class GodSimulation
             .Append(GodSkillCatalog.Ascension).ToList();
         tree.ChooseNature(plan.First(s => s.IsOuter)); // 첫 목표 가지의 바깥 노드 하나를 본성으로
         // 다섯 건물을 모두 짓도록 해금 노드와 그 선행(바깥쪽 자식 전부)을 먼저 찍는다
-        plan = GodBuildings.UnlockNodes.Keys.Select(GodSkillCatalog.Find).SelectMany(Subtree).OrderBy(s => s.Ring)
-            .Concat(plan).Distinct().ToList();
+        if (hunt?.PureTwo != true) // 두 갈래만 목표(g072)면 다른 가지의 건물 해금 노드를 찍지 않는다
+            plan = GodBuildings.UnlockNodes.Keys.Select(GodSkillCatalog.Find).SelectMany(Subtree).OrderBy(s => s.Ring)
+                .Concat(plan).Distinct().ToList();
 
         Endings.Ending ending = null;
         int maxHeaven = 0, maxEarth = 0;
         float penalty = 0;
-        while (ending == null && GameSession.CultTime.Years < MaxCultYears)
+        while (ending == null && GameSession.CultTime.Years < (hunt?.MaxYears ?? MaxCultYears))
         {
             maxHeaven = Math.Max(maxHeaven, GameSession.God.Pressure.Stage(Pressure.Heaven, GameSession.Cult));
             maxEarth = Math.Max(maxEarth, GameSession.God.Pressure.Stage(Pressure.Earth, GameSession.Cult));
@@ -199,6 +200,7 @@ public static class GodSimulation
             foreach (var skill in plan)
             {
                 if (state.Tree.IsLearned(skill) || !state.Tree.CanLearn(skill, state.Available)) continue;
+                if (skill.IsCenter && hunt != null && GameSession.CultTime.Years < hunt.HoldAscension) continue; // 느린 승천 목표: 그때까지 승천을 미룬다
                 state.Tree.Learn(skill, state.Available);
                 learned = true;
                 break;
@@ -213,6 +215,7 @@ public static class GodSimulation
 
     static bool Consecrate()
     {
+        if (hunt?.NoBuild == true) return false;
         var god = GameSession.God;
         var cult = GameSession.Cult;
         // 가장 낮은 건물부터 (앞 순서만 짓지 않게). 판당 한두 채라 같은 레벨이면 쉼터 다음 누적 건설이 적은 것부터 돌아가며 짓는다
@@ -296,12 +299,176 @@ public static class GodSimulation
     {
         var personal = GameSession.Personal;
         var cult = GameSession.Cult;
-        if (personal[PersonalStatId.Health].Value <= 25 || personal[PersonalStatId.Mentality].Value <= 25) return CultAction.Desire;
+        var h = hunt;
+        var defeat = h?.Defeat;
+        if (defeat != Defeat.Vessel && (personal[PersonalStatId.Health].Value <= 25 || personal[PersonalStatId.Mentality].Value <= 25)) return Allow(CultAction.Desire);
         if (cult[StatId.Communion].Value < GodRules.CommunionCost(CultAction.Proselytize)) return CultAction.Pray;
-        if (cult[StatId.Reputation].Value < 300) return CultAction.Serve;       // 지상 압박 대응
-        if (cult[StatId.FollowerFaith].Value < 300) return CultAction.Preach;   // 신계 압박 대응
-        if (cult[StatId.Followers].Value < 30) return CultAction.Proselytize;
-        return CultAction.Proselytize;
+        // 사냥 목표 행동: 패배를 노리지 않으면 명망·믿음이 위험할 때는 미룬다
+        bool danger = defeat == null && (cult[StatId.Reputation].Value < 200 || cult[StatId.FollowerFaith].Value < 200);
+        if (h?.Focus is { } focus && !danger && cult[StatId.Communion].Value >= GodRules.CommunionCost(focus)) return focus;
+        if (defeat == null)
+        {
+            if (cult[StatId.Reputation].Value < 300) return Allow(CultAction.Serve);       // 지상 압박 대응
+            if (cult[StatId.FollowerFaith].Value < 300) return Allow(CultAction.Preach);   // 신계 압박 대응
+        }
+        return Allow(CultAction.Proselytize);
+    }
+
+    // 사냥 목표가 피하라는 행동이면 다음 후보로
+    static CultAction Allow(CultAction action)
+    {
+        if (hunt == null || !hunt.Avoid.Contains(action)) return action;
+        foreach (var other in new[] { CultAction.Preach, CultAction.Pray, CultAction.Proselytize, CultAction.Desire, CultAction.Serve })
+            if (!hunt.Avoid.Contains(other)) return other;
+        return action;
+    }
+
+    // ---- 업적 사냥 봇: 판마다 아직 못 딴 신 업적을 골라 그 판의 목표로 삼는다 ----
+    internal enum Defeat { Vessel, Forgotten, Disbanded }
+
+    internal class Hunt
+    {
+        public GodBranch First, Second;
+        public Strategy Strategy;
+        public CultAction? Focus;
+        public readonly HashSet<CultAction> Avoid = new();
+        public bool NoBuild, PureTwo;
+        public Defeat? Defeat;
+        public int HoldAscension, MaxYears = MaxCultYears;
+        public readonly List<string> Goals = new();
+    }
+
+    static Hunt hunt;
+
+    static readonly (string id, GodBranch a, GodBranch b)[] EndingGoals =
+    {
+        ("g012", GodBranch.Miracle, GodBranch.Prophecy), ("g013", GodBranch.Miracle, GodBranch.Mercy), ("g014", GodBranch.Miracle, GodBranch.Desire),
+        ("g015", GodBranch.Prophecy, GodBranch.Mercy), ("g016", GodBranch.Prophecy, GodBranch.Desire), ("g017", GodBranch.Mercy, GodBranch.Desire),
+    };
+
+    // 행동 횟수 업적 (판 안에서 N번)·그릇 회복 업적: 그 행동으로 밀어준다
+    static readonly (string id, CultAction action)[] ActionGoals =
+    {
+        ("g031", CultAction.Desire), ("g030", CultAction.Desire), ("g029", CultAction.Serve), ("g028", CultAction.Serve),
+        ("g027", CultAction.Preach), ("g026", CultAction.Preach), ("g025", CultAction.Proselytize), ("g024", CultAction.Proselytize),
+        ("g033", CultAction.Pray), ("g032", CultAction.Pray), ("g093", CultAction.Desire), ("g092", CultAction.Desire),
+    };
+
+    // 목표마다 시도한 판 수 (플레이어마다 비움). 세 번 해도 못 따면 다른 목표로 넘어간다
+    static readonly Dictionary<string, int> attempts = new();
+    const int MaxAttempts = 3;
+
+    // 한 판에 주 목표는 하나만: 승천 조합(엔딩)은 항상 함께, 나머지는 우선순위대로 하나를 고른다
+    static Hunt PlanHunt(int run, Random rng)
+    {
+        bool Locked(string id) => !Profile.IsUnlocked(id);
+        bool Open(string goal, params string[] ids) => ids.Any(Locked) && (attempts.TryGetValue(goal, out var n) ? n : 0) < MaxAttempts;
+        var h = new Hunt { Strategy = Strategy.Rush };
+        var pair = EndingGoals.FirstOrDefault(g => Open(g.id, g.id));
+        if (pair.id != null) { (h.First, h.Second) = (pair.a, pair.b); Mark(h, pair.id); }
+        else
+        {
+            var all = new[] { GodBranch.Miracle, GodBranch.Prophecy, GodBranch.Mercy, GodBranch.Desire };
+            h.First = all[rng.Next(4)];
+            h.Second = all.Where(b => b != h.First).ElementAt(rng.Next(3));
+            h.Strategy = (Strategy)rng.Next(3);
+        }
+
+        // 패배 엔딩: 네 판에 한 번 (승천 목표와 같이 하지 않음)
+        if (run % 4 == 0)
+        {
+            Defeat? defeat = Open("vessel", "g018", "g087") ? Defeat.Vessel : Open("forgotten", "g019") ? Defeat.Forgotten : Open("disbanded", "g020") ? Defeat.Disbanded : null;
+            if (defeat != null)
+            {
+                h.Defeat = defeat;
+                h.HoldAscension = int.MaxValue;
+                h.Goals.Clear();
+                Mark(h, defeat.ToString().ToLowerInvariant());
+                switch (defeat)
+                {
+                    case Defeat.Vessel: h.Avoid.Add(CultAction.Desire); h.Focus = CultAction.Proselytize; break; // 향연(그릇 회복)을 끊는다
+                    case Defeat.Forgotten: h.Avoid.Add(CultAction.Preach); h.Focus = CultAction.Desire; break;    // 믿음을 깎는다
+                    default: h.Avoid.Add(CultAction.Serve); h.Focus = CultAction.Desire; break;                   // 명망을 깎아 해산
+                }
+                return h;
+            }
+        }
+
+        if (Open("g072", "g072")) { h.Strategy = Strategy.Rush; h.PureTwo = true; Mark(h, "g072"); return h; } // 두 핵 가지만 찍는다
+        foreach (var (id, action) in ActionGoals)
+            if (Open(id, id)) { h.Focus = action; Mark(h, id); return h; }
+        if (Open("envy", "g046", "g048", "g074")) { h.Focus = CultAction.Preach; h.Avoid.Add(CultAction.Pray); Mark(h, "envy"); return h; }
+        if (Open("suspicion", "g049", "g051", "g075")) { h.Focus = CultAction.Proselytize; h.Avoid.Add(CultAction.Serve); Mark(h, "suspicion"); return h; }
+        if (Open("g069", "g069")) { h.NoBuild = true; Mark(h, "g069"); return h; }
+        if (Open("g070", "g070")) { h.Avoid.Add(CultAction.Proselytize); Mark(h, "g070"); return h; }
+        if (Open("g071", "g071")) { h.Avoid.Add(CultAction.Serve); Mark(h, "g071"); return h; } // 명망은 쉼터 하한에 맡긴다
+        if (Open("g057", "g057")) { h.HoldAscension = 100; h.MaxYears = 110; Mark(h, "g057"); return h; }
+        if (Open("slow", "g056", "g068")) { h.HoldAscension = 50; Mark(h, "slow"); return h; }
+        if (Open("faith", "g066", "g090")) { h.HoldAscension = MaxCultYears - 5; Mark(h, "faith"); return h; }
+        return h;
+    }
+
+    static void Mark(Hunt h, string goal)
+    {
+        h.Goals.Add(goal);
+        attempts[goal] = (attempts.TryGetValue(goal, out var n) ? n : 0) + 1;
+    }
+
+    // 업적 사냥 봇 players명 × runs판. Temp/hunt_report.txt (끝나면 Temp/hunt_done.txt)
+    public static void HuntProbe(int players = 10, int runs = 10, int seed = 20261025)
+    {
+        var done = Path.Combine("Temp", "hunt_done.txt");
+        if (File.Exists(done)) File.Delete(done);
+        var godIds = AchievementCatalogV2.All.Where(a => a.Mode == "god").Select(a => a.Id).ToList();
+        var prevPath = Profile.Path;
+        var prevEnabled = Profile.Enabled;
+        var log = new StringBuilder();
+        var timer = System.Diagnostics.Stopwatch.StartNew();
+        var perRun = new double[runs + 1];
+        var unlockedBy = godIds.ToDictionary(id => id, _ => 0);
+        var endings = new Dictionary<string, int>();
+        try
+        {
+            Profile.InMemory = true;
+            Profile.Path = Path.Combine(Path.GetTempPath(), "xxxcult_hunt_unused.json");
+            Profile.Enabled = true;
+            for (int p = 0; p < players; p++)
+            {
+                Profile.Reset();
+                var rng = new Random(seed + p * 7919);
+                attempts.Clear();
+                for (int r = 1; r <= runs; r++)
+                {
+                    hunt = PlanHunt(r, rng);
+                    var goals = string.Join(",", hunt.Goals);
+                    var result = PlayRun(r, hunt.First, hunt.Second, rng.Next(), hunt.Strategy);
+                    hunt = null;
+                    endings[result.EndingId] = endings.TryGetValue(result.EndingId, out var n) ? n + 1 : 1;
+                    var count = godIds.Count(Profile.IsUnlocked);
+                    perRun[r] += count;
+                    if (p == 0) log.AppendLine($"  판{r,2}: {result.EndingId,-22} {result.Years,3}년 누적 {count}/{godIds.Count}  목표 {goals}");
+                }
+                foreach (var id in godIds.Where(Profile.IsUnlocked)) unlockedBy[id]++;
+            }
+        }
+        catch (Exception e) { log.AppendLine("fail " + e); }
+        finally
+        {
+            hunt = null;
+            Profile.Enabled = prevEnabled;
+            Profile.InMemory = false;
+            Profile.Path = prevPath;
+            GameSession.StartNew(1);
+        }
+        var head = new StringBuilder();
+        head.AppendLine($"[업적 사냥 봇 · god] {players}명 × {runs}판, {timer.Elapsed.TotalSeconds:F1}초");
+        head.AppendLine($"판별 평균 누적 해금 ({godIds.Count}개 중): " + string.Join(" ", Enumerable.Range(1, runs).Select(r => $"{r}:{perRun[r] / players:F1}")));
+        head.AppendLine("엔딩: " + string.Join(", ", endings.OrderByDescending(e => e.Value).Select(e => $"{e.Key} {e.Value}")));
+        head.AppendLine($"모든 플레이어가 딴 업적 {unlockedBy.Count(u => u.Value == players)}개, 아무도 못 딴 업적 {unlockedBy.Count(u => u.Value == 0)}개");
+        head.AppendLine($"못 딴 업적 (딴 플레이어 수/{players}): " + string.Join(" ", unlockedBy.Where(u => u.Value < players).Select(u => $"{u.Key}:{u.Value}")));
+        head.AppendLine("플레이어 1 판별 기록:");
+        File.WriteAllText(Path.Combine("Temp", "hunt_report.txt"), head.ToString() + log, new UTF8Encoding(false));
+        File.WriteAllText(done, "ok");
     }
 
     static float Weight(PersonalStatId id)

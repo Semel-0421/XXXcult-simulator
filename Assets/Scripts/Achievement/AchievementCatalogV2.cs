@@ -212,7 +212,7 @@ public static class AchievementCatalogV2
         new("g069", "건물 없는 신\u001FGodless Architecture", "건물을 하나도 짓지 않고 승천했다.\u001FAscended without building anything.", "NEW:god_ascend_buildings==0", AchievementReward.None, "god", 2, false, false),
         new("g070", "기적 없는 승천\u001FAscent Without Wonders", "이적을 한 번도 쓰지 않고 승천했다.\u001FAscended without using a single Wonder.", "NEW:god_ascend_Wonder==0", AchievementReward.None, "god", 2, false, false),
         new("g071", "치유 없는 승천\u001FAscent Without Healing", "치유를 한 번도 쓰지 않고 승천했다.\u001FAscended without ever healing.", "NEW:god_ascend_Healing==0", AchievementReward.None, "god", 2, false, false),
-        new("g072", "한 갈래의 신\u001FOne-Branch God", "익힌 노드의 80% 이상이 한 갈래인 채로 승천했다.\u001FAscended with 80%+ of your learned nodes in one branch.", "NEW:god_ascend_single_branch", AchievementReward.None, "god", 2, false, false),
+        new("g072", "두 갈래의 신\u001FTwo-Branch God", "두 핵의 갈래 밖 노드를 하나도 익히지 않고 승천했다.\u001FAscended without learning any node outside your two core branches.", "NEW:god_ascend_single_branch", AchievementReward.None, "god", 2, false, false),
         new("g073", "네 갈래의 신\u001FFour-Branch God", "네 갈래 모두 20개 이상 익히고 승천했다.\u001FAscended with 20+ nodes in every branch.", "NEW:god_ascend_all_branches>=20", AchievementReward.None, "god", 2, false, false),
         new("g074", "시기의 정점\u001FPeak of Envy", "하늘의 시기 95 이상에서 승천했다.\u001FAscended while Envy was 95 or higher.", "NEW:god_ascend_Envy>=95", AchievementReward.None, "god", 2, false, false),
         new("g075", "두 압력의 정점\u001FBoth Pressures Peak", "시기와 의심이 모두 90 이상일 때 승천했다.\u001FAscended with both Envy and Suspicion at 90+.", "NEW:god_ascend_both>=90", AchievementReward.None, "god", 2, false, false),

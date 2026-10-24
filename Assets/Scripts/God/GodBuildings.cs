@@ -18,7 +18,7 @@ public class GodBuildings
     public static float DissolutionChance(int broadRings) => DissolutionChancePerQuarter * System.Math.Max(0f, 1f - BroadDissolutionCut * broadRings);
     static readonly int[] Cost = { 30, 60, 120, 200, 300 };
     static readonly int[] FloorPercent = { 5, 10, 15, 22, 30 }; // 최대치 대비 하한 (최대 30%)
-    static readonly int[] Upkeep = { 0, 5, 10, 20, 30 };
+    static readonly int[] Upkeep = { 5, 10, 20, 35, 50 };
     static readonly int[] FollowerFloor = { 10, 20, 40, 70, 100 }; // 신도 수는 최대치가 없어 고정 인원
 
     public static readonly GodBuildingType[] All = (GodBuildingType[])Enum.GetValues(typeof(GodBuildingType));

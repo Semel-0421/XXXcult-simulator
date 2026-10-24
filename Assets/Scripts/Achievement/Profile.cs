@@ -40,6 +40,9 @@ public static class Profile
     }
 
     public static int UnlockedCount { get { Load(); return unlocked.Count; } }
+    // 해금 집합이 바뀔 때마다 오른다 (불러오기·새 해금). 해금 수 캐시의 키
+    public static int UnlockVersion { get { Load(); return unlockVersion; } }
+    static int unlockVersion;
     public static IReadOnlyCollection<string> Unlocked { get { Load(); return unlocked; } }
 
     public static bool IsUnlocked(string id) { Load(); return unlocked.Contains(id); }
@@ -51,7 +54,7 @@ public static class Profile
     public static void MarkUnlocked(string id)
     {
         Load();
-        if (unlocked.Add(id)) Save();
+        if (unlocked.Add(id)) { unlockVersion++; Save(); }
     }
 
     public static void Count(string key, int amount = 1)
@@ -75,6 +78,7 @@ public static class Profile
     {
         if (unlocked != null) return;
         unlocked = new HashSet<string>();
+        unlockVersion++;
         counters = new Dictionary<string, int>();
         var data = InMemory ? null : SafeFile.Read(Path, text => JsonUtility.FromJson<Data>(text)); // 깨졌으면 .bak, 그것도 없으면 빈 상태
         if (data == null) return;

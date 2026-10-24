@@ -20,8 +20,24 @@ public static class Achievements
 
     // 총 업적 수(achv 조건·진행 표시)에 셀 대상: 히든·성인 제외. mode가 null이면 전체.
     public static IEnumerable<Achievement> Counted => All.Where(a => !a.Hidden && !a.Adult);
-    public static int CountedUnlocked(string mode = null) =>
-        Counted.Count(a => (mode == null || a.Mode == mode) && Profile.IsUnlocked(a.Id));
+    // 판정마다 여러 번 불려 Profile.UnlockVersion을 키로 모드별 결과를 캐시한다
+    public static int CountedUnlocked(string mode = null)
+    {
+        var version = Profile.UnlockVersion;
+        if (version != countedVersion) { countedCache.Clear(); countedVersion = version; }
+        var key = mode ?? "";
+        if (countedCache.TryGetValue(key, out var n)) return n;
+        counted ??= Counted.ToArray();
+        n = 0;
+        foreach (var a in counted)
+            if ((mode == null || a.Mode == mode) && Profile.IsUnlocked(a.Id)) n++;
+        countedCache[key] = n;
+        return n;
+    }
+
+    static Achievement[] counted;
+    static readonly Dictionary<string, int> countedCache = new();
+    static int countedVersion = -1;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     static void EnableInPlayer() => Profile.Enabled = true;
