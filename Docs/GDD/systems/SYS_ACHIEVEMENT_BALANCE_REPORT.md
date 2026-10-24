@@ -374,24 +374,24 @@ CSV(`Docs/achievements_v2_*.csv`)를 고친 뒤 `Docs/gen_achievements_v2_cs.py`
 | g033 | 4 | `NEW:god_act_Commune>=100` | 100.0 | 7 | >=360 |
 | g034 | 2 | `NEW:god_act_Consecrate>=30` | 0.0 | - | >=17 |
 | g035 | 4 | `NEW:god_act_Consecrate>=100` | 0.0 | - | >=21 |
-| g036 | 1 | `NEW:god_build_Statue>=1` | 98.3 | 6 | >=5 |
-| g037 | 4 | `NEW:god_build_Statue>=10` | 0.0 | - | >=8 |
-| g038 | 1 | `NEW:god_build_Temple>=1` | 5.0 | 8 | 목표 도달률을 만들 수 없음(대부분 0) |
-| g039 | 4 | `NEW:god_build_Temple>=10` | 0.0 | - | 목표 도달률을 만들 수 없음(대부분 0) |
-| g040 | 1 | `NEW:god_build_Library>=1` | 0.0 | - |  |
-| g041 | 4 | `NEW:god_build_Library>=10` | 0.0 | - |  |
-| g042 | 1 | `NEW:god_build_Village>=1` | 8.3 | 15 | 목표 도달률을 만들 수 없음(대부분 0) |
-| g043 | 4 | `NEW:god_build_Village>=10` | 0.0 | - | 목표 도달률을 만들 수 없음(대부분 0) |
-| g044 | 1 | `NEW:god_build_Shelter>=1` | 100.0 | 3 | >=9 |
-| g045 | 4 | `NEW:god_build_Shelter>=10` | 46.7 | 18 | >=13 |
+| g036 | 1 | `profile:god_build_Statue>=1` | 98.3 | 6 | >=4 |
+| g037 | 4 | `profile:god_build_Statue>=10` | 1.7 | 20 |  |
+| g038 | 1 | `profile:god_build_Temple>=1` | 8.3 | 18 | 목표 도달률을 만들 수 없음(대부분 0) |
+| g039 | 4 | `profile:god_build_Temple>=10` | 0.0 | - | 목표 도달률을 만들 수 없음(대부분 0) |
+| g040 | 1 | `profile:god_build_Library>=1` | 0.0 | - |  |
+| g041 | 4 | `profile:god_build_Library>=10` | 0.0 | - |  |
+| g042 | 1 | `profile:god_build_Village>=1` | 1.7 | 19 | 목표 도달률을 만들 수 없음(대부분 0) |
+| g043 | 4 | `profile:god_build_Village>=10` | 0.0 | - | 목표 도달률을 만들 수 없음(대부분 0) |
+| g044 | 1 | `profile:god_build_Shelter>=1` | 100.0 | 3 | >=8 |
+| g045 | 4 | `profile:god_build_Shelter>=10` | 45.0 | 17 | >=14 |
 | g046 | 3 | `NEW:god_Envy>=95` | 0.0 | - | >=78 |
 | g047 | 3 | `NEW:god_Envy_low10y>=1` | 40.0 | 3 | >=1 |
 | g048 | 3 | `NEW:god_Envy_peak95_ascend` | 0.0 | - |  |
 | g049 | 3 | `NEW:god_Suspicion>=95` | 38.3 | 5 | >=100 |
 | g050 | 3 | `NEW:god_Suspicion_low10y>=1` | 81.7 | 2 | >=1 |
 | g051 | 3 | `NEW:god_Suspicion_peak95_ascend` | 36.7 | 7 |  |
-| g052 | 1 | `NEW:god_seized>=1` | 28.3 | 13 | 목표 도달률을 만들 수 없음(대부분 0) |
-| g053 | 3 | `NEW:god_seized>=15` | 0.0 | - | >=1 |
+| g052 | 1 | `profile:god_seized>=1` | 28.3 | 14 | 목표 도달률을 만들 수 없음(대부분 0) |
+| g053 | 3 | `profile:god_seized>=15` | 0.0 | - | >=1 |
 | g054 | 1 | `NEW:god_years>=1` | 100.0 | 1 | >=24 |
 | g055 | 2 | `NEW:god_years>=10` | 100.0 | 1 | >=24 |
 | g056 | 3 | `NEW:god_years>=50` | 0.0 | - | >=26 |
@@ -429,9 +429,9 @@ CSV(`Docs/achievements_v2_*.csv`)를 고친 뒤 `Docs/gen_achievements_v2_cs.py`
 | g088 | 2 | `NEW:god_ascend_after_fail` | 53.3 | 8 |  |
 | g089 | 2 | `NEW:god_consecrated>=10` | 86.7 | 15 | >=17 |
 | g090 | 3 | `NEW:god_faith_points>=50000` | 0.0 | - | >=2300 |
-| g091 | 1 | `NEW:god_vessel_recovery>=1` | 100.0 | 2 | >=19 |
-| g092 | 2 | `NEW:god_vessel_recovery>=10` | 85.0 | 9 | >=34 |
-| g093 | 3 | `NEW:god_vessel_recovery>=30` | 36.7 | 16 | >=45 |
+| g091 | 1 | `profile:god_vessel_recovery>=1` | 100.0 | 2 | >=20 |
+| g092 | 2 | `profile:god_vessel_recovery>=10` | 88.3 | 8 | >=35 |
+| g093 | 3 | `profile:god_vessel_recovery>=30` | 40.0 | 15 | >=53 |
 
 ### mirror
 
@@ -584,3 +584,11 @@ CSV(`Docs/achievements_v2_*.csv`)를 고친 뒤 `Docs/gen_achievements_v2_cs.py`
 - 너무 어려움(0%): 일반 행동 숙련(n101~n118), 기프티드 개수(n166~n172), 나이 80·100, 거울 교리(m042~m051), 신 연수 50·100.
 - 수치가 아니라 기록 누락: n196~n198(성인, 봇 미지원), g040·g041(도서관), m091~m099(거울 이벤트 누적).
 - 20판 한계로 판단 불가: 회차·엔딩·업적 누적(runs>=30, endings_seen>=30, achv>=200, god_ascended>=20 등).
+
+## 재시뮬레이션 (2026-10-25, 누적 업적 범위 수정 후, 신 스타일당 20명×20판)
+- 수정: g036~g045·g052·g053·g091~g093 조건을 `NEW:` → `profile:`로 바꾸고, `profile:`은 카운터의 누적 범위만 읽게 함(SYS_ACHIEVEMENTS_V2 "누적 업적의 카운터 범위").
+- 도달률 변화(이전 → 이후, 플레이어%): g037 0 → 1.7, g038 5.0 → 8.3, g042 8.3 → 1.7, g045 46.7 → 45.0, g092 85.0 → 88.3, g093 36.7 → 40.0. 나머지 9개는 같음.
+- 변화가 작은 이유: 전에도 다음 판에서 그 건물을 짓기 전까지는 누적값으로 판정돼 대부분 늦게라도 달성됐음. 이번 수정으로 판정 시점이 정확해짐.
+- 이전 수치는 봇 건설 순서 수정 전 결과라, g038·g042 차이는 그 영향과 표본 흔들림이 섞여 있음.
+- 여전히 0%: g039·g041·g043(건물 10), g040(도서관 1), g053(빼앗김 15). 봇이 도서관 해금 노드(`t_wealth_def`)를 찍지 않아 도서관은 기록이 없음.
+- 수치는 바꾸지 않음. 위 8. 전체 표의 해당 15행은 이번 결과로 갱신함.

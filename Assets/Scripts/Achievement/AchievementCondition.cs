@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 //   c:KEY>=N                           이번 판 카운터 (events, choice_ok, act_Preach ...)
 //   p:Stat>=N  s:Stat>=N               개인 스탯 / 교단 스탯 값 (s는 교단 창설 후에만)
 //   standing>=Name  standing<=Name     사회적 시선 단계 (교단 창설 후에만)
-//   profile:KEY>=N                     여러 판에 걸친 카운터 (runs, dissolved, founded). Profile에 없는 키는 Counters.Read로 읽음
+//   profile:KEY>=N                     여러 판에 걸친 카운터 (runs, dissolved, founded). Profile에 없는 키는 카운터의 누적(Profile) 범위로 읽음
 //   NEW:KEY>=N  NEW:KEY<=N  NEW:KEY==N Counters.Read(KEY) 비교. NEW: 뒤 토큰은 접두어 없이 '_' 가 든 이름이면 카운터 키로 봄
 //   KEY (연산자 없음)                  카운터 KEY >= 1
 //   TOKEN for Ny                       TOKEN 이 N년 연속 유지됨: 카운터 "hold:TOKEN" >= N (게임 쪽이 해마다 올리고 깨지면 0으로 Set)
@@ -107,8 +107,9 @@ public class AchievementCondition
 
     static Func<bool> CompareProfile(string name, int target, bool atLeast)
     {
-        if (atLeast) return () => (Profile.Has(name) ? Profile.CountOf(name) : Counters.Read(name)) >= target;
-        return () => (Profile.Has(name) || Counters.Has(name)) && (Profile.Has(name) ? Profile.CountOf(name) : Counters.Read(name)) <= target;
+        // 누적값만 본다: 판·누적 양쪽에 기록되는 카운터(god_build_* 등)도 이번 판 값이 끼어들지 않게
+        if (atLeast) return () => (Profile.Has(name) ? Profile.CountOf(name) : Counters.Get(name)) >= target;
+        return () => (Profile.Has(name) || Counters.Has(name)) && (Profile.Has(name) ? Profile.CountOf(name) : Counters.Get(name)) <= target;
     }
 
     static Func<bool> ParseToken(string token, string whole)

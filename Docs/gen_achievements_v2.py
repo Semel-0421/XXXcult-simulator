@@ -201,14 +201,14 @@ def god():
             nm_ko = [f"첫 {ko}", f"{ko} 세 곳", f"{ko} 다섯 곳", f"{ko}의 도시"][i]
             nm_en = [f"First {en[:-1] if en.endswith('s') and key != 'Library' else en}", f"Three {en}", f"Five {en}", f"City of {en}"][i]
             if key == "Library": nm_en = [f"First Library", f"Three Libraries", f"Five Libraries", f"City of Libraries"][i]
-            m.add("건축", nm_ko, nm_en, f"{ko}을(를) 누적 {n}개 지었다 (모든 회차 합산).", f"Built {n} {en.lower()} in total (all runs combined).", f"NEW:god_build_{key}>={n}", i + 1)
+            m.add("건축", nm_ko, nm_en, f"{ko}을(를) 누적 {n}개 지었다 (모든 회차 합산).", f"Built {n} {en.lower()} in total (all runs combined).", f"profile:god_build_{key}>={n}", i + 1)
     for key, ko, en in [("Envy", "하늘의 시기", "Envy of Heaven"), ("Suspicion", "세상의 의심", "Suspicion of the World")]:
         for n, tko, ten in [(50, "절반의", "Half-Raised"), (80, "고조된", "Rising"), (95, "임계의", "Critical")]:
             m.add("압력", f"{tko} {ko}", f"{ten} {en}", f"{ko}이(가) {n}에 이르렀다.", f"{en} reached {n}.", f"NEW:god_{key}>={n}", 1 + (n >= 80) + (n >= 95))
         m.add("압력", f"{ko} 없는 신", f"God Without {en}", f"{ko}을(를) 10 이하로 10년 동안 유지했다.", f"Kept {en} at 10 or below for 10 years.", f"NEW:god_{key}_low10y>=1", 3)
         m.add("압력", f"{ko}를 견디다", f"Withstood {en}", f"{ko}이(가) 95를 넘었다가 끝내 승천했다.", f"Ascended after {en} had passed 95.", f"NEW:god_{key}_peak95_ascend", 3)
     for n, ko, en in [(1, "첫 빼앗김", "First Seizure"), (5, "다섯 번 빼앗기다", "Seized Five Times"), (15, "빼앗기는 일상", "Routine Seizure")]:
-        m.add("압력", ko, en, f"그릇을 누적 {n}번 빼앗겼다 (모든 회차 합산).", f"Had your vessel seized {n} times in total (all runs combined).", f"NEW:god_seized>={n}", 1 + (n >= 5) + (n >= 15))
+        m.add("압력", ko, en, f"그릇을 누적 {n}번 빼앗겼다 (모든 회차 합산).", f"Had your vessel seized {n} times in total (all runs combined).", f"profile:god_seized>={n}", 1 + (n >= 5) + (n >= 15))
     for n, ko, en in [(1, "신의 첫 해", "First Year as a God"), (5, "신의 오 년", "Five Years as a God"), (10, "신의 십 년", "Ten Years as a God"),
                       (25, "신의 사반세기", "A Quarter Century as a God"), (50, "신의 반세기", "Half a Century as a God"), (100, "신의 백 년", "A Century as a God")]:
         m.add("시간", ko, en, f"신으로서 한 회차에 {n}년을 보냈다 (최고 기록).", f"Spent {n} years as a god in a single run (best run).", f"NEW:god_years>={n}", 1 + (n >= 10) + (n >= 50))
@@ -267,9 +267,9 @@ def god():
         ("백 번의 연회", "Hundred Feasts", "연회를 한 회차에 100번 열었다.", "Held 100 feasts in one run.", "NEW:god_run_Feast>=100"),
         ("다섯 성소", "Five Sanctuaries", "건물을 다섯 번 봉헌했다 (신전 한정 아님, 모든 봉헌 합산).", "Consecrated buildings five times (any building, not only temples).", "NEW:god_consecrated>=5"),
         ("성소의 숲", "Forest of Sanctuaries", "건물을 열 번 봉헌했다 (신전 한정 아님, 모든 봉헌 합산).", "Consecrated buildings ten times (any building, not only temples).", "NEW:god_consecrated>=10"),
-        ("하늘 아래 모든 마을", "Every Village Under Heaven", "마을 10곳과 쉼터 10곳을 지었다.", "Built 10 villages and 10 shelters.", "NEW:god_build_Village>=10 god_build_Shelter>=10"),
-        ("지혜의 전당", "Hall of Wisdom", "도서관 10곳을 지었다.", "Built 10 libraries.", "NEW:god_build_Library>=10"),
-        ("경배받는 모습", "Idol Worshiped", "신상 10개를 세웠다.", "Raised 10 statues.", "NEW:god_build_Statue>=10"),
+        ("하늘 아래 모든 마을", "Every Village Under Heaven", "마을 10곳과 쉼터 10곳을 지었다.", "Built 10 villages and 10 shelters.", "profile:god_build_Village>=10 profile:god_build_Shelter>=10"),
+        ("지혜의 전당", "Hall of Wisdom", "도서관 10곳을 지었다.", "Built 10 libraries.", "profile:god_build_Library>=10"),
+        ("경배받는 모습", "Idol Worshiped", "신상 10개를 세웠다.", "Raised 10 statues.", "profile:god_build_Statue>=10"),
     ]
     for ko, en, dko, den, cond in challenge:
         m.add("도전", ko, en, dko, den, cond, 2)
@@ -283,9 +283,9 @@ def god():
     m.add("신앙 포인트", "신앙의 우주", "Cosmos of Faith", "신앙 포인트를 누적 20000 모았다.", "Gathered 20,000 Faith Points in total.", "NEW:god_faith_points>=20000", 3)
     m.add("신앙 포인트", "신앙의 영원", "Eternity of Faith", "신앙 포인트를 누적 50000 모았다.", "Gathered 50,000 Faith Points in total.", "NEW:god_faith_points>=50000", 3)
     m.add("시간", "신의 칠십오 년", "Seventy-Five Years as a God", "신으로서 75년을 보냈다.", "Spent 75 years as a god.", "NEW:god_years>=75", 3)
-    m.add("압력", "빼앗김의 달인", "Veteran of Seizure", "그릇을 30번 빼앗겼다.", "Had your vessel seized 30 times.", "NEW:god_seized>=30", 3)
+    m.add("압력", "빼앗김의 달인", "Veteran of Seizure", "그릇을 30번 빼앗겼다.", "Had your vessel seized 30 times.", "profile:god_seized>=30", 3)
     for n, ko, en in [(1, "그릇의 회복", "Vessel Restored"), (10, "열 번의 회복", "Ten Recoveries"), (30, "끈질긴 그릇", "Persistent Vessel")]:
-        m.add("압력", ko, en, f"연회로 그릇을 누적 {n}번 회복했다.", f"Recovered the vessel {n} times in total through feasts.", f"NEW:god_vessel_recovery>={n}", 1 + (n >= 10) + (n >= 30))
+        m.add("압력", ko, en, f"연회로 그릇을 누적 {n}번 회복했다.", f"Recovered the vessel {n} times in total through feasts.", f"profile:god_vessel_recovery>={n}", 1 + (n >= 10) + (n >= 30))
     return m
 
 # ───────────────────────── 거울 세계 모드 ─────────────────────────

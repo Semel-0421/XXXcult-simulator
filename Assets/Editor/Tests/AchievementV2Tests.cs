@@ -74,6 +74,18 @@ public class AchievementV2Tests
     }
 
     [Test]
+    public void ProfileToken_IgnoresRunValue()
+    {
+        Counters.ClearAll();
+        var cond = AchievementCondition.Parse("profile:v2test_build>=10");
+        Counters.Add("v2test_build", 10);       // 지난 판까지 누적
+        Counters.Add("v2test_build", 1, true);  // 이번 판에서 하나 지음
+        Assert.IsTrue(cond.IsMet());
+        Assert.AreEqual(1, Counters.Read("v2test_build")); // NEW: 조건은 여전히 판 값을 먼저 읽음
+        Counters.ClearAll();
+    }
+
+    [Test]
     public void Tabs_SplitByMode_HiddenTabEmptyUntilUnlocked()
     {
         Assert.AreEqual(93, AchievementTabs.Of(AchievementTabs.Tab.God).Count());

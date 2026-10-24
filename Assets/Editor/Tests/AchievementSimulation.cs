@@ -45,7 +45,7 @@ public static class AchievementSimulation
         if (key.StartsWith("c:")) { var n = key.Substring(2); return () => GameSession.CountOf(n); }
         if (key.StartsWith("p:")) { var st = (PersonalStatId)Enum.Parse(typeof(PersonalStatId), key.Substring(2)); return () => GameSession.Personal[st].Value; }
         if (key.StartsWith("s:")) { var st = (StatId)Enum.Parse(typeof(StatId), key.Substring(2)); return () => GameSession.CultFounded ? GameSession.Cult[st].Value : (int?)null; }
-        if (key.StartsWith("profile:")) { var n = key.Substring(8); return () => Profile.Has(n) ? Profile.CountOf(n) : Counters.Has(n) ? Counters.Read(n) : (int?)null; }
+        if (key.StartsWith("profile:")) { var n = key.Substring(8); return () => Profile.Has(n) ? Profile.CountOf(n) : Counters.Has(n) ? Counters.Get(n) : (int?)null; }
         switch (key)
         {
             case "age": return () => GameSession.Age.Years;
