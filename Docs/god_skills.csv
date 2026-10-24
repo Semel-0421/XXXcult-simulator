@@ -26,9 +26,9 @@ l_mentality_atk2,1,t_mentality_atk,attack,깨어 있는 눈,Wakeful Eyes,잠들�
 t_mentality_def,2,s_mentality,defense,흔들리지 않는 마음,Unshakable Heart,다른 신의 저주가 마음을 흔들지 못합니다.,Other gods' curses cannot shake your heart.,guard:Mentality+8 resist:Heaven+5
 l_mentality_def1,1,t_mentality_def,defense,침묵을 찢는 목소리,Voice That Tears the Silence,묵언회의 침묵이 당신에게 닿지 않습니다.,The Silent Order's silence cannot reach you.,resist:Heaven+5
 l_mentality_def2,1,t_mentality_def,defense,맑은 밤,Clear Nights,악몽 없는 밤이 정신을 지킵니다.,Nights free of nightmares guard your Mentality.,guard:Mentality+5
-s_wealth,3,g_wonder,stat,황금의 손길,Golden Touch,손이 닿는 곳마다 재물이 모여듭니다.,Wealth gathers wherever your hand falls.,gain:Wealth+10 gain:Offerings+5
-t_wealth_atk,2,s_wealth,attack,넘치는 봉헌,Overflowing Offerings,신도들이 앞다투어 봉헌합니다.,Followers scramble to make Offerings.,gain:Offerings+8
-l_wealth_atk1,1,t_wealth_atk,attack,금빛 헌금함,Golden Offering Box,헌금함이 비는 날이 없습니다.,The offering box is never empty.,gain:Offerings+5
+s_wealth,3,g_wonder,stat,황금의 손길,Golden Touch,손이 닿는 곳마다 재물이 모여듭니다.,Wealth gathers wherever your hand falls.,gain:Wealth+10 year:Offerings+10
+t_wealth_atk,2,s_wealth,attack,넘치는 봉헌,Overflowing Offerings,신도들이 앞다투어 봉헌합니다.,Followers scramble to make Offerings.,year:Offerings+15
+l_wealth_atk1,1,t_wealth_atk,attack,금빛 헌금함,Golden Offering Box,헌금함이 비는 날이 없습니다.,The offering box is never empty.,year:Offerings+10
 l_wealth_atk2,1,t_wealth_atk,attack,기적의 축성,Miraculous Consecration,기적으로 건물을 세우는 법을 깨칩니다.,You learn to raise buildings by miracle.,chance:Consecrate+5
 t_wealth_def,2,s_wealth,defense,봉인된 금고,Sealed Vault,교단의 재산이 쉽게 빠져나가지 않습니다.,The cult's Wealth does not easily slip away.,guard:Offerings+8 seize+8
 l_wealth_def1,1,t_wealth_def,defense,숨겨진 장부,Hidden Ledger,조사관이 찾지 못하는 장부가 건물을 지킵니다.,Ledgers the inspectors cannot find protect your buildings.,seize+5

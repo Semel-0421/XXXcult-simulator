@@ -65,6 +65,7 @@ public class GodState
     // 해가 바뀔 때: 건물 유지비, 포인트 적립(압박 단계 보너스·세속 단계 첫 도달 포함)과 해마다 효과
     public void YearEnd(CultStatus cult, PersonalStatus personal)
     {
+        cult[StatId.Offerings].Add(GodBuildings.Tithe(cult[StatId.Followers].Value));
         Buildings.PayUpkeep(cult);
         Points.YearEnd(cult[StatId.Followers].Value, cult[StatId.FollowerFaith].Value, Tree.Total(GodEffect.Type.FaithPoints));
         Points.Add(Pressure.YearPoints(cult)); // 압박 단계 보너스

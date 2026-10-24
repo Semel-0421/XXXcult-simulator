@@ -67,6 +67,22 @@ public class GodBuildingsTests
     }
 
     [Test]
+    public void YearEnd_PaysTitheBeforeUpkeep()
+    {
+        StartWithStatue();
+        var god = GameSession.God;
+        var cult = GameSession.Cult;
+        Assert.IsTrue(god.Buildings.Build(GodBuildingType.Statue, god.Tree, cult));
+        cult[StatId.Communion].Set(10);
+        Assert.IsTrue(god.Buildings.Build(GodBuildingType.Statue, god.Tree, cult));
+        cult[StatId.Offerings].Set(0);
+        cult[StatId.Followers].Set(50);
+        god.YearEnd(cult, GameSession.Personal);
+        Assert.AreEqual(2, god.Buildings.LevelOf(GodBuildingType.Statue), "헌금으로 유지비를 냄");
+        Assert.GreaterOrEqual(cult[StatId.Offerings].Value, GodBuildings.Tithe(50) - GodBuildings.UpkeepOf(2)); // 재력 노드 연 지급은 유지비 뒤에 더해짐
+    }
+
+    [Test]
     public void Seize_LowersHighestBuilding_AndEmptyMeansDissolutionAtEarthFive()
     {
         var buildings = new GodBuildings();

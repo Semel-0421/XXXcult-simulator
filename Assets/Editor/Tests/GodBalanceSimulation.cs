@@ -110,6 +110,7 @@ public static class GodSimulation
     internal static RunResult PlayRun(int run, GodBranch first, GodBranch second, int seed, Strategy strategy)
     {
         GodRules.Begin(seed);
+        if (Trace != null && run == 1) tracePlayer++;
         GameSession.Personal.Gender = seed % 2 == 0 ? Gender.Male : Gender.Female;
         GameSession.MarkStarted();
         GameSession.FoundCult("시뮬신전");
@@ -125,6 +126,9 @@ public static class GodSimulation
             })
             .Append(GodSkillCatalog.Ascension).ToList();
         tree.ChooseNature(plan.First(s => s.IsOuter)); // 첫 목표 가지의 바깥 노드 하나를 본성으로
+        // 다섯 건물을 모두 짓도록 해금 노드와 그 선행(바깥쪽 자식 전부)을 먼저 찍는다
+        plan = GodBuildings.UnlockNodes.Keys.Select(GodSkillCatalog.Find).SelectMany(Subtree).OrderBy(s => s.Ring)
+            .Concat(plan).Distinct().ToList();
 
         Endings.Ending ending = null;
         int maxHeaven = 0, maxEarth = 0;
@@ -138,11 +142,15 @@ public static class GodSimulation
             if ((ending = Progress.ForcedEnding()) != null) break;
             Learn(plan);
             if ((ending = Progress.DueEnding()) != null) break;
-            if (!Consecrate()) Turns.Cult(ChooseAction());
-            if ((ending = Progress.ForcedEnding()) != null) break;
+            var why = Trace != null ? WhyNotBuilt() : null;
+            builtType = null;
+            string act = null;
+            if (!Consecrate()) { var a = ChooseAction(); Turns.Cult(a); act = a.ToString(); }
+            if ((ending = Progress.ForcedEnding()) != null) { TraceTurn(run, act, why); break; }
             var next = Turns.NextCultEvent();
             if (next != null) Turns.Answer(Best(next.Question));
             ending = Progress.ForcedEnding();
+            TraceTurn(run, act, why);
         }
         if (ending != null) Progress.Reach(ending);
 
@@ -207,14 +215,81 @@ public static class GodSimulation
     {
         var god = GameSession.God;
         var cult = GameSession.Cult;
-        foreach (var type in BuildOrder.OrderBy(god.Buildings.LevelOf)) // 가장 낮은 건물부터 (앞 순서만 짓지 않게)
+        // 가장 낮은 건물부터 (앞 순서만 짓지 않게). 판당 한두 채라 같은 레벨이면 쉼터 다음 누적 건설이 적은 것부터 돌아가며 짓는다
+        foreach (var type in BuildOrder.OrderBy(god.Buildings.LevelOf)
+                     .ThenBy(t => t == GodBuildingType.Shelter ? -1 : Counters.Get($"god_build_{t}")))
         {
             if (god.Buildings.Blocker(type, god.Tree, cult) != null) continue;
             var next = god.Buildings.LevelOf(type) + 1;
             if (cult[StatId.Offerings].Value < GodBuildings.CostOf(next) + GodBuildings.UpkeepOf(next) * 2) continue;
+            builtType = type;
             return Turns.Consecrate(type);
         }
         return false;
+    }
+
+    // 진단 기록 (BuildProbe 전용, null이면 끔): 턴마다 행동·봉헌금·압박·건물 레벨
+    internal static StringBuilder Trace;
+    static string traceLabel;
+    static int tracePlayer;
+    static GodBuildingType? builtType;
+
+    // 봇이 이번 턴에 못 짓는 이유: 해금된 건물 중 가장 가까운 것의 막힘 (guard = 유지비 2년치 여유 부족)
+    static string WhyNotBuilt()
+    {
+        var god = GameSession.God;
+        var cult = GameSession.Cult;
+        string best = "none";
+        foreach (var type in BuildOrder.OrderBy(god.Buildings.LevelOf))
+        {
+            var blocker = god.Buildings.Blocker(type, god.Tree, cult);
+            if (blocker == "locked" || blocker == "max") continue;
+            if (blocker == null)
+            {
+                var next = god.Buildings.LevelOf(type) + 1;
+                return cult[StatId.Offerings].Value < GodBuildings.CostOf(next) + GodBuildings.UpkeepOf(next) * 2 ? "guard" : "ok";
+            }
+            if (best == "none") best = blocker;
+        }
+        return best;
+    }
+
+    static void TraceTurn(int run, string act, string why)
+    {
+        if (Trace == null) return;
+        var god = GameSession.God;
+        var cult = GameSession.Cult;
+        Trace.Append(traceLabel).Append('\t').Append(tracePlayer).Append('\t').Append(run).Append('\t')
+            .Append(GameSession.CultTime.Turns).Append('\t').Append(GameSession.CultTime.Years).Append('\t')
+            .Append(builtType != null ? $"C:{builtType}" : act).Append('\t').Append(why).Append('\t')
+            .Append(cult[StatId.Offerings].Value).Append('\t').Append(cult[StatId.Authority].Value).Append('\t')
+            .Append(cult[StatId.Reputation].Value).Append('\t').Append(cult[StatId.Followers].Value).Append('\t')
+            .Append(god.Pressure.Stage(Pressure.Earth, cult)).Append('\t').Append(god.Pressure.Stage(Pressure.Heaven, cult)).Append('\t')
+            .Append(god.Tree.ReachedStage).Append('\t')
+            .Append(string.Join("", GodBuildings.All.Select(t => GodBuildings.IsUnlocked(t, god.Tree) ? "1" : "0"))).Append('\t')
+            .Append(string.Join("/", god.Buildings.Levels)).Append('\t').Append(Counters.Get("god_seized", true)).Append('\n');
+    }
+
+    // 스타일당 players명 × runs판을 돌려 Temp/build_probe.tsv에 쓴다. 끝나면 Temp/build_probe_done.txt
+    public static void BuildProbe(int players = 3, int runs = 5)
+    {
+        var path = Path.Combine("Temp", "build_probe.tsv");
+        var done = Path.Combine("Temp", "build_probe_done.txt");
+        if (File.Exists(done)) File.Delete(done);
+        Trace = new StringBuilder("style\tplayer\trun\tturn\tyear\tact\twhy\toff\tauth\trep\tfollowers\tearth\theaven\tstage\tunlock(StTeLiViSh)\tlevels\tseized\n");
+        try
+        {
+            foreach (AchievementSimulation.Style style in Enum.GetValues(typeof(AchievementSimulation.Style)))
+            {
+                traceLabel = style.ToString();
+                tracePlayer = 0;
+                AchievementSimulation.Collect(AchievementSimulation.SimMode.God, style, players, runs, 20261020 + (int)style * 1000 + 200000);
+            }
+            File.WriteAllText(path, Trace.ToString(), new UTF8Encoding(false));
+            File.WriteAllText(done, "ok");
+        }
+        catch (Exception e) { File.WriteAllText(done, "fail " + e); }
+        finally { Trace = null; }
     }
 
     static CultAction ChooseAction()

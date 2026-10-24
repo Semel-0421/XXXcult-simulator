@@ -16,9 +16,9 @@ public class GodBuildings
     public const float BroadDissolutionCut = 0.15f;          // 단계 보너스 고리 하나마다 해산 확률을 이만큼(비율) 줄인다: 넓게 찍은 교단이 가장 버틴다
 
     public static float DissolutionChance(int broadRings) => DissolutionChancePerQuarter * System.Math.Max(0f, 1f - BroadDissolutionCut * broadRings);
-    static readonly int[] Cost = { 50, 100, 200, 350, 500 };
+    static readonly int[] Cost = { 30, 60, 120, 200, 300 };
     static readonly int[] FloorPercent = { 5, 10, 15, 22, 30 }; // 최대치 대비 하한 (최대 30%)
-    static readonly int[] Upkeep = { 5, 10, 20, 35, 50 };
+    static readonly int[] Upkeep = { 0, 5, 10, 20, 30 };
     static readonly int[] FollowerFloor = { 10, 20, 40, 70, 100 }; // 신도 수는 최대치가 없어 고정 인원
 
     public static readonly GodBuildingType[] All = (GodBuildingType[])Enum.GetValues(typeof(GodBuildingType));
@@ -55,6 +55,10 @@ public class GodBuildings
 
     public static int CostOf(int level) => GiftedV2GodHooks.BuildingCost(Cost[level - 1]);
     public static int UpkeepOf(int level) => level <= 0 ? 0 : Upkeep[level - 1];
+
+    // 연말 헌금: 신도 수에 비례해 해마다 봉헌금이 들어온다 (유지비보다 먼저)
+    public const int TitheDivisor = 5;
+    public static int Tithe(int followers) => Math.Max(0, followers) / TitheDivisor;
 
     public static bool IsUnlocked(GodBuildingType type, GodTree tree) =>
         UnlockNodes.Any(pair => pair.Value == type && tree.IsLearned(GodSkillCatalog.Find(pair.Key)));

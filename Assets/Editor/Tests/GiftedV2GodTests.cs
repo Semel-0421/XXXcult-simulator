@@ -101,9 +101,9 @@ public class GiftedV2GodTests
     {
         var cost = GodBuildings.CostOf(2);
         var floor = GodBuildings.Floor(GodBuildingType.Statue, 3);
-        Assert.AreEqual(100, cost);
+        Assert.AreEqual(60, cost);
         Own("v2g056", "v2g078", "v2g057");
-        Assert.AreEqual(75, GodBuildings.CostOf(2)); // 100 x (1 - 0.15 - 0.10)
+        Assert.AreEqual(45, GodBuildings.CostOf(2)); // 60 x (1 - 0.15 - 0.10)
         Assert.Greater(GodBuildings.Floor(GodBuildingType.Statue, 3), floor);
     }
 
@@ -183,7 +183,7 @@ public class GiftedV2GodTests
     public void NothingOwned_GodHooksAreNoOp()
     {
         Assert.AreEqual(1f, GiftedV2GodHooks.HeatGainScale(true));
-        Assert.AreEqual(50, GodBuildings.CostOf(1));
+        Assert.AreEqual(30, GodBuildings.CostOf(1));
         Assert.AreEqual(0, GiftedV2GodHooks.AscensionCostEase);
         Assert.IsFalse(GiftedV2GodHooks.ShowsChoiceChance);
         Assert.IsFalse(GiftedV2GodHooks.SuppressRepeatedEvent(new Random(1)));
