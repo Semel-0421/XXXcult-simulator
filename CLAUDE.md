@@ -53,6 +53,13 @@
 - GitHub: `gh`로 릴리스 생성. 개발 일지는 GitHub 릴리스 노트와 itch devlog 양쪽에.
 - 구버전 업로드는 지우지 않고 숨김 처리.
 
+## 공동 작업 (Claude Code + OpenCode)
+- 상태 공유는 `.agent-sync.md`(푸시 안 함). 작업 전 파일 락에 이름 기록, 끝나면 해제.
+- **Claude Code = 취합 담당**: Unity 컴파일·테스트, git 스테이징·커밋·푸시, 충돌 정리는 Claude Code만 한다.
+- **OpenCode = 분석·구현 담당**: 락 잡은 파일만 수정. Unity 명령과 `git add/commit`은 하지 않는다.
+- 흐름: OpenCode 구현 완료 → `.agent-sync.md`에 "검증 대기" → Claude Code 컴파일·테스트 → 통과 시 커밋 → "완료".
+- 같은 `Assets/Scripts` 파일을 두 에이전트가 동시에 열지 않는다. 한 번에 한 항목(P1, P2 …)씩 넘긴다.
+
 ## 안전
 - 로그인·자격 증명 입력은 하지 않는다. 시스템 설정 변경 금지.
 - 플레이 테스트 전 세이브·프로필 백업, 끝나면 복구.
