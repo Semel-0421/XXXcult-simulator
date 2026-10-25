@@ -63,6 +63,7 @@ public static class GodTreeWindow
         close.image.color = UiSkin.Crimson;
         UiKit.Anchor((RectTransform)close.transform, new Vector2(1, 1), new Vector2(1, 1), new Vector2(-80, -36), new Vector2(120, 44));
         close.onClick.AddListener(Close);
+        EscClose.Attach(root, close);
 
         // 트리 영역 (확대 연출이 밖으로 넘치지 않게 잘라 낸다)
         var area = UiKit.Child(panel, "TreeArea", typeof(RectMask2D), typeof(Image));

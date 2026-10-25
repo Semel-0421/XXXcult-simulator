@@ -16,6 +16,7 @@ public static class UiPalette
     public static readonly Color Row = new(0.10f, 0.07f, 0.16f, 1f);
     public static readonly Color Button = new(0.24f, 0.18f, 0.36f, 1f);
     public static readonly Color TabIdle = new(0.16f, 0.07f, 0.24f, 0.95f);   // 도감 탭 (고르지 않음)
+    public static readonly Color TabSelected = new(0.36f, 0.26f, 0.52f);      // 고른 탭 (금테와 함께)
     public static readonly Color RowIdle = new(0.16f, 0.07f, 0.24f, 0.9f);    // 목록 행 (못 얻음)
     public static readonly Color RowDone = new(0.42f, 0.12f, 0.24f, 0.96f);   // 목록 행 (얻음)
 
@@ -28,7 +29,7 @@ public static class UiPalette
     public static readonly Color Parchment = new(0.88f, 0.82f, 0.68f);
     public static readonly Color TextBright = new(0.92f, 0.88f, 0.98f);  // 도감 설명
     public static readonly Color TextSoft = new(0.85f, 0.82f, 0.92f);    // 목록 설명
-    public static readonly Color Muted = new(0.52f, 0.46f, 0.62f);
+    public static readonly Color Muted = new(0.68f, 0.62f, 0.78f);      // 가장 밝은 책 표지 위에서도 대비 4.5:1 이상
     public static readonly Color Locked = new(0.55f, 0.5f, 0.6f);       // 잠긴 이름 "???"
 
     // 상태

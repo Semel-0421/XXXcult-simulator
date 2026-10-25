@@ -102,6 +102,7 @@ public static class EndingGallery
         tile.cover = UiKit.Child(rect, "Cover", typeof(Image)).GetComponent<Image>();
         UiKit.Stretch(tile.cover.rectTransform);
         tile.cover.color = new Color(0, 0, 0, 0.94f);
+        tile.label.transform.SetAsLastSibling(); // "???"가 덮개에 가려 거의 안 보이던 것을 덮개 위로
         var mark = UiKit.Label(tile.cover.rectTransform, font, "Mark", 80, TextAlignmentOptions.Center, new Color(0.5f, 0.45f, 0.56f));
         mark.text = "?";
         UiKit.Stretch(mark.rectTransform);
@@ -146,7 +147,7 @@ public static class EndingGallery
         labels[2].text = Lang.Get("mirror_mode");
         labels[3].text = "???";
         for (int i = 0; i < buttons.Length; i++)
-            buttons[i].image.color = i == selected ? UiSkin.Crimson : UiPalette.TabIdle;
+            UiKit.SetTab(buttons[i], i == selected, UiPalette.TabIdle);
     }
 
     static void AddTrigger(EventTrigger trigger, EventTriggerType type, UnityEngine.Events.UnityAction<BaseEventData> action)

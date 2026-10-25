@@ -147,6 +147,8 @@ public static class UiKit
         panel.sizeDelta = size;
         panel.GetComponent<Image>().color = PanelColor;
         panel.GetComponent<Outline>().effectColor = UiPalette.GoldFaint;
+        // 모든 창은 책 표지 틀 (창마다 색을 바꾸려면 만든 뒤 다시 ApplyBookFrame을 부른다)
+        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "WindowBook", UiPalette.BookAltarTop, UiPalette.BookAltarBottom);
 
         title = Label(panel, font, "Title", UiType.Title, TextAlignmentOptions.Center, Gold);
         Anchor(title.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, -41), new Vector2(0, 50));
@@ -155,7 +157,9 @@ public static class UiKit
         Anchor(hint.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, -84), new Vector2(0, 30));
 
         close = MakeButton(panel, font, "Close", "", 120, 44, out _);
+        close.image.color = UiPalette.Crimson; // 진홍은 닫기에만
         Anchor((RectTransform)close.transform, new Vector2(1, 1), new Vector2(1, 1), new Vector2(-80, -34), new Vector2(120, 44));
+        EscClose.Attach(root, close);
 
         var scroll = Child(panel, "Scroll", typeof(Image), typeof(ScrollRect));
         Anchor(scroll, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
@@ -165,6 +169,7 @@ public static class UiKit
 
         var viewport = Child(scroll, "Viewport", typeof(RectMask2D));
         Stretch(viewport);
+        viewport.offsetMax = new Vector2(-12, 0); // 오른쪽은 스크롤바 자리
         var content = Child(viewport, "Content", typeof(VerticalLayoutGroup), typeof(ContentSizeFitter));
         content.anchorMin = new Vector2(0, 1);
         content.anchorMax = new Vector2(1, 1);
@@ -184,9 +189,45 @@ public static class UiKit
         scrollRect.horizontal = false;
         scrollRect.scrollSensitivity = 40;
         scrollRect.movementType = ScrollRect.MovementType.Clamped;
+        scrollRect.verticalScrollbar = MakeScrollbar(scroll);
+        scrollRect.verticalScrollbarVisibility = ScrollRect.ScrollbarVisibility.AutoHide; // 넘칠 때만 보인다
 
         root.SetActive(false);
         return content;
+    }
+
+    // 스크롤 영역 오른쪽의 가는 금색 스크롤바 (목록이 더 있다는 단서)
+    static Scrollbar MakeScrollbar(RectTransform scroll)
+    {
+        var bar = Child(scroll, "Scrollbar", typeof(Image), typeof(Scrollbar));
+        bar.anchorMin = new Vector2(1, 0);
+        bar.anchorMax = new Vector2(1, 1);
+        bar.pivot = new Vector2(1, 0.5f);
+        bar.sizeDelta = new Vector2(8, -8);
+        bar.anchoredPosition = new Vector2(-2, 0);
+        bar.GetComponent<Image>().color = new Color(0, 0, 0, 0.35f);
+        var area = Child(bar, "Sliding Area");
+        Stretch(area);
+        var handle = Child(area, "Handle", typeof(Image));
+        Stretch(handle);
+        var handleImage = handle.GetComponent<Image>();
+        handleImage.color = UiPalette.GoldFaint;
+        var scrollbar = bar.GetComponent<Scrollbar>();
+        scrollbar.handleRect = handle;
+        scrollbar.targetGraphic = handleImage;
+        scrollbar.direction = Scrollbar.Direction.BottomToTop;
+        return scrollbar;
+    }
+
+    // 탭 버튼의 고른 상태: 고른 탭은 밝은 보라에 금테, 나머지는 기본색 (진홍은 쓰지 않는다)
+    public static void SetTab(Button tab, bool selected, Color idle)
+    {
+        tab.image.color = selected ? UiPalette.TabSelected : idle;
+        var outline = tab.GetComponent<Outline>();
+        if (outline == null) outline = tab.gameObject.AddComponent<Outline>();
+        outline.effectColor = UiPalette.Gold;
+        outline.effectDistance = new Vector2(2, -2);
+        outline.enabled = selected;
     }
 
     // 장면 캔버스가 없는 곳(타이틀 등)에서도 쓸 수 있게 독립된 오버레이 캔버스를 만든다.

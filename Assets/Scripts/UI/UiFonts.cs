@@ -45,7 +45,14 @@ public static class UiFonts
             bool keep = text.name == "CultName" || text.name.EndsWith("Header") || text.name.Contains("Title")
                 || (text.name == "Result" && parent != null && parent.name == "ActionResult");
             if (keep) continue;
-            text.font = text.GetComponentInParent<Button>(true) != null ? Strong : Body;
+            if (text.GetComponentInParent<Button>(true) == null) { text.font = Body; continue; }
+            // 굵은체는 넓어서 영어 버튼("Divine Tree")이 두 줄로 넘어갔다: 한 줄로 두고 넘치면 줄인다
+            text.font = Strong;
+            if (text.enableAutoSizing) continue;
+            text.textWrappingMode = TextWrappingModes.NoWrap;
+            text.fontSizeMax = text.fontSize;
+            text.fontSizeMin = text.fontSize * 0.7f;
+            text.enableAutoSizing = true;
         }
     }
 }

@@ -80,12 +80,15 @@ public static class AchievementWindow
         // 월계관 아래로 진행 문구와 목록 위치를 내린다
         ((RectTransform)panel.Find("Scroll")).offsetMax = new Vector2(-18, -162);
         UiKit.Anchor(hintLabel.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, -136), new Vector2(0, 30));
-        // 버튼도 진홍색으로
-        panel.Find("Close").GetComponent<Image>().color = UiSkin.Crimson;
+        // 제목은 월계관 안에 들어가게 폭을 줄이고 길면 글자를 줄인다 (영어 "Achievements"가 옆 버튼에 가리던 문제)
+        UiKit.Anchor(titleLabel.rectTransform, new Vector2(0.5f, 1), new Vector2(0.5f, 1), new Vector2(0, -50), new Vector2(124, 50));
+        titleLabel.enableAutoSizing = true;
+        titleLabel.fontSizeMin = 14;
+        titleLabel.fontSizeMax = UiType.Title;
+        titleLabel.textWrappingMode = TextWrappingModes.NoWrap;
 
         // 보상 켜기/끄기 버튼 (제목 왼쪽)
         var toggle = UiKit.MakeButton(panel, font, "RewardsToggle", "", 200, 44, out rewardsLabel);
-        toggle.image.color = UiSkin.Crimson;
         UiKit.Anchor((RectTransform)toggle.transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(120, -34), new Vector2(200, 44));
         toggle.onClick.AddListener(() =>
         {
@@ -95,13 +98,11 @@ public static class AchievementWindow
 
         // 엔딩 도감 열기 (보상 버튼 오른쪽)
         var gallery = UiKit.MakeButton(panel, font, "EndingGalleryButton", "", 190, 44, out galleryLabel);
-        gallery.image.color = UiSkin.Crimson;
         UiKit.Anchor((RectTransform)gallery.transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(340, -34), new Vector2(190, 44));
         gallery.onClick.AddListener(EndingGallery.Open);
 
         // 성인 회상 갤러리 (성인 콘텐츠를 켠 경우에만 보인다). 윗줄 가운데는 월계관이 덮으므로 탭 줄 오른쪽(기프티드 버튼 왼쪽)에 둔다
         adultGallery = UiKit.MakeButton(panel, font, "AdultGalleryButton", "", 170, 40, out adultGalleryLabel);
-        adultGallery.image.color = UiSkin.Crimson;
         UiKit.Anchor((RectTransform)adultGallery.transform, new Vector2(1, 1), new Vector2(1, 1), new Vector2(-311, -176), new Vector2(170, 40));
         adultGallery.onClick.AddListener(AdultGallery.Open);
 
@@ -124,7 +125,6 @@ public static class AchievementWindow
             tabButtons[i].onClick.AddListener(() => { tab = (AchievementTabs.Tab)index; showGifted = false; Refresh(); });
         }
         var view = UiKit.MakeButton(panel, font, "GiftedToggle", "", 200, 40, out viewLabel);
-        view.image.color = UiSkin.Crimson;
         UiKit.Anchor((RectTransform)view.transform, new Vector2(1, 1), new Vector2(1, 1), new Vector2(-118, -176), new Vector2(200, 40));
         view.onClick.AddListener(() => { showGifted = !showGifted; Refresh(); });
 
@@ -193,7 +193,7 @@ public static class AchievementWindow
         for (int i = 0; i < tabButtons.Length; i++)
         {
             tabLabels[i].text = Lang.Get("ach_tab_" + TabKeys[i]);
-            tabButtons[i].image.color = i == (int)tab && !showGifted ? UiSkin.Crimson : new Color(0.22f, 0.1f, 0.3f, 0.95f);
+            UiKit.SetTab(tabButtons[i], i == (int)tab && !showGifted, new Color(0.22f, 0.1f, 0.3f, 0.95f));
             tabButtons[i].gameObject.SetActive(i != (int)AchievementTabs.Tab.Hidden || AchievementTabs.HiddenUnlocked);
         }
         viewLabel.text = Lang.Get(showGifted ? "ach_view_list" : "ach_view_gifted");
