@@ -36,6 +36,7 @@ public static class EndingIllustrations
         if (id == GodRules.Forgotten.Id) return BrokenRing;
         if (id == GodRules.Disbanded.Id) return Broken;
         if (id.StartsWith("god_")) return Sunburst;
+        if (id.StartsWith("eye_")) return id.EndsWith("_bad") ? BrokenRing : Sunburst; // 황금의 눈동자: 찬탈은 빛살, 주도권 상실은 틈 난 고리
         return id.EndsWith("_max") ? Sunburst : BrokenRing;
     }
 

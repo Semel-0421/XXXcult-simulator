@@ -54,7 +54,7 @@ public static class EndingWindow
         var panel = (RectTransform)root.transform.Find("Panel");
         UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "EndingBook", UiPalette.BookGalleryTop, UiPalette.BookGalleryBottom);
 
-        var endings = Endings.All.Concat(GodRules.AllEndings).Concat(MirrorEndings.All).ToArray();
+        var endings = Endings.All.Concat(GodRules.AllEndings).Concat(MirrorEndings.All).Concat(EyeEndings.All).ToArray();
         rows = new Row[endings.Length];
         for (int i = 0; i < rows.Length; i++) rows[i] = BuildRow(content, font, i, endings[i]);
         tabs = EndingGallery.BuildTabs(panel, font, out tabLabels, t => { tab = t; Refresh(); });

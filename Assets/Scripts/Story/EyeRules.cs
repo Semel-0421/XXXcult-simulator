@@ -184,6 +184,23 @@ public static class EyeRules
         return string.Format(Lang.Get("eye_rest_calamity"), Lang.Get(SectorKey(CalamitySector(god.Aeons))), name, lost.ToString("N0"));
     }
 
+    // ---- 엔딩 (SYS_DEMIURGE 7절, DEC-027·028 M·O) ----
+    // 승천 노드를 익힌 순간 판정한다. 패배 엔딩은 없다.
+    //  1) 주도권이 2배를 넘으면 그 섹터의 배드(주도권 상실)
+    //  2) 네 섹터 모두 5단계 그노시스를 익혔으면 히든 "네 얼굴을 삼킨 자"
+    //  3) 시작 섹터와 다른 섹터로 승천하면 히든 "다른 눈동자"
+    //  4) 그 밖에는 그 섹터의 굿(찬탈)
+    public static Endings.Ending DueEnding()
+    {
+        var aeons = GameSession.God.Aeons;
+        if (!aeons.Ascended) return null;
+        var key = aeons.AscensionSector.ToString().ToLowerInvariant();
+        if (Dominance > LoseDominanceAt) return EyeEndings.Find($"eye_{key}_bad");
+        if (Sectors.All(s => aeons.IsLearned(AeonSkillCatalog.Stage(s, AeonSkill.GnosisLevel)))) return EyeEndings.Find("eye_four_faces");
+        if (aeons.AscensionSector != aeons.StartSector) return EyeEndings.Find($"eye_{key}_other");
+        return EyeEndings.Find($"eye_{key}_good");
+    }
+
     public static float Dominance => GameSession.God.Demiurge.Ratio(GameSession.Cult, GameSession.Personal);
     public const float LoseDominanceAt = 2f; // 이 배를 넘으면 주도권을 뺏긴다 (승천 순간 판정: 6단계)
 

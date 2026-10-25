@@ -175,7 +175,7 @@ public static class GodRules
     // 승천: 중심 노드를 익히면 먼저 완성한 두 핵의 조합으로 엔딩이 정해진다
     public static Endings.Ending DueEnding()
     {
-        if (GameSession.EyeMode) return null; // 승천 엔딩은 아이온 트리(6단계)에서 붙인다
+        if (GameSession.EyeMode) return EyeRules.DueEnding(); // 황금의 눈동자: 아이온 트리 승천
         var tree = GameSession.God.Tree;
         var ending = tree.Ascended ? Find(tree.AscensionEndingId) : null;
         if (ending != null) GiftedV2GodHooks.BeforeAscension();
