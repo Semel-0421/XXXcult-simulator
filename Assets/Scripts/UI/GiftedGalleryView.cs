@@ -30,7 +30,7 @@ public static class GiftedGalleryView
     {
         font = f; jump = jumpToList;
         cells.Clear(); // 업적 창을 다시 만들면 이전 칸은 사라졌다
-        root =UiKit.Child(parent, "GiftedGallery", typeof(ScrollRect));
+        root = UiKit.Child(parent, "GiftedGallery", typeof(ScrollRect));
         UiKit.Anchor(root, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
         root.offsetMin = new Vector2(18, 18);
         root.offsetMax = new Vector2(-18, -214);
