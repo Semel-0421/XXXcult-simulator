@@ -61,7 +61,7 @@ public class GodBuildings
     public static int Tithe(int followers) => Math.Max(0, followers) / TitheDivisor;
 
     public static bool IsUnlocked(GodBuildingType type, GodTree tree) =>
-        UnlockNodes.Any(pair => pair.Value == type && tree.IsLearned(GodSkillCatalog.Find(pair.Key)));
+        UnlockNodes.Any(pair => pair.Value == type && tree.IsLearned(GodSkillCatalog.Find(pair.Key))) || (tree.Aeons?.UnlocksBuilding(type) ?? false);
 
     // 왜 지을 수 없는지 (지을 수 있으면 null): locked / max / stage / offerings / communion
     public string Blocker(GodBuildingType type, GodTree tree, CultStatus cult)

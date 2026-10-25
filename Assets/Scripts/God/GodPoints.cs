@@ -57,7 +57,13 @@ public class GodState
     public GodBuildings Buildings { get; } = new();
     public GodPressure Pressure { get; }
 
-    public GodState() => Pressure = new GodPressure(Tree, Buildings);
+    public AeonTree Aeons { get; } = new(); // 황금의 눈동자 모드의 아이온 트리 (신 모드에서는 비어 있음)
+
+    public GodState()
+    {
+        Pressure = new GodPressure(Tree, Buildings);
+        Tree.Attach(Aeons);
+    }
     public bool IntroShown { get; set; } // 권능 트리 확대 연출을 이번 판에 이미 보였는가 (저장하지 않음)
 
     public int Available => Points.Available(Tree);

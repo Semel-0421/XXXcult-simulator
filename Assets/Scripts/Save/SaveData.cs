@@ -35,6 +35,8 @@ public class SaveData
     public bool mirrorMode; // 거울 세계 모드
     public bool eyeMode;    // 황금의 눈동자 모드 (없던 옛 저장은 false)
     public int eyeSector;   // 첫 질문에서 고른 섹터 (EyeSector)
+    public List<string> aeonSkills = new(); // 익힌 아이온 노드
+    public List<int> aeonOrder = new();     // 9단계를 익힌 섹터 순서 (승천 섹터 판정)
     public List<string> godSkills = new();   // 익힌 권능 노드
     public string godNature;                 // 신의 본성 (무료로 고른 바깥 노드)
     public List<string> godCores = new();    // 완성한 핵 순서 (승천 엔딩 판정)

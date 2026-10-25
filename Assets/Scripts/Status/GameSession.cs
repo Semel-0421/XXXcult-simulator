@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 // 한 판의 진행 상태 보관소. 씬이 바뀌어도 유지된다.
 public static class GameSession
@@ -216,6 +217,8 @@ public static class GameSession
             godEnvy = God.Pressure.Envy,
             godSuspicion = God.Pressure.Suspicion,
             godDissolution = God.Buildings.DissolutionOrdered,
+            aeonSkills = God.Aeons.Learned.ToList(),
+            aeonOrder = God.Aeons.ThresholdOrder.Select(s => (int)s).ToList(),
         };
         data.godBuildings.AddRange(God.Buildings.Levels);
         data.godSkills.AddRange(God.Tree.Learned);
@@ -283,6 +286,7 @@ public static class GameSession
         God.Points.Restore(data.godPointsEarned, data.godSecularStage);
         God.Pressure.Restore(data.godEnvy, data.godSuspicion);
         God.Buildings.Restore(data.godBuildings, data.godDissolution);
+        God.Aeons.Restore(data.aeonSkills, EyeSector, data.aeonOrder);
         Progress.ApplyRun(data.run); // 회차가 없던 옛 저장(0)은 제한 없이 이어 간다
     }
 

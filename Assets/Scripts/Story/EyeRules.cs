@@ -6,7 +6,8 @@ using System.Linq;
 //    신 모드 패배 엔딩(그릇의 붕괴·잊힌 신·해산된 교단)은 세지 않는다.
 //  - 시작 (DEC-027·028 D): 신 모드의 성인 그릇 상태(GodRules.StartVessel) 위에서 돈다. GodMode도 켜서 그릇·접신·압박·축성·전용 이벤트를 그대로 쓰고,
 //    다른 점은 EyeMode로 가른다: 기프티드 없음, 신 모드 업적 카운터 안 쌓음, 신의 본성 선택 없이 창설과 동시에 교단 행동이 열림, 패배 엔딩 없음.
-//  - 첫 질문(눈동자) → 이름 → 성별 순서로 묻는다 (IntroSequence). 고른 섹터의 0단계 스킬 2개는 아이온 트리(3단계)에서 지급한다.
+//  - 첫 질문(눈동자) → 이름 → 성별 순서로 묻는다 (IntroSequence). 고른 섹터의 0단계 스킬 2개를 바로 얻는다 (AeonTree.Grant).
+//  - 아이온 트리(AeonTree)는 GodState.Aeons에 있고, 효과·포인트·단계·건물 해금은 GodTree 계산에 더해진다.
 //  - 데미우르고스 스탯·재앙(4단계), 아이온 트리 화면(5단계), 엔딩(6단계)은 아직 없다.
 public enum EyeSector { None, Yahweh, Satan, Samael, Yaldabaoth }
 
@@ -26,6 +27,7 @@ public static class EyeRules
     {
         if (sector == EyeSector.None) return;
         GameSession.SetEyeSector(sector);
+        GameSession.God.Aeons.Grant(sector); // 고른 섹터의 0단계 선·악 두 노드를 처음부터 얻는다 (DEC-027)
     }
 
     // 교단 창설: 신의 본성 대신 바로 교리 선포를 채워 교단 행동을 연다

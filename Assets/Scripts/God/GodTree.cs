@@ -13,6 +13,15 @@ public class GodTree
 
     public event Action<GodSkill> Changed;
 
+    // 황금의 눈동자: 아이온 트리 효과·포인트·단계·건물 해금을 이 트리의 계산에 더한다 (신 모드에서는 비어 있어 영향 없음)
+    public AeonTree Aeons { get; private set; }
+
+    public void Attach(AeonTree aeons)
+    {
+        Aeons = aeons;
+        aeons.Changed += _ => { totals = null; Version++; };
+    }
+
     public string NatureId { get; private set; }
     public bool HasNature => NatureId != null;
     public IEnumerable<string> Learned => learned;
@@ -61,7 +70,7 @@ public class GodTree
     }
 
     // 본성은 무료라 비용에 넣지 않는다
-    public int SpentPoints => learned.Where(id => id != NatureId).Sum(id => GodSkillCatalog.Find(id)?.Cost ?? 0);
+    public int SpentPoints => learned.Where(id => id != NatureId).Sum(id => GodSkillCatalog.Find(id)?.Cost ?? 0) + (Aeons?.SpentPoints ?? 0);
 
     public bool AscensionOpen => coreOrder.Count >= 2;
     public bool Ascended => learned.Contains(GodSkill.AscensionId);
@@ -81,8 +90,8 @@ public class GodTree
     {
         if (derivedVersion == Version) return;
         derivedVersion = Version;
-        reachedStage = learned.Count == 0 ? 0 : learned.Max(id => GodSkillCatalog.Find(id)?.Stage ?? 0);
-        pressureNodes = learned.Select(GodSkillCatalog.Find).Where(s => s != null).Sum(s => s.PressureWeight);
+        reachedStage = Math.Max(learned.Count == 0 ? 0 : learned.Max(id => GodSkillCatalog.Find(id)?.Stage ?? 0), Aeons?.Stage ?? 0);
+        pressureNodes = learned.Select(GodSkillCatalog.Find).Where(s => s != null).Sum(s => s.PressureWeight) + (Aeons?.PressureWeight ?? 0);
         broadRings = Enumerable.Range(1, 5).Where(ring => GodSkillCatalog.Cores.All(core => IsBroad(core.Branch, ring))).ToArray();
     }
 
@@ -141,6 +150,13 @@ public class GodTree
                 if (effect.PersonalStat is { } p) personal[p].Add(skill.AmountOf(effect));
                 else if (effect.CultStat is { } c) cult.AddWithRemainder(c, skill.AmountOf(effect));
             }
+        if (Aeons == null) return;
+        foreach (var (effect, amount) in Aeons.Effects)
+        {
+            if (effect.Kind != GodEffect.Type.Yearly) continue;
+            if (effect.PersonalStat is { } p) personal[p].Add(amount);
+            else if (effect.CultStat is { } c) cult.AddWithRemainder(c, amount);
+        }
     }
 
     Dictionary<(GodEffect.Type, string), int> Totals()
@@ -152,6 +168,12 @@ public class GodTree
             {
                 var key = (effect.Kind, KeyOf(effect));
                 totals[key] = (totals.TryGetValue(key, out var sum) ? sum : 0) + skill.AmountOf(effect);
+            }
+        if (Aeons != null)
+            foreach (var (effect, amount) in Aeons.Effects)
+            {
+                var key = (effect.Kind, KeyOf(effect));
+                totals[key] = (totals.TryGetValue(key, out var sum) ? sum : 0) + amount;
             }
         var broad = BroadWeight;
         if (broad > 0)
