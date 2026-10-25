@@ -21,7 +21,7 @@ public static class EyeSimulation
         public EyeSector Sector;
         public string EndingId = "none", Stall = "";
         public int GainEnd, ZeroTurns, Doctrine, DoctrinePeak, Preaches, Proselytes, Years, Calamities, RestCalamities, Learned, PointsEarned, AscendYear = -1;
-        public float Dominance, DominancePeak;
+        public float Dominance, DominancePeak, DemiurgeWeight, PlayerWeight; public int EvilLearned, CounterTotal, SurplusTotal;
     }
 
     public static List<RunResult> Results = new();
@@ -227,6 +227,14 @@ public static class EyeSimulation
                 snap = Snap();
                 Turns.Cult(act);
                 Book("행동 턴(행동+사회+불운+분기)", snap);
+                var tree = GameSession.God.Aeons;
+                r.CounterTotal += EyeRules.CounterGain(tree);
+                // 악 우위: 섹터마다 (악·그노시스 노드 수 - 선 노드 수, 최소 0)의 합 — 성장안 계산용
+                r.SurplusTotal += EyeRules.Sectors.Sum(sec =>
+                {
+                    var learned = tree.Learned.Select(AeonSkillCatalog.Find).Where(x => x != null && x.Sector == sec).ToList();
+                    return Math.Max(0, learned.Count(x => x.Kind is AeonKind.Evil or AeonKind.Gnosis) - learned.Count(x => x.Kind == AeonKind.Good));
+                });
                 BookPressure();
                 key = act.ToString();
             }
@@ -256,6 +264,9 @@ public static class EyeSimulation
             }
         }
         r.Dominance = EyeRules.Dominance;
+        r.DemiurgeWeight = GameSession.God.Demiurge.Weight;
+        r.PlayerWeight = DemiurgeState.WeightOf(GameSession.Cult, GameSession.Personal);
+        r.EvilLearned = GameSession.God.Aeons.Learned.Count(id => AeonSkillCatalog.Find(id)?.Kind is AeonKind.Evil or AeonKind.Gnosis);
         if (ending != null) { Progress.Reach(ending); r.EndingId = ending.Id; r.AscendYear = GameSession.CultTime.Years; }
         r.Years = GameSession.CultTime.Years;
         r.Calamities = GameSession.God.Demiurge.Calamities;
@@ -302,6 +313,10 @@ public static class EyeSimulation
             sb.AppendLine($"{part} | " + string.Join(" | ", Watched.Select((id, i) => $"+{Gain[part][i] / runs:0} / -{Loss[part][i] / runs:0}")));
         sb.AppendLine("압박 단계 분포(턴): " + string.Join(", ", Stages.OrderBy(x => x.Key).Select(x => $"{x.Key}: {x.Value}")));
         sb.AppendLine("바닥 스탯(턴): " + string.Join(", ", Zeros.OrderByDescending(x => x.Value).Select(x => $"{x.Key} {x.Value}")));
+        sb.AppendLine("끝날 때 무게 (데미우르고스 / 교주, 최대 20) · 악·그노시스 노드 수: " + string.Join(" · ", Results.GroupBy(x => x.Strategy)
+            .Select(g => $"{g.Key} {g.Average(x => x.DemiurgeWeight):0.00} / {g.Average(x => x.PlayerWeight):0.00} · {g.Average(x => x.EvilLearned):0.0}")));
+        sb.AppendLine("누적 카운터 증가 · 누적 악 우위(분기 합) [최소~최대]: " + string.Join(" · ", Results.GroupBy(x => x.Strategy)
+            .Select(g => $"{g.Key} {g.Average(x => x.CounterTotal):0} [{g.Min(x => x.CounterTotal)}~{g.Max(x => x.CounterTotal)}] · {g.Average(x => x.SurplusTotal):0} [{g.Min(x => x.SurplusTotal)}~{g.Max(x => x.SurplusTotal)}]")));
         sb.AppendLine("행동 분포(전체 턴): " + string.Join(", ", Acts.OrderByDescending(x => x.Value).Select(x => $"{x.Key} {x.Value}")));
         sb.AppendLine();
         sb.AppendLine("섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드");
