@@ -21,8 +21,8 @@ public class CultInfoPanel : MonoBehaviour
         GameSession.Founded += OnFounded;
         Lang.Changed += OnLangChanged;
         BuildPointsLabel();
-        if (GameSession.EyeMode) doctrineButton.gameObject.SetActive(false); // 아이온 트리 화면은 5단계에서 붙인다
-        else if (GameSession.GodMode) UseGodTree();
+        if (GameSession.EyeMode) UseTree("eye_tree_title", AeonTreeWindow.Open);
+        else if (GameSession.GodMode) UseTree("god_tree_title", () => GodTreeWindow.Open(GameSession.God));
         if (GameSession.CultFounded) Show();
     }
 
@@ -63,7 +63,7 @@ public class CultInfoPanel : MonoBehaviour
         var key = ((god.Available * 100 + heaven * 10 + earth) * 16 + cores * 2 + (god.Tree.Ascended ? 1 : 0)) * 2 + (shows ? 1 : 0);
         if (key == shownPoints) return;
         shownPoints = key;
-        pointsLabel.text = $"{string.Format(Lang.Get("god_points"), god.Available)}\n<size=80%>{string.Format(Lang.Get("god_pressure_now"), heaven, earth)}{(shows ? "\n" + EndingProgress(god.Tree, cores) : "")}</size>";
+        pointsLabel.text = $"{string.Format(Lang.Get(GameSession.EyeMode ? "eye_points" : "god_points"), god.Available)}\n<size=80%>{string.Format(Lang.Get("god_pressure_now"), heaven, earth)}{(shows ? "\n" + EndingProgress(god.Tree, cores) : "")}</size>";
     }
 
     // 기프티드 v2g046: 승천 엔딩 진행도 (핵 2개를 먼저 익힌 조합이 엔딩을 정하고, 중심 노드가 승천이다)
@@ -86,15 +86,15 @@ public class CultInfoPanel : MonoBehaviour
             tutorial.Begin(doctrineButton, Lang.Get(GameSession.GodMode ? "god_tutorial" : "doctrine_tutorial"));
     }
 
-    // 준비된 신 모드: 교리 선택 버튼이 장면에 연결된 교리 창 대신 권능 트리를 연다
-    void UseGodTree()
+    // 준비된 신 모드: 교리 선택 버튼이 장면에 연결된 교리 창 대신 권능 트리를 연다 (황금의 눈동자는 아이온 트리)
+    void UseTree(string titleKey, System.Action open)
     {
         var button = doctrineButton.GetComponent<Button>();
         button.onClick = new Button.ButtonClickedEvent();
-        button.onClick.AddListener(() => { tutorial.End(); GodTreeWindow.Open(GameSession.God); });
+        button.onClick.AddListener(() => { tutorial.End(); open(); });
         var label = doctrineButton.GetComponentInChildren<LocalizedText>(true);
-        if (label != null) label.SetKey("god_tree_title");
-        else doctrineButton.GetComponentInChildren<TMP_Text>(true).text = Lang.Get("god_tree_title");
+        if (label != null) label.SetKey(titleKey);
+        else doctrineButton.GetComponentInChildren<TMP_Text>(true).text = Lang.Get(titleKey);
     }
 
     void Show()
