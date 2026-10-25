@@ -11,14 +11,16 @@ public class ResultWindowTests
     }
 
     [Test]
-    public void Body_PrefixesResultInParentheses()
+    public void Body_PrefixesResultMark()
     {
+        // 성공·실패는 글자 접두어 대신 ✓·× 표시로 구분한다 (SYS_UI_DESIGN 결정 8)
         var korean = Lang.IsKorean;
         try
         {
             Lang.Set(true);
-            StringAssert.Contains("(성공)</color> 좋았다", ResultWindow.Body(true, "좋았다"));
-            StringAssert.Contains("(실패)</color> 망했다", ResultWindow.Body(false, "망했다"));
+            StringAssert.Contains("✓</color> 좋았다", ResultWindow.Body(true, "좋았다"));
+            StringAssert.Contains("×</color> 망했다", ResultWindow.Body(false, "망했다"));
+            StringAssert.DoesNotContain("(성공)", ResultWindow.Body(true, "좋았다"));
         }
         finally { Lang.Set(korean); }
     }

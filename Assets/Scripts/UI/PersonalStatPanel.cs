@@ -28,8 +28,8 @@ public class PersonalStatPanel : MonoBehaviour
 
     void OnTraitChanged(int _) => RefreshName();
 
-    // 이름 · 나이 · 회차. 5회차부터는 덕목·욕망 평균도 함께 보여 준다 (최종 엔딩의 굿/배드 판정 기준)
-    // 준비된 신 모드: 회차 대신 모드 이름, 평균 대신 접신 게이지 (이 모드에선 공개 자원)
+    // 이름 · 나이 · 몇 번째 생. 5번째 생부터는 덕목·욕망 평균도 함께 보여 준다 (최종 엔딩의 굿/배드 판정 기준)
+    // 준비된 신 모드: 생 번호 대신 모드 이름, 평균 대신 접신 게이지 (이 모드에선 공개 자원)
     void RefreshName()
     {
         if (GameSession.GodMode)

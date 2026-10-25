@@ -58,7 +58,7 @@ public class LifeFlow : MonoBehaviour
 
     void ShowActionPrompt(string preface = null)
     {
-        var prompt = $"{string.Format(Lang.Get("life_action_prompt"), GameSession.Age.Years)}\n{ActionBar.Legend(ActionBar.Mode.Life)}";
+        var prompt = $"{string.Format(Lang.Get("life_action_prompt"), GameSession.Age.Years)}"; // 단축키는 행동 버튼에 표시
         questionPanel.Show(QuestionPanel.WithPreface(preface, prompt));
         actionBar.Show(ActionBar.Mode.Life);
     }

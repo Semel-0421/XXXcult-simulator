@@ -167,7 +167,7 @@ public class CultFlow : MonoBehaviour
     void ShowPrompt(string preface)
     {
         var clock = GameSession.CultTime;
-        var prompt = $"{string.Format(Lang.Get("cult_action_prompt"), clock.Years, clock.Quarter)}\n{ActionBar.Legend(ActionBar.Mode.Cult)}";
+        var prompt = $"{string.Format(Lang.Get("cult_action_prompt"), clock.Years, clock.Quarter)}"; // 단축키는 행동 버튼에 표시
         questionPanel.Show(QuestionPanel.WithPreface(preface, prompt));
     }
 }

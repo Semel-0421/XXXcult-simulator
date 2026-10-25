@@ -24,5 +24,6 @@ public static class DoctrineLevel
     public static float FaithGuard(int value) => Of(value) * FaithGuardPerLevel;
 
     public static bool IsMax(int value) => value >= ClampedStat.DefaultMax;
-    public static string Label(int value) => IsMax(value) ? Lang.Get("doctrine_max") : string.Format(Lang.Get("doctrine_level"), Of(value));
+    // 상단 자원 바에 보이는 교리 단계 (트리 안의 "레벨"과 달리 "단계"로 부른다)
+    public static string Label(int value) => IsMax(value) ? Lang.Get("doctrine_bar_max") : string.Format(Lang.Get("doctrine_bar"), Of(value));
 }

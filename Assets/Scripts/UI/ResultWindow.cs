@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 // 선택지를 고른 뒤 결과를 보여 주는 창. 이벤트 글 창과 같은 책 표지 모양으로 띄운다.
-//   (성공) / (실패) + 결과 글, 아래에 실제로 바뀐 스탯을 "신도 +3 / 음욕 +2"처럼 슬래시로 나눠 적는다.
+//   ✓(성공) / ×(실패) 표시 + 결과 글, 아래에 실제로 바뀐 스탯을 "신도 +3 / 음욕 +2"처럼 슬래시로 나눠 적는다.
 // 확인 버튼·엔터·스페이스·1번 키로 닫으면 다음 진행(onClose)으로 넘어간다.
 public class ResultWindow : MonoBehaviour
 {
@@ -35,7 +35,7 @@ public class ResultWindow : MonoBehaviour
     }
 
     public static string Body(bool success, string text) =>
-        $"<color={(success ? SuccessColor : FailColor)}>({Lang.Get(success ? "result_success" : "result_fail")})</color> {text}";
+        $"<color={(success ? SuccessColor : FailColor)}>{(success ? "✓" : "×")}</color> {text}"; // ✓ ×: 글꼴에 있는 글리프 (✕는 없음)
 
     public static void Show(bool success, string text, string effects, Action onClose)
     {
@@ -67,9 +67,9 @@ public class ResultWindow : MonoBehaviour
         var window = canvas.gameObject.AddComponent<ResultWindow>();
         window.onClose = onClose;
         current = window;
-        var ok = UiKit.MakeButton(panel, font, "Ok", Lang.Get("confirm"), 220, 52, out _);
+        var ok = UiKit.MakeButton(panel, font, "Ok", Lang.Get("result_continue"), 220, 52, out _);
         UiKit.Anchor((RectTransform)ok.transform, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(0, 50), new Vector2(220, 52));
-        ok.image.color = new Color(0.42f, 0.08f, 0.12f); // 어두운 진홍
+        ok.image.color = UiPalette.Button; // 진홍은 닫기·위험 전용
         ok.onClick.AddListener(() => window.Close(invoke: true));
     }
 

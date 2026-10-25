@@ -123,7 +123,7 @@ public static class GodTreeWindow
         if (skill == null)
         {
             nameLabel.text = "";
-            infoLabel.text = Lang.Get(tree.HasNature ? "god_tree_hint" : "god_nature_hint");
+            infoLabel.text = Lang.Get(tree.HasNature ? "god_tree_empty" : "god_nature_hint");
             learnButton.gameObject.SetActive(false);
             return;
         }

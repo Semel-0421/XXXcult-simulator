@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 // 질문창 아래 행동 버튼 5개. 교단 창설 전에는 생활 행동, 교리 선포 후에는 교단 행동을 보여준다.
+// 버튼이 주 입력이다: 글자 앞에 단축키를 붙인다 (예: "1 포교"). 키를 바꾸거나 언어를 바꾸면 다시 쓴다.
 public class ActionBar : MonoBehaviour
 {
     public enum Mode { Hidden, Life, Cult }
@@ -14,15 +16,24 @@ public class ActionBar : MonoBehaviour
     [SerializeField] CanvasGroup group;
     public event Action<LifeAction> LifeChosen;
     public event Action<CultAction> CultChosen;
+    public static event Action Acting; // 행동을 고른 직후, 효과가 들어가기 전 (상단 스탯 강조를 새 턴 기준으로 비운다)
 
     public Mode Current { get; private set; } = Mode.Hidden;
     public bool CanAct => Current != Mode.Hidden && group.interactable && string.IsNullOrEmpty(GameSession.PendingEventId); // 행동 선택을 기다리는 중
     LocalizedText[] labels;
+    TMP_Text[] texts;
+    string[] keys;
     DoctrineTree tree;
 
     void Awake()
     {
         labels = GetComponentsInChildren<LocalizedText>(true);
+        texts = labels.Select(l => l.GetComponent<TMP_Text>()).ToArray();
+        keys = labels.Select(l => l.Key).ToArray();
+        foreach (var l in labels) l.enabled = false; // 단축키를 앞에 붙여야 해서 글자는 RefreshLabels가 직접 쓴다
+        Keybinds.Changed += RefreshLabels;
+        Lang.Changed += RefreshLabels;
+        RefreshLabels();
         group.alpha = 0;
         group.interactable = group.blocksRaycasts = false;
     }
@@ -46,7 +57,9 @@ public class ActionBar : MonoBehaviour
         var button = copy.GetComponent<UnityEngine.UI.Button>();
         button.onClick = new UnityEngine.UI.Button.ButtonClickedEvent();
         button.onClick.AddListener(() => { if (CanAct) ConsecrateWindow.Open(); });
-        copy.GetComponentInChildren<LocalizedText>(true).SetKey("god_act_Consecrate");
+        var consecrate = copy.GetComponentInChildren<LocalizedText>(true);
+        consecrate.enabled = true; // 축성은 단축키가 없어 이름만 (언어 변경은 LocalizedText가 맡는다)
+        consecrate.SetKey("god_act_Consecrate");
         buttons.Add(copy);
         var width = (((RectTransform)transform).sizeDelta.x - gap * (buttons.Count - 1)) / buttons.Count;
         for (int i = 0; i < buttons.Count; i++)
@@ -56,7 +69,23 @@ public class ActionBar : MonoBehaviour
         }
     }
 
-    void OnDestroy() { if (tree != null) tree.Changed -= OnDoctrineChanged; }
+    void OnDestroy()
+    {
+        Keybinds.Changed -= RefreshLabels;
+        Lang.Changed -= RefreshLabels;
+        if (tree != null) tree.Changed -= OnDoctrineChanged;
+    }
+
+    // 버튼 글자: "단축키 행동이름" (단축키는 행동 안내 링크와 같은 금색)
+    void RefreshLabels()
+    {
+        for (int i = 0; i < texts.Length && i < keys.Length; i++)
+        {
+            if (texts[i] == null) continue;
+            var label = Lang.Get(keys[i]);
+            texts[i].text = i < Keybinds.ActionCount ? $"<color=#F2D978>{Keybinds.Label(Keybinds.Get(i))}</color> {label}" : label;
+        }
+    }
 
     void OnDoctrineChanged(DoctrineSkill _)
     {
@@ -65,14 +94,10 @@ public class ActionBar : MonoBehaviour
 
     static string[] KeysOf(Mode mode) => mode != Mode.Cult ? LifeKeys : GameSession.GodMode ? GodKeys : CultKeys;
 
-    // 행동 안내 아래 붙는 단축키 안내 (예: "[1] 운동   [2] 명상 ...")
-    public static string Legend(Mode mode) =>
-        Keybinds.Legend(KeysOf(mode).Select(Lang.Get).ToList()); // 눌러서 고를 수 있는 글자라 작게 줄이지 않는다
-
     public void Show(Mode mode)
     {
-        var keys = KeysOf(mode);
-        for (int i = 0; i < labels.Length; i++) labels[i].SetKey(keys[i]);
+        keys = KeysOf(mode);
+        RefreshLabels();
         var wasHidden = Current == Mode.Hidden;
         Current = mode;
         SetInteractable(mode != Mode.Hidden);
@@ -100,6 +125,7 @@ public class ActionBar : MonoBehaviour
     {
         if (!CanAct) return; // 이벤트 진행 중 등 잠긴 상태에서는 무시
         AudioManager.PlaySfx("click");
+        Acting?.Invoke();
         if (Current == Mode.Life) LifeChosen?.Invoke((LifeAction)index);
         else if (Current == Mode.Cult) CultChosen?.Invoke((CultAction)index);
     }
