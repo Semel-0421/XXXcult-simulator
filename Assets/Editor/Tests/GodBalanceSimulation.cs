@@ -213,7 +213,7 @@ public static class GodSimulation
     static readonly GodBuildingType[] BuildOrder =
         { GodBuildingType.Shelter, GodBuildingType.Temple, GodBuildingType.Village, GodBuildingType.Library, GodBuildingType.Statue };
 
-    static bool Consecrate()
+    internal static bool Consecrate()
     {
         if (hunt?.NoBuild == true) return false;
         var god = GameSession.God;
@@ -295,7 +295,7 @@ public static class GodSimulation
         finally { Trace = null; }
     }
 
-    static CultAction ChooseAction()
+    internal static CultAction ChooseAction()
     {
         var personal = GameSession.Personal;
         var cult = GameSession.Cult;
@@ -501,7 +501,7 @@ public static class GodSimulation
         return s;
     }
 
-    static Choice Best(Question question)
+    internal static Choice Best(Question question)
     {
         Choice best = null;
         float bestScore = float.MinValue;
