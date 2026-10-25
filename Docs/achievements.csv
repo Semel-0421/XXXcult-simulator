@@ -98,4 +98,4 @@ ach096,돌아온 자,The Returner,새 게임을 5번 시작했다.,Started a new
 ach097,교단의 최후,The Cult's End,교단이 해체되는 결말을 처음 보았다.,Saw your cult dissolved for the first time.,profile:dissolved>=1,
 ach098,불굴의 교주,The Indomitable Leader,교단이 해체되는 결말을 3번 보았다.,Saw your cult dissolved 3 times.,profile:dissolved>=3,gifted:no.134
 ach099,삼세번 교주,Third Time's the Charm,교단을 3번 창설했다.,Founded a cult 3 times.,profile:founded>=3,
-ach100,업적의 지배자,Master of Achievements,다른 업적을 모두 달성했다.,Unlocked every other achievement.,achv>=99,gifted:no.140
+ach100,업적의 지배자,Master of Achievements,일반·신·거울 모드에서 업적을 각각 50개 이상 달성했다.,Unlocked 50+ achievements in every mode (Normal/God/Mirror).,normal_achv>=50 god_achv>=50 mirror_achv>=50,gifted:no.140

@@ -104,6 +104,6 @@ public static class AchievementCatalog
         new("ach097", "교단의 최후\u001FThe Cult's End", "교단이 해체되는 결말을 처음 보았다.\u001FSaw your cult dissolved for the first time.", "profile:dissolved>=1", AchievementReward.None),
         new("ach098", "불굴의 교주\u001FThe Indomitable Leader", "교단이 해체되는 결말을 3번 보았다.\u001FSaw your cult dissolved 3 times.", "profile:dissolved>=3", AchievementReward.Gifted("no.134")),
         new("ach099", "삼세번 교주\u001FThird Time's the Charm", "교단을 3번 창설했다.\u001FFounded a cult 3 times.", "profile:founded>=3", AchievementReward.None),
-        new("ach100", "업적의 지배자\u001FMaster of Achievements", "다른 업적을 모두 달성했다.\u001FUnlocked every other achievement.", "achv>=99", AchievementReward.Gifted("no.140")),
+        new("ach100", "업적의 지배자\u001FMaster of Achievements", "일반·신·거울 모드에서 업적을 각각 50개 이상 달성했다.\u001FUnlocked 50+ achievements in every mode (Normal/God/Mirror).", "normal_achv>=50 god_achv>=50 mirror_achv>=50", AchievementReward.Gifted("no.140")),
     };
 }

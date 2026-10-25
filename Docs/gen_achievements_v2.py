@@ -441,10 +441,47 @@ def prune(m):
     for i, r in enumerate(m.rows):  # id를 다시 매긴다
         r["id"] = f"{m.prefix}{(101 if m.key == 'normal' else 1) + i:03d}"
 
+# 밸런스 2차 결정 (SYS_ACHIEVEMENTS_V2): 도달률 0% 업적의 기준치만 낮춘다. 압축 규칙이 기준치로 행을 고르므로
+# 위 목록 값은 그대로 두고, 압축·id 부여가 끝난 뒤 id로 골라 바꾼다 (id가 밀리지 않게).
+# 2026-10-25 추가: 시뮬에서도 0%였던 g090·g035·m050은 "쉽게 해금"을 위해 80% 수준으로 낮추고, 순서가 뒤집히지 않게 같은 사다리(g066·g034·g089)도 함께 80%로 맞춤
+TUNE = {
+    "n166": 15, "n167": 17, "n168": 18, "n169": 20, "n171": 30, "n194": 120, "n195": 130, "n205": 4, "n216": 42,
+    "g046": 50, "g074": 4, "g066": 1840, "g090": 1920, "g067": 12,
+    "m050": 24, "m058": 230, "m059": 260, "m067": 220, "m117": 250, "m100": 50, "m118": 60,
+}
+
+def tune(m):
+    for r in m.rows:
+        if r["id"] not in TUNE: continue
+        old, new = thr(r), TUNE[r["id"]]
+        r["condition"] = re.sub(rf"(?<=[<>=]){old}(?!\d)", str(new), r["condition"])
+        for k in ("description", "description_en"):
+            r[k] = r[k].replace(f"{old:,}", str(new)) if old >= 1000 else r[k]
+            r[k] = re.sub(rf"(?<!\d){old}(?!\d)", str(new), r[k])
+
+# 같은 결정: 신 행동 횟수 업적을 판 기준(NEW:)에서 누적(profile:, 모든 판 합산)으로 바꾸고 기준치를 누적 분포로 다시 잡는다
+CUMULATIVE = {
+    # 신 20명×20판 누적 분포(2026-10-25)의 제안값. 연회는 봇이 거의 안 써서(누적 최대 12) 분포 대신 30/100을 누적으로 씀
+    "g024": 200, "g025": 210, "g026": 120, "g027": 140, "g028": 540, "g029": 570,
+    "g030": 30, "g031": 100, "g032": 440, "g033": 460, "g034": 240, "g035": 256, "g089": 240,
+}
+
+def cumulative(m):
+    for r in m.rows:
+        if r["id"] not in CUMULATIVE: continue
+        n = CUMULATIVE[r["id"]]
+        r["condition"] = re.sub(r"^NEW:(\w+)>=\d+$", rf"profile:\1>={n}", r["condition"])
+        if r["id"] == "g089":
+            r["description"] = f"건물을 누적 {n}번 봉헌했다 (모든 건물·모든 회차 합산)."
+            r["description_en"] = f"Consecrated buildings {n} times in total (any building, all runs combined)."
+        else:
+            r["description"] = re.sub(r"\d+번 했다\.$", f"누적 {n}번 했다 (모든 회차 합산).", r["description"])
+            r["description_en"] = re.sub(r"Done \d+ times\.$", f"Done {n} times in total (all runs combined).", r["description_en"])
+
 if __name__ == "__main__":
     out = {}
     for build in (normal, god, mirror):
         m = build()
         out[m.key] = len(m.rows)
-        full = len(m.rows); prune(m)
+        full = len(m.rows); prune(m); tune(m); cumulative(m)
         print(m.key, full, "->", len(m.rows)); write(m)

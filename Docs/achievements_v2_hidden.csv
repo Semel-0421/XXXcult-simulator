@@ -13,4 +13,4 @@ h011,hidden,기프티드 총 획득,백 번의 재능,A Hundred Talents,기프�
 h012,hidden,기프티드 총 획득,삼백 번의 재능,Three Hundred Talents,기프티드를 누적 300번 획득했다.,Acquired Gifted 300 times in total.,gifted_total>=300,3,
 h013,hidden,기프티드 총 획득,천 번의 재능,A Thousand Talents,기프티드를 누적 1000번 획득했다.,Acquired Gifted 1000 times in total.,gifted_total>=1000,3,
 h014,hidden,기프티드 총 획득,재능 도감 완성,Talent Codex Complete,기프티드 140종을 모두 획득했다.,Acquired all 140 kinds of Gifted.,gifted_kinds_seen>=140,3,
-h015,hidden,기프티드 총 획득,재능의 만개,Talents in Full Bloom,한 회차에 기프티드를 40개 보유했다.,Held 40 Gifted in a single run.,gifted_run_peak>=40,3,
+h015,hidden,기프티드 총 획득,재능의 만개,Talents in Full Bloom,한 회차에 기프티드를 20개 보유했다.,Held 20 Gifted in a single run.,gifted_run_peak>=20,3,
