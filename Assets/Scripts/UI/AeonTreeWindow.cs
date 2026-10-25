@@ -67,7 +67,11 @@ public static class AeonTreeWindow
         pointsLabel = UiKit.Label(panel, font, "Points", 22, TextAlignmentOptions.Left, UiKit.Gold);
         UiKit.Anchor(pointsLabel.rectTransform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(150, -30), new Vector2(260, 30));
         stageLabel = UiKit.Label(panel, font, "Stage", 18, TextAlignmentOptions.Left, new Color(1f, 0.95f, 0.8f));
-        UiKit.Anchor(stageLabel.rectTransform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(150, -58), new Vector2(260, 26));
+        UiKit.Anchor(stageLabel.rectTransform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(145, -58), new Vector2(250, 26)); // 가운데 안내문과 겹치지 않게 폭은 그대로 두고 글자를 줄인다
+        stageLabel.textWrappingMode = TextWrappingModes.NoWrap; // 영어 "Doctrine tier 10  Throne: Yaldabaoth"가 두 줄로 넘쳤다
+        stageLabel.enableAutoSizing = true;
+        stageLabel.fontSizeMin = 13;
+        stageLabel.fontSizeMax = 18;
 
         var close = UiKit.MakeButton(panel, font, "Close", "", 120, 44, out closeLabel);
         close.image.color = UiSkin.Crimson;

@@ -36,12 +36,12 @@ public class PersonalStatPanel : MonoBehaviour
     {
         if (demiurgeButton != null) return;
         var parent = (RectTransform)nameLabel.transform.parent;
-        demiurgeButton = UiKit.MakeButton(parent, UiFonts.Strong != null ? UiFonts.Strong : nameLabel.font, "DemiurgeButton", "", 100, 30, out demiurgeLabel);
+        demiurgeButton = UiKit.MakeButton(parent, UiFonts.Strong != null ? UiFonts.Strong : nameLabel.font, "DemiurgeButton", "", 100, 26, out demiurgeLabel);
         var rect = (RectTransform)demiurgeButton.transform;
         rect.anchorMin = rect.anchorMax = new Vector2(1, 1);
         rect.pivot = new Vector2(1, 1);
-        rect.anchoredPosition = new Vector2(-8, -42); // 이름 줄 아래, 접신 줄의 오른쪽 끝 (이름과 겹치지 않게)
-        rect.sizeDelta = new Vector2(100, 30);
+        rect.anchoredPosition = new Vector2(-8, -50); // 이름 줄 아래, 접신 줄의 오른쪽 끝 (영어 이름 줄이 길어 -42에서는 겹쳤다)
+        rect.sizeDelta = new Vector2(100, 26);
         demiurgeLabel.fontSize = UiType.Caption;
         demiurgeButton.onClick.AddListener(DemiurgeWindow.Open);
         RefreshDemiurgeButton();
