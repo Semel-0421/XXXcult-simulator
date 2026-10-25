@@ -2,6 +2,7 @@
 
 ## 2026-10-25
 - [systems/SYS_UI_DESIGN.md] 신규: 인게임 UI·텍스트 개선 방향, Design 스킬 점검 결과, 정할 것 8건
+- [systems/SYS_UI_DESIGN.md] 8절: 권장안(결정 1·2·7) 시험 적용 전후 비교, reviews/ui_compare_2026-10-25
 
 ## 2026-10-19
 - [systems/SYS_INVERTED.md] 동점 반올림 (DEC-023), 보유 후 진행 (DEC-024), 회차·업적 (DEC-025)
