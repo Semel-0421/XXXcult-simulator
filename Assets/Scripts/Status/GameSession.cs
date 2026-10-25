@@ -31,6 +31,9 @@ public static class GameSession
     public static bool MirrorMode { get; private set; }  // 거울 세계 모드로 진행 중인 판 (전용 이벤트·교리)
     public static void SetMirrorMode(bool on) { MirrorMode = on; if (on) MirrorCounters.RunStart(); }
 
+    public static bool EyeMode { get; private set; }     // 황금의 눈동자 모드로 진행 중인 판 (Docs/GDD/systems/SYS_DEMIURGE.md)
+    public static void SetEyeMode(bool on) => EyeMode = on;
+
     // 이번 판이 도달한 엔딩 (음악이 결말 곡으로 바뀐다). 새 판에서 지운다
     public static Endings.Ending Ending { get; private set; }
     public static void SetEnding(Endings.Ending ending) { Ending = ending; MirrorCounters.Ending(ending); }
@@ -165,6 +168,7 @@ public static class GameSession
         Run = 0;
         GodMode = false;
         MirrorMode = false;
+        EyeMode = false;
         God = new GodState();
         God.Tree.Changed += OnGodSkillLearned;
         FirstExtremeId = null;
@@ -201,6 +205,7 @@ public static class GameSession
             dead = Dead,
             godMode = GodMode,
             mirrorMode = MirrorMode,
+            eyeMode = EyeMode,
             godNature = God.Tree.NatureId,
             godPointsEarned = God.Points.Earned,
             godSecularStage = God.Points.SecularStageAwarded,
@@ -233,6 +238,7 @@ public static class GameSession
         StartNew(data.seed);
         CultGeneration = data.cultGeneration; // 세대 ID 복원 (Run 카운터 보존)
         MirrorMode = data.mirrorMode; // 교리 목록을 고르므로 먼저
+        EyeMode = data.eyeMode;
         Rng = new GameRng(ulong.Parse(data.rngState));
         Personal.Name = data.playerName ?? "";
         Personal.Gender = (Gender)data.gender;

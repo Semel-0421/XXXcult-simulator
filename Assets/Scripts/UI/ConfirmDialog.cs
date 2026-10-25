@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// 확인/취소 두 버튼짜리 작은 창. 코드로 만들어 띄우고, 고르면 스스로 사라진다.
+// 확인/취소 두 버튼짜리 작은 창(cancelText가 null이면 확인 하나). 코드로 만들어 띄우고, 고르면 스스로 사라진다.
 public static class ConfirmDialog
 {
     public static void Show(string message, string okText, string cancelText, Action onOk)
@@ -28,6 +28,7 @@ public static class ConfirmDialog
         UiKit.Anchor((RectTransform)ok.transform, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(-120, 50), new Vector2(220, 52));
         ok.image.color = UiSkin.Crimson;
         ok.onClick.AddListener(() => { Close(); onOk?.Invoke(); });
+        if (cancelText == null) { ((RectTransform)ok.transform).anchoredPosition = new Vector2(0, 50); return; } // 버튼 하나짜리 안내 창
         var cancel = UiKit.MakeButton(panel, font, "Cancel", cancelText, 220, 52, out _);
         UiKit.Anchor((RectTransform)cancel.transform, new Vector2(0.5f, 0), new Vector2(0.5f, 0), new Vector2(120, 50), new Vector2(220, 52));
         cancel.onClick.AddListener(Close);

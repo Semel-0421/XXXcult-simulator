@@ -36,7 +36,7 @@ public class MenuLabel : MonoBehaviour
             menuLabel.lit.raycastTarget = false;
             menuLabel.lit.type = Image.Type.Filled;
             menuLabel.lit.fillMethod = Image.FillMethod.Horizontal;
-            menuLabel.lit.fillOrigin = key == "mirror_mode" ? (int)Image.OriginHorizontal.Right : (int)Image.OriginHorizontal.Left; // 반전 글자는 첫 글자가 오른쪽
+            menuLabel.lit.fillOrigin = key is "mirror_mode" or "eye_mode" ? (int)Image.OriginHorizontal.Right : (int)Image.OriginHorizontal.Left; // 반전 글자는 첫 글자가 오른쪽
             // 진행 숫자는 원래 TMP를 그림 오른쪽에 붙여 쓴다
             label.transform.SetParent(rect, false);
             var countRect = label.rectTransform;

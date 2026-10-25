@@ -33,6 +33,7 @@ public class SaveData
     // 준비된 신 모드
     public bool godMode;
     public bool mirrorMode; // 거울 세계 모드
+    public bool eyeMode;    // 황금의 눈동자 모드 (없던 옛 저장은 false)
     public List<string> godSkills = new();   // 익힌 권능 노드
     public string godNature;                 // 신의 본성 (무료로 고른 바깥 노드)
     public List<string> godCores = new();    // 완성한 핵 순서 (승천 엔딩 판정)

@@ -19,8 +19,11 @@ public class StartScreenController : MonoBehaviour
         var buttons = new System.Collections.Generic.List<CanvasGroup>(menuButtons);
         buttons.Insert(1, BuildGodButton());
         buttons.Insert(2, BuildMirrorButton());
+        buttons.Insert(3, BuildEyeButton());
         ImageLabels(); // 복제 뒤에 (복제본은 새 게임의 TMP 글자에서 시작한다)
         foreach (var button in buttons) { button.alpha = 0; button.interactable = false; }
+        yield return null; // 화면 틀 크기가 정해진 뒤에 잰다 (Start 첫 프레임에는 아직 0)
+        FitMenu(buttons);
         foreach (var button in buttons)
         {
             yield return CanvasFade.To(button, 1, fadeDuration);
@@ -30,6 +33,28 @@ public class StartScreenController : MonoBehaviour
 
     Button mirrorButton;
     TMP_Text mirrorLabel;
+
+    // 모드 버튼이 늘어 메뉴가 화면 아래로 넘치면 버튼 높이와 간격을 같은 비율로 줄인다 (8개부터 '종료'가 잘렸다)
+    static void FitMenu(System.Collections.Generic.List<CanvasGroup> buttons)
+    {
+        var menu = (RectTransform)buttons[0].transform.parent;
+        var frame = menu.parent as RectTransform;
+        var layout = menu.GetComponent<VerticalLayoutGroup>();
+        if (frame == null || layout == null) return;
+        var menuTop = menu.localPosition.y + menu.rect.yMax; // 화면 틀 좌표에서 메뉴 윗변
+        var available = menuTop - frame.rect.yMin - 16;
+        var height = ((RectTransform)buttons[0].transform).rect.height;
+        var needed = buttons.Count * height + (buttons.Count - 1) * layout.spacing;
+        if (needed <= available || needed <= 0) return;
+        var scale = available / needed;
+        layout.spacing *= scale;
+        foreach (var button in buttons)
+        {
+            var rect = (RectTransform)button.transform;
+            rect.sizeDelta = new Vector2(rect.sizeDelta.x, height * scale);
+            if (button.TryGetComponent<LayoutElement>(out var element)) element.minHeight = element.preferredHeight = height * scale; // 세로 배치가 이 높이를 쓴다
+        }
+    }
 
 
     // 새 게임 버튼을 복제해 그 아래 offset번째 자리에 둔다
@@ -67,6 +92,25 @@ public class StartScreenController : MonoBehaviour
 
     static void LockableLabel(TMP_Text label, string key) =>
         MenuLabel.Replace(label, key, () => !GodRules.Unlocked, () => GodRules.LockedFill(GodRules.UnlockProgress), () => GodRules.LockedCount(GodRules.UnlockProgress));
+
+    Button eyeButton;
+
+    // 황금의 눈동자: 거울 세계 아래. 신 승천 엔딩 + 거울 전용 엔딩을 보기 전에는 잠겨 있다.
+    // 잠긴 글자는 거울처럼 좌우 반전된 채 금빛이 차오르고, 열리면 정방향 금빛 글자가 된다.
+    CanvasGroup BuildEyeButton()
+    {
+        var group = CloneNewGame("EyeModeButton", 3, NewEyeGame, out eyeButton, out var label);
+        eyeButton.enabled = EyeRules.Unlocked;
+        MenuLabel.Replace(label, "eye_mode", () => !EyeRules.Unlocked, () => EyeRules.LockedFill(EyeRules.UnlockProgress), () => EyeRules.LockedCount(EyeRules.UnlockProgress));
+        return group;
+    }
+
+    // 판 진행은 아직 없어서 모드 설명과 준비 중 안내만 보여 준다 (SYS_DEMIURGE 구현 순서 2단계부터)
+    public void NewEyeGame()
+    {
+        if (!EyeRules.Unlocked) return;
+        ConfirmDialog.Show($"<b>{Lang.Get("eye_mode")}</b>\n\n{Lang.Get("eye_desc")}\n\n<size=80%>{Lang.Get("eye_wip")}</size>", Lang.Get("close"), null, null);
+    }
 
     // 장면에 있는 메뉴 버튼 글자(LocalizedText)도 그림으로 바꾼다
     void ImageLabels()
