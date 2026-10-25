@@ -27,7 +27,7 @@ updated: 2026-10-19
 | [02_Tech.md](02_Tech.md) | Unity 기술 구조 | draft | 2026-10-19 |
 | [03_Decisions.md](03_Decisions.md) | 결정 로그 · 미결 사항 | draft | 2026-10-19 |
 | [systems/SYS_INVERTED.md](systems/SYS_INVERTED.md) | 신규 모드: 거울 세계 | draft | 2026-10-19 |
-| [systems/SYS_DEMIURGE.md](systems/SYS_DEMIURGE.md) | 신규 모드: 황금의 눈동자 (신+거울 통합) | draft | 2026-10-26 |
+| [systems/SYS_DEMIURGE.md](systems/SYS_DEMIURGE.md) | 신규 모드: 황금의 눈동자 (신+거울 통합, 1~8단계 구현) | draft | 2026-10-26 |
 | [systems/SYS_UI_DESIGN.md](systems/SYS_UI_DESIGN.md) | 인게임 UI·텍스트 개선 방향 | draft | 2026-10-25 |
 <!-- /AUTO:FILEMAP -->
 
@@ -54,6 +54,7 @@ _(없음)_
 
 ## 최근 변경
 <!-- AUTO:RECENT -->
+- 2026-10-26 [systems/SYS_DEMIURGE.md] 황금의 눈동자 구현 1~8단계 완료, 옛 가안을 [구현]으로 정리. 남은 것: 9단계 시뮬레이션·수치, 가칭 확정
 - 2026-10-26 [systems/SYS_DEMIURGE.md] 정할 것 14건 결정: 모드 이름 '황금의 눈동자', 해금은 신 승천+거울 전용 엔딩, 그노시스 뒤 평판 반전, 전용 업적, 행동 이름 전부 새로, 히든 5종 (DEC-028)
 - 2026-10-25 [systems/SYS_DEMIURGE.md] 가안 수정: 눈동자 첫 질문, 데미우르고스 스탯·재앙, 주도권 엔딩 8종 (DEC-027)
 - 2026-10-25 [systems/SYS_DEMIURGE.md] 신규 모드 기획 초안: 영지주의 데미우르고스, 4섹터 아이온 트리, 교리 0~10단계, 정할 것 9건 (DEC-026)
