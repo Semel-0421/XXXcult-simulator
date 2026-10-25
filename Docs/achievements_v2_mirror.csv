@@ -103,7 +103,7 @@ m101,mirror,엔딩,열여섯 개의 끝,Sixteen Ends,거울 세계의 최종 스
 m102,mirror,엔딩,열여섯 개의 영광,Sixteen Glories,거울 세계의 최종 스킬 굿 엔딩 16개를 모두 봤다.,Saw all 16 good final-skill endings.,NEW:mirror_final_good16,3,
 m103,mirror,엔딩,열여섯 개의 그림자,Sixteen Shadows,거울 세계의 최종 스킬 배드 엔딩 16개를 모두 봤다.,Saw all 16 bad final-skill endings.,NEW:mirror_final_bad16,3,
 m104,mirror,엔딩,모든 거울 결말,Every Mirror Ending,거울 세계 엔딩 41개를 모두 봤다.,Saw all 41 Mirror World endings.,NEW:mirror_endings_seen>=41,3,
-m105,mirror,도전,붕괴 없이 25년,25 Years Intact,붕괴 없이 교단 25년을 맞았다.,Reached cult year 25 without collapsing.,NEW:mirror_cultyears>=25,2,
+m105,mirror,도전,붕괴 없이 30년,30 Years Intact,붕괴 없이 교단 30년을 맞았다.,Reached cult year 30 without collapsing.,NEW:mirror_cultyears>=30,2,
 m106,mirror,도전,붕괴 직전,On the Brink,신도 5명 이하에서 회복해 교단 10년을 넘겼다.,Recovered from 5 or fewer followers to pass cult year 10.,NEW:mirror_followers_low_recover,2,
 m107,mirror,도전,바닥에서 정상으로,Bottom to Top,신도 5명 이하에서 신도 500명까지 늘렸다.,Grew from 5 or fewer followers to 500.,NEW:mirror_followers_5_to_500,2,
 m108,mirror,도전,모든 유예,Whole Grace Period,유예 기간(16턴) 동안 한 번도 실패하지 않았다.,Failed nothing during the 16-turn grace period.,NEW:mirror_grace_no_fail,2,
