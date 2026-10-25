@@ -445,7 +445,7 @@ def prune(m):
 # 위 목록 값은 그대로 두고, 압축·id 부여가 끝난 뒤 id로 골라 바꾼다 (id가 밀리지 않게).
 # 2026-10-25 추가: 시뮬에서도 0%였던 g090·g035·m050은 "쉽게 해금"을 위해 80% 수준으로 낮추고, 순서가 뒤집히지 않게 같은 사다리(g066·g034·g089)도 함께 80%로 맞춤
 TUNE = {
-    "n166": 15, "n167": 17, "n168": 18, "n169": 20, "n171": 30, "n194": 120, "n195": 130, "n205": 4, "n216": 42,
+    "n166": 15, "n167": 17, "n168": 18, "n169": 20, "n171": 32, "n194": 120, "n195": 130, "n205": 4, "n216": 42,
     "g046": 50, "g074": 4, "g066": 1840, "g090": 1920, "g067": 12,
     "m050": 24, "m058": 230, "m059": 260, "m067": 220, "m117": 250, "m100": 50, "m118": 60,
 }
@@ -478,10 +478,23 @@ def cumulative(m):
             r["description"] = re.sub(r"\d+번 했다\.$", f"누적 {n}번 했다 (모든 회차 합산).", r["description"])
             r["description_en"] = re.sub(r"Done \d+ times\.$", f"Done {n} times in total (all runs combined).", r["description_en"])
 
+# 기준치를 바꾼 업적 중 이름에 숫자가 든 것은 새 기준에 맞춰 이름도 바꾼다 (ko, en)
+RENAME = {
+    "n167": ("열일곱 가지 재능", "Seventeen Gifts"), "n168": ("열여덟 가지 재능", "Eighteen Gifts"), "n169": ("스무 가지 재능", "Twenty Gifts"),
+    "n171": ("도감 서른둘", "Thirty-Two Catalogued"), "n194": ("업적 백이십", "One Hundred Twenty"),
+    "m050": ("교리 스물네 개", "Twenty-Four Doctrines"),
+    "m058": ("거울 신도 이백삼십 명", "Mirror Followers: Two Hundred Thirty Souls"), "m059": ("거울 신도 이백육십 명", "Mirror Followers: Two Hundred Sixty Souls"),
+    "m100": ("거울 업적 쉰", "Fifty Mirror Marks"), "m117": ("모든 지표 상승", "All Rising"),
+}
+
+def rename(m):
+    for r in m.rows:
+        if r["id"] in RENAME: r["name"], r["name_en"] = RENAME[r["id"]]
+
 if __name__ == "__main__":
     out = {}
     for build in (normal, god, mirror):
         m = build()
         out[m.key] = len(m.rows)
-        full = len(m.rows); prune(m); tune(m); cumulative(m)
+        full = len(m.rows); prune(m); tune(m); cumulative(m); rename(m)
         print(m.key, full, "->", len(m.rows)); write(m)
