@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ClickEffect : MonoBehaviour
 {
     const float Seconds = 0.45f, StartSize = 18f, EndSize = 110f;
-    static readonly Color Ring = new(0.83f, 0.69f, 0.22f); // UiSkin.Gold
+    static readonly Color Ring = UiPalette.Gold; // UiSkin.Gold
 
     static Sprite ringSprite;
     RectTransform canvasRect;

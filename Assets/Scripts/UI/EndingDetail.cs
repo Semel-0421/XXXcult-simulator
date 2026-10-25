@@ -19,7 +19,7 @@ public static class EndingDetail
         root.GetComponent<Canvas>().sortingOrder = 320; // 도감 위에 뜬다
 
         var panel = (RectTransform)root.transform.Find("Panel");
-        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "EndingDetailBook", new Color(0.4f, 0.1f, 0.26f), new Color(0.2f, 0.06f, 0.34f));
+        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "EndingDetailBook", UiPalette.BookGalleryTop, UiPalette.BookGalleryBottom);
         panel.Find("Close").GetComponent<Image>().color = UiSkin.Crimson;
         ((RectTransform)panel.Find("Scroll")).offsetMax = new Vector2(-18, -108);
 
@@ -29,7 +29,7 @@ public static class EndingDetail
         picture.preserveAspect = true;
         picture.raycastTarget = false;
 
-        body = Text(content, font, 24, new Color(0.92f, 0.88f, 0.98f));
+        body = Text(content, font, 24, UiPalette.TextBright);
         quiz = Text(content, font, 21, new Color(0.98f, 0.86f, 0.5f));
         root.SetActive(false);
     }

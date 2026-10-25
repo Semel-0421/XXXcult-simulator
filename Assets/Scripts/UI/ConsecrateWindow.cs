@@ -45,7 +45,7 @@ public static class ConsecrateWindow
         closeLabel = close.GetComponentInChildren<TMP_Text>();
         close.onClick.AddListener(Close);
         var panel = (RectTransform)root.transform.Find("Panel");
-        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "ConsecrateBook", new Color(0.30f, 0.12f, 0.32f), new Color(0.12f, 0.06f, 0.22f));
+        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "ConsecrateBook", UiPalette.BookAltarTop, UiPalette.BookAltarBottom);
 
         rows = new Row[GodBuildings.All.Length];
         for (int i = 0; i < rows.Length; i++) rows[i] = BuildRow(content, font, GodBuildings.All[i]);

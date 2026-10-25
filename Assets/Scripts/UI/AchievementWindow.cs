@@ -213,11 +213,11 @@ public static class AchievementWindow
             if (i >= list.Count) continue;
             var achievement = list[i];
             var done = Profile.IsUnlocked(achievement.Id);
-            row.background.color = done ? new Color(0.42f, 0.12f, 0.24f, 0.96f) : new Color(0.16f, 0.07f, 0.24f, 0.9f);
+            row.background.color = done ? UiPalette.RowDone : UiPalette.RowIdle;
             row.name.text = done ? $"{achievement.Name}  <size=70%><color=#9BE08A>{Lang.Get("ach_done")}</color></size>" : achievement.Name;
-            row.name.color = done ? UiSkin.GoldLight : new Color(0.55f, 0.5f, 0.6f);
+            row.name.color = done ? UiSkin.GoldLight : UiPalette.Locked;
             row.description.text = achievement.Description;
-            row.description.color = done ? new Color(0.85f, 0.82f, 0.92f) : new Color(0.5f, 0.47f, 0.57f);
+            row.description.color = done ? UiPalette.TextSoft : new Color(0.5f, 0.47f, 0.57f);
             row.reward.text = Achievements.RewardText(achievement);
             row.reward.color = done ? new Color(0.7f, 0.9f, 0.6f) : new Color(0.45f, 0.5f, 0.42f);
         }

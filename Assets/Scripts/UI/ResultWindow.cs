@@ -48,7 +48,7 @@ public class ResultWindow : MonoBehaviour
 
         var panel = UiKit.Child(canvas, "Panel", typeof(Image));
         UiKit.Anchor(panel, new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(-185, 15), new Vector2(830, 420));
-        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "ResultBook", new Color(0.22f, 0.08f, 0.30f), new Color(0.08f, 0.03f, 0.12f));
+        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "ResultBook", UiPalette.BookEventTop, UiPalette.BookEventBottom);
 
         var body = UiKit.Label(panel, font, "Body", 26, TextAlignmentOptions.TopLeft, Color.white);
         UiKit.Anchor(body.rectTransform, Vector2.zero, Vector2.one, new Vector2(0, 45), new Vector2(-80, -170));

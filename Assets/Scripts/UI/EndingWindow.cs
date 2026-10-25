@@ -52,7 +52,7 @@ public static class EndingWindow
         close.image.color = UiSkin.Crimson;
 
         var panel = (RectTransform)root.transform.Find("Panel");
-        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "EndingBook", new Color(0.4f, 0.1f, 0.26f), new Color(0.2f, 0.06f, 0.34f));
+        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "EndingBook", UiPalette.BookGalleryTop, UiPalette.BookGalleryBottom);
 
         var endings = Endings.All.Concat(GodRules.AllEndings).Concat(MirrorEndings.All).ToArray();
         rows = new Row[endings.Length];
@@ -101,9 +101,9 @@ public static class EndingWindow
             row.background.gameObject.SetActive(inTab);
             if (!inTab) continue;
             var seen = Endings.Seen(ending.Id);
-            row.background.color = seen ? new Color(0.42f, 0.12f, 0.24f, 0.96f) : new Color(0.16f, 0.07f, 0.24f, 0.9f);
+            row.background.color = seen ? UiPalette.RowDone : UiPalette.RowIdle;
             row.name.text = seen ? $"{Endings.DisplayName(ending)}{Tag(ending.Kind)}" : Lang.Get("ending_unseen");
-            row.name.color = seen ? UiSkin.GoldLight : new Color(0.55f, 0.5f, 0.6f);
+            row.name.color = seen ? UiSkin.GoldLight : UiPalette.Locked;
             row.description.text = !seen ? ""
                 : Progress.ShowsConditions && ending.Final != null
                     ? $"{Lang.Get(ending.DescriptionKey)}\n<size=85%><color=#F2D978>{Progress.ConditionOf(ending)}</color></size>" // 4회차부터 판정 조건 공개

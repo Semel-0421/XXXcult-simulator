@@ -47,8 +47,8 @@ public static class GodTreeWindow
         var panel = UiKit.Child(rootRect, "Panel", typeof(Image), typeof(Outline));
         panel.anchorMin = panel.anchorMax = new Vector2(0.5f, 0.5f);
         panel.sizeDelta = new Vector2(1240, 700);
-        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "GodTreeBook", new Color(0.30f, 0.12f, 0.32f), new Color(0.12f, 0.06f, 0.22f));
-        panel.GetComponent<Outline>().effectColor = new Color(0.83f, 0.69f, 0.22f, 0.5f);
+        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "GodTreeBook", UiPalette.BookAltarTop, UiPalette.BookAltarBottom);
+        panel.GetComponent<Outline>().effectColor = UiPalette.GoldFaint;
 
         titleLabel = UiKit.Label(panel, font, "Title", 32, TextAlignmentOptions.Center, UiKit.Gold);
         UiKit.Anchor(titleLabel.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, -32), new Vector2(0, 44));

@@ -32,7 +32,7 @@ public class ActionResultView : MonoBehaviour
         var frame = UiKit.Child(root, "Frame", typeof(Image));
         UiKit.Stretch(frame);
         frame.SetAsFirstSibling();
-        UiSkin.ApplyBookFrame(frame.GetComponent<Image>(), "ActionBook", new Color(0.22f, 0.08f, 0.30f), new Color(0.08f, 0.03f, 0.12f));
+        UiSkin.ApplyBookFrame(frame.GetComponent<Image>(), "ActionBook", UiPalette.BookEventTop, UiPalette.BookEventBottom);
         frame.GetComponent<Image>().raycastTarget = false;
 
         var art = image.rectTransform;
@@ -72,7 +72,7 @@ public class ActionResultView : MonoBehaviour
         else image.color = Color.clear;
 
         label.text = Lang.Get(success ? "action_success" : "action_fail");
-        label.color = success ? new Color(0.83f, 0.69f, 0.22f) : new Color(0.9f, 0.35f, 0.35f);
+        label.color = success ? UiPalette.Gold : new Color(0.9f, 0.35f, 0.35f);
         group.alpha = 1;
         group.blocksRaycasts = true;
         AudioManager.PlaySfx(actionKey == "Consecrate" ? "consecrate" : success ? "success" : "fail");

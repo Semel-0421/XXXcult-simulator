@@ -149,7 +149,7 @@ public class DoctrineTreeView : MonoBehaviour
         panel.anchoredPosition = new Vector2(-40, 0);
         panel.sizeDelta = new Vector2(380, 560);
         panel.GetComponent<Image>().color = new Color(0.07f, 0.05f, 0.12f, 0.92f);
-        panel.GetComponent<Outline>().effectColor = new Color(0.83f, 0.69f, 0.22f, 0.5f);
+        panel.GetComponent<Outline>().effectColor = UiPalette.GoldFaint;
 
         pointsLabel = UiKit.Label(panel, font, "Points", 22, TextAlignmentOptions.TopLeft, UiKit.Gold);
         UiKit.Anchor(pointsLabel.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, -50), new Vector2(-36, 80));
@@ -157,7 +157,7 @@ public class DoctrineTreeView : MonoBehaviour
         nameLabel = UiKit.Label(panel, font, "Name", 28, TextAlignmentOptions.TopLeft, Color.white);
         UiKit.Anchor(nameLabel.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, -130), new Vector2(-36, 70));
 
-        infoLabel = UiKit.Label(panel, font, "Info", 18, TextAlignmentOptions.TopLeft, new Color(0.85f, 0.82f, 0.92f));
+        infoLabel = UiKit.Label(panel, font, "Info", 18, TextAlignmentOptions.TopLeft, UiPalette.TextSoft);
         infoLabel.rectTransform.anchorMin = new Vector2(0, 0);
         infoLabel.rectTransform.anchorMax = new Vector2(1, 1);
         infoLabel.rectTransform.offsetMin = new Vector2(18, 90);

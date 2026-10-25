@@ -125,7 +125,7 @@ public static class GiftedGalleryView
         c.button.interactable = linked != null;
 
         var accent = e.Shared ? new Color(0.96f, 0.80f, 0.36f) : new Color(0.66f, 0.52f, 0.95f);
-        c.back.color = done ? new Color(0.42f, 0.12f, 0.24f, 0.96f) : new Color(0.16f, 0.07f, 0.24f, 0.9f);
+        c.back.color = done ? UiPalette.RowDone : UiPalette.RowIdle;
         c.icon.color = done ? accent * 0.35f : new Color(0.1f, 0.06f, 0.15f);
         c.glyph.color = done ? accent : UiKit.Muted;
         c.glyph.text = done ? "†" : "?"; // ✦는 어느 글꼴에도 없어 빈 네모로 보였다
@@ -135,7 +135,7 @@ public static class GiftedGalleryView
         if (!done)
         {
             c.name.text = "???";
-            c.name.color = new Color(0.55f, 0.5f, 0.6f);
+            c.name.color = UiPalette.Locked;
             c.body.text = linked != null ? string.Format(Lang.Get("gg_hint"), linked.Name) : "";
             c.body.color = new Color(0.5f, 0.47f, 0.57f);
             return;
@@ -144,6 +144,6 @@ public static class GiftedGalleryView
         c.name.text = Lang.Pick(e.Name);
         c.name.color = UiSkin.GoldLight;
         c.body.text = $"{Lang.Pick(e.Flavor)}\n<color=#9BE08A>{Lang.Pick(e.Effect)}</color>  <color=#8F86A0>[{scope}]</color>";
-        c.body.color = new Color(0.85f, 0.82f, 0.92f);
+        c.body.color = UiPalette.TextSoft;
     }
 }

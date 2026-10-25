@@ -61,7 +61,7 @@ public static class AdultGallery
         close.onClick.AddListener(Close);
 
         var panel = (RectTransform)root.transform.Find("Panel");
-        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "AdultGalleryBook", new Color(0.4f, 0.1f, 0.26f), new Color(0.2f, 0.06f, 0.34f));
+        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "AdultGalleryBook", UiPalette.BookGalleryTop, UiPalette.BookGalleryBottom);
         panel.Find("Close").GetComponent<Image>().color = UiSkin.Crimson;
 
         Object.DestroyImmediate(content.GetComponent<VerticalLayoutGroup>());
@@ -80,7 +80,7 @@ public static class AdultGallery
     {
         var rect = UiKit.Child(content, $"Adult_{id}", typeof(Image), typeof(Button));
         var cell = new Cell { id = id, frame = rect.GetComponent<Image>() };
-        cell.frame.color = new Color(0.16f, 0.07f, 0.24f, 0.95f);
+        cell.frame.color = UiPalette.TabIdle;
 
         var pic = UiKit.Child(rect, "Picture", typeof(RawImage));
         UiKit.Anchor(pic, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
@@ -129,7 +129,7 @@ public static class AdultGallery
         viewerFit = pic.GetComponent<AspectRatioFitter>();
         viewerFit.aspectMode = AspectRatioFitter.AspectMode.FitInParent;
 
-        viewerText = UiKit.Label(rect, font, "Text", 22, TextAlignmentOptions.TopLeft, new Color(0.92f, 0.88f, 0.98f));
+        viewerText = UiKit.Label(rect, font, "Text", 22, TextAlignmentOptions.TopLeft, UiPalette.TextBright);
         UiKit.Anchor(viewerText.rectTransform, new Vector2(0.45f, 0), Vector2.one, Vector2.zero, Vector2.zero);
         viewerText.rectTransform.offsetMin = new Vector2(24, 20);
         viewerText.rectTransform.offsetMax = new Vector2(-24, -80);
@@ -174,8 +174,8 @@ public static class AdultGallery
             cell.picture.gameObject.SetActive(art != null);
             cell.picture.texture = art;
             cell.label.text = seen ? AdultTitles.Title(cell.id) : Lang.Get("ending_unseen");
-            cell.label.color = seen ? UiSkin.GoldLight : new Color(0.55f, 0.5f, 0.6f);
-            cell.frame.color = seen ? new Color(0.24f, 0.12f, 0.34f, 0.96f) : new Color(0.16f, 0.07f, 0.24f, 0.95f);
+            cell.label.color = seen ? UiSkin.GoldLight : UiPalette.Locked;
+            cell.frame.color = seen ? new Color(0.24f, 0.12f, 0.34f, 0.96f) : UiPalette.TabIdle;
         }
     }
 }

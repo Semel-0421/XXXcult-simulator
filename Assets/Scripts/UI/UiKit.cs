@@ -5,11 +5,12 @@ using UnityEngine.UI;
 // 코드로 만드는 UI(저장 창, 업적 창, 알림)가 함께 쓰는 작은 도구 모음.
 public static class UiKit
 {
-    public static readonly Color PanelColor = new(0.05f, 0.03f, 0.09f, 0.98f);  // 더 어두운 패널
-    public static readonly Color RowColor = new(0.10f, 0.07f, 0.16f, 1f);
-    public static readonly Color ButtonColor = new(0.24f, 0.18f, 0.36f, 1f);
-    public static readonly Color Gold = new(0.83f, 0.69f, 0.22f);               // UiSkin.Gold와 통일
-    public static readonly Color Muted = new(0.52f, 0.46f, 0.62f);
+    // 색은 UiPalette에 모았다 (기존 호출부를 위해 이름만 남김)
+    public static readonly Color PanelColor = UiPalette.Panel;
+    public static readonly Color RowColor = UiPalette.Row;
+    public static readonly Color ButtonColor = UiPalette.Button;
+    public static readonly Color Gold = UiPalette.Gold;
+    public static readonly Color Muted = UiPalette.Muted;
 
     // 씬에 이미 있는 글자의 글꼴을 빌려 쓴다 (한글 글꼴을 따로 지정하지 않아도 되도록)
     public static TMP_FontAsset FindFont()
@@ -142,9 +143,9 @@ public static class UiKit
         panel.anchorMin = panel.anchorMax = new Vector2(0.5f, 0.5f);
         panel.sizeDelta = size;
         panel.GetComponent<Image>().color = PanelColor;
-        panel.GetComponent<Outline>().effectColor = new Color(0.83f, 0.69f, 0.22f, 0.5f);
+        panel.GetComponent<Outline>().effectColor = UiPalette.GoldFaint;
 
-        title = Label(panel, font, "Title", 34, TextAlignmentOptions.Center, Gold);
+        title = Label(panel, font, "Title", UiType.Title, TextAlignmentOptions.Center, Gold);
         Anchor(title.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, -41), new Vector2(0, 50));
 
         hint = Label(panel, font, "Hint", 20, TextAlignmentOptions.Center, Muted);

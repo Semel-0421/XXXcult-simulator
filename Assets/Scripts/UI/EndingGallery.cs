@@ -60,7 +60,7 @@ public static class EndingGallery
         close.onClick.AddListener(Close);
 
         var panel = (RectTransform)root.transform.Find("Panel");
-        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "EndingGalleryBook", new Color(0.4f, 0.1f, 0.26f), new Color(0.2f, 0.06f, 0.34f));
+        UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "EndingGalleryBook", UiPalette.BookGalleryTop, UiPalette.BookGalleryBottom);
         panel.Find("Close").GetComponent<Image>().color = UiSkin.Crimson;
 
         // 세로 목록 대신 격자로 배치한다 (레이아웃 그룹은 하나만 붙으므로 바로 지운다)
@@ -84,7 +84,7 @@ public static class EndingGallery
     {
         var rect = UiKit.Child(content, $"Ending{index + 1:00}", typeof(Image));
         var tile = new Tile { ending = ending, frame = rect.GetComponent<Image>() };
-        tile.frame.color = new Color(0.16f, 0.07f, 0.24f, 0.95f);
+        tile.frame.color = UiPalette.TabIdle;
 
         tile.picture = UiKit.Child(rect, "Picture", typeof(Image)).GetComponent<Image>();
         UiKit.Anchor(tile.picture.rectTransform, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
@@ -146,7 +146,7 @@ public static class EndingGallery
         labels[2].text = Lang.Get("mirror_mode");
         labels[3].text = "???";
         for (int i = 0; i < buttons.Length; i++)
-            buttons[i].image.color = i == selected ? UiSkin.Crimson : new Color(0.16f, 0.07f, 0.24f, 0.95f);
+            buttons[i].image.color = i == selected ? UiSkin.Crimson : UiPalette.TabIdle;
     }
 
     static void AddTrigger(EventTrigger trigger, EventTriggerType type, UnityEngine.Events.UnityAction<BaseEventData> action)
@@ -163,7 +163,7 @@ public static class EndingGallery
         box.sizeDelta = new Vector2(400, 150);
         box.GetComponent<Image>().color = new Color(0.1f, 0.04f, 0.16f, 0.97f);
         box.GetComponent<Image>().raycastTarget = false;
-        tooltipText = UiKit.Label(box, font, "Text", 21, TextAlignmentOptions.TopLeft, new Color(0.92f, 0.88f, 0.98f));
+        tooltipText = UiKit.Label(box, font, "Text", 21, TextAlignmentOptions.TopLeft, UiPalette.TextBright);
         UiKit.Stretch(tooltipText.rectTransform);
         tooltipText.rectTransform.offsetMin = new Vector2(16, 12);
         tooltipText.rectTransform.offsetMax = new Vector2(-16, -12);
@@ -230,7 +230,7 @@ public static class EndingGallery
                 };
             }
             tile.label.text = seen ? Endings.DisplayName(tile.ending) : Lang.Get("ending_unseen");
-            tile.label.color = seen ? UiSkin.GoldLight : new Color(0.55f, 0.5f, 0.6f);
+            tile.label.color = seen ? UiSkin.GoldLight : UiPalette.Locked;
         }
     }
 }
