@@ -1,6 +1,7 @@
 # 변경 이력
 
 ## 2026-10-25
+- [systems/SYS_DEMIURGE.md] 가안 수정: 눈동자 첫 질문·시작 스킬 2개, 데미우르고스 스탯 복사·이름 옆 버튼, 재앙 카운터, 주도권 굿/배드 엔딩 8종, 정할 것 J~O 추가 (DEC-027)
 - [systems/SYS_DEMIURGE.md] 신규: 데미우르고스 모드 기획 초안(신·거울 통합, 아이온 트리 64노드, 엔딩 7종 가안), 정할 것 A~I (DEC-026)
 - [systems/SYS_UI_DESIGN.md] 신규: 인게임 UI·텍스트 개선 방향, Design 스킬 점검 결과, 정할 것 8건
 - [systems/SYS_UI_DESIGN.md] 8절: 권장안(결정 1·2·7) 시험 적용 전후 비교, reviews/ui_compare_2026-10-25
