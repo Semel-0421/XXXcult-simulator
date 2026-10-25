@@ -59,7 +59,8 @@ public static class EyeRules
 
     public static int CounterGain(AeonTree tree) => Sectors.Sum(s => SectorGain(tree, s));
 
-    // 분기마다: 카운터를 쌓고, 지키는 스탯이 0이면 1로 되살리며 카운터 +10
+    // 분기마다: 카운터를 쌓고, 지키는 스탯이 0이면 카운터 +10.
+    // 교단 스탯은 1로 되살린다. 체력·정신력은 되살리지 않고 본편처럼 휴식으로 회복한다 (휴식 첫 분기에 +3이 되어 벌점은 한 번만)
     public static void Quarter()
     {
         var god = GameSession.God;
@@ -67,7 +68,7 @@ public static class EyeRules
         foreach (var id in ZeroCult)
             if (GameSession.Cult[id].Value <= 0) { GameSession.Cult[id].Set(1); god.Demiurge.AddCounter(ZeroPenalty); }
         foreach (var id in ZeroPersonal)
-            if (GameSession.Personal[id].Value <= 0) { GameSession.Personal[id].Set(1); god.Demiurge.AddCounter(ZeroPenalty); }
+            if (GameSession.Personal[id].Value <= 0) god.Demiurge.AddCounter(ZeroPenalty);
     }
 
     public static bool CalamityDue => GameSession.EyeMode && GameSession.CultFounded && GameSession.God.Demiurge.Counter >= CalamityThreshold;
@@ -138,6 +139,49 @@ public static class EyeRules
         cultBefore = personalBefore = null;
         demiurge.ResetCounter();
         return taken.Count == 0 ? "" : string.Format(Lang.Get("eye_calamity_taken"), string.Join(", ", taken));
+    }
+
+    // 휴식 중 재앙 (2026-10-26 결정): 고를 수 없고, 최대치 대비 가장 높은 스탯 하나에서 피해율의 두 배를 빼앗는다.
+    // 교단 스탯(최대 1000)을 키워 둘수록 그것을 내주게 되고, 낮은 스탯으로 휴식에 들어가면 그 위험을 피할 수 없다.
+    public const float RestDamageScale = 2f;
+
+    public static string RestCalamity()
+    {
+        var god = GameSession.God;
+        var cult = GameSession.Cult;
+        var personal = GameSession.Personal;
+        var rate = DamageRate(god.Aeons) * RestDamageScale;
+        StatId? bestCult = null; PersonalStatId? bestPersonal = null; float best = -1;
+        foreach (var id in DemiurgeState.CultStats)
+        {
+            var part = id == StatId.Followers ? cult[id].Value / (float)DemiurgeState.FollowerScale : cult[id].Value / (float)cult[id].Max;
+            if (part > best) { best = part; bestCult = id; bestPersonal = null; }
+        }
+        foreach (var id in DemiurgeState.PersonalStats)
+        {
+            var part = personal[id].Value / (float)PersonalStatus.MaxValue;
+            if (part > best) { best = part; bestPersonal = id; bestCult = null; }
+        }
+        string name; int lost;
+        if (bestCult is { } c)
+        {
+            var before = cult[c].Value;
+            cult[c].Add(-Loss(before, rate));
+            lost = before - cult[c].Value;
+            god.Demiurge.Absorb(c, lost);
+            name = StatLabel.Of(c);
+        }
+        else
+        {
+            var p = bestPersonal.Value;
+            var before = personal[p].Value;
+            personal[p].Add(-Loss(before, rate));
+            lost = before - personal[p].Value;
+            god.Demiurge.Absorb(p, lost);
+            name = Lang.Get($"pstat_{p}");
+        }
+        god.Demiurge.ResetCounter();
+        return string.Format(Lang.Get("eye_rest_calamity"), Lang.Get(SectorKey(CalamitySector(god.Aeons))), name, lost.ToString("N0"));
     }
 
     public static float Dominance => GameSession.God.Demiurge.Ratio(GameSession.Cult, GameSession.Personal);

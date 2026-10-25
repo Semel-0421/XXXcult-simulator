@@ -47,7 +47,7 @@ public class DemiurgeTests
     }
 
     [Test]
-    public void Quarter_AddsCounter_AndZeroStatRevivesWithPenalty()
+    public void Quarter_AddsCounter_AndZeroStatPenalty_RevivesOnlyCultStats()
     {
         EyeRules.ChooseSector(EyeSector.Satan);
         Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Satan, 1, AeonKind.Evil), Rich, 10);
@@ -57,7 +57,7 @@ public class DemiurgeTests
         GameSession.Cult[StatId.Followers].Set(0);
         EyeRules.Quarter();
         Assert.AreEqual(1 + 1 + 2 * EyeRules.ZeroPenalty, Demiurge.Counter);
-        Assert.AreEqual(1, GameSession.Personal[PersonalStatId.Health].Value);
+        Assert.AreEqual(0, GameSession.Personal[PersonalStatId.Health].Value); // 체력은 휴식으로 회복 (되살리지 않음)
         Assert.AreEqual(1, GameSession.Cult[StatId.Followers].Value);
     }
 
@@ -141,5 +141,51 @@ public class DemiurgeTests
             SaveSlots.Directory = previousDir;
             if (Directory.Exists(dir)) Directory.Delete(dir, true);
         }
+    }
+
+    [Test]
+    public void DemiurgeStats_CapAt1000And100()
+    {
+        EyeRules.ChooseSector(EyeSector.Satan);
+        Demiurge.Absorb(StatId.Offerings, 5000);
+        Demiurge.Absorb(StatId.Followers, 5000);
+        Demiurge.Absorb(PersonalStatId.Wealth, 500);
+        Assert.AreEqual(1000, Demiurge[StatId.Offerings]);
+        Assert.AreEqual(1000, Demiurge[StatId.Followers]);
+        Assert.AreEqual(100, Demiurge[PersonalStatId.Wealth]);
+    }
+
+    [Test]
+    public void FullDemiurge_CannotBeatPlayerAtHalfEverywhere()
+    {
+        EyeRules.ChooseSector(EyeSector.Yahweh);
+        foreach (var id in DemiurgeState.CultStats) Demiurge.Absorb(id, 10_000);
+        foreach (var id in DemiurgeState.PersonalStats) Demiurge.Absorb(id, 1_000);
+        foreach (var id in DemiurgeState.CultStats) GameSession.Cult[id].Set(500);
+        foreach (var id in DemiurgeState.PersonalStats) GameSession.Personal[id].Set(50);
+        Assert.AreEqual(2f, EyeRules.Dominance, 1e-4);
+        Assert.IsFalse(EyeRules.Dominance > EyeRules.LoseDominanceAt); // 정확히 2배는 교주 쪽
+        GameSession.Cult[StatId.Doctrine].Set(499);
+        Assert.Greater(EyeRules.Dominance, EyeRules.LoseDominanceAt);
+    }
+
+    [Test]
+    public void RestCalamity_TakesFromHighestStatByRatio()
+    {
+        EyeRules.ChooseSector(EyeSector.Yahweh);
+        foreach (var id in DemiurgeState.CultStats) GameSession.Cult[id].Set(100);
+        foreach (var id in DemiurgeState.PersonalStats) GameSession.Personal[id].Set(20);
+        GameSession.Cult[StatId.Offerings].Set(900); // 0.9: 가장 높다
+        GameSession.Personal[PersonalStatId.Health].Set(80); // 0.8
+        Demiurge.AddCounter(EyeRules.CalamityThreshold);
+        var before = Demiurge[StatId.Offerings];
+        var text = EyeRules.RestCalamity();
+        var lost = 900 - GameSession.Cult[StatId.Offerings].Value;
+        var rate = EyeRules.DamageRate(Aeons) * EyeRules.RestDamageScale;
+        Assert.AreEqual((int)System.Math.Round(900 * rate, System.MidpointRounding.AwayFromZero), lost);
+        Assert.AreEqual(before + lost, Demiurge[StatId.Offerings]);
+        Assert.AreEqual(80, GameSession.Personal[PersonalStatId.Health].Value);
+        Assert.AreEqual(0, Demiurge.Counter);
+        StringAssert.Contains(StatLabel.Of(StatId.Offerings), text);
     }
 }

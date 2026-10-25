@@ -172,7 +172,14 @@ public class CultFlow : MonoBehaviour
                 ActionBar.BeginTurn(); // 쉬는 턴마다 상단 바 강조를 새로 잰다
                 Rest.ApplyTurn(GameSession.Personal, GameSession.Cult, resting);
                 GameSession.AdvanceTurn();
-                questionPanel.Show(string.Format(Lang.Get("rest_progress"), names, turn, Rest.Turns));
+                var progress = string.Format(Lang.Get("rest_progress"), names, turn, Rest.Turns);
+                if (EyeRules.CalamityDue) // 황금의 눈동자: 쉬는 중 재앙은 고를 수 없이 가장 높은 스탯을 빼앗긴다
+                {
+                    questionPanel.Show($"{progress}\n\n<color=#DC5050>{EyeRules.RestCalamity()}</color>");
+                    yield return new WaitForSecondsRealtime(2.4f);
+                    continue;
+                }
+                questionPanel.Show(progress);
                 yield return new WaitForSecondsRealtime(0.8f);
             }
             GiftedV2GodHooks.OnRestYear();

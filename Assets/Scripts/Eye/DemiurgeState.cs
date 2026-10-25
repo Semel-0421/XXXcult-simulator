@@ -4,7 +4,8 @@ using System.Linq;
 
 // 선택된 데미우르고스의 스탯표와 재앙 카운터 (SYS_DEMIURGE 4·5절, DEC-027·028 J·K·N).
 //  - 첫 질문에 답한 순간 교주의 교단·개인 스탯을 그대로 복사한다 (접신·기적은 뺀다).
-//  - 재앙으로 교주에게서 줄어든 만큼 같은 스탯에 더해진다. 그 밖에는 늘지 않는다.
+//  - 재앙으로 교주에게서 줄어든 만큼 같은 스탯에 더해진다. 그 밖에는 늘지 않는다. 교단 스탯은 1000(신도도 1000명), 개인 스탯은 100에서 멈춘다.
+//    그래서 데미우르고스가 모든 스탯을 채워도 교주가 모두 절반(500·50) 이상이면 비율이 2배를 넘지 않는다 (2026-10-26 결정).
 //  - 주도권 비율 = 데미우르고스 비율 합 ÷ 교주 비율 합. 스탯마다 값 ÷ 최대치(신도는 1000명 기준)를 0~1로 잘라 더한다.
 public class DemiurgeState
 {
@@ -14,6 +15,7 @@ public class DemiurgeState
         ((PersonalStatId[])Enum.GetValues(typeof(PersonalStatId))).Where(id => id != PersonalStatId.Miracle).ToArray();
 
     public const int FollowerScale = 1000; // 신도 수는 상한이 없어 CultStatus.Ratio와 같은 1000명 기준
+    public const int CultCap = ClampedStat.DefaultMax, PersonalCap = PersonalStatus.MaxValue;
 
     readonly Dictionary<StatId, int> cult = new();
     readonly Dictionary<PersonalStatId, int> personal = new();
@@ -27,13 +29,13 @@ public class DemiurgeState
 
     public void Copy(CultStatus from, PersonalStatus fromPersonal)
     {
-        foreach (var id in CultStats) cult[id] = from[id].Value;
-        foreach (var id in PersonalStats) personal[id] = fromPersonal[id].Value;
+        foreach (var id in CultStats) cult[id] = Math.Min(CultCap, from[id].Value);
+        foreach (var id in PersonalStats) personal[id] = Math.Min(PersonalCap, fromPersonal[id].Value);
         Copied = true;
     }
 
-    public void Absorb(StatId id, int amount) { if (amount > 0) cult[id] = this[id] + amount; }
-    public void Absorb(PersonalStatId id, int amount) { if (amount > 0) personal[id] = this[id] + amount; }
+    public void Absorb(StatId id, int amount) { if (amount > 0) cult[id] = Math.Min(CultCap, this[id] + amount); }
+    public void Absorb(PersonalStatId id, int amount) { if (amount > 0) personal[id] = Math.Min(PersonalCap, this[id] + amount); }
 
     public void AddCounter(int amount) => Counter = Math.Max(0, Counter + amount);
 

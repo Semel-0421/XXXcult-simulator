@@ -130,6 +130,7 @@ public static class Lang
         ["eye_counter"] = ("Calamity {0}/{1} (+{2} per quarter) · Calamities so far {3}", "재앙 카운터 {0}/{1} (분기당 +{2}) · 지금까지 재앙 {3}회"),
         ["eye_dominance"] = ("Dominance {0}x (over {1}x, you lose the throne at ascension)", "주도권 {0}배 ({1}배를 넘으면 승천 때 주도권을 뺏김)"),
         ["eye_col_stat"] = ("Stat", "스탯"), ["eye_col_demiurge"] = ("Demiurge", "데미우르고스"), ["eye_col_me"] = ("You", "나"),
+        ["eye_rest_calamity"] = ("Calamity while resting: the eyes of {0} took {2} from your highest stat, {1}.", "쉬는 동안 재앙: {0}의 눈동자가 가장 높은 스탯 {1}에서 {2}을(를) 빼앗았습니다."),
         ["eye_question"] = ("Whose were the burning golden eyes that looked upon you?", "당신을 바라본 불타는 황금의 눈동자는 누구의 것이었는가."),
         ["eye_sector_yahweh"] = ("Yahweh", "야훼"), ["eye_sector_yahweh_answer"] = ("The jealous eyes that carved the Law", "율법을 새긴 질투하는 눈"),
         ["eye_sector_satan"] = ("Satan", "사탄"), ["eye_sector_satan_answer"] = ("The eyes of the Accuser, counting every sin", "죄를 헤아리는 고발자의 눈"),
