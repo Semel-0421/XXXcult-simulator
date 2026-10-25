@@ -103,6 +103,7 @@ public class LifeFlow : MonoBehaviour
         {
             GameSession.FoundCult(cultName);
             questionPanel.Show(string.Format(Lang.Get("cult_founded"), cultName));
+            if (GameSession.EyeMode) EyeRules.OnFounded(); // 신의 본성 선택 없이 바로 교단 행동이 열린다
         });
         return true;
     }

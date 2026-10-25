@@ -105,11 +105,32 @@ public class StartScreenController : MonoBehaviour
         return group;
     }
 
-    // 판 진행은 아직 없어서 모드 설명과 준비 중 안내만 보여 준다 (SYS_DEMIURGE 구현 순서 2단계부터)
+    // 모드 설명을 보여 주고, 들어가면 성인 그릇으로 새 판을 시작한다 (회차는 올리지 않는다: DEC-028 G)
     public void NewEyeGame()
     {
         if (!EyeRules.Unlocked) return;
-        ConfirmDialog.Show($"<b>{Lang.Get("eye_mode")}</b>\n\n{Lang.Get("eye_desc")}\n\n<size=80%>{Lang.Get("eye_wip")}</size>", Lang.Get("close"), null, null);
+        ConfirmDialog.Show($"<b>{Lang.Get("eye_mode")}</b>\n\n{Lang.Get("eye_desc")}", Lang.Get("mirror_start"), Lang.Get("close"), () =>
+        {
+            // 신 모드와 같은 성인 확인을 먼저 (해금 조건상 신 모드를 해 봤으므로 대개 이미 확인함)
+            if (PlayerPrefs.GetInt(AdultPref, 0) != 1 && !AdultGate.Verified)
+            {
+                ConfirmDialog.Show(Lang.Get("god_adult_confirm"), Lang.Get("god_adult_ok"), Lang.Get("close"), () =>
+                {
+                    PlayerPrefs.SetInt(AdultPref, 1);
+                    PlayerPrefs.Save();
+                    StartEyeGame();
+                });
+                return;
+            }
+            StartEyeGame();
+        });
+    }
+
+    static void StartEyeGame()
+    {
+        EyeRules.Begin();
+        Profile.Count("runs");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameMain");
     }
 
     // 장면에 있는 메뉴 버튼 글자(LocalizedText)도 그림으로 바꾼다

@@ -92,11 +92,12 @@ public static partial class GiftedV2Effects
         GiftedV2Table.RegisterAll();
     }
 
-    public static string CurrentMode => GameSession.GodMode ? "god" : GameSession.MirrorMode ? "mirror" : "normal";
+    public static string CurrentMode => GameSession.EyeMode ? EyeMode : GameSession.GodMode ? "god" : GameSession.MirrorMode ? "mirror" : "normal";
+    public const string EyeMode = "eye"; // 황금의 눈동자: 기프티드를 쓰지 않는다 (공유 기프티드 포함)
 
     // 공유 규칙 + 성인 게이트 (보유 여부와 무관)
     public static bool AppliesIn(GiftedV2Catalog.Entry e, string mode) =>
-        (e.Shared || e.Mode == mode) && (!e.AdultGated || AdultEnabled());
+        mode != EyeMode && (e.Shared || e.Mode == mode) && (!e.AdultGated || AdultEnabled());
 
     public static bool IsActive(GiftedV2Catalog.Entry e, string mode = null) =>
         e != null && Achievements.OwnsGiftedV2(e) && AppliesIn(e, mode ?? CurrentMode);

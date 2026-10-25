@@ -12,6 +12,7 @@ public class ActionBar : MonoBehaviour
     static readonly string[] LifeKeys = { "life_Exercise", "life_Meditate", "life_Study", "life_Socialize", "life_Pray" };
     static readonly string[] CultKeys = { "action_Proselytize", "action_Preach", "action_Serve", "action_Desire", "action_Pray" };
     static readonly string[] GodKeys = { "god_act_Wonder", "god_act_Revelation", "god_act_Healing", "god_act_Feast", "god_act_Commune" }; // 준비된 신: 이적·계시·치유·향연·교감
+    static readonly string[] EyeKeys = { "eye_act_Wonder", "eye_act_Revelation", "eye_act_Healing", "eye_act_Feast", "eye_act_Commune" }; // 황금의 눈동자: 현현·비의·정화·육제·강신 (DEC-028 I)
 
     [SerializeField] CanvasGroup group;
     public event Action<LifeAction> LifeChosen;
@@ -59,7 +60,7 @@ public class ActionBar : MonoBehaviour
         button.onClick.AddListener(() => { if (CanAct) ConsecrateWindow.Open(); });
         var consecrate = copy.GetComponentInChildren<LocalizedText>(true);
         consecrate.enabled = true; // 축성은 단축키가 없어 이름만 (언어 변경은 LocalizedText가 맡는다)
-        consecrate.SetKey("god_act_Consecrate");
+        consecrate.SetKey(GameSession.EyeMode ? "eye_act_Consecrate" : "god_act_Consecrate");
         buttons.Add(copy);
         var width = (((RectTransform)transform).sizeDelta.x - gap * (buttons.Count - 1)) / buttons.Count;
         for (int i = 0; i < buttons.Count; i++)
@@ -92,7 +93,7 @@ public class ActionBar : MonoBehaviour
         if (Current != Mode.Cult && tree.IsMax(DoctrineSkill.Declaration)) Show(Mode.Cult);
     }
 
-    static string[] KeysOf(Mode mode) => mode != Mode.Cult ? LifeKeys : GameSession.GodMode ? GodKeys : CultKeys;
+    static string[] KeysOf(Mode mode) => mode != Mode.Cult ? LifeKeys : GameSession.EyeMode ? EyeKeys : GameSession.GodMode ? GodKeys : CultKeys;
 
     public void Show(Mode mode)
     {

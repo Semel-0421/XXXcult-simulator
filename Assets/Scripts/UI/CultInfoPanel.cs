@@ -21,7 +21,8 @@ public class CultInfoPanel : MonoBehaviour
         GameSession.Founded += OnFounded;
         Lang.Changed += OnLangChanged;
         BuildPointsLabel();
-        if (GameSession.GodMode) UseGodTree();
+        if (GameSession.EyeMode) doctrineButton.gameObject.SetActive(false); // 아이온 트리 화면은 5단계에서 붙인다
+        else if (GameSession.GodMode) UseGodTree();
         if (GameSession.CultFounded) Show();
     }
 
@@ -81,7 +82,7 @@ public class CultInfoPanel : MonoBehaviour
     void OnFounded()
     {
         Show();
-        if (!GameSession.Cult.Doctrines.IsMax(DoctrineSkill.Declaration))
+        if (!GameSession.EyeMode && !GameSession.Cult.Doctrines.IsMax(DoctrineSkill.Declaration))
             tutorial.Begin(doctrineButton, Lang.Get(GameSession.GodMode ? "god_tutorial" : "doctrine_tutorial"));
     }
 

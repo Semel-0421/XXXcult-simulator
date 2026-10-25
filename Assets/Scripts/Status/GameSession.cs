@@ -33,6 +33,8 @@ public static class GameSession
 
     public static bool EyeMode { get; private set; }     // 황금의 눈동자 모드로 진행 중인 판 (Docs/GDD/systems/SYS_DEMIURGE.md)
     public static void SetEyeMode(bool on) => EyeMode = on;
+    public static EyeSector EyeSector { get; private set; } // 첫 질문에서 고른 섹터 = 선택된 데미우르고스
+    public static void SetEyeSector(EyeSector sector) => EyeSector = sector;
 
     // 이번 판이 도달한 엔딩 (음악이 결말 곡으로 바뀐다). 새 판에서 지운다
     public static Endings.Ending Ending { get; private set; }
@@ -169,6 +171,7 @@ public static class GameSession
         GodMode = false;
         MirrorMode = false;
         EyeMode = false;
+        EyeSector = EyeSector.None;
         God = new GodState();
         God.Tree.Changed += OnGodSkillLearned;
         FirstExtremeId = null;
@@ -206,6 +209,7 @@ public static class GameSession
             godMode = GodMode,
             mirrorMode = MirrorMode,
             eyeMode = EyeMode,
+            eyeSector = (int)EyeSector,
             godNature = God.Tree.NatureId,
             godPointsEarned = God.Points.Earned,
             godSecularStage = God.Points.SecularStageAwarded,
@@ -239,6 +243,7 @@ public static class GameSession
         CultGeneration = data.cultGeneration; // 세대 ID 복원 (Run 카운터 보존)
         MirrorMode = data.mirrorMode; // 교리 목록을 고르므로 먼저
         EyeMode = data.eyeMode;
+        EyeSector = (EyeSector)data.eyeSector;
         Rng = new GameRng(ulong.Parse(data.rngState));
         Personal.Name = data.playerName ?? "";
         Personal.Gender = (Gender)data.gender;

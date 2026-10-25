@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// 검은 화면에서 이름 → 성별을 입력받은 뒤 패널을 띄우고 생애 진행(LifeFlow)을 시작한다.
+// 검은 화면에서 이름 → 성별을 입력받은 뒤 (황금의 눈동자 모드는 그 앞에 눈동자 질문) 패널을 띄우고 생애 진행(LifeFlow)을 시작한다.
 public class IntroSequence : MonoBehaviour
 {
     [SerializeField] CanvasGroup blackOverlay, promptGroup, inputGroup, panelGroup, questionGroup;
@@ -15,11 +15,18 @@ public class IntroSequence : MonoBehaviour
 
     bool askingGender;
 
-    bool genderReady;
+    bool genderReady, eyeReady;
 
     void Update()
     {
-        if (!genderReady || Menus.AnyOpen) return;
+        if (Menus.AnyOpen) return;
+        if (eyeReady)
+        {
+            for (int n = 1; n <= EyeRules.Sectors.Length; n++)
+                if (Keybinds.NumberPressed(n)) { ChooseEye(n); return; }
+            return;
+        }
+        if (!genderReady) return;
         if (Keybinds.NumberPressed(1)) ChooseGender(Gender.Male);
         else if (Keybinds.NumberPressed(2)) ChooseGender(Gender.Female);
     }
@@ -38,6 +45,7 @@ public class IntroSequence : MonoBehaviour
         inputGroup.interactable = false;
 
         yield return new WaitForSecondsRealtime(blackHold);
+        if (GameSession.EyeMode && GameSession.EyeSector == EyeSector.None) yield return AskEye();
         yield return CanvasFade.To(promptGroup, 1, promptFade);
 
         nameInput.onSubmit.AddListener(Submit);
@@ -80,15 +88,34 @@ public class IntroSequence : MonoBehaviour
         genderReady = true;
     }
 
-    // 안내문의 "남성" "여성" 글자를 눌러 고를 수 있게 만든다
-    void ShowGenderLinks()
+    // 황금의 눈동자: 이름보다 먼저 "당신을 바라본 불타는 황금의 눈동자는 누구의 것이었는가." (DEC-027). 답이 이 판의 섹터가 된다
+    IEnumerator AskEye()
+    {
+        var nameKey = promptGroup.GetComponentInChildren<LocalizedText>(true)?.Key;
+        var label = LinkLabel();
+        label.text = EyeRules.QuestionText();
+        yield return CanvasFade.To(promptGroup, 1, promptFade);
+        eyeReady = true;
+        while (eyeReady) yield return null;
+        yield return CanvasFade.To(promptGroup, 0, promptFade / 2);
+        promptGroup.blocksRaycasts = promptGroup.interactable = false;
+        label.raycastTarget = false;
+        if (nameKey != null) SetKey(promptGroup, nameKey);
+        else label.text = "";
+    }
+
+    void ChooseEye(int number)
+    {
+        if (!eyeReady || number < 1 || number > EyeRules.Sectors.Length) return;
+        EyeRules.ChooseSector(EyeRules.Sectors[number - 1]);
+        AudioManager.PlaySfx("click");
+        eyeReady = false;
+    }
+
+    // 안내문 글자 링크를 누를 수 있게 한다 (e1~e4: 눈동자 답, g1·g2: 성별)
+    TMP_Text LinkLabel()
     {
         var label = promptGroup.GetComponentInChildren<TMP_Text>(true);
-        var male = Lang.IsKorean ? "남성" : "Male";
-        var female = Lang.IsKorean ? "여성" : "Female";
-        label.text = Lang.Get("gender_prompt")
-            .Replace(male, $"<link=\"g1\"><color=#F2D978>{male}</color></link>")
-            .Replace(female, $"<link=\"g2\"><color=#F2D978>{female}</color></link>");
         label.raycastTarget = true;
         promptGroup.blocksRaycasts = true;
         promptGroup.interactable = true;
@@ -96,8 +123,26 @@ public class IntroSequence : MonoBehaviour
         if (click == null)
         {
             click = label.gameObject.AddComponent<TextLinkClick>();
-            click.Clicked += id => ChooseGender(id == "g2" ? Gender.Female : Gender.Male);
+            click.Clicked += OnLink;
         }
+        return label;
+    }
+
+    void OnLink(string id)
+    {
+        if (id.StartsWith("e") && int.TryParse(id.Substring(1), out var n)) ChooseEye(n);
+        else if (id is "g1" or "g2") ChooseGender(id == "g2" ? Gender.Female : Gender.Male);
+    }
+
+    // 안내문의 "남성" "여성" 글자를 눌러 고를 수 있게 만든다
+    void ShowGenderLinks()
+    {
+        var label = LinkLabel();
+        var male = Lang.IsKorean ? "남성" : "Male";
+        var female = Lang.IsKorean ? "여성" : "Female";
+        label.text = Lang.Get("gender_prompt")
+            .Replace(male, $"<link=\"g1\"><color=#F2D978>{male}</color></link>")
+            .Replace(female, $"<link=\"g2\"><color=#F2D978>{female}</color></link>");
     }
 
     void ChooseGender(Gender gender)

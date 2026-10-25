@@ -12,6 +12,9 @@ public static class GodCounters
 
     static GodState endedFor; // 엔딩을 이미 기록한 판 (DueEnding/ForcedEnding 은 매 프레임 불리므로 한 번만)
 
+    // 황금의 눈동자는 신 모드 시스템 위에서 돌지만 신 모드 업적·카운터는 쌓지 않는다
+    static bool Off => GameSession.EyeMode;
+
     static void Both(string key, int n = 1) { Counters.Add(key, n); Counters.Add(key, n, true); }
 
     public static void OnRunStart()
@@ -23,24 +26,27 @@ public static class GodCounters
 
     public static void OnAction(GodAction action, bool success)
     {
+        if (Off) return;
         Both($"god_act_{action}");
         if (Actions.All(a => Counters.Get($"god_act_{a}", true) > 0)) Counters.Set("god_all_actions", 1);
     }
 
     public static void OnBuild(GodBuildingType type)
     {
+        if (Off) return;
         Both($"god_build_{type}");
         Both("god_consecrated"); // 근사: 신전 한정이 아닌 전체 축성 횟수
         OnAction(GodAction.Consecrate, true);
         if (GodBuildings.All.All(t => Counters.Get($"god_build_{t}", true) > 0)) Counters.Set("god_all_buildings", 1);
     }
 
-    public static void OnSeized() => Both("god_seized");
-    public static void OnVesselRecovery() => Both("god_vessel_recovery");
-    public static void OnPoints(int gained) { if (gained > 0) Counters.Add("god_faith_points", gained); }
+    public static void OnSeized() { if (!Off) Both("god_seized"); }
+    public static void OnVesselRecovery() { if (!Off) Both("god_vessel_recovery"); }
+    public static void OnPoints(int gained) { if (gained > 0 && !Off) Counters.Add("god_faith_points", gained); }
 
     public static void OnPressure(float envy, float suspicion)
     {
+        if (Off) return;
         foreach (var run in new[] { false, true })
         {
             Counters.Max("god_Envy", (int)envy, run);
@@ -51,6 +57,7 @@ public static class GodCounters
     // 해가 바뀔 때: 운영 연수, 시기·의혹을 10 이하로 유지한 연속 연수
     public static void OnYearEnd(GodPressure pressure)
     {
+        if (Off) return;
         Counters.Max("god_years", GameSession.CultTime.Years);
         Streak("Envy", pressure.Envy);
         Streak("Suspicion", pressure.Suspicion);
@@ -66,6 +73,7 @@ public static class GodCounters
     // 노드를 익힐 때: 총 개수·가지별 개수의 최고치, 핵 완성
     public static void OnLearn(GodTree tree)
     {
+        if (Off) return;
         var skills = tree.Learned.Select(GodSkillCatalog.Find).Where(s => s != null).ToList();
         Counters.Max("god_nodes", skills.Count);
         foreach (var branch in Branches)
@@ -76,6 +84,7 @@ public static class GodCounters
     // 이벤트 결과: 그 결과가 속한 이벤트의 종류(id 접두어)를 센다
     public static void OnEvent(Outcome outcome)
     {
+        if (Off) return;
         Profile.Count("god_events");
         var kind = KindOf(outcome);
         if (kind == null) return;
@@ -122,7 +131,7 @@ public static class GodCounters
     // 엔딩 판정이 돌려주는 값을 그대로 통과시키며, 처음 나올 때 한 번 기록한다
     public static Endings.Ending OnEnding(Endings.Ending ending)
     {
-        if (ending == null || endedFor == GameSession.God) return ending;
+        if (ending == null || Off || endedFor == GameSession.God) return ending;
         endedFor = GameSession.God;
         var index = Array.IndexOf(EndingOrder, ending.Id);
         if (index >= 0) Counters.Set($"god_ending_{index + 1}", 1);

@@ -48,9 +48,16 @@ public static class GodRules
     // 새 판: 성인 그릇의 시작 상태
     public static void Begin(int? seed = null)
     {
+        StartVessel(seed);
+        GodCounters.OnRunStart();
+        GiftedV2Effects.OnRunStart();
+    }
+
+    // 성인 그릇 시작 상태만 (황금의 눈동자 모드도 이 위에서 시작한다: EyeRules.Begin)
+    public static void StartVessel(int? seed)
+    {
         GameSession.StartNew(seed);
         GameSession.SetGodMode(true);
-        GodCounters.OnRunStart();
         GameSession.Age.Restore(StartAgeYears * GameClock.QuartersPerYear);
         var personal = GameSession.Personal;
         foreach (PersonalStatId id in Enum.GetValues(typeof(PersonalStatId))) personal[id].Set(StartStat(id));
@@ -58,7 +65,6 @@ public static class GodRules
         cult[StatId.Communion].Set(CultStatus.CommunionMax);
         cult[StatId.Followers].Set(StartFollowers);
         cult[StatId.FollowerFaith].Set(StartFollowerFaith);
-        GiftedV2Effects.OnRunStart();
     }
 
     static int StartStat(PersonalStatId id) => id switch
@@ -132,7 +138,8 @@ public static class GodRules
         GameSession.GodMode && GameSession.CultFounded ? GameSession.God.Pressure.EventPenalty(GameSession.Cult) : 0;
 
     // 곧바로 판이 끝나는 패배
-    public static Endings.Ending ForcedEnding() => GodCounters.OnEnding(Forced());
+    // 황금의 눈동자는 패배 엔딩이 없다 (DEC-028 L. 스탯 0은 재앙 카운터로 대신함: 4단계)
+    public static Endings.Ending ForcedEnding() => GameSession.EyeMode ? null : GodCounters.OnEnding(Forced());
 
     static Endings.Ending Forced()
     {
@@ -168,6 +175,7 @@ public static class GodRules
     // 승천: 중심 노드를 익히면 먼저 완성한 두 핵의 조합으로 엔딩이 정해진다
     public static Endings.Ending DueEnding()
     {
+        if (GameSession.EyeMode) return null; // 승천 엔딩은 아이온 트리(6단계)에서 붙인다
         var tree = GameSession.God.Tree;
         var ending = tree.Ascended ? Find(tree.AscensionEndingId) : null;
         if (ending != null) GiftedV2GodHooks.BeforeAscension();

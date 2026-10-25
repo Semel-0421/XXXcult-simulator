@@ -54,7 +54,7 @@ public class CultFlow : MonoBehaviour
     {
         if (skill != DoctrineSkill.Declaration) return;
         Achievements.Evaluate();
-        PromptOrRest(null);
+        PromptOrRest(GameSession.EyeMode ? string.Format(Lang.Get("cult_founded"), GameSession.Cult.Name) : null); // 눈동자 모드는 창설과 동시에 열려 창설 문구를 앞에 남긴다
     }
 
     // 엔딩 판정은 행동을 고르는 시점에 확인한다 (규칙은 Progress.DueEnding)

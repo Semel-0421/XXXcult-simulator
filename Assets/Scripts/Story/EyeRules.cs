@@ -4,9 +4,46 @@ using System.Linq;
 // 황금의 눈동자 모드 (Docs/GDD/systems/SYS_DEMIURGE.md). 준비된 신과 거울 세계를 합친 세 번째 특수 모드.
 //  - 해금 (DEC-028 A): 준비된 신의 승천 엔딩 하나 + 거울 세계 전용 엔딩 하나를 모두 봐야 열린다.
 //    신 모드 패배 엔딩(그릇의 붕괴·잊힌 신·해산된 교단)은 세지 않는다.
-//  - 판 진행(첫 질문·데미우르고스 스탯·재앙·아이온 트리)은 다음 단계에서 붙인다. 지금은 메뉴에서 설명만 보여 준다.
+//  - 시작 (DEC-027·028 D): 신 모드의 성인 그릇 상태(GodRules.StartVessel) 위에서 돈다. GodMode도 켜서 그릇·접신·압박·축성·전용 이벤트를 그대로 쓰고,
+//    다른 점은 EyeMode로 가른다: 기프티드 없음, 신 모드 업적 카운터 안 쌓음, 신의 본성 선택 없이 창설과 동시에 교단 행동이 열림, 패배 엔딩 없음.
+//  - 첫 질문(눈동자) → 이름 → 성별 순서로 묻는다 (IntroSequence). 고른 섹터의 0단계 스킬 2개는 아이온 트리(3단계)에서 지급한다.
+//  - 데미우르고스 스탯·재앙(4단계), 아이온 트리 화면(5단계), 엔딩(6단계)은 아직 없다.
+public enum EyeSector { None, Yahweh, Satan, Samael, Yaldabaoth }
+
 public static class EyeRules
 {
+    public static readonly EyeSector[] Sectors = { EyeSector.Yahweh, EyeSector.Satan, EyeSector.Samael, EyeSector.Yaldabaoth };
+
+    // 새 판: 성인 그릇 + 모드 플래그. 섹터는 첫 질문에서 정한다
+    public static void Begin(int? seed = null)
+    {
+        GodRules.StartVessel(seed);
+        GameSession.SetEyeMode(true);
+        Profile.Count("eye_runs");
+    }
+
+    public static void ChooseSector(EyeSector sector)
+    {
+        if (sector == EyeSector.None) return;
+        GameSession.SetEyeSector(sector);
+    }
+
+    // 교단 창설: 신의 본성 대신 바로 교리 선포를 채워 교단 행동을 연다
+    public static void OnFounded()
+    {
+        var doctrines = GameSession.Cult.Doctrines;
+        if (!doctrines.IsMax(DoctrineSkill.Declaration)) doctrines.LevelUp(DoctrineSkill.Declaration);
+    }
+
+    public static string SectorKey(EyeSector sector) => $"eye_sector_{sector.ToString().ToLowerInvariant()}";
+
+    // 첫 질문 글: 질문 + 번호 붙은 답 4개. 답은 <link="e1">~<link="e4">로 눌러 고른다
+    public static string QuestionText()
+    {
+        var lines = Sectors.Select((s, i) => $"{i + 1}. <link=\"e{i + 1}\"><color=#F2D978>{Lang.Get(SectorKey(s) + "_answer")}</color></link>");
+        return $"{Lang.Get("eye_question")}\n\n{string.Join("\n", lines)}";
+    }
+
     public const int UnlockConditions = 2;
 
     public static bool GodAscensionSeen => GodEndings.AscensionIds.Any(Endings.Seen);

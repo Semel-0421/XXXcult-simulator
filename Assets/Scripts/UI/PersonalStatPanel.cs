@@ -35,7 +35,7 @@ public class PersonalStatPanel : MonoBehaviour
         if (GameSession.GodMode)
         {
             var communion = GameSession.Cult[StatId.Communion].Value; // 글꼴에 ●○ 글리프가 없어 숫자로
-            nameLabel.text = $"{status.Name} <size=60%>{string.Format(Lang.Get("age"), age.Years)} · {Lang.Get("god_mode")}</size>"
+            nameLabel.text = $"{status.Name} <size=60%>{string.Format(Lang.Get("age"), age.Years)} · {Lang.Get(GameSession.EyeMode ? "eye_mode" : "god_mode")}</size>"
                 + $"\n<size=45%>{Lang.Get("stat_Communion")} {communion}/{CultStatus.CommunionMax}</size>";
             return;
         }
