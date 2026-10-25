@@ -43,6 +43,25 @@ public class StatBarUI : MonoBehaviour
         nameLabel.fontSizeMax = nameLabel.fontSize;
         nameLabel.fontSizeMin = nameLabel.fontSize * 0.6f;
         nameLabel.enableAutoSizing = true;
+        if (!major) StackLabels();
+    }
+
+    // 작은 칸은 이름을 윗줄, 값을 아랫줄에 둔다 (3안 A: 영어 이름을 줄이지 않고 칸 폭을 다 쓴다)
+    void StackLabels()
+    {
+        var name = nameLabel.rectTransform;
+        name.anchorMin = new Vector2(0, 0.5f);
+        name.anchorMax = Vector2.one;
+        name.offsetMin = new Vector2(8, -1);
+        name.offsetMax = new Vector2(-8, -2);
+        nameLabel.alignment = TextAlignmentOptions.BottomLeft;
+
+        var value = valueLabel.rectTransform;
+        value.anchorMin = Vector2.zero;
+        value.anchorMax = new Vector2(1, 0.5f);
+        value.offsetMin = new Vector2(8, 2);
+        value.offsetMax = new Vector2(-8, 1);
+        valueLabel.alignment = TextAlignmentOptions.TopRight;
     }
 
     void PrepareHighlight()
