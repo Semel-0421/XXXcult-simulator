@@ -1,0 +1,171 @@
+﻿event_id,no,label,label_en,chance,success_effects,success_text,success_text_en,fail_effects,fail_text,fail_text_en
+ya01,1,그 계명을 교리에 새긴다,Carve it into the doctrine,70,Doctrine+25 FollowerFaith+10 Calamity+2,새 계명이 낭독되자 신전이 숨을 죽입니다.,"As the new commandment is read, the temple holds its breath.",Doctrine-10,계명끼리 어긋나 신도들이 혼란에 빠집니다.,"The commandments contradict each other, and the faithful fall into confusion."
+ya01,2,꿈은 꿈일 뿐이라고 타이른다,Remind them a dream is only a dream,100,Mentality+2 FollowerFaith-5,신도는 고개를 숙이고 돌판 이야기를 접습니다.,The follower bows their head and lets the tablet go.,-,-,
+ya01,3,계명을 함께 해석하는 모임을 연다,Hold a gathering to interpret it together,90,Doctrine+10 Piety+2,밤새 이어진 토론 끝에 계명은 더 단단해집니다.,"After a night of debate, the commandment grows firmer.",FollowerFaith-3,결론 없이 모임이 흩어집니다.,The gathering breaks up without a conclusion.
+ya02,1,본보기로 공개 참회를 시킨다,Make them repent publicly as an example,80,FollowerFaith+15 Reputation-5 Calamity+2,"참회의 울음이 신전을 채우고, 아무도 다시 문 밖을 보지 않습니다.","Wails of repentance fill the temple, and no one looks outside the door again.",Reputation-10 Suspicion+5,벌이 지나치다는 소문이 밖으로 새어 나갑니다.,Rumors that the punishment went too far leak outside.
+ya02,2,조용히 불러 다시 맞아들인다,Quietly call them back and welcome them,90,FollowerFaith+5 Charity+2,그는 눈물을 흘리며 다시는 떠나지 않겠다고 맹세합니다.,They weep and swear never to leave again.,FollowerFaith-5,용서가 약함으로 보였는지 수군거림이 남습니다.,"Your mercy reads as weakness, and whispers linger."
+ya02,3,모른 척 넘어간다,Pretend not to notice,100,Mentality-1 FollowerFaith-3,질투는 가라앉지 않고 마음 한구석에 고입니다.,The jealousy does not settle; it pools in a corner of your heart.,-,-,
+ya03,1,일곱 계율을 새로 선포한다,Proclaim seven new precepts,70,Doctrine+20 Authority+10 Calamity+2,일곱 계율이 신도들의 입에 오르내립니다.,The seven precepts pass from mouth to mouth.,FollowerFaith-5,계율이 너무 많다는 불평이 나옵니다.,Complaints rise that there are too many rules.
+ya03,2,표징을 기록만 해 둔다,Simply record the sign,100,Doctrine+5 Patience+1,기록은 서고 깊이 들어갑니다.,The record goes deep into the archive.,-,-,
+ya03,3,촛불 앞에서 함께 금식한다,Fast together before the candle,90,FollowerFaith+10 Temperance+2 Calamity-1,배고픔 속에서 불꽃이 하나로 모입니다.,"In hunger, the flames gather back into one.",Health-3,몇몇이 쓰러져 금식이 중단됩니다.,"Several collapse, and the fast is broken."
+ya04,1,규칙을 율법으로 높인다,Raise the rule into law,80,FollowerFaith+15 Authority+5 Calamity+1,당신의 이름은 이제 속삭임으로만 불립니다.,Your name is now spoken only in whispers.,Reputation-5,외부인들은 그 규칙을 비웃습니다.,Outsiders mock the rule.
+ya04,2,이름은 부르라고 있는 것이라 말한다,Say a name is meant to be called,100,Followers+3 FollowerFaith-3,거리에서 당신의 이름이 더 자주 들립니다.,Your name is heard more often in the streets.,-,-,
+ya04,3,규칙을 지키는 이들을 축복한다,Bless those who keep the rule,90,FollowerFaith+10 Integrity+1,축복받은 이들의 등이 곧게 펴집니다.,The blessed stand a little straighter.,FollowerFaith-3,축복을 받지 못한 이들이 서운해합니다.,Those left unblessed feel slighted.
+ya05,1,구절을 고치고 지난 설교를 거둔다,Fix the verse and withdraw the old sermons,70,Doctrine+20 Integrity+2,바로잡힌 구절이 오히려 믿음을 단단히 합니다.,The corrected verse only strengthens belief.,Doctrine-15,신도들이 무엇을 믿어야 할지 모르게 됩니다.,The faithful no longer know what to believe.
+ya05,2,사제를 조용히 물러나게 한다,Quietly retire the priest,100,Authority+5 Integrity-2 Calamity+2,"그는 떠났고, 구절은 그대로 남습니다.","He is gone, and the verse remains as it was.",-,-,
+ya05,3,두 해석을 모두 인정한다,Accept both readings,90,Doctrine+8 Patience+1,두 갈래의 해석이 나란히 놓입니다.,Two readings lie side by side.,FollowerFaith-5,어느 쪽도 만족하지 못합니다.,Neither side is satisfied.
+ya06,1,저주를 내린다,Lay the curse,70,FollowerFaith+20 Reputation-8 Calamity+3,남은 신도들은 떠난다는 말을 다시 꺼내지 않습니다.,No one remaining speaks of leaving again.,Suspicion+8 Reputation-10,저주 이야기가 신문 한 귀퉁이에 실립니다.,The story of the curse lands in a corner of the newspaper.
+ya06,2,저주 대신 기도를 내린다,Offer a prayer instead of a curse,100,Charity+2 FollowerFaith-5,청원한 이들은 실망한 얼굴로 돌아섭니다.,The petitioners turn away disappointed.,-,-,
+ya06,3,떠난 자를 잊으라 명한다,Command them to forget the one who left,90,FollowerFaith+8 Mentality+1,빈자리는 곧 다른 이로 채워집니다.,The empty seat is soon filled.,FollowerFaith-5,잊으라는 말이 오히려 그를 떠올리게 합니다.,Being told to forget only brings him to mind.
+ya07,1,우승자에게 직분을 준다,Give the winner an office,80,Doctrine+15 Authority+8 Ambition+1,율법을 외는 소리가 밤늦도록 이어집니다.,Recitation goes on late into the night.,FollowerFaith-5,탈락자들의 불만이 쌓입니다.,Resentment builds among those who lost.
+ya07,2,대회 없이 함께 외운다,Recite together without a contest,100,Doctrine+8 FollowerFaith+3,한 목소리로 율법이 울립니다.,The Law rings out in one voice.,-,-,
+ya07,3,외우기보다 지키는 것을 가르친다,Teach keeping the Law over memorizing it,90,Integrity+2 Doctrine+5 Calamity-1,신도들이 율법을 손으로 옮기기 시작합니다.,The faithful begin to live the Law with their hands.,Doctrine-3,지루한 설교라는 투덜거림이 들립니다.,Some grumble that it was a dull sermon.
+ya08,1,그것이 당신의 목소리였다고 말한다,Say it was your voice,70,FollowerFaith+20 LeaderFaith+10 Calamity+2,신도들이 당신 앞에 엎드립니다.,The faithful prostrate themselves before you.,Mentality-3,목소리는 당신을 비웃듯 다시 울립니다.,"The voice rings out again, as if mocking you."
+ya08,2,목소리의 주인을 찾으라 명한다,Order them to find the voice's owner,100,Mentality-2 Doctrine+5,아무도 찾지 못합니다. 당신만은 그 주인을 압니다.,No one finds it. Only you know whose it was.,-,-,
+ya08,3,모두와 함께 밤새 기도한다,Pray through the night with everyone,90,FollowerFaith+10 Piety+2,새벽이 오자 목소리는 잠잠해집니다.,"At dawn, the voice falls silent.",Health-2,밤샘 기도에 모두가 지쳐 쓰러집니다.,Everyone is worn out by the vigil.
+ya09,1,구절대로 엄히 벌한다,Punish strictly by the verse,70,Doctrine+15 Authority+10 Reputation-10 Calamity+3,율법의 무게가 모두의 어깨를 누릅니다.,The weight of the Law presses on every shoulder.,Suspicion+10 Reputation-15,경찰이 신전 앞을 서성입니다.,The police loiter outside the temple.
+ya09,2,벌 대신 추방한다,Exile them instead,100,Authority+5 Followers-2,추방된 자의 뒷모습을 모두가 지켜봅니다.,Everyone watches the exile walk away.,-,-,
+ya09,3,옛 구절을 비유로 풀어 가르친다,Teach the verse as a parable,90,Doctrine+10 Charity+1,돌은 말이 되어 마음을 칩니다.,The stones become words that strike the heart.,FollowerFaith-5,엄격함을 원하던 이들이 실망합니다.,Those who wanted severity are disappointed.
+ya10,1,십일조를 율법으로 정한다,Make the tithe law,80,Offerings+20 FollowerFaith+5 Calamity+1,헌금함이 무겁게 채워집니다.,The offering box fills heavily.,Followers-3,몇몇 가난한 신도가 떠납니다.,A few poor followers leave.
+ya10,2,원하는 이만 바치게 한다,Let only the willing give,100,Offerings+8 Charity+1,바치는 손길이 가볍습니다.,The hands that give are light.,-,-,
+ya10,3,바친 것을 가난한 신도에게 나눈다,Share the offerings with the poor faithful,90,FollowerFaith+12 Charity+2 Calamity-1,받은 이들이 가장 큰 소리로 찬송합니다.,Those who receive sing loudest of all.,Offerings-5,나눔의 장부가 엉켜 손해를 봅니다.,The ledgers tangle and you lose money.
+sa01,1,서명한다,Sign it,70,Offerings+40 Greed+2 Calamity+3,약속대로 금고가 불어납니다. 사내는 장부에 무언가를 적습니다.,"As promised, the vault swells. The man writes something in his ledger.",Offerings-20,계약서의 작은 글씨가 당신의 금고를 비웁니다.,The fine print empties your vault.
+sa01,2,계약서를 찢는다,Tear up the contract,100,Integrity+2,사내는 웃으며 다음에 또 오겠다고 합니다.,The man smiles and says he will come again.,-,-,
+sa01,3,조건을 하나씩 따져 묻는다,Question every clause,80,Offerings+15 Mentality+1,당신은 손해 보지 않을 만큼만 서명합니다.,You sign only as much as costs you nothing.,Mentality-2,질문할수록 조건이 늘어납니다.,"The more you ask, the more clauses appear."
+sa02,1,장부를 받아 모두 앞에서 읽는다,Read it aloud before everyone,70,Authority+20 FollowerFaith-5 Calamity+2,이름이 불릴 때마다 누군가 고개를 떨굽니다.,"Each time a name is read, someone lowers their head.",FollowerFaith-15,서로를 의심하는 눈빛이 신전을 채웁니다.,Suspicious glances fill the temple.
+sa02,2,장부를 불태운다,Burn the ledger,100,Charity+2 Authority-3,재가 된 장부 위로 안도의 한숨이 흐릅니다.,Sighs of relief drift over the ashes.,-,-,
+sa02,3,장부를 몰래 간직한다,Keep it in secret,90,Authority+10 Ambition+2 Calamity+1,당신의 서랍이 조금 무거워집니다.,Your drawer grows a little heavier.,Suspicion+5,장부의 존재가 새어 나갑니다.,Word of the ledger leaks out.
+sa03,1,시험을 내리고 걸린 재산을 받는다,Set the test and take the stake,70,Offerings+35 Reputation-5 Calamity+2,"상인은 시험에 졌고, 그 재산은 당신의 것이 됩니다.","The merchant fails, and his fortune becomes yours.",Reputation-10 Suspicion+5,상인이 사기를 당했다며 소송을 걸어옵니다.,"The merchant sues, claiming fraud."
+sa03,2,시험은 재산으로 하는 것이 아니라 말한다,Say tests are not for wealth,100,Integrity+1 Reputation+5,상인은 감동해 이웃에게 당신을 칭찬합니다.,"Moved, the merchant praises you to his neighbors.",-,-,
+sa03,3,작은 시험만 내린다,Give only a small test,90,Offerings+12 Greed+1,작은 봉헌이 조용히 들어옵니다.,A small offering arrives quietly.,Offerings-5,시험 준비에 돈만 듭니다.,Preparing the test only costs money.
+sa04,1,한쪽을 골라 다른 쪽을 내친다,Pick a side and cast out the other,80,Authority+15 Followers-3 Calamity+1,남은 간부들이 당신의 눈치를 살핍니다.,The remaining officers watch your face carefully.,Authority-10,내쳐진 쪽이 신도들을 데리고 나갑니다.,The ones cast out take followers with them.
+sa04,2,둘 다 벌한다,Punish both,100,Authority+8 FollowerFaith-5,다툼은 끝났지만 신전이 서늘해집니다.,"The quarrel ends, but the temple grows cold.",-,-,
+sa04,3,서로의 죄를 용서하게 한다,Make them forgive each other,80,FollowerFaith+10 Charity+2 Calamity-1,두 사람이 마지못해 손을 맞잡습니다.,The two reluctantly clasp hands.,Authority-5,용서는 말뿐이고 다툼은 이어집니다.,The forgiveness is only words; the feud goes on.
+sa05,1,그 기적을 팔아 봉헌금을 모은다,Sell the miracle for offerings,70,Offerings+30 Greed+2 Suspicion+5 Calamity+2,빵을 사려는 줄이 골목을 메웁니다.,Lines to buy the bread fill the alley.,Reputation-10,빵이 다시 돌이 되었다는 항의가 쏟아집니다.,Complaints pour in that the bread turned back to stone.
+sa05,2,헛소리라며 입을 막는다,Silence him as a liar,100,Authority+5 FollowerFaith-3,"그는 입을 다물고, 돌은 돌로 남습니다.","He falls silent, and the stones stay stones.",-,-,
+sa05,3,굶는 이들에게 진짜 빵을 나눈다,Share real bread with the hungry,90,Reputation+10 Charity+2 Offerings-10,진짜 빵이 가짜 기적보다 멀리 퍼집니다.,Real bread travels farther than a false miracle.,Offerings-10,빵값만 나가고 고마움은 남지 않습니다.,The bread costs money and earns no gratitude.
+sa06,1,넉넉히 쥐여 준다,Pay him generously,80,Authority+10 Offerings-15 Suspicion-10 Calamity+2,서류가 조용히 처리됩니다.,The paperwork is quietly handled.,Suspicion+15,그가 다른 사건으로 잡혀 당신의 이름을 말합니다.,He is arrested on another case and gives your name.
+sa06,2,정식 절차를 밟는다,Follow the proper procedure,100,Offerings-5 Integrity+2,느리지만 깨끗하게 허가가 납니다.,"The permit comes slowly, but clean.",-,-,
+sa06,3,그의 약점을 쥐고 협상한다,Bargain with his secrets,70,Authority+15 Ambition+2 Calamity+1,그는 이제 당신의 사람입니다.,He is your man now.,Suspicion+10 Reputation-5,그가 먼저 신고해 버립니다.,He reports you first.
+sa07,1,금화를 녹여 제단을 꾸민다,Melt it to adorn the altar,80,Offerings+20 Authority+5 Calamity+2,제단이 금빛으로 빛납니다.,The altar shines gold.,Mentality-3,제단에서 밤마다 쇠 긁는 소리가 납니다.,Every night the altar makes a sound like scraping metal.
+sa07,2,금화의 주인을 찾는다,Look for the coin's owner,100,Integrity+1 Mentality+1,주인은 끝내 나타나지 않습니다.,The owner never appears.,-,-,
+sa07,3,금화를 강물에 던진다,Throw the coin into the river,100,Temperance+2 Calamity-1,강물이 금화를 삼키고 조용해집니다.,The river swallows the coin and falls quiet.,-,-,
+sa08,1,고발을 받아 대가를 정한다,Hear the accusations and set penalties,70,Authority+20 Offerings+10 Reputation-5 Calamity+2,당신의 판결이 동네의 법이 됩니다.,Your verdicts become the neighborhood's law.,Reputation-15,이웃들이 교단을 감시 대상으로 신고합니다.,The neighbors report the cult to the authorities.
+sa08,2,남의 죄보다 제 죄를 보라 한다,Tell them to look at their own sins,100,Integrity+1 Authority-3,줄이 조용히 흩어집니다.,The line quietly disperses.,-,-,
+sa08,3,고발 대신 화해의 자리를 만든다,Hold a reconciliation instead,80,Reputation+10 Charity+1,이웃과 신도가 한 상에 앉습니다.,Neighbors and followers sit at one table.,Authority-5,화해는커녕 언성만 높아집니다.,"Instead of reconciling, voices only rise."
+sa09,1,판을 연다,Open the tables,70,Offerings+35 Greed+2 Suspicion+8 Calamity+2,주사위가 구를 때마다 당신의 이름이 불립니다.,Your name is called with every roll of the dice.,Reputation-15 Suspicion+10,단속반이 들이닥칩니다.,A police raid bursts in.
+sa09,2,거절한다,Refuse,100,Integrity+1,주인은 혀를 차고 돌아갑니다.,The owner clicks his tongue and leaves.,-,-,
+sa09,3,한 번만 열고 닫는다,"Open them once, then close",90,Offerings+15 Greed+1,한 번의 판으로 금고가 조금 찹니다.,One night of play fills the vault a little.,Reputation-5,한 번이라도 소문은 납니다.,Even once is enough for rumors.
+sa10,1,엎드린 자들에게 왕국을 약속한다,Promise them the kingdoms,70,Authority+20 FollowerFaith+10 Ambition+2 Calamity+3,환호가 신전을 흔듭니다.,Cheers shake the temple.,Mentality-3,약속이 무겁게 어깨를 누릅니다.,The promise weighs on your shoulders.
+sa10,2,일어나라 명한다,Command them to rise,100,Integrity+1 Authority-3,신도들이 어리둥절한 채 일어섭니다.,"The faithful rise, bewildered.",-,-,
+sa10,3,꿈의 의미를 함께 묵상한다,Meditate on the dream together,90,Doctrine+10 Patience+1,꿈은 시험이었다는 해석이 남습니다.,The reading that remains: the dream was a test.,Mentality-2,꿈은 풀리지 않고 밤마다 돌아옵니다.,The dream stays unsolved and returns each night.
+sm01,1,광장에서 더 많은 이의 눈을 만진다,Touch more eyes in the square,70,Followers+20 Health-3 Suspicion+5 Calamity+2,눈을 뜬 이들이 당신의 이름을 외칩니다.,Those whose eyes open shout your name.,Followers-5 Reputation-5,아무도 눈을 뜨지 못하자 야유가 터집니다.,"When no one else sees, jeers break out."
+sm01,2,아이만 데리고 조용히 떠난다,Leave quietly with the child,100,FollowerFaith+5 Charity+1,아이의 부모가 그날 밤 신전을 찾아옵니다.,"That night, the child's parents come to the temple.",-,-,
+sm01,3,빛은 마음에 있다고 설교한다,Preach that the light is in the heart,90,Followers+10 Piety+1,광장의 사람들이 고개를 끄덕입니다.,People in the square nod.,FollowerFaith-3,기적을 기대한 이들이 실망합니다.,Those hoping for a miracle are let down.
+sm02,1,모임을 의식으로 삼는다,Make it a rite,70,FollowerFaith+20 Health-2 Calamity+2,약초 향이 신전을 감쌉니다.,The scent of herbs wraps the temple.,Health-5 Suspicion+8,한 신도가 병원에 실려 갑니다.,One follower is rushed to the hospital.
+sm02,2,약초를 금한다,Ban the herbs,100,Temperance+2 FollowerFaith-5,모임은 흩어지고 불만이 남습니다.,"The circle breaks up, leaving resentment.",-,-,
+sm02,3,약초 대신 단식으로 바꾼다,Replace the herbs with fasting,90,FollowerFaith+10 Temperance+1,맑아진 머리로 그들은 천사를 다시 그립니다.,"With clearer heads, they picture the angel anew.",Health-2,단식이 길어져 몇몇이 쓰러집니다.,The fast runs long and some collapse.
+sm03,1,소문을 부풀려 마을 사람을 받아들인다,Feed the rumor and take in the townsfolk,70,Followers+25 Calamity+2,신전 문 앞에 사람들이 몰려듭니다.,People crowd the temple doors.,Health-5 Followers-5,교단 안에서도 기침 소리가 들리기 시작합니다.,Coughing begins inside the cult as well.
+sm03,2,소문을 바로잡는다,Correct the rumor,100,Integrity+2 Followers+3,정직함에 끌린 몇몇이 찾아옵니다.,"A few, drawn by your honesty, come anyway.",-,-,
+sm03,3,환자를 돌보는 이들을 보낸다,Send people to tend the sick,80,Reputation+10 Followers+10 Health-2,돌봄을 받은 이들이 신도가 됩니다.,Those you cared for become followers.,Health-4,돌보던 이들까지 앓아눕습니다.,Even the caretakers fall ill.
+sm04,1,그 신도를 천사의 선택이라 선포한다,Proclaim them chosen by the angel,70,FollowerFaith+20 Mentality-2 Calamity+2,신도들이 쓰러진 이를 경배합니다.,The faithful revere the fallen one.,FollowerFaith-10,신도들이 다음 이름을 두려워합니다.,The faithful dread the next name.
+sm04,2,쓰러진 신도를 돌본다,Care for the fallen follower,100,Charity+2 Health-1,그는 사흘 만에 눈을 뜹니다.,"After three days, they open their eyes.",-,-,
+sm04,3,꿈을 입 밖에 내지 않는다,Never speak of the dream,100,Mentality-2 Patience+1,뱀의 속삭임은 당신만의 짐이 됩니다.,The serpent's whisper becomes your burden alone.,-,-,
+sm05,1,행렬을 매주 연다,Hold the procession every week,80,Followers+20 Suspicion+5 Calamity+1,행렬은 매주 길어집니다.,The procession grows longer each week.,Suspicion+10,교통 방해로 신고가 들어옵니다.,Complaints about blocked traffic pour in.
+sm05,2,행렬을 멈추게 한다,Stop the procession,100,Reputation+5 Followers-2,거리가 다시 조용해집니다.,The streets grow quiet again.,-,-,
+sm05,3,행렬 끝에서 눈을 풀어 준다,Unbind their eyes at the end,90,Followers+10 FollowerFaith+5,붕대를 푼 눈들이 당신을 처음 봅니다.,Unbound eyes see you for the first time.,FollowerFaith-3,기대만큼 감동적이지 않았습니다.,It was not as moving as hoped.
+sm06,1,시험을 허락한다,Allow the test,70,FollowerFaith+25 Followers-3 Calamity+3,살아남은 이들의 믿음은 쇠처럼 단단합니다.,The faith of the survivors is iron-hard.,Suspicion+15 Reputation-10,결국 누군가 쓰러지고 구급차가 옵니다.,"Someone collapses, and an ambulance comes."
+sm06,2,간부를 꾸짖는다,Rebuke the officer,100,Integrity+1 Authority-3,간부는 고개를 숙이지만 눈빛은 꺾이지 않습니다.,"The officer bows, but their eyes do not.",-,-,
+sm06,3,두 잔 모두 꿀물로 바꿔 둔다,Secretly fill both cups with honey,100,FollowerFaith+8 Mentality+1,"모두가 살아남고, 모두가 기적이라 믿습니다.","Everyone survives, and everyone calls it a miracle.",-,-,
+sm07,1,기적을 약속하고 입교시킨다,Promise a miracle and induct them,70,Followers+15 Offerings+15 Health-3 Calamity+2,환자가 기적처럼 일어나 걷습니다.,"The patient rises and walks, as if by miracle.",Reputation-15,환자가 세상을 떠나고 가족이 등을 돌립니다.,"The patient dies, and the family turns away."
+sm07,2,함께 기도만 해 준다,Only pray with them,100,Charity+2 FollowerFaith+3,가족은 고맙다며 손을 잡습니다.,The family thanks you and takes your hand.,-,-,
+sm07,3,남은 시간을 평안히 보내게 돕는다,Help them spend the time in peace,90,Reputation+10 Charity+2,마지막 날까지 그 방에는 찬송이 흐릅니다.,Hymns fill that room until the last day.,Mentality-2,슬픔이 당신에게도 옮겨 옵니다.,The grief settles on you as well.
+sm08,1,금빛 눈을 보여 주는 의식을 연다,Hold a rite to reveal the golden eyes,70,FollowerFaith+20 Followers+10 Calamity+2,어둠 속에서 두 개의 금빛이 떠오릅니다.,Two golden lights rise in the dark.,Mentality-3,거울 속 눈동자가 당신을 바라봅니다.,The eyes in the mirror stare back at you.
+sm08,2,불빛을 잘못 본 것이라 한다,Say they mistook a lamp,100,FollowerFaith-3 Integrity+1,목격담은 잦아듭니다.,The sightings die down.,-,-,
+sm08,3,눈을 감고 지낸다,Keep your eyes closed,90,Patience+2 Mentality+1,어둠 속에서 몸 안의 눈동자도 잠잠합니다.,"In the dark, the eyes within you are quiet too.",Health-2,눈을 감은 채 걷다 넘어집니다.,You stumble walking with your eyes shut.
+sm09,1,천사의 벌이라고 경고한다,Warn that it is the angel's punishment,70,Followers+15 FollowerFaith+10 Reputation-5 Calamity+2,떠나려던 이들이 짐을 다시 풉니다.,Those about to leave unpack their bags.,Suspicion+10 Reputation-10,독을 탔다는 의심이 교단을 향합니다.,Suspicion of poisoning turns toward the cult.
+sm09,2,떠난 이들에게 약을 보낸다,Send medicine to those who left,90,Reputation+10 Charity+2 Offerings-5,몇몇이 감사 편지를 보내옵니다.,A few send letters of thanks.,Offerings-5,약은 돌아오고 비용만 남습니다.,The medicine is returned; only the cost remains.
+sm09,3,아무 말도 하지 않는다,Say nothing,100,Mentality-1,침묵이 소문을 더 키웁니다.,Silence only feeds the rumor.,-,-,
+sm10,1,그 말을 인정한다,Endorse it,70,FollowerFaith+25 Health-2 Calamity+3,세례받은 이들의 눈빛이 달라집니다.,The baptized look at the world differently.,Health-5 Suspicion+10,세례받은 이가 쓰러져 소란이 납니다.,A newly baptized follower collapses and an uproar follows.
+sm10,2,거짓이라 선포한다,Declare it false,100,Doctrine+5 FollowerFaith-5,젊은 신도들이 입을 삐죽입니다.,The young followers pout.,-,-,
+sm10,3,독 대신 쓴 쑥을 넣게 한다,Use bitter wormwood instead,90,FollowerFaith+10 Temperance+1,쓴맛만으로도 그들은 충분히 떱니다.,The bitterness alone is enough to make them tremble.,FollowerFaith-3,시시하다는 반응이 돌아옵니다.,They find it tame.
+yd01,1,'나 외에 다른 건축가는 없다'고 말한다,Declare 'There is no builder but me',70,Reputation+20 Authority+10 Ambition+2 Calamity+2,박수 속에 묘한 침묵이 섞입니다.,An odd silence mixes into the applause.,Reputation-10,오만하다는 기사가 납니다.,The papers call you arrogant.
+yd01,2,일꾼들의 공으로 돌린다,Credit the workers,100,Reputation+10 Charity+1,일꾼들이 자랑스럽게 고개를 듭니다.,The workers lift their heads with pride.,-,-,
+yd01,3,상금을 이웃에 기부한다,Donate the prize to the neighbors,90,Reputation+15 Offerings-5,기부 소식이 축사보다 멀리 갑니다.,News of the donation travels farther than the speech.,Offerings-5,기부금 처리가 꼬입니다.,The donation paperwork gets tangled.
+yd02,1,깃발을 신전 꼭대기에 건다,Fly it atop the temple,80,Authority+20 Suspicion+5 Calamity+2,사자 얼굴이 동네를 내려다봅니다.,The lion face looks down on the neighborhood.,Reputation-10,괴이한 깃발이 동네의 구경거리가 됩니다.,The bizarre banner becomes a local spectacle.
+yd02,2,깃발을 창고에 넣는다,Put it in storage,100,Authority-3 Temperance+1,간부들이 서운해합니다.,The officers are disappointed.,-,-,
+yd02,3,깃발 대신 흙으로 빚은 상을 세운다,Raise a clay statue instead,90,Authority+10 Patience+1,흙 냄새가 신전에 배어듭니다.,The scent of clay seeps into the temple.,Offerings-5,상이 갈라져 다시 빚어야 합니다.,The statue cracks and must be molded again.
+yd03,1,의식을 공개 시연한다,Perform it publicly,70,Reputation+15 Followers+10 Calamity+2,흙 형상의 손가락이 꿈틀합니다.,The clay figure's finger twitches.,Reputation-15,형상이 무너지며 웃음거리가 됩니다.,"The figure crumbles, and you become a joke."
+yd03,2,의식서를 봉인한다,Seal the book,100,Patience+1 Mentality+1,봉인된 책이 밤마다 조금씩 따뜻해집니다.,The sealed book grows a little warmer every night.,-,-,
+yd03,3,신도들끼리 조용히 해 보게 한다,Let the followers try it quietly,90,FollowerFaith+10,그들은 무엇을 보았는지 말하지 않습니다.,They will not say what they saw.,FollowerFaith-3,아무 일도 일어나지 않습니다.,Nothing happens.
+yd04,1,일곱 아르콘으로 세운다,Appoint them the Seven Archons,80,Authority+20 FollowerFaith-5 Calamity+2,일곱 구역에 일곱 개의 작은 왕좌가 생깁니다.,Seven small thrones appear in seven districts.,Authority-10,구역끼리 다툼이 벌어집니다.,The districts start fighting each other.
+yd04,2,모든 결정은 당신이 한다,Keep every decision yourself,100,Authority+5 Mentality-2,책상 위 서류가 산처럼 쌓입니다.,Papers pile up like a mountain on your desk.,-,-,
+yd04,3,한 명씩 차례로 맡긴다,Entrust them one at a time,90,Authority+10 Patience+1,질서가 천천히 자리를 잡습니다.,Order slowly takes hold.,Authority-3,기다리는 이들이 조바심을 냅니다.,Those waiting grow impatient.
+yd05,1,카메라 앞에서 세상을 빚겠다고 말한다,Tell the camera you will mold the world,70,Reputation+25 Suspicion+10 Calamity+2,방송이 나간 뒤 문의 전화가 빗발칩니다.,"After the broadcast, the phones ring nonstop.",Reputation-15 Suspicion+10,편집된 화면 속 당신은 광인처럼 보입니다.,In the edited footage you look like a madman.
+yd05,2,서면으로만 답한다,Answer only in writing,100,Reputation+5 Integrity+1,짧은 기사가 조용히 실립니다.,A short article runs quietly.,-,-,
+yd05,3,봉사 현장만 찍게 한다,Let them film only your charity work,90,Reputation+15 Charity+1,따뜻한 영상이 퍼집니다.,A heartwarming clip spreads.,Reputation-3,연출이라는 댓글이 달립니다.,Comments call it staged.
+yd06,1,석상을 신전 중앙에 모신다,Enshrine it at the temple's center,80,Authority+15 FollowerFaith+10 Calamity+2,신도들이 석상 앞에서 무릎을 꿇습니다.,The faithful kneel before the statue.,Mentality-3,석상의 눈이 밤마다 당신을 따라옵니다.,Each night the statue's eyes follow you.
+yd06,2,박물관에 기증한다,Donate it to a museum,100,Reputation+15 Authority-3,기증 소식에 시민들이 박수를 보냅니다.,Citizens applaud the donation.,-,-,
+yd06,3,다시 묻는다,Bury it again,100,Temperance+1 Calamity-1,흙 아래에서 무언가가 잠잠해집니다.,Something beneath the soil grows still.,-,-,
+yd07,1,공사를 밀어붙인다,Push the construction through,70,Authority+15 Reputation-10 Calamity+2,벽은 올라가고 원성도 쌓입니다.,"The walls rise, and so does the resentment.",Reputation-15 Suspicion+5,공사 중지 명령이 내려옵니다.,A stop-work order comes down.
+yd07,2,공사를 멈추고 사과한다,Halt and apologize,100,Reputation+10 Authority-5,이웃들의 얼굴이 누그러집니다.,The neighbors' faces soften.,-,-,
+yd07,3,마을에 우물을 함께 파 준다,Dig a well for the town,90,Reputation+15 Offerings-10 Charity+1,우물가에서 교단 이야기가 오갑니다.,Talk of the cult passes around the well.,Offerings-10,물이 나오지 않습니다.,No water comes up.
+yd08,1,문구를 금으로 새긴다,Carve it in gold,80,Authority+20 Offerings-10 Calamity+2,금빛 문구가 지나는 이들을 멈춰 세웁니다.,The golden words stop passersby in their tracks.,Reputation-10,다른 종교 단체들이 항의 성명을 냅니다.,Other religious groups issue statements of protest.
+yd08,2,안건을 부결한다,Vote it down,100,Reputation+5 Patience+1,입구는 소박하게 남습니다.,The entrance stays plain.,-,-,
+yd08,3,작은 글씨로 안쪽에만 새긴다,"Carve it small, on the inside",90,Authority+10,들어온 이만 그 문구를 봅니다.,Only those who enter see the words.,Authority-3,보는 이가 없어 의미가 없다는 말이 나옵니다.,Some say it is pointless if no one sees it.
+yd09,1,졸업생들에게 교단의 뜻을 따르게 한다,Have them follow the cult's will,70,Authority+20 Reputation+10 Suspicion+8 Calamity+2,시청의 결정이 교단의 뜻과 닮아 갑니다.,City hall's decisions begin to resemble the cult's will.,Suspicion+15 Reputation-10,유착 의혹 기사가 터집니다.,A collusion scandal breaks.
+yd09,2,학교는 학교로 둔다,Let the school be a school,100,Reputation+8 Integrity+1,학교의 평판이 교단의 평판이 됩니다.,The school's good name becomes the cult's.,-,-,
+yd09,3,장학금을 늘린다,Increase scholarships,90,Reputation+15 Offerings-10,가난한 학생들이 교단의 문을 두드립니다.,Poor students knock on the cult's door.,Offerings-10,장학금만 나가고 남는 것이 없습니다.,The money goes out and nothing comes back.
+yd10,1,굴착기를 불러 산을 깎는다,Call in excavators and cut the mountain,70,Authority+15 Offerings-20 Followers+10 Calamity+2,산허리가 깎여 나가자 신도들이 환호합니다.,"As the hillside falls away, the faithful cheer.",Offerings-20 Reputation-10,환경 단체의 고발장이 날아옵니다.,An environmental group files a complaint.
+yd10,2,산은 그 자리에 있어야 한다고 답한다,Say the mountain belongs where it is,100,Patience+2 FollowerFaith-3,신도들은 그 말을 오래 곱씹습니다.,The faithful chew on those words for a long time.,-,-,
+yd10,3,산 대신 산을 닮은 제단을 쌓는다,Build an altar shaped like a mountain,90,Authority+10 FollowerFaith+5,작은 산이 신전 마당에 솟습니다.,A small mountain rises in the temple yard.,Offerings-5,제단이 비뚤게 쌓입니다.,The altar is stacked crooked.
+yag5,1,그 앎을 신도들에게 전한다,Share the knowing with the faithful,100,Doctrine+30 FollowerFaith+10 Calamity+2,신도들은 이해하지 못한 채 고개를 끄덕입니다.,The faithful nod without understanding.,-,-,
+yag5,2,앎을 가슴에 묻어 둔다,Bury the knowing in your heart,100,Mentality+3 Patience+1,아무도 모르는 진실이 당신을 단단하게 합니다.,A truth no one else knows makes you harder.,-,-,
+yag6,1,야훼의 이름으로 문을 연다,Open the gate in Yahweh's name,70,Authority+20 LeaderFaith+15 Calamity+3,"문이 열리고, 문지기들이 당신에게 고개를 숙입니다.","The gate opens, and the gatekeepers bow to you.",Health-5 Mentality-5,문지기의 손톱이 그릇을 할퀴고 지나갑니다.,A gatekeeper's claws rake across the vessel.
+yag6,2,그들의 이름을 하나씩 불러 지나간다,Name each of them and pass,90,Doctrine+15 Mentality+2,이름을 불린 아르콘들이 길을 비킵니다.,"Named, the Archons step aside.",Mentality-3,한 이름을 잊어 길을 돌아갑니다.,You forget one name and must go the long way.
+yag7,1,그 고요를 오래 붙든다,Hold the silence as long as you can,100,Mentality+5 Health+5 Calamity-3,몸 안의 눈동자가 잠시 감깁니다.,The eyes within you close for a while.,-,-,
+yag7,2,고요를 깨고 더 위로 오른다,Break the silence and climb higher,100,Doctrine+20 Calamity+2,고요는 깨지고 눈동자가 다시 뜹니다.,"The silence breaks, and the eyes open again.",-,-,
+yag8,1,그렇다고 답한다,Answer yes,100,LeaderFaith+20 Ambition+2 Calamity+2,그림자는 웃으며 당신의 그림자 속으로 스며듭니다.,The shadow smiles and seeps into your own shadow.,-,-,
+yag8,2,아직 모르겠다고 답한다,Answer that you do not know yet,100,Patience+2 Mentality+2,그림자는 기다리겠다고 속삭입니다.,The shadow whispers that it will wait.,-,-,
+yag9,1,왕좌를 향해 손을 뻗는다,Reach for the throne,100,Authority+20 FollowerFaith+20 Calamity+3,왕좌의 냉기가 손끝을 타고 오릅니다.,The throne's chill climbs up your fingertips.,-,-,
+yag9,2,문턱에서 숨을 고른다,Catch your breath at the threshold,100,Health+5 Mentality+5,조금만 더. 당신은 그 말을 몇 번이고 되뇝니다.,Just a little more. You repeat it again and again.,-,-,
+sag5,1,그 앎을 신도들에게 전한다,Share the knowing with the faithful,100,Doctrine+30 FollowerFaith+10 Calamity+2,신도들은 이해하지 못한 채 고개를 끄덕입니다.,The faithful nod without understanding.,-,-,
+sag5,2,앎을 가슴에 묻어 둔다,Bury the knowing in your heart,100,Mentality+3 Patience+1,아무도 모르는 진실이 당신을 단단하게 합니다.,A truth no one else knows makes you harder.,-,-,
+sag6,1,사탄의 이름으로 문을 연다,Open the gate in Satan's name,70,Authority+20 LeaderFaith+15 Calamity+3,"문이 열리고, 문지기들이 당신에게 고개를 숙입니다.","The gate opens, and the gatekeepers bow to you.",Health-5 Mentality-5,문지기의 손톱이 그릇을 할퀴고 지나갑니다.,A gatekeeper's claws rake across the vessel.
+sag6,2,그들의 이름을 하나씩 불러 지나간다,Name each of them and pass,90,Doctrine+15 Mentality+2,이름을 불린 아르콘들이 길을 비킵니다.,"Named, the Archons step aside.",Mentality-3,한 이름을 잊어 길을 돌아갑니다.,You forget one name and must go the long way.
+sag7,1,그 고요를 오래 붙든다,Hold the silence as long as you can,100,Mentality+5 Health+5 Calamity-3,몸 안의 눈동자가 잠시 감깁니다.,The eyes within you close for a while.,-,-,
+sag7,2,고요를 깨고 더 위로 오른다,Break the silence and climb higher,100,Doctrine+20 Calamity+2,고요는 깨지고 눈동자가 다시 뜹니다.,"The silence breaks, and the eyes open again.",-,-,
+sag8,1,그렇다고 답한다,Answer yes,100,LeaderFaith+20 Ambition+2 Calamity+2,그림자는 웃으며 당신의 그림자 속으로 스며듭니다.,The shadow smiles and seeps into your own shadow.,-,-,
+sag8,2,아직 모르겠다고 답한다,Answer that you do not know yet,100,Patience+2 Mentality+2,그림자는 기다리겠다고 속삭입니다.,The shadow whispers that it will wait.,-,-,
+sag9,1,왕좌를 향해 손을 뻗는다,Reach for the throne,100,Authority+20 FollowerFaith+20 Calamity+3,왕좌의 냉기가 손끝을 타고 오릅니다.,The throne's chill climbs up your fingertips.,-,-,
+sag9,2,문턱에서 숨을 고른다,Catch your breath at the threshold,100,Health+5 Mentality+5,조금만 더. 당신은 그 말을 몇 번이고 되뇝니다.,Just a little more. You repeat it again and again.,-,-,
+smg5,1,그 앎을 신도들에게 전한다,Share the knowing with the faithful,100,Doctrine+30 FollowerFaith+10 Calamity+2,신도들은 이해하지 못한 채 고개를 끄덕입니다.,The faithful nod without understanding.,-,-,
+smg5,2,앎을 가슴에 묻어 둔다,Bury the knowing in your heart,100,Mentality+3 Patience+1,아무도 모르는 진실이 당신을 단단하게 합니다.,A truth no one else knows makes you harder.,-,-,
+smg6,1,사마엘의 이름으로 문을 연다,Open the gate in Samael's name,70,Authority+20 LeaderFaith+15 Calamity+3,"문이 열리고, 문지기들이 당신에게 고개를 숙입니다.","The gate opens, and the gatekeepers bow to you.",Health-5 Mentality-5,문지기의 손톱이 그릇을 할퀴고 지나갑니다.,A gatekeeper's claws rake across the vessel.
+smg6,2,그들의 이름을 하나씩 불러 지나간다,Name each of them and pass,90,Doctrine+15 Mentality+2,이름을 불린 아르콘들이 길을 비킵니다.,"Named, the Archons step aside.",Mentality-3,한 이름을 잊어 길을 돌아갑니다.,You forget one name and must go the long way.
+smg7,1,그 고요를 오래 붙든다,Hold the silence as long as you can,100,Mentality+5 Health+5 Calamity-3,몸 안의 눈동자가 잠시 감깁니다.,The eyes within you close for a while.,-,-,
+smg7,2,고요를 깨고 더 위로 오른다,Break the silence and climb higher,100,Doctrine+20 Calamity+2,고요는 깨지고 눈동자가 다시 뜹니다.,"The silence breaks, and the eyes open again.",-,-,
+smg8,1,그렇다고 답한다,Answer yes,100,LeaderFaith+20 Ambition+2 Calamity+2,그림자는 웃으며 당신의 그림자 속으로 스며듭니다.,The shadow smiles and seeps into your own shadow.,-,-,
+smg8,2,아직 모르겠다고 답한다,Answer that you do not know yet,100,Patience+2 Mentality+2,그림자는 기다리겠다고 속삭입니다.,The shadow whispers that it will wait.,-,-,
+smg9,1,왕좌를 향해 손을 뻗는다,Reach for the throne,100,Authority+20 FollowerFaith+20 Calamity+3,왕좌의 냉기가 손끝을 타고 오릅니다.,The throne's chill climbs up your fingertips.,-,-,
+smg9,2,문턱에서 숨을 고른다,Catch your breath at the threshold,100,Health+5 Mentality+5,조금만 더. 당신은 그 말을 몇 번이고 되뇝니다.,Just a little more. You repeat it again and again.,-,-,
+ydg5,1,그 앎을 신도들에게 전한다,Share the knowing with the faithful,100,Doctrine+30 FollowerFaith+10 Calamity+2,신도들은 이해하지 못한 채 고개를 끄덕입니다.,The faithful nod without understanding.,-,-,
+ydg5,2,앎을 가슴에 묻어 둔다,Bury the knowing in your heart,100,Mentality+3 Patience+1,아무도 모르는 진실이 당신을 단단하게 합니다.,A truth no one else knows makes you harder.,-,-,
+ydg6,1,얄다바오트의 이름으로 문을 연다,Open the gate in Yaldabaoth's name,70,Authority+20 LeaderFaith+15 Calamity+3,"문이 열리고, 문지기들이 당신에게 고개를 숙입니다.","The gate opens, and the gatekeepers bow to you.",Health-5 Mentality-5,문지기의 손톱이 그릇을 할퀴고 지나갑니다.,A gatekeeper's claws rake across the vessel.
+ydg6,2,그들의 이름을 하나씩 불러 지나간다,Name each of them and pass,90,Doctrine+15 Mentality+2,이름을 불린 아르콘들이 길을 비킵니다.,"Named, the Archons step aside.",Mentality-3,한 이름을 잊어 길을 돌아갑니다.,You forget one name and must go the long way.
+ydg7,1,그 고요를 오래 붙든다,Hold the silence as long as you can,100,Mentality+5 Health+5 Calamity-3,몸 안의 눈동자가 잠시 감깁니다.,The eyes within you close for a while.,-,-,
+ydg7,2,고요를 깨고 더 위로 오른다,Break the silence and climb higher,100,Doctrine+20 Calamity+2,고요는 깨지고 눈동자가 다시 뜹니다.,"The silence breaks, and the eyes open again.",-,-,
+ydg8,1,그렇다고 답한다,Answer yes,100,LeaderFaith+20 Ambition+2 Calamity+2,그림자는 웃으며 당신의 그림자 속으로 스며듭니다.,The shadow smiles and seeps into your own shadow.,-,-,
+ydg8,2,아직 모르겠다고 답한다,Answer that you do not know yet,100,Patience+2 Mentality+2,그림자는 기다리겠다고 속삭입니다.,The shadow whispers that it will wait.,-,-,
+ydg9,1,왕좌를 향해 손을 뻗는다,Reach for the throne,100,Authority+20 FollowerFaith+20 Calamity+3,왕좌의 냉기가 손끝을 타고 오릅니다.,The throne's chill climbs up your fingertips.,-,-,
+ydg9,2,문턱에서 숨을 고른다,Catch your breath at the threshold,100,Health+5 Mentality+5,조금만 더. 당신은 그 말을 몇 번이고 되뇝니다.,Just a little more. You repeat it again and again.,-,-,
+yaeve,1,신도들을 모두 불러 모은다,Gather all the faithful,100,Followers+20 FollowerFaith+30,왕좌 앞에 선 당신 뒤로 신도들의 숨소리가 이어집니다.,"Behind you at the throne, the breathing of the faithful stretches on.",-,-,
+yaeve,2,홀로 왕좌 앞에 선다,Stand before the throne alone,100,Health+5 Mentality+5 LeaderFaith+20,혼자라는 것이 오히려 당신을 가볍게 합니다.,Being alone only makes you lighter.,-,-,
+saeve,1,신도들을 모두 불러 모은다,Gather all the faithful,100,Followers+20 FollowerFaith+30,왕좌 앞에 선 당신 뒤로 신도들의 숨소리가 이어집니다.,"Behind you at the throne, the breathing of the faithful stretches on.",-,-,
+saeve,2,홀로 왕좌 앞에 선다,Stand before the throne alone,100,Health+5 Mentality+5 LeaderFaith+20,혼자라는 것이 오히려 당신을 가볍게 합니다.,Being alone only makes you lighter.,-,-,
+smeve,1,신도들을 모두 불러 모은다,Gather all the faithful,100,Followers+20 FollowerFaith+30,왕좌 앞에 선 당신 뒤로 신도들의 숨소리가 이어집니다.,"Behind you at the throne, the breathing of the faithful stretches on.",-,-,
+smeve,2,홀로 왕좌 앞에 선다,Stand before the throne alone,100,Health+5 Mentality+5 LeaderFaith+20,혼자라는 것이 오히려 당신을 가볍게 합니다.,Being alone only makes you lighter.,-,-,
+ydeve,1,신도들을 모두 불러 모은다,Gather all the faithful,100,Followers+20 FollowerFaith+30,왕좌 앞에 선 당신 뒤로 신도들의 숨소리가 이어집니다.,"Behind you at the throne, the breathing of the faithful stretches on.",-,-,
+ydeve,2,홀로 왕좌 앞에 선다,Stand before the throne alone,100,Health+5 Mentality+5 LeaderFaith+20,혼자라는 것이 오히려 당신을 가볍게 합니다.,Being alone only makes you lighter.,-,-,
+eyerev,1,뒤집힌 세상을 받아들인다,Accept the reversed world,100,Lust+2 Greed+2 Appetite+2 Ambition+2,당신의 눈에 비친 세상이 조용히 뒤집힙니다.,The world in your eyes quietly turns over.,-,-,
+eyerev,2,두 눈을 감고 잠시 버틴다,Close your eyes and hold out a while,100,Temperance+2 Patience+2 Calamity+2,감은 눈꺼풀 안에서도 세상은 뒤집혀 있습니다.,"Even behind closed eyelids, the world is upside down.",-,-,

@@ -1,0 +1,66 @@
+﻿id,kind,theme,text,text_en
+ya01,random,Doctrine,신도 하나가 꿈에서 불타는 돌판을 보았다며 새 계명을 받아 적어 왔습니다.,A follower says they saw a burning tablet in a dream and wrote down a new commandment.
+ya02,random,FollowerFaith,다른 교단의 예배당에 몰래 다녀온 신도가 발각되었습니다. 신도들이 질투하는 신의 벌을 요구합니다.,A follower caught secretly visiting another cult's chapel. The others demand the jealous god's punishment.
+ya03,random,Doctrine,제단 위 촛불이 저절로 일곱 갈래로 갈라졌습니다. 신도들은 율법의 표징이라 믿습니다.,The altar candle split into seven flames on its own. The faithful believe it is a sign of the Law.
+ya04,random,FollowerFaith,신도들이 당신의 이름을 함부로 부르지 말자는 규칙을 스스로 만들었습니다.,The faithful made their own rule never to speak your name lightly.
+ya05,random,Doctrine,늙은 사제가 율법서의 한 구절이 잘못 옮겨졌다고 주장합니다. 고치면 지난 설교가 모두 흔들립니다.,An old priest claims a verse of the book of Law was mistranslated. Fixing it would shake every past sermon.
+ya06,random,FollowerFaith,"질투하는 신의 이름으로, 떠난 신도의 가족에게 저주를 내려 달라는 청원이 들어왔습니다.","A petition asks you to curse the family of a follower who left, in the jealous god's name."
+ya07,random,Doctrine,신도들이 율법을 외운 횟수를 겨루는 대회를 열자고 합니다.,The faithful want a contest over who has recited the Law the most.
+ya08,random,FollowerFaith,한밤중 신전에 낯선 목소리가 울렸습니다. '나 외에 다른 신을 두지 말라.' 신도들이 떨고 있습니다.,At midnight a strange voice echoes through the temple: 'Have no other gods before me.' The faithful tremble.
+ya09,random,Doctrine,율법을 어긴 자를 돌로 쳐야 한다는 옛 구절을 누군가 찾아냈습니다.,Someone has unearthed an old verse saying lawbreakers must be stoned.
+ya10,random,FollowerFaith,신도들이 첫 수확의 십분의 일을 바치는 율법을 되살리자고 합니다.,The faithful want to revive the law of offering a tenth of the first harvest.
+sa01,random,Offerings,검은 정장의 사내가 계약서를 내밉니다. 서명하면 다음 달까지 봉헌금이 두 배가 된다고 합니다.,"A man in a black suit offers a contract. Sign, and your offerings double by next month."
+sa02,random,Authority,신도 하나가 다른 신도들의 죄를 낱낱이 적은 장부를 들고 왔습니다.,A follower brings a ledger listing every sin of the others.
+sa03,random,Offerings,부유한 상인이 신의 시험을 받고 싶다며 재산의 절반을 걸겠다고 합니다.,A wealthy merchant wants to be tested by your god and will stake half his fortune.
+sa04,random,Authority,교단의 간부들이 서로를 고발하며 당신의 판결을 기다립니다.,Your officers accuse one another and await your verdict.
+sa05,random,Offerings,광야에서 돌아온 신도가 돌을 빵으로 바꾸는 법을 배웠다고 떠듭니다.,A follower back from the wilderness boasts of turning stones into bread.
+sa06,random,Authority,시청 공무원이 교단 건물의 허가를 눈감아 주는 대가를 넌지시 묻습니다.,A city official hints at a price for overlooking your building permits.
+sa07,random,Offerings,누군가 헌금함에 금화 한 닢과 '영혼 하나 값'이라는 쪽지를 넣고 갔습니다.,Someone left a gold coin in the offering box with a note: 'the price of one soul.'
+sa08,random,Authority,신도들이 당신을 '고발자'라 부르며 이웃의 죄를 들고 줄을 섭니다.,"Calling you 'the Accuser,' your followers line up with their neighbors' sins."
+sa09,random,Offerings,도박장 주인이 교단의 이름으로 '축복받은 판'을 열자고 합니다. 수익의 절반을 바치겠답니다.,A gambling-den owner wants to run 'blessed tables' in your cult's name and offers half the profits.
+sa10,random,Authority,온 세상의 나라를 보여 주겠다는 꿈을 꾸었습니다. 깨어 보니 신도들이 당신의 발치에 엎드려 있습니다.,You dreamed of being shown all the kingdoms of the world. You wake to find followers prostrate at your feet.
+sm01,random,Followers,앞을 못 보는 아이가 당신의 손을 잡자 '빛이 보인다'고 외쳤습니다. 광장에 사람이 모입니다.,"A blind child takes your hand and cries out, 'I see light!' A crowd gathers in the square."
+sm02,random,FollowerFaith,신도들이 쓴 약초를 나눠 마시며 '죽음의 천사를 만났다'고 고백하는 모임이 생겼습니다.,A circle has formed where followers drink bitter herbs and confess they met the angel of death.
+sm03,random,Followers,역병이 도는 마을에서 교단만은 아무도 앓지 않는다는 소문이 퍼졌습니다.,"Plague is spreading in town, and rumor says no one in your cult falls ill."
+sm04,random,FollowerFaith,꿈에 눈먼 뱀이 나타나 당신의 귀에 이름 하나를 속삭였습니다. 그 이름의 신도가 오늘 아침 쓰러졌습니다.,"In a dream a blind serpent whispered a name in your ear. This morning, the follower with that name collapsed."
+sm05,random,Followers,거리에서 붕대로 눈을 가린 행렬이 교단의 이름을 외치며 걷고 있습니다.,A procession with bandaged eyes walks the streets chanting your cult's name.
+sm06,random,FollowerFaith,독이 든 잔과 꿀물 잔 중 하나를 고르는 신앙 시험을 하자는 간부가 있습니다.,An officer proposes a test of faith: choose between a poisoned cup and a cup of honey water.
+sm07,random,Followers,병원에서 포기한 환자의 가족이 마지막 희망이라며 찾아왔습니다.,The family of a patient the hospital gave up on comes to you as their last hope.
+sm08,random,FollowerFaith,당신의 눈이 밤마다 금빛으로 빛난다는 목격담이 돕니다.,Witnesses say your eyes glow gold at night.
+sm09,random,Followers,교단을 떠난 신도들이 하나둘 앓아눕는다는 이야기가 돕니다.,Word spreads that former followers are falling ill one by one.
+sm10,random,FollowerFaith,세례 물에 독 한 방울을 섞어야 진짜 신도가 된다는 말이 젊은 신도들 사이에 돕니다.,Young followers whisper that a drop of poison in the baptismal water makes a true believer.
+yd01,random,Reputation,교단이 지은 건물이 시의 건축상을 받았습니다. 시장이 축사를 부탁합니다.,A building your cult raised has won the city architecture prize. The mayor asks you to speak.
+yd02,random,Authority,간부들이 당신을 사자 머리로 그린 깃발을 만들었습니다.,Your officers made a banner depicting you with a lion's head.
+yd03,random,Reputation,흙으로 빚은 형상에 입김을 불어 넣으면 움직인다는 오래된 의식을 신도가 찾아왔습니다.,A follower found an old rite: breathe into a clay figure and it will move.
+yd04,random,Authority,일곱 명의 간부가 각자 한 구역씩 다스리게 해 달라고 청합니다.,Seven officers ask to each rule a district of their own.
+yd05,random,Reputation,언론이 교단의 급성장을 다룬 특집을 준비합니다. 인터뷰 요청이 왔습니다.,The press is preparing a feature on your cult's rapid growth and requests an interview.
+yd06,random,Authority,교단 땅에서 고대 석상이 발굴되었습니다. 사자 얼굴에 뱀의 몸입니다.,An ancient statue is unearthed on cult land: a lion's face on a serpent's body.
+yd07,random,Reputation,이웃 마을이 교단의 공사 소음 때문에 항의 집회를 열었습니다.,A neighboring town holds a protest over the noise of your construction.
+yd08,random,Authority,'나 외에 다른 신은 없다'는 문구를 교단 입구에 새기자는 안건이 올라왔습니다.,A proposal: carve 'There is no god beside me' over the cult's entrance.
+yd09,random,Reputation,교단이 세운 학교의 졸업생들이 시의 요직에 오르고 있습니다.,Graduates of your cult's school are rising to key posts in the city.
+yd10,random,Authority,물질 세계가 당신이 빚은 것이라 믿는 신도들이 산 하나를 옮겨 달라고 청합니다.,Followers who believe you shaped the material world ask you to move a mountain.
+yag5,gnosis,Yahweh:5,"야훼의 선과 악이 당신 안에서 하나로 녹아듭니다. 처음으로, 당신은 그가 거짓 신이라는 것을 압니다.","The good and the evil of Yahweh melt into one within you. For the first time, you know he is a false god."
+yag6,gnosis,Yahweh:6,일곱째 하늘의 문지기 아르콘들이 당신을 가로막습니다. 야훼의 이름이 그들 사이에서 메아리칩니다.,The Archon gatekeepers of the seventh heaven bar your way. The name of Yahweh echoes among them.
+yag7,gnosis,Yahweh:7,여덟째 하늘에는 야훼의 목소리가 닿지 않습니다. 고요 속에서 당신은 처음으로 그 없이 숨을 쉽니다.,"The voice of Yahweh does not reach the eighth heaven. In the silence, you breathe without him for the first time."
+yag8,gnosis,Yahweh:8,"거짓 신을 낳은 지혜, 소피아의 그림자가 당신 앞에 무릎 꿇은 채 묻습니다. '그를 왕좌에서 끌어내릴 것인가.'","The shadow of Sophia, the Wisdom that bore the false god, kneels before you and asks: 'Will you drag him from the throne?'"
+yag9,gnosis,Yahweh:9,"충만의 문이 열립니다. 야훼의 왕좌가 손 닿는 곳에 있고, 그의 숨결이 당신의 목덜미에 닿습니다.","The gate of Fullness opens. The throne of Yahweh is within reach, and his breath touches the back of your neck."
+sag5,gnosis,Satan:5,"사탄의 선과 악이 당신 안에서 하나로 녹아듭니다. 처음으로, 당신은 그가 거짓 신이라는 것을 압니다.","The good and the evil of Satan melt into one within you. For the first time, you know he is a false god."
+sag6,gnosis,Satan:6,일곱째 하늘의 문지기 아르콘들이 당신을 가로막습니다. 사탄의 이름이 그들 사이에서 메아리칩니다.,The Archon gatekeepers of the seventh heaven bar your way. The name of Satan echoes among them.
+sag7,gnosis,Satan:7,여덟째 하늘에는 사탄의 목소리가 닿지 않습니다. 고요 속에서 당신은 처음으로 그 없이 숨을 쉽니다.,"The voice of Satan does not reach the eighth heaven. In the silence, you breathe without him for the first time."
+sag8,gnosis,Satan:8,"거짓 신을 낳은 지혜, 소피아의 그림자가 당신 앞에 무릎 꿇은 채 묻습니다. '그를 왕좌에서 끌어내릴 것인가.'","The shadow of Sophia, the Wisdom that bore the false god, kneels before you and asks: 'Will you drag him from the throne?'"
+sag9,gnosis,Satan:9,"충만의 문이 열립니다. 사탄의 왕좌가 손 닿는 곳에 있고, 그의 숨결이 당신의 목덜미에 닿습니다.","The gate of Fullness opens. The throne of Satan is within reach, and his breath touches the back of your neck."
+smg5,gnosis,Samael:5,"사마엘의 선과 악이 당신 안에서 하나로 녹아듭니다. 처음으로, 당신은 그가 거짓 신이라는 것을 압니다.","The good and the evil of Samael melt into one within you. For the first time, you know he is a false god."
+smg6,gnosis,Samael:6,일곱째 하늘의 문지기 아르콘들이 당신을 가로막습니다. 사마엘의 이름이 그들 사이에서 메아리칩니다.,The Archon gatekeepers of the seventh heaven bar your way. The name of Samael echoes among them.
+smg7,gnosis,Samael:7,여덟째 하늘에는 사마엘의 목소리가 닿지 않습니다. 고요 속에서 당신은 처음으로 그 없이 숨을 쉽니다.,"The voice of Samael does not reach the eighth heaven. In the silence, you breathe without him for the first time."
+smg8,gnosis,Samael:8,"거짓 신을 낳은 지혜, 소피아의 그림자가 당신 앞에 무릎 꿇은 채 묻습니다. '그를 왕좌에서 끌어내릴 것인가.'","The shadow of Sophia, the Wisdom that bore the false god, kneels before you and asks: 'Will you drag him from the throne?'"
+smg9,gnosis,Samael:9,"충만의 문이 열립니다. 사마엘의 왕좌가 손 닿는 곳에 있고, 그의 숨결이 당신의 목덜미에 닿습니다.","The gate of Fullness opens. The throne of Samael is within reach, and his breath touches the back of your neck."
+ydg5,gnosis,Yaldabaoth:5,"얄다바오트의 선과 악이 당신 안에서 하나로 녹아듭니다. 처음으로, 당신은 그가 거짓 신이라는 것을 압니다.","The good and the evil of Yaldabaoth melt into one within you. For the first time, you know he is a false god."
+ydg6,gnosis,Yaldabaoth:6,일곱째 하늘의 문지기 아르콘들이 당신을 가로막습니다. 얄다바오트의 이름이 그들 사이에서 메아리칩니다.,The Archon gatekeepers of the seventh heaven bar your way. The name of Yaldabaoth echoes among them.
+ydg7,gnosis,Yaldabaoth:7,여덟째 하늘에는 얄다바오트의 목소리가 닿지 않습니다. 고요 속에서 당신은 처음으로 그 없이 숨을 쉽니다.,"The voice of Yaldabaoth does not reach the eighth heaven. In the silence, you breathe without him for the first time."
+ydg8,gnosis,Yaldabaoth:8,"거짓 신을 낳은 지혜, 소피아의 그림자가 당신 앞에 무릎 꿇은 채 묻습니다. '그를 왕좌에서 끌어내릴 것인가.'","The shadow of Sophia, the Wisdom that bore the false god, kneels before you and asks: 'Will you drag him from the throne?'"
+ydg9,gnosis,Yaldabaoth:9,"충만의 문이 열립니다. 얄다바오트의 왕좌가 손 닿는 곳에 있고, 그의 숨결이 당신의 목덜미에 닿습니다.","The gate of Fullness opens. The throne of Yaldabaoth is within reach, and his breath touches the back of your neck."
+yaeve,ascend,Yahweh,율법의 돌판이 스스로 갈라지며 빈자리를 드러냅니다. 질투하는 신이 처음으로 두려움을 보입니다. 아이온 트리에서 마지막 걸음만 남았습니다.,"The tablets of the Law split on their own, revealing an empty seat. The jealous god shows fear for the first time. Only the last step on the Aeon Tree remains."
+saeve,ascend,Satan,고발자의 장부가 마지막 장에 이르렀습니다. 남은 이름은 당신 하나뿐입니다. 아이온 트리에서 마지막 걸음만 남았습니다.,The Accuser's ledger has reached its final page. The only name left is yours. Only the last step on the Aeon Tree remains.
+smeve,ascend,Samael,눈먼 신이 처음으로 눈을 뜨려 합니다. 그 눈이 열리기 전에 왕좌에 올라야 합니다. 아이온 트리에서 마지막 걸음만 남았습니다.,The blind god is trying to open his eyes for the first time. You must take the throne before they open. Only the last step on the Aeon Tree remains.
+ydeve,ascend,Yaldabaoth,사자의 포효가 물질 세계를 흔듭니다. 흙으로 빚은 모든 것이 새 주인의 이름을 기다립니다. 아이온 트리에서 마지막 걸음만 남았습니다.,The lion's roar shakes the material world. Everything molded from clay awaits its new master's name. Only the last step on the Aeon Tree remains.
+eyerev,reverse,-,"그노시스를 얻은 뒤 세상이 다르게 보입니다. 사람들이 미덕이라 부르던 것은 거짓 신이 채운 족쇄였고, 욕망이라 부르던 것은 갇힌 빛의 몸부림이었습니다. 이제부터 세상은 거울처럼 뒤집혀 보입니다.","Since gaining Gnosis, the world looks different. What people called virtue was a shackle forged by the false god; what they called desire was the struggle of imprisoned light. From now on, the world appears reversed, as in a mirror."

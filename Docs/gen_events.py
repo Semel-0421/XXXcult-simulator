@@ -41,7 +41,9 @@ OUT_ADULT = os.path.join(ROOT, 'Assets', 'Scripts', 'Story', 'AdultEvents.cs')
 CULT = {'LeaderFaith', 'FollowerFaith', 'Authority', 'Offerings', 'Followers', 'Doctrine', 'Communion', 'Reputation'}
 PERSONAL = {'Health', 'Mentality', 'Piety', 'Repute', 'Wealth', 'Miracle', 'Lust', 'Greed',
             'Appetite', 'Ambition', 'Temperance', 'Charity', 'Patience', 'Integrity'}
-GOD = {'Envy', 'Suspicion', 'Seize', 'Points'}
+GOD = {'Envy', 'Suspicion', 'Seize', 'Points', 'Calamity'}  # Calamity: 황금의 눈동자 재앙 카운터 (eye 이벤트 전용)
+OUT_EYE = os.path.join(ROOT, 'Assets', 'Scripts', 'Eye', 'EyeEvents.cs')
+EYE_SECTORS = {'Yahweh', 'Satan', 'Samael', 'Yaldabaoth'}
 
 
 def read_text(path):
@@ -282,6 +284,41 @@ def build_god():
     return out
 
 
+# [황금의 눈동자 이벤트] eye/eye_events.csv: id, kind, theme, text (SYS_DEMIURGE 8절)
+#     kind: random(theme = 교단 스탯, id 앞 두 글자 ya·sa·sm·yd = 섹터: 그 섹터 노드를 익혀야 뽑힌다)
+#           / gnosis(theme = 섹터:단계, 그 그노시스 단계를 익히면 한 번) / ascend(theme = 섹터, 그 섹터가 왕좌이고 교리 10단계면 한 번)
+#           / reverse(처음 그노시스를 익히면 한 번: 세상이 뒤집힘)
+#     선택지 효과에 신 모드 효과와 Calamity±n(재앙 카운터)을 쓸 수 있다.
+def build_eye():
+    events = rows_of(os.path.join('eye', 'eye_events.csv'))
+    choices = group_choices(rows_of(os.path.join('eye', 'eye_choices.csv')))
+    out, ids = [], set()
+    for e in events:
+        eid, kind, theme = e['id'].strip(), e['kind'].strip(), e['theme'].strip()
+        if eid in ids:
+            sys.exit(f'{eid}: 중복 id')
+        ids.add(eid)
+        bonus = None
+        if kind == 'random' and theme in CULT:
+            head, bonus = f'CultEvent.Random("{eid}", StatId.{theme}', BONUS_STAT[theme]
+        elif kind == 'gnosis' and re.fullmatch(r'[A-Za-z]+:[5-9]', theme) and theme.split(':')[0] in EYE_SECTORS:
+            sector, level = theme.split(':')
+            head = f'CultEvent.Conditional("{eid}", c => EyeRules.Reached(EyeSector.{sector}, {level})'
+        elif kind == 'ascend' and theme in EYE_SECTORS:
+            head = f'CultEvent.Conditional("{eid}", c => EyeRules.ReadyToAscend(EyeSector.{theme})'
+        elif kind == 'reverse':
+            head = f'CultEvent.Conditional("{eid}", c => EyeRules.Reversed'
+        else:
+            sys.exit(f'{eid}: 잘못된 kind/theme {kind} {theme}')
+        codes = choices_for(eid, choices.get(eid, []), True, {}, '                ', bonus, allow_god=True)
+        body = ',\n                '.join(codes)
+        out.append(f'        {head}, new Question("{esc(bi(e, "text"))}",\n                {body})),')
+    unused = set(choices) - ids
+    if unused:
+        sys.exit(f'선택지만 있고 이벤트가 없는 id: {sorted(unused)}')
+    return out
+
+
 def build_adult():
     events = rows_of('adult_events.csv')
     choices = group_choices(rows_of('adult_choices.csv'))
@@ -365,9 +402,11 @@ def main():
     write(OUT_CULT, '// 교단 창설 후 이벤트 목록. Docs/gen_events.py로 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.', 'CultEvents', cult)
     god = build_god()
     write(OUT_GOD, '// 준비된 신 모드 전용 이벤트 목록. Docs/gen_events.py로 생성됨 — 직접 고치지 말고 CSV 수정 후 다시 생성할 것.', 'GodEvents', god)
+    eye = build_eye()
+    write(OUT_EYE, '// 황금의 눈동자 모드 신규 이벤트 목록. Docs/gen_events.py로 생성됨 — 직접 고치지 말고 Docs/eye/eye_events.csv·eye_choices.csv 수정 후 다시 생성할 것.', 'EyeEvents', eye)
     adult = build_adult()
     write_adult(adult)
-    print(len(life), 'life events,', len(cult), 'cult events,', len(god), 'god events,',
+    print(len(eye), 'eye events,', len(life), 'life events,', len(cult), 'cult events,', len(god), 'god events,',
           f'adult events {len(adult["all"])} shared + {len(adult["normal"])} normal + {len(adult["god"])} god')
 
 

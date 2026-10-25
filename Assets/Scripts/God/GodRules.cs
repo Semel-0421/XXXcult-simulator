@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 // 이벤트 결과에만 쓰는 신 모드 효과 (Docs/god_choices.csv의 Envy Suspicion Seize Points)
-public enum GodEventEffect { Envy, Suspicion, Seize, Points }
+public enum GodEventEffect { Envy, Suspicion, Seize, Points, Calamity } // Calamity: 황금의 눈동자 재앙 카운터 (eye 이벤트 전용)
 
 // 준비된 신 모드가 본편 규칙 위에 덧씌우는 규칙. 교단 행동은 본편 것을 그대로 쓰고, 다음만 바뀐다.
 //  - 시작: 유년기 없이 성인의 몸(그릇)으로 바로 교단을 세운다. 기프티드·불운·연령 사망·회차 난이도·극단 엔딩은 없다.
@@ -164,6 +164,9 @@ public static class GodRules
             {
                 case GodEventEffect.Envy: god.Pressure.AddHeat(amount * GiftedV2GodHooks.EventHeatScale(eventId), 0); break;
                 case GodEventEffect.Suspicion: god.Pressure.AddHeat(0, amount * GiftedV2GodHooks.EventHeatScale(eventId)); break;
+                case GodEventEffect.Calamity:
+                    if (GameSession.EyeMode) god.Demiurge.AddCounter(amount);
+                    break;
                 case GodEventEffect.Points:
                     if (GameSession.Rng.NextDouble() < EventPointsChance) god.Points.Defense(amount);
                     break;

@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 // 황금의 눈동자 모드 (Docs/GDD/systems/SYS_DEMIURGE.md). 준비된 신과 거울 세계를 합친 세 번째 특수 모드.
 //  - 해금 (DEC-028 A): 준비된 신의 승천 엔딩 하나 + 거울 세계 전용 엔딩 하나를 모두 봐야 열린다.
@@ -187,6 +188,50 @@ public static class EyeRules
         god.Demiurge.ResetCounter();
         EyeCounters.OnCalamity("rest");
         return string.Format(Lang.Get("eye_rest_calamity"), Lang.Get(SectorKey(CalamitySector(god.Aeons))), name, lost.ToString("N0"));
+    }
+
+    // ---- 이벤트 (SYS_DEMIURGE 8절, DEC-028 C) ----
+    // 조건 이벤트(그노시스 단계 진입·찬탈 직전·세상이 뒤집힘) → 신 모드 압박 이벤트 → 성인 → 확률 이벤트.
+    // 확률 이벤트는 EyeShare 확률로 익힌 섹터의 전용 이벤트, 아니면 신 모드 이벤트(그노시스를 처음 익힌 뒤에는 거울 세계 이벤트도 섞임).
+    public const float EyeShare = 0.4f;
+
+    public static bool Reached(EyeSector sector, int level) => GameSession.God.Aeons.IsLearned(AeonSkillCatalog.Stage(sector, level));
+
+    public static bool ReadyToAscend(EyeSector sector) =>
+        GameSession.God.Aeons.AscensionSector == sector && Reached(sector, AeonSkill.ThresholdLevel)
+        && DoctrineLevel.Of(GameSession.Cult[StatId.Doctrine].Value) >= AeonSkill.AscensionLevel;
+
+    // 처음 그노시스를 익힌 뒤: 세상이 거울처럼 뒤집힌다 (본편 → 거울 세계 평판 기준)
+    public static bool Reversed => Sectors.Any(s => Reached(s, AeonSkill.GnosisLevel));
+
+    // 전용 확률 이벤트의 섹터 (id 앞 두 글자)
+    public static EyeSector SectorOf(CultEvent e) => e.Id.Length < 2 ? EyeSector.None : e.Id.Substring(0, 2) switch
+    {
+        "ya" => EyeSector.Yahweh, "sa" => EyeSector.Satan, "sm" => EyeSector.Samael, "yd" => EyeSector.Yaldabaoth, _ => EyeSector.None,
+    };
+
+    static bool Touched(EyeSector sector) => sector != EyeSector.None && GameSession.God.Aeons.Learned.Any(id => AeonSkillCatalog.Find(id)?.Sector == sector);
+
+    static CultEvent[] SectorPool() => EyeEvents.All.Where(e => !e.IsConditional && Touched(SectorOf(e))).ToArray();
+
+    static CultEvent[] generalPool, reversedPool;
+    static CultEvent[] GeneralPool(bool reversed) => reversed
+        ? reversedPool ??= GodEvents.All.Concat(MirrorEvents.All.Where(e => !e.IsConditional && !e.IsNegative)).ToArray()
+        : generalPool ??= GodEvents.All;
+
+    // 불러오기에서 저장 시점의 이벤트를 찾는 전체 목록 (Turns.CultPool)
+    public static IReadOnlyList<CultEvent> EventPool => eventPool ??= EyeEvents.All.Concat(GodEvents.All).Concat(MirrorEvents.All).ToArray();
+    static CultEvent[] eventPool;
+
+    public static CultEvent NextEvent(CultStatus cult, ISet<string> used, System.Random rng, Func<CultEvent> rollAdult)
+    {
+        var next = CultEvent.FindTriggered(EyeEvents.All, cult, used)
+                   ?? CultEvent.RollNegative(GodEvents.All, cult, used, rng, GameSession.God.Pressure.EventChance(cult))
+                   ?? rollAdult();
+        if (next != null) return next;
+        var sector = SectorPool();
+        if (sector.Length > 0 && rng.NextDouble() < EyeShare) return CultEvent.RollRandom(sector, cult, used, rng);
+        return CultEvent.RollRandom(GeneralPool(Reversed), cult, used, rng);
     }
 
     // ---- 엔딩 (SYS_DEMIURGE 7절, DEC-027·028 M·O) ----

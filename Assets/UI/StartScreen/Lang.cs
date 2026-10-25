@@ -28,7 +28,7 @@ public static class Lang
         ["ach_tab_normal"] = ("Normal", "일반"), ["ach_tab_god"] = ("God", "신"), ["ach_tab_mirror"] = ("Mirror", "거울"), ["ach_tab_hidden"] = ("Hidden", "히든"), ["ach_tab_eye"] = ("Golden Eye", "눈동자"), ["ach_tab_empty"] = ("No achievements here yet.", "아직 이 탭에 업적이 없음."), ["ach_view_gifted"] = ("Gifted", "기프티드"), ["ach_view_list"] = ("Achievements", "업적 목록"), ["ach_soon"] = ("Coming soon", "준비 중"),
         ["result_gifted"] = ("Gifted: {0}", "기프티드 획득: {0}"), ["pstat_Miracle"] = ("Miracle", "기적"),
         ["god_fx_Envy"] = ("Heaven's envy", "신계 시기"), ["god_fx_Suspicion"] = ("Earth's suspicion", "지상 의혹"),
-        ["god_fx_Seize"] = ("Seizure", "건물 압류"), ["god_fx_Points"] = ("Divine points", "권능 포인트"), ["choice_hint"] = ("Press or type a number", "번호를 누르거나 입력"), ["paused"] = ("Paused", "일시정지"),
+        ["god_fx_Seize"] = ("Seizure", "건물 압류"), ["god_fx_Points"] = ("Divine points", "권능 포인트"), ["god_fx_Calamity"] = ("Calamity counter", "재앙 카운터"), ["choice_hint"] = ("Press or type a number", "번호를 누르거나 입력"), ["paused"] = ("Paused", "일시정지"),
         ["talents"] = ("Gifted", "기프티드"), ["talent_title"] = ("Owned Gifted", "보유 기프티드"), ["talent_empty"] = ("No Gifted yet.", "보유한 기프티드가 없습니다."), ["close"] = ("Close", "닫기"),
         ["doctrine_level"] = ("Lv.{0}", "{0}레벨"), ["doctrine_max"] = ("MAX", "MAX레벨"),
         ["doctrine_bar"] = ("Tier {0}", "{0}단계"), ["doctrine_bar_max"] = ("MAX", "최고 단계"), // 상단 바 교리 칸 (노드 UI는 위 레벨 키)

@@ -49,7 +49,7 @@ public static class Turns
         LifeEvent.Pick(LifeEvents.All, GameSession.Age.Years, GameSession.UsedEvents, GameSession.Rng);
 
     // 이번 판의 교단 이벤트 목록 (준비된 신 모드는 전용 이벤트)
-    public static IReadOnlyList<CultEvent> CultPool => GameSession.GodMode ? GodEvents.All : GameSession.MirrorMode ? MirrorEvents.Pool : CultEvents.All;
+    public static IReadOnlyList<CultEvent> CultPool => GameSession.EyeMode ? EyeRules.EventPool : GameSession.GodMode ? GodEvents.All : GameSession.MirrorMode ? MirrorEvents.Pool : CultEvents.All;
 
     // 교단 행동 뒤 이어질 이벤트: 조건 → 부정적 → 긍정(무드) → 확률 순. 없으면 null. 부정적 이벤트면 불운이 한 겹 쌓인다.
     // 준비된 신 모드: 압박 이벤트(신계·지상, 압박 단계에 비례한 확률) → 확률 순. 불운은 없다.
@@ -60,6 +60,7 @@ public static class Turns
         var cult = GameSession.Cult;
         var used = GameSession.UsedEvents;
         var rng = GameSession.Rng;
+        if (GameSession.EyeMode) return EyeRules.NextEvent(cult, used, rng, () => RollAdult(cult, used, rng));
         if (GameSession.GodMode)
             return CultEvent.RollNegative(GodEvents.All, cult, used, rng, GameSession.God.Pressure.EventChance(cult))
                    ?? RollAdult(cult, used, rng)
