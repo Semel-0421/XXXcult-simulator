@@ -54,6 +54,31 @@ public static class EyeRules
         _ => (StatId.Reputation, StatId.Authority, PersonalStatId.Repute, PersonalStatId.Health),
     };
 
+    // ---- 데미우르고스 성장 (9단계 결정: A 악한 아이온 습득, B 동거, C 재앙) ----
+    public const float EvilGrowth = 0.08f, GnosisGrowth = 0.04f; // A: 무게 +0.08×(단계+1), 그노시스 +0.04×(단계−4)
+    public const float CohabitGrowth = 0.05f;                    // B: 분기마다 섹터별 악 우위 × 0.05
+    public const float CalamityGrowth = 0.5f;                    // C: 재앙마다 +0.5
+
+    // 그 섹터 주력 스탯 넷(재앙 표적)에 무게를 4등분해 더한다. 교단 스탯은 최대 1000, 개인은 100 기준
+    public static void Grow(EyeSector sector, float weight)
+    {
+        var demiurge = GameSession.God.Demiurge;
+        if (!demiurge.Copied || weight <= 0 || sector == EyeSector.None) return;
+        var (a, b, p, q) = Targets(sector);
+        var part = weight / 4f;
+        demiurge.Grow(a, part * ClampedStat.DefaultMax);
+        demiurge.Grow(b, part * ClampedStat.DefaultMax);
+        demiurge.Grow(p, part * PersonalStatus.MaxValue);
+        demiurge.Grow(q, part * PersonalStatus.MaxValue);
+    }
+
+    // 섹터별 악 우위: 악한 아이온·그노시스 수 − 선한 아이온 수 (최소 0)
+    public static int EvilSurplus(AeonTree tree, EyeSector sector)
+    {
+        var skills = tree.Learned.Select(AeonSkillCatalog.Find).Where(s => s != null && s.Sector == sector).ToList();
+        return Math.Max(0, skills.Count(s => s.Kind is AeonKind.Evil or AeonKind.Gnosis) - skills.Count(s => s.Kind == AeonKind.Good));
+    }
+
     // 섹터별 분기당 카운터: 그 섹터 악한 아이온·그노시스의 재앙 합 - 그 섹터 선한 아이온 수 × GoodOffset (최소 0)
     public static int SectorGain(AeonTree tree, EyeSector sector)
     {
@@ -69,6 +94,7 @@ public static class EyeRules
     {
         var god = GameSession.God;
         god.Demiurge.AddCounter(CounterGain(god.Aeons));
+        foreach (var sector in Sectors) Grow(sector, EvilSurplus(god.Aeons, sector) * CohabitGrowth);
         foreach (var id in ZeroCult)
             if (GameSession.Cult[id].Value <= 0) { GameSession.Cult[id].Set(1); god.Demiurge.AddCounter(ZeroPenalty); }
         foreach (var id in ZeroPersonal)
@@ -144,6 +170,7 @@ public static class EyeRules
         var cultLost = taken.Count(t => DemiurgeState.CultStats.Any(id => t.StartsWith(StatLabel.Of(id))));
         EyeCounters.OnCalamity(cultLost == taken.Count ? "cult" : cultLost == 0 ? "body" : "half");
         cultBefore = personalBefore = null;
+        Grow(CalamitySector(GameSession.God.Aeons), CalamityGrowth);
         demiurge.ResetCounter();
         return taken.Count == 0 ? "" : string.Format(Lang.Get("eye_calamity_taken"), string.Join(", ", taken));
     }
@@ -187,6 +214,7 @@ public static class EyeRules
             god.Demiurge.Absorb(p, lost);
             name = Lang.Get($"pstat_{p}");
         }
+        Grow(CalamitySector(god.Aeons), CalamityGrowth);
         god.Demiurge.ResetCounter();
         EyeCounters.OnCalamity("rest");
         return string.Format(Lang.Get("eye_rest_calamity"), Lang.Get(SectorKey(CalamitySector(god.Aeons))), name, lost.ToString("N0"));
@@ -257,10 +285,14 @@ public static class EyeRules
     public const float LoseDominanceAt = 2f; // 이 배를 넘으면 주도권을 뺏긴다 (승천 순간 판정: 6단계)
 
     // 교단 창설: 신의 본성 대신 바로 교리 선포를 채워 교단 행동을 연다
-    // 아이온을 새로 익힐 때 (AeonTree.Changed). 그노시스 단계면 교리를 바로 올린다. 저장 복원(null)·시작 지급(0단계)은 해당 없음
+    // 아이온을 새로 익힐 때 (AeonTree.Changed). 그노시스 단계면 교리를 바로 올리고, 악한 아이온·그노시스는 데미우르고스를 키운다(A).
+    // 저장 복원(null)은 해당 없음. 시작 지급(0단계)은 복사 전이라 성장하지 않는다
     public static void OnAeonLearned(AeonSkill skill)
     {
-        if (skill?.Kind == AeonKind.Gnosis && GameSession.EyeMode) GameSession.Cult[StatId.Doctrine].Add(GnosisDoctrine);
+        if (skill == null || !GameSession.EyeMode) return;
+        if (skill.Kind == AeonKind.Gnosis) GameSession.Cult[StatId.Doctrine].Add(GnosisDoctrine);
+        if (skill.Kind == AeonKind.Evil) Grow(skill.Sector, EvilGrowth * (skill.Level + 1));
+        if (skill.Kind == AeonKind.Gnosis) Grow(skill.Sector, GnosisGrowth * (skill.Level - 4));
     }
 
     public static void OnFounded()

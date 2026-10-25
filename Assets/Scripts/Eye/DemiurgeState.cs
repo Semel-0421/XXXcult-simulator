@@ -4,7 +4,7 @@ using System.Linq;
 
 // 선택된 데미우르고스의 스탯표와 재앙 카운터 (SYS_DEMIURGE 4·5절, DEC-027·028 J·K·N).
 //  - 첫 질문에 답한 순간 교주의 교단·개인 스탯을 그대로 복사한다 (접신·기적은 뺀다).
-//  - 재앙으로 교주에게서 줄어든 만큼 같은 스탯에 더해진다. 그 밖에는 늘지 않는다. 교단 스탯은 1000(신도도 1000명), 개인 스탯은 100에서 멈춘다.
+//  - 재앙으로 교주에게서 줄어든 만큼 같은 스탯에 더해진다. 그 밖에 성장 A·B·C(악한 아이온 습득·동거·재앙, 9단계 결정)로 섹터 주력 스탯이 자란다(EyeRules.Grow). 교단 스탯은 1000(신도도 1000명), 개인 스탯은 100에서 멈춘다.
 //    그래서 데미우르고스가 모든 스탯을 채워도 교주가 모두 절반(500·50) 이상이면 비율이 2배를 넘지 않는다 (2026-10-26 결정).
 //  - 주도권 비율 = 데미우르고스 비율 합 ÷ 교주 비율 합. 스탯마다 값 ÷ 최대치(신도는 1000명 기준)를 0~1로 잘라 더한다.
 public class DemiurgeState
@@ -36,6 +36,26 @@ public class DemiurgeState
 
     public void Absorb(StatId id, int amount) { if (amount > 0) cult[id] = Math.Min(CultCap, this[id] + amount); }
     public void Absorb(PersonalStatId id, int amount) { if (amount > 0) personal[id] = Math.Min(PersonalCap, this[id] + amount); }
+
+    // 성장: 소수는 쌓았다가 정수가 되면 더한다 (나머지는 저장하지 않는다)
+    readonly Dictionary<StatId, float> cultRemainder = new();
+    readonly Dictionary<PersonalStatId, float> personalRemainder = new();
+
+    public void Grow(StatId id, float amount)
+    {
+        var total = (cultRemainder.TryGetValue(id, out var r) ? r : 0f) + amount;
+        var whole = (int)total;
+        cultRemainder[id] = total - whole;
+        Absorb(id, whole);
+    }
+
+    public void Grow(PersonalStatId id, float amount)
+    {
+        var total = (personalRemainder.TryGetValue(id, out var r) ? r : 0f) + amount;
+        var whole = (int)total;
+        personalRemainder[id] = total - whole;
+        Absorb(id, whole);
+    }
 
     public void AddCounter(int amount) => Counter = Math.Max(0, Counter + amount);
 
@@ -73,6 +93,8 @@ public class DemiurgeState
     {
         cult.Clear();
         personal.Clear();
+        cultRemainder.Clear();
+        personalRemainder.Clear();
         Copied = copied;
         for (int i = 0; i < CultStats.Length && cultValues != null && i < cultValues.Count; i++) cult[CultStats[i]] = cultValues[i];
         for (int i = 0; i < PersonalStats.Length && personalValues != null && i < personalValues.Count; i++) personal[PersonalStats[i]] = personalValues[i];

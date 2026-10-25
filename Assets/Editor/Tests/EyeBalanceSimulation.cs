@@ -10,9 +10,10 @@ using NUnit.Framework;
 //   Balanced: 시작 섹터의 선·악을 단계마다 번갈아 → 그노시스 → 승천
 //   EvilFirst: 시작 섹터의 악한 아이온 4단계까지 먼저, 그다음 선한 아이온 → 그노시스 → 승천
 //   Wide: 네 섹터의 0~4단계와 그노시스를 모두 익힌 뒤 시작 섹터로 승천 (네 얼굴을 삼킨 자 노림)
+//   Rester: Balanced 계획이지만 체력·정신력을 욕망으로 채우지 않고 바닥까지 둬 휴식에 들어간다 (스탯 방치 → 배드 경로 확인)
 public static class EyeSimulation
 {
-    public enum Strategy { Balanced, EvilFirst, Wide }
+    public enum Strategy { Balanced, EvilFirst, Wide, Rester }
     public static int MaxYears = 80; // 테스트는 짧게 줄여 돌린다
 
     public class RunResult
@@ -127,7 +128,7 @@ public static class EyeSimulation
 
     static List<AeonSkill> Plan(Strategy strategy, EyeSector sector) => strategy switch
     {
-        Strategy.Balanced => Lines(sector, false).Concat(Climb(sector, 5, 10)).ToList(),
+        Strategy.Balanced or Strategy.Rester => Lines(sector, false).Concat(Climb(sector, 5, 10)).ToList(),
         Strategy.EvilFirst => Lines(sector, true).Concat(Climb(sector, 5, 10)).ToList(),
         _ => Lines(sector, false).Concat(Climb(sector, 5, 5))
             .Concat(EyeRules.Sectors.Where(s => s != sector).SelectMany(s => Lines(s, false).Concat(Climb(s, 5, 5))))
@@ -156,11 +157,11 @@ public static class EyeSimulation
     // 신 봇은 명망·믿음 300을 방어선으로 삼아 봉사만 하게 돼서, 방어선을 낮추고 교리를 앞에 둔다
     public const int Floor = 60, Guard = 150;
 
-    static CultAction ChooseAction(List<AeonSkill> plan)
+    static CultAction ChooseAction(List<AeonSkill> plan, Strategy strategy)
     {
         var me = GameSession.Personal;
         var cult = GameSession.Cult;
-        if (me[PersonalStatId.Health].Value <= 25 || me[PersonalStatId.Mentality].Value <= 25) return CultAction.Desire;
+        if (strategy != Strategy.Rester && (me[PersonalStatId.Health].Value <= 25 || me[PersonalStatId.Mentality].Value <= 25)) return CultAction.Desire;
         bool Can(CultAction a) => cult[StatId.Communion].Value >= GodRules.CommunionCost(a);
         if (!Can(CultAction.Proselytize)) return CultAction.Pray;
         if (cult[StatId.Reputation].Value < Floor) return CultAction.Serve;
@@ -221,7 +222,7 @@ public static class EyeSimulation
             string key = "consecrate";
             if (!GodSimulation.Consecrate())
             {
-                var act = ChooseAction(plan);
+                var act = ChooseAction(plan, strategy);
                 if (act == CultAction.Preach) r.Preaches++;
                 if (act == CultAction.Proselytize) r.Proselytes++;
                 snap = Snap();
@@ -290,7 +291,7 @@ public static class EyeSimulation
     public static string Format()
     {
         var sb = new StringBuilder();
-        sb.AppendLine($"황금의 눈동자 시뮬레이션: 전략 3 × 시작 섹터 4 = 봇 {Bots}명, 판 {Results.Count}개, 최대 {MaxYears}년");
+        sb.AppendLine($"황금의 눈동자 시뮬레이션: 전략 4 × 시작 섹터 4 = 봇 {Bots}명, 판 {Results.Count}개, 최대 {MaxYears}년");
         sb.AppendLine("전략 | 판 | 승천 | 승천 연수(중앙값) | 굿 | 배드 | 다른 눈동자 | 네 얼굴 | 재앙/판 | 휴식 재앙/판 | 최종 주도권(평균) | 주도권 최고(평균)");
         foreach (var group in Results.GroupBy(x => x.Strategy))
         {
@@ -348,7 +349,7 @@ public class EyeSimulationTests
         EyeSimulation.MaxYears = 2;
         try { EyeSimulation.Run(1, 7); }
         finally { EyeSimulation.MaxYears = years; }
-        Assert.AreEqual(12, EyeSimulation.Results.Count);
+        Assert.AreEqual(16, EyeSimulation.Results.Count);
         Assert.IsFalse(GameSession.EyeMode, "시뮬레이션 뒤에는 본편 상태로 돌아가야 함");
     }
 }

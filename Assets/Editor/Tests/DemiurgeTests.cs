@@ -46,6 +46,45 @@ public class DemiurgeTests
         Assert.AreEqual(2, EyeRules.CounterGain(Aeons));
     }
 
+    // 성장 A: 악한 아이온 1단계 → 무게 0.16을 사탄 주력 넷(봉헌금·권위·재력·평판)에 4등분 (교단 +40, 개인 +4)
+    [Test]
+    public void Growth_EvilAeonLearned()
+    {
+        EyeRules.ChooseSector(EyeSector.Satan);
+        int off = Demiurge[StatId.Offerings], wealth = Demiurge[PersonalStatId.Wealth], health = Demiurge[PersonalStatId.Health];
+        Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Satan, 1, AeonKind.Evil), Rich, 10);
+        Assert.AreEqual(off + 40, Demiurge[StatId.Offerings]);
+        Assert.AreEqual(wealth + 4, Demiurge[PersonalStatId.Wealth]);
+        Assert.AreEqual(health, Demiurge[PersonalStatId.Health]); // 주력이 아닌 스탯은 그대로
+    }
+
+    // 성장 B: 악 우위 1 → 분기마다 무게 0.05 (교단 12.5, 개인 1.25). 소수는 쌓였다가 더해진다
+    [Test]
+    public void Growth_CohabitEachQuarter()
+    {
+        EyeRules.ChooseSector(EyeSector.Satan);
+        Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Satan, 1, AeonKind.Evil), Rich, 10);
+        Assert.AreEqual(1, EyeRules.EvilSurplus(Aeons, EyeSector.Satan)); // 악 0·1단계 둘 − 선 0단계 하나
+        int off = Demiurge[StatId.Offerings], wealth = Demiurge[PersonalStatId.Wealth];
+        EyeRules.Quarter();
+        EyeRules.Quarter();
+        Assert.AreEqual(off + 25, Demiurge[StatId.Offerings]);
+        Assert.AreEqual(wealth + 2, Demiurge[PersonalStatId.Wealth]);
+    }
+
+    // 성장 C: 재앙마다 무게 0.5 (빼앗은 양과 별도로 교단 +125, 개인 +12)
+    [Test]
+    public void Growth_Calamity()
+    {
+        EyeRules.ChooseSector(EyeSector.Yaldabaoth);
+        var q = EyeRules.BeginCalamity();
+        int rep = Demiurge[StatId.Reputation], health = Demiurge[PersonalStatId.Health];
+        Turns.Answer(q.Choices[1]); // 몸 둘: 평판·체력 (명망은 빼앗기지 않음)
+        EyeRules.EndCalamity();
+        Assert.AreEqual(rep + 125, Demiurge[StatId.Reputation]);
+        Assert.Greater(Demiurge[PersonalStatId.Health], health + 12 - 1);
+    }
+
     [Test]
     public void GodPressure_IsOffInEyeMode()
     {
@@ -129,7 +168,7 @@ public class DemiurgeTests
         Assert.Greater(lostOfferings, 0);
 
         var taken = EyeRules.EndCalamity();
-        Assert.AreEqual(beforeOfferings + lostOfferings, Demiurge[StatId.Offerings]);
+        Assert.AreEqual(beforeOfferings + lostOfferings + (int)(EyeRules.CalamityGrowth / 4 * ClampedStat.DefaultMax), Demiurge[StatId.Offerings]); // 빼앗은 양 + 성장 C
         Assert.AreEqual(0, Demiurge.Counter);
         Assert.AreEqual(1, Demiurge.Calamities);
         StringAssert.Contains(StatLabel.Of(StatId.Offerings), taken);
