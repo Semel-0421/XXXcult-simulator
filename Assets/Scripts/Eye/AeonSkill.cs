@@ -13,7 +13,9 @@ public class AeonSkill
 
     public string Id { get; }
     public EyeSector Sector { get; }
-    public int Level { get; }            // 열리는 교리 단계 (0~10)
+    public int Level { get; }            // 트리 단계 (0~10)
+    public const int AeonDoctrineCap = 3; // 9단계 결정: 아이온(0~4)은 교리 3단계까지만 요구, 그노시스(5)부터 단계마다 1씩 (5→4 … 9→8, 승천 9)
+    public int DoctrineNeed => Level <= 4 ? System.Math.Min(Level, AeonDoctrineCap) : Level - 1;
     public AeonKind Kind { get; }
     readonly string name, description;
     public string Name => Lang.Pick(name);

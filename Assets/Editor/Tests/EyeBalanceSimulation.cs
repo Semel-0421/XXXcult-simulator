@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using NUnit.Framework;
 
-// 황금의 눈동자 자동 플레이 집계 (SYS_DEMIURGE 9단계). 행동·축성·이벤트 선택은 신 모드 봇(GodSimulation)을 그대로 쓰고,
+// 황금의 눈동자 자동 플레이 집계 (SYS_DEMIURGE 9단계). 축성·이벤트 선택은 신 모드 봇(GodSimulation)을 쓰고, 행동은 눈동자 전용 규칙(ChooseAction),
 // 아이온 트리 학습 순서와 재앙 선택만 이 모드 것으로 바꾼다. 판마다 승천(엔딩)까지 또는 MaxYears까지 돌린다.
 //   Balanced: 시작 섹터의 선·악을 단계마다 번갈아 → 그노시스 → 승천
 //   EvilFirst: 시작 섹터의 악한 아이온 4단계까지 먼저, 그다음 선한 아이온 → 그노시스 → 승천
@@ -28,11 +28,13 @@ public static class EyeSimulation
     public static Dictionary<string, int> AchievementBots = new(); // 업적 id -> 그 업적을 딴 봇 수
     public static int Bots;
     public static Dictionary<string, int> Acts = new(); // 행동 분포 (진단용)
+    public static Dictionary<string, int> Zeros = new(); // 바닥 스탯별 턴 수 (진단용)
 
     public static void Run(int runsPerBot, int seed)
     {
         Results = new List<RunResult>();
         Acts = new Dictionary<string, int>();
+        Zeros = new Dictionary<string, int>();
         AchievementBots = new Dictionary<string, int>();
         Bots = 0;
         var previousPath = Profile.Path;
@@ -109,14 +111,26 @@ public static class EyeSimulation
         } while (learned);
     }
 
-    // 신 봇의 행동에, 다음 노드가 교리 단계에 막혀 있으면 포교 대신 설교(교리)를 끼운다
+    // 눈동자 전용 행동: 몸(체력·정신력) → 교감 → 바닥 스탯(0점 벌점) → 교리에 막힌 노드 → 방어선 → 포교
+    // 신 봇은 명망·믿음 300을 방어선으로 삼아 봉사만 하게 돼서, 방어선을 낮추고 교리를 앞에 둔다
+    public const int Floor = 60, Guard = 150;
+
     static CultAction ChooseAction(List<AeonSkill> plan)
     {
-        var action = GodSimulation.ChooseAction();
-        if (action != CultAction.Proselytize) return action;
+        var me = GameSession.Personal;
+        var cult = GameSession.Cult;
+        if (me[PersonalStatId.Health].Value <= 25 || me[PersonalStatId.Mentality].Value <= 25) return CultAction.Desire;
+        bool Can(CultAction a) => cult[StatId.Communion].Value >= GodRules.CommunionCost(a);
+        if (!Can(CultAction.Proselytize)) return CultAction.Pray;
+        if (cult[StatId.Reputation].Value < Floor) return CultAction.Serve;
+        if (cult[StatId.FollowerFaith].Value < Floor && Can(CultAction.Preach)) return CultAction.Preach;
+        if (cult[StatId.Followers].Value < Floor) return CultAction.Proselytize;
         var next = plan.FirstOrDefault(x => !GameSession.God.Aeons.IsLearned(x));
         bool blocked = next != null && GameSession.God.Aeons.Blocker(next, GameSession.God.Available, DoctrineLevelNow) == "doctrine";
-        return blocked && GameSession.Cult[StatId.Communion].Value >= GodRules.CommunionCost(CultAction.Preach) ? CultAction.Preach : action;
+        if (blocked && Can(CultAction.Preach)) return CultAction.Preach;
+        if (cult[StatId.Reputation].Value < Guard) return CultAction.Serve;
+        if (cult[StatId.FollowerFaith].Value < Guard && Can(CultAction.Preach)) return CultAction.Preach;
+        return CultAction.Proselytize;
     }
 
     // 재앙 선택: 최대치 대비 잃는 비율이 가장 작은 선택지
@@ -172,8 +186,11 @@ public static class EyeSimulation
             }
             Acts[key] = Acts.TryGetValue(key, out var c) ? c + 1 : 1;
             var cult = GameSession.Cult; var me = GameSession.Personal;
-            if (cult[StatId.Followers].Value <= 1 || cult[StatId.FollowerFaith].Value <= 1 || cult[StatId.Reputation].Value <= 1
-                || me[PersonalStatId.Health].Value <= 0 || me[PersonalStatId.Mentality].Value <= 0) r.ZeroTurns++;
+            var zero = new List<string>();
+            foreach (var id in new[] { StatId.Followers, StatId.FollowerFaith, StatId.Reputation }) if (cult[id].Value <= 1) zero.Add(id.ToString());
+            foreach (var id in new[] { PersonalStatId.Health, PersonalStatId.Mentality }) if (me[id].Value <= 0) zero.Add(id.ToString());
+            if (zero.Count > 0) r.ZeroTurns++;
+            foreach (var z in zero) Zeros[z] = Zeros.TryGetValue(z, out var zc) ? zc + 1 : 1;
             r.DoctrinePeak = Math.Max(r.DoctrinePeak, GameSession.Cult[StatId.Doctrine].Value);
             r.DominancePeak = Math.Max(r.DominancePeak, EyeRules.Dominance);
             if (EyeRules.CalamityDue)
@@ -229,6 +246,7 @@ public static class EyeSimulation
             sb.AppendLine($"{group.Key} | {group.Average(x => x.Learned):0.0} | {group.Average(x => x.PointsEarned):0} | {group.Average(x => x.Doctrine):0.0} | {group.Average(x => x.DoctrinePeak):0} | {group.Average(x => x.Preaches):0}/{group.Average(x => x.Proselytes):0} | {group.Average(x => x.GainEnd):0.0} | {group.Average(x => x.ZeroTurns):0} | "
                 + string.Join(", ", group.GroupBy(x => x.Stall).OrderByDescending(x => x.Count()).Take(4).Select(x => $"{x.Key}×{x.Count()}")));
         sb.AppendLine();
+        sb.AppendLine("바닥 스탯(턴): " + string.Join(", ", Zeros.OrderByDescending(x => x.Value).Select(x => $"{x.Key} {x.Value}")));
         sb.AppendLine("행동 분포(전체 턴): " + string.Join(", ", Acts.OrderByDescending(x => x.Value).Select(x => $"{x.Key} {x.Value}")));
         sb.AppendLine();
         sb.AppendLine("섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드");

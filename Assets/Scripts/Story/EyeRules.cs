@@ -38,7 +38,7 @@ public static class EyeRules
     public const int CalamityThreshold = 50; // 카운터가 이만큼 차면 재앙 (9단계 결정: 40 → 50)
     public const int GoodOffset = 2;         // 같은 섹터 선한 아이온 하나가 줄이는 분기 카운터 (9단계 결정: 1 → 2)
     public const int GnosisDoctrine = 50;    // 그노시스 단계(5~9)를 익힐 때 바로 오르는 교리 (9단계 결정, 두 배 규칙 없이 그대로)
-    public const int ZeroPenalty = 10;       // 지키는 스탯이 0이 되면 패배 대신 카운터 +10 (DEC-028 L)
+    public const int ZeroPenalty = 3;        // 지키는 스탯이 0이면 패배 대신 분기마다 카운터 +3 (DEC-028 L, 9단계 결정: 10 → 3)
     public const float DamageBase = 0.05f, DamagePerEvil = 0.01f; // 재앙 피해 = 현재 값 × (5% + 악한 아이온 수 × 1%)
     public const int MaxCalamityGuard = 40;  // 선한 아이온의 피해 감소는 40%까지
 
@@ -201,7 +201,7 @@ public static class EyeRules
 
     public static bool ReadyToAscend(EyeSector sector) =>
         GameSession.God.Aeons.AscensionSector == sector && Reached(sector, AeonSkill.ThresholdLevel)
-        && DoctrineLevel.Of(GameSession.Cult[StatId.Doctrine].Value) >= AeonSkill.AscensionLevel;
+        && DoctrineLevel.Of(GameSession.Cult[StatId.Doctrine].Value) >= AeonSkillCatalog.Stage(sector, AeonSkill.AscensionLevel).DoctrineNeed;
 
     // 처음 그노시스를 익힌 뒤: 세상이 거울처럼 뒤집힌다 (본편 → 거울 세계 평판 기준)
     public static bool Reversed => Sectors.Any(s => Reached(s, AeonSkill.GnosisLevel));

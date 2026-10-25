@@ -59,7 +59,7 @@ public class AeonTree
         if (StartSector == EyeSector.None) return "start";
         if (skill.Kind == AeonKind.Ascension && AscensionSector != EyeSector.None && AscensionSector != skill.Sector) return "ascension";
         if (!PrerequisitesMet(skill)) return "prereq";
-        if (doctrineLevel < skill.Level) return "doctrine";
+        if (doctrineLevel < skill.DoctrineNeed) return "doctrine";
         if (points < skill.Cost) return "points";
         return null;
     }

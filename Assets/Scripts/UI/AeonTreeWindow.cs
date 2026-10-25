@@ -258,7 +258,7 @@ public static class AeonTreeWindow
         {
             null => Lang.Get("god_learn"),
             "learned" => Lang.Get("god_learned"),
-            "doctrine" => string.Format(Lang.Get("eye_need_doctrine"), selected.Level),
+            "doctrine" => string.Format(Lang.Get("eye_need_doctrine"), selected.DoctrineNeed),
             "points" => Lang.Get("eye_need_points"),
             "ascension" => Lang.Get("eye_need_ascension"),
             "start" => Lang.Get("eye_need_start"),

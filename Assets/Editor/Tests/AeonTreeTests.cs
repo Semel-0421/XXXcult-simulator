@@ -105,7 +105,7 @@ public class AeonTreeTests
         Assert.AreEqual(EyeSector.Satan, tree.AscensionSector);
         Assert.AreEqual("ascension", tree.Blocker(AeonSkillCatalog.Stage(EyeSector.Yahweh, 10), Rich, 10));
         var satanAscension = AeonSkillCatalog.Stage(EyeSector.Satan, 10);
-        Assert.AreEqual("doctrine", tree.Blocker(satanAscension, Rich, 9));
+        Assert.AreEqual("doctrine", tree.Blocker(satanAscension, Rich, 8)); // 승천은 교리 9단계
         Assert.IsTrue(tree.Learn(satanAscension, Rich, 10));
         Assert.IsTrue(tree.Ascended);
     }
@@ -173,5 +173,14 @@ public class AeonTreeTests
             if (Directory.Exists(dir)) Directory.Delete(dir, true);
             GameSession.StartNew(1);
         }
+    }
+
+    [Test]
+    public void DoctrineNeed_AeonsCapAt3_GnosisFrom4()
+    {
+        var need = Enumerable.Range(0, 11).Select(l => l <= 4
+            ? AeonSkillCatalog.Of(EyeSector.Satan, l, AeonKind.Good).DoctrineNeed
+            : AeonSkillCatalog.Stage(EyeSector.Satan, l).DoctrineNeed).ToArray();
+        CollectionAssert.AreEqual(new[] { 0, 1, 2, 3, 3, 4, 5, 6, 7, 8, 9 }, need);
     }
 }
