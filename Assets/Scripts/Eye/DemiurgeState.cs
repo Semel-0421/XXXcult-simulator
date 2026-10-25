@@ -44,7 +44,7 @@ public class DemiurgeState
     public void Grow(StatId id, float amount)
     {
         var total = (cultRemainder.TryGetValue(id, out var r) ? r : 0f) + amount;
-        var whole = (int)total;
+        var whole = (int)(total + 1e-4f); // 부동소수 오차로 2.9999가 2가 되지 않게
         cultRemainder[id] = total - whole;
         Absorb(id, whole);
     }
@@ -52,7 +52,7 @@ public class DemiurgeState
     public void Grow(PersonalStatId id, float amount)
     {
         var total = (personalRemainder.TryGetValue(id, out var r) ? r : 0f) + amount;
-        var whole = (int)total;
+        var whole = (int)(total + 1e-4f); // 부동소수 오차로 2.9999가 2가 되지 않게
         personalRemainder[id] = total - whole;
         Absorb(id, whole);
     }

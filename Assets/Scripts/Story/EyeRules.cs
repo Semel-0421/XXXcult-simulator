@@ -56,7 +56,7 @@ public static class EyeRules
 
     // ---- 데미우르고스 성장 (9단계 결정: A 악한 아이온 습득, B 동거, C 재앙) ----
     public const float EvilGrowth = 0.08f, GnosisGrowth = 0.04f; // A: 무게 +0.08×(단계+1), 그노시스 +0.04×(단계−4)
-    public const float CohabitGrowth = 0.05f;                    // B: 분기마다 섹터별 악 우위 × 0.05
+    public const float CohabitGrowth = 0.1f;                     // B: 분기마다 섹터별 악 우위 × 0.1 (9단계 결정: 0.05 → 0.1)
     public const float CalamityGrowth = 0.5f;                    // C: 재앙마다 +0.5
 
     // 그 섹터 주력 스탯 넷(재앙 표적)에 무게를 4등분해 더한다. 교단 스탯은 최대 1000, 개인은 100 기준

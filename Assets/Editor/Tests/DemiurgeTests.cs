@@ -58,7 +58,7 @@ public class DemiurgeTests
         Assert.AreEqual(health, Demiurge[PersonalStatId.Health]); // 주력이 아닌 스탯은 그대로
     }
 
-    // 성장 B: 악 우위 1 → 분기마다 무게 0.05 (교단 12.5, 개인 1.25). 소수는 쌓였다가 더해진다
+    // 성장 B: 악 우위 1 → 분기마다 무게 0.1 (교단 25, 개인 2.5). 소수는 쌓였다가 더해진다
     [Test]
     public void Growth_CohabitEachQuarter()
     {
@@ -68,8 +68,8 @@ public class DemiurgeTests
         int off = Demiurge[StatId.Offerings], wealth = Demiurge[PersonalStatId.Wealth];
         EyeRules.Quarter();
         EyeRules.Quarter();
-        Assert.AreEqual(off + 25, Demiurge[StatId.Offerings]);
-        Assert.AreEqual(wealth + 2, Demiurge[PersonalStatId.Wealth]);
+        Assert.AreEqual(off + 50, Demiurge[StatId.Offerings]);
+        Assert.AreEqual(wealth + 5, Demiurge[PersonalStatId.Wealth]);
     }
 
     // 성장 C: 재앙마다 무게 0.5 (빼앗은 양과 별도로 교단 +125, 개인 +12)
