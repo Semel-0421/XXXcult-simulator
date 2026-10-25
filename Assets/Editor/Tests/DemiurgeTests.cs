@@ -85,6 +85,22 @@ public class DemiurgeTests
         Assert.Greater(Demiurge[PersonalStatId.Health], health + 12 - 1);
     }
 
+    // 넘침: 주력 넷이 상한이면 남는 무게를 나머지 16개 스탯에 고루 (0.4 ÷ 16 = 0.025 → 교단 +25, 개인 +2.5)
+    [Test]
+    public void Growth_SpillsToOtherStats_WhenMainStatsFull()
+    {
+        EyeRules.ChooseSector(EyeSector.Satan);
+        var cult = DemiurgeState.CultStats.Select(id => id is StatId.Offerings or StatId.Authority ? 1000 : 0).ToList();
+        var personal = DemiurgeState.PersonalStats.Select(id => id is PersonalStatId.Wealth or PersonalStatId.Repute ? 100 : 0).ToList();
+        Demiurge.Restore(true, cult, personal, 0, 0);
+        EyeRules.Grow(EyeSector.Satan, 0.4f);
+        Assert.AreEqual(1000, Demiurge[StatId.Offerings]);
+        Assert.AreEqual(100, Demiurge[PersonalStatId.Wealth]);
+        Assert.AreEqual(25, Demiurge[StatId.Followers]);
+        Assert.AreEqual(2, Demiurge[PersonalStatId.Health]);
+        Assert.AreEqual(4f + 5 * 0.025f + 11 * 0.02f, Demiurge.Weight, 0.001f);
+    }
+
     [Test]
     public void GodPressure_IsOffInEyeMode()
     {

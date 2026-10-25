@@ -57,6 +57,24 @@ public class DemiurgeState
         Absorb(id, whole);
     }
 
+    // 무게 단위로 키운다 (교단 스탯 1.0 = 1000, 개인 1.0 = 100). 상한에 막혀 못 쓴 무게를 돌려준다
+    public float GrowWeight(StatId id, float weight)
+    {
+        var used = Math.Min(weight, Math.Max(0f, (CultCap - this[id]) / (float)CultCap));
+        if (used > 0) Grow(id, used * CultCap);
+        return weight - used;
+    }
+
+    public float GrowWeight(PersonalStatId id, float weight)
+    {
+        var used = Math.Min(weight, Math.Max(0f, (PersonalCap - this[id]) / (float)PersonalCap));
+        if (used > 0) Grow(id, used * PersonalCap);
+        return weight - used;
+    }
+
+    public bool IsFull(StatId id) => this[id] >= CultCap;
+    public bool IsFull(PersonalStatId id) => this[id] >= PersonalCap;
+
     public void AddCounter(int amount) => Counter = Math.Max(0, Counter + amount);
 
     public void ResetCounter()

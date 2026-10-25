@@ -59,17 +59,26 @@ public static class EyeRules
     public const float CohabitGrowth = 0.1f;                     // B: 분기마다 섹터별 악 우위 × 0.1 (9단계 결정: 0.05 → 0.1)
     public const float CalamityGrowth = 0.5f;                    // C: 재앙마다 +0.5
 
-    // 그 섹터 주력 스탯 넷(재앙 표적)에 무게를 4등분해 더한다. 교단 스탯은 최대 1000, 개인은 100 기준
+    // 그 섹터 주력 스탯 넷(재앙 표적)에 무게를 4등분해 더한다. 교단 스탯은 최대 1000, 개인은 100 기준.
+    // 주력 스탯이 상한이라 못 쓴 무게는 나머지 스탯(상한이 아닌 것)에 고루 나눈다 (9단계 결정 가안). 모두 차면 버려진다
+    public const int SpillPasses = 3;
+
     public static void Grow(EyeSector sector, float weight)
     {
         var demiurge = GameSession.God.Demiurge;
         if (!demiurge.Copied || weight <= 0 || sector == EyeSector.None) return;
         var (a, b, p, q) = Targets(sector);
         var part = weight / 4f;
-        demiurge.Grow(a, part * ClampedStat.DefaultMax);
-        demiurge.Grow(b, part * ClampedStat.DefaultMax);
-        demiurge.Grow(p, part * PersonalStatus.MaxValue);
-        demiurge.Grow(q, part * PersonalStatus.MaxValue);
+        var spill = demiurge.GrowWeight(a, part) + demiurge.GrowWeight(b, part) + demiurge.GrowWeight(p, part) + demiurge.GrowWeight(q, part);
+        for (int pass = 0; pass < SpillPasses && spill > 1e-4f; pass++)
+        {
+            var cult = DemiurgeState.CultStats.Where(id => id != a && id != b && !demiurge.IsFull(id)).ToList();
+            var personal = DemiurgeState.PersonalStats.Where(id => id != p && id != q && !demiurge.IsFull(id)).ToList();
+            var count = cult.Count + personal.Count;
+            if (count == 0) return;
+            var each = spill / count;
+            spill = cult.Sum(id => demiurge.GrowWeight(id, each)) + personal.Sum(id => demiurge.GrowWeight(id, each));
+        }
     }
 
     // 섹터별 악 우위: 악한 아이온·그노시스 수 − 선한 아이온 수 (최소 0)

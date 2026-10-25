@@ -107,6 +107,9 @@ public class EyeEndingsTests
             Aeons.Learn(AeonSkillCatalog.Stage(sector, 5), Rich, 10);
         }
         Ascend(EyeSector.Satan);
+        // 성장 A로 데미우르고스가 커져도, 교주가 전부 절반(500·50) 이상이면 배드가 나지 않는다
+        foreach (var id in DemiurgeState.CultStats) GameSession.Cult[id].Set(500);
+        foreach (var id in DemiurgeState.PersonalStats) GameSession.Personal[id].Set(50);
         Assert.AreEqual("eye_four_faces", GodRules.DueEnding().Id);
 
         foreach (var id in DemiurgeState.CultStats) GameSession.Cult[id].Set(1);
