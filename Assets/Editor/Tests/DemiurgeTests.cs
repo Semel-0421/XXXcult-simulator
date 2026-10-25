@@ -47,6 +47,22 @@ public class DemiurgeTests
     }
 
     [Test]
+    public void GodPressure_IsOffInEyeMode()
+    {
+        EyeRules.ChooseSector(EyeSector.Yaldabaoth);
+        var cult = GameSession.Cult;
+        cult[StatId.Offerings].Set(1000); cult[StatId.Authority].Set(1000); cult[StatId.Reputation].Set(500);
+        cult[StatId.Followers].Set(1000); cult[StatId.FollowerFaith].Set(1000); cult[StatId.Doctrine].Set(1000);
+        var pressure = GameSession.God.Pressure;
+        Assert.AreEqual(0, pressure.Stage(Pressure.Earth, cult));
+        Assert.AreEqual(0, pressure.Stage(Pressure.Heaven, cult));
+        pressure.ApplyQuarter(cult);
+        Assert.AreEqual(500, cult[StatId.Reputation].Value);
+        Assert.AreEqual(1000, cult[StatId.FollowerFaith].Value);
+        Assert.AreEqual(0f, GodRules.EventPenalty);
+    }
+
+    [Test]
     public void GnosisStage_RaisesDoctrineAtOnce()
     {
         EyeRules.ChooseSector(EyeSector.Samael);

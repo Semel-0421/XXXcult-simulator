@@ -63,7 +63,8 @@ public class CultInfoPanel : MonoBehaviour
         var key = ((god.Available * 100 + heaven * 10 + earth) * 16 + cores * 2 + (god.Tree.Ascended ? 1 : 0)) * 2 + (shows ? 1 : 0);
         if (key == shownPoints) return;
         shownPoints = key;
-        pointsLabel.text = $"{string.Format(Lang.Get(GameSession.EyeMode ? "eye_points" : "god_points"), god.Available)}\n<size=80%>{string.Format(Lang.Get("god_pressure_now"), heaven, earth)}{(shows ? "\n" + EndingProgress(god.Tree, cores) : "")}</size>";
+        var pressure = GameSession.EyeMode ? "" : string.Format(Lang.Get("god_pressure_now"), heaven, earth); // 눈동자 모드에는 압박이 없다
+        pointsLabel.text = $"{string.Format(Lang.Get(GameSession.EyeMode ? "eye_points" : "god_points"), god.Available)}\n<size=80%>{pressure}{(shows ? "\n" + EndingProgress(god.Tree, cores) : "")}</size>";
     }
 
     // 기프티드 v2g046: 승천 엔딩 진행도 (핵 2개를 먼저 익힌 조합이 엔딩을 정하고, 중심 노드가 승천이다)
