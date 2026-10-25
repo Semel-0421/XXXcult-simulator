@@ -27,6 +27,7 @@ updated: 2026-10-19
 | [02_Tech.md](02_Tech.md) | Unity 기술 구조 | draft | 2026-10-19 |
 | [03_Decisions.md](03_Decisions.md) | 결정 로그 · 미결 사항 | draft | 2026-10-19 |
 | [systems/SYS_INVERTED.md](systems/SYS_INVERTED.md) | 신규 모드: 거울 세계 | draft | 2026-10-19 |
+| [systems/SYS_DEMIURGE.md](systems/SYS_DEMIURGE.md) | 신규 모드: 데미우르고스 (신+거울 통합) | draft | 2026-10-25 |
 | [systems/SYS_UI_DESIGN.md](systems/SYS_UI_DESIGN.md) | 인게임 UI·텍스트 개선 방향 | draft | 2026-10-25 |
 <!-- /AUTO:FILEMAP -->
 
@@ -53,6 +54,7 @@ _(없음)_
 
 ## 최근 변경
 <!-- AUTO:RECENT -->
+- 2026-10-25 [systems/SYS_DEMIURGE.md] 신규 모드 기획 초안: 영지주의 데미우르고스, 4섹터 아이온 트리, 교리 0~10단계, 정할 것 9건 (DEC-026)
 - 2026-10-25 [systems/SYS_UI_DESIGN.md] UI·텍스트 개선 기획 초안, Design 스킬 점검(비평·접근성·문구·디자인 시스템), 업적 창 버그 2건 수정
 - 2026-10-19 [systems/SYS_INVERTED.md] 동점 반올림 (DEC-023), 보유 후 진행 (DEC-024), 회차·업적 (DEC-025)
 - 2026-10-19 [systems/SYS_INVERTED.md] 최종 스킬 굿/배드 (DEC-020), 신도 소멸 조건 (DEC-021), 엔딩 제목 다양화 (DEC-022)
