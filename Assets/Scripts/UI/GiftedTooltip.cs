@@ -38,7 +38,7 @@ public class GiftedTooltip : MonoBehaviour
         tooltip.text.fontSize = 20;
         tooltip.text.color = new Color(0.9f, 0.87f, 0.96f);
         tooltip.text.raycastTarget = false;
-        if (font != null) tooltip.text.font = font;
+        if (font != null) tooltip.text.font = UiFonts.Body != null ? UiFonts.Body : font; // 본문은 명조
 
         go.SetActive(false);
         return tooltip;

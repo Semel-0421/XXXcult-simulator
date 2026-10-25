@@ -38,7 +38,7 @@ public static class EndingDetail
     {
         var rect = UiKit.Child(parent, "Text", typeof(TextMeshProUGUI), typeof(LayoutElement));
         var text = rect.GetComponent<TextMeshProUGUI>();
-        text.font = font;
+        text.font = UiFonts.Body != null ? UiFonts.Body : font; // 본문은 명조
         text.fontSize = size;
         text.color = color;
         text.alignment = TextAlignmentOptions.TopLeft;

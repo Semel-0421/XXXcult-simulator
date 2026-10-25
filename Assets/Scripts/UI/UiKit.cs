@@ -15,11 +15,13 @@ public static class UiKit
     // 씬에 이미 있는 글자의 글꼴을 빌려 쓴다 (한글 글꼴을 따로 지정하지 않아도 되도록)
     public static TMP_FontAsset FindFont()
     {
+        // 장식 글꼴을 먼저 쓴다 (본문 명조는 Label이 이름을 보고 따로 고른다)
+        if (UiFonts.Display != null) return UiFonts.Display;
         // 한글이 들어 있는 글꼴을 우선한다 (기본 영문 글꼴을 빌리면 글자가 빈칸으로 보인다)
         TMP_FontAsset fallback = null;
         foreach (var text in Object.FindObjectsByType<TMP_Text>(FindObjectsInactive.Include))
         {
-            if (text.font == null) continue;
+            if (text.font == null || text.font == UiFonts.Body || text.font == UiFonts.Strong) continue;
             if (text.font.HasCharacter('가')) return text.font;
             fallback ??= text.font;
         }
@@ -53,7 +55,7 @@ public static class UiKit
     {
         var rect = Child(parent, name, typeof(TextMeshProUGUI));
         var text = rect.GetComponent<TextMeshProUGUI>();
-        if (font != null) text.font = font;
+        if (font != null) text.font = UiFonts.IsDisplayName(name) || UiFonts.Body == null ? font : UiFonts.Body; // 제목·항목 이름만 장식 글꼴
         text.fontSize = size;
         text.alignment = align;
         text.color = color;
@@ -75,6 +77,7 @@ public static class UiKit
         button.colors = colors;
 
         labelText = Label(rect, font, "Label", 20, TextAlignmentOptions.Center, Color.white);
+        if (font != null && UiFonts.Strong != null) labelText.font = UiFonts.Strong; // 버튼은 굵은 명조
         Stretch(labelText.rectTransform);
         labelText.text = label;
         return button;
