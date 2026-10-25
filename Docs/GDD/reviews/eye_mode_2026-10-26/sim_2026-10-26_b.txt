@@ -1,0 +1,94 @@
+황금의 눈동자 시뮬레이션: 전략 3 × 시작 섹터 4 = 봇 12명, 판 24개, 최대 80년
+전략 | 판 | 승천 | 승천 연수(중앙값) | 굿 | 배드 | 다른 눈동자 | 네 얼굴 | 재앙/판 | 휴식 재앙/판 | 최종 주도권(평균) | 주도권 최고(평균)
+Balanced | 8 | 0% | -1 | 0% | 0% | 0% | 0% | 53.5 | 0.0 | 0.47 | 0.99
+EvilFirst | 8 | 0% | -1 | 0% | 0% | 0% | 0% | 62.3 | 0.0 | 0.48 | 0.99
+Wide | 8 | 0% | -1 | 0% | 0% | 0% | 0% | 64.0 | 0.0 | 0.45 | 0.99
+
+전략 | 익힌 노드(평균) | 번 포인트(평균) | 교리 단계(평균) | 교리 최고값 | 설교/포교 | 끝 분기 카운터 | 바닥 턴 | 막힌 곳(상위)
+Balanced | 10.8 | 313 | 3.0 | 353 | 33/3 | 2.0 | 179 | ya10:doctrine×2, sa5:doctrine×2, sm4g:doctrine×2, yd5:doctrine×2
+EvilFirst | 11.9 | 315 | 3.5 | 429 | 38/3 | 2.9 | 188 | ya10:doctrine×2, sa5:doctrine×2, sm5:doctrine×2, yd8:doctrine×1
+Wide | 24.3 | 320 | 2.6 | 435 | 33/4 | 5.1 | 183 | ya10:doctrine×2, sm5:doctrine×2, yd5:doctrine×2, sa10:doctrine×1
+
+행동 분포(전체 턴): Serve 4462, Pray 1638, Preach 825, Desire 653, Proselytize 80, consecrate 22
+
+섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드
+Yahweh | 6 | 0% | -1 | 0%
+Satan | 6 | 0% | -1 | 0%
+Samael | 6 | 0% | -1 | 0%
+Yaldabaoth | 6 | 0% | -1 | 0%
+
+엔딩 | 판
+none | 24
+
+업적 도달(봇 12명 중 딴 봇 수) — 0명인 업적
+e001 질투하는 거짓 신 | profile:ending_eye_yahweh_good>=1
+e002 율법의 서판 | profile:ending_eye_yahweh_bad>=1
+e003 고발하는 거짓 신 | profile:ending_eye_satan_good>=1
+e004 고발당한 자 | profile:ending_eye_satan_bad>=1
+e005 눈먼 거짓 신 | profile:ending_eye_samael_good>=1
+e006 빼앗긴 눈 | profile:ending_eye_samael_bad>=1
+e007 사자 얼굴의 거짓 신 | profile:ending_eye_yaldabaoth_good>=1
+e008 빚어진 흙 | profile:ending_eye_yaldabaoth_bad>=1
+e009 다른 눈동자: 질투하는 거짓 신 | profile:ending_eye_yahweh_other>=1
+e010 다른 눈동자: 고발하는 거짓 신 | profile:ending_eye_satan_other>=1
+e011 다른 눈동자: 눈먼 거짓 신 | profile:ending_eye_samael_other>=1
+e012 다른 눈동자: 사자 얼굴의 거짓 신 | profile:ending_eye_yaldabaoth_other>=1
+e013 네 얼굴을 삼킨 자 | profile:ending_eye_four_faces>=1
+e014 세 개의 왕좌 | NEW:eye_endings_seen>=3
+e015 여덟 개의 왕좌 | NEW:eye_endings_seen>=8
+e016 모든 거짓 신 | NEW:eye_endings_seen>=13
+e017 첫 찬탈 | profile:eye_usurped>=1
+e018 다섯 번의 찬탈 | profile:eye_usurped>=5
+e019 찬탈의 습관 | profile:eye_usurped>=15
+e020 삼켜진 첫 교주 | profile:eye_lost>=1
+e021 다섯 번 삼켜지다 | profile:eye_lost>=5
+e022 열 번의 승천 | profile:eye_ascended>=10
+e023 서른 번의 승천 | profile:eye_ascended>=30
+e032 사마엘의 문턱 | NEW:eye_threshold_samael
+e035 얄다바오트의 문턱 | NEW:eye_threshold_yaldabaoth
+e036 네 개의 눈길 | profile:eye_start_yahweh>=1 profile:eye_start_satan>=1 profile:eye_start_samael>=1 profile:eye_start_yaldabaoth>=1
+e041 충만 | NEW:eye_nodes>=64
+e055 잠든 사이 | profile:eye_rest_calamities>=1
+e056 깨지 않는 잠 | profile:eye_rest_calamities>=10
+e058 몸을 내준 자 | profile:eye_give_body>=10
+e059 나눠 내준 자 | profile:eye_give_half>=10
+e060 흠 없는 왕좌 | NEW:eye_ascend_calamities==0
+e061 상처투성이 왕좌 | NEW:eye_ascend_calamities>=20 NEW:eye_ascend_good
+e062 기우는 저울 | NEW:eye_dominance_peak>=150
+e063 넘어간 저울 | NEW:eye_dominance_peak>=201
+e064 아슬아슬한 찬탈 | NEW:eye_ascend_dominance>=190 NEW:eye_ascend_good
+e065 온전한 주인 | NEW:eye_ascend_dominance<=100
+e072 빠른 찬탈 | NEW:eye_ascend_years<=10
+e073 느린 찬탈 | NEW:eye_ascend_years>=40
+e074 한 얼굴만 | NEW:eye_ascend_single_sector
+e075 익숙한 현현 | profile:eye_act_Wonder>=30
+e076 능숙한 현현 | profile:eye_act_Wonder>=150
+e078 능숙한 비의 | profile:eye_act_Revelation>=150
+e082 능숙한 육제 | profile:eye_act_Feast>=150
+e084 능숙한 강신 | profile:eye_act_Commune>=150
+e085 익숙한 창조 | profile:eye_act_Consecrate>=30
+e086 능숙한 창조 | profile:eye_act_Consecrate>=150
+e089 물질의 도시 | profile:eye_build_total>=30
+e094 다섯 번의 눈동자 | profile:eye_runs>=5
+e095 스무 번의 눈동자 | profile:eye_runs>=20
+e097 눈동자 업적 예순 | NEW:eye_achv>=60
+
+업적 도달 — 모든 봇이 딴 업적
+e049 첫 재앙
+e050 열 번의 재앙
+e051 재앙의 계절
+e053 다섯 번의 눈길
+e054 멈추지 않는 눈길
+e057 교단을 내준 자
+e067 그릇의 첫 해
+e068 다섯 해의 동거
+e069 열 해의 동거
+e070 사반세기의 동거
+e071 반세기의 동거
+e077 익숙한 비의
+e079 익숙한 정화
+e080 능숙한 정화
+e083 익숙한 강신
+e090 쉰 개의 계시
+e091 이백 개의 계시
+e093 첫 눈동자

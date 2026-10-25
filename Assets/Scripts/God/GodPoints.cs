@@ -64,7 +64,7 @@ public class GodState
     {
         Pressure = new GodPressure(Tree, Buildings);
         Tree.Attach(Aeons);
-        Aeons.Changed += _ => EyeCounters.OnLearn(Aeons);
+        Aeons.Changed += skill => { EyeRules.OnAeonLearned(skill); EyeCounters.OnLearn(Aeons); };
     }
     public bool IntroShown { get; set; } // 권능 트리 확대 연출을 이번 판에 이미 보였는가 (저장하지 않음)
 

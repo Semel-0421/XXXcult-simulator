@@ -38,12 +38,26 @@ public class DemiurgeTests
     public void CounterGain_PerSectorEvilMinusGood()
     {
         EyeRules.ChooseSector(EyeSector.Satan);
-        Assert.AreEqual(0, EyeRules.CounterGain(Aeons)); // 악 0단계 +1, 선 0단계 -1
+        Assert.AreEqual(0, EyeRules.CounterGain(Aeons)); // 악 0단계 +1, 선 0단계 -2 (최소 0)
         Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Satan, 1, AeonKind.Evil), Rich, 10);
         Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Satan, 2, AeonKind.Evil), Rich, 10);
-        Assert.AreEqual(1 + 1 + 2 - 1, EyeRules.CounterGain(Aeons));
+        Assert.AreEqual(1 + 1 + 2 - EyeRules.GoodOffset, EyeRules.CounterGain(Aeons));
         Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Yahweh, 0, AeonKind.Good), Rich, 10); // 다른 섹터 선은 그 섹터만 줄인다
-        Assert.AreEqual(3, EyeRules.CounterGain(Aeons));
+        Assert.AreEqual(2, EyeRules.CounterGain(Aeons));
+    }
+
+    [Test]
+    public void GnosisStage_RaisesDoctrineAtOnce()
+    {
+        EyeRules.ChooseSector(EyeSector.Samael);
+        for (int l = 1; l <= 4; l++)
+        {
+            Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Samael, l, AeonKind.Good), Rich, 10);
+            Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Samael, l, AeonKind.Evil), Rich, 10);
+        }
+        var before = GameSession.Cult[StatId.Doctrine].Value;
+        Aeons.Learn(AeonSkillCatalog.Stage(EyeSector.Samael, 5), Rich, 10);
+        Assert.AreEqual(before + EyeRules.GnosisDoctrine, GameSession.Cult[StatId.Doctrine].Value);
     }
 
     [Test]
@@ -51,12 +65,13 @@ public class DemiurgeTests
     {
         EyeRules.ChooseSector(EyeSector.Satan);
         Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Satan, 1, AeonKind.Evil), Rich, 10);
+        Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Satan, 2, AeonKind.Evil), Rich, 10);
         EyeRules.Quarter();
-        Assert.AreEqual(1, Demiurge.Counter);
+        Assert.AreEqual(2, Demiurge.Counter); // 악 1+1+2 - 선 0단계 하나 × 2
         GameSession.Personal[PersonalStatId.Health].Set(0);
         GameSession.Cult[StatId.Followers].Set(0);
         EyeRules.Quarter();
-        Assert.AreEqual(1 + 1 + 2 * EyeRules.ZeroPenalty, Demiurge.Counter);
+        Assert.AreEqual(2 + 2 + 2 * EyeRules.ZeroPenalty, Demiurge.Counter);
         Assert.AreEqual(0, GameSession.Personal[PersonalStatId.Health].Value); // 체력은 휴식으로 회복 (되살리지 않음)
         Assert.AreEqual(1, GameSession.Cult[StatId.Followers].Value);
     }

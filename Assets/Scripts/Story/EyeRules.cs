@@ -35,7 +35,9 @@ public static class EyeRules
 
     // ---- 재앙 (SYS_DEMIURGE 5절. 수치는 가안) ----
 
-    public const int CalamityThreshold = 40; // 카운터가 이만큼 차면 재앙
+    public const int CalamityThreshold = 50; // 카운터가 이만큼 차면 재앙 (9단계 결정: 40 → 50)
+    public const int GoodOffset = 2;         // 같은 섹터 선한 아이온 하나가 줄이는 분기 카운터 (9단계 결정: 1 → 2)
+    public const int GnosisDoctrine = 50;    // 그노시스 단계(5~9)를 익힐 때 바로 오르는 교리 (9단계 결정, 두 배 규칙 없이 그대로)
     public const int ZeroPenalty = 10;       // 지키는 스탯이 0이 되면 패배 대신 카운터 +10 (DEC-028 L)
     public const float DamageBase = 0.05f, DamagePerEvil = 0.01f; // 재앙 피해 = 현재 값 × (5% + 악한 아이온 수 × 1%)
     public const int MaxCalamityGuard = 40;  // 선한 아이온의 피해 감소는 40%까지
@@ -52,11 +54,11 @@ public static class EyeRules
         _ => (StatId.Reputation, StatId.Authority, PersonalStatId.Repute, PersonalStatId.Health),
     };
 
-    // 섹터별 분기당 카운터: 그 섹터 악한 아이온·그노시스의 재앙 합 - 그 섹터 선한 아이온 수 (최소 0)
+    // 섹터별 분기당 카운터: 그 섹터 악한 아이온·그노시스의 재앙 합 - 그 섹터 선한 아이온 수 × GoodOffset (최소 0)
     public static int SectorGain(AeonTree tree, EyeSector sector)
     {
         var skills = tree.Learned.Select(AeonSkillCatalog.Find).Where(s => s != null && s.Sector == sector).ToList();
-        return Math.Max(0, skills.Sum(s => s.Calamity) - skills.Count(s => s.Kind == AeonKind.Good));
+        return Math.Max(0, skills.Sum(s => s.Calamity) - skills.Count(s => s.Kind == AeonKind.Good) * GoodOffset);
     }
 
     public static int CounterGain(AeonTree tree) => Sectors.Sum(s => SectorGain(tree, s));
@@ -255,6 +257,12 @@ public static class EyeRules
     public const float LoseDominanceAt = 2f; // 이 배를 넘으면 주도권을 뺏긴다 (승천 순간 판정: 6단계)
 
     // 교단 창설: 신의 본성 대신 바로 교리 선포를 채워 교단 행동을 연다
+    // 아이온을 새로 익힐 때 (AeonTree.Changed). 그노시스 단계면 교리를 바로 올린다. 저장 복원(null)·시작 지급(0단계)은 해당 없음
+    public static void OnAeonLearned(AeonSkill skill)
+    {
+        if (skill?.Kind == AeonKind.Gnosis && GameSession.EyeMode) GameSession.Cult[StatId.Doctrine].Add(GnosisDoctrine);
+    }
+
     public static void OnFounded()
     {
         var doctrines = GameSession.Cult.Doctrines;
