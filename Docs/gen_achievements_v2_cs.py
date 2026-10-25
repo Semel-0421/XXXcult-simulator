@@ -5,7 +5,7 @@ import csv, sys
 
 BS = chr(92)
 SEP = BS + 'u001F'
-MODES = ['normal', 'god', 'mirror', 'hidden']
+MODES = ['normal', 'god', 'mirror', 'eye', 'hidden']
 
 
 def e(s):

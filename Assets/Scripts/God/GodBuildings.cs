@@ -84,6 +84,7 @@ public class GodBuildings
         cult[StatId.Authority].Add(AuthorityPerLevel * level);
         EnforceFloors(cult);
         GodCounters.OnBuild(type);
+        EyeCounters.OnBuild();
         return true;
     }
 

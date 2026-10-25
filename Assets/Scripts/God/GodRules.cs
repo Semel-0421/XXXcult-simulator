@@ -117,6 +117,7 @@ public static class GodRules
         }
         GameSession.God.Pressure.AfterAction(action);
         GodCounters.OnAction(ActionOf(action), success);
+        EyeCounters.OnAction(ActionOf(action));
         if (action == CultAction.Desire && success)
         {
             var recovery = FeastRecovery * (1 + tree.Total(GodEffect.Type.VesselRecovery) / 100f + GiftedV2GodHooks.VesselRecoveryBonus);
@@ -156,6 +157,7 @@ public static class GodRules
     {
         if (!GameSession.GodMode) return;
         GodCounters.OnEvent(outcome);
+        EyeCounters.OnEvent();
         var god = GameSession.God;
         foreach (var (effect, amount) in outcome.GodEffects)
             switch (effect)

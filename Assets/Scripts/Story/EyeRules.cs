@@ -27,6 +27,7 @@ public static class EyeRules
     {
         if (sector == EyeSector.None) return;
         GameSession.SetEyeSector(sector);
+        EyeCounters.OnSector(sector);
         GameSession.God.Aeons.Grant(sector); // 고른 섹터의 0단계 선·악 두 노드를 처음부터 얻는다 (DEC-027)
         if (!GameSession.God.Demiurge.Copied) GameSession.God.Demiurge.Copy(GameSession.Cult, GameSession.Personal); // 첫 스킬을 얻은 순간 교주의 스탯을 복사
     }
@@ -69,6 +70,7 @@ public static class EyeRules
             if (GameSession.Cult[id].Value <= 0) { GameSession.Cult[id].Set(1); god.Demiurge.AddCounter(ZeroPenalty); }
         foreach (var id in ZeroPersonal)
             if (GameSession.Personal[id].Value <= 0) god.Demiurge.AddCounter(ZeroPenalty);
+        EyeCounters.OnQuarter();
     }
 
     public static bool CalamityDue => GameSession.EyeMode && GameSession.CultFounded && GameSession.God.Demiurge.Counter >= CalamityThreshold;
@@ -136,6 +138,8 @@ public static class EyeRules
             demiurge.Absorb(id, lost);
             taken.Add($"{Lang.Get($"pstat_{id}")} +{lost}");
         }
+        var cultLost = taken.Count(t => DemiurgeState.CultStats.Any(id => t.StartsWith(StatLabel.Of(id))));
+        EyeCounters.OnCalamity(cultLost == taken.Count ? "cult" : cultLost == 0 ? "body" : "half");
         cultBefore = personalBefore = null;
         demiurge.ResetCounter();
         return taken.Count == 0 ? "" : string.Format(Lang.Get("eye_calamity_taken"), string.Join(", ", taken));
@@ -181,6 +185,7 @@ public static class EyeRules
             name = Lang.Get($"pstat_{p}");
         }
         god.Demiurge.ResetCounter();
+        EyeCounters.OnCalamity("rest");
         return string.Format(Lang.Get("eye_rest_calamity"), Lang.Get(SectorKey(CalamitySector(god.Aeons))), name, lost.ToString("N0"));
     }
 

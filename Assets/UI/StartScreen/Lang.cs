@@ -25,7 +25,7 @@ public static class Lang
         ["opt_result_auto"] = ("Auto-close results", "결과 창 자동 넘김"),
         ["opt_adult_ach"] = ("Adult achievements & gifted", "성인 업적·기프티드 표시"),
         ["gg_header"] = ("Gifted {0}/{1}", "기프티드 {0}/{1}"), ["gg_none"] = ("No gifted for this tab.", "이 탭에는 기프티드가 없음."), ["gg_shared"] = ("Shared", "공유"), ["gg_exclusive"] = ("Exclusive", "전용"), ["gg_all_modes"] = ("All modes", "전 모드"), ["gg_hint"] = ("Unlocked by: {0}", "획득 조건: {0}"),
-        ["ach_tab_normal"] = ("Normal", "일반"), ["ach_tab_god"] = ("God", "신"), ["ach_tab_mirror"] = ("Mirror", "거울"), ["ach_tab_hidden"] = ("Hidden", "히든"), ["ach_tab_empty"] = ("No achievements here yet.", "아직 이 탭에 업적이 없음."), ["ach_view_gifted"] = ("Gifted", "기프티드"), ["ach_view_list"] = ("Achievements", "업적 목록"), ["ach_soon"] = ("Coming soon", "준비 중"),
+        ["ach_tab_normal"] = ("Normal", "일반"), ["ach_tab_god"] = ("God", "신"), ["ach_tab_mirror"] = ("Mirror", "거울"), ["ach_tab_hidden"] = ("Hidden", "히든"), ["ach_tab_eye"] = ("Golden Eye", "눈동자"), ["ach_tab_empty"] = ("No achievements here yet.", "아직 이 탭에 업적이 없음."), ["ach_view_gifted"] = ("Gifted", "기프티드"), ["ach_view_list"] = ("Achievements", "업적 목록"), ["ach_soon"] = ("Coming soon", "준비 중"),
         ["result_gifted"] = ("Gifted: {0}", "기프티드 획득: {0}"), ["pstat_Miracle"] = ("Miracle", "기적"),
         ["god_fx_Envy"] = ("Heaven's envy", "신계 시기"), ["god_fx_Suspicion"] = ("Earth's suspicion", "지상 의혹"),
         ["god_fx_Seize"] = ("Seizure", "건물 압류"), ["god_fx_Points"] = ("Divine points", "권능 포인트"), ["choice_hint"] = ("Press or type a number", "번호를 누르거나 입력"), ["paused"] = ("Paused", "일시정지"),

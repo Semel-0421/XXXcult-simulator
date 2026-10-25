@@ -122,6 +122,7 @@ public static class Progress
         GiftedV2Effects.OnEnding(ending); // Endings.Reach 전: 효과가 Endings.Seen으로 새 엔딩인지 가릴 수 있게
         if (ending.Id is Endings.Dissolved or "inv_end_absorbed") Profile.Count("dissolved"); // 거울 세계의 명망 0(흡수)도 해체 업적에 센다
         Endings.Reach(ending.Id);
+        EyeCounters.OnEnding(ending);
         NormalCounters.OnEnding(ending);
         HiddenCounters.OnEnding(ending);
         Achievements.Evaluate();

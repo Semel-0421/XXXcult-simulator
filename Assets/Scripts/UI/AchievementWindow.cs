@@ -24,9 +24,10 @@ public static class AchievementWindow
     static Button zoomInButton, zoomOutButton;
     static readonly System.Collections.Generic.List<Row> rows = new System.Collections.Generic.List<Row>();
     static RectTransform content; static TMP_FontAsset font;
-    static readonly string[] TabKeys = { "normal", "god", "mirror", "hidden" };
-    static readonly Button[] tabButtons = new Button[4];
-    static readonly TMP_Text[] tabLabels = new TMP_Text[4];
+    static readonly string[] TabKeys = { "normal", "god", "mirror", "hidden", "eye" };
+    static readonly Button[] tabButtons = new Button[5];
+    static readonly TMP_Text[] tabLabels = new TMP_Text[5];
+    static int SlotOf(int i) => i == 4 ? 3 : i == 3 ? 4 : i; // 눈동자 탭을 거울 다음, 히든 앞에 둔다
     static readonly System.Collections.Generic.List<TMP_Text> giftedCells = new System.Collections.Generic.List<TMP_Text>();
     static RectTransform scroll, giftedPanel;
     static TMP_Text emptyLabel, viewLabel;
@@ -121,7 +122,7 @@ public static class AchievementWindow
         {
             int index = i;
             tabButtons[i] = UiKit.MakeButton(panel, font, "Tab" + TabKeys[i], "", 130, 40, out tabLabels[i]);
-            UiKit.Anchor((RectTransform)tabButtons[i].transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(83 + i * 138, -176), new Vector2(130, 40));
+            UiKit.Anchor((RectTransform)tabButtons[i].transform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(83 + SlotOf(i) * 138, -176), new Vector2(130, 40));
             tabButtons[i].onClick.AddListener(() => { tab = (AchievementTabs.Tab)index; showGifted = false; Refresh(); });
         }
         var view = UiKit.MakeButton(panel, font, "GiftedToggle", "", 200, 40, out viewLabel);
@@ -190,11 +191,12 @@ public static class AchievementWindow
 
         // 탭·보기 전환
         if (tab == AchievementTabs.Tab.Hidden && !AchievementTabs.HiddenUnlocked) tab = AchievementTabs.Tab.Normal;
+        if (tab == AchievementTabs.Tab.Eye && !AchievementTabs.EyeVisible) tab = AchievementTabs.Tab.Normal;
         for (int i = 0; i < tabButtons.Length; i++)
         {
             tabLabels[i].text = Lang.Get("ach_tab_" + TabKeys[i]);
             UiKit.SetTab(tabButtons[i], i == (int)tab && !showGifted, new Color(0.22f, 0.1f, 0.3f, 0.95f));
-            tabButtons[i].gameObject.SetActive(i != (int)AchievementTabs.Tab.Hidden || AchievementTabs.HiddenUnlocked);
+            tabButtons[i].gameObject.SetActive(i == (int)AchievementTabs.Tab.Hidden ? AchievementTabs.HiddenUnlocked : i != (int)AchievementTabs.Tab.Eye || AchievementTabs.EyeVisible);
         }
         viewLabel.text = Lang.Get(showGifted ? "ach_view_list" : "ach_view_gifted");
         var list = AchievementTabs.Of(tab).ToList();
