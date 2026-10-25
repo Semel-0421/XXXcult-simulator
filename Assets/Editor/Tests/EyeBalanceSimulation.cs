@@ -30,11 +30,52 @@ public static class EyeSimulation
     public static Dictionary<string, int> Acts = new(); // 행동 분포 (진단용)
     public static Dictionary<string, int> Zeros = new(); // 바닥 스탯별 턴 수 (진단용)
 
+    // ---- 교단 붕괴 원인 집계 (진단용): 구간마다 세 교단 스탯의 증감을 따로 더한다 ----
+    static readonly StatId[] Watched = { StatId.Followers, StatId.FollowerFaith, StatId.Reputation, StatId.Doctrine };
+    public static Dictionary<string, float[]> Gain = new(), Loss = new(); // 구간 -> 스탯별 합 (Watched 순서)
+    public static Dictionary<string, int> Stages = new();                 // "신계 n" / "지상 n" -> 턴 수
+    static int[] Snap() => Watched.Select(id => GameSession.Cult[id].Value).ToArray();
+    static void Book(string part, int[] before)
+    {
+        var after = Snap();
+        if (!Gain.ContainsKey(part)) { Gain[part] = new float[Watched.Length]; Loss[part] = new float[Watched.Length]; }
+        for (int i = 0; i < Watched.Length; i++)
+        {
+            var d = after[i] - before[i];
+            if (d > 0) Gain[part][i] += d; else Loss[part][i] -= d;
+        }
+    }
+
+    // 압박 피해 추정: 턴이 끝난 뒤의 단계로 GodPressure.ApplyQuarter 식을 다시 계산 (단계는 행동 직후와 거의 같다)
+    static readonly System.Reflection.MethodInfo ExposureOf = typeof(GodPressure).GetMethod("Exposure", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+    const float HitDivisor = 3.2f; // GodPressure.HitDivisor와 같게
+    static void BookPressure()
+    {
+        var pressure = GameSession.God.Pressure;
+        var cult = GameSession.Cult;
+        int heaven = pressure.Stage(Pressure.Heaven, cult), earth = pressure.Stage(Pressure.Earth, cult);
+        Stages[$"신계 {heaven}"] = Stages.TryGetValue($"신계 {heaven}", out var h) ? h + 1 : 1;
+        Stages[$"지상 {earth}"] = Stages.TryGetValue($"지상 {earth}", out var e) ? e + 1 : 1;
+        float Exp(Pressure p) => (float)ExposureOf.Invoke(pressure, new object[] { p });
+        var heavenHit = heaven * heaven / HitDivisor * Exp(Pressure.Heaven);
+        var earthHit = earth * earth / HitDivisor * Exp(Pressure.Earth);
+        const string part = "압박(추정, 행동 턴에 포함)";
+        if (!Loss.ContainsKey(part)) { Gain[part] = new float[Watched.Length]; Loss[part] = new float[Watched.Length]; }
+        if (heaven > 0)
+        {
+            Loss[part][0] += cult[StatId.Followers].Value * 0.0255f * heavenHit;
+            Loss[part][1] += 13f * heavenHit * (1f - DoctrineLevel.FaithGuard(cult[StatId.Doctrine].Value));
+            if (heaven >= 2) Loss[part][3] += 6.5f * heavenHit;
+        }
+        if (earth > 0) Loss[part][2] += 12f * earthHit;
+    }
+
     public static void Run(int runsPerBot, int seed)
     {
         Results = new List<RunResult>();
         Acts = new Dictionary<string, int>();
         Zeros = new Dictionary<string, int>();
+        Gain = new Dictionary<string, float[]>(); Loss = new Dictionary<string, float[]>(); Stages = new Dictionary<string, int>();
         AchievementBots = new Dictionary<string, int>();
         Bots = 0;
         var previousPath = Profile.Path;
@@ -172,7 +213,9 @@ public static class EyeSimulation
         Endings.Ending ending = null;
         while (ending == null && GameSession.CultTime.Years < MaxYears)
         {
+            var snap = Snap();
             Rest(r);
+            Book("휴식(휴식 재앙 포함)", snap);
             Learn(plan);
             if ((ending = Progress.DueEnding()) != null) break;
             string key = "consecrate";
@@ -181,7 +224,10 @@ public static class EyeSimulation
                 var act = ChooseAction(plan);
                 if (act == CultAction.Preach) r.Preaches++;
                 if (act == CultAction.Proselytize) r.Proselytes++;
+                snap = Snap();
                 Turns.Cult(act);
+                Book("행동 턴(행동+사회+불운+분기)", snap);
+                BookPressure();
                 key = act.ToString();
             }
             Acts[key] = Acts.TryGetValue(key, out var c) ? c + 1 : 1;
@@ -196,13 +242,17 @@ public static class EyeSimulation
             if (EyeRules.CalamityDue)
             {
                 var q = EyeRules.BeginCalamity();
+                snap = Snap();
                 Turns.Answer(CalamityChoice(q));
                 EyeRules.EndCalamity();
+                Book("재앙", snap);
             }
             else
             {
                 var next = Turns.NextCultEvent();
+                snap = Snap();
                 if (next != null) Turns.Answer(GodSimulation.Best(next.Question), next.Id);
+                Book("이벤트", snap);
             }
         }
         r.Dominance = EyeRules.Dominance;
@@ -246,6 +296,11 @@ public static class EyeSimulation
             sb.AppendLine($"{group.Key} | {group.Average(x => x.Learned):0.0} | {group.Average(x => x.PointsEarned):0} | {group.Average(x => x.Doctrine):0.0} | {group.Average(x => x.DoctrinePeak):0} | {group.Average(x => x.Preaches):0}/{group.Average(x => x.Proselytes):0} | {group.Average(x => x.GainEnd):0.0} | {group.Average(x => x.ZeroTurns):0} | "
                 + string.Join(", ", group.GroupBy(x => x.Stall).OrderByDescending(x => x.Count()).Take(4).Select(x => $"{x.Key}×{x.Count()}")));
         sb.AppendLine();
+        int runs = Math.Max(1, Results.Count);
+        sb.AppendLine("교단 스탯 증감 원인 (판당 평균, 오름 / 내림): " + string.Join(" · ", Watched));
+        foreach (var part in Loss.Keys)
+            sb.AppendLine($"{part} | " + string.Join(" | ", Watched.Select((id, i) => $"+{Gain[part][i] / runs:0} / -{Loss[part][i] / runs:0}")));
+        sb.AppendLine("압박 단계 분포(턴): " + string.Join(", ", Stages.OrderBy(x => x.Key).Select(x => $"{x.Key}: {x.Value}")));
         sb.AppendLine("바닥 스탯(턴): " + string.Join(", ", Zeros.OrderByDescending(x => x.Value).Select(x => $"{x.Key} {x.Value}")));
         sb.AppendLine("행동 분포(전체 턴): " + string.Join(", ", Acts.OrderByDescending(x => x.Value).Select(x => $"{x.Key} {x.Value}")));
         sb.AppendLine();
