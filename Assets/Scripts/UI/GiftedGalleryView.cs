@@ -29,7 +29,8 @@ public static class GiftedGalleryView
     public static RectTransform Build(RectTransform parent, TMP_FontAsset f, Action<int> jumpToList)
     {
         font = f; jump = jumpToList;
-        root = UiKit.Child(parent, "GiftedGallery", typeof(ScrollRect));
+        cells.Clear(); // 업적 창을 다시 만들면 이전 칸은 사라졌다
+        root =UiKit.Child(parent, "GiftedGallery", typeof(ScrollRect));
         UiKit.Anchor(root, Vector2.zero, Vector2.one, Vector2.zero, Vector2.zero);
         root.offsetMin = new Vector2(18, 18);
         root.offsetMax = new Vector2(-18, -214);
@@ -127,7 +128,7 @@ public static class GiftedGalleryView
         c.back.color = done ? new Color(0.42f, 0.12f, 0.24f, 0.96f) : new Color(0.16f, 0.07f, 0.24f, 0.9f);
         c.icon.color = done ? accent * 0.35f : new Color(0.1f, 0.06f, 0.15f);
         c.glyph.color = done ? accent : UiKit.Muted;
-        c.glyph.text = done ? "✦" : "?";
+        c.glyph.text = done ? "†" : "?"; // ✦는 어느 글꼴에도 없어 빈 네모로 보였다
         c.tag.text = Lang.Get(e.Shared ? "gg_shared" : "gg_exclusive");
         c.tag.color = accent;
 

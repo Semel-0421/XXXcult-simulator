@@ -56,6 +56,8 @@ public static class AchievementWindow
 
     static void Build()
     {
+        rows.Clear(); // 장면이 바뀌면 이전 창과 행은 사라졌다
+        giftedCells.Clear();
         font = UiKit.FindFont();
         var canvas = UiKit.CreateOverlayCanvas("AchievementCanvas", 300);
         content = UiKit.BuildScrollWindow(canvas, font, "AchievementWindow", new Vector2(980, 660),
