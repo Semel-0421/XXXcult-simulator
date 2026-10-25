@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -68,16 +69,18 @@ public class QuestionRunner : MonoBehaviour
     static string ChangesSince((int[] cult, int[] personal, int points) before, Outcome outcome)
     {
         var now = Snapshot();
-        var changes = CultIds.Select((id, i) => (StatLabel.Of(id), now.cult[i] - before.cult[i]))
-            .Concat(PersonalIds.Select((id, i) => (Lang.Get($"pstat_{id}"), now.personal[i] - before.personal[i])))
+        // 값을 아는 스탯은 전후 값으로, 신 모드 효과(건물 압류 등)는 변화량으로, 기프티드는 이름으로 적는다
+        var changes = CultIds.Select((id, i) => (StatLabel.Of(id), before.cult[i], now.cult[i]))
+            .Concat(PersonalIds.Select((id, i) => (Lang.Get($"pstat_{id}"), before.personal[i], now.personal[i])))
             .ToList();
+        var extras = new List<string>();
         if (GameSession.GodMode)
         {
-            changes.Add((Lang.Get("god_fx_Points"), now.points - before.points));
+            changes.Add((Lang.Get("god_fx_Points"), before.points, now.points));
             foreach (var (effect, amount) in outcome.GodEffects)
-                if (effect != GodEventEffect.Points) changes.Add((Lang.Get($"god_fx_{effect}"), amount));
+                if (effect != GodEventEffect.Points && amount != 0) extras.Add(ResultWindow.Delta(Lang.Get($"god_fx_{effect}"), amount));
         }
-        var gifted = outcome.Grants.Select(GiftedCatalog.Find).Where(t => t != null).Select(t => string.Format(Lang.Get("result_gifted"), t.Name));
-        return ResultWindow.EffectsLine(changes, gifted);
+        extras.AddRange(outcome.Grants.Select(GiftedCatalog.Find).Where(t => t != null).Select(t => string.Format(Lang.Get("result_gifted"), t.Name)));
+        return ResultWindow.TransitionsLine(changes, extras);
     }
 }

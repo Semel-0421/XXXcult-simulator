@@ -7,22 +7,17 @@ using UnityEngine.UI;
 
 // 행동 결과(성공/실패)를 책 표지 패널로 보여 준다.
 // 엔터·클릭·터치로 즉시 닫을 수 있다 (이벤트 결과창과 동일한 조작).
-// 결정 6: 본문 칸 맨 위에 가로 띠로 띄우고, 떠 있는 동안 본문 위쪽을 띠 높이만큼 비워 질문 글자와 겹치지 않게 한다.
 public class ActionResultView : MonoBehaviour
 {
     [SerializeField] CanvasGroup group;
     [SerializeField] RawImage image;
     [SerializeField] TMP_Text label;
     [SerializeField] float duration = 1.6f;
-    [SerializeField] float bandHeight = 300; // 가로 띠 높이 (캔버스 단위)
-    const float BandGap = 16;                 // 띠와 본문 글자 사이
-
-    QuestionPanel panel;
-    bool reserved;
 
     bool playing;
     float shownAt;
     Action doneCallback;
+    QuestionPanel panel;
 
     void Awake()
     {
@@ -31,7 +26,7 @@ public class ActionResultView : MonoBehaviour
         Hide();
     }
 
-    // 씬의 288px 정사각 픽토그램 칸을 일지 책 표지 액자 + 가득 찬 일러스트 + 하단 글자 띠로 바꾼다 (자리는 PlaceBand)
+    // 씬의 288px 정사각 픽토그램 칸을 일지 책 표지 액자 + 가득 찬 일러스트 + 하단 글자 띠로 바꾼다
     void BuildLayout()
     {
         var root = (RectTransform)transform;
@@ -68,15 +63,13 @@ public class ActionResultView : MonoBehaviour
         doneCallback = done;
         playing = true;
         shownAt = Time.unscaledTime;
-        PlaceBand();
+        PlaceCenter();
         var key = $"{actionKey}_{(success ? "ok" : "fail")}";
-        var art = AdultArt.Load(key);
-        var tex = art ?? (Texture)Resources.Load<Texture2D>($"Pictograms/{key}");
+        var tex = AdultArt.Load(key) ?? (Texture)Resources.Load<Texture2D>($"Pictograms/{key}");
         image.texture = tex;
-        FitArt(art != null);
         if (tex != null)
         {
-            image.uvRect = art != null ? CoverCrop(tex) : new Rect(0, 0, 1, 1); // 일러스트는 띠 비율로 잘라 채우고, 픽토그램은 자르지 않는다
+            image.uvRect = CoverCrop(tex); // 세로 일러스트를 칸 비율에 맞춰 왜곡 없이 채운다
             image.color = Color.white;
         }
         else image.color = Color.clear;
@@ -134,24 +127,6 @@ public class ActionResultView : MonoBehaviour
         doneCallback = null;
     }
 
-    // 일러스트는 액자 안을 가득 채우고, 정사각 픽토그램은 띠 높이에 맞춘 정사각으로 가운데 둔다 (가로 띠에 늘려 자르면 그림이 안 보인다)
-    void FitArt(bool fill)
-    {
-        var art = image.rectTransform;
-        if (fill)
-        {
-            art.anchorMin = Vector2.zero;
-            art.anchorMax = Vector2.one;
-            art.offsetMin = new Vector2(20, 20);
-            art.offsetMax = new Vector2(-20, -20);
-            return;
-        }
-        var side = Mathf.Max(0, ((RectTransform)transform).rect.height - 40);
-        art.anchorMin = art.anchorMax = new Vector2(0.5f, 0.5f);
-        art.sizeDelta = new Vector2(side, side);
-        art.anchoredPosition = Vector2.zero;
-    }
-
     // 칸(RawImage) 비율에 맞춰 그림을 가운데 기준으로 잘라 가득 채운다 (세로로 자를 때는 얼굴 쪽이 보이게 위를 남긴다)
     Rect CoverCrop(Texture tex)
     {
@@ -167,29 +142,15 @@ public class ActionResultView : MonoBehaviour
     {
         group.alpha = 0;
         group.blocksRaycasts = false;
-        if (reserved && panel != null) panel.ReserveTop(0);
-        reserved = false;
     }
 
-    // 본문 글자 칸의 위쪽 가장자리에 맞춰 칸 너비만큼 가로 띠를 놓고, 본문은 그만큼 아래에서 시작하게 한다
-    // (본문 칸 위치는 다른 창 작업이 바꿀 수 있어 띄울 때마다 다시 잰다)
-    void PlaceBand()
+    // 이벤트 창(본문 책 표지) 한가운데에 띄운다. 상단 바·오른쪽 스탯 칸을 가리지 않는다 (본문 위치가 바뀔 수 있어 띄울 때마다 잰다)
+    void PlaceCenter()
     {
-        if (panel == null) return; // 본문 창이 없으면 씬 자리 그대로
+        if (panel == null) return; // 이벤트 창이 없으면 씬 자리 그대로
         var root = (RectTransform)transform;
-        var parent = root.parent;
         var corners = new Vector3[4];
-        panel.Body.GetWorldCorners(corners); // 0 왼아래, 1 왼위, 2 오른위, 3 오른아래
-        var topLeft = parent.InverseTransformPoint(corners[1]);
-        var topRight = parent.InverseTransformPoint(corners[2]);
-        root.anchorMin = root.anchorMax = new Vector2(0.5f, 0.5f);
-        root.pivot = new Vector2(0.5f, 1);
-        root.sizeDelta = new Vector2(topRight.x - topLeft.x, bandHeight);
-        root.localPosition = (topLeft + topRight) / 2;
-
-        // 띠 높이를 본문 글자 칸 단위로 바꿔 위쪽 여백으로 비운다
-        var scale = panel.Body.lossyScale.y <= 0 ? 1 : parent.lossyScale.y / panel.Body.lossyScale.y;
-        panel.ReserveTop((bandHeight + BandGap) * scale);
-        reserved = true;
+        ((RectTransform)panel.transform).GetWorldCorners(corners); // 0 왼아래, 2 오른위
+        root.position = (corners[0] + corners[2]) / 2;
     }
 }

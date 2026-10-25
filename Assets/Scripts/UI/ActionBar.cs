@@ -120,12 +120,15 @@ public class ActionBar : MonoBehaviour
         }
     }
 
+    // 새 턴의 효과가 들어가기 직전에 부른다 (행동·축성·쉬는 턴마다). 상단 바 강조가 지난 턴 것과 섞이지 않게 기준을 다시 잡는다
+    public static void BeginTurn() => Acting?.Invoke();
+
     // 버튼 OnClick에서 호출 (0~4)
     public void Perform(int index)
     {
         if (!CanAct) return; // 이벤트 진행 중 등 잠긴 상태에서는 무시
         AudioManager.PlaySfx("click");
-        Acting?.Invoke();
+        BeginTurn();
         if (Current == Mode.Life) LifeChosen?.Invoke((LifeAction)index);
         else if (Current == Mode.Cult) CultChosen?.Invoke((CultAction)index);
     }

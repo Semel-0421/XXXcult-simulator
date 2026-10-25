@@ -81,6 +81,7 @@ public class CultFlow : MonoBehaviour
     {
         if (!actionBar.CanAct) return;
         actionBar.SetInteractable(false);
+        ActionBar.BeginTurn(); // 축성도 한 턴: 상단 바 강조를 새 턴 기준으로
         if (!Turns.Consecrate(type)) { actionBar.SetInteractable(true); return; }
         var summary = string.Format(Lang.Get("god_consecrated"), Lang.Get($"god_building_{type}"), GameSession.God.Buildings.LevelOf(type));
         resultView.Play("Consecrate", true, () => AfterTurn(summary));
@@ -151,6 +152,7 @@ public class CultFlow : MonoBehaviour
             var names = string.Join(", ", resting.Select(id => Lang.Get($"pstat_{id}")));
             for (int turn = 1; turn <= Rest.Turns; turn++)
             {
+                ActionBar.BeginTurn(); // 쉬는 턴마다 상단 바 강조를 새로 잰다
                 Rest.ApplyTurn(GameSession.Personal, GameSession.Cult, resting);
                 GameSession.AdvanceTurn();
                 questionPanel.Show(string.Format(Lang.Get("rest_progress"), names, turn, Rest.Turns));

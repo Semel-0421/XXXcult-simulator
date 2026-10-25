@@ -15,7 +15,6 @@ public class QuestionPanel : MonoBehaviour, IPointerClickHandler
     [SerializeField] Button confirmButton;
 
     int choiceCount;
-    Vector4 baseMargin; // 씬에 정해 둔 본문 여백 (ReserveTop이 위쪽만 더한다)
     Action<string> textAnswer;
     public event Action<int> Chosen; // 1부터 시작하는 선택 번호
 
@@ -31,7 +30,6 @@ public class QuestionPanel : MonoBehaviour, IPointerClickHandler
     {
         numberInput.onSubmit.AddListener(Submit);
         displayText.raycastTarget = true; // 선택지 글자 클릭을 받기 위해
-        baseMargin = displayText.margin;
         // 입력 안내("번호를 누르거나 입력")는 한 줄로 두고 칸보다 길면 줄인다 (영어 안내가 두 줄로 넘쳤다)
         if (numberInput.placeholder is TMP_Text hint)
         {
@@ -171,12 +169,4 @@ public class QuestionPanel : MonoBehaviour, IPointerClickHandler
         confirmButton.gameObject.SetActive(active);
     }
 
-    // 본문 위쪽을 비워 둔다 (행동 결과 그림 띠가 떠 있는 동안 질문 글자와 겹치지 않게, ActionResultView가 호출)
-    public void ReserveTop(float height)
-    {
-        displayText.margin = baseMargin + new Vector4(0, Mathf.Max(0, height), 0, 0);
-    }
-
-    // 본문 글자 칸. 결과 그림 띠를 이 칸 위쪽에 맞춘다
-    public RectTransform Body => displayText.rectTransform;
 }

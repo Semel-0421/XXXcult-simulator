@@ -11,6 +11,14 @@ public class ResultWindowTests
     }
 
     [Test]
+    public void TransitionsLine_ShowsBeforeAfterWithArrows()
+    {
+        var line = ResultWindow.TransitionsLine(new[] { ("신도", 12, 15), ("헌금", 5, 5), ("음욕", 4, 2) }, new[] { "기프티드 획득: 매혹" });
+        var plain = System.Text.RegularExpressions.Regex.Replace(line, "<.*?>", "");
+        Assert.AreEqual("신도 12 → 15 ▲    음욕 4 → 2 ▼    기프티드 획득: 매혹", plain);
+    }
+
+    [Test]
     public void Body_PrefixesResultMark()
     {
         // 성공·실패는 글자 접두어 대신 ✓·× 표시로 구분한다 (SYS_UI_DESIGN 결정 8)

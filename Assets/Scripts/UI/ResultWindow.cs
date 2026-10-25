@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 // 선택지를 고른 뒤 결과를 보여 주는 창. 이벤트 글 창과 같은 책 표지 모양으로 띄운다.
-//   ✓(성공) / ×(실패) 표시 + 결과 글, 아래에 실제로 바뀐 스탯을 "신도 +3 / 음욕 +2"처럼 슬래시로 나눠 적는다.
+//   ✓(성공) / ×(실패) 표시 + 결과 글, 아래에 실제로 바뀐 스탯을 "신도 12 → 15 ▲"처럼 전후 값과 화살표로 적는다.
 // 확인 버튼·엔터·스페이스·1번 키로 닫으면 다음 진행(onClose)으로 넘어간다.
 public class ResultWindow : MonoBehaviour
 {
@@ -28,11 +28,24 @@ public class ResultWindow : MonoBehaviour
     // 바뀐 스탯 한 줄. 교단 스탯 → 개인 스탯 → 신 모드 효과 → 기프티드 순
     public static string EffectsLine(IEnumerable<(string label, int amount)> changes, IEnumerable<string> extras = null)
     {
-        var parts = changes.Where(c => c.amount != 0)
-            .Select(c => $"<color={(c.amount > 0 ? UpColor : DownColor)}>{c.label} {(c.amount > 0 ? "+" : "")}{c.amount}</color>")
+        var parts = changes.Where(c => c.amount != 0).Select(c => Delta(c.label, c.amount))
             .Concat(extras ?? Enumerable.Empty<string>());
         return string.Join("  /  ", parts);
     }
+
+    // 전후 값을 아는 스탯은 "신도 12 → 15 ▲"로 적는다 (바뀐 것만). 값만 아는 효과·기프티드는 extras로 뒤에 붙인다
+    public static string TransitionsLine(IEnumerable<(string label, int before, int after)> changes, IEnumerable<string> extras = null)
+    {
+        var parts = changes.Where(c => c.after != c.before).Select(c => Transition(c.label, c.before, c.after))
+            .Concat(extras ?? Enumerable.Empty<string>());
+        return string.Join("    ", parts);
+    }
+
+    public static string Delta(string label, int amount) =>
+        $"<color={(amount > 0 ? UpColor : DownColor)}>{label} {(amount > 0 ? "+" : "")}{amount}</color>";
+
+    public static string Transition(string label, int before, int after) =>
+        $"{label} {before:N0} → <color={(after > before ? UpColor : DownColor)}>{after:N0} {(after > before ? "▲" : "▼")}</color>";
 
     public static string Body(bool success, string text) =>
         $"<color={(success ? SuccessColor : FailColor)}>{(success ? "✓" : "×")}</color> {text}"; // ✓ ×: 글꼴에 있는 글리프 (✕는 없음)
@@ -51,14 +64,14 @@ public class ResultWindow : MonoBehaviour
         UiSkin.ApplyBookFrame(panel.GetComponent<Image>(), "ResultBook", UiPalette.BookEventTop, UiPalette.BookEventBottom);
 
         var body = UiKit.Label(panel, font, "Body", 26, TextAlignmentOptions.TopLeft, Color.white);
-        UiKit.Anchor(body.rectTransform, Vector2.zero, Vector2.one, new Vector2(0, 45), new Vector2(-80, -170));
+        UiKit.Anchor(body.rectTransform, Vector2.zero, Vector2.one, new Vector2(0, 68), new Vector2(-80, -216)); // 아래 변화 칸(여러 줄)만큼 위로
         body.text = Body(success, text);
         body.enableAutoSizing = true;
         body.fontSizeMin = 16;
         body.fontSizeMax = 26;
 
         var line = UiKit.Label(panel, font, "Effects", 21, TextAlignmentOptions.Center, Color.white);
-        UiKit.Anchor(line.rectTransform, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0, 108), new Vector2(-80, 40));
+        UiKit.Anchor(line.rectTransform, new Vector2(0, 0), new Vector2(1, 0), new Vector2(0, 128), new Vector2(-80, 80)); // 전후 값이 길어 두세 줄까지
         line.text = string.IsNullOrEmpty(effects) ? Lang.Get("result_no_change") : effects;
         line.enableAutoSizing = true;
         line.fontSizeMin = 14;
