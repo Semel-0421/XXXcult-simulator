@@ -46,6 +46,7 @@ public class CultFlow : MonoBehaviour
         ConsecrateWindow.Chosen -= OnConsecrate;
         ConsecrateWindow.CanAct = () => false;
         questionRunner.Answered -= OnEventAnswered;
+        questionRunner.Answered -= OnCalamityAnswered;
         if (restRoutine != null) StopCoroutine(restRoutine);
         if (tree != null) tree.Changed -= OnDoctrineChanged;
     }
@@ -91,6 +92,7 @@ public class CultFlow : MonoBehaviour
     void AfterTurn(string summary)
     {
         if (TryDissolve()) return;
+        if (EyeRules.CalamityDue) { RunCalamity(summary); return; } // 황금의 눈동자: 재앙이 그 턴의 이벤트를 대신한다
         var next = Turns.NextCultEvent();
         if (next == null) { actionBar.SetInteractable(true); PromptOrRest(summary); return; }
 
@@ -99,6 +101,21 @@ public class CultFlow : MonoBehaviour
             : summary;
         questionRunner.Answered += OnEventAnswered;
         questionRunner.Run(next.IsNegative ? GiftedV2Effects.WithRescueChoiceNormal(next.Question) : next.Question, preface, advancesTurn: false, eventId: next.Id);
+    }
+
+    void RunCalamity(string summary)
+    {
+        var question = EyeRules.BeginCalamity();
+        questionRunner.Answered += OnCalamityAnswered;
+        questionRunner.Run(question, $"{summary}\n<color=#DC5050>{Lang.Get("eye_calamity_struck")}</color>", advancesTurn: false);
+    }
+
+    void OnCalamityAnswered(string resultText)
+    {
+        questionRunner.Answered -= OnCalamityAnswered;
+        var taken = EyeRules.EndCalamity();
+        actionBar.SetInteractable(true);
+        PromptOrRest(string.IsNullOrEmpty(taken) ? resultText : $"{resultText}\n{taken}");
     }
 
     void OnEventAnswered(string resultText)

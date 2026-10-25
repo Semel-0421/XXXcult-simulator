@@ -58,6 +58,7 @@ public class GodState
     public GodPressure Pressure { get; }
 
     public AeonTree Aeons { get; } = new(); // 황금의 눈동자 모드의 아이온 트리 (신 모드에서는 비어 있음)
+    public DemiurgeState Demiurge { get; } = new(); // 황금의 눈동자 모드의 데미우르고스 스탯표·재앙 카운터
 
     public GodState()
     {

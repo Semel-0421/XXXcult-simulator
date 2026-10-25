@@ -28,7 +28,120 @@ public static class EyeRules
         if (sector == EyeSector.None) return;
         GameSession.SetEyeSector(sector);
         GameSession.God.Aeons.Grant(sector); // 고른 섹터의 0단계 선·악 두 노드를 처음부터 얻는다 (DEC-027)
+        if (!GameSession.God.Demiurge.Copied) GameSession.God.Demiurge.Copy(GameSession.Cult, GameSession.Personal); // 첫 스킬을 얻은 순간 교주의 스탯을 복사
     }
+
+    // ---- 재앙 (SYS_DEMIURGE 5절. 수치는 가안) ----
+
+    public const int CalamityThreshold = 40; // 카운터가 이만큼 차면 재앙
+    public const int ZeroPenalty = 10;       // 지키는 스탯이 0이 되면 패배 대신 카운터 +10 (DEC-028 L)
+    public const float DamageBase = 0.05f, DamagePerEvil = 0.01f; // 재앙 피해 = 현재 값 × (5% + 악한 아이온 수 × 1%)
+    public const int MaxCalamityGuard = 40;  // 선한 아이온의 피해 감소는 40%까지
+
+    static readonly StatId[] ZeroCult = { StatId.Followers, StatId.FollowerFaith, StatId.Reputation };
+    static readonly PersonalStatId[] ZeroPersonal = { PersonalStatId.Health, PersonalStatId.Mentality };
+
+    // 섹터마다 재앙이 주로 빼앗는 교단·개인 스탯 (6-1 표의 주력 스탯)
+    static (StatId a, StatId b, PersonalStatId p, PersonalStatId q) Targets(EyeSector sector) => sector switch
+    {
+        EyeSector.Yahweh => (StatId.Doctrine, StatId.FollowerFaith, PersonalStatId.Piety, PersonalStatId.Mentality),
+        EyeSector.Satan => (StatId.Offerings, StatId.Authority, PersonalStatId.Wealth, PersonalStatId.Repute),
+        EyeSector.Samael => (StatId.Followers, StatId.FollowerFaith, PersonalStatId.Health, PersonalStatId.Mentality),
+        _ => (StatId.Reputation, StatId.Authority, PersonalStatId.Repute, PersonalStatId.Health),
+    };
+
+    // 섹터별 분기당 카운터: 그 섹터 악한 아이온·그노시스의 재앙 합 - 그 섹터 선한 아이온 수 (최소 0)
+    public static int SectorGain(AeonTree tree, EyeSector sector)
+    {
+        var skills = tree.Learned.Select(AeonSkillCatalog.Find).Where(s => s != null && s.Sector == sector).ToList();
+        return Math.Max(0, skills.Sum(s => s.Calamity) - skills.Count(s => s.Kind == AeonKind.Good));
+    }
+
+    public static int CounterGain(AeonTree tree) => Sectors.Sum(s => SectorGain(tree, s));
+
+    // 분기마다: 카운터를 쌓고, 지키는 스탯이 0이면 1로 되살리며 카운터 +10
+    public static void Quarter()
+    {
+        var god = GameSession.God;
+        god.Demiurge.AddCounter(CounterGain(god.Aeons));
+        foreach (var id in ZeroCult)
+            if (GameSession.Cult[id].Value <= 0) { GameSession.Cult[id].Set(1); god.Demiurge.AddCounter(ZeroPenalty); }
+        foreach (var id in ZeroPersonal)
+            if (GameSession.Personal[id].Value <= 0) { GameSession.Personal[id].Set(1); god.Demiurge.AddCounter(ZeroPenalty); }
+    }
+
+    public static bool CalamityDue => GameSession.EyeMode && GameSession.CultFounded && GameSession.God.Demiurge.Counter >= CalamityThreshold;
+
+    // 재앙을 일으키는 섹터: 카운터를 가장 많이 쌓는 섹터 (같으면 시작 섹터)
+    public static EyeSector CalamitySector(AeonTree tree)
+    {
+        var best = tree.StartSector == EyeSector.None ? EyeSector.Yahweh : tree.StartSector;
+        foreach (var sector in Sectors)
+            if (SectorGain(tree, sector) > SectorGain(tree, best)) best = sector;
+        return best;
+    }
+
+    public static float DamageRate(AeonTree tree)
+    {
+        var evil = tree.Learned.Count(id => AeonSkillCatalog.Find(id)?.Kind == AeonKind.Evil);
+        var guard = Math.Min(tree.CalamityGuard, MaxCalamityGuard) / 100f;
+        return (DamageBase + evil * DamagePerEvil) * (1 - guard);
+    }
+
+    static int Loss(int value, float rate) => value <= 0 ? 0 : Math.Max(1, (int)Math.Round(value * rate, MidpointRounding.AwayFromZero));
+
+    static int[] cultBefore, personalBefore;
+
+    // 재앙 이벤트: 무엇을 내줄지 고른다 (교단 둘 / 몸 둘 / 하나씩). 고르기 전 스탯을 기억해 둔다
+    public static Question BeginCalamity()
+    {
+        var god = GameSession.God;
+        var cult = GameSession.Cult;
+        var personal = GameSession.Personal;
+        cultBefore = DemiurgeState.CultStats.Select(id => cult[id].Value).ToArray();
+        personalBefore = DemiurgeState.PersonalStats.Select(id => personal[id].Value).ToArray();
+
+        var sector = CalamitySector(god.Aeons);
+        var rate = DamageRate(god.Aeons);
+        var (a, b, p, q) = Targets(sector);
+        int la = Loss(cult[a].Value, rate), lb = Loss(cult[b].Value, rate), lp = Loss(personal[p].Value, rate), lq = Loss(personal[q].Value, rate);
+        string C(StatId id, int n) => $"{StatLabel.Of(id)} -{n:N0}";
+        string P(PersonalStatId id, int n) => $"{Lang.Get($"pstat_{id}")} -{n}";
+        var done = string.Format(Lang.Get("eye_calamity_done"), Lang.Get(SectorKey(sector)));
+        return new Question(string.Format(Lang.Get("eye_calamity"), Lang.Get(SectorKey(sector))),
+            new Choice($"{Lang.Get("eye_calamity_cult")} ({C(a, la)}, {C(b, lb)})", new Outcome(done).C(a, -la).C(b, -lb)),
+            new Choice($"{Lang.Get("eye_calamity_body")} ({P(p, lp)}, {P(q, lq)})", new Outcome(done).P(p, -lp).P(q, -lq)),
+            new Choice($"{Lang.Get("eye_calamity_half")} ({C(a, la)}, {P(p, lp)})", new Outcome(done).C(a, -la).P(p, -lp)));
+    }
+
+    // 재앙이 끝난 뒤: 줄어든 만큼 데미우르고스에게 더하고 카운터를 비운다. 가져간 것을 한 줄로 돌려준다
+    public static string EndCalamity()
+    {
+        var demiurge = GameSession.God.Demiurge;
+        var taken = new System.Collections.Generic.List<string>();
+        for (int i = 0; cultBefore != null && i < DemiurgeState.CultStats.Length; i++)
+        {
+            var id = DemiurgeState.CultStats[i];
+            var lost = cultBefore[i] - GameSession.Cult[id].Value;
+            if (lost <= 0) continue;
+            demiurge.Absorb(id, lost);
+            taken.Add($"{StatLabel.Of(id)} +{lost:N0}");
+        }
+        for (int i = 0; personalBefore != null && i < DemiurgeState.PersonalStats.Length; i++)
+        {
+            var id = DemiurgeState.PersonalStats[i];
+            var lost = personalBefore[i] - GameSession.Personal[id].Value;
+            if (lost <= 0) continue;
+            demiurge.Absorb(id, lost);
+            taken.Add($"{Lang.Get($"pstat_{id}")} +{lost}");
+        }
+        cultBefore = personalBefore = null;
+        demiurge.ResetCounter();
+        return taken.Count == 0 ? "" : string.Format(Lang.Get("eye_calamity_taken"), string.Join(", ", taken));
+    }
+
+    public static float Dominance => GameSession.God.Demiurge.Ratio(GameSession.Cult, GameSession.Personal);
+    public const float LoseDominanceAt = 2f; // 이 배를 넘으면 주도권을 뺏긴다 (승천 순간 판정: 6단계)
 
     // 교단 창설: 신의 본성 대신 바로 교리 선포를 채워 교단 행동을 연다
     public static void OnFounded()

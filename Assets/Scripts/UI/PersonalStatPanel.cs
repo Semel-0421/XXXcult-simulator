@@ -24,6 +24,42 @@ public class PersonalStatPanel : MonoBehaviour
         if (GameSession.GodMode) GameSession.Cult[StatId.Communion].Changed += OnTraitChanged;
         RefreshName();
         foreach (var row in rows) row.Bind(personal);
+        if (GameSession.EyeMode) BuildDemiurgeButton();
+    }
+
+    // 황금의 눈동자: 이름 옆 버튼으로 선택된 데미우르고스의 스탯 창을 연다. 주도권이 1.5배를 넘으면 붉게 경고한다
+    UnityEngine.UI.Button demiurgeButton;
+    TMP_Text demiurgeLabel;
+    float nextCheck;
+
+    void BuildDemiurgeButton()
+    {
+        if (demiurgeButton != null) return;
+        var parent = (RectTransform)nameLabel.transform.parent;
+        demiurgeButton = UiKit.MakeButton(parent, UiFonts.Strong != null ? UiFonts.Strong : nameLabel.font, "DemiurgeButton", "", 100, 30, out demiurgeLabel);
+        var rect = (RectTransform)demiurgeButton.transform;
+        rect.anchorMin = rect.anchorMax = new Vector2(1, 1);
+        rect.pivot = new Vector2(1, 1);
+        rect.anchoredPosition = new Vector2(-8, -42); // 이름 줄 아래, 접신 줄의 오른쪽 끝 (이름과 겹치지 않게)
+        rect.sizeDelta = new Vector2(100, 30);
+        demiurgeLabel.fontSize = UiType.Caption;
+        demiurgeButton.onClick.AddListener(DemiurgeWindow.Open);
+        RefreshDemiurgeButton();
+    }
+
+    void RefreshDemiurgeButton()
+    {
+        if (demiurgeButton == null) return;
+        demiurgeLabel.text = Lang.Get(EyeRules.SectorKey(GameSession.EyeSector));
+        var warn = GameSession.God.Demiurge.Copied && EyeRules.Dominance > DemiurgeWindow.WarnAt;
+        demiurgeButton.image.color = warn ? UiPalette.Crimson : UiPalette.Button;
+    }
+
+    void Update()
+    {
+        if (demiurgeButton == null || Time.unscaledTime < nextCheck) return;
+        nextCheck = Time.unscaledTime + 0.5f;
+        RefreshDemiurgeButton();
     }
 
     void OnTraitChanged(int _) => RefreshName();

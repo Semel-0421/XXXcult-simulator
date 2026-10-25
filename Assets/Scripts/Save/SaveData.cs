@@ -37,6 +37,10 @@ public class SaveData
     public int eyeSector;   // 첫 질문에서 고른 섹터 (EyeSector)
     public List<string> aeonSkills = new(); // 익힌 아이온 노드
     public List<int> aeonOrder = new();     // 9단계를 익힌 섹터 순서 (승천 섹터 판정)
+    public bool demiurgeCopied;                    // 데미우르고스가 교주의 시작 스탯을 복사했음
+    public List<int> demiurgeCult = new();         // DemiurgeState.CultStats 순서
+    public List<int> demiurgePersonal = new();     // DemiurgeState.PersonalStats 순서
+    public int calamityCounter, calamities;        // 재앙 카운터, 일어난 재앙 수
     public List<string> godSkills = new();   // 익힌 권능 노드
     public string godNature;                 // 신의 본성 (무료로 고른 바깥 노드)
     public List<string> godCores = new();    // 완성한 핵 순서 (승천 엔딩 판정)

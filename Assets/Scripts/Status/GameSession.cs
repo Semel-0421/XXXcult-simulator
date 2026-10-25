@@ -134,6 +134,7 @@ public static class GameSession
         if (CultFounded) GiftedV2Mirror.AfterTurn();
         if (GodMode && CultFounded) God.Quarter(Cult);
         if (Age.Quarter == 0 && GodMode && CultFounded) God.YearEnd(Cult, Personal);
+        if (EyeMode && CultFounded) EyeRules.Quarter(); // 재앙 카운터
         if (Age.Quarter == 0) GiftedV2Effects.OnYearEnd();
         NormalCounters.Refresh();
         HiddenCounters.Turn();
@@ -219,6 +220,11 @@ public static class GameSession
             godDissolution = God.Buildings.DissolutionOrdered,
             aeonSkills = God.Aeons.Learned.ToList(),
             aeonOrder = God.Aeons.ThresholdOrder.Select(s => (int)s).ToList(),
+            demiurgeCopied = God.Demiurge.Copied,
+            demiurgeCult = God.Demiurge.CultValues,
+            demiurgePersonal = God.Demiurge.PersonalValues,
+            calamityCounter = God.Demiurge.Counter,
+            calamities = God.Demiurge.Calamities,
         };
         data.godBuildings.AddRange(God.Buildings.Levels);
         data.godSkills.AddRange(God.Tree.Learned);
@@ -287,6 +293,7 @@ public static class GameSession
         God.Pressure.Restore(data.godEnvy, data.godSuspicion);
         God.Buildings.Restore(data.godBuildings, data.godDissolution);
         God.Aeons.Restore(data.aeonSkills, EyeSector, data.aeonOrder);
+        God.Demiurge.Restore(data.demiurgeCopied, data.demiurgeCult, data.demiurgePersonal, data.calamityCounter, data.calamities);
         Progress.ApplyRun(data.run); // 회차가 없던 옛 저장(0)은 제한 없이 이어 간다
     }
 
