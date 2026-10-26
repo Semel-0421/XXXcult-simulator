@@ -1,0 +1,56 @@
+==== 본편 · 겹침 끔 ====
+휴식 106번 · 휴식 분기 합 704 · 한 번 최장 128분기 · 50회 상한 0번
+[본편 · 겹침 끔] 경력 20명 × 최대 5회차, 판 84개
+  목표 엔딩 첫 달성 회차: 평균 4.50 / 중앙값 5 (미달성 6명)
+  최종 엔딩(아무거나) 첫 달성 회차: 평균 4.50 / 중앙값 5
+  회차별 누적 목표 달성률: 1:0% 2:0% 3:35% 4:45% 5:70%
+  덕목 가지 굿 (7명): 평균 4.00회차, 누적 1:0% 3:57% 5:71% 8:100% 5:71%
+  덕목 가지 배드 (4명): 평균 5.00회차, 누적 1:0% 3:25% 5:50% 8:100% 5:50%
+  욕망 가지 굿 (3명): 평균 5.67회차, 누적 1:0% 3:0% 5:33% 8:100% 5:33%
+  욕망 가지 배드 (6명): 평균 4.17회차, 누적 1:0% 3:33% 5:100% 8:100% 5:100%
+  판당 평균 교단 운영 22.9년, 사망 0판 (창설 전 0)
+  엔딩 분포: extreme_LeaderFaith_min 13, extreme_Communion_max 13, extreme_Doctrine_max 12, dissolved 7, extreme_FollowerFaith_min 6, extreme_Offerings_min 4, extreme_Doctrine_min 4, final_lust10a_bad 3, extreme_Offerings_max 3, final_temperance10a_good 2, extreme_Reputation_max 2, final_patience10a_good 2, extreme_Followers_min 2, extreme_FollowerFaith_max 2, extreme_Communion_min 1, final_patience10a_bad 1, final_appetite10a_bad 1, final_appetite10a_good 1, final_ambition10a_bad 1, final_charity10a_good 1, extreme_Authority_min 1, final_charity10a_bad 1, final_greed10a_bad 1
+
+==== 신 모드 · 겹침 끔 ====
+휴식 0번 · 휴식 분기 합 0 · 한 번 최장 0분기 · 50회 상한 0번
+[준비된 신 · 핵 루트 봇] 봇 20명 × 5판 = 100판
+  승천률 77.0% (목표한 조합 그대로 77.0%), 패배율 23.0%
+  일반 목표(신격+인격) 75판: 목표 달성 85.3%, 승천 85.3%, 패배 14.7%, 승천 평균 14.1년
+  히든 목표(같은 계열 핵 둘) 25판: 목표 달성 52.0%, 승천 52.0%, 패배 48.0%, 승천 평균 15.2년
+  이벤트 성공률 감점 평균 11.2%p (최고치 평균)
+  최고 압박 단계 평균: 신계 2.82 / 지상 3.18
+  승천까지 교단 연수: 평균 14.3년 / 중앙값 14년 / 최소 11 최대 17
+  판당 평균 교단 연수 13.6년, 권능 포인트 획득 68.5 (연평균 5.02), 익힌 노드 63.2개, 도달 단계 5.77
+  봇별 첫 승천 판: 평균 1.70 (10판 안에 한 번도 못 한 봇 1명)
+  끝날 때 평균: 신도 65명, 신도 믿음 251, 명망 166, 체력 40.3, 정신 62.9
+  엔딩 분포: god_disbanded 21 (21.0%, 평균 11.3년), god_miracle_desire 19 (19.0%, 평균 13.6년), god_miracle_mercy 18 (18.0%, 평균 13.3년), god_prophecy_mercy 15 (15.0%, 평균 14.8년), god_prophecy_desire 12 (12.0%, 평균 15.3년), god_human 10 (10.0%, 평균 16.0년), god_divine 3 (3.0%, 평균 12.3년), god_forgotten 2 (2.0%, 평균 13.0년)
+  판 번호별 승천률: 1:70.0% 2:80.0% 3:80.0% 4:70.0% 5:85.0%
+
+==== 본편 · 겹침 켬 ====
+휴식 100번 · 휴식 분기 합 473 · 한 번 최장 15분기 · 50회 상한 0번
+[본편 · 겹침 켬] 경력 20명 × 최대 5회차, 판 84개
+  목표 엔딩 첫 달성 회차: 평균 4.45 / 중앙값 5 (미달성 5명)
+  최종 엔딩(아무거나) 첫 달성 회차: 평균 4.45 / 중앙값 5
+  회차별 누적 목표 달성률: 1:0% 2:0% 3:35% 4:45% 5:75%
+  덕목 가지 굿 (7명): 평균 4.00회차, 누적 1:0% 3:57% 5:71% 8:100% 5:71%
+  덕목 가지 배드 (4명): 평균 4.75회차, 누적 1:0% 3:25% 5:75% 8:100% 5:75%
+  욕망 가지 굿 (3명): 평균 5.67회차, 누적 1:0% 3:0% 5:33% 8:100% 5:33%
+  욕망 가지 배드 (6명): 평균 4.17회차, 누적 1:0% 3:33% 5:100% 8:100% 5:100%
+  판당 평균 교단 운영 22.2년, 사망 0판 (창설 전 0)
+  엔딩 분포: extreme_LeaderFaith_min 14, extreme_Communion_max 13, extreme_Doctrine_max 12, extreme_FollowerFaith_min 7, dissolved 7, extreme_Offerings_min 4, final_lust10a_bad 3, extreme_Doctrine_min 3, final_temperance10a_good 2, extreme_Authority_min 2, final_charity10a_bad 2, final_patience10a_good 2, extreme_Followers_min 2, extreme_FollowerFaith_max 2, extreme_Offerings_max 2, extreme_Communion_min 1, final_patience10a_bad 1, final_appetite10a_bad 1, final_appetite10a_good 1, final_ambition10a_bad 1, final_charity10a_good 1, final_greed10a_bad 1
+
+==== 신 모드 · 겹침 켬 ====
+휴식 0번 · 휴식 분기 합 0 · 한 번 최장 0분기 · 50회 상한 0번
+[준비된 신 · 핵 루트 봇] 봇 20명 × 5판 = 100판
+  승천률 77.0% (목표한 조합 그대로 77.0%), 패배율 23.0%
+  일반 목표(신격+인격) 75판: 목표 달성 85.3%, 승천 85.3%, 패배 14.7%, 승천 평균 14.1년
+  히든 목표(같은 계열 핵 둘) 25판: 목표 달성 52.0%, 승천 52.0%, 패배 48.0%, 승천 평균 15.2년
+  이벤트 성공률 감점 평균 11.2%p (최고치 평균)
+  최고 압박 단계 평균: 신계 2.82 / 지상 3.18
+  승천까지 교단 연수: 평균 14.3년 / 중앙값 14년 / 최소 11 최대 17
+  판당 평균 교단 연수 13.6년, 권능 포인트 획득 68.5 (연평균 5.02), 익힌 노드 63.2개, 도달 단계 5.77
+  봇별 첫 승천 판: 평균 1.70 (10판 안에 한 번도 못 한 봇 1명)
+  끝날 때 평균: 신도 65명, 신도 믿음 251, 명망 166, 체력 40.3, 정신 62.9
+  엔딩 분포: god_disbanded 21 (21.0%, 평균 11.3년), god_miracle_desire 19 (19.0%, 평균 13.6년), god_miracle_mercy 18 (18.0%, 평균 13.3년), god_prophecy_mercy 15 (15.0%, 평균 14.8년), god_prophecy_desire 12 (12.0%, 평균 15.3년), god_human 10 (10.0%, 평균 16.0년), god_divine 3 (3.0%, 평균 12.3년), god_forgotten 2 (2.0%, 평균 13.0년)
+  판 번호별 승천률: 1:70.0% 2:80.0% 3:80.0% 4:70.0% 5:85.0%
+

@@ -212,8 +212,8 @@ public static class EyeSimulation
             if (resting.Count == 0) break;
             Tally(rounds == 0 ? RestFirst : RestChain, string.Join("+", resting.OrderBy(x => x)));
             rounds++;
-            // 화면 흐름(CultFlow.RestRoutine)과 같은 RestCycle: 눈동자 모드는 쉬는 중 새로 0이 된 스탯이 합류한다
-            var cycle = new RestCycle(resting, GameSession.EyeMode);
+            // 화면 흐름(CultFlow.RestRoutine)과 같은 RestCycle: 쉬는 중 새로 0이 된 스탯이 합류한다
+            var cycle = new RestCycle(resting, overlap: true);
             while (!cycle.Done)
             {
                 cycle.Apply(GameSession.Personal, GameSession.Cult);
@@ -407,5 +407,33 @@ public class EyeSimulationTests
         finally { EyeSimulation.MaxYears = years; }
         Assert.AreEqual(28, EyeSimulation.Results.Count);
         Assert.IsFalse(GameSession.EyeMode, "시뮬레이션 뒤에는 본편 상태로 돌아가야 함");
+    }
+}
+
+// 휴식 겹침 전·후 비교 (본편·신 모드 시뮬레이션, 9단계 결정 확인용)
+public static class RestOverlapComparison
+{
+    public static string Run(int careers, int runs, int seed)
+    {
+        var sb = new StringBuilder();
+        var previous = BalanceSimulation.Overlap;
+        try
+        {
+            foreach (var overlap in new[] { false, true })
+            {
+                BalanceSimulation.Overlap = overlap;
+                foreach (var god in new[] { false, true })
+                {
+                    BalanceSimulation.RestCount = BalanceSimulation.RestQuarters = BalanceSimulation.RestLongest = BalanceSimulation.RestGuardHits = 0;
+                    var title = $"{(god ? "신 모드" : "본편")} · 겹침 {(overlap ? "켬" : "끔")}";
+                    var report = god ? GodSimulation.Run(careers, runs, seed).Format() : BalanceSimulation.Run(careers, runs, seed).Format(title);
+                    sb.AppendLine($"==== {title} ====");
+                    sb.AppendLine($"휴식 {BalanceSimulation.RestCount}번 · 휴식 분기 합 {BalanceSimulation.RestQuarters} · 한 번 최장 {BalanceSimulation.RestLongest}분기 · 50회 상한 {BalanceSimulation.RestGuardHits}번");
+                    sb.AppendLine(report);
+                }
+            }
+        }
+        finally { BalanceSimulation.Overlap = previous; }
+        return sb.ToString();
     }
 }

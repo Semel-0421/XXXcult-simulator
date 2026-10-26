@@ -236,18 +236,31 @@ public static class BalanceSimulation
         return ending;
     }
 
+    // 화면 흐름(CultFlow.RestRoutine)과 같은 RestCycle. Overlap=false면 겹침 이전 규칙(1년씩 끊어 다시 판정)으로 비교할 수 있다
+    internal static bool Overlap = true;
+    internal static int RestCount, RestQuarters, RestLongest, RestGuardHits; // 휴식 집계 (진단용, 호출한 쪽이 비운다)
+
     internal static void Rest()
     {
+        int quarters = 0;
         for (int guard = 0; guard < 50; guard++)
         {
             var resting = global::Rest.ZeroStats(GameSession.Personal);
-            if (resting.Count == 0 || Progress.ForcedEnding() != null) return;
-            for (int turn = 0; turn < global::Rest.Turns; turn++)
+            if (resting.Count == 0 || Progress.ForcedEnding() != null) break;
+            if (guard == 49) RestGuardHits++;
+            var cycle = new RestCycle(resting, Overlap);
+            while (!cycle.Done)
             {
-                global::Rest.ApplyTurn(GameSession.Personal, GameSession.Cult, resting);
+                cycle.Apply(GameSession.Personal, GameSession.Cult);
                 GameSession.AdvanceTurn();
+                cycle.EndTurn(GameSession.Personal);
+                quarters++;
             }
         }
+        if (quarters == 0) return;
+        RestCount++;
+        RestQuarters += quarters;
+        RestLongest = Math.Max(RestLongest, quarters);
     }
 
     // 목표 가지를 1단계부터 차례로 배운다 (6단계 이후 갈래는 배울 수 있는 쪽)

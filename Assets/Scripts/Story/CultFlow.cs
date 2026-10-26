@@ -166,7 +166,7 @@ public class CultFlow : MonoBehaviour
             var resting = Rest.ZeroStats(GameSession.Personal);
             if (resting.Count == 0 || GameSession.Dead) break;
             GameSession.Count("rests");
-            var cycle = new RestCycle(resting, GameSession.EyeMode); // 황금의 눈동자: 쉬는 중 새로 0이 된 스탯은 합류하고 휴식이 길어진다
+            var cycle = new RestCycle(resting, overlap: true); // 쉬는 중 새로 0이 된 스탯은 합류하고 휴식이 길어진다 (전체 모드, 9단계 결정)
             while (!cycle.Done)
             {
                 ActionBar.BeginTurn(); // 쉬는 턴마다 상단 바 강조를 새로 잰다
