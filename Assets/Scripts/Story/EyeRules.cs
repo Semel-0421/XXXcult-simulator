@@ -188,7 +188,8 @@ public static class EyeRules
     // 교단 스탯(최대 1000)을 키워 둘수록 그것을 내주게 되고, 낮은 스탯으로 휴식에 들어가면 그 위험을 피할 수 없다.
     public const float RestDamageScale = 2f;
 
-    public static string RestCalamity()
+    // resting: 지금 쉬고 있는 스탯은 표적에서 뺀다 (9단계 결정)
+    public static string RestCalamity(System.Collections.Generic.ICollection<PersonalStatId> resting = null)
     {
         var god = GameSession.God;
         var cult = GameSession.Cult;
@@ -202,6 +203,7 @@ public static class EyeRules
         }
         foreach (var id in DemiurgeState.PersonalStats)
         {
+            if (resting != null && resting.Contains(id)) continue;
             var part = personal[id].Value / (float)PersonalStatus.MaxValue;
             if (part > best) { best = part; bestPersonal = id; bestCult = null; }
         }

@@ -274,4 +274,57 @@ public class DemiurgeTests
         Assert.AreEqual(0, Demiurge.Counter);
         StringAssert.Contains(StatLabel.Of(StatId.Offerings), text);
     }
+
+    [Test]
+    public void RestCalamity_SkipsRestingStats()
+    {
+        EyeRules.ChooseSector(EyeSector.Yahweh);
+        foreach (var id in DemiurgeState.CultStats) GameSession.Cult[id].Set(100);
+        foreach (var id in DemiurgeState.PersonalStats) GameSession.Personal[id].Set(20);
+        GameSession.Personal[PersonalStatId.Health].Set(80); // 가장 높지만 쉬는 중
+        GameSession.Personal[PersonalStatId.Lust].Set(60);
+        Demiurge.AddCounter(EyeRules.CalamityThreshold);
+        EyeRules.RestCalamity(new[] { PersonalStatId.Health });
+        Assert.AreEqual(80, GameSession.Personal[PersonalStatId.Health].Value);
+        Assert.Less(GameSession.Personal[PersonalStatId.Lust].Value, 60);
+    }
+
+    // 휴식 겹침 (눈동자 모드): 쉬는 중 0이 된 스탯은 합류하고 휴식이 마지막 합류 + 4분기까지 길어진다. 모두 함께 회복한다
+    static PersonalStatus RestReady()
+    {
+        var p = GameSession.Personal;
+        foreach (var id in DemiurgeState.PersonalStats) p[id].Set(50);
+        GameSession.MergePersonalRaised(Rest.UpdateRaised(p, 0)); // 0을 넘은 적이 있어야 휴식 대상
+        p[PersonalStatId.Health].Set(0);
+        p[PersonalStatId.Piety].Set(1); // 첫 분기 감소(-1)로 0이 된다
+        return p;
+    }
+
+    [Test]
+    public void RestCycle_Overlap_JoinsAndRecoversTogether()
+    {
+        EyeRules.ChooseSector(EyeSector.Satan);
+        var p = RestReady();
+        var cycle = new RestCycle(Rest.ZeroStats(p), overlap: true);
+        cycle.Apply(p, GameSession.Cult);
+        GameSession.AdvanceTurn();
+        Assert.AreEqual(1, cycle.EndTurn(p));
+        Assert.AreEqual(1 + Rest.Turns, cycle.Length);
+        while (!cycle.Done) { cycle.Apply(p, GameSession.Cult); GameSession.AdvanceTurn(); cycle.EndTurn(p); }
+        Assert.AreEqual(5 * Rest.Recover, p[PersonalStatId.Health].Value);
+        Assert.AreEqual(4 * Rest.Recover, p[PersonalStatId.Piety].Value);
+        Assert.AreEqual(0, Rest.ZeroStats(p).Count);
+    }
+
+    [Test]
+    public void RestCycle_WithoutOverlap_KeepsOneYear()
+    {
+        EyeRules.ChooseSector(EyeSector.Satan);
+        var p = RestReady();
+        var cycle = new RestCycle(Rest.ZeroStats(p), overlap: false);
+        while (!cycle.Done) { cycle.Apply(p, GameSession.Cult); GameSession.AdvanceTurn(); cycle.EndTurn(p); }
+        Assert.AreEqual(Rest.Turns, cycle.Turn);
+        Assert.AreEqual(1, cycle.Resting.Count);
+        Assert.AreEqual(0, p[PersonalStatId.Piety].Value); // 합류하지 않아 다음 휴식으로 넘어간다
+    }
 }

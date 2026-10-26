@@ -166,23 +166,25 @@ public class CultFlow : MonoBehaviour
             var resting = Rest.ZeroStats(GameSession.Personal);
             if (resting.Count == 0 || GameSession.Dead) break;
             GameSession.Count("rests");
-            var names = string.Join(", ", resting.Select(id => Lang.Get($"pstat_{id}")));
-            for (int turn = 1; turn <= Rest.Turns; turn++)
+            var cycle = new RestCycle(resting, GameSession.EyeMode); // 황금의 눈동자: 쉬는 중 새로 0이 된 스탯은 합류하고 휴식이 길어진다
+            while (!cycle.Done)
             {
                 ActionBar.BeginTurn(); // 쉬는 턴마다 상단 바 강조를 새로 잰다
-                Rest.ApplyTurn(GameSession.Personal, GameSession.Cult, resting);
+                cycle.Apply(GameSession.Personal, GameSession.Cult);
                 GameSession.AdvanceTurn();
-                var progress = string.Format(Lang.Get("rest_progress"), names, turn, Rest.Turns);
-                if (EyeRules.CalamityDue) // 황금의 눈동자: 쉬는 중 재앙은 고를 수 없이 가장 높은 스탯을 빼앗긴다
+                cycle.EndTurn(GameSession.Personal);
+                if (cycle.Turn % Rest.Turns == 0) GiftedV2GodHooks.OnRestYear();
+                var names = string.Join(", ", cycle.Resting.Select(id => Lang.Get($"pstat_{id}")));
+                var progress = string.Format(Lang.Get("rest_progress"), names, cycle.Turn, cycle.Length);
+                if (EyeRules.CalamityDue) // 황금의 눈동자: 쉬는 중 재앙은 고를 수 없이 쉬지 않는 스탯 중 가장 높은 것을 빼앗긴다
                 {
-                    questionPanel.Show($"{progress}\n\n<color=#DC5050>{EyeRules.RestCalamity()}</color>");
+                    questionPanel.Show($"{progress}\n\n<color=#DC5050>{EyeRules.RestCalamity(cycle.Resting.ToList())}</color>");
                     yield return new WaitForSecondsRealtime(2.4f);
                     continue;
                 }
                 questionPanel.Show(progress);
                 yield return new WaitForSecondsRealtime(0.8f);
             }
-            GiftedV2GodHooks.OnRestYear();
         }
         restRoutine = null;
         if (TryDissolve()) yield break; // 쉬는 동안 명망이 바닥났다면 해체

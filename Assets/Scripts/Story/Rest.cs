@@ -64,3 +64,43 @@ public static class Rest
             if (!CultStatus.IsHidden(id)) cult.AddWithRemainder(id, -CultDrain);
     }
 }
+
+// 휴식 한 번의 진행 (분기 단위). 본편·신 모드는 처음 0이던 스탯으로 Turns 분기를 쉬고 끝난다.
+// 겹침(황금의 눈동자, SYS_DEMIURGE 9단계 결정): 쉬는 동안 건강군 스탯이 새로 0이 되면 합류하고, 휴식은 마지막 합류 + Turns 분기까지 길어진다.
+// 합류한 스탯은 휴식이 끝날 때까지 함께 회복한다. 쉬는 스탯은 늘기만 해서 반드시 끝난다.
+public class RestCycle
+{
+    readonly List<PersonalStatId> resting;
+    readonly bool overlap;
+
+    public IReadOnlyList<PersonalStatId> Resting => resting;
+    public int Turn { get; private set; }   // 지금까지 쉰 분기
+    public int Length { get; private set; } // 휴식이 끝나는 분기 (합류하면 늘어난다)
+    public bool Done => Turn >= Length;
+
+    public RestCycle(IEnumerable<PersonalStatId> zero, bool overlap)
+    {
+        resting = new List<PersonalStatId>(zero);
+        this.overlap = overlap;
+        Length = Rest.Turns;
+    }
+
+    public void Apply(PersonalStatus personal, CultStatus cult) => Rest.ApplyTurn(personal, cult, resting);
+
+    // 분기가 넘어간 뒤 부른다. 새로 0이 된 스탯이 있으면 합류시키고 그 수를 돌려준다
+    public int EndTurn(PersonalStatus personal)
+    {
+        Turn++;
+        if (!overlap) return 0;
+        int joined = 0;
+        foreach (var id in Rest.ZeroStats(personal))
+        {
+            if (resting.Contains(id)) continue;
+            resting.Add(id);
+            joined++;
+        }
+        if (joined > 0) Length = Turn + Rest.Turns;
+        return joined;
+    }
+}
+

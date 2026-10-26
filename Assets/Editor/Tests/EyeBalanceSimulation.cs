@@ -79,7 +79,7 @@ public static class EyeSimulation
         Results = new List<RunResult>();
         Acts = new Dictionary<string, int>();
         Zeros = new Dictionary<string, int>();
-        RestFirst = new(); RestChain = new(); RestTaken = new(); ChainLength = new();
+        RestFirst = new(); RestChain = new(); RestTaken = new(); ChainLength = new(); RestJoined = new(); RestLength = new();
         Gain = new Dictionary<string, float[]>(); Loss = new Dictionary<string, float[]>(); Stages = new Dictionary<string, int>();
         AchievementBots = new Dictionary<string, int>();
         Bots = 0;
@@ -200,7 +200,7 @@ public static class EyeSimulation
 
     // 휴식: 화면 흐름(CultFlow.RestRoutine)과 같이, 쉬는 중 문턱에 이르면 가장 높은 스탯을 빼앗긴다
     // 휴식 추적 (진단용): 휴식 한 번(1년)마다 어떤 스탯이 0이라 쉬었는지, 연쇄 몇 번째인지, 휴식 재앙이 무엇을 가져갔는지
-    public static Dictionary<string, int> RestFirst = new(), RestChain = new(), RestTaken = new(), ChainLength = new();
+    public static Dictionary<string, int> RestFirst = new(), RestChain = new(), RestTaken = new(), ChainLength = new(), RestJoined = new(), RestLength = new();
     static void Tally(Dictionary<string, int> d, string key) => d[key] = d.TryGetValue(key, out var n) ? n + 1 : 1;
 
     static void Rest(RunResult r)
@@ -212,22 +212,26 @@ public static class EyeSimulation
             if (resting.Count == 0) break;
             Tally(rounds == 0 ? RestFirst : RestChain, string.Join("+", resting.OrderBy(x => x)));
             rounds++;
-            for (int turn = 0; turn < global::Rest.Turns; turn++)
+            // 화면 흐름(CultFlow.RestRoutine)과 같은 RestCycle: 눈동자 모드는 쉬는 중 새로 0이 된 스탯이 합류한다
+            var cycle = new RestCycle(resting, GameSession.EyeMode);
+            while (!cycle.Done)
             {
-                global::Rest.ApplyTurn(GameSession.Personal, GameSession.Cult, resting);
+                cycle.Apply(GameSession.Personal, GameSession.Cult);
                 GameSession.AdvanceTurn();
+                if (cycle.EndTurn(GameSession.Personal) > 0) Tally(RestJoined, string.Join("+", cycle.Resting.OrderBy(x => x)));
                 Acts["rest"] = Acts.TryGetValue("rest", out var c) ? c + 1 : 1;
                 r.RestTurns++;
                 if (EyeRules.CalamityDue)
                 {
                     var cultBefore = DemiurgeState.CultStats.Select(id => GameSession.Cult[id].Value).ToArray();
                     var meBefore = DemiurgeState.PersonalStats.Select(id => GameSession.Personal[id].Value).ToArray();
-                    EyeRules.RestCalamity();
+                    EyeRules.RestCalamity(cycle.Resting.ToList());
                     r.RestCalamities++;
                     for (int i = 0; i < cultBefore.Length; i++) if (GameSession.Cult[DemiurgeState.CultStats[i]].Value < cultBefore[i]) Tally(RestTaken, DemiurgeState.CultStats[i].ToString());
                     for (int i = 0; i < meBefore.Length; i++) if (GameSession.Personal[DemiurgeState.PersonalStats[i]].Value < meBefore[i]) Tally(RestTaken, DemiurgeState.PersonalStats[i].ToString());
                 }
             }
+            Tally(RestLength, cycle.Length.ToString());
         }
         if (rounds > 0) Tally(ChainLength, rounds >= 50 ? "50(상한)" : rounds.ToString());
     }
@@ -339,6 +343,8 @@ public static class EyeSimulation
         sb.AppendLine("휴식 연쇄(이어서 다시 쉰 휴식에서 0인 스탯): " + Top(RestChain));
         sb.AppendLine("연쇄 길이(한 번 쉬기 시작해 몇 년 이어졌나): " + string.Join(", ", ChainLength.OrderBy(x => x.Key.Length).ThenBy(x => x.Key).Select(x => $"{x.Key}년 {x.Value}")));
         sb.AppendLine("휴식 재앙이 깎은 스탯: " + Top(RestTaken));
+        sb.AppendLine("휴식 중 합류(합류 뒤 쉬는 스탯): " + Top(RestJoined));
+        sb.AppendLine("휴식 한 번의 길이(분기): " + string.Join(", ", RestLength.OrderBy(x => int.Parse(x.Key)).Select(x => $"{x.Key}분기 {x.Value}")));
         sb.AppendLine("휴식 분기/판 · 휴식 재앙/판 · 승천 순간 교주 무게: " + string.Join(" · ", Results.GroupBy(x => x.Strategy)
             .Select(g => $"{g.Key} {g.Average(x => x.RestTurns):0.0} / {g.Average(x => x.RestCalamities):0.00} / {g.Average(x => x.PlayerWeight):0.00}")));
         sb.AppendLine($"황금의 눈동자 시뮬레이션: 전략 7 × 시작 섹터 4 = 봇 {Bots}명, 판 {Results.Count}개, 최대 {MaxYears}년");
