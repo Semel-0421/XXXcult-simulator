@@ -165,6 +165,7 @@ public static class EndingGallery
         var box = UiKit.Child(root.transform, "Tooltip", typeof(Image));
         tooltipRect = box;
         box.sizeDelta = new Vector2(400, 150) * UiType.TooltipScale;
+        box.pivot = new Vector2(0, 1); // MoveTooltip은 왼쪽 위 기준으로 계산한다 (가운데 피벗이면 커서·손가락을 덮었다)
         box.GetComponent<Image>().color = new Color(0.1f, 0.04f, 0.16f, 0.97f);
         box.GetComponent<Image>().raycastTarget = false;
         tooltipText = UiKit.Label(box, font, "Text", 21 * UiType.TooltipScale, TextAlignmentOptions.TopLeft, UiPalette.TextBright);

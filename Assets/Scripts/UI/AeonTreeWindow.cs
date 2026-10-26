@@ -48,6 +48,8 @@ public static class AeonTreeWindow
         Refresh();
     }
 
+    static void OnLangChanged() { if (IsOpen) Refresh(); } // 창을 연 채 언어를 바꿔도 머리글·사다리 설명이 따라오게
+
     public static void Close()
     {
         if (!IsOpen) return;
@@ -102,6 +104,8 @@ public static class AeonTreeWindow
         area.GetComponent<Image>().color = new Color(0.04f, 0.02f, 0.07f, 0.85f);
         BuildGrid(area, font);
         BuildInfoPanel(panel, font);
+        Lang.Changed -= OnLangChanged; // 장면이 바뀌어 창을 다시 만들 때 중복 구독하지 않게
+        Lang.Changed += OnLangChanged;
         root.SetActive(false);
     }
 
