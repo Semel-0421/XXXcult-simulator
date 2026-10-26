@@ -10,10 +10,13 @@ using NUnit.Framework;
 //   Balanced: 시작 섹터의 선·악을 단계마다 번갈아 → 그노시스 → 승천
 //   EvilFirst: 시작 섹터의 악한 아이온 4단계까지 먼저, 그다음 선한 아이온 → 그노시스 → 승천
 //   Wide: 네 섹터의 0~4단계와 그노시스를 모두 익힌 뒤 시작 섹터로 승천 (네 얼굴을 삼킨 자 노림)
+//   LowStart: Balanced 계획, 교단을 세운 직후 교주 스탯을 낮춘다 (개인 전부 10, 교리를 뺀 교단 스탯 100)
+//   Loser: Balanced 계획, 욕망을 쓰지 않고 이벤트마다 개인 스탯을 가장 많이 잃는(덜 얻는) 선택지를 고른다 (스탯 방치)
+//   Exhaust: Balanced 계획, 2년마다 체력을 0으로 만들어 1년 휴식에 들어가게 한다 (휴식 중 재앙 확인용 시나리오)
 //   Rester: Balanced 계획이지만 체력·정신력을 욕망으로 채우지 않고 바닥까지 둬 휴식에 들어간다 (스탯 방치 → 배드 경로 확인)
 public static class EyeSimulation
 {
-    public enum Strategy { Balanced, EvilFirst, Wide, Rester }
+    public enum Strategy { Balanced, EvilFirst, Wide, Rester, LowStart, Loser, Exhaust }
     public static int MaxYears = 80; // 테스트는 짧게 줄여 돌린다
 
     public class RunResult
@@ -22,7 +25,7 @@ public static class EyeSimulation
         public EyeSector Sector;
         public string EndingId = "none", Stall = "";
         public int GainEnd, ZeroTurns, Doctrine, DoctrinePeak, Preaches, Proselytes, Years, Calamities, RestCalamities, Learned, PointsEarned, AscendYear = -1;
-        public float Dominance, DominancePeak, DemiurgeWeight, PlayerWeight; public int EvilLearned, CounterTotal, SurplusTotal;
+        public float Dominance, DominancePeak, DemiurgeWeight, PlayerWeight; public int RestTurns, EvilLearned, CounterTotal, SurplusTotal;
     }
 
     public static List<RunResult> Results = new();
@@ -128,7 +131,7 @@ public static class EyeSimulation
 
     static List<AeonSkill> Plan(Strategy strategy, EyeSector sector) => strategy switch
     {
-        Strategy.Balanced or Strategy.Rester => Lines(sector, false).Concat(Climb(sector, 5, 10)).ToList(),
+        Strategy.Balanced or Strategy.Rester or Strategy.LowStart or Strategy.Loser or Strategy.Exhaust => Lines(sector, false).Concat(Climb(sector, 5, 10)).ToList(),
         Strategy.EvilFirst => Lines(sector, true).Concat(Climb(sector, 5, 10)).ToList(),
         _ => Lines(sector, false).Concat(Climb(sector, 5, 5))
             .Concat(EyeRules.Sectors.Where(s => s != sector).SelectMany(s => Lines(s, false).Concat(Climb(s, 5, 5))))
@@ -161,7 +164,7 @@ public static class EyeSimulation
     {
         var me = GameSession.Personal;
         var cult = GameSession.Cult;
-        if (strategy != Strategy.Rester && (me[PersonalStatId.Health].Value <= 25 || me[PersonalStatId.Mentality].Value <= 25)) return CultAction.Desire;
+        if (strategy is not (Strategy.Rester or Strategy.Loser) && (me[PersonalStatId.Health].Value <= 25 || me[PersonalStatId.Mentality].Value <= 25)) return CultAction.Desire;
         bool Can(CultAction a) => cult[StatId.Communion].Value >= GodRules.CommunionCost(a);
         if (!Can(CultAction.Proselytize)) return CultAction.Pray;
         if (cult[StatId.Reputation].Value < Floor) return CultAction.Serve;
@@ -173,6 +176,17 @@ public static class EyeSimulation
         if (cult[StatId.Reputation].Value < Guard) return CultAction.Serve;
         if (cult[StatId.FollowerFaith].Value < Guard && Can(CultAction.Preach)) return CultAction.Preach;
         return CultAction.Proselytize;
+    }
+
+    // 방치 봇의 이벤트 선택: 개인 스탯 증감의 기대값이 가장 낮은 선택지
+    static Choice Worst(Question q)
+    {
+        float Personal(Outcome o) => o == null ? 0 : o.Effects.Sum(e => (float)e.Amount);
+        return q.Choices.OrderBy(c =>
+        {
+            var p = c.Chance >= 1f ? 1f : c.ChanceFor(GameSession.Personal);
+            return p * Personal(c.Success) + (1 - p) * Personal(c.Fail);
+        }).First();
     }
 
     // 재앙 선택: 최대치 대비 잃는 비율이 가장 작은 선택지
@@ -195,6 +209,7 @@ public static class EyeSimulation
                 global::Rest.ApplyTurn(GameSession.Personal, GameSession.Cult, resting);
                 GameSession.AdvanceTurn();
                 Acts["rest"] = Acts.TryGetValue("rest", out var c) ? c + 1 : 1;
+                r.RestTurns++;
                 if (EyeRules.CalamityDue) { EyeRules.RestCalamity(); r.RestCalamities++; }
             }
         }
@@ -208,12 +223,23 @@ public static class EyeSimulation
         GameSession.MarkStarted();
         GameSession.FoundCult("시뮬눈동자");
         EyeRules.OnFounded();
+        if (strategy == Strategy.LowStart)
+        {
+            foreach (var id in DemiurgeState.CultStats) if (id != StatId.Doctrine) GameSession.Cult[id].Set(100);
+            foreach (var id in DemiurgeState.PersonalStats) GameSession.Personal[id].Set(10);
+        }
 
         var r = new RunResult { Strategy = strategy, Sector = sector };
         var plan = Plan(strategy, sector);
         Endings.Ending ending = null;
+        int exhaustedYear = 0;
         while (ending == null && GameSession.CultTime.Years < MaxYears)
         {
+            if (strategy == Strategy.Exhaust && GameSession.CultTime.Years >= exhaustedYear + 2)
+            {
+                exhaustedYear = GameSession.CultTime.Years;
+                GameSession.Personal[PersonalStatId.Health].Set(0);
+            }
             var snap = Snap();
             Rest(r);
             Book("휴식(휴식 재앙 포함)", snap);
@@ -260,7 +286,7 @@ public static class EyeSimulation
             {
                 var next = Turns.NextCultEvent();
                 snap = Snap();
-                if (next != null) Turns.Answer(GodSimulation.Best(next.Question), next.Id);
+                if (next != null) Turns.Answer(strategy == Strategy.Loser ? Worst(next.Question) : GodSimulation.Best(next.Question), next.Id);
                 Book("이벤트", snap);
             }
         }
@@ -291,7 +317,9 @@ public static class EyeSimulation
     public static string Format()
     {
         var sb = new StringBuilder();
-        sb.AppendLine($"황금의 눈동자 시뮬레이션: 전략 4 × 시작 섹터 4 = 봇 {Bots}명, 판 {Results.Count}개, 최대 {MaxYears}년");
+        sb.AppendLine("휴식 분기/판 · 휴식 재앙/판 · 승천 순간 교주 무게: " + string.Join(" · ", Results.GroupBy(x => x.Strategy)
+            .Select(g => $"{g.Key} {g.Average(x => x.RestTurns):0.0} / {g.Average(x => x.RestCalamities):0.00} / {g.Average(x => x.PlayerWeight):0.00}")));
+        sb.AppendLine($"황금의 눈동자 시뮬레이션: 전략 7 × 시작 섹터 4 = 봇 {Bots}명, 판 {Results.Count}개, 최대 {MaxYears}년");
         sb.AppendLine("전략 | 판 | 승천 | 승천 연수(중앙값) | 굿 | 배드 | 다른 눈동자 | 네 얼굴 | 재앙/판 | 휴식 재앙/판 | 최종 주도권(평균) | 주도권 최고(평균)");
         foreach (var group in Results.GroupBy(x => x.Strategy))
         {
@@ -349,7 +377,7 @@ public class EyeSimulationTests
         EyeSimulation.MaxYears = 2;
         try { EyeSimulation.Run(1, 7); }
         finally { EyeSimulation.MaxYears = years; }
-        Assert.AreEqual(16, EyeSimulation.Results.Count);
+        Assert.AreEqual(28, EyeSimulation.Results.Count);
         Assert.IsFalse(GameSession.EyeMode, "시뮬레이션 뒤에는 본편 상태로 돌아가야 함");
     }
 }
