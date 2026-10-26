@@ -201,7 +201,7 @@ def god():
             nm_ko = [f"첫 {ko}", f"{ko} 세 곳", f"{ko} 다섯 곳", f"{ko}의 도시"][i]
             nm_en = [f"First {en[:-1] if en.endswith('s') and key != 'Library' else en}", f"Three {en}", f"Five {en}", f"City of {en}"][i]
             if key == "Library": nm_en = [f"First Library", f"Three Libraries", f"Five Libraries", f"City of Libraries"][i]
-            m.add("건축", nm_ko, nm_en, f"{ko}을(를) 누적 {n}개 지었다 (모든 회차 합산).", f"Built {n} {en.lower()} in total (all runs combined).", f"profile:god_build_{key}>={n}", i + 1)
+            m.add("건축", nm_ko, nm_en, f"{ko}을(를) 누적 {n}번 짓거나 올렸다 (모든 회차 합산).", f"Built or upgraded {en.lower()} {n} time{'s' if n > 1 else ''} in total (all runs combined).", f"profile:god_build_{key}>={n}", i + 1)
     for key, ko, en in [("Envy", "하늘의 시기", "Envy of Heaven"), ("Suspicion", "세상의 의심", "Suspicion of the World")]:
         for n, tko, ten in [(50, "절반의", "Half-Raised"), (80, "고조된", "Rising"), (95, "임계의", "Critical")]:
             m.add("압력", f"{tko} {ko}", f"{ten} {en}", f"{ko}이(가) {n}에 이르렀다.", f"{en} reached {n}.", f"NEW:god_{key}>={n}", 1 + (n >= 80) + (n >= 95))
@@ -486,6 +486,8 @@ RENAME = {
     "m058": ("거울 신도 이백삼십 명", "Mirror Followers: Two Hundred Thirty Souls"), "m059": ("거울 신도 이백육십 명", "Mirror Followers: Two Hundred Sixty Souls"),
     "m100": ("거울 업적 쉰", "Fifty Mirror Marks"), "m117": ("모든 지표 상승", "All Rising"),
     "m105": ("붕괴 없이 30년", "30 Years Intact"),
+    # 이름이 조건과 어긋나던 것 (2026-10-26 결정)
+    "g046": ("들끓는 하늘", "Heaven Seethes"), "g074": ("시샘받는 신", "The Envied God"),
 }
 
 def rename(m):

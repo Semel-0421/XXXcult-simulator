@@ -2,7 +2,7 @@
 doc: INDEX
 title: XXXcult simulator 기획서 인덱스
 status: draft
-updated: 2026-10-19
+updated: 2026-10-26
 ---
 
 # XXXcult simulator 기획서
@@ -17,7 +17,7 @@ updated: 2026-10-19
 | 장르 | 텍스트 시뮬레이션 |
 | 플랫폼 | Windows · Android · Web |
 | Unity 버전 | 6000.6.5f1 |
-| 개발 단계 | 기획 |
+| 개발 단계 | 구현·밸런스 (배포 중: Windows·Android·Web) |
 
 ## 문서 맵
 <!-- AUTO:FILEMAP -->
@@ -25,10 +25,13 @@ updated: 2026-10-19
 |---|---|---|---|
 | [01_Overview.md](01_Overview.md) | 게임 개요 · 코어 루프 | draft | 2026-10-19 |
 | [02_Tech.md](02_Tech.md) | Unity 기술 구조 | draft | 2026-10-19 |
-| [03_Decisions.md](03_Decisions.md) | 결정 로그 · 미결 사항 | draft | 2026-10-19 |
+| [03_Decisions.md](03_Decisions.md) | 결정 로그 · 미결 사항 (DEC-031까지) | draft | 2026-10-26 |
 | [systems/SYS_INVERTED.md](systems/SYS_INVERTED.md) | 신규 모드: 거울 세계 | draft | 2026-10-19 |
-| [systems/SYS_DEMIURGE.md](systems/SYS_DEMIURGE.md) | 신규 모드: 황금의 눈동자 (신+거울 통합, 1~8단계 구현) | draft | 2026-10-26 |
-| [systems/SYS_UI_DESIGN.md](systems/SYS_UI_DESIGN.md) | 인게임 UI·텍스트 개선 방향 | draft | 2026-10-25 |
+| [systems/SYS_DEMIURGE.md](systems/SYS_DEMIURGE.md) | 신규 모드: 황금의 눈동자 (신+거울 통합, 1~9단계 구현·수치 확정, 가칭 확정 남음) | draft | 2026-10-26 |
+| [systems/SYS_UI_DESIGN.md](systems/SYS_UI_DESIGN.md) | 인게임 UI·텍스트 개선 (U0~U5 완료, 미검증 3건) | draft | 2026-10-25 |
+| [systems/SYS_ACHIEVEMENTS_V2.md](systems/SYS_ACHIEVEMENTS_V2.md) | 업적 확장 v2 (일반·신·거울·눈동자) | draft | 2026-10-25 |
+| [systems/SYS_ACHIEVEMENT_BALANCE_REPORT.md](systems/SYS_ACHIEVEMENT_BALANCE_REPORT.md) | 업적 도달률·기프티드 영향 시뮬 보고서 | draft | 2026-10-25 |
+| [systems/SYS_GIFTED_V2_EFFECTS.md](systems/SYS_GIFTED_V2_EFFECTS.md) | 기프티드 v2 효과 프레임워크 | draft | 2026-10-25 |
 <!-- /AUTO:FILEMAP -->
 
 ## 데이터 맵
@@ -43,7 +46,8 @@ updated: 2026-10-19
 ## 열린 질문
 상세: [03_Decisions.md](03_Decisions.md)
 <!-- AUTO:OPEN -->
-_(없음)_
+- 황금의 눈동자 가칭 확정 (답 문구·단계·행동·엔딩 이름)
+- UI 미검증 3건 (거울·시작 화면, 작은 해상도·모바일, 영어 결과 창)
 <!-- /AUTO:OPEN -->
 
 ## 중간 점검
@@ -54,6 +58,8 @@ _(없음)_
 
 ## 최근 변경
 <!-- AUTO:RECENT -->
+- 2026-10-26 [03_Decisions.md] DEC-029(눈동자 9단계 수치)·DEC-030(UI 8건)·DEC-031(업적 v2 밸런스) 등록, INDEX 문서 맵 갱신
+- 2026-10-26 [systems/SYS_DEMIURGE.md] 9단계 10~13차: 그노시스 교리 +10, 지상 압박 복구, 야훼 쉬운 루트, 그노시스 지상 저항 (8fe9009)
 - 2026-10-26 [systems/SYS_DEMIURGE.md] 황금의 눈동자 구현 1~8단계 완료, 옛 가안을 [구현]으로 정리. 남은 것: 9단계 시뮬레이션·수치, 가칭 확정
 - 2026-10-26 [systems/SYS_DEMIURGE.md] 정할 것 14건 결정: 모드 이름 '황금의 눈동자', 해금은 신 승천+거울 전용 엔딩, 그노시스 뒤 평판 반전, 전용 업적, 행동 이름 전부 새로, 히든 5종 (DEC-028)
 - 2026-10-25 [systems/SYS_DEMIURGE.md] 가안 수정: 눈동자 첫 질문, 데미우르고스 스탯·재앙, 주도권 엔딩 8종 (DEC-027)
