@@ -27,7 +27,7 @@ updated: 2026-10-26
 | [02_Tech.md](02_Tech.md) | Unity 기술 구조 | draft | 2026-10-19 |
 | [03_Decisions.md](03_Decisions.md) | 결정 로그 · 미결 사항 (DEC-031까지) | draft | 2026-10-26 |
 | [systems/SYS_INVERTED.md](systems/SYS_INVERTED.md) | 신규 모드: 거울 세계 | draft | 2026-10-19 |
-| [systems/SYS_DEMIURGE.md](systems/SYS_DEMIURGE.md) | 신규 모드: 황금의 눈동자 (신+거울 통합, 1~9단계 구현·수치 확정, 가칭 확정 남음) | draft | 2026-10-26 |
+| [systems/SYS_DEMIURGE.md](systems/SYS_DEMIURGE.md) | 신규 모드: 황금의 눈동자 (신+거울 통합, 1~9단계 구현·수치·가칭 확정) | draft | 2026-10-26 |
 | [systems/SYS_UI_DESIGN.md](systems/SYS_UI_DESIGN.md) | 인게임 UI·텍스트 개선 (U0~U5 완료, 미검증 3건) | draft | 2026-10-25 |
 | [systems/SYS_ACHIEVEMENTS_V2.md](systems/SYS_ACHIEVEMENTS_V2.md) | 업적 확장 v2 (일반·신·거울·눈동자) | draft | 2026-10-25 |
 | [systems/SYS_ACHIEVEMENT_BALANCE_REPORT.md](systems/SYS_ACHIEVEMENT_BALANCE_REPORT.md) | 업적 도달률·기프티드 영향 시뮬 보고서 | draft | 2026-10-25 |
@@ -46,8 +46,7 @@ updated: 2026-10-26
 ## 열린 질문
 상세: [03_Decisions.md](03_Decisions.md)
 <!-- AUTO:OPEN -->
-- 황금의 눈동자 가칭 확정 (답 문구·단계·행동·엔딩 이름)
-- UI 미검증 3건 (거울·시작 화면, 작은 해상도·모바일, 영어 결과 창)
+- UI 미검증: 폰 비율·안드로이드 실기기 (SYS_UI_DESIGN 9·10절)
 <!-- /AUTO:OPEN -->
 
 ## 중간 점검

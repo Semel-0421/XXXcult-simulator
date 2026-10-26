@@ -411,3 +411,9 @@ Anthropic Design 플러그인의 지침 4종을 적용함: design-critique, acce
 - 에디터 플레이 모드 1280×720 게임 뷰에서 `ForceMobile`로 캡처: `reviews/ui_compare_2026-10-25/mobile_tip_gifted_pc.png`(보정 전) · `mobile_tip_gifted_mobile.png` · `mobile_tip_ending.png`
 - 아이온 트리(한국어, `ForceMobile`): 노드 이름 넘침 없음. 한국어 이름은 원래 12~13으로 그려져 보이는 변화는 거의 없음 (`mobile_aeon_tree_ko.png`)
 - 미검증: 실제 안드로이드 기기, 영어 아이온 트리에서 하한 12일 때 긴 이름(Veil of the Holy of Holies 등) 넘침
+
+## 10. 6절 미검증 3건 확인 (2026-10-26, 에디터 플레이 모드 1280×720, 프로필·세이브 백업 후 복구)
+- **거울 모드·시작 화면:** 시작 화면(9절 캡처 배경)과 거울 모드 첫 화면(`check_mirror_ko.png`)을 봄. 상단 바·교주 정보·선택지·입력칸 겹침·넘침 없음
+- **작은 해상도:** 이번 캡처가 모두 1280×720 게임 뷰라 이 해상도는 확인됨. 폰 비율(20:9 등)·실기기는 여전히 안 봄 (`AspectFrame`이 16:9로 맞추므로 양옆 여백만 생길 것으로 예상, 미확인)
+- **영어 결과 창:** 언어를 먼저 영어로 정하고 시작한 판에서 일반 모드 유년기 선택지(`check_life_en.png`)와 눈동자 모드 교단 행동 결과("You spread the teachings in the streets.", `check_result_en.png`) 모두 영어로 나옴 → 6절의 한국어 결과 창은 결과 표시 중에 언어를 바꿔서 생긴 것으로 판단. 재현 안 됨
+- 남은 미검증: 폰 비율·실기기
