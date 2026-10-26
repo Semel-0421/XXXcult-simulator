@@ -44,4 +44,12 @@ public static class UiType
     public const float Body = 22;    // 본문, 선택지
     public const float Label = 18;   // 스탯 이름, 버튼
     public const float Caption = 16; // 안내, 보조
+
+    // 모바일(안드로이드) 가시성 보정 (SYS_UI_DESIGN 9절). 툴팁 글자·상자를 키우고 손가락에 가리지 않게 위로 띄운다.
+    // 에디터에서 미리 볼 때는 ForceMobile을 켠다 (창을 처음 만들기 전에)
+    public static bool ForceMobile;
+    public static bool Mobile => ForceMobile || Application.isMobilePlatform;
+    public static float TooltipScale => Mobile ? 1.35f : 1f;
+    public static float PointerGap => Mobile ? 56 : 18; // 포인터와 툴팁 사이 (손가락 크기만큼)
+    public static float MinFont(float desktop) => Mobile ? Mathf.Max(desktop, 12) : desktop; // 자동 크기 하한
 }

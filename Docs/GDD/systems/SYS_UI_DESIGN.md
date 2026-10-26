@@ -394,3 +394,20 @@ Anthropic Design 플러그인의 지침 4종을 적용함: design-critique, acce
 - 결과: "Followers' Faith"가 줄어들지 않고 한 줄에 다 보임. 글자 크기는 칸 높이 때문에 17·18에서 16으로 자동 조정됨.
 - 비교 그림: `reviews/ui_compare_2026-10-25/adjust_3A_statbar.jpg`(위부터 이전 영어 / A안 영어 / A안 한국어).
 
+
+## 9. 모바일(안드로이드) 툴팁 가시성 (2026-10-26)
+
+사용자 보고: 모바일에서 툴팁 등이 생각보다 작게 보임.
+- 7절 때 쓴 Design 스킬(접근성 점검)은 지금 세션에 없음. 같은 기준(안드로이드 본문 최소 12sp 안팎, 손가락 가림)을 직접 적용함.
+- 근거: 기준 해상도 1280×720을 폰 가로 화면(약 2400×1080, 400dpi 안팎)에 맞추면 기준 20pt가 실제 약 12sp. 툴팁 20~21pt는 최소선에 걸리고, 아이온 트리 노드 이름(자동 축소 하한 9)은 그 아래.
+
+### (결정·구현) 모바일에서만 보정
+- `UiType.Mobile`(= `Application.isMobilePlatform`, 에디터 미리보기는 `UiType.ForceMobile`)일 때만 적용. PC·웹은 그대로
+- 툴팁 2종(기프티드 `GiftedTooltip`, 엔딩 도감 수수께끼 `EndingGallery`): 글자·상자·여백 **1.35배** (`UiType.TooltipScale`)
+- 툴팁 위치: 손가락에 가리지 않게 **터치 지점 위쪽**에 띄우고, 간격 18 → 56 (`UiType.PointerGap`). 위로 넘치면 아래로
+- 아이온 트리: 노드 이름·단계 숫자·교리 단계 줄의 자동 축소 하한을 **12**로 (`UiType.MinFont`)
+
+### 확인
+- 에디터 플레이 모드 1280×720 게임 뷰에서 `ForceMobile`로 캡처: `reviews/ui_compare_2026-10-25/mobile_tip_gifted_pc.png`(보정 전) · `mobile_tip_gifted_mobile.png` · `mobile_tip_ending.png`
+- 아이온 트리(한국어, `ForceMobile`): 노드 이름 넘침 없음. 한국어 이름은 원래 12~13으로 그려져 보이는 변화는 거의 없음 (`mobile_aeon_tree_ko.png`)
+- 미검증: 실제 안드로이드 기기, 영어 아이온 트리에서 하한 12일 때 긴 이름(Veil of the Holy of Holies 등) 넘침

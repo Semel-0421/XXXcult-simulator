@@ -164,10 +164,10 @@ public static class EndingGallery
     {
         var box = UiKit.Child(root.transform, "Tooltip", typeof(Image));
         tooltipRect = box;
-        box.sizeDelta = new Vector2(400, 150);
+        box.sizeDelta = new Vector2(400, 150) * UiType.TooltipScale;
         box.GetComponent<Image>().color = new Color(0.1f, 0.04f, 0.16f, 0.97f);
         box.GetComponent<Image>().raycastTarget = false;
-        tooltipText = UiKit.Label(box, font, "Text", 21, TextAlignmentOptions.TopLeft, UiPalette.TextBright);
+        tooltipText = UiKit.Label(box, font, "Text", 21 * UiType.TooltipScale, TextAlignmentOptions.TopLeft, UiPalette.TextBright);
         UiKit.Stretch(tooltipText.rectTransform);
         tooltipText.rectTransform.offsetMin = new Vector2(16, 12);
         tooltipText.rectTransform.offsetMax = new Vector2(-16, -12);
@@ -189,9 +189,12 @@ public static class EndingGallery
         if (data == null || !tooltipRect.gameObject.activeSelf) return;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, data.position, null, out var local);
         var half = canvasRect.rect.size / 2;
-        var pos = local + new Vector2(18, -18);
-        if (pos.x + tooltipRect.sizeDelta.x > half.x) pos.x = local.x - tooltipRect.sizeDelta.x - 18;
-        if (pos.y - tooltipRect.sizeDelta.y < -half.y) pos.y = -half.y + tooltipRect.sizeDelta.y;
+        var gap = UiType.PointerGap;
+        var size = tooltipRect.sizeDelta;
+        var pos = local + new Vector2(gap, UiType.Mobile ? gap + size.y : -gap); // 모바일은 손가락 위쪽
+        if (pos.x + size.x > half.x) pos.x = local.x - size.x - gap;
+        if (pos.y > half.y) pos.y = local.y - gap;
+        if (pos.y - size.y < -half.y) pos.y = -half.y + size.y;
         tooltipRect.anchoredPosition = pos;
     }
 

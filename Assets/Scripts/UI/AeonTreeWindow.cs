@@ -85,7 +85,7 @@ public static class AeonTreeWindow
         UiKit.Anchor(stageLabel.rectTransform, new Vector2(0, 1), new Vector2(0, 1), new Vector2(145, -58), new Vector2(250, 26)); // 가운데 안내문과 겹치지 않게 폭은 그대로 두고 글자를 줄인다
         stageLabel.textWrappingMode = TextWrappingModes.NoWrap; // 영어 "Doctrine tier 10  Throne: Yaldabaoth"가 두 줄로 넘쳤다
         stageLabel.enableAutoSizing = true;
-        stageLabel.fontSizeMin = 13;
+        stageLabel.fontSizeMin = UiType.MinFont(13);
         stageLabel.fontSizeMax = 18;
 
         var close = UiKit.MakeButton(panel, font, "Close", "", 120, 44, out closeLabel);
@@ -139,7 +139,7 @@ public static class AeonTreeWindow
                 Place(glyph.rectTransform, 0, y, LevelColumn, rowHeight * 0.62f);
                 glyph.text = rung.glyph;
                 glyph.raycastTarget = false;
-                var small = UiKit.Label(area, font, $"Level{level}", 11, TextAlignmentOptions.Center, UiKit.Muted);
+                var small = UiKit.Label(area, font, $"Level{level}", UiType.MinFont(11), TextAlignmentOptions.Center, UiKit.Muted);
                 Place(small.rectTransform, 0, y - rowHeight * 0.58f, LevelColumn, rowHeight * 0.4f);
                 small.text = level.ToString();
                 small.raycastTarget = false;
@@ -194,7 +194,7 @@ public static class AeonTreeWindow
         label.rectTransform.offsetMin = new Vector2(3, 1);
         label.rectTransform.offsetMax = new Vector2(-3, -1);
         label.enableAutoSizing = true;
-        label.fontSizeMin = 9;
+        label.fontSizeMin = UiType.MinFont(9);
         label.fontSizeMax = 13;
         label.raycastTarget = false;
         return (fill, edge, label);

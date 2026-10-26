@@ -6,7 +6,7 @@ using UnityEngine.UI;
 // 기프티드 위에 올린 커서 옆에 뜨는 설명창: 이름·분류, 플레이버 텍스트, (히든을 뺀) 효과.
 public class GiftedTooltip : MonoBehaviour
 {
-    const float Width = 380, Offset = 18;
+    const float Width = 380;
 
     RectTransform rect, bounds;
     TMP_Text text;
@@ -18,7 +18,7 @@ public class GiftedTooltip : MonoBehaviour
         var tooltip = go.AddComponent<GiftedTooltip>();
         tooltip.bounds = parent;
         tooltip.rect = (RectTransform)go.transform;
-        tooltip.rect.sizeDelta = new Vector2(Width, 10);
+        tooltip.rect.sizeDelta = new Vector2(Width * UiType.TooltipScale, 10);
         tooltip.rect.anchorMin = tooltip.rect.anchorMax = new Vector2(0.5f, 0.5f);
 
         var image = go.GetComponent<Image>();
@@ -27,7 +27,8 @@ public class GiftedTooltip : MonoBehaviour
         go.GetComponent<Outline>().effectColor = new Color(0.83f, 0.69f, 0.22f, 0.6f);
 
         var layout = go.GetComponent<VerticalLayoutGroup>();
-        layout.padding = new RectOffset(14, 14, 12, 12);
+        var pad = UiType.TooltipScale;
+        layout.padding = new RectOffset((int)(14 * pad), (int)(14 * pad), (int)(12 * pad), (int)(12 * pad));
         layout.childControlWidth = layout.childControlHeight = true;
         layout.childForceExpandWidth = layout.childForceExpandHeight = false;
         go.GetComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
@@ -35,7 +36,7 @@ public class GiftedTooltip : MonoBehaviour
         var label = new GameObject("Text", typeof(RectTransform), typeof(TextMeshProUGUI));
         label.transform.SetParent(go.transform, false);
         tooltip.text = label.GetComponent<TextMeshProUGUI>();
-        tooltip.text.fontSize = 20;
+        tooltip.text.fontSize = 20 * UiType.TooltipScale;
         tooltip.text.color = new Color(0.9f, 0.87f, 0.96f);
         tooltip.text.raycastTarget = false;
         if (font != null) tooltip.text.font = UiFonts.Body != null ? UiFonts.Body : font; // 본문은 명조
@@ -65,11 +66,13 @@ public class GiftedTooltip : MonoBehaviour
         var size = rect.rect.size;
         var half = bounds.rect.size / 2;
 
-        // 기본은 커서 오른쪽 아래, 넘치면 반대쪽으로
-        var x = local.x + Offset;
-        var y = local.y - Offset;
-        if (x + size.x > half.x) x = local.x - Offset - size.x;
-        if (y - size.y < -half.y) y = local.y + Offset + size.y;
+        // 기본은 커서 오른쪽 아래, 넘치면 반대쪽으로. 모바일은 손가락에 가리지 않게 위쪽이 기본
+        var gap = UiType.PointerGap;
+        var x = local.x + gap;
+        var y = UiType.Mobile ? local.y + gap + size.y : local.y - gap;
+        if (x + size.x > half.x) x = local.x - gap - size.x;
+        if (UiType.Mobile && y > half.y) y = local.y - gap;
+        if (y - size.y < -half.y) y = local.y + gap + size.y;
         x = Mathf.Clamp(x, -half.x, half.x - size.x);
         y = Mathf.Clamp(y, -half.y + size.y, half.y);
 
