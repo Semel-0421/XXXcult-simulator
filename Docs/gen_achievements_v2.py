@@ -5,6 +5,12 @@
 import csv, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+
+def josa(word, pair):
+    if not word or not 0xAC00 <= ord(word[-1]) <= 0xD7A3:
+        return word + pair
+    has_batchim = (ord(word[-1]) - 0xAC00) % 28 != 0
+    return word + ({"을(를)": "을", "이(가)": "이"}[pair] if has_batchim else {"을(를)": "를", "이(가)": "가"}[pair])
 FIELDS = ["id", "mode", "category", "name", "name_en", "description", "description_en", "condition", "tier", "gate"]
 TIER = ["수련생", "숙련자", "달인", "전설"]
 TIER_EN = ["Apprentice", "Adept", "Master", "Legend"]
@@ -21,7 +27,7 @@ class Mode:
         for i, n in enumerate(steps):
             ko = names[0][i] if names else f"{noun_ko} {TIER[i]}"
             en = names[1][i] if names else f"{noun_en} {TIER_EN[i]}"
-            self.add(cat, ko, en, f"{noun_ko}을(를) " + verb_ko.format(n=n), f"{noun_en}: " + verb_en.format(n=n), f"{counter}>={n}", i + 1)
+            self.add(cat, ko, en, f"{josa(noun_ko, '을(를)')} " + verb_ko.format(n=n), f"{noun_en}: " + verb_en.format(n=n), f"{counter}>={n}", i + 1)
 
 def write(mode):
     with open(os.path.join(HERE, f"achievements_v2_{mode.key}.csv"), "w", encoding="utf-8-sig", newline="") as f:
@@ -43,8 +49,8 @@ def normal():
              ("Wealth", "재산", "Wealth"), ("Charity", "자애", "Charity"), ("Integrity", "청렴", "Integrity"), ("Patience", "인내", "Patience"),
              ("Temperance", "절제", "Temperance"), ("Greed", "재물욕", "Greed"), ("Ambition", "권력욕", "Ambition"), ("Lust", "음욕", "Lust"), ("Appetite", "식욕", "Appetite")]
     for key, ko, en in stats:
-        m.add("개인 스탯", f"탁월한 {ko}", f"Exceptional {en}", f"{ko}이(가) 75에 이르렀다.", f"{en} reached 75.", f"p:{key}>=75", 1)
-        m.add("개인 스탯", f"{ko}의 극치", f"Peak of {en}", f"{ko}이(가) 최대치 100에 이르렀다.", f"{en} reached its peak of 100.", f"p:{key}>=100", 2)
+        m.add("개인 스탯", f"탁월한 {ko}", f"Exceptional {en}", f"{josa(ko, '이(가)')} 75에 이르렀다.", f"{en} reached 75.", f"p:{key}>=75", 1)
+        m.add("개인 스탯", f"{ko}의 극치", f"Peak of {en}", f"{josa(ko, '이(가)')} 최대치 100에 이르렀다.", f"{en} reached its peak of 100.", f"p:{key}>=100", 2)
 
     cstats = [("Followers", "신도", "Followers", [800, 1500, 2500]), ("FollowerFaith", "신도 신앙", "Follower Faith", [900, 1000]),
               ("LeaderFaith", "교주 신앙", "Leader's Faith", [900, 1000]), ("Authority", "권위", "Authority", [900, 1000]),
@@ -54,7 +60,7 @@ def normal():
         for i, n in enumerate(steps):
             name_ko = fol[0][i] if key == "Followers" else (f"{ko} {n}" if n < 1000 else f"{ko}의 만개")
             name_en = fol[1][i] if key == "Followers" else (f"{en} {n}" if n < 1000 else f"{en} in Full Bloom")
-            m.add("교단 스탯", name_ko, name_en, f"{ko}이(가) {n}에 이르렀다.", f"{en} reached {n}.", f"s:{key}>={n}", i + 1)
+            m.add("교단 스탯", name_ko, name_en, f"{josa(ko, '이(가)')} {n}에 이르렀다.", f"{en} reached {n}.", f"s:{key}>={n}", i + 1)
 
     for n, ko, en in [(20, "스무 살", "Twenty"), (25, "청춘의 끝", "End of Youth"), (35, "서른다섯", "Thirty-Five"), (45, "불혹 너머", "Past Forty"),
                       (60, "환갑", "Sixty"), (80, "팔순", "Eighty"), (90, "구순", "Ninety"), (100, "백수", "A Hundred Years")]:
@@ -201,12 +207,12 @@ def god():
             nm_ko = [f"첫 {ko}", f"{ko} 세 곳", f"{ko} 다섯 곳", f"{ko}의 도시"][i]
             nm_en = [f"First {en[:-1] if en.endswith('s') and key != 'Library' else en}", f"Three {en}", f"Five {en}", f"City of {en}"][i]
             if key == "Library": nm_en = [f"First Library", f"Three Libraries", f"Five Libraries", f"City of Libraries"][i]
-            m.add("건축", nm_ko, nm_en, f"{ko}을(를) 누적 {n}번 짓거나 올렸다 (모든 회차 합산).", f"Built or upgraded {en.lower()} {n} time{'s' if n > 1 else ''} in total (all runs combined).", f"profile:god_build_{key}>={n}", i + 1)
+            m.add("건축", nm_ko, nm_en, f"{josa(ko, '을(를)')} 누적 {n}번 짓거나 올렸다 (모든 회차 합산).", f"Built or upgraded {en.lower()} {n} time{'s' if n > 1 else ''} in total (all runs combined).", f"profile:god_build_{key}>={n}", i + 1)
     for key, ko, en in [("Envy", "하늘의 시기", "Envy of Heaven"), ("Suspicion", "세상의 의심", "Suspicion of the World")]:
         for n, tko, ten in [(50, "절반의", "Half-Raised"), (80, "고조된", "Rising"), (95, "임계의", "Critical")]:
-            m.add("압력", f"{tko} {ko}", f"{ten} {en}", f"{ko}이(가) {n}에 이르렀다.", f"{en} reached {n}.", f"NEW:god_{key}>={n}", 1 + (n >= 80) + (n >= 95))
-        m.add("압력", f"{ko} 없는 신", f"God Without {en}", f"{ko}을(를) 10 이하로 10년 동안 유지했다.", f"Kept {en} at 10 or below for 10 years.", f"NEW:god_{key}_low10y>=1", 3)
-        m.add("압력", f"{ko}를 견디다", f"Withstood {en}", f"{ko}이(가) 95를 넘었다가 끝내 승천했다.", f"Ascended after {en} had passed 95.", f"NEW:god_{key}_peak95_ascend", 3)
+            m.add("압력", f"{tko} {ko}", f"{ten} {en}", f"{josa(ko, '이(가)')} {n}에 이르렀다.", f"{en} reached {n}.", f"NEW:god_{key}>={n}", 1 + (n >= 80) + (n >= 95))
+        m.add("압력", f"{ko} 없는 신", f"God Without {en}", f"{josa(ko, '을(를)')} 10 이하로 10년 동안 유지했다.", f"Kept {en} at 10 or below for 10 years.", f"NEW:god_{key}_low10y>=1", 3)
+        m.add("압력", f"{ko}를 견디다", f"Withstood {en}", f"{josa(ko, '이(가)')} 95를 넘었다가 끝내 승천했다.", f"Ascended after {en} had passed 95.", f"NEW:god_{key}_peak95_ascend", 3)
     for n, ko, en in [(1, "첫 빼앗김", "First Seizure"), (5, "다섯 번 빼앗기다", "Seized Five Times"), (15, "빼앗기는 일상", "Routine Seizure")]:
         m.add("압력", ko, en, f"그릇을 누적 {n}번 빼앗겼다 (모든 회차 합산).", f"Had your vessel seized {n} times in total (all runs combined).", f"profile:god_seized>={n}", 1 + (n >= 5) + (n >= 15))
     for n, ko, en in [(1, "신의 첫 해", "First Year as a God"), (5, "신의 오 년", "Five Years as a God"), (10, "신의 십 년", "Ten Years as a God"),
@@ -274,9 +280,9 @@ def god():
     for ko, en, dko, den, cond in challenge:
         m.add("도전", ko, en, dko, den, cond, 2)
     for key, ko, en in acts:
-        m.add("신의 행동", f"{ko} 오십 번", f"Fifty {en}", f"한 회차에 {ko}을(를) 50번 했다.", f"Did {en.lower()} 50 times in one run.", f"NEW:god_run_{key}>=50", 2)
+        m.add("신의 행동", f"{ko} 오십 번", f"Fifty {en}", f"한 회차에 {josa(ko, '을(를)')} 50번 했다.", f"Did {en.lower()} 50 times in one run.", f"NEW:god_run_{key}>=50", 2)
     for key, ko, en in bld:
-        m.add("건축", f"{ko} 스무 곳", f"Twenty {en}", f"{ko}을(를) 20개 지었다.", f"Built 20 {en.lower()}.", f"NEW:god_build_{key}>=20", 3)
+        m.add("건축", f"{ko} 스무 곳", f"Twenty {en}", f"{josa(ko, '을(를)')} 20개 지었다.", f"Built 20 {en.lower()}.", f"NEW:god_build_{key}>=20", 3)
     for key, ko, en in branches:
         m.add("신성 트리", f"{ko}의 극의", f"Apex of {en}", f"{ko} 갈래 노드를 모두 익혔다.", f"Learned every node of the {en} branch.", f"NEW:god_branch_{key}_full", 3)
         m.add("승천", f"{ko}으로 세 번", f"{en} Thrice", f"{ko}의 핵을 익히고 승천을 3번 했다.", f"Ascended 3 times with the Core of {en}.", f"NEW:god_core_ascend_{key}>=3", 3)

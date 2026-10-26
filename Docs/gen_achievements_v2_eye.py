@@ -5,6 +5,12 @@
 import csv, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+
+def josa(word, pair):
+    if not word or not 0xAC00 <= ord(word[-1]) <= 0xD7A3:
+        return word + pair
+    has_batchim = (ord(word[-1]) - 0xAC00) % 28 != 0
+    return word + ({"을(를)": "을", "이(가)": "이"}[pair] if has_batchim else {"을(를)": "를", "이(가)": "가"}[pair])
 FIELDS = ["id", "mode", "category", "name", "name_en", "description", "description_en", "condition", "tier", "gate"]
 rows = []
 
@@ -84,7 +90,7 @@ add("도전", "한 얼굴만", "Only One Face", "한 섹터의 노드만 익히�
 ACTS = [("Wonder", "기적", "Manifest"), ("Revelation", "가르침", "Mystery"), ("Healing", "정화", "Purify"), ("Feast", "잔치", "Carnival"), ("Commune", "신내림", "Invoke"), ("Consecrate", "창조", "Create")]
 for key, ko, en in ACTS:
     for n, tko, ten in [(30, "익숙한", "Practiced"), (150, "능숙한", "Masterful")]:
-        add("행동", f"{tko} {ko}", f"{ten} {en}", f"{ko}을(를) 누적 {n}번 했다 (모든 회차 합산).", f"Did {en} {n} times in total (all runs combined).", f"profile:eye_act_{key}>={n}", 1 + (n >= 150))
+        add("행동", f"{tko} {ko}", f"{ten} {en}", f"{josa(ko, '을(를)')} 누적 {n}번 했다 (모든 회차 합산).", f"Did {en} {n} times in total (all runs combined).", f"profile:eye_act_{key}>={n}", 1 + (n >= 150))
 
 # 건축·이벤트·회차
 for n, ko, en in [(1, "첫 창조", "First Creation"), (10, "열 개의 피조물", "Ten Creations"), (30, "물질의 도시", "City of Matter")]:
