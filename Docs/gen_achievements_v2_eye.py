@@ -81,7 +81,7 @@ add("도전", "느린 찬탈", "Slow Usurpation", "교단 40년 이상 지난 �
 add("도전", "한 얼굴만", "Only One Face", "한 섹터의 노드만 익히고 주도권을 지킨 채 승천했다.", "Ascended keeping dominance with nodes from only one sector.", "NEW:eye_ascend_single_sector", 3)
 
 # 행동 (누적)
-ACTS = [("Wonder", "현현", "Manifest"), ("Revelation", "비의", "Mystery"), ("Healing", "정화", "Purify"), ("Feast", "육제", "Carnival"), ("Commune", "강신", "Invoke"), ("Consecrate", "창조", "Create")]
+ACTS = [("Wonder", "기적", "Manifest"), ("Revelation", "가르침", "Mystery"), ("Healing", "정화", "Purify"), ("Feast", "잔치", "Carnival"), ("Commune", "신내림", "Invoke"), ("Consecrate", "창조", "Create")]
 for key, ko, en in ACTS:
     for n, tko, ten in [(30, "익숙한", "Practiced"), (150, "능숙한", "Masterful")]:
         add("행동", f"{tko} {ko}", f"{ten} {en}", f"{ko}을(를) 누적 {n}번 했다 (모든 회차 합산).", f"Did {en} {n} times in total (all runs combined).", f"profile:eye_act_{key}>={n}", 1 + (n >= 150))

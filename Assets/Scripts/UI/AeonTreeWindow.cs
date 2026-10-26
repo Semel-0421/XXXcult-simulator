@@ -7,6 +7,8 @@ using UnityEngine.UI;
 // 황금의 눈동자: 아이온 트리 창 (SYS_DEMIURGE 6절). 교단 정보 패널의 트리 버튼으로 연다.
 // 섹터 4개를 세로 기둥으로, 교리 0~10단계를 아래에서 위로 쌓는다. 0~4단계는 선(왼쪽)·악(오른쪽) 두 칸, 5~10단계는 가운데 한 칸.
 // 노드를 누르면 오른쪽에 설명이 뜨고, "익히기"(또는 같은 노드를 한 번 더 누르기)로 익힌다.
+// 5~10단계는 네 섹터가 함께 오르는 "하늘의 사다리": 왼쪽 단계 칸에 사다리 기둥과 그리스 머리글자(Γ Ε Ο Σ Π Δ)를 두고,
+// 단계 띠를 누르면 그 하늘의 영지주의 설명을 보여 준다 (SYS_DEMIURGE 15절).
 public static class AeonTreeWindow
 {
     static GameObject root;
@@ -14,6 +16,16 @@ public static class AeonTreeWindow
     static Button learnButton;
     static readonly Dictionary<AeonSkill, (Image fill, Outline edge, TMP_Text label)> nodes = new();
     static AeonSkill selected;
+    static int selectedRung = -1; // 고른 사다리 단계 (5~10), 없으면 -1
+    static readonly Dictionary<int, Image> rungBands = new();
+    static readonly Dictionary<EyeSector, TMP_Text> heads = new(); // 섹터 머리글: 언어를 바꿔도 맞게 Refresh에서 쓴다
+
+    // 사다리 단계의 그리스 머리글자와 원어 (두 언어 공통)
+    static readonly Dictionary<int, (string glyph, string greek)> Rungs = new()
+    {
+        [5] = ("Γ", "ΓΝΩΣΙΣ"), [6] = ("Ε", "ΕΒΔΟΜΑΣ"), [7] = ("Ο", "ΟΓΔΟΑΣ"),
+        [8] = ("Σ", "ΣΟΦΙΑ"), [9] = ("Π", "ΠΛΗΡΩΜΑ"), [10] = ("Δ", "ΔΗΜΙΟΥΡΓΟΣ"),
+    };
 
     const float LevelColumn = 34, RowGap = 4;
 
@@ -46,7 +58,10 @@ public static class AeonTreeWindow
     static void Build()
     {
         nodes.Clear();
+        rungBands.Clear();
+        heads.Clear();
         selected = null;
+        selectedRung = -1;
         var font = UiKit.FindFont();
         var canvas = UiKit.CreateOverlayCanvas("AeonTreeCanvas", 305);
         var rootRect = UiKit.Child(canvas, "AeonTreeWindow", typeof(Image));
@@ -97,9 +112,39 @@ public static class AeonTreeWindow
         var columnWidth = (width - LevelColumn) / EyeRules.Sectors.Length;
         var rowHeight = (height - header) / (AeonSkill.AscensionLevel + 1);
 
+        // 사다리 기둥: 10단계 위끝부터 5단계 아래끝까지 단계 칸 양쪽에 가는 금선
+        var ladderHeight = (AeonSkill.AscensionLevel - AeonSkill.GnosisLevel + 1) * rowHeight;
+        foreach (var railX in new[] { 3f, LevelColumn - 5 })
+        {
+            var rail = UiKit.Child(area, "LadderRail", typeof(Image));
+            Place(rail, railX, -header, 2, ladderHeight);
+            var railImage = rail.GetComponent<Image>();
+            railImage.color = new Color(UiPalette.Gold.r, UiPalette.Gold.g, UiPalette.Gold.b, 0.45f);
+            railImage.raycastTarget = false;
+        }
+
         for (int level = 0; level <= AeonSkill.AscensionLevel; level++)
         {
             var y = -header - (AeonSkill.AscensionLevel - level) * rowHeight; // 위가 10단계
+            if (Rungs.TryGetValue(level, out var rung))
+            {
+                // 네 섹터를 가로지르는 단계 띠 (노드 뒤). 누르면 그 하늘의 설명
+                var band = UiKit.Child(area, $"Rung{level}", typeof(Image), typeof(Button));
+                Place(band, 0, y - 1, width, rowHeight - 2);
+                rungBands[level] = band.GetComponent<Image>();
+                var rungLevel = level;
+                band.GetComponent<Button>().onClick.AddListener(() => SelectRung(rungLevel));
+
+                var glyph = UiKit.Label(area, font, $"Glyph{level}", 20, TextAlignmentOptions.Center, UiPalette.Gold);
+                Place(glyph.rectTransform, 0, y, LevelColumn, rowHeight * 0.62f);
+                glyph.text = rung.glyph;
+                glyph.raycastTarget = false;
+                var small = UiKit.Label(area, font, $"Level{level}", 11, TextAlignmentOptions.Center, UiKit.Muted);
+                Place(small.rectTransform, 0, y - rowHeight * 0.58f, LevelColumn, rowHeight * 0.4f);
+                small.text = level.ToString();
+                small.raycastTarget = false;
+                continue;
+            }
             var number = UiKit.Label(area, font, $"Level{level}", 15, TextAlignmentOptions.Center, UiKit.Muted);
             Place(number.rectTransform, 0, y, LevelColumn, rowHeight);
             number.text = level.ToString();
@@ -111,7 +156,7 @@ public static class AeonTreeWindow
             var x = LevelColumn + c * columnWidth;
             var head = UiKit.Label(area, font, $"Head{sector}", 18, TextAlignmentOptions.Center, SectorColor(sector));
             Place(head.rectTransform, x, 0, columnWidth, header);
-            head.text = Lang.Get(EyeRules.SectorKey(sector));
+            heads[sector] = head;
 
             foreach (var skill in AeonSkillCatalog.OfSector(sector))
             {
@@ -191,6 +236,15 @@ public static class AeonTreeWindow
     {
         if (selected == skill) { TryLearn(); return; } // 같은 노드를 한 번 더 누르면 익힌다
         selected = skill;
+        selectedRung = -1;
+        AudioManager.PlaySfx("click");
+        Refresh();
+    }
+
+    static void SelectRung(int level)
+    {
+        selected = null;
+        selectedRung = selectedRung == level ? -1 : level;
         AudioManager.PlaySfx("click");
         Refresh();
     }
@@ -213,6 +267,7 @@ public static class AeonTreeWindow
         var ascension = aeons.AscensionSector == EyeSector.None ? "" : $"  <color=#F2D978>{string.Format(Lang.Get("eye_ascension_sector"), Lang.Get(EyeRules.SectorKey(aeons.AscensionSector)))}</color>";
         stageLabel.text = string.Format(Lang.Get("eye_doctrine_level"), DoctrineLevelNow) + ascension;
         closeLabel.text = Lang.Get("close");
+        foreach (var (sector, head) in heads) head.text = Lang.Get(EyeRules.SectorKey(sector));
 
         foreach (var (skill, view) in nodes)
         {
@@ -226,6 +281,17 @@ public static class AeonTreeWindow
             view.edge.effectColor = skill == selected ? Color.white : learnable ? UiPalette.Gold : new Color(0, 0, 0, 0.5f);
             view.label.color = learned ? new Color(0.08f, 0.04f, 0.1f) : learnable || waiting ? Color.white : UiPalette.Locked;
             view.label.text = skill.Name;
+        }
+
+        foreach (var (level, band) in rungBands)
+            band.color = new Color(UiPalette.Gold.r, UiPalette.Gold.g, UiPalette.Gold.b, level == selectedRung ? 0.22f : level % 2 == 1 ? 0.07f : 0.04f);
+
+        if (selectedRung >= 0)
+        {
+            nameLabel.text = $"<color=#F2D978>{Lang.Get($"eye_rung_{selectedRung}")}</color>"; // 제목 글꼴에는 그리스 문자가 없어 머리글자는 단계 칸과 본문에만 둔다
+            infoLabel.text = $"<color=#9A8FB0>{Rungs[selectedRung].greek} · {string.Format(Lang.Get("eye_level"), selectedRung)} · {Lang.Get("eye_rung_tag")}</color>\n{Lang.Get($"eye_rung_{selectedRung}_desc")}";
+            learnButton.gameObject.SetActive(false);
+            return;
         }
 
         if (selected == null)

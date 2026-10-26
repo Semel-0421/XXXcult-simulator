@@ -12,7 +12,7 @@ public class ActionBar : MonoBehaviour
     static readonly string[] LifeKeys = { "life_Exercise", "life_Meditate", "life_Study", "life_Socialize", "life_Pray" };
     static readonly string[] CultKeys = { "action_Proselytize", "action_Preach", "action_Serve", "action_Desire", "action_Pray" };
     static readonly string[] GodKeys = { "god_act_Wonder", "god_act_Revelation", "god_act_Healing", "god_act_Feast", "god_act_Commune" }; // 준비된 신: 이적·계시·치유·향연·교감
-    static readonly string[] EyeKeys = { "eye_act_Wonder", "eye_act_Revelation", "eye_act_Healing", "eye_act_Feast", "eye_act_Commune" }; // 황금의 눈동자: 현현·비의·정화·육제·강신 (DEC-028 I)
+    static readonly string[] EyeKeys = { "eye_act_Wonder", "eye_act_Revelation", "eye_act_Healing", "eye_act_Feast", "eye_act_Commune" }; // 황금의 눈동자: 기적·가르침·정화·잔치·신내림 (DEC-028 I, 2026-10-26 쉬운 말로 순화)
 
     [SerializeField] CanvasGroup group;
     public event Action<LifeAction> LifeChosen;
