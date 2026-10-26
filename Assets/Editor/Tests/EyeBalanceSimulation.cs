@@ -16,7 +16,7 @@ using NUnit.Framework;
 //   Rester: Balanced 계획이지만 체력·정신력을 욕망으로 채우지 않고 바닥까지 둬 휴식에 들어간다 (스탯 방치 → 배드 경로 확인)
 public static class EyeSimulation
 {
-    public enum Strategy { Balanced, EvilFirst, Wide, Rester, LowStart, Loser, Exhaust }
+    public enum Strategy { Balanced, EvilFirst, Wide, Rester, LowStart, Loser, Exhaust, Switch } // Switch: 시작 섹터 다음 섹터로 승천 (다른 눈동자 확인)
     public static int MaxYears = 80; // 테스트는 짧게 줄여 돌린다
 
     public class RunResult
@@ -134,10 +134,13 @@ public static class EyeSimulation
     {
         Strategy.Balanced or Strategy.Rester or Strategy.LowStart or Strategy.Loser or Strategy.Exhaust => Lines(sector, false).Concat(Climb(sector, 5, 10)).ToList(),
         Strategy.EvilFirst => Lines(sector, true).Concat(Climb(sector, 5, 10)).ToList(),
+        Strategy.Switch => Lines(Next(sector), false).Concat(Climb(Next(sector), 5, 10)).ToList(),
         _ => Lines(sector, false).Concat(Climb(sector, 5, 5))
             .Concat(EyeRules.Sectors.Where(s => s != sector).SelectMany(s => Lines(s, false).Concat(Climb(s, 5, 5))))
             .Concat(Climb(sector, 6, 10)).ToList(),
     };
+
+    static EyeSector Next(EyeSector sector) => EyeRules.Sectors[(Array.IndexOf(EyeRules.Sectors, sector) + 1) % EyeRules.Sectors.Length];
 
     static int DoctrineLevelNow => DoctrineLevel.Of(GameSession.Cult[StatId.Doctrine].Value);
 
@@ -347,7 +350,7 @@ public static class EyeSimulation
         sb.AppendLine("휴식 한 번의 길이(분기): " + string.Join(", ", RestLength.OrderBy(x => int.Parse(x.Key)).Select(x => $"{x.Key}분기 {x.Value}")));
         sb.AppendLine("휴식 분기/판 · 휴식 재앙/판 · 승천 순간 교주 무게: " + string.Join(" · ", Results.GroupBy(x => x.Strategy)
             .Select(g => $"{g.Key} {g.Average(x => x.RestTurns):0.0} / {g.Average(x => x.RestCalamities):0.00} / {g.Average(x => x.PlayerWeight):0.00}")));
-        sb.AppendLine($"황금의 눈동자 시뮬레이션: 전략 7 × 시작 섹터 4 = 봇 {Bots}명, 판 {Results.Count}개, 최대 {MaxYears}년");
+        sb.AppendLine($"황금의 눈동자 시뮬레이션: 전략 {Enum.GetValues(typeof(Strategy)).Length} × 시작 섹터 4 = 봇 {Bots}명, 판 {Results.Count}개, 최대 {MaxYears}년");
         sb.AppendLine("전략 | 판 | 승천 | 승천 연수(중앙값) | 굿 | 배드 | 다른 눈동자 | 네 얼굴 | 재앙/판 | 휴식 재앙/판 | 최종 주도권(평균) | 주도권 최고(평균)");
         foreach (var group in Results.GroupBy(x => x.Strategy))
         {
@@ -376,12 +379,12 @@ public static class EyeSimulation
             .Select(g => $"{g.Key} {g.Average(x => x.CounterTotal):0} [{g.Min(x => x.CounterTotal)}~{g.Max(x => x.CounterTotal)}] · {g.Average(x => x.SurplusTotal):0} [{g.Min(x => x.SurplusTotal)}~{g.Max(x => x.SurplusTotal)}]")));
         sb.AppendLine("행동 분포(전체 턴): " + string.Join(", ", Acts.OrderByDescending(x => x.Value).Select(x => $"{x.Key} {x.Value}")));
         sb.AppendLine();
-        sb.AppendLine("섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드");
+        sb.AppendLine("섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드 | 교리 최고값(평균) | 재앙/판");
         foreach (var group in Results.GroupBy(x => x.Sector))
         {
             var g = group.ToList();
             var asc = g.Where(x => x.AscendYear >= 0).ToList();
-            sb.AppendLine($"{group.Key} | {g.Count} | {Pct(asc.Count, g.Count)} | {Median(asc.Select(x => x.AscendYear))} | {Pct(g.Count(x => x.EndingId.EndsWith("_bad")), g.Count)}");
+            sb.AppendLine($"{group.Key} | {g.Count} | {Pct(asc.Count, g.Count)} | {Median(asc.Select(x => x.AscendYear))} | {Pct(g.Count(x => x.EndingId.EndsWith("_bad")), g.Count)} | {g.Average(x => x.DoctrinePeak):0} | {g.Average(x => x.Calamities):0.0}");
         }
         sb.AppendLine();
         sb.AppendLine("엔딩 | 판");
@@ -405,7 +408,7 @@ public class EyeSimulationTests
         EyeSimulation.MaxYears = 2;
         try { EyeSimulation.Run(1, 7); }
         finally { EyeSimulation.MaxYears = years; }
-        Assert.AreEqual(28, EyeSimulation.Results.Count);
+        Assert.AreEqual(Enum.GetValues(typeof(EyeSimulation.Strategy)).Length * 4, EyeSimulation.Results.Count);
         Assert.IsFalse(GameSession.EyeMode, "시뮬레이션 뒤에는 본편 상태로 돌아가야 함");
     }
 }
@@ -434,6 +437,50 @@ public static class RestOverlapComparison
             }
         }
         finally { BalanceSimulation.Overlap = previous; }
+        return sb.ToString();
+    }
+}
+
+// 9단계 남은 결정(승천 속도·재앙 빈도) 후보 비교. 수치를 잠깐 바꿔 돌리고 끝나면 원래 값으로 되돌린다
+public static class EyeVariants
+{
+    public static readonly (string name, int threshold, int offset, int gnosisDoctrine, int gnosisCost, int ascensionCost)[] All =
+    {
+        ("V0 현재", 50, 2, 10, 2, 3),
+        ("V1 비용 그노시스 3·승천 5", 50, 2, 50, 3, 5),
+        ("V2 그노시스 교리 +50 없앰", 50, 2, 0, 2, 3),
+        ("V3 문턱 30", 30, 2, 50, 2, 3),
+        ("V4 선 상쇄 1", 50, 1, 50, 2, 3),
+        ("V5 V1+V3", 30, 2, 50, 3, 5),
+    };
+
+    public static string Run(int runsPerBot, int seed, StringBuilder full = null)
+    {
+        var sb = new StringBuilder();
+        var saved = (EyeRules.CalamityThreshold, EyeRules.GoodOffset, EyeRules.GnosisDoctrine, AeonSkill.GnosisCost, AeonSkill.AscensionCost);
+        try
+        {
+            foreach (var v in All)
+            {
+                (EyeRules.CalamityThreshold, EyeRules.GoodOffset, EyeRules.GnosisDoctrine, AeonSkill.GnosisCost, AeonSkill.AscensionCost)
+                    = (v.threshold, v.offset, v.gnosisDoctrine, v.gnosisCost, v.ascensionCost);
+                EyeSimulation.Run(runsPerBot, seed);
+                var report = EyeSimulation.Format();
+                full?.AppendLine($"==== {v.name} ====").AppendLine(report);
+                sb.AppendLine($"==== {v.name} ====");
+                var lines = report.Split('\n').Select(l => l.TrimEnd('\r')).ToList();
+                int start = lines.FindIndex(l => l.StartsWith("황금의 눈동자 시뮬레이션"));
+                for (int i = start; i >= 0 && i < lines.Count && lines[i].Length > 0; i++) sb.AppendLine(lines[i]);
+                sb.AppendLine(lines.FirstOrDefault(l => l.StartsWith("끝날 때 무게")));
+                int sector = lines.FindIndex(l => l.StartsWith("섹터 | 판"));
+                for (int i = sector; i >= 0 && i < lines.Count && lines[i].Length > 0; i++) sb.AppendLine(lines[i]);
+                sb.AppendLine();
+            }
+        }
+        finally
+        {
+            (EyeRules.CalamityThreshold, EyeRules.GoodOffset, EyeRules.GnosisDoctrine, AeonSkill.GnosisCost, AeonSkill.AscensionCost) = saved;
+        }
         return sb.ToString();
     }
 }

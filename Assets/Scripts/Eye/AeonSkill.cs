@@ -35,7 +35,8 @@ public class AeonSkill
     public bool IsAeon => Kind is AeonKind.Good or AeonKind.Evil;
 
     // 비용 (가안): 아이온 1, 그노시스 단계 2, 승천 3
-    public int Cost => Kind switch { AeonKind.Ascension => 3, AeonKind.Gnosis => 2, _ => 1 };
+    public static int GnosisCost = 2, AscensionCost = 3; // 시뮬레이션 변형 비교(EyeVariants)에서만 바꾼다
+    public int Cost => Kind switch { AeonKind.Ascension => AscensionCost, AeonKind.Gnosis => GnosisCost, _ => 1 };
 
     // 압박 규모에 더하는 가중치: 아이온은 권능 트리 바깥 노드처럼 0.75, 그노시스 이상은 1
     public float PressureWeight => IsAeon ? 0.75f : 1f;

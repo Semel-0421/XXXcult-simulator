@@ -44,10 +44,10 @@ public class GodPressure
 
     public static int EarthScale(CultStatus cult) => cult[StatId.Offerings].Value + cult[StatId.Authority].Value;
 
-    // 황금의 눈동자 모드에는 신 모드 압박이 없다 (SYS_DEMIURGE 9단계 결정): 단계가 늘 0이라 피해·압박 이벤트·성공률 감점·포인트 보너스·건물 압수가 모두 꺼진다
+    // 황금의 눈동자 모드에는 신계 압박이 없다 (SYS_DEMIURGE 9단계 결정, 12차에서 지상 압박은 되살림): 신계 단계가 늘 0이라 신계 피해·hv 이벤트가 꺼진다
     public int Stage(Pressure pressure, CultStatus cult)
     {
-        if (GameSession.EyeMode) return 0;
+        if (GameSession.EyeMode && pressure == Pressure.Heaven) return 0;
         var nodes = tree.PressureNodeWeight; // 바깥 노드는 0.75
         return pressure == Pressure.Heaven
             ? StageOf(HeavenScale(cult) + nodes * HeavenPerNode + Depth(Pressure.Earth) * HeavenPerDepth + Envy, HeavenSteps)

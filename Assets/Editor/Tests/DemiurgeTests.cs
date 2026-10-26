@@ -102,20 +102,37 @@ public class DemiurgeTests
     }
 
     [Test]
-    public void GodPressure_IsOffInEyeMode()
+    public void GodPressure_EyeModeHasEarthOnly()
     {
+        // 12차 결정: 신계 압박만 끄고 지상 압박은 되살림
         EyeRules.ChooseSector(EyeSector.Yaldabaoth);
         var cult = GameSession.Cult;
         cult[StatId.Offerings].Set(1000); cult[StatId.Authority].Set(1000); cult[StatId.Reputation].Set(500);
         cult[StatId.Followers].Set(1000); cult[StatId.FollowerFaith].Set(1000); cult[StatId.Doctrine].Set(1000);
         var pressure = GameSession.God.Pressure;
-        Assert.AreEqual(0, pressure.Stage(Pressure.Earth, cult));
+        Assert.Greater(pressure.Stage(Pressure.Earth, cult), 0);
         Assert.AreEqual(0, pressure.Stage(Pressure.Heaven, cult));
         pressure.ApplyQuarter(cult);
-        Assert.AreEqual(500, cult[StatId.Reputation].Value);
-        Assert.AreEqual(1000, cult[StatId.FollowerFaith].Value);
-        Assert.AreEqual(0f, GodRules.EventPenalty);
+        Assert.Less(cult[StatId.Reputation].Value, 500, "지상 압박은 명망을 깎아야 함");
+        Assert.AreEqual(1000, cult[StatId.FollowerFaith].Value, "신계 압박(믿음 피해)은 없어야 함");
+        Assert.AreEqual(1000, cult[StatId.Doctrine].Value, "신계 압박(교리 피해)은 없어야 함");
     }
+
+    [Test]
+    public void EyeMode_DissolutionAddsCounterInsteadOfOrder()
+    {
+        EyeRules.ChooseSector(EyeSector.Satan);
+        var cult = GameSession.Cult;
+        cult[StatId.Offerings].Set(1000); cult[StatId.Authority].Set(1000);
+        var god = GameSession.God;
+        Assume.That(god.Pressure.Stage(Pressure.Earth, cult), Is.EqualTo(GodPressure.MaxStage));
+        var before = god.Demiurge.Counter;
+        god.Quarter(cult, new ZeroRng());
+        Assert.IsFalse(god.Buildings.DissolutionOrdered);
+        Assert.AreEqual(before + EyeRules.DissolutionPenalty, god.Demiurge.Counter);
+    }
+
+    class ZeroRng : System.Random { protected override double Sample() => 0; }
 
     [Test]
     public void GnosisStage_RaisesDoctrineAtOnce()

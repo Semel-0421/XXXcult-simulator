@@ -34,11 +34,13 @@ public static class EyeRules
     }
 
     // ---- 재앙 (SYS_DEMIURGE 5절. 수치는 가안) ----
+    // 문턱·상쇄·그노시스 교리는 시뮬레이션 변형 비교(EyeVariants)에서 바꿔 끼우므로 const가 아니다. 게임 코드에서는 바꾸지 않는다
 
-    public const int CalamityThreshold = 50; // 카운터가 이만큼 차면 재앙 (9단계 결정: 40 → 50)
-    public const int GoodOffset = 2;         // 같은 섹터 선한 아이온 하나가 줄이는 분기 카운터 (9단계 결정: 1 → 2)
-    public const int GnosisDoctrine = 50;    // 그노시스 단계(5~9)를 익힐 때 바로 오르는 교리 (9단계 결정, 두 배 규칙 없이 그대로)
+    public static int CalamityThreshold = 50; // 카운터가 이만큼 차면 재앙 (9단계 결정: 40 → 50)
+    public static int GoodOffset = 2;       // 같은 섹터 선한 아이온 하나가 줄이는 분기 카운터 (9단계 결정: 1 → 2)
+    public static int GnosisDoctrine = 10;    // 그노시스 단계(5~9)를 익힐 때 바로 오르는 교리 (9단계 결정, 두 배 규칙 없이 그대로. 10차 결정: 50 → 10)
     public const int ZeroPenalty = 3;        // 지키는 스탯이 0이면 패배 대신 분기마다 카운터 +3 (DEC-028 L, 9단계 결정: 10 → 3)
+    public const int DissolutionPenalty = 10; // 지상 5단계 해산 명령이 내려질 때 패배 대신 카운터 +10 (DEC-028 L)
     public const float DamageBase = 0.05f, DamagePerEvil = 0.01f; // 재앙 피해 = 현재 값 × (5% + 악한 아이온 수 × 1%)
     public const int MaxCalamityGuard = 40;  // 선한 아이온의 피해 감소는 40%까지
 

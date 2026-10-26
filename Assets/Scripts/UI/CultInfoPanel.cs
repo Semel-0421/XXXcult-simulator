@@ -63,7 +63,7 @@ public class CultInfoPanel : MonoBehaviour
         var key = ((god.Available * 100 + heaven * 10 + earth) * 16 + cores * 2 + (god.Tree.Ascended ? 1 : 0)) * 2 + (shows ? 1 : 0);
         if (key == shownPoints) return;
         shownPoints = key;
-        var pressure = GameSession.EyeMode ? "" : string.Format(Lang.Get("god_pressure_now"), heaven, earth); // 눈동자 모드에는 압박이 없다
+        var pressure = GameSession.EyeMode ? string.Format(Lang.Get("eye_pressure_now"), earth) : string.Format(Lang.Get("god_pressure_now"), heaven, earth); // 눈동자 모드에는 지상 압박만 있다
         pointsLabel.text = $"{string.Format(Lang.Get(GameSession.EyeMode ? "eye_points" : "god_points"), god.Available)}\n<size=80%>{pressure}{(shows ? "\n" + EndingProgress(god.Tree, cores) : "")}</size>";
     }
 

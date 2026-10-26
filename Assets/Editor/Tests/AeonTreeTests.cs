@@ -128,15 +128,16 @@ public class AeonTreeTests
         var god = new GodState();
         Assert.AreEqual(0, god.Tree.Gain(StatId.Doctrine));
         god.Aeons.Grant(EyeSector.Yahweh);
-        Assert.AreEqual(8, god.Tree.Gain(StatId.Doctrine));
+        Assert.AreEqual(9, god.Tree.Gain(StatId.Doctrine));
         Assert.AreEqual(6, god.Tree.Guard(StatId.FollowerFaith));
-        Assert.AreEqual(4, god.Tree.Resist(Pressure.Heaven));
+        Assert.AreEqual(0, god.Tree.Resist(Pressure.Heaven)); // 12차: 눈동자 모드에 신계 압박이 없어 야훼 선의 신계 저항을 뺐다
         Assert.AreEqual(1, god.Tree.ReachedStage);
         Assert.AreEqual(1.5f, god.Tree.PressureNodeWeight, 1e-4);
 
         god.Points.Add(5);
         god.Aeons.Learn(AeonSkillCatalog.Of(EyeSector.Yaldabaoth, 0, AeonKind.Good), god.Available, 0);
         Assert.AreEqual(4, god.Available);
+        Assert.AreEqual(4, god.Tree.Resist(Pressure.Earth)); // 얄다바오트 선 0단계 지상 저항
         Assert.IsTrue(GodBuildings.IsUnlocked(GodBuildingType.Shelter, god.Tree));
         Assert.IsFalse(GodBuildings.IsUnlocked(GodBuildingType.Temple, god.Tree));
     }
@@ -164,7 +165,7 @@ public class AeonTreeTests
             Assert.AreEqual(2 + 10 + 5, restored.Learned.Count());
             Assert.AreEqual(EyeSector.Samael, restored.AscensionSector);
             Assert.AreEqual(0, restored.SpentPoints - (10 + 5 * 2)); // 사탄 0단계 둘은 무료
-            Assert.AreEqual(8, GameSession.God.Tree.Gain(StatId.Offerings)); // 효과가 다시 계산된다 (사탄 악 0단계)
+            Assert.AreEqual(10, GameSession.God.Tree.Gain(StatId.Offerings)); // 효과가 다시 계산된다 (사탄 악 0단계)
             Assert.Greater(GameSession.God.Tree.Gain(StatId.Followers), 0);   // 사마엘 악·그노시스
         }
         finally

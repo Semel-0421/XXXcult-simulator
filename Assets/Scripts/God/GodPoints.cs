@@ -90,7 +90,10 @@ public class GodState
         Pressure.ApplyQuarter(cult);
         if (Pressure.Stage(global::Pressure.Earth, cult) >= GodPressure.MaxStage && !Buildings.Seize(rng, Tree.Total(GodEffect.Type.SeizeGuard))
             && rng.NextDouble() < GodBuildings.DissolutionChance(Tree.BroadRings))
-            Buildings.OrderDissolution();
+        {
+            if (GameSession.EyeMode) GameSession.God.Demiurge.AddCounter(EyeRules.DissolutionPenalty); // 황금의 눈동자는 해산 엔딩 대신 재앙 카운터 (DEC-028 L)
+            else Buildings.OrderDissolution();
+        }
         Buildings.EnforceFloors(cult);
     }
 }

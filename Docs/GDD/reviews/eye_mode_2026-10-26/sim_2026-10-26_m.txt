@@ -1,0 +1,582 @@
+==== V0 현재 ====
+휴식 시작(첫 휴식에서 0인 스탯): Health 303, Repute 1
+휴식 연쇄(이어서 다시 쉰 휴식에서 0인 스탯): 
+연쇄 길이(한 번 쉬기 시작해 몇 년 이어졌나): 1년 304
+휴식 재앙이 깎은 스탯: Lust 47, Ambition 32, Greed 28, Appetite 26, Offerings 21, Integrity 19, Mentality 14, Charity 10
+휴식 중 합류(합류 뒤 쉬는 스탯): Health+Piety 55, Health+Repute 52, Health+Piety+Repute 26, Health+Piety+Repute+Wealth 16, Health+Wealth 12, Health+Piety+Wealth 9, Health+Repute+Wealth 7, Repute+Wealth 1
+휴식 한 번의 길이(분기): 4분기 182, 5분기 24, 6분기 22, 7분기 18, 8분기 21, 9분기 6, 10분기 13, 11분기 6, 12분기 8, 13분기 2, 14분기 1, 15분기 1
+휴식 분기/판 · 휴식 재앙/판 · 승천 순간 교주 무게: Balanced 0.0 / 0.00 / 7.89 · EvilFirst 0.0 / 0.00 / 7.92 · Wide 0.0 / 0.00 / 9.68 · Rester 0.0 / 0.00 / 7.94 · LowStart 0.0 / 0.00 / 6.94 · Loser 0.0 / 0.00 / 7.17 · Exhaust 209.4 / 25.75 / 6.95
+황금의 눈동자 시뮬레이션: 전략 7 × 시작 섹터 4 = 봇 28명, 판 56개, 최대 80년
+전략 | 판 | 승천 | 승천 연수(중앙값) | 굿 | 배드 | 다른 눈동자 | 네 얼굴 | 재앙/판 | 휴식 재앙/판 | 최종 주도권(평균) | 주도권 최고(평균)
+Balanced | 8 | 100% | 9.5 | 100% | 0% | 0% | 0% | 0.9 | 0.0 | 1.51 | 1.52
+EvilFirst | 8 | 100% | 9.5 | 100% | 0% | 0% | 0% | 1.3 | 0.0 | 1.73 | 1.74
+Wide | 8 | 100% | 14 | 0% | 75% | 0% | 25% | 3.0 | 0.0 | 2.03 | 2.10
+Rester | 8 | 100% | 10 | 100% | 0% | 0% | 0% | 1.1 | 0.0 | 1.53 | 1.53
+LowStart | 8 | 100% | 15 | 38% | 63% | 0% | 0% | 2.6 | 0.0 | 2.17 | 2.48
+Loser | 8 | 100% | 10 | 100% | 0% | 0% | 0% | 1.5 | 0.0 | 1.77 | 1.76
+Exhaust | 8 | 0% | -1 | 0% | 0% | 0% | 0% | 33.4 | 25.8 | 2.84 | 3.04
+
+전략 | 익힌 노드(평균) | 번 포인트(평균) | 교리 단계(평균) | 교리 최고값 | 설교/포교 | 끝 분기 카운터 | 바닥 턴 | 막힌 곳(상위)
+Balanced | 16.0 | 30 | 9.0 | 779 | 18/10 | 6.0 | 0 | ×8
+EvilFirst | 16.0 | 32 | 9.0 | 775 | 18/9 | 6.0 | 0 | ×8
+Wide | 49.0 | 60 | 9.9 | 991 | 9/20 | 12.0 | 0 | ×8
+Rester | 16.0 | 32 | 9.0 | 791 | 19/9 | 6.0 | 0 | ×8
+LowStart | 16.0 | 37 | 9.0 | 784 | 19/2 | 6.0 | 14 | ×8
+Loser | 16.0 | 31 | 9.0 | 786 | 19/9 | 6.0 | 0 | ×8
+Exhaust | 5.0 | 161 | 0.8 | 100 | 0/6 | 0.8 | 80 | sm1g:doctrine×2, ya9:doctrine×1, ya5:doctrine×1, sa1g:doctrine×1
+
+교단 스탯 증감 원인 (판당 평균, 오름 / 내림): Followers · FollowerFaith · Reputation · Doctrine
+휴식(휴식 재앙 포함) | +0 / -18 | +0 / -38 | +0 / -26 | +0 / -22
+행동 턴(행동+사회+불운+분기) | +80 / -18 | +264 / -153 | +35 / -126 | +297 / -0
+압박(추정, 행동 턴에 포함) | +0 / -0 | +0 / -0 | +0 / -0 | +0 / -0
+이벤트 | +74 / -1 | +179 / -2 | +46 / -13 | +220 / -2
+재앙 | +0 / -7 | +0 / -2 | +0 / -2 | +0 / -11
+압박 단계 분포(턴): 신계 0: 3122, 지상 0: 3122
+바닥 스탯(턴): Followers 584, FollowerFaith 492, Reputation 476
+끝날 때 무게 (데미우르고스 / 교주, 최대 20) · 악·그노시스 노드 수: Balanced 11.91 / 7.89 · 10.0 · EvilFirst 13.69 / 7.92 · 10.0 · Wide 19.62 / 9.68 · 28.0 · Rester 12.14 / 7.94 · 10.0 · LowStart 14.63 / 6.94 · 10.0 · Loser 12.69 / 7.17 · 10.0 · Exhaust 19.53 / 6.95 · 2.8
+누적 카운터 증가 · 누적 악 우위(분기 합) [최소~최대]: Balanced 70 [44~82] · 52 [32~63] · EvilFirst 85 [69~104] · 67 [52~84] · Wide 129 [92~158] · 65 [42~85] · Rester 71 [46~97] · 53 [35~73] · LowStart 104 [76~199] · 75 [57~150] · Loser 75 [57~92] · 57 [44~69] · Exhaust 61 [0~410] · 40 [0~318]
+행동 분포(전체 턴): rest 1675, Desire 913, Preach 812, Pray 672, Proselytize 526, Serve 199, consecrate 117
+
+섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드
+Yahweh | 14 | 86% | 9 | 29%
+Satan | 14 | 86% | 11 | 14%
+Samael | 14 | 86% | 10 | 14%
+Yaldabaoth | 14 | 86% | 11 | 21%
+
+엔딩 | 판
+eye_samael_good | 10
+eye_satan_good | 9
+eye_yahweh_good | 8
+eye_yaldabaoth_good | 8
+none | 8
+eye_yahweh_bad | 4
+eye_yaldabaoth_bad | 3
+eye_four_faces | 2
+eye_satan_bad | 2
+eye_samael_bad | 2
+
+업적 도달(봇 28명 중 딴 봇 수) — 0명인 업적
+e009 다른 눈동자: 질투하는 거짓 신 | profile:ending_eye_yahweh_other>=1
+e010 다른 눈동자: 고발하는 거짓 신 | profile:ending_eye_satan_other>=1
+e011 다른 눈동자: 눈먼 거짓 신 | profile:ending_eye_samael_other>=1
+e012 다른 눈동자: 사자 얼굴의 거짓 신 | profile:ending_eye_yaldabaoth_other>=1
+e014 세 개의 왕좌 | NEW:eye_endings_seen>=3
+e015 여덟 개의 왕좌 | NEW:eye_endings_seen>=8
+e016 모든 거짓 신 | NEW:eye_endings_seen>=13
+e018 다섯 번의 찬탈 | profile:eye_usurped>=5
+e019 찬탈의 습관 | profile:eye_usurped>=15
+e021 다섯 번 삼켜지다 | profile:eye_lost>=5
+e022 열 번의 승천 | profile:eye_ascended>=10
+e023 서른 번의 승천 | profile:eye_ascended>=30
+e036 네 개의 눈길 | profile:eye_start_yahweh>=1 profile:eye_start_satan>=1 profile:eye_start_samael>=1 profile:eye_start_yaldabaoth>=1
+e041 충만 | NEW:eye_nodes>=64
+e052 끝없는 재앙 | profile:eye_calamities>=100
+e059 나눠 내준 자 | profile:eye_give_half>=10
+e061 상처투성이 왕좌 | NEW:eye_ascend_calamities>=20 NEW:eye_ascend_good
+e065 온전한 주인 | NEW:eye_ascend_dominance<=100
+e073 느린 찬탈 | NEW:eye_ascend_years>=40
+e076 능숙한 현현 | profile:eye_act_Wonder>=150
+e078 능숙한 비의 | profile:eye_act_Revelation>=150
+e080 능숙한 정화 | profile:eye_act_Healing>=150
+e084 능숙한 강신 | profile:eye_act_Commune>=150
+e085 익숙한 창조 | profile:eye_act_Consecrate>=30
+e086 능숙한 창조 | profile:eye_act_Consecrate>=150
+e089 물질의 도시 | profile:eye_build_total>=30
+e091 이백 개의 계시 | profile:eye_events>=200
+e092 오백 개의 계시 | profile:eye_events>=500
+e094 다섯 번의 눈동자 | profile:eye_runs>=5
+e095 스무 번의 눈동자 | profile:eye_runs>=20
+e097 눈동자 업적 예순 | NEW:eye_achv>=60
+
+업적 도달 — 모든 봇이 딴 업적
+e049 첫 재앙
+e066 가득 찬 거짓 신
+e067 그릇의 첫 해
+e068 다섯 해의 동거
+e093 첫 눈동자
+
+==== V1 비용 그노시스 3·승천 5 ====
+휴식 시작(첫 휴식에서 0인 스탯): Health 304, Repute 1
+휴식 연쇄(이어서 다시 쉰 휴식에서 0인 스탯): 
+연쇄 길이(한 번 쉬기 시작해 몇 년 이어졌나): 1년 305
+휴식 재앙이 깎은 스탯: Lust 47, Ambition 32, Greed 28, Appetite 26, Offerings 21, Integrity 19, Mentality 14, Charity 10
+휴식 중 합류(합류 뒤 쉬는 스탯): Health+Piety 55, Health+Repute 52, Health+Piety+Repute 26, Health+Piety+Repute+Wealth 16, Health+Wealth 12, Health+Piety+Wealth 9, Health+Repute+Wealth 7, Repute+Wealth 1
+휴식 한 번의 길이(분기): 4분기 183, 5분기 24, 6분기 22, 7분기 18, 8분기 21, 9분기 6, 10분기 13, 11분기 6, 12분기 8, 13분기 2, 14분기 1, 15분기 1
+휴식 분기/판 · 휴식 재앙/판 · 승천 순간 교주 무게: Balanced 0.0 / 0.00 / 8.06 · EvilFirst 0.0 / 0.00 / 7.95 · Wide 0.0 / 0.00 / 10.15 · Rester 0.0 / 0.00 / 8.03 · LowStart 0.0 / 0.00 / 7.33 · Loser 0.5 / 0.00 / 7.26 · Exhaust 209.4 / 25.75 / 6.95
+황금의 눈동자 시뮬레이션: 전략 7 × 시작 섹터 4 = 봇 28명, 판 56개, 최대 80년
+전략 | 판 | 승천 | 승천 연수(중앙값) | 굿 | 배드 | 다른 눈동자 | 네 얼굴 | 재앙/판 | 휴식 재앙/판 | 최종 주도권(평균) | 주도권 최고(평균)
+Balanced | 8 | 100% | 11 | 100% | 0% | 0% | 0% | 1.3 | 0.0 | 1.63 | 1.64
+EvilFirst | 8 | 100% | 10 | 100% | 0% | 0% | 0% | 1.5 | 0.0 | 1.79 | 1.78
+Wide | 8 | 100% | 15.5 | 0% | 13% | 0% | 88% | 4.0 | 0.0 | 1.97 | 2.08
+Rester | 8 | 100% | 10 | 100% | 0% | 0% | 0% | 1.1 | 0.0 | 1.58 | 1.60
+LowStart | 8 | 100% | 17.5 | 38% | 63% | 0% | 0% | 3.1 | 0.0 | 2.31 | 2.66
+Loser | 8 | 100% | 11 | 88% | 13% | 0% | 0% | 1.6 | 0.0 | 1.85 | 1.80
+Exhaust | 8 | 0% | -1 | 0% | 0% | 0% | 0% | 33.4 | 25.8 | 2.84 | 3.04
+
+전략 | 익힌 노드(평균) | 번 포인트(평균) | 교리 단계(평균) | 교리 최고값 | 설교/포교 | 끝 분기 카운터 | 바닥 턴 | 막힌 곳(상위)
+Balanced | 16.0 | 35 | 9.0 | 798 | 18/12 | 6.0 | 0 | ×8
+EvilFirst | 16.0 | 35 | 9.0 | 791 | 18/11 | 6.0 | 0 | ×8
+Wide | 49.0 | 68 | 10.0 | 999 | 9/22 | 12.0 | 0 | ×8
+Rester | 16.0 | 35 | 9.0 | 791 | 18/11 | 6.0 | 0 | ×8
+LowStart | 16.0 | 40 | 9.0 | 793 | 18/3 | 6.0 | 14 | ×8
+Loser | 16.0 | 33 | 9.0 | 795 | 19/11 | 6.0 | 0 | ×8
+Exhaust | 5.0 | 161 | 0.8 | 100 | 0/6 | 0.8 | 80 | sm1g:doctrine×2, ya9:doctrine×1, ya5:doctrine×1, sa1g:doctrine×1
+
+교단 스탯 증감 원인 (판당 평균, 오름 / 내림): Followers · FollowerFaith · Reputation · Doctrine
+휴식(휴식 재앙 포함) | +0 / -19 | +0 / -38 | +0 / -26 | +0 / -23
+행동 턴(행동+사회+불운+분기) | +88 / -19 | +264 / -158 | +39 / -133 | +287 / -0
+압박(추정, 행동 턴에 포함) | +0 / -0 | +0 / -0 | +0 / -0 | +0 / -0
+이벤트 | +79 / -1 | +184 / -2 | +50 / -14 | +244 / -1
+재앙 | +0 / -8 | +0 / -2 | +0 / -3 | +0 / -12
+압박 단계 분포(턴): 신계 0: 3287, 지상 0: 3287
+바닥 스탯(턴): Followers 584, FollowerFaith 495, Reputation 478, Health 1
+끝날 때 무게 (데미우르고스 / 교주, 최대 20) · 악·그노시스 노드 수: Balanced 13.13 / 8.06 · 10.0 · EvilFirst 14.26 / 7.95 · 10.0 · Wide 20.00 / 10.15 · 28.0 · Rester 12.68 / 8.03 · 10.0 · LowStart 16.49 / 7.33 · 10.0 · Loser 13.41 / 7.26 · 10.0 · Exhaust 19.53 / 6.95 · 2.8
+누적 카운터 증가 · 누적 악 우위(분기 합) [최소~최대]: Balanced 84 [68~106] · 63 [50~79] · EvilFirst 91 [74~104] · 71 [55~83] · Wide 153 [107~187] · 77 [53~97] · Rester 79 [62~97] · 59 [45~73] · LowStart 134 [76~219] · 98 [57~166] · Loser 81 [71~89] · 61 [54~69] · Exhaust 61 [0~410] · 40 [0~318]
+행동 분포(전체 턴): rest 1679, Desire 932, Preach 802, Pray 726, Proselytize 602, Serve 225, consecrate 125
+
+섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드
+Yahweh | 14 | 86% | 10.5 | 21%
+Satan | 14 | 86% | 11 | 7%
+Samael | 14 | 86% | 10 | 7%
+Yaldabaoth | 14 | 86% | 12.5 | 14%
+
+엔딩 | 판
+eye_samael_good | 10
+eye_satan_good | 9
+eye_yaldabaoth_good | 8
+none | 8
+eye_yahweh_good | 7
+eye_four_faces | 7
+eye_yahweh_bad | 3
+eye_yaldabaoth_bad | 2
+eye_samael_bad | 1
+eye_satan_bad | 1
+
+업적 도달(봇 28명 중 딴 봇 수) — 0명인 업적
+e009 다른 눈동자: 질투하는 거짓 신 | profile:ending_eye_yahweh_other>=1
+e010 다른 눈동자: 고발하는 거짓 신 | profile:ending_eye_satan_other>=1
+e011 다른 눈동자: 눈먼 거짓 신 | profile:ending_eye_samael_other>=1
+e012 다른 눈동자: 사자 얼굴의 거짓 신 | profile:ending_eye_yaldabaoth_other>=1
+e014 세 개의 왕좌 | NEW:eye_endings_seen>=3
+e015 여덟 개의 왕좌 | NEW:eye_endings_seen>=8
+e016 모든 거짓 신 | NEW:eye_endings_seen>=13
+e018 다섯 번의 찬탈 | profile:eye_usurped>=5
+e019 찬탈의 습관 | profile:eye_usurped>=15
+e021 다섯 번 삼켜지다 | profile:eye_lost>=5
+e022 열 번의 승천 | profile:eye_ascended>=10
+e023 서른 번의 승천 | profile:eye_ascended>=30
+e036 네 개의 눈길 | profile:eye_start_yahweh>=1 profile:eye_start_satan>=1 profile:eye_start_samael>=1 profile:eye_start_yaldabaoth>=1
+e041 충만 | NEW:eye_nodes>=64
+e052 끝없는 재앙 | profile:eye_calamities>=100
+e059 나눠 내준 자 | profile:eye_give_half>=10
+e060 흠 없는 왕좌 | NEW:eye_ascend_calamities==0
+e061 상처투성이 왕좌 | NEW:eye_ascend_calamities>=20 NEW:eye_ascend_good
+e065 온전한 주인 | NEW:eye_ascend_dominance<=100
+e073 느린 찬탈 | NEW:eye_ascend_years>=40
+e076 능숙한 현현 | profile:eye_act_Wonder>=150
+e078 능숙한 비의 | profile:eye_act_Revelation>=150
+e080 능숙한 정화 | profile:eye_act_Healing>=150
+e084 능숙한 강신 | profile:eye_act_Commune>=150
+e085 익숙한 창조 | profile:eye_act_Consecrate>=30
+e086 능숙한 창조 | profile:eye_act_Consecrate>=150
+e089 물질의 도시 | profile:eye_build_total>=30
+e091 이백 개의 계시 | profile:eye_events>=200
+e092 오백 개의 계시 | profile:eye_events>=500
+e094 다섯 번의 눈동자 | profile:eye_runs>=5
+e095 스무 번의 눈동자 | profile:eye_runs>=20
+e097 눈동자 업적 예순 | NEW:eye_achv>=60
+
+업적 도달 — 모든 봇이 딴 업적
+e049 첫 재앙
+e066 가득 찬 거짓 신
+e067 그릇의 첫 해
+e068 다섯 해의 동거
+e069 열 해의 동거
+e090 쉰 개의 계시
+e093 첫 눈동자
+
+==== V2 그노시스 교리 +50 없앰 ====
+휴식 시작(첫 휴식에서 0인 스탯): Health 302, Repute 1
+휴식 연쇄(이어서 다시 쉰 휴식에서 0인 스탯): 
+연쇄 길이(한 번 쉬기 시작해 몇 년 이어졌나): 1년 303
+휴식 재앙이 깎은 스탯: Lust 47, Ambition 30, Greed 28, Appetite 27, Offerings 23, Integrity 20, Mentality 14, Charity 10
+휴식 중 합류(합류 뒤 쉬는 스탯): Health+Piety 53, Health+Repute 51, Health+Piety+Repute 26, Health+Piety+Repute+Wealth 17, Health+Wealth 12, Health+Piety+Wealth 8, Health+Repute+Wealth 7, Repute+Wealth 1
+휴식 한 번의 길이(분기): 4분기 184, 5분기 22, 6분기 20, 7분기 18, 8분기 24, 9분기 5, 10분기 12, 11분기 6, 12분기 7, 13분기 2, 14분기 1, 15분기 1, 16분기 1
+휴식 분기/판 · 휴식 재앙/판 · 승천 순간 교주 무게: Balanced 0.0 / 0.00 / 8.93 · EvilFirst 0.0 / 0.00 / 8.87 · Wide 0.0 / 0.00 / 10.25 · Rester 0.0 / 0.00 / 8.90 · LowStart 0.0 / 0.00 / 8.46 · Loser 0.0 / 0.00 / 7.98 · Exhaust 208.8 / 26.00 / 7.01
+황금의 눈동자 시뮬레이션: 전략 7 × 시작 섹터 4 = 봇 28명, 판 56개, 최대 80년
+전략 | 판 | 승천 | 승천 연수(중앙값) | 굿 | 배드 | 다른 눈동자 | 네 얼굴 | 재앙/판 | 휴식 재앙/판 | 최종 주도권(평균) | 주도권 최고(평균)
+Balanced | 8 | 100% | 12.5 | 100% | 0% | 0% | 0% | 2.0 | 0.0 | 1.86 | 1.87
+EvilFirst | 8 | 100% | 12.5 | 38% | 63% | 0% | 0% | 2.3 | 0.0 | 1.99 | 2.02
+Wide | 8 | 100% | 14.5 | 0% | 63% | 0% | 38% | 4.4 | 0.0 | 1.97 | 2.19
+Rester | 8 | 100% | 13.5 | 75% | 25% | 0% | 0% | 2.1 | 0.0 | 1.83 | 1.84
+LowStart | 8 | 100% | 23 | 13% | 88% | 0% | 0% | 5.6 | 0.0 | 2.34 | 2.66
+Loser | 8 | 100% | 13 | 38% | 63% | 0% | 0% | 2.4 | 0.0 | 1.99 | 1.98
+Exhaust | 8 | 0% | -1 | 0% | 0% | 0% | 0% | 33.3 | 26.0 | 2.83 | 3.04
+
+전략 | 익힌 노드(평균) | 번 포인트(평균) | 교리 단계(평균) | 교리 최고값 | 설교/포교 | 끝 분기 카운터 | 바닥 턴 | 막힌 곳(상위)
+Balanced | 16.0 | 45 | 9.0 | 787 | 28/9 | 6.0 | 0 | ×8
+EvilFirst | 16.0 | 51 | 9.0 | 789 | 28/9 | 6.0 | 0 | ×8
+Wide | 49.0 | 67 | 9.0 | 802 | 14/20 | 12.0 | 0 | ×8
+Rester | 16.0 | 49 | 9.0 | 786 | 28/9 | 6.0 | 0 | ×8
+LowStart | 16.0 | 54 | 9.0 | 779 | 29/4 | 6.0 | 21 | ×8
+Loser | 16.0 | 45 | 9.0 | 777 | 27/8 | 6.0 | 0 | ×8
+Exhaust | 4.9 | 161 | 0.8 | 73 | 0/6 | 0.6 | 80 | sm1g:doctrine×2, ya8:doctrine×1, ya5:doctrine×1, sa1g:doctrine×1
+
+교단 스탯 증감 원인 (판당 평균, 오름 / 내림): Followers · FollowerFaith · Reputation · Doctrine
+휴식(휴식 재앙 포함) | +0 / -19 | +0 / -37 | +0 / -26 | +0 / -22
+행동 턴(행동+사회+불운+분기) | +86 / -24 | +405 / -167 | +41 / -139 | +495 / -0
+압박(추정, 행동 턴에 포함) | +0 / -0 | +0 / -0 | +0 / -0 | +0 / -0
+이벤트 | +90 / -1 | +193 / -3 | +58 / -16 | +250 / -2
+재앙 | +0 / -10 | +0 / -3 | +0 / -4 | +0 / -41
+압박 단계 분포(턴): 신계 0: 3776, 지상 0: 3776
+바닥 스탯(턴): Followers 608, FollowerFaith 528, Reputation 503
+끝날 때 무게 (데미우르고스 / 교주, 최대 20) · 악·그노시스 노드 수: Balanced 16.72 / 8.93 · 10.0 · EvilFirst 17.76 / 8.87 · 10.0 · Wide 19.98 / 10.25 · 28.0 · Rester 16.42 / 8.90 · 10.0 · LowStart 19.47 / 8.46 · 10.0 · Loser 16.00 / 7.98 · 10.0 · Exhaust 19.53 / 7.01 · 2.6
+누적 카운터 증가 · 누적 악 우위(분기 합) [최소~최대]: Balanced 123 [81~150] · 94 [62~114] · EvilFirst 135 [99~165] · 106 [67~133] · Wide 190 [95~321] · 105 [45~188] · Rester 120 [54~152] · 91 [41~116] · LowStart 249 [147~445] · 188 [106~349] · Loser 112 [56~141] · 85 [42~110] · Exhaust 52 [0~341] · 31 [0~246]
+행동 분포(전체 턴): rest 1670, Preach 1230, Desire 961, Pray 800, Proselytize 521, Serve 264, consecrate 131
+
+섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드
+Yahweh | 14 | 86% | 9 | 14%
+Satan | 14 | 86% | 14 | 50%
+Samael | 14 | 86% | 13 | 43%
+Yaldabaoth | 14 | 86% | 15 | 64%
+
+엔딩 | 판
+eye_yaldabaoth_bad | 9
+eye_yahweh_good | 8
+none | 8
+eye_satan_bad | 7
+eye_samael_bad | 6
+eye_satan_good | 5
+eye_samael_good | 5
+eye_yaldabaoth_good | 3
+eye_four_faces | 3
+eye_yahweh_bad | 2
+
+업적 도달(봇 28명 중 딴 봇 수) — 0명인 업적
+e009 다른 눈동자: 질투하는 거짓 신 | profile:ending_eye_yahweh_other>=1
+e010 다른 눈동자: 고발하는 거짓 신 | profile:ending_eye_satan_other>=1
+e011 다른 눈동자: 눈먼 거짓 신 | profile:ending_eye_samael_other>=1
+e012 다른 눈동자: 사자 얼굴의 거짓 신 | profile:ending_eye_yaldabaoth_other>=1
+e014 세 개의 왕좌 | NEW:eye_endings_seen>=3
+e015 여덟 개의 왕좌 | NEW:eye_endings_seen>=8
+e016 모든 거짓 신 | NEW:eye_endings_seen>=13
+e018 다섯 번의 찬탈 | profile:eye_usurped>=5
+e019 찬탈의 습관 | profile:eye_usurped>=15
+e021 다섯 번 삼켜지다 | profile:eye_lost>=5
+e022 열 번의 승천 | profile:eye_ascended>=10
+e023 서른 번의 승천 | profile:eye_ascended>=30
+e036 네 개의 눈길 | profile:eye_start_yahweh>=1 profile:eye_start_satan>=1 profile:eye_start_samael>=1 profile:eye_start_yaldabaoth>=1
+e041 충만 | NEW:eye_nodes>=64
+e052 끝없는 재앙 | profile:eye_calamities>=100
+e060 흠 없는 왕좌 | NEW:eye_ascend_calamities==0
+e061 상처투성이 왕좌 | NEW:eye_ascend_calamities>=20 NEW:eye_ascend_good
+e065 온전한 주인 | NEW:eye_ascend_dominance<=100
+e076 능숙한 현현 | profile:eye_act_Wonder>=150
+e078 능숙한 비의 | profile:eye_act_Revelation>=150
+e080 능숙한 정화 | profile:eye_act_Healing>=150
+e084 능숙한 강신 | profile:eye_act_Commune>=150
+e085 익숙한 창조 | profile:eye_act_Consecrate>=30
+e086 능숙한 창조 | profile:eye_act_Consecrate>=150
+e089 물질의 도시 | profile:eye_build_total>=30
+e091 이백 개의 계시 | profile:eye_events>=200
+e092 오백 개의 계시 | profile:eye_events>=500
+e094 다섯 번의 눈동자 | profile:eye_runs>=5
+e095 스무 번의 눈동자 | profile:eye_runs>=20
+e097 눈동자 업적 예순 | NEW:eye_achv>=60
+
+업적 도달 — 모든 봇이 딴 업적
+e049 첫 재앙
+e062 기우는 저울
+e066 가득 찬 거짓 신
+e067 그릇의 첫 해
+e068 다섯 해의 동거
+e090 쉰 개의 계시
+e093 첫 눈동자
+
+==== V3 문턱 30 ====
+휴식 시작(첫 휴식에서 0인 스탯): Health 304, Repute 1
+휴식 연쇄(이어서 다시 쉰 휴식에서 0인 스탯): 
+연쇄 길이(한 번 쉬기 시작해 몇 년 이어졌나): 1년 305
+휴식 재앙이 깎은 스탯: Lust 72, Greed 52, Appetite 43, Ambition 42, Integrity 39, Offerings 30, Mentality 26, Charity 20
+휴식 중 합류(합류 뒤 쉬는 스탯): Health+Piety 58, Health+Repute 55, Health+Piety+Repute 26, Health+Wealth 18, Health+Repute+Wealth 15, Health+Piety+Repute+Wealth 11, Health+Piety+Wealth 9
+휴식 한 번의 길이(분기): 4분기 174, 5분기 22, 6분기 21, 7분기 23, 8분기 28, 9분기 7, 10분기 12, 11분기 7, 12분기 6, 13분기 1, 14분기 3, 16분기 1
+휴식 분기/판 · 휴식 재앙/판 · 승천 순간 교주 무게: Balanced 0.0 / 0.00 / 7.90 · EvilFirst 0.0 / 0.00 / 7.79 · Wide 0.0 / 0.00 / 9.65 · Rester 0.0 / 0.00 / 7.87 · LowStart 0.0 / 0.00 / 6.95 · Loser 0.0 / 0.00 / 7.08 · Exhaust 215.0 / 43.13 / 5.55
+황금의 눈동자 시뮬레이션: 전략 7 × 시작 섹터 4 = 봇 28명, 판 56개, 최대 80년
+전략 | 판 | 승천 | 승천 연수(중앙값) | 굿 | 배드 | 다른 눈동자 | 네 얼굴 | 재앙/판 | 휴식 재앙/판 | 최종 주도권(평균) | 주도권 최고(평균)
+Balanced | 8 | 100% | 10 | 100% | 0% | 0% | 0% | 1.9 | 0.0 | 1.59 | 1.60
+EvilFirst | 8 | 100% | 9 | 88% | 13% | 0% | 0% | 2.3 | 0.0 | 1.81 | 1.82
+Wide | 8 | 100% | 14.5 | 0% | 75% | 0% | 25% | 5.5 | 0.0 | 2.07 | 2.19
+Rester | 8 | 100% | 10 | 100% | 0% | 0% | 0% | 1.9 | 0.0 | 1.56 | 1.57
+LowStart | 8 | 100% | 15 | 13% | 88% | 0% | 0% | 5.0 | 0.0 | 2.58 | 2.72
+Loser | 8 | 100% | 10 | 100% | 0% | 0% | 0% | 2.5 | 0.0 | 1.82 | 1.81
+Exhaust | 8 | 0% | -1 | 0% | 0% | 0% | 0% | 55.1 | 43.1 | 3.77 | 4.20
+
+전략 | 익힌 노드(평균) | 번 포인트(평균) | 교리 단계(평균) | 교리 최고값 | 설교/포교 | 끝 분기 카운터 | 바닥 턴 | 막힌 곳(상위)
+Balanced | 16.0 | 30 | 9.0 | 782 | 19/10 | 6.0 | 0 | ×8
+EvilFirst | 16.0 | 32 | 9.0 | 784 | 19/9 | 6.0 | 0 | ×8
+Wide | 49.0 | 60 | 9.9 | 951 | 9/21 | 12.0 | 0 | ×8
+Rester | 16.0 | 31 | 9.0 | 773 | 18/9 | 6.0 | 0 | ×8
+LowStart | 16.0 | 37 | 9.0 | 784 | 18/3 | 6.0 | 14 | ×8
+Loser | 16.0 | 29 | 9.0 | 785 | 19/9 | 6.0 | 0 | ×8
+Exhaust | 5.0 | 161 | 0.4 | 101 | 0/6 | 0.8 | 74 | sm1g:doctrine×2, ya9:doctrine×1, ya5:doctrine×1, sa1g:doctrine×1
+
+교단 스탯 증감 원인 (판당 평균, 오름 / 내림): Followers · FollowerFaith · Reputation · Doctrine
+휴식(휴식 재앙 포함) | +0 / -17 | +0 / -35 | +0 / -26 | +0 / -23
+행동 턴(행동+사회+불운+분기) | +80 / -18 | +265 / -152 | +35 / -129 | +300 / -0
+압박(추정, 행동 턴에 포함) | +0 / -0 | +0 / -0 | +0 / -0 | +0 / -0
+이벤트 | +70 / -0 | +174 / -2 | +50 / -14 | +213 / -1
+재앙 | +0 / -10 | +0 / -3 | +0 / -6 | +0 / -19
+압박 단계 분포(턴): 신계 0: 3098, 지상 0: 3098
+바닥 스탯(턴): Followers 573, FollowerFaith 468, Reputation 437
+끝날 때 무게 (데미우르고스 / 교주, 최대 20) · 악·그노시스 노드 수: Balanced 12.60 / 7.90 · 10.0 · EvilFirst 14.11 / 7.79 · 10.0 · Wide 19.95 / 9.65 · 28.0 · Rester 12.31 / 7.87 · 10.0 · LowStart 17.49 / 6.95 · 10.0 · Loser 12.88 / 7.08 · 10.0 · Exhaust 20.00 / 5.55 · 2.8
+누적 카운터 증가 · 누적 악 우위(분기 합) [최소~최대]: Balanced 72 [44~90] · 54 [32~68] · EvilFirst 83 [71~102] · 65 [54~82] · Wide 134 [89~166] · 68 [39~89] · Rester 69 [45~85] · 51 [34~64] · LowStart 132 [93~196] · 97 [71~141] · Loser 71 [51~86] · 54 [39~67] · Exhaust 55 [0~365] · 35 [0~282]
+행동 분포(전체 턴): rest 1720, Desire 877, Preach 818, Pray 669, Proselytize 541, Serve 193, consecrate 122
+
+섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드
+Yahweh | 14 | 86% | 8.5 | 29%
+Satan | 14 | 86% | 11 | 21%
+Samael | 14 | 86% | 10 | 14%
+Yaldabaoth | 14 | 86% | 12 | 36%
+
+엔딩 | 판
+eye_samael_good | 9
+eye_yahweh_good | 8
+eye_satan_good | 8
+none | 8
+eye_yaldabaoth_good | 7
+eye_yaldabaoth_bad | 5
+eye_yahweh_bad | 4
+eye_satan_bad | 3
+eye_four_faces | 2
+eye_samael_bad | 2
+
+업적 도달(봇 28명 중 딴 봇 수) — 0명인 업적
+e009 다른 눈동자: 질투하는 거짓 신 | profile:ending_eye_yahweh_other>=1
+e010 다른 눈동자: 고발하는 거짓 신 | profile:ending_eye_satan_other>=1
+e011 다른 눈동자: 눈먼 거짓 신 | profile:ending_eye_samael_other>=1
+e012 다른 눈동자: 사자 얼굴의 거짓 신 | profile:ending_eye_yaldabaoth_other>=1
+e014 세 개의 왕좌 | NEW:eye_endings_seen>=3
+e015 여덟 개의 왕좌 | NEW:eye_endings_seen>=8
+e016 모든 거짓 신 | NEW:eye_endings_seen>=13
+e018 다섯 번의 찬탈 | profile:eye_usurped>=5
+e019 찬탈의 습관 | profile:eye_usurped>=15
+e021 다섯 번 삼켜지다 | profile:eye_lost>=5
+e022 열 번의 승천 | profile:eye_ascended>=10
+e023 서른 번의 승천 | profile:eye_ascended>=30
+e036 네 개의 눈길 | profile:eye_start_yahweh>=1 profile:eye_start_satan>=1 profile:eye_start_samael>=1 profile:eye_start_yaldabaoth>=1
+e041 충만 | NEW:eye_nodes>=64
+e060 흠 없는 왕좌 | NEW:eye_ascend_calamities==0
+e061 상처투성이 왕좌 | NEW:eye_ascend_calamities>=20 NEW:eye_ascend_good
+e065 온전한 주인 | NEW:eye_ascend_dominance<=100
+e073 느린 찬탈 | NEW:eye_ascend_years>=40
+e076 능숙한 현현 | profile:eye_act_Wonder>=150
+e078 능숙한 비의 | profile:eye_act_Revelation>=150
+e080 능숙한 정화 | profile:eye_act_Healing>=150
+e084 능숙한 강신 | profile:eye_act_Commune>=150
+e085 익숙한 창조 | profile:eye_act_Consecrate>=30
+e086 능숙한 창조 | profile:eye_act_Consecrate>=150
+e089 물질의 도시 | profile:eye_build_total>=30
+e091 이백 개의 계시 | profile:eye_events>=200
+e092 오백 개의 계시 | profile:eye_events>=500
+e094 다섯 번의 눈동자 | profile:eye_runs>=5
+e095 스무 번의 눈동자 | profile:eye_runs>=20
+e097 눈동자 업적 예순 | NEW:eye_achv>=60
+
+업적 도달 — 모든 봇이 딴 업적
+e049 첫 재앙
+e066 가득 찬 거짓 신
+e067 그릇의 첫 해
+e068 다섯 해의 동거
+e093 첫 눈동자
+
+==== V4 선 상쇄 1 ====
+휴식 시작(첫 휴식에서 0인 스탯): Health 302, Piety 2, Repute 1
+휴식 연쇄(이어서 다시 쉰 휴식에서 0인 스탯): 
+연쇄 길이(한 번 쉬기 시작해 몇 년 이어졌나): 1년 305
+휴식 재앙이 깎은 스탯: Lust 49, Ambition 35, Greed 32, Integrity 31, Appetite 27, Offerings 23, Mentality 16, Charity 10
+휴식 중 합류(합류 뒤 쉬는 스탯): Health+Repute 54, Health+Piety 53, Health+Piety+Repute 23, Health+Piety+Repute+Wealth 16, Health+Wealth 13, Health+Piety+Wealth 11, Health+Repute+Wealth 8, Repute+Wealth 1
+휴식 한 번의 길이(분기): 4분기 182, 5분기 21, 6분기 21, 7분기 20, 8분기 24, 9분기 7, 10분기 11, 11분기 6, 12분기 6, 13분기 3, 14분기 1, 15분기 1, 16분기 2
+휴식 분기/판 · 휴식 재앙/판 · 승천 순간 교주 무게: Balanced 0.0 / 0.00 / 7.93 · EvilFirst 0.0 / 0.00 / 7.70 · Wide 1.0 / 0.50 / 10.49 · Rester 0.0 / 0.00 / 7.85 · LowStart 0.0 / 0.00 / 8.06 · Loser 0.0 / 0.00 / 7.14 · Exhaust 211.8 / 28.50 / 6.72
+황금의 눈동자 시뮬레이션: 전략 7 × 시작 섹터 4 = 봇 28명, 판 56개, 최대 80년
+전략 | 판 | 승천 | 승천 연수(중앙값) | 굿 | 배드 | 다른 눈동자 | 네 얼굴 | 재앙/판 | 휴식 재앙/판 | 최종 주도권(평균) | 주도권 최고(평균)
+Balanced | 8 | 100% | 9.5 | 100% | 0% | 0% | 0% | 2.9 | 0.0 | 1.68 | 1.68
+EvilFirst | 8 | 100% | 9 | 88% | 13% | 0% | 0% | 3.4 | 0.0 | 1.91 | 1.90
+Wide | 8 | 88% | 15 | 0% | 50% | 0% | 38% | 27.1 | 0.5 | 1.95 | 2.27
+Rester | 8 | 100% | 10 | 100% | 0% | 0% | 0% | 2.8 | 0.0 | 1.63 | 1.63
+LowStart | 8 | 100% | 23.5 | 25% | 75% | 0% | 0% | 11.5 | 0.0 | 2.39 | 2.80
+Loser | 8 | 100% | 10 | 88% | 13% | 0% | 0% | 2.9 | 0.0 | 1.83 | 1.84
+Exhaust | 8 | 0% | -1 | 0% | 0% | 0% | 0% | 36.9 | 28.5 | 2.93 | 3.15
+
+전략 | 익힌 노드(평균) | 번 포인트(평균) | 교리 단계(평균) | 교리 최고값 | 설교/포교 | 끝 분기 카운터 | 바닥 턴 | 막힌 곳(상위)
+Balanced | 16.0 | 30 | 9.0 | 788 | 19/10 | 11.0 | 0 | ×8
+EvilFirst | 16.0 | 30 | 9.0 | 786 | 18/9 | 11.0 | 0 | ×8
+Wide | 48.8 | 114 | 9.4 | 917 | 33/21 | 31.9 | 0 | ×7, ya9:doctrine×1
+Rester | 16.0 | 31 | 9.0 | 781 | 18/9 | 11.0 | 0 | ×8
+LowStart | 16.0 | 50 | 9.0 | 786 | 19/3 | 11.0 | 33 | ×8
+Loser | 16.0 | 30 | 9.0 | 791 | 19/9 | 11.0 | 0 | ×8
+Exhaust | 4.5 | 161 | 0.1 | 93 | 0/6 | 1.4 | 77 | sm1g:doctrine×2, ya9:doctrine×1, ya3g:doctrine×1, sa1g:doctrine×1
+
+교단 스탯 증감 원인 (판당 평균, 오름 / 내림): Followers · FollowerFaith · Reputation · Doctrine
+휴식(휴식 재앙 포함) | +0 / -18 | +0 / -37 | +0 / -27 | +0 / -21
+행동 턴(행동+사회+불운+분기) | +84 / -21 | +280 / -161 | +46 / -141 | +457 / -0
+압박(추정, 행동 턴에 포함) | +0 / -0 | +0 / -0 | +0 / -0 | +0 / -0
+이벤트 | +74 / -1 | +181 / -2 | +52 / -14 | +239 / -2
+재앙 | +0 / -15 | +0 / -6 | +0 / -11 | +0 / -211
+압박 단계 분포(턴): 신계 0: 3597, 지상 0: 3597
+바닥 스탯(턴): Followers 686, FollowerFaith 546, Reputation 498
+끝날 때 무게 (데미우르고스 / 교주, 최대 20) · 악·그노시스 노드 수: Balanced 13.33 / 7.93 · 10.0 · EvilFirst 14.70 / 7.70 · 10.0 · Wide 20.00 / 10.49 · 27.9 · Rester 12.81 / 7.85 · 10.0 · LowStart 18.76 / 8.06 · 10.0 · Loser 13.08 / 7.14 · 10.0 · Exhaust 19.53 / 6.72 · 2.5
+누적 카운터 증가 · 누적 악 우위(분기 합) [최소~최대]: Balanced 172 [149~191] · 57 [50~63] · EvilFirst 186 [156~214] · 66 [51~76] · Wide 1460 [464~7869] · 289 [64~1728] · Rester 163 [115~190] · 52 [39~64] · LowStart 570 [230~1476] · 214 [76~577] · Loser 163 [113~201] · 53 [39~69] · Exhaust 119 [0~867] · 40 [0~323]
+행동 분포(전체 턴): rest 1702, Preach 1016, Desire 956, Pray 771, Proselytize 542, Serve 312, consecrate 124
+
+섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드
+Yahweh | 14 | 79% | 9 | 14%
+Satan | 14 | 86% | 10.5 | 21%
+Samael | 14 | 86% | 10 | 7%
+Yaldabaoth | 14 | 86% | 11.5 | 43%
+
+엔딩 | 판
+eye_yahweh_good | 9
+eye_samael_good | 9
+none | 9
+eye_satan_good | 8
+eye_yaldabaoth_good | 6
+eye_yaldabaoth_bad | 6
+eye_four_faces | 3
+eye_satan_bad | 3
+eye_yahweh_bad | 2
+eye_samael_bad | 1
+
+업적 도달(봇 28명 중 딴 봇 수) — 0명인 업적
+e009 다른 눈동자: 질투하는 거짓 신 | profile:ending_eye_yahweh_other>=1
+e010 다른 눈동자: 고발하는 거짓 신 | profile:ending_eye_satan_other>=1
+e011 다른 눈동자: 눈먼 거짓 신 | profile:ending_eye_samael_other>=1
+e012 다른 눈동자: 사자 얼굴의 거짓 신 | profile:ending_eye_yaldabaoth_other>=1
+e014 세 개의 왕좌 | NEW:eye_endings_seen>=3
+e015 여덟 개의 왕좌 | NEW:eye_endings_seen>=8
+e016 모든 거짓 신 | NEW:eye_endings_seen>=13
+e018 다섯 번의 찬탈 | profile:eye_usurped>=5
+e019 찬탈의 습관 | profile:eye_usurped>=15
+e021 다섯 번 삼켜지다 | profile:eye_lost>=5
+e022 열 번의 승천 | profile:eye_ascended>=10
+e023 서른 번의 승천 | profile:eye_ascended>=30
+e036 네 개의 눈길 | profile:eye_start_yahweh>=1 profile:eye_start_satan>=1 profile:eye_start_samael>=1 profile:eye_start_yaldabaoth>=1
+e041 충만 | NEW:eye_nodes>=64
+e060 흠 없는 왕좌 | NEW:eye_ascend_calamities==0
+e065 온전한 주인 | NEW:eye_ascend_dominance<=100
+e076 능숙한 현현 | profile:eye_act_Wonder>=150
+e080 능숙한 정화 | profile:eye_act_Healing>=150
+e084 능숙한 강신 | profile:eye_act_Commune>=150
+e085 익숙한 창조 | profile:eye_act_Consecrate>=30
+e086 능숙한 창조 | profile:eye_act_Consecrate>=150
+e089 물질의 도시 | profile:eye_build_total>=30
+e092 오백 개의 계시 | profile:eye_events>=500
+e094 다섯 번의 눈동자 | profile:eye_runs>=5
+e095 스무 번의 눈동자 | profile:eye_runs>=20
+e097 눈동자 업적 예순 | NEW:eye_achv>=60
+
+업적 도달 — 모든 봇이 딴 업적
+e049 첫 재앙
+e066 가득 찬 거짓 신
+e067 그릇의 첫 해
+e068 다섯 해의 동거
+e093 첫 눈동자
+
+==== V5 V1+V3 ====
+휴식 시작(첫 휴식에서 0인 스탯): Health 304, Repute 1
+휴식 연쇄(이어서 다시 쉰 휴식에서 0인 스탯): 
+연쇄 길이(한 번 쉬기 시작해 몇 년 이어졌나): 1년 305
+휴식 재앙이 깎은 스탯: Lust 72, Greed 52, Appetite 43, Ambition 42, Integrity 39, Offerings 30, Mentality 26, Charity 20
+휴식 중 합류(합류 뒤 쉬는 스탯): Health+Piety 58, Health+Repute 55, Health+Piety+Repute 26, Health+Wealth 18, Health+Repute+Wealth 15, Health+Piety+Repute+Wealth 11, Health+Piety+Wealth 9
+휴식 한 번의 길이(분기): 4분기 174, 5분기 22, 6분기 21, 7분기 23, 8분기 28, 9분기 7, 10분기 12, 11분기 7, 12분기 6, 13분기 1, 14분기 3, 16분기 1
+휴식 분기/판 · 휴식 재앙/판 · 승천 순간 교주 무게: Balanced 0.0 / 0.00 / 8.03 · EvilFirst 0.0 / 0.00 / 7.92 · Wide 0.0 / 0.00 / 10.23 · Rester 0.0 / 0.00 / 7.93 · LowStart 0.0 / 0.00 / 7.31 · Loser 0.0 / 0.00 / 7.22 · Exhaust 215.0 / 43.13 / 5.55
+황금의 눈동자 시뮬레이션: 전략 7 × 시작 섹터 4 = 봇 28명, 판 56개, 최대 80년
+전략 | 판 | 승천 | 승천 연수(중앙값) | 굿 | 배드 | 다른 눈동자 | 네 얼굴 | 재앙/판 | 휴식 재앙/판 | 최종 주도권(평균) | 주도권 최고(평균)
+Balanced | 8 | 100% | 10.5 | 100% | 0% | 0% | 0% | 2.5 | 0.0 | 1.71 | 1.72
+EvilFirst | 8 | 100% | 10 | 88% | 13% | 0% | 0% | 2.8 | 0.0 | 1.91 | 1.91
+Wide | 8 | 100% | 15.5 | 0% | 25% | 0% | 75% | 6.8 | 0.0 | 1.96 | 2.16
+Rester | 8 | 100% | 10 | 100% | 0% | 0% | 0% | 2.3 | 0.0 | 1.69 | 1.70
+LowStart | 8 | 100% | 18.5 | 13% | 88% | 0% | 0% | 6.0 | 0.0 | 2.56 | 2.80
+Loser | 8 | 100% | 11 | 75% | 25% | 0% | 0% | 2.8 | 0.0 | 1.87 | 1.86
+Exhaust | 8 | 0% | -1 | 0% | 0% | 0% | 0% | 55.1 | 43.1 | 3.77 | 4.20
+
+전략 | 익힌 노드(평균) | 번 포인트(평균) | 교리 단계(평균) | 교리 최고값 | 설교/포교 | 끝 분기 카운터 | 바닥 턴 | 막힌 곳(상위)
+Balanced | 16.0 | 34 | 9.0 | 784 | 19/12 | 6.0 | 0 | ×8
+EvilFirst | 16.0 | 36 | 9.0 | 787 | 18/11 | 6.0 | 0 | ×8
+Wide | 49.0 | 69 | 9.9 | 993 | 9/23 | 12.0 | 0 | ×8
+Rester | 16.0 | 34 | 9.0 | 791 | 18/11 | 6.0 | 0 | ×8
+LowStart | 16.0 | 41 | 9.0 | 806 | 18/4 | 6.0 | 15 | ×8
+Loser | 16.0 | 32 | 9.0 | 793 | 19/10 | 6.0 | 0 | ×8
+Exhaust | 5.0 | 161 | 0.4 | 101 | 0/6 | 0.8 | 74 | sm1g:doctrine×2, ya9:doctrine×1, ya5:doctrine×1, sa1g:doctrine×1
+
+교단 스탯 증감 원인 (판당 평균, 오름 / 내림): Followers · FollowerFaith · Reputation · Doctrine
+휴식(휴식 재앙 포함) | +0 / -17 | +0 / -35 | +0 / -26 | +0 / -23
+행동 턴(행동+사회+불운+분기) | +90 / -18 | +267 / -157 | +39 / -135 | +294 / -0
+압박(추정, 행동 턴에 포함) | +0 / -0 | +0 / -0 | +0 / -0 | +0 / -0
+이벤트 | +72 / -0 | +178 / -2 | +53 / -14 | +233 / -1
+재앙 | +0 / -12 | +0 / -3 | +0 / -7 | +0 / -19
+압박 단계 분포(턴): 신계 0: 3270, 지상 0: 3270
+바닥 스탯(턴): Followers 575, FollowerFaith 474, Reputation 439
+끝날 때 무게 (데미우르고스 / 교주, 최대 20) · 악·그노시스 노드 수: Balanced 13.73 / 8.03 · 10.0 · EvilFirst 15.09 / 7.92 · 10.0 · Wide 20.00 / 10.23 · 28.0 · Rester 13.33 / 7.93 · 10.0 · LowStart 18.43 / 7.31 · 10.0 · Loser 13.47 / 7.22 · 10.0 · Exhaust 20.00 / 5.55 · 2.8
+누적 카운터 증가 · 누적 악 우위(분기 합) [최소~최대]: Balanced 84 [69~98] · 62 [51~74] · EvilFirst 93 [73~107] · 73 [62~84] · Wide 168 [120~220] · 87 [59~120] · Rester 79 [62~90] · 59 [45~69] · LowStart 159 [93~286] · 118 [71~222] · Loser 78 [65~89] · 58 [48~66] · Exhaust 55 [0~365] · 35 [0~282]
+행동 분포(전체 턴): rest 1720, Desire 895, Preach 806, Pray 733, Proselytize 616, Serve 220, consecrate 128
+
+섹터 | 판 | 승천 | 승천 연수(중앙값) | 배드
+Yahweh | 14 | 86% | 10.5 | 36%
+Satan | 14 | 86% | 11 | 14%
+Samael | 14 | 86% | 10 | 7%
+Yaldabaoth | 14 | 86% | 12 | 29%
+
+엔딩 | 판
+eye_samael_good | 9
+eye_satan_good | 8
+none | 8
+eye_yaldabaoth_good | 7
+eye_yahweh_good | 6
+eye_four_faces | 6
+eye_yahweh_bad | 5
+eye_yaldabaoth_bad | 4
+eye_satan_bad | 2
+eye_samael_bad | 1
+
+업적 도달(봇 28명 중 딴 봇 수) — 0명인 업적
+e009 다른 눈동자: 질투하는 거짓 신 | profile:ending_eye_yahweh_other>=1
+e010 다른 눈동자: 고발하는 거짓 신 | profile:ending_eye_satan_other>=1
+e011 다른 눈동자: 눈먼 거짓 신 | profile:ending_eye_samael_other>=1
+e012 다른 눈동자: 사자 얼굴의 거짓 신 | profile:ending_eye_yaldabaoth_other>=1
+e014 세 개의 왕좌 | NEW:eye_endings_seen>=3
+e015 여덟 개의 왕좌 | NEW:eye_endings_seen>=8
+e016 모든 거짓 신 | NEW:eye_endings_seen>=13
+e018 다섯 번의 찬탈 | profile:eye_usurped>=5
+e019 찬탈의 습관 | profile:eye_usurped>=15
+e021 다섯 번 삼켜지다 | profile:eye_lost>=5
+e022 열 번의 승천 | profile:eye_ascended>=10
+e023 서른 번의 승천 | profile:eye_ascended>=30
+e036 네 개의 눈길 | profile:eye_start_yahweh>=1 profile:eye_start_satan>=1 profile:eye_start_samael>=1 profile:eye_start_yaldabaoth>=1
+e041 충만 | NEW:eye_nodes>=64
+e060 흠 없는 왕좌 | NEW:eye_ascend_calamities==0
+e061 상처투성이 왕좌 | NEW:eye_ascend_calamities>=20 NEW:eye_ascend_good
+e065 온전한 주인 | NEW:eye_ascend_dominance<=100
+e073 느린 찬탈 | NEW:eye_ascend_years>=40
+e076 능숙한 현현 | profile:eye_act_Wonder>=150
+e078 능숙한 비의 | profile:eye_act_Revelation>=150
+e080 능숙한 정화 | profile:eye_act_Healing>=150
+e084 능숙한 강신 | profile:eye_act_Commune>=150
+e085 익숙한 창조 | profile:eye_act_Consecrate>=30
+e086 능숙한 창조 | profile:eye_act_Consecrate>=150
+e089 물질의 도시 | profile:eye_build_total>=30
+e091 이백 개의 계시 | profile:eye_events>=200
+e092 오백 개의 계시 | profile:eye_events>=500
+e094 다섯 번의 눈동자 | profile:eye_runs>=5
+e095 스무 번의 눈동자 | profile:eye_runs>=20
+e097 눈동자 업적 예순 | NEW:eye_achv>=60
+
+업적 도달 — 모든 봇이 딴 업적
+e049 첫 재앙
+e062 기우는 저울
+e066 가득 찬 거짓 신
+e067 그릇의 첫 해
+e068 다섯 해의 동거
+e069 열 해의 동거
+e090 쉰 개의 계시
+e093 첫 눈동자
+

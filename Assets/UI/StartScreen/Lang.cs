@@ -111,6 +111,7 @@ public static class Lang
         ["god_need_children"] = ("Learn both outer nodes first", "바로 바깥 두 노드를 모두 익혀야 합니다"),
         ["god_need_cores"] = ("Complete two cores first", "핵 두 개를 완성해야 합니다"),
         ["god_pressure_now"] = ("Heaven {0} · Earth {1}", "신계 압박 {0} · 지상 압박 {1}"),
+        ["eye_pressure_now"] = ("Earth {0}", "지상 압박 {0}"),
         ["god_mode"] = ("Prepared God", "준비된 신"),
         ["mirror_mode"] = ("Mirror World", "거울 세계"),
         ["mirror_desc"] = ("Virtue and Desire have been reversed. From now on, will you become an ascetic in a world of desire, or a teacher who preaches desire?",
