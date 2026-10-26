@@ -61,5 +61,5 @@ yd5,yaldabaoth,5,gnosis,얄다바오트의 그노시스,Gnosis of Yaldabaoth,세
 yd6,yaldabaoth,6,gnosis,헤브도마스 돌파,Breaching the Hebdomad,창조주가 지은 일곱 하늘의 벽을 넘어섭니다.,You climb past the walls of the seven heavens the creator built.,gain:Authority+12 gain:Doctrine+6 guard:Reputation+10 resist:Earth+1 chance:Consecrate+4,1,0,
 yd7,yaldabaoth,7,gnosis,오그도아스,The Ogdoad,지어지지 않은 여덟째 하늘에서 창조 너머를 봅니다.,In the unmade eighth heaven you look beyond creation.,gain:Authority+18 gain:Doctrine+9 guard:Reputation+15 resist:Earth+2 chance:Consecrate+6,1,0,
 yd8,yaldabaoth,8,gnosis,소피아의 그림자,Shadow of Sophia,창조주를 몰래 낳은 지혜의 그림자를 따라갑니다.,You follow the shadow of the Wisdom that secretly bore the creator.,gain:Authority+24 gain:Doctrine+12 guard:Reputation+20 resist:Earth+2 chance:Consecrate+8,1,0,
-yd9,yaldabaoth,9,gnosis,플레로마의 문턱,Threshold of the Pleroma,물질이 끝나는 곳, 충만의 문 앞에 섭니다.,gain:Authority+30 gain:Doctrine+15 guard:Reputation+25 resist:Earth+3 chance:Consecrate+10,1,0,
+yd9,yaldabaoth,9,gnosis,플레로마의 문턱,Threshold of the Pleroma,"물질이 끝나는 곳, 충만의 문 앞에 섭니다.","Where matter ends, you stand at the gate of Fullness.",gain:Authority+30 gain:Doctrine+15 guard:Reputation+25 resist:Earth+3 chance:Consecrate+10,1,0,
 yd10,yaldabaoth,10,ascension,찬탈: 물질의 왕좌,Usurpation: The Throne of Matter,물질의 왕좌를 빼앗아 세계를 당신의 손으로 다시 빚습니다.,You seize the throne of matter and remold the world with your own hands.,,0,0,

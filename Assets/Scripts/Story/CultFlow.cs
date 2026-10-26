@@ -84,7 +84,7 @@ public class CultFlow : MonoBehaviour
         actionBar.SetInteractable(false);
         ActionBar.BeginTurn(); // 축성도 한 턴: 상단 바 강조를 새 턴 기준으로
         if (!Turns.Consecrate(type)) { actionBar.SetInteractable(true); return; }
-        var summary = string.Format(Lang.Get("god_consecrated"), Lang.Get($"god_building_{type}"), GameSession.God.Buildings.LevelOf(type));
+        var summary = Josa.Fix(string.Format(Lang.Get("god_consecrated"), Lang.Get($"god_building_{type}"), GameSession.God.Buildings.LevelOf(type))); // "{0}을(를)" 조사
         resultView.Play("Consecrate", true, () => AfterTurn(summary));
     }
 

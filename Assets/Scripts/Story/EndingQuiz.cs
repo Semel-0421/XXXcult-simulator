@@ -22,6 +22,6 @@ public static class EndingQuiz
         // 극단 엔딩: extreme_{교단 스탯}_{max|min}
         var parts = ending.Id.Split('_');
         var high = parts[2] == "max";
-        return string.Format(Lang.Get("quiz_extreme"), Lang.Get($"stat_{parts[1]}"), Lang.Get(high ? "quiz_high" : "quiz_low"), Endings.ExtremeYears);
+        return Josa.Fix(string.Format(Lang.Get("quiz_extreme"), Lang.Get($"stat_{parts[1]}"), Lang.Get(high ? "quiz_high" : "quiz_low"), Endings.ExtremeYears)); // "{0}이(가)" 조사
     }
 }
